@@ -21,6 +21,7 @@ namespace Client.View
         private void initEvent()
         {
             btnDeviceInfo.Clicked += BtnDeviceInfo_Clicked;
+            btnDisplayInfo.Clicked += BtnDisplayInfo_Clicked;
         }
 
         async void BtnDeviceInfo_Clicked(object sender, EventArgs e)
@@ -41,6 +42,12 @@ namespace Client.View
             //};
 
             //await Navigation.PushAsync(new XamarinEssentials.PageDeviceInfo() { BindingContext = model });
+        }
+
+        async void BtnDisplayInfo_Clicked(object sender, EventArgs e)
+        {
+            CoreUtil.XamariN.Essentials.DisplayInfo match = Common.StaticInfo.DisplayInfo;
+            await Navigation.PushAsync(new XamarinEssentials.PageDisplayInfo() { BindingContext = Common.StaticInfo.DisplayInfo });
         }
     }
 

@@ -31,6 +31,8 @@ namespace Client.Droid
         private void init()
         {
             var deviceInfo = CoreUtil.XamariN.Essentials.DeviceInfoUtils.GetDeviceInfo();
+
+            // TODO 可能弃用
             var displayInfo = CoreUtil.XamariN.Essentials.DisplayInfoUtils.GetDisplayInfo();
 
             string innerSQLiteConnStr = System.IO.Path.Combine
@@ -58,8 +60,6 @@ namespace Client.Droid
 
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
-
-
 
         }
     }

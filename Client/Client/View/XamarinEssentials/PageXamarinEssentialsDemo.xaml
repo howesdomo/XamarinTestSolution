@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="btnDeviceInfo" Text="DeviceInfo" />
+            <Button x:Name="btnDisplayInfo" Text="DisplayInfo" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

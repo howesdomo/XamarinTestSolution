@@ -92,7 +92,16 @@ namespace Client.Common
         /// 设备信息
         /// </summary>
         // public static dynamic DeviceInfo;
-        public static CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo;
+        public static CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo { get; private set; }
+
+        public static CoreUtil.XamariN.Essentials.DisplayInfo DisplayInfo
+        {
+            get
+            {
+                // 采用接口方式处理 Android / iOS 的调用问题
+                return Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDisplayUtils>().GetDisplayInfo_V2();
+            }
+        }
 
         #region InnerSQLite
 
@@ -161,6 +170,11 @@ namespace Client.Common
         /// 当前运行设备信息
         /// </summary>
         public CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo { get; set; }
+
+        /// <summary>
+        /// 当前运行设备显示信息
+        /// </summary>
+        public static CoreUtil.XamariN.Essentials.DisplayInfo DisplayInfo { get; private set; }
 
         /// <summary>
         /// 程序内部SQLite数据库连接字符串

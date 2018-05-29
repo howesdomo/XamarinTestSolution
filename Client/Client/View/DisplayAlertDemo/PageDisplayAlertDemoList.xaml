@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.PageDisplayAlertDemoList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnDisplayAlert" Text="DisplayAlert(Cancel)" />
+            <Button x:Name="btnDisplayAlert_2Selection" Text="DisplayAlert(确认取消) - V1 推荐写法" />
+            <Button x:Name="btnDisplayAlert_2Selection_V2" Text="DisplayAlert(确认取消) V2" />
+            <Button x:Name="btnDisplayActionSheet" Text="DisplayActionSheet" />
+            <Button x:Name="btnDisplayActionSheet_V2" Text="DisplayActionSheet V2" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

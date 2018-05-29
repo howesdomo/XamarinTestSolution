@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.XamarinEssentials.PageDeviceInfo">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Model" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Model}" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Manufacturer" />
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Manufacturer}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="DeviceName" />
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding DeviceName}" />
+
+            <Label Grid.Row="3" Grid.Column="0" Text="VersionInfo" />
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding VersionInfo}" />
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Platform" />
+            <Label Grid.Row="4" Grid.Column="1" Text="{Binding Platform}" />
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Idiom" />
+            <Label Grid.Row="5" Grid.Column="1" Text="{Binding Idiom}" />
+
+            <Label Grid.Row="6" Grid.Column="0" Text="DeviceType" />
+            <Label Grid.Row="6" Grid.Column="1" Text="{Binding DeviceType}" />
+            
+        </Grid>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

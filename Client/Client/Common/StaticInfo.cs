@@ -13,11 +13,6 @@ namespace Client.Common
                 _AppName = args.AppName;
             }
 
-            if (args.DeviceInfo != null)
-            {
-                StaticInfo.DeviceInfo = args.DeviceInfo;
-            }
-
             #region InnerSQLite
             if (args.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
             {
@@ -89,17 +84,36 @@ namespace Client.Common
         public static dynamic CurrentUser;
 
         /// <summary>
-        /// 设备信息
+        /// 当前运行设备信息
         /// </summary>
-        // public static dynamic DeviceInfo;
-        public static CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo { get; private set; }
+        private static CoreUtil.XamariN.Essentials.DeviceInfo _DeviceInfo;
 
+        /// <summary>
+        /// 当前运行设备信息
+        /// </summary>
+        public static CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo
+        {
+            get
+            {
+                if (_DeviceInfo == null)
+                {
+                    _DeviceInfo = Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDeviceInfoUtils>().GetDeviceInfo();
+                }
+                return _DeviceInfo;
+            }
+        }
+
+        /// <summary>
+        /// 当前运行设备显示信息
+        /// </summary>
         public static CoreUtil.XamariN.Essentials.DisplayInfo DisplayInfo
         {
             get
             {
                 // 采用接口方式处理 Android / iOS 的调用问题
-                return Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDisplayUtils>().GetDisplayInfo_V2();
+                // 具体如何实现接口请参考 CoreUtil.XamariN.AndroiD , DisplayInfoUtils
+                // 由于屏幕会旋转, 所以每次都获取最新信息
+                return Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDisplayInfoUtils>().GetDisplayInfo();
             }
         }
 
@@ -165,16 +179,6 @@ namespace Client.Common
         /// 程序名称
         /// </summary>
         public string AppName { get; set; }
-
-        /// <summary>
-        /// 当前运行设备信息
-        /// </summary>
-        public CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo { get; set; }
-
-        /// <summary>
-        /// 当前运行设备显示信息
-        /// </summary>
-        public static CoreUtil.XamariN.Essentials.DisplayInfo DisplayInfo { get; private set; }
 
         /// <summary>
         /// 程序内部SQLite数据库连接字符串

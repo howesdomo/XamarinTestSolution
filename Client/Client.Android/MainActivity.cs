@@ -30,11 +30,6 @@ namespace Client.Droid
 
         private void init()
         {
-            var deviceInfo = CoreUtil.XamariN.Essentials.DeviceInfoUtils.GetDeviceInfo();
-
-            // TODO 可能弃用
-            var displayInfo = CoreUtil.XamariN.Essentials.DisplayInfoUtils.GetDisplayInfo();
-
             string innerSQLiteConnStr = System.IO.Path.Combine
             (
                 System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
@@ -52,7 +47,6 @@ namespace Client.Droid
                 new Client.Common.StaticInfoInitArgs()
                 {
                     AppName = "你好Xamarin",
-                    DeviceInfo = deviceInfo,
                     InnerSQLiteConnStr = innerSQLiteConnStr,
                     ExternalSQLiteConnStr = externalSQLiteConnStr
                 }

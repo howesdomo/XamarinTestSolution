@@ -13,6 +13,11 @@ namespace Client.Common
                 _AppName = args.AppName;
             }
 
+            if (args.AppWebSetting != null)
+            {
+                _AppWebSetting = args.AppWebSetting;
+            }
+
             #region InnerSQLite
             if (args.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
             {
@@ -81,7 +86,7 @@ namespace Client.Common
         /// <summary>
         /// 当前登录用户
         /// </summary>
-        public static dynamic CurrentUser;
+        public static dynamic CurrentUser; // TODO 待处理
 
         /// <summary>
         /// 当前运行设备信息
@@ -116,6 +121,16 @@ namespace Client.Common
                 return Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDisplayInfoUtils>().GetDisplayInfo();
             }
         }
+
+        private static WebSetting _AppWebSetting;
+
+        public static WebSetting AppWebSetting
+        {
+            get { return _AppWebSetting; }
+            set { _AppWebSetting = value; }
+        }
+
+        // TODO SecurityWebSetting ???
 
         #region InnerSQLite
 
@@ -179,6 +194,11 @@ namespace Client.Common
         /// 程序名称
         /// </summary>
         public string AppName { get; set; }
+
+        /// <summary>
+        /// App Web 服务配置
+        /// </summary>
+        public WebSetting AppWebSetting { get; set; }
 
         /// <summary>
         /// 程序内部SQLite数据库连接字符串

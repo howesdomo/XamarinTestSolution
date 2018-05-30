@@ -24,6 +24,7 @@ namespace Client
             this.btnPageSQLiteDemo.Clicked += BtnPageSQLiteDemo_Clicked;
             this.btnPageZXingDemo.Clicked += BtnPageZXingDemo_Clicked;
             this.btnPageXamarinEssentialsDemo.Clicked += BtnPageXamarinEssentialsDemo_Clicked;
+            this.btnPageWebServiceReferenceDemo.Clicked += BtnPageWebServiceReferenceDemo_Clicked;
         }
 
         async void BtnPageDisplayAlertDemo_Clicked(object sender, EventArgs e)
@@ -50,7 +51,12 @@ namespace Client
         {
             await Navigation.PushAsync(new PageXamarinEssentialsDemo());
         }
-        
+
+        async void BtnPageWebServiceReferenceDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageWebServiceDemo());
+        }
+
     }
 
 

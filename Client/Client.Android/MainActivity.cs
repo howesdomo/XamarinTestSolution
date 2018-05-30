@@ -30,6 +30,14 @@ namespace Client.Droid
 
         private void init()
         {
+            Common.WebSetting appWebSetting = new Common.WebSetting
+            (
+                serviceSettingName: "A",
+                ipOrWebAddress: "192.168.1.172",
+                port: "17904",
+                appName: "AppWebApplication45/AppWebService.asmx"
+            ); // TODO Read In webSetting.json
+
             string innerSQLiteConnStr = System.IO.Path.Combine
             (
                 System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
@@ -47,6 +55,7 @@ namespace Client.Droid
                 new Client.Common.StaticInfoInitArgs()
                 {
                     AppName = "你好Xamarin",
+                    AppWebSetting = appWebSetting,
                     InnerSQLiteConnStr = innerSQLiteConnStr,
                     ExternalSQLiteConnStr = externalSQLiteConnStr
                 }

@@ -18,5 +18,7 @@
         <Button x:Name="btnPageZXingDemo" Text="ZXingScan Demo" />
 
         <Button x:Name="btnPageXamarinEssentialsDemo" Text="Xamarin Essentials Demo" />
+
+        <Button x:Name="btnPageWebServiceReferenceDemo" Text="WebService Reference Demo" />
     </StackLayout>
 </ContentPage>

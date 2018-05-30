@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,27 @@ namespace Client.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageWebServiceDemo : ContentPage
     {
+        AppWebWebService mAppWeb { get; set; }
+
         public PageWebServiceDemo()
         {
             InitializeComponent();
+
+            // test 1 == 运行 await mAppWeb.GetOrderAsync(); 报错
+            // mAppWeb = new AppWebWebService(); 
+
+            WebSetting setting = new WebSetting
+            (
+                serviceSettingName: "A",
+                ipOrWebAddress: "192.168.1.172",
+                port: "17904",
+                appName: "AppWebApplication45/AppWebService.asmx"
+            );
+
+            mAppWeb = new AppWebWebService(
+                setting, 
+                AppWebServiceReference.AppWebServiceSoapClient.EndpointConfiguration.AppWebServiceSoap12);
+
             initEvent();
         }
 
@@ -22,14 +41,19 @@ namespace Client.View
         {
             this.btnTest.Clicked += BtnTest_Clicked;
         }
-
+        
         async void BtnTest_Clicked(object sender, EventArgs e)
         {
-            //AppWebServer.WebService1SoapClient web = new AppWebServer.WebService1SoapClient(new AppWebServer.WebService1SoapClient.EndpointConfiguration()
-            //{
-
-            //});
-            //var tr = await web.HelloWorldAsync();
+            try
+            {
+                // 报错 无法调用 asmx // TODO
+                await mAppWeb.GetOrderAsync();
+            }
+            catch (Exception ex)
+            {
+                string errorMsg = ex.GetFullInfo();
+                await DisplayAlert("Error", errorMsg, "确定");
+            }
         }
     }
 }

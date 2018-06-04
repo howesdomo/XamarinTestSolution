@@ -33,9 +33,17 @@ namespace Client.Droid
             Common.WebSetting appWebSetting = new Common.WebSetting
             (
                 serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.172",
-                port: "17904",
-                appName: "AppWebApplication45/AppWebService.asmx"
+                ipOrWebAddress: "192.168.1.215",
+                port: "17911",
+                appName: "AppWebApplication461/AppWebService.asmx"
+            ); // TODO Read In webSetting.json
+
+            Common.WebSetting webAPISetting = new Common.WebSetting
+            (
+                serviceSettingName: "A",
+                ipOrWebAddress: "192.168.1.215",
+                port: "17911",
+                appName: "AppWebApplication461/api/orders"
             ); // TODO Read In webSetting.json
 
             string innerSQLiteConnStr = System.IO.Path.Combine
@@ -56,6 +64,7 @@ namespace Client.Droid
                 {
                     AppName = "你好Xamarin",
                     AppWebSetting = appWebSetting,
+                    WebAPISetting = webAPISetting,
                     InnerSQLiteConnStr = innerSQLiteConnStr,
                     ExternalSQLiteConnStr = externalSQLiteConnStr
                 }

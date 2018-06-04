@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil.XamariN\CoreUtil.XamariN.csproj" />
     <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil\CoreUtil.csproj" />
+    <ProjectReference Include="..\..\..\WebApplicationSolution\Model\Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

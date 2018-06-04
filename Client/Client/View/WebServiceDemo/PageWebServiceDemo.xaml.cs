@@ -40,8 +40,16 @@ namespace Client.View
         private void initEvent()
         {
             this.btnTest.Clicked += BtnTest_Clicked;
+            this.btnTestWebAPI.Clicked += BtnTestWebAPI_Clicked;
         }
-        
+
+        private void BtnTestWebAPI_Clicked(object sender, EventArgs e)
+        {
+            string uri = "http://192.168.1.215:17911/AppWebApplication461/api/orders";
+            Data_WebAPI.MyWebClient web = new Data_WebAPI.MyWebClient(uri);
+            web.GetOrder();
+        }
+
         async void BtnTest_Clicked(object sender, EventArgs e)
         {
             try

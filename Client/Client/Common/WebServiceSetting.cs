@@ -40,6 +40,12 @@ namespace Client.Common
             this.Port = port;
             this.AppName = appName;
         }
+
+        public Uri GetUri()
+        {
+            return new Uri(string.Format("http://{0}:{1}/{2}", this.IPOrWebAddress, this.Port, this.AppName));
+        }
+        
     }
 
 }

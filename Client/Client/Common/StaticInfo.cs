@@ -130,6 +130,14 @@ namespace Client.Common
             set { _AppWebSetting = value; }
         }
 
+        private static WebSetting _WebAPISetting;
+        public static WebSetting WebAPISetting
+        {
+            get { return _WebAPISetting; }
+            set { _WebAPISetting = value; }
+        }
+
+    
         // TODO SecurityWebSetting ???
 
         #region InnerSQLite
@@ -200,6 +208,8 @@ namespace Client.Common
         /// </summary>
         public WebSetting AppWebSetting { get; set; }
 
+        public WebSetting WebAPISetting { get; set; }
+        
         /// <summary>
         /// 程序内部SQLite数据库连接字符串
         /// </summary>

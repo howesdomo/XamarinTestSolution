@@ -5,6 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="btnTest" Text="Click" />
+
+            <Button x:Name="btnTestWebAPI" Text="Click" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

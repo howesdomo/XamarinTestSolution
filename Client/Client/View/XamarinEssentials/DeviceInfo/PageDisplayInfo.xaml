@@ -18,26 +18,20 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="0" Text="Width" />
-            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Width}" />
+            <Label Grid.Row="0" Grid.Column="0" Text="Orientation" />
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Orientation}" />
 
-            <Label Grid.Row="1" Grid.Column="0" Text="Height" />
-            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Height}" />
+            <Label Grid.Row="1" Grid.Column="0" Text="Rotation" />
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Rotation}" />
 
-            <Label Grid.Row="2" Grid.Column="0" Text="DeviceName" />
-            <Label Grid.Row="2" Grid.Column="1" Text="{Binding DeviceName}" />
+            <Label Grid.Row="2" Grid.Column="0" Text="Width" />
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Width}" />
 
-            <Label Grid.Row="3" Grid.Column="0" Text="VersionInfo" />
-            <Label Grid.Row="3" Grid.Column="1" Text="{Binding VersionInfo}" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Height" />
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding Height}" />
 
-            <Label Grid.Row="4" Grid.Column="0" Text="Platform" />
-            <Label Grid.Row="4" Grid.Column="1" Text="{Binding Platform}" />
-
-            <Label Grid.Row="5" Grid.Column="0" Text="Idiom" />
-            <Label Grid.Row="5" Grid.Column="1" Text="{Binding Idiom}" />
-
-            <Label Grid.Row="6" Grid.Column="0" Text="DeviceType" />
-            <Label Grid.Row="6" Grid.Column="1" Text="{Binding DeviceType}" />
+            <Label Grid.Row="4" Grid.Column="0" Text="Density(密度)" />
+            <Label Grid.Row="4" Grid.Column="1" Text="{Binding Density}" />
 
         </Grid>
     </ContentPage.Content>

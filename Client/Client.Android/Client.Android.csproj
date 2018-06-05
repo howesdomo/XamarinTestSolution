@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.530893" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
@@ -96,17 +96,17 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil.XamariN.AndroiD\CoreUtil.XamariN.AndroiD.csproj">
-      <Project>{9309a7fd-8986-4174-acef-3c8642318ae9}</Project>
-      <Name>CoreUtil.XamariN.AndroiD</Name>
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN.AndroiD\Util.XamariN.AndroiD.csproj">
+      <Project>{a27732f0-4804-4f67-82d1-63ccaed0f8f0}</Project>
+      <Name>Util.XamariN.AndroiD</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil.XamariN\CoreUtil.XamariN.csproj">
-      <Project>{eb2ac3a0-1d7e-450c-b5d7-d02c5b80c5db}</Project>
-      <Name>CoreUtil.XamariN</Name>
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj">
+      <Project>{5fe21ebe-0678-4384-80b0-a45764c877b5}</Project>
+      <Name>Util.XamariN</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil\CoreUtil.csproj">
-      <Project>{3b829f8a-4a8a-41d2-8038-8539e3dd521c}</Project>
-      <Name>CoreUtil</Name>
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj">
+      <Project>{275af5f5-7f5b-406e-8fb5-7215e1fd96a6}</Project>
+      <Name>Util</Name>
     </ProjectReference>
     <ProjectReference Include="..\Client\Client.csproj">
       <Project>{2AFF44BC-E823-4428-A84A-A586B6A7C4F6}</Project>

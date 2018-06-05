@@ -32,7 +32,7 @@ namespace Client.Data_WebAPI
             try
             {
                 int count = 0;
-                data = mClient.UploadString(mUri, CoreUtil.JsonUtils.SerializeObject(count));
+                data = mClient.UploadString(mUri, Util.JsonUtils.SerializeObject(count));
             }
             catch (System.Net.WebException webEx)
             {
@@ -51,7 +51,7 @@ namespace Client.Data_WebAPI
             string data = string.Empty;
             try
             {
-                data = mClient.UploadString(mUri, CoreUtil.JsonUtils.SerializeObject(model));
+                data = mClient.UploadString(mUri, Util.JsonUtils.SerializeObject(model));
             }
             catch (System.Net.WebException webEx)
             {

@@ -49,13 +49,13 @@ namespace Client.Droid
             string innerSQLiteConnStr = System.IO.Path.Combine
             (
                 System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
-                CoreUtil.Principle.DatabaseName_SQLite
+                Util.Principle.DatabaseName_SQLite
             );
 
             string externalSQLiteConnStr = System.IO.Path.Combine
             (
                 "", // TODO android 外部存储路径
-                CoreUtil.Principle.DatabaseName_SQLite
+                Util.Principle.DatabaseName_SQLite
             );
 
             Client.Common.StaticInfo.Init

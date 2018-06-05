@@ -10,14 +10,13 @@
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.530893" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil.XamariN\CoreUtil.XamariN.csproj" />
-    <ProjectReference Include="..\..\..\..\HoweUtil\CoreUtil\CoreUtil.csproj" />
-    <ProjectReference Include="..\..\..\WebApplicationSolution\Model\Model.csproj" />
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj" />
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj" />
   </ItemGroup>
 
   <ItemGroup>

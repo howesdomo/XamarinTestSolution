@@ -48,7 +48,7 @@ namespace Client.Common
 
                 try
                 {
-                    string a = CoreUtil.IO.FileUtils.GetString("");
+                    string a = Util.IO.FileUtils.GetString("");
 
                     if (a.Contains("debugMode:true"))
                     {
@@ -91,18 +91,18 @@ namespace Client.Common
         /// <summary>
         /// 当前运行设备信息
         /// </summary>
-        private static CoreUtil.XamariN.Essentials.DeviceInfo _DeviceInfo;
+        private static Util.XamariN.Essentials.DeviceInfo _DeviceInfo;
 
         /// <summary>
         /// 当前运行设备信息
         /// </summary>
-        public static CoreUtil.XamariN.Essentials.DeviceInfo DeviceInfo
+        public static Util.XamariN.Essentials.DeviceInfo DeviceInfo
         {
             get
             {
                 if (_DeviceInfo == null)
                 {
-                    _DeviceInfo = Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDeviceInfoUtils>().GetDeviceInfo();
+                    _DeviceInfo = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>().GetDeviceInfo();
                 }
                 return _DeviceInfo;
             }
@@ -111,14 +111,14 @@ namespace Client.Common
         /// <summary>
         /// 当前运行设备显示信息
         /// </summary>
-        public static CoreUtil.XamariN.Essentials.DisplayInfo DisplayInfo
+        public static Util.XamariN.Essentials.DisplayInfo DisplayInfo
         {
             get
             {
                 // 采用接口方式处理 Android / iOS 的调用问题
                 // 具体如何实现接口请参考 CoreUtil.XamariN.AndroiD , DisplayInfoUtils
                 // 由于屏幕会旋转, 所以每次都获取最新信息
-                return Xamarin.Forms.DependencyService.Get<CoreUtil.XamariN.Essentials.IDisplayInfoUtils>().GetDisplayInfo();
+                return Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDisplayInfoUtils>().GetDisplayInfo();
             }
         }
 

@@ -46,7 +46,7 @@ namespace Client.View
 
         async void BtnDisplayInfo_Clicked(object sender, EventArgs e)
         {
-            CoreUtil.XamariN.Essentials.DisplayInfo match = Common.StaticInfo.DisplayInfo;
+            Util.XamariN.Essentials.DisplayInfo match = Common.StaticInfo.DisplayInfo;
             await Navigation.PushAsync(new XamarinEssentials.PageDisplayInfo() { BindingContext = Common.StaticInfo.DisplayInfo });
         }
     }

@@ -14,14 +14,7 @@ namespace Client.Common
         public AppWebWebService(EndpointConfiguration endpointConfiguration = EndpointConfiguration.AppWebServiceSoap)
             : base(endpointConfiguration)
         {
-            WebSetting setting = new WebSetting
-            (
-                serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.172",
-                port: "17904",
-                appName: "AppWebApplication45/AppWebService.asmx"
-            );
-
+            var setting = StaticInfo.AppWebSetting;
             string uri = string.Format("http://{0}:{1}/{2}", setting.IPOrWebAddress, setting.Port, setting.AppName);
 
             if (StaticInfo.IsDebugMode)
@@ -37,7 +30,6 @@ namespace Client.Common
             : base(endpointConfiguration)
         {
             string uri = string.Format("http://{0}:{1}/{2}", setting.IPOrWebAddress, setting.Port, setting.AppName);
-
             if (StaticInfo.IsDebugMode)
             {
                 // TODO AppWeb DebugMode 

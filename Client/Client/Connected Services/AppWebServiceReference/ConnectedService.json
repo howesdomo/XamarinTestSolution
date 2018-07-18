@@ -2,7 +2,7 @@
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
   "Version": "15.0.20406.879",
   "ExtendedData": {
-    "Uri": "http://localhost:17904/AppWebApplication45/AppWebService.asmx",
+    "Uri": "http://localhost:17911/AppWebApplication461/AppWebService.asmx",
     "Namespace": "AppWebServiceReference",
     "SelectedAccessLevelForGeneratedClass": "Public",
     "GenerateMessageContract": false,

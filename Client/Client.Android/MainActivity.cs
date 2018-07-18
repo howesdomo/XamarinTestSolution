@@ -30,10 +30,32 @@ namespace Client.Droid
 
         private void init()
         {
+            #region VN7
+
+            //Common.WebSetting appWebSetting = new Common.WebSetting
+            //(
+            //    serviceSettingName: "A",
+            //    ipOrWebAddress: "192.168.1.215",
+            //    port: "17911",
+            //    appName: "AppWebApplication461/AppWebService.asmx"
+            //); // TODO Read In webSetting.json
+
+            //Common.WebSetting webAPISetting = new Common.WebSetting
+            //(
+            //    serviceSettingName: "A",
+            //    ipOrWebAddress: "192.168.1.215",
+            //    port: "17911",
+            //    appName: "AppWebApplication461/api/orders"
+            //); // TODO Read In webSetting.json
+
+            #endregion
+
+            #region HOME-PC
+
             Common.WebSetting appWebSetting = new Common.WebSetting
             (
                 serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.215",
+                ipOrWebAddress: "192.168.1.216",
                 port: "17911",
                 appName: "AppWebApplication461/AppWebService.asmx"
             ); // TODO Read In webSetting.json
@@ -41,10 +63,13 @@ namespace Client.Droid
             Common.WebSetting webAPISetting = new Common.WebSetting
             (
                 serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.215",
+                ipOrWebAddress: "192.168.1.216",
                 port: "17911",
                 appName: "AppWebApplication461/api/orders"
             ); // TODO Read In webSetting.json
+
+            #endregion
+
 
             string innerSQLiteConnStr = System.IO.Path.Combine
             (

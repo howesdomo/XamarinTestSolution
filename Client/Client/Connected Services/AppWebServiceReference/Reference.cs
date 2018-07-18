@@ -516,11 +516,11 @@ namespace AppWebServiceReference
         {
             if ((endpointConfiguration == EndpointConfiguration.AppWebServiceSoap))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:17904/AppWebApplication45/AppWebService.asmx");
+                return new System.ServiceModel.EndpointAddress("http://localhost:17911/AppWebApplication461/AppWebService.asmx");
             }
             if ((endpointConfiguration == EndpointConfiguration.AppWebServiceSoap12))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:17904/AppWebApplication45/AppWebService.asmx");
+                return new System.ServiceModel.EndpointAddress("http://localhost:17911/AppWebApplication461/AppWebService.asmx");
             }
             throw new System.InvalidOperationException(string.Format("找不到名称为“{0}”的终结点。", endpointConfiguration));
         }

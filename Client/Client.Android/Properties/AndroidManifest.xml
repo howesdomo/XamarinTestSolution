@@ -1,11 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.Client" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.howesdomo.Client" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="25" />
-	<uses-permission android:name="android.permission.FLASHLIGHT" />
-	<uses-permission android:name="android.permission.CAMERA" />
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-	<application android:label="Client.Android"></application>
+
+  
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+  
+  
+  <!-- start ZXing.Barcode -->
+  <!-- 这个权限用于打开摄像头-->
+  <uses-permission android:name="android.permission.CAMERA" />
+  <!-- 这个权限用于控制闪光灯-->
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <!-- end ZXing.Barcode -->
+
+  
+  <!-- start 百度定位所需权限 -->
+  <!-- 这个权限用于进行网络定位-->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <!-- 这个权限用于访问GPS定位-->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <!-- 用于读取手机当前的状态-->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- 访问网络，网络定位需要上网-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- SD卡读取权限，用户写入离线定位数据-->
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+  <!-- end 百度定位所需权限 -->
+
+  <application android:label="Client.Android">
+		<service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+			<intent-filter>
+				<action android:name="com.baidu.location.service_v2.2"></action>
+			</intent-filter>
+		</service>
+		<!--百度定位 -->
+		<!--http://lbsyun.baidu.com/apiconsole/key -->
+		<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="2C8obfgE4iadOcsUec9UspjCs16kdSiZ" />
+	</application>
 </manifest>

@@ -5,6 +5,7 @@
              x:Class="Client.MainPage">
 
     <StackLayout>
+        <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
         <Button x:Name="btnPageDisplayAlertDemo" >
             <Button.Text>
                 弹窗 Demo
@@ -20,5 +21,7 @@
         <Button x:Name="btnPageXamarinEssentialsDemo" Text="Xamarin Essentials Demo" />
 
         <Button x:Name="btnPageWebServiceReferenceDemo" Text="WebService Reference Demo" />
+
+        
     </StackLayout>
 </ContentPage>

@@ -52,22 +52,22 @@ namespace Client.Common
         /// <summary>
         /// 程序执行错误
         /// </summary>
-        public bool IsComplete { get; set; }
+        public bool IsComplete { get; private set; }
 
         /// <summary>
         /// 程序执行错误
         /// </summary>
-        public string ExceptionInfo { get; set; }
+        public string ExceptionInfo { get; private set; }
 
         /// <summary>
         /// 业务逻辑运行成功
         /// </summary>
-        public bool IsSuccess { get; set; }
+        public bool IsSuccess { get; private set; }
 
         /// <summary>
         /// 业务逻辑报错信息
         /// </summary>
-        public string BusinessExceptionInfo { get; set; }
+        public string BusinessExceptionInfo { get; private set; }
 
         #endregion
 

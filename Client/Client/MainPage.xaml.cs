@@ -19,12 +19,18 @@ namespace Client
 
         private void initEvent()
         {
+            this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
             this.btnPageDisplayAlertDemo.Clicked += BtnPageDisplayAlertDemo_Clicked;
             this.btnPageMessagingCenterDemo.Clicked += BtnPageMessagingCenterDemo_Clicked;
             this.btnPageSQLiteDemo.Clicked += BtnPageSQLiteDemo_Clicked;
             this.btnPageZXingDemo.Clicked += BtnPageZXingDemo_Clicked;
             this.btnPageXamarinEssentialsDemo.Clicked += BtnPageXamarinEssentialsDemo_Clicked;
             this.btnPageWebServiceReferenceDemo.Clicked += BtnPageWebServiceReferenceDemo_Clicked;
+        }
+
+        private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
+        {
+            throw new Exception("我来测试全局捕获异常");
         }
 
         async void BtnPageDisplayAlertDemo_Clicked(object sender, EventArgs e)

@@ -4,11 +4,6 @@ using System.Text;
 
 namespace Client.Common
 {
-    public interface ILBS
-    {
-        void GetGPSInfo();
-    }
-
     public class LBS
     {
         public static EventHandler<LBSModel> GetGPSInfoEvent;

@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 
-using System.Text;
 using Com.Baidu.Location;
 
 namespace Client.Droid
 {
-    public class BaiduLBS : Service, Com.Baidu.Location.IBDLocationListener
+    public class BaiduLBS : Service, Com.Baidu.Location.IBDLocationListener, Common.ILBS
     {
         private static Com.Baidu.Location.LocationClient mLocationClient = null;
 
@@ -33,8 +27,15 @@ namespace Client.Droid
             }
         }
 
-        public void startLocationService(LocationClientOption option = null)
+        // public void startLocationService(LocationClientOption option = null)
+        public void GetGPSInfo(object args = null)
         {
+            LocationClientOption option = null;
+            if (args != null && args is LocationClientOption)
+            {
+                option = args as LocationClientOption;
+            }
+
             if (option == null)
             {
                 option = new LocationClientOption();

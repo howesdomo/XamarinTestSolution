@@ -1,5 +1,6 @@
 ﻿using Client.Model;
 using Client.View;
+using Client.View.BaiduDemo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace Client
             this.btnPageZXingDemo.Clicked += BtnPageZXingDemo_Clicked;
             this.btnPageXamarinEssentialsDemo.Clicked += BtnPageXamarinEssentialsDemo_Clicked;
             this.btnPageWebServiceReferenceDemo.Clicked += BtnPageWebServiceReferenceDemo_Clicked;
+            this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
         }
 
         private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
@@ -61,6 +63,12 @@ namespace Client
         async void BtnPageWebServiceReferenceDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PageWebServiceDemo());
+        }
+
+
+        async void BtnPageBaiduMenu_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageBaiduMenu());
         }
 
     }

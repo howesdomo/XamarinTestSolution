@@ -29,7 +29,8 @@ namespace Client.Droid
             init();
             // End Add by Howe
 
-            LoadApplication(new App());
+            var app = new App();
+            LoadApplication(app);
         }
 
         private void init()
@@ -104,6 +105,7 @@ namespace Client.Droid
 
             // 初始化百度定位
             BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
+            App.LBS = baiduLBS;
         }
     }
 

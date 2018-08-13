@@ -7,6 +7,8 @@ namespace Client
 {
 	public partial class App : Application
 	{
+        public static Client.Common.ILBS LBS { get; set; }
+
 		public App ()
 		{
 			InitializeComponent();

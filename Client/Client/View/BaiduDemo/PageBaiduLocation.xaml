@@ -3,21 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.View.BaiduDemo.PageBaiduLocation">
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Button x:Name="btnGetGPSInfo" Text="定位" />
+        <ScrollView>
+            <StackLayout>
+                <Button x:Name="btnGetGPSInfo" Text="定位" />
 
-            <Label>1</Label>
-            <Label>2</Label>
-            <Label>3</Label>
-            <Label>4</Label>
-            <Label>5</Label>
-            <Label>6</Label>
-            <Label>7</Label>
-            <Label>8</Label>
-            <Label>9</Label>
-            <Label>10</Label>
-            
-        </StackLayout>
+                <Label>时间</Label>
+                <Label Text="{Binding ReceiveTime}" />
+
+                <Label>定位类型</Label>
+                <Label Text="{Binding GPSInfoType}" />
+
+                <Label>Longitude</Label>
+                <Label Text="{Binding Longitude}" />
+
+                <Label>Latitude</Label>
+                <Label Text="{Binding Latitude}" />
+
+                <Label>Radius</Label>
+                <Label Text="{Binding Radius}" />
+
+                <Label>Address</Label>
+                <Label Text="{Binding Address}" />
+
+                <Label>LocationDescribe</Label>
+                <Label Text="{Binding LocationDescribe}" />
+
+                <StackLayout x:Name="gErrorInfo" IsVisible="False">
+                    <Label>=============================</Label>
+                    <Label>错误信息</Label>
+                    <Label Text="{Binding ExceptionInfo}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

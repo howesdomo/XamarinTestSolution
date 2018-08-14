@@ -54,7 +54,14 @@ namespace Client.Droid
                 mLocationClient.LocOption = option;
             }
 
-            mLocationClient.Start();
+            if (mLocationClient.IsStarted)
+            {
+                mLocationClient.Restart();
+            }
+            else
+            {
+                mLocationClient.Start();
+            }
         }
 
         public void OnReceiveLocation(BDLocation location)

@@ -72,6 +72,8 @@ namespace Client.Common
             ExceptionInfo = _ExceptionInfo;
             IsSuccess = false;
             BusinessExceptionInfo = string.Empty;
+
+            this.ReceiveTime = DateTime.Now;
         }
 
         #region EventArgs Base

@@ -41,6 +41,9 @@
     <EmbeddedResource Update="View\WebServiceDemo\PageWebServiceDemo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\WebviewDemo\PageWebviewMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinEssentials\DeviceInfo\PageDeviceInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -5067,6 +5067,9 @@ namespace Client.Droid
 			// aapt resource value: 0x7f0c000a
 			public const int Widget_MediaRouter_MediaRouteButton = 2131492874;
 			
+			// aapt resource value: 0x7f0c018c
+			public const int mybutton_text = 2131493260;
+			
 			static Style()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

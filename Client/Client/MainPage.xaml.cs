@@ -2,12 +2,16 @@
 using Client.View;
 using Client.View.BaiduDemo;
 using Client.View.WebviewDemo;
+using Client.View.PickerDemo;
+using Client.View.TTSDemo;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
 
 namespace Client
 {
@@ -29,10 +33,12 @@ namespace Client
             this.btnPageXamarinEssentialsDemo.Clicked += BtnPageXamarinEssentialsDemo_Clicked;
             this.btnPageWebServiceReferenceDemo.Clicked += BtnPageWebServiceReferenceDemo_Clicked;
             this.btnPageWebviewDemo.Clicked += BtnPageWebviewDemo_Clicked;
+            this.btnPickerDemo.Clicked += BtnPickerDemo_Clicked;
+            this.btnPingDemo.Clicked += BtnPingDemo_Clicked;
+            this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
+
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
         }
-
-
 
         private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
         {
@@ -72,6 +78,22 @@ namespace Client
         async void BtnPageWebviewDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PageWebviewMenu());
+        }
+
+        async void BtnPickerDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PickerDemoPage());
+        }
+        
+        async void BtnPingDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PingDemo());
+        }
+
+
+        async void BtnTTSDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageTTSMenu());
         }
 
         async void BtnPageBaiduMenu_Clicked(object sender, EventArgs e)

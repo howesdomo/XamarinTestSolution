@@ -2,30 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Client"
-             x:Class="Client.MainPage">
+             x:Class="Client.MainPage"
+             Title="V 1.0.0.1"
+             >
 
-    <StackLayout>
-        <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
-        <Button x:Name="btnPageDisplayAlertDemo" >
-            <Button.Text>
-                弹窗 Demo
-            </Button.Text>
-        </Button>
+    <ScrollView>
+        <StackLayout>
 
-        <Button x:Name="btnPageMessagingCenterDemo" Text="MessagingCenter Demo - 类似安卓的广播" />
+            <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
+            <Button x:Name="btnPageDisplayAlertDemo" >
+                <Button.Text>
+                    弹窗 Demo
+                </Button.Text>
+            </Button>
+
+            <Button x:Name="btnPageMessagingCenterDemo" Text="MessagingCenter Demo - 类似安卓的广播" />
 
 
-        <Button x:Name="btnPageSQLiteDemo" Text="SQLite Demo" />
-        <Button x:Name="btnPageZXingDemo" Text="ZXingScan Demo" />
+            <Button x:Name="btnPageSQLiteDemo" Text="SQLite Demo" />
 
-        <Button x:Name="btnPageXamarinEssentialsDemo" Text="Xamarin Essentials Demo" />
+            <Button x:Name="btnPageZXingDemo" Text="ZXingScan Demo" />
 
-        <Button x:Name="btnPageWebServiceReferenceDemo" Text="WebService Reference Demo" />
+            <Button x:Name="btnPageXamarinEssentialsDemo" Text="Xamarin Essentials Demo" />
 
-        <Button x:Name="btnPageWebviewDemo" Text="Webview DEMO" />
+            <Button x:Name="btnPageWebServiceReferenceDemo" Text="WebService Reference Demo" />
 
-        <Button x:Name="btnPageBaiduMenu" Text="百度" />
+            <Button x:Name="btnPageWebviewDemo" Text="Webview DEMO" />
 
-        
-    </StackLayout>
+            <Button x:Name="btnPickerDemo" Text="PickerDemo" />
+
+            <Button x:Name="btnPingDemo" Text="PingDemo" />
+
+            <Button x:Name="btnTTSDemo" Text="TTS语音合成" />
+
+            <Button x:Name="btnPageBaiduMenu" Text="百度" />
+
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

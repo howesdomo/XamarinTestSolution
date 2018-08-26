@@ -10,6 +10,7 @@ using Android.OS;
 
 using System.Text;
 using Com.Baidu.Location;
+using Android.Content;
 
 namespace Client.Droid
 {
@@ -106,7 +107,22 @@ namespace Client.Droid
             // 初始化百度定位
             BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
             App.LBS = baiduLBS;
+
+            // 初始化TTS
+            MyTTS tts = MyTTS.GetInstance();
+            App.TTS = tts;
         }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            if (requestCode == MyTTS.TTS_RequestCode)
+            {
+                MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
+            }
+        }
+
     }
 
 

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.TTSDemo.PageTTSMenu">
+  <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnTTS_1" Text="Xamarin Essentials TTS" />
+            <Button x:Name="btnTTS_2_1" Text="Step1:开启语音引擎" />
+            <Button x:Name="btnTTS_2_2" Text="Step2:检测语音引擎状态" />
+            <Editor x:Name="txtSpeechRate" Text="1" />
+            <Button x:Name="btnTTS_2_4" Text="设置语速" />
+            <Editor x:Name="txtContent" Text="一加二加三加四" />
+            <Button x:Name="btnTTS_2_3" Text="播放合成语音" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

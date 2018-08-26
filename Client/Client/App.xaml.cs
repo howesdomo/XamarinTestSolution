@@ -9,6 +9,8 @@ namespace Client
 	{
         public static Client.Common.ILBS LBS { get; set; }
 
+        public static Client.Common.ITTS TTS { get; set; }
+
 		public App ()
 		{
 			InitializeComponent();

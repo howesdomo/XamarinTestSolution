@@ -11,18 +11,18 @@ namespace Client.Droid
 {
     public class BaiduLBS : Service, Com.Baidu.Location.IBDLocationListener, Common.ILBS
     {
-        private static Com.Baidu.Location.LocationClient mLocationClient = null;
+        private static Com.Baidu.Location.LocationClient sLocationClient = null;
 
-        private static Object objLock = new Object();
+        private static object objLock = new object();
 
         public BaiduLBS(Android.Content.Context context)
         {
             lock (objLock)
             {
-                if (mLocationClient == null)
+                if (sLocationClient == null)
                 {
-                    mLocationClient = new Com.Baidu.Location.LocationClient(context);     //声明LocationClient类
-                    mLocationClient.RegisterLocationListener(this);    //注册监听函数
+                    sLocationClient = new Com.Baidu.Location.LocationClient(context);     //声明LocationClient类
+                    sLocationClient.RegisterLocationListener(this);    //注册监听函数
                 }
             }
         }
@@ -51,16 +51,16 @@ namespace Client.Droid
                 option.SetIgnoreKillProcess(false);//可选，默认true，定位SDK内部是一个SERVICE，并放到了独立进程，设置是否在stop的时候杀死这个进程，默认不杀死  
                 option.SetIgnoreCacheException(false);//可选，默认false，设置是否收集CRASH信息，默认收集
                 option.EnableSimulateGps = false;//可选，默认false，设置是否需要过滤GPS仿真结果，默认需要
-                mLocationClient.LocOption = option;
+                sLocationClient.LocOption = option;
             }
 
-            if (mLocationClient.IsStarted)
+            if (sLocationClient.IsStarted)
             {
-                mLocationClient.Restart();
+                sLocationClient.Restart();
             }
             else
             {
-                mLocationClient.Start();
+                sLocationClient.Start();
             }
         }
 

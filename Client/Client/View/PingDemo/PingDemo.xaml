@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.PingDemo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="IP" />
+            <Editor x:Name="txtIP" />
+            <Button x:Name="btnPingTest" Text="Ping Test" />
+            <Button x:Name="btnPingTestStop" Text="Stop" />
+            <ListView x:Name="lv" 
+                      ItemsSource="{Binding Result, Mode=OneWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid BackgroundColor="{Binding Foreground}">
+                                <Label Text="{Binding Content}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

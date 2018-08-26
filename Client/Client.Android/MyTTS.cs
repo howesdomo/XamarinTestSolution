@@ -33,7 +33,6 @@ namespace Client.Droid
 
         private static object objLock = new object();
 
-
         public static MyTTS GetInstance()
         {
             lock (objLock)

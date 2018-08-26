@@ -102,6 +102,22 @@ namespace Client.View
                 string msg = "扫描内容(Text)\r\n{0}\r\n\r\n条码格式(BarcodeFormat)\r\n{1}".FormatWith(result.Text, result.BarcodeFormat);
                 System.Diagnostics.Debug.WriteLine(msg);
 
+                try
+                {
+                    // ** 引用 Xamarin.Essentials 包 **
+                    // 将内容复制到剪贴板
+                    Xamarin.Essentials.Clipboard.SetText(result.Text);
+
+                    msg += "\r\n扫描内容已复制到粘贴板";
+                }
+                catch (Exception ex)
+                {
+                    string msg2 = "{0}".FormatWith(ex.GetFullInfo());
+                    System.Diagnostics.Debug.WriteLine(msg2);
+
+                    msg += "\r\n扫描内容复制到粘贴板时发生错误\r\n{0}".FormatWith(ex.GetFullInfo());
+                }
+
                 await DisplayAlert("扫描内容：", msg, "确定");
 
                 if (mIsScanContinuously == true)

@@ -50,6 +50,8 @@ namespace Client.View
 
                         DisplayAlert("扫描成功", msg, "OK");
                     });
+
+                    
                 };
 
                 await Navigation.PushAsync(scanPage);

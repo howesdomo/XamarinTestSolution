@@ -127,6 +127,10 @@
       <Project>{275af5f5-7f5b-406e-8fb5-7215e1fd96a6}</Project>
       <Name>Util</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\DL.Model\DL.Model.csproj">
+      <Project>{14c8833e-7140-4ef7-a152-17cae3c46ea9}</Project>
+      <Name>DL.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Client\Client.csproj">
       <Project>{2AFF44BC-E823-4428-A84A-A586B6A7C4F6}</Project>
       <Name>Client</Name>

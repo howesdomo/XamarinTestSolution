@@ -31,7 +31,10 @@ namespace Client.View
         {
             this.btnTest.Clicked += BtnTest_Clicked;
             this.btnTestWebAPI.Clicked += BtnTestWebAPI_Clicked;
+            this.btnTest3.Clicked += BtnTest3_Clicked;
+            
         }
+
 
         private void BtnTestWebAPI_Clicked(object sender, EventArgs e)
         {
@@ -52,6 +55,64 @@ namespace Client.View
             {
                 string errorMsg = ex.GetFullInfo();
                 await DisplayAlert("Error", errorMsg, "确定");
+            }
+        }
+
+        async void BtnTest3_Clicked(object sender, EventArgs e)
+        {
+            if (Common.StaticInfo.CurrentUser == null)
+            {
+                Common.StaticInfo.CurrentUser = new DL.Model.User()
+                {
+                    ID = Guid.Empty,
+                    LoginAccount = "D3333",
+                    UserName = "Howe",
+                    DeviceInfo = Util.JsonUtils.SerializeObject(Common.StaticInfo.DeviceInfo)
+                };
+            }
+            try
+            {
+                new WebService().CollectUnhandleExceptionV1
+                (
+                    "Test",
+                    Common.StaticInfo.CurrentUser,
+                    Bw_RunWorkerCompleted
+                 );
+            }
+            catch (Exception ex)
+            {
+                string errorMsg = ex.GetFullInfo();
+                await DisplayAlert("Error", errorMsg, "确定");
+            }
+        }
+
+        void Bw_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs args)
+        {
+            if (args.Error != null)
+            {
+                DisplayAlert("Error", args.Error.GetFullInfo(), "确定");
+                return;
+            }
+
+            if (args.Result == null)
+            {
+                DisplayAlert("Error", "SOAPResult为空", "确定");
+                return;
+            }
+
+            Util.WebService.SOAPResult soapResult = args.Result as Util.WebService.SOAPResult;
+
+            if (soapResult.IsComplete == false)
+            {
+                DisplayAlert("Error", soapResult.ExceptionInfo, "确定");
+            }
+            else if (soapResult.IsSuccess == false)
+            {
+                DisplayAlert("Error", soapResult.BusinessExceptionInfo, "确定");
+            }
+            else
+            {
+                DisplayAlert("提示", "执行成功。", "确定");
             }
         }
     }

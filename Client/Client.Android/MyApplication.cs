@@ -46,8 +46,38 @@ namespace Client.Droid
         /// <param name="e"></param>
         private void UnhandledExceptionHandler(Exception ex, RaiseThrowableEventArgs e)
         {
-            // 处理程序（记录 异常、设备信息、时间等重要信息）
-            System.Diagnostics.Debug.WriteLine(ex.GetFullInfo());
+            #region 处理程序（记录 异常、设备信息、时间等重要信息）
+
+            //try
+            //{
+            //    string errorMsg = ex.GetFullInfo();
+            //    System.Diagnostics.Debug.WriteLine(errorMsg);
+
+            //    StringBuilder sb = new StringBuilder();
+            //    sb.AppendLine("账号信息:");
+            //    sb.AppendLine(Client.Common.StaticInfo.CurrentUser.ID.ToString());
+            //    sb.AppendLine(Client.Common.StaticInfo.CurrentUser.LoginAccount);
+            //    sb.AppendLine(Client.Common.StaticInfo.CurrentUser.UserName);
+            //    sb.AppendLine();
+            //    sb.AppendLine("设备信息:");
+            //    sb.AppendLine(Client.Common.StaticInfo.DeviceInfo.ToString());
+            //    sb.AppendLine();
+            //    sb.AppendLine("异常信息:");
+            //    sb.AppendLine(errorMsg);
+
+            //    new WebService().CollectUnhandleException
+            //    (
+            //        sb.ToString(),
+            //        Client.Common.StaticInfo.CurrentUser
+            //     );
+            //}
+            //catch (Exception ex2)
+            //{
+            //    string msg = "{0}".FormatWith(ex2.GetFullInfo());
+            //    System.Diagnostics.Debug.WriteLine(msg);
+            //}
+
+            #endregion
 
             System.Threading.Tasks.Task.Run(() =>
             {

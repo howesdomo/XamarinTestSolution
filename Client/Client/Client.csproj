@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj" />
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj" />
+    <ProjectReference Include="..\..\DL.Model\DL.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

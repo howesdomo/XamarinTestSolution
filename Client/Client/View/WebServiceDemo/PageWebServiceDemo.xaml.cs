@@ -134,7 +134,7 @@ namespace Client.View
             (
                 errorMsg: "Test",
                 u: Common.StaticInfo.CurrentUser,
-                // page: this,
+                page: this,
                 handle: (soapResult) =>
                 {
                     if (soapResult.IsComplete == false)

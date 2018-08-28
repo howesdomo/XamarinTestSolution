@@ -24,6 +24,21 @@ namespace Client
             Action<Util.WebService.SOAPResult> handle = null
         )
         {
+            var current = Xamarin.Essentials.Connectivity.NetworkAccess;
+            if (current == Xamarin.Essentials.NetworkAccess.None)
+            {
+                string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。".FormatWith(requestData.MethodName);
+                if (page == null)
+                {
+                    System.Diagnostics.Debug.WriteLine(msg);
+                }
+                else
+                {
+                    page.DisplayAlert("Error", msg, "确定");
+                }
+                return;
+            }
+
 
             System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
 

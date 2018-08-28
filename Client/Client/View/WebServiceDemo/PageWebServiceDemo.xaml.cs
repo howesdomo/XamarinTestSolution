@@ -32,9 +32,9 @@ namespace Client.View
             this.btnTest.Clicked += BtnTest_Clicked;
             this.btnTestWebAPI.Clicked += BtnTestWebAPI_Clicked;
             this.btnTest3.Clicked += BtnTest3_Clicked;
-            
-        }
+            this.btnWebServiceLastest.Clicked += BtnWebServiceLastest_Clicked;
 
+        }
 
         private void BtnTestWebAPI_Clicked(object sender, EventArgs e)
         {
@@ -115,5 +115,46 @@ namespace Client.View
                 DisplayAlert("提示", "执行成功。", "确定");
             }
         }
+
+
+        private void BtnWebServiceLastest_Clicked(object sender, EventArgs e)
+        {
+            if (Common.StaticInfo.CurrentUser == null)
+            {
+                Common.StaticInfo.CurrentUser = new DL.Model.User()
+                {
+                    ID = Guid.Empty,
+                    LoginAccount = "D3333",
+                    UserName = "Howe",
+                    DeviceInfo = Util.JsonUtils.SerializeObject(Common.StaticInfo.DeviceInfo)
+                };
+            }
+
+            new WebService().CollectUnhandleException
+            (
+                errorMsg: "Test",
+                u: Common.StaticInfo.CurrentUser,
+                // page: this,
+                handle: (soapResult) =>
+                {
+                    if (soapResult.IsComplete == false)
+                    {
+                        DisplayAlert("Error", soapResult.ExceptionInfo, "确定");
+                        return;
+                    }
+                    else if (soapResult.IsSuccess == false)
+                    {
+                        DisplayAlert("Error", soapResult.BusinessExceptionInfo, "确定");
+                        return;
+                    }
+                    else
+                    {
+                        DisplayAlert("提交", "提交成功", "确认");
+                    }
+                }
+            );
+
+        }
+
     }
 }

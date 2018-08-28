@@ -48,34 +48,34 @@ namespace Client.Droid
         {
             #region 处理程序（记录 异常、设备信息、时间等重要信息）
 
-            //try
-            //{
-            //    string errorMsg = ex.GetFullInfo();
-            //    System.Diagnostics.Debug.WriteLine(errorMsg);
+            try
+            {
+                string errorMsg = ex.GetFullInfo();
+                System.Diagnostics.Debug.WriteLine(errorMsg);
 
-            //    StringBuilder sb = new StringBuilder();
-            //    sb.AppendLine("账号信息:");
-            //    sb.AppendLine(Client.Common.StaticInfo.CurrentUser.ID.ToString());
-            //    sb.AppendLine(Client.Common.StaticInfo.CurrentUser.LoginAccount);
-            //    sb.AppendLine(Client.Common.StaticInfo.CurrentUser.UserName);
-            //    sb.AppendLine();
-            //    sb.AppendLine("设备信息:");
-            //    sb.AppendLine(Client.Common.StaticInfo.DeviceInfo.ToString());
-            //    sb.AppendLine();
-            //    sb.AppendLine("异常信息:");
-            //    sb.AppendLine(errorMsg);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("账号信息:");
+                sb.AppendLine(Client.Common.StaticInfo.CurrentUser.ID.ToString());
+                sb.AppendLine(Client.Common.StaticInfo.CurrentUser.LoginAccount);
+                sb.AppendLine(Client.Common.StaticInfo.CurrentUser.UserName);
+                sb.AppendLine();
+                sb.AppendLine("设备信息:");
+                sb.AppendLine(Client.Common.StaticInfo.DeviceInfo.ToString());
+                sb.AppendLine();
+                sb.AppendLine("异常信息:");
+                sb.AppendLine(errorMsg);
 
-            //    new WebService().CollectUnhandleException
-            //    (
-            //        sb.ToString(),
-            //        Client.Common.StaticInfo.CurrentUser
-            //     );
-            //}
-            //catch (Exception ex2)
-            //{
-            //    string msg = "{0}".FormatWith(ex2.GetFullInfo());
-            //    System.Diagnostics.Debug.WriteLine(msg);
-            //}
+                new WebService().CollectUnhandleException
+                (
+                    sb.ToString(),
+                    Client.Common.StaticInfo.CurrentUser
+                 );
+            }
+            catch (Exception ex2)
+            {
+                string msg = "{0}".FormatWith(ex2.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
 
             #endregion
 
@@ -85,6 +85,7 @@ namespace Client.Droid
                 Toast.MakeText(this, "程序捕获到异常。", ToastLength.Long).Show();
                 Looper.Loop();
             });
+
 
             // 停一会，让前面的操作做完
             System.Threading.Thread.Sleep(2000);

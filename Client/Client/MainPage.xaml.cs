@@ -42,6 +42,17 @@ namespace Client
 
         private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
         {
+            if (Common.StaticInfo.CurrentUser == null)
+            {
+                Common.StaticInfo.CurrentUser = new DL.Model.User()
+                {
+                    ID = Guid.Empty,
+                    LoginAccount = "D3333",
+                    UserName = "Howe",
+                    DeviceInfo = Util.JsonUtils.SerializeObject(Common.StaticInfo.DeviceInfo)
+                };
+            }
+
             throw new Exception("我来测试全局捕获异常");
         }
 
@@ -84,7 +95,7 @@ namespace Client
         {
             await Navigation.PushAsync(new PickerDemoPage());
         }
-        
+
         async void BtnPingDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PingDemo());

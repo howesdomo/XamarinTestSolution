@@ -9,10 +9,10 @@ namespace Client
 
         public void CollectUnhandleException
         (
-            Xamarin.Forms.Page page,
             string errorMsg, 
             DL.Model.User u,
-            Action handle
+            Xamarin.Forms.Page page = null,
+            Action<Util.WebService.SOAPResult> handle = null
         )
         {
             Uri uri = Common.StaticInfo.AppWebSetting.GetUri();
@@ -30,7 +30,7 @@ namespace Client
             requestData.MethodName = methodName;
             requestData.JsonArgs = args;
 
-            new WebServiceBase().Execute(page, uri, requestData, handle);
+            new WebServiceBase().Execute(uri, requestData, page, handle);
         }
 
         public void CollectUnhandleExceptionV1
@@ -44,7 +44,6 @@ namespace Client
 
             bw.DoWork += (s, e) =>
             {
-
                 Uri uri = Common.StaticInfo.AppWebSetting.GetUri();
 
                 // 方法名
@@ -54,7 +53,6 @@ namespace Client
                 List<string> args = new List<string>();
                 args.Add(Util.JsonUtils.SerializeObject(errorMsg));
                 args.Add(Util.JsonUtils.SerializeObject(u));
-
 
                 Util.WebService.RequestData requestData = new Util.WebService.RequestData();
                 requestData.MethodName = methodName;
@@ -70,6 +68,32 @@ namespace Client
 
             // TODO 加漏斗
             bw.RunWorkerAsync();
+        }
+
+        public void CollectUnhandleExceptionV2
+        (
+            string errorMsg,
+            DL.Model.User u,
+            Xamarin.Forms.Page page = null,
+            Action<string> handle = null
+        )
+        {
+            Uri uri = Common.StaticInfo.AppWebSetting.GetUri();
+
+            // 方法名
+            string methodName = "CollectUnhandleException";
+
+            // 方法参数
+            List<string> args = new List<string>();
+            args.Add(Util.JsonUtils.SerializeObject(errorMsg));
+            args.Add(Util.JsonUtils.SerializeObject(u));
+
+
+            Util.WebService.RequestData requestData = new Util.WebService.RequestData();
+            requestData.MethodName = methodName;
+            requestData.JsonArgs = args;
+
+            new WebServiceBase().ExecuteV2(uri, requestData, page, handle);
         }
 
     }

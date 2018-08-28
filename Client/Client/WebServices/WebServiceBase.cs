@@ -15,7 +15,14 @@ namespace Client
             this.mClient.Headers.Add("Content-Type", "application/json; charset=utf-8");
         }
 
-        public void Execute(Xamarin.Forms.Page page, Uri mUri, Util.WebService.RequestData requestData, Action handle = null)
+        // 永远是最新的方法, 要优化Copy一份加 V{版本号}
+        public void Execute 
+        (
+            Uri mUri,
+            Util.WebService.RequestData requestData,
+            Xamarin.Forms.Page page = null,
+            Action<Util.WebService.SOAPResult> handle = null
+        )
         {
 
             System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
@@ -48,38 +55,51 @@ namespace Client
             {
                 if (args.Error != null)
                 {
-                    page.DisplayAlert("Error", args.Error.GetFullInfo(), "确定");
+                    string msg = "{0}".FormatWith(args.Error.GetFullInfo());
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", msg, "确定");
+                    }
                     return;
                 }
 
                 if (args.Result == null)
                 {
-                    page.DisplayAlert("Error", "SOAPResult为空", "确定");
+                    string msg = "执行 {0} 发生未知错误：args.Result未空值".FormatWith(requestData.MethodName);
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", msg, "确定");
+                    }
+                    return;
+                }
+
+                if (handle == null)
+                {
                     return;
                 }
 
                 Util.WebService.SOAPResult soapResult = args.Result as Util.WebService.SOAPResult;
-
-                if (soapResult.IsComplete == false)
-                {
-                    page.DisplayAlert("Error", soapResult.ExceptionInfo, "确定");
-                }
-                else if (soapResult.IsSuccess == false)
-                {
-                    page.DisplayAlert("Error", soapResult.BusinessExceptionInfo, "确定");
-                }
-                else
-                {
-                    if (handle != null)
-                    {
-                        handle.Invoke();
-                    }
-                }
+                handle.Invoke(soapResult);
+                 
             };
-            
+
             bw.RunWorkerAsync();
         }
 
+        /// <summary>
+        /// 缺点 : 应该把 BackgroundWorker 用于mClient.UploadString(), 而不是在 WebService 具体方法中创建 BackgroundWorker
+        /// </summary>
+        /// <param name="mUri"></param>
+        /// <param name="requestData"></param>
+        /// <returns></returns>
         public Util.WebService.SOAPResult ExecuteV1(Uri mUri, Util.WebService.RequestData requestData)
         {
             string data = string.Empty;
@@ -100,6 +120,116 @@ namespace Client
 
             Util.WebService.SOAPResult soapResult = Util.JsonUtils.DeserializeObject<Util.WebService.SOAPResult>(data);
             return soapResult;
+        }
+
+        /// <summary>
+        /// 缺点 : 逻辑处理不方便, 报错时页面不知道接下去要做什么
+        /// </summary>
+        /// <param name="mUri"></param>
+        /// <param name="requestData"></param>
+        /// <param name="page"></param>
+        /// <param name="handle"></param>
+        public void ExecuteV2
+        (
+            Uri mUri,
+            Util.WebService.RequestData requestData,
+            Xamarin.Forms.Page page = null,
+            Action<string> handle = null
+        )
+        {
+
+            System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
+
+            bw.DoWork += (s, e) =>
+            {
+
+                string data = string.Empty;
+                try
+                {
+                    // TODO 测试超时, 超长内容
+                    data = mClient.UploadString(mUri, "POST", Util.JsonUtils.SerializeObject(requestData));
+                }
+                catch (System.Net.WebException webEx)
+                {
+                    string msg = string.Format("{0}", webEx.Message);
+                    System.Diagnostics.Debug.WriteLine(msg);
+                }
+                finally
+                {
+                    mClient.Dispose();
+                }
+
+                Util.WebService.SOAPResult soapResult = Util.JsonUtils.DeserializeObject<Util.WebService.SOAPResult>(data);
+                e.Result = soapResult;
+            };
+
+
+            bw.RunWorkerCompleted += (obj, args) =>
+            {
+                if (args.Error != null)
+                {
+                    string msg = "{0}".FormatWith(args.Error.GetFullInfo());
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", msg, "确定");
+                    }
+                    return;
+                }
+
+                if (args.Result == null)
+                {
+                    string msg = "执行 {0} 发生未知错误：args.Result未空值".FormatWith(requestData.MethodName);
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", msg, "确定");
+                    }
+                    return;
+                }
+
+
+                Util.WebService.SOAPResult soapResult = args.Result as Util.WebService.SOAPResult;
+                if (soapResult.IsComplete == false)
+                {
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(soapResult.ExceptionInfo);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", soapResult.ExceptionInfo, "确定");
+                    }
+                    return;
+                }
+                else if (soapResult.IsSuccess == false)
+                {
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(soapResult.BusinessExceptionInfo);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", soapResult.BusinessExceptionInfo, "确定");
+                    }
+                    return;
+                }
+                else
+                {
+                    if (handle != null)
+                    {
+                        handle.Invoke(soapResult.ReturnObjectJson);
+                    }
+                }
+            };
+
+            bw.RunWorkerAsync();
         }
     }
 }

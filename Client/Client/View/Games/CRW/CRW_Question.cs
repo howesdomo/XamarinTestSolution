@@ -8,9 +8,6 @@ namespace Client.View.Games.CRW
     {
         public int No { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string Info { get; set; }
 
         public int Left { get; set; }
@@ -43,6 +40,7 @@ namespace Client.View.Games.CRW
                         this.SymbolInfo = this.Symbol.ToString();
                         this.RightInfo = this.Right.ToString();
                         this.ResultInfo = cQuestionMark;
+                        this.Status = CRW_Question_Status.Remember;
                     }
                     break;
                 case CRW_Question_Status.Answer:
@@ -51,6 +49,7 @@ namespace Client.View.Games.CRW
                         this.SymbolInfo = cQuestionMark;
                         this.RightInfo = cQuestionMark;
                         this.ResultInfo = cQuestionMark;
+                        this.Status = CRW_Question_Status.Answer;
                     }
                     break;
                 case CRW_Question_Status.ShowAnswer:
@@ -59,6 +58,7 @@ namespace Client.View.Games.CRW
                         this.SymbolInfo = this.Symbol.ToString();
                         this.RightInfo = this.Right.ToString();
                         this.ResultInfo = this.Result.ToString();
+                        this.Status = CRW_Question_Status.ShowAnswer;
                     }
                     break;
                 default:

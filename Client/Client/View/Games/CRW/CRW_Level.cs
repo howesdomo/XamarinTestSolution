@@ -24,7 +24,12 @@ namespace Client.View.Games.CRW
         /// <summary>
         /// 规定时间内完成答题
         /// </summary>
-        public int Ans { get; set; }
+        public int AnswerTime { get; set; }
+
+        /// <summary>
+        /// 题目数量
+        /// </summary>
+        public int QuestionCount { get; set; }
 
     }
 }

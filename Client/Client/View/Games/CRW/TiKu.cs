@@ -76,7 +76,7 @@ namespace Client.View.Games.CRW
             {
                 JianFaList = new List<CRW_Question>();
 
-                var query = TiKu_JiaFa
+                var query = TiKu_JianFa
                             .Split('\r', '\n')
                             .Where(i => i.IsNullOrWhiteSpace() == false);
 
@@ -168,7 +168,7 @@ namespace Client.View.Games.CRW
 
         #region 减法题库
 
-        private static string jianFa =
+        private static string TiKu_JianFa =
 @"0, -, 0, 0 
 1, -, 0, 1 
 1, -, 1, 0 

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewCRW="clr-namespace:Client.View.Games.CRW"
+             x:Class="Client.View.Games.CRW.PageMain"
+             
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*" />
+                <ColumnDefinition Width="0.4*" />
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="gLeft">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.15*" />
+                    <RowDefinition Height="0.425*" />
+                    <RowDefinition Height="0.425*" />
+                </Grid.RowDefinitions>
+                <Grid BackgroundColor="LimeGreen">
+                    <Label Text="快速3溯答" />
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="锻炼时间" />
+                        <Label Grid.Column="1" Text="5分59秒" />
+                    </Grid>
+                </Grid>
+
+                <viewCRW:UcQuestion x:Name="gRemember" Grid.Row="1" />
+                <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="2" />
+            </Grid>
+            <Grid x:Name="gRight"
+                      Grid.Column="1"
+                      BackgroundColor="Gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Text="消除" />
+                    <Button Grid.Row="0" Grid.Column="1" Margin="0" Text="放弃" />
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

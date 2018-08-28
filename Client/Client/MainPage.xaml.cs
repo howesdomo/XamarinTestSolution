@@ -37,10 +37,9 @@ namespace Client
             this.btnPickerDemo.Clicked += BtnPickerDemo_Clicked;
             this.btnPingDemo.Clicked += BtnPingDemo_Clicked;
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
-
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
+            this.btnGames.Clicked += BtnGames_Clicked;
         }
-
 
         private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
         {
@@ -119,6 +118,10 @@ namespace Client
             await Navigation.PushAsync(new PageBaiduMenu());
         }
 
+        async void BtnGames_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Games.PageGamesList());
+        }
     }
 
 

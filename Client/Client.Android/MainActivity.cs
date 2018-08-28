@@ -101,6 +101,9 @@ namespace Client.Droid
                 }
             );
 
+            // 屏幕方向
+            App.ScreenDirection = new ScreenDirection(this);
+
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
 

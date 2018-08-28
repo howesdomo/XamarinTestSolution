@@ -7,6 +7,8 @@ namespace Client
 {
 	public partial class App : Application
 	{
+        public static Util.XamariN.IScreenDirection ScreenDirection { get; set; }
+
         public static Client.Common.ILBS LBS { get; set; }
 
         public static Client.Common.ITTS TTS { get; set; }

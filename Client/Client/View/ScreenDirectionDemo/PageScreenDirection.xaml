@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.PageScreenDirection">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btn1" Text="根据陀螺仪" />
+            <Button x:Name="btn2" Text="竖屏" />
+            <Button x:Name="btn3" Text="横屏" />
+            <Button x:Name="btn4" Text="不根据陀螺仪" />            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

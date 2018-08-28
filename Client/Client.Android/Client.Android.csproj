@@ -82,6 +82,7 @@
     <Compile Include="MyTTS.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ScreenDirection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

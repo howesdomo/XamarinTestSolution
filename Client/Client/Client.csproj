@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\ScreenDirectionDemo\PageScreenDirection.xaml.cs">
+      <DependentUpon>PageScreenDirection.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\SQLiteDemo\PageSQLiteDemo_NodeItem.xaml.cs">
       <DependentUpon>PageSQLiteDemo_NodeItem.xaml</DependentUpon>
     </Compile>
@@ -37,6 +40,12 @@
     <EmbeddedResource Update="View\DisplayAlertDemo\PageDisplayAlertDemoList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\Games\CRW\PageMain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Games\CRW\UcQuestion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\MessagingCenterDemo\PageMessagingCenterDemo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -50,6 +59,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\PingDemo\PingDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\ScreenDirectionDemo\PageScreenDirection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\TTSDemo\PageTTSMenu.xaml">

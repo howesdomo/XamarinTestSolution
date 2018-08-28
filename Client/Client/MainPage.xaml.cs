@@ -26,6 +26,7 @@ namespace Client
         private void initEvent()
         {
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
+            this.btnPageScreenDirection.Clicked += BtnPageScreenDirection_Clicked;
             this.btnPageDisplayAlertDemo.Clicked += BtnPageDisplayAlertDemo_Clicked;
             this.btnPageMessagingCenterDemo.Clicked += BtnPageMessagingCenterDemo_Clicked;
             this.btnPageSQLiteDemo.Clicked += BtnPageSQLiteDemo_Clicked;
@@ -39,6 +40,7 @@ namespace Client
 
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
         }
+
 
         private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
         {
@@ -54,6 +56,11 @@ namespace Client
             }
 
             throw new Exception("我来测试全局捕获异常");
+        }
+
+        async void BtnPageScreenDirection_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageScreenDirection());
         }
 
         async void BtnPageDisplayAlertDemo_Clicked(object sender, EventArgs e)

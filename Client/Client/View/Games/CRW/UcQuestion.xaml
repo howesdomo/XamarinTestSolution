@@ -9,14 +9,12 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <Image />
                 <Label HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
-                       Margin="0 0 0 0"
-                    Text="8题" />
+                       Text="8题" />
             </Grid>
             <Grid Grid.Column="1">
-                <Grid.Resources>                    
+                <Grid.Resources>
                     <Style TargetType="Label">
                         <Setter Property="FontSize" Value="40" />
                         <Setter Property="FontAttributes" Value="Bold" />

@@ -32,10 +32,12 @@
                     </Grid>
                 </Grid>
 
-                <!--
+                
+                
                 <viewCRW:UcQuestion x:Name="gRemember" Grid.Row="1" />
                 <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="2" />
-                -->
+                
+                
             </Grid>
             <Grid x:Name="gRight"
                       Grid.Column="1"

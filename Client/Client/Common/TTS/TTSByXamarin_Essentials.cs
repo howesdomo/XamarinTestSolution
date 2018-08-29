@@ -63,6 +63,11 @@ namespace Client.Common
                 isBusy = false;
             });
 
+            if (isBusy == false)
+            {
+
+            }
+
             // or you can query multiple without a Task:
             Task.WhenAll(
                 TextToSpeech.SpeakAsync("Hello World 1"),

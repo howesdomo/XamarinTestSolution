@@ -8,13 +8,15 @@ namespace Client.View.Games.CRW
     {
         public int No { get; set; }
 
-        public string Info { get; set; }
+        public string NoInfo { get; set; }
 
         public int Left { get; set; }
 
         public string Symbol { get; set; }
 
         public int Right { get; set; }
+
+        public string EqualsSymbol { get; set; }
 
         public int Result { get; set; }
 
@@ -36,6 +38,7 @@ namespace Client.View.Games.CRW
             {
                 case CRW_Question_Status.Remember:
                     {
+                        this.NoInfo = "{0}题".FormatWith(this.No);
                         this.LeftInfo = this.Left.ToString();
                         this.SymbolInfo = this.Symbol.ToString();
                         this.RightInfo = this.Right.ToString();
@@ -45,6 +48,7 @@ namespace Client.View.Games.CRW
                     break;
                 case CRW_Question_Status.Answer:
                     {
+                        this.NoInfo = "{0}题".FormatWith(this.No);
                         this.LeftInfo = cQuestionMark;
                         this.SymbolInfo = cQuestionMark;
                         this.RightInfo = cQuestionMark;
@@ -54,6 +58,7 @@ namespace Client.View.Games.CRW
                     break;
                 case CRW_Question_Status.ShowAnswer:
                     {
+                        this.NoInfo = "{0}题".FormatWith(this.No);
                         this.LeftInfo = this.Left.ToString();
                         this.SymbolInfo = this.Symbol.ToString();
                         this.RightInfo = this.Right.ToString();
@@ -70,6 +75,7 @@ namespace Client.View.Games.CRW
 
         public void NotifyUI()
         {
+            this.OnPropertyChanged("NoInfo");
             this.OnPropertyChanged("LeftInfo");
             this.OnPropertyChanged("SymbolInfo");
             this.OnPropertyChanged("RightInfo");

@@ -29,6 +29,7 @@ namespace Client.View.Games.CRW
                 toAdd.Left = randTiKu.Left;
                 toAdd.Symbol = randTiKu.Symbol;
                 toAdd.Right = randTiKu.Right;
+                toAdd.EqualsSymbol = randTiKu.EqualsSymbol;
                 toAdd.Result = randTiKu.Result;
 
                 toAdd.ChangeStatus(CRW_Question_Status.Remember);

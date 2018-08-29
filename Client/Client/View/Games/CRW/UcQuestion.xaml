@@ -11,7 +11,7 @@
             <Grid Grid.Column="0">
                 <Label HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
-                       Text="8题" />
+                       Text="{Binding NoInfo}" />
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.Resources>
@@ -28,11 +28,11 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Text="7" />
-                <Label Grid.Column="1" Text="-" />
-                <Label Grid.Column="2" Text="3" />
-                <Label Grid.Column="3" Text="=" />
-                <Label Grid.Column="4" Text="?" />
+                <Label Grid.Column="0" Text="{Binding LeftInfo}" />
+                <Label Grid.Column="1" FontSize="28" Text="{Binding SymbolInfo}" />
+                <Label Grid.Column="2" Text="{Binding RightInfo}" />
+                <Label Grid.Column="3" Text="{Binding EqualsSymbol}" />
+                <Label Grid.Column="4" Text="{Binding ResultInfo}" />
             </Grid>
         </Grid>
     </ContentView.Content>

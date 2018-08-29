@@ -11,42 +11,56 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <!--
+                <ColumnDefinition Width="0.6*" />
+                <ColumnDefinition Width="0.4*" />
+                -->
                 <ColumnDefinition Width="0.6*" />
                 <ColumnDefinition Width="0.4*" />
             </Grid.ColumnDefinitions>
-            <Grid x:Name="gLeft">
+            <Grid x:Name="gLeft" BackgroundColor="Pink">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.15*" />
                     <RowDefinition Height="0.425*" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="0.425*" />
                 </Grid.RowDefinitions>
                 <Grid BackgroundColor="LimeGreen">
-                    <Label Text="快速3溯答" />
+                    <Label Text="{Binding LevelName}" />
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Label Text="锻炼时间" />
-                        <Label Grid.Column="1" Text="5分59秒" />
+                        <Label Grid.Column="1" Text="{Binding CRW_UseTimeInfo}" />
                     </Grid>
                 </Grid>
 
-                
-                
-                <viewCRW:UcQuestion x:Name="gRemember" Grid.Row="1" />
-                <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="2" />
-                
-                
+                <viewCRW:UcQuestion x:Name="gRemember" Grid.Row="1" BindingContext="{Binding RememberQuestion}" />
+
+                <Grid Grid.Row="2" BackgroundColor="Black">
+                    <Label Text="." FontSize="0.8" />
+                </Grid>
+                <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="3" BindingContext="{Binding AnswerQuestion}" />
             </Grid>
             <Grid x:Name="gRight"
-                      Grid.Column="1"
-                      BackgroundColor="Gray">
+                  Grid.Column="1"
+                  BackgroundColor="Gray">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
+                    <Editor x:Name="txtLevelNo" Text="1" />
+                    <Button x:Name="btnResetLevel" Grid.Column="1" Margin="0" Text="重设关卡" />
+                    
+                </Grid>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />

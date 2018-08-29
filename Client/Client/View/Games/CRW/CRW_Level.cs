@@ -11,6 +11,8 @@ namespace Client.View.Games.CRW
     {
         public int LevelNo { get; set; }
 
+        public int SuSuan { get; set; }
+
         /// <summary>
         /// 登记名称
         /// </summary>
@@ -31,5 +33,19 @@ namespace Client.View.Games.CRW
         /// </summary>
         public int QuestionCount { get; set; }
 
+        /// <summary>
+        /// 开始作答
+        /// </summary>
+        public int AnswerStartIndex { get; set; }
+
+        /// <summary>
+        /// 停止出题
+        /// </summary>
+        public int RememberEndIndex { get; set; }
+
+        /// <summary>
+        /// CurrentIndex 最大索引
+        /// </summary>
+        public int MaxIndex { get; set; }
     }
 }

@@ -32,16 +32,15 @@ namespace Client.View.Games.CRW
             return List;
         }
 
+        private static List<CRW_Question> sJiaFaList { get; set; }
 
-        private static List<CRW_Question> JiaFaList { get; set; }
-
-        private static List<CRW_Question> JianFaList { get; set; }
+        private static List<CRW_Question> sJianFaList { get; set; }
 
         public static List<CRW_Question> InitJiaFaList()
         {
-            if (JiaFaList == null)
+            if (sJiaFaList == null)
             {
-                JiaFaList = new List<CRW_Question>();
+                sJiaFaList = new List<CRW_Question>();
 
                 var query = TiKu_JiaFa
                             .Split('\r', '\n')
@@ -61,20 +60,21 @@ namespace Client.View.Games.CRW
                     toAdd.Left = int.Parse(qArr[0]);
                     toAdd.Symbol = qArr[1];
                     toAdd.Right = int.Parse(qArr[2]);
+                    toAdd.EqualsSymbol = "=";
                     toAdd.Result = int.Parse(qArr[3]);
 
-                    JiaFaList.Add(toAdd);
+                    sJiaFaList.Add(toAdd);
                 }
             }
 
-            return JiaFaList;
+            return sJiaFaList;
         }
 
         public static List<CRW_Question> InitJianFaList()
         {
-            if (JianFaList == null)
+            if (sJianFaList == null)
             {
-                JianFaList = new List<CRW_Question>();
+                sJianFaList = new List<CRW_Question>();
 
                 var query = TiKu_JianFa
                             .Split('\r', '\n')
@@ -94,16 +94,15 @@ namespace Client.View.Games.CRW
                     toAdd.Left = int.Parse(qArr[0]);
                     toAdd.Symbol = qArr[1];
                     toAdd.Right = int.Parse(qArr[2]);
+                    toAdd.EqualsSymbol = "=";
                     toAdd.Result = int.Parse(qArr[3]);
 
-                    JianFaList.Add(toAdd);
+                    sJianFaList.Add(toAdd);
                 }
             }
 
-            return JianFaList;
+            return sJianFaList;
         }
-
-
 
         #region 加法题库
 

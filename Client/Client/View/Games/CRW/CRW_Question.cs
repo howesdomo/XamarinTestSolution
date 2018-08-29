@@ -28,7 +28,13 @@ namespace Client.View.Games.CRW
 
         public string ResultInfo { get; set; }
 
+
         public CRW_Question_Status Status { get; set; }
+
+        public bool WrongImageVisible { get; set; }
+
+        public bool CorrectImageVisible { get; set; }
+
 
         public const string cQuestionMark = "?";
 
@@ -46,6 +52,7 @@ namespace Client.View.Games.CRW
                         this.Status = CRW_Question_Status.Remember;
                     }
                     break;
+
                 case CRW_Question_Status.Answer:
                     {
                         this.NoInfo = "{0}题".FormatWith(this.No);
@@ -56,16 +63,44 @@ namespace Client.View.Games.CRW
                         this.Status = CRW_Question_Status.Answer;
                     }
                     break;
-                case CRW_Question_Status.ShowAnswer:
+
+                case CRW_Question_Status.InputWrongAnswer:
+                    {
+                        this.NoInfo = "{0}题".FormatWith(this.No);
+                        this.LeftInfo = cQuestionMark;
+                        this.SymbolInfo = cQuestionMark;
+                        this.RightInfo = cQuestionMark;
+                        // this.ResultInfo = cQuestionMark;
+                        this.Status = CRW_Question_Status.InputWrongAnswer;
+                    }
+                    break;
+
+                case CRW_Question_Status.InputCorrectAnswer:
                     {
                         this.NoInfo = "{0}题".FormatWith(this.No);
                         this.LeftInfo = this.Left.ToString();
                         this.SymbolInfo = this.Symbol.ToString();
                         this.RightInfo = this.Right.ToString();
                         this.ResultInfo = this.Result.ToString();
-                        this.Status = CRW_Question_Status.ShowAnswer;
+                        this.Status = CRW_Question_Status.InputCorrectAnswer;
+                        this.CorrectImageVisible = true;
+                        this.WrongImageVisible = false;
                     }
                     break;
+
+                case CRW_Question_Status.TimeOutWrongAnswer:
+                    {
+                        this.NoInfo = "{0}题".FormatWith(this.No);
+                        this.LeftInfo = this.Left.ToString();
+                        this.SymbolInfo = this.Symbol.ToString();
+                        this.RightInfo = this.Right.ToString();
+                        this.ResultInfo = this.Result.ToString();
+                        this.Status = CRW_Question_Status.TimeOutWrongAnswer;
+                        this.CorrectImageVisible = false;
+                        this.WrongImageVisible = true;
+                    }
+                    break;
+
                 default:
                     break;
             }
@@ -79,7 +114,10 @@ namespace Client.View.Games.CRW
             this.OnPropertyChanged("LeftInfo");
             this.OnPropertyChanged("SymbolInfo");
             this.OnPropertyChanged("RightInfo");
+
             this.OnPropertyChanged("ResultInfo");
+            this.OnPropertyChanged("CorrectImageVisible");
+            this.OnPropertyChanged("WrongImageVisible");
         }
 
     }
@@ -88,7 +126,9 @@ namespace Client.View.Games.CRW
     {
         Remember = 0,
         Answer = 1,
-        ShowAnswer = 2
+        InputWrongAnswer = 2,
+        InputCorrectAnswer = 3,
+        TimeOutWrongAnswer = 4
     }
 
 }

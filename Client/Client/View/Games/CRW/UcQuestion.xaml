@@ -6,7 +6,8 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.7*" />
+                <ColumnDefinition Width="0.3*" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Label HorizontalTextAlignment="Center"
@@ -22,17 +23,28 @@
                     </Style>
                 </Grid.Resources>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0" Text="{Binding LeftInfo}" />
                 <Label Grid.Column="1" FontSize="28" Text="{Binding SymbolInfo}" />
                 <Label Grid.Column="2" Text="{Binding RightInfo}" />
                 <Label Grid.Column="3" Text="{Binding EqualsSymbol}" />
-                <Label Grid.Column="4" Text="{Binding ResultInfo}" />
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="40" />
+                        <Setter Property="FontAttributes" Value="Bold" />
+                        <Setter Property="VerticalTextAlignment" Value="Center" />
+                    </Style>
+                </Grid.Resources>
+                <Label x:Name="lbl" HorizontalTextAlignment="Center"
+                       Text="{Binding ResultInfo}" />
+                <Image Source="game_CRW_Wrong.png" IsVisible="{Binding WrongImageVisible}" />
+                <Image Source="game_CRW_Correct.png" IsVisible="{Binding CorrectImageVisible}" />
             </Grid>
         </Grid>
     </ContentView.Content>

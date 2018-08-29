@@ -157,6 +157,8 @@
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable\xaml.png" />
+    <AndroidResource Include="Resources\drawable\game_CRW_Correct.png" />
+    <AndroidResource Include="Resources\drawable\game_CRW_Wrong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

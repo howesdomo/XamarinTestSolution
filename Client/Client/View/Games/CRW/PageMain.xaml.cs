@@ -72,6 +72,8 @@ namespace Client.View.Games.CRW
         {
             this.btnGiveUp.Clicked += BtnGiveUp_Clicked;
             this.btnResetLevel.Clicked += BtnResetLevel_Clicked;
+
+            this.gCRWKeyboard.InputValueEvent += new EventHandler<CRW_Keyboard_EventArgs>(receiveUserAnswer);
         }
 
         #region Level
@@ -178,6 +180,83 @@ namespace Client.View.Games.CRW
 
         #endregion
 
+        private void receiveUserAnswer(object sender, CRW_Keyboard_EventArgs e)
+        {
+            ABC(e.Value);
+        }
+
+        /// <summary>
+        /// 录入正确答案后等待动画时间
+        /// </summary>
+        public const int mInputCorrectAnswerSleepTime = 1000;
+
+        private void ABC(int userResult)
+        {
+            if (this.ViewModel.AnswerQuestion == null)
+            {
+                // 未有可以回答的问题, 暂时处理为
+                // 读取下一条问题
+                readNextQuestion();
+                return;
+            }
+
+            // 判断在答题时间内 
+            // 在答案区域显示用户录入的值
+            if (this.ViewModel.AnswerQuestion.Result != userResult)
+            {
+                this.ViewModel.AnswerQuestion.ResultInfo = userResult.ToString();
+                this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.InputWrongAnswer);
+                this.ViewModel.NotifiyAnswerQuestion();
+
+
+                // TODO
+                // 超出答题时间
+                // 在答案区域显示用户录入的值, 并显示开一个大红叉
+                if (this.ViewModel.AnswerQuestion.Result != userResult)
+                {
+
+                }
+
+            }
+            else // 回答正确
+            {
+                this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.InputCorrectAnswer);
+                this.ViewModel.NotifiyAnswerQuestion();
+                playInputCorrectAnswerVedio();
+            }
+        }
+
+        System.ComponentModel.BackgroundWorker mBGWorker { get; set; }
+
+        void playInputCorrectAnswerVedio()
+        {
+            if (mBGWorker == null)
+            {
+                mBGWorker = new System.ComponentModel.BackgroundWorker();
+                mBGWorker.DoWork += MBGWorker_DoWork;
+                mBGWorker.RunWorkerCompleted += MBGWorker_RunWorkerCompleted;
+            }
+
+            if (mBGWorker.IsBusy == true)
+            {
+                string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
+                System.Diagnostics.Debug.WriteLine(msg);
+                return;
+            }
+
+            mBGWorker.RunWorkerAsync();
+        }
+
+
+        private void MBGWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            System.Threading.Thread.Sleep(mInputCorrectAnswerSleepTime);
+        }
+
+        private void MBGWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            readNextQuestion();
+        }
     }
 
     public class PageMainViewModel : ViewModel.BaseViewModel
@@ -302,5 +381,9 @@ namespace Client.View.Games.CRW
             }
         }
 
+        public void NotifiyAnswerQuestion()
+        {
+            this.OnPropertyChanged("AnswerQuestion");
+        }
     }
 }

@@ -15,6 +15,12 @@ namespace Client.View.Games.CRW
         public UcQuestion()
         {
             InitializeComponent();
+            initUI();
+        }
+
+        private void initUI()
+        {
+            this.lbl.Margin = new Thickness(left: 0d, top: 0d, right: 0d, bottom: 0d);
         }
     }
 }

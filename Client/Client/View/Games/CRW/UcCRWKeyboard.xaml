@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.Games.CRW.UcCRWKeyboard">
+  <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btn7" Grid.Row="0" Grid.Column="0" Text="7" />
+            <Button x:Name="btn8" Grid.Row="0" Grid.Column="1" Text="8" />
+            <Button x:Name="btn9" Grid.Row="0" Grid.Column="2" Text="9" />
+
+            <Button x:Name="btn4" Grid.Row="1" Grid.Column="0" Text="4" />
+            <Button x:Name="btn5" Grid.Row="1" Grid.Column="1" Text="5" />
+            <Button x:Name="btn6" Grid.Row="1" Grid.Column="2" Text="6" />
+
+            <Button x:Name="btn1" Grid.Row="2" Grid.Column="0" Text="1" />
+            <Button x:Name="btn2" Grid.Row="2" Grid.Column="1" Text="2" />
+            <Button x:Name="btn3" Grid.Row="2" Grid.Column="2" Text="3" />
+
+            <Button x:Name="btn0" Grid.Row="3" Grid.Column="1" Text="0" />
+        </Grid>
+  </ContentView.Content>
+</ContentView>

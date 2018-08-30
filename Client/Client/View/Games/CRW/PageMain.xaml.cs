@@ -119,6 +119,7 @@ namespace Client.View.Games.CRW
             this.ViewModel.RememberQuestion = r.Item2;
             this.ViewModel.AnswerQuestion = r.Item3;
 
+
             if (this.ViewModel.RememberQuestion == null && this.ViewModel.AnswerQuestion == null)
             {
                 string msg = "{0}".FormatWith("答题完毕, 计算正确率, 准备下一局游戏");
@@ -134,6 +135,7 @@ namespace Client.View.Games.CRW
             }
             else
             {
+                calcTimeOut_BgWorker_Start();
                 this.ViewModel.CurrentIndex = r.Item1;
             }
         }
@@ -167,15 +169,6 @@ namespace Client.View.Games.CRW
                 this.ViewModel.AnswerQuestion.ResultInfo = userResult.ToString();
                 this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.InputWrongAnswer);
                 this.ViewModel.NotifiyAnswerQuestion();
-
-
-                // TODO
-                // 超出答题时间
-                // 在答案区域显示用户录入的值, 并显示开一个大红叉
-                if (this.ViewModel.AnswerQuestion.Result != userResult)
-                {
-
-                }
             }
             else // 回答正确
             {
@@ -185,37 +178,105 @@ namespace Client.View.Games.CRW
             }
         }
 
-        System.ComponentModel.BackgroundWorker mBGWorker { get; set; }
+        System.ComponentModel.BackgroundWorker mBGWorker_WaitCorrectAnswer { get; set; }
 
         void playInputCorrectAnswerVedio()
         {
-            if (mBGWorker == null)
+            if (mBGWorker_WaitCorrectAnswer == null)
             {
-                mBGWorker = new System.ComponentModel.BackgroundWorker();
-                mBGWorker.DoWork += MBGWorker_DoWork;
-                mBGWorker.RunWorkerCompleted += MBGWorker_RunWorkerCompleted;
+                mBGWorker_WaitCorrectAnswer = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_WaitCorrectAnswer.DoWork += MBGWorker_WaitCorrectAnswer_DoWork;
+                mBGWorker_WaitCorrectAnswer.RunWorkerCompleted += mBGWorker_WaitCorrectAnswer_RunWorkerCompleted;
             }
 
-            if (mBGWorker.IsBusy == true)
+            if (mBGWorker_WaitCorrectAnswer.IsBusy == true)
             {
                 string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
                 System.Diagnostics.Debug.WriteLine(msg);
                 return;
             }
 
-            mBGWorker.RunWorkerAsync();
+            mBGWorker_WaitCorrectAnswer.RunWorkerAsync();
         }
 
-
-        private void MBGWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void MBGWorker_WaitCorrectAnswer_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             System.Threading.Thread.Sleep(mInputCorrectAnswerSleepTime);
         }
 
-        private void MBGWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void mBGWorker_WaitCorrectAnswer_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             readNextQuestion();
         }
+
+        #region 判断回答是否超时
+
+        System.ComponentModel.BackgroundWorker mBGWorker_CalcTimeout { get; set; }
+
+        private void calcTimeOut_BgWorker_Start()
+        {
+            if (mBGWorker_CalcTimeout != null && mBGWorker_CalcTimeout.IsBusy)
+            {
+                string msg = "{0}".FormatWith("超时判断BgWorker正在工作中");
+                System.Diagnostics.Debug.WriteLine(msg);
+                this.DisplayAlert("错误", msg, "确定");
+            }
+
+            if (mBGWorker_CalcTimeout == null)
+            {
+                mBGWorker_CalcTimeout = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_CalcTimeout.DoWork += mBGWorker_CalcTimeout_DoWork;
+                mBGWorker_CalcTimeout.RunWorkerCompleted += mBGWorker_CalcTimeout_RunWorkerCompleted;
+            }
+
+            mBGWorker_CalcTimeout.RunWorkerAsync();
+        }
+
+        private void calcTimeOut_BgWorker_Stop()
+        {
+            mBGWorker_CalcTimeout.CancelAsync();
+        }
+
+        private void mBGWorker_CalcTimeout_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            int argsWaitTime = this.ViewModel.Level.AnswerTime;
+            while (argsWaitTime >= 0)
+            {
+                string msg = "判断超时中:{0}".FormatWith(argsWaitTime);
+                System.Diagnostics.Debug.WriteLine(msg);
+
+                System.Threading.Thread.Sleep(100);
+                argsWaitTime -= 100;
+            }
+        }
+
+        private void mBGWorker_CalcTimeout_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                string msg = "{0}".FormatWith();
+                System.Diagnostics.Debug.WriteLine(msg);
+                this.DisplayAlert("错误", e.Error.Message, "确定");
+                return;
+            }
+
+            if (e.Cancelled == true)
+            {
+                // 由于正确回答, 计算超时线程被取消
+                string msg = "判断超时:已正确回答";
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
+            else
+            {
+                // 超出答题时间
+                // 在答案区域显示用户录入的值, 并显示开一个大红叉
+                this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.TimeOutWrongAnswer);
+                this.ViewModel.NotifiyAnswerQuestion();
+            }
+        }
+
+        #endregion
+
     }
 
     public class PageMainViewModel : ViewModel.BaseViewModel

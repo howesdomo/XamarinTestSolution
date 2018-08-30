@@ -32,7 +32,15 @@ namespace Client.View.Games.CRW
             this.MaxIndex = this.QuestionCount + this.SuSuan - 1;
 
             this.YuSu = 1;
-            this.AnswerTime = TimeSpan.FromSeconds(5).Milliseconds;
+
+            if (this.LevelNo % 2 == 0) // 快速
+            {
+                this.AnswerTime = TimeSpan.FromSeconds(4).Milliseconds;
+            }
+            else // 常速
+            {
+                this.AnswerTime = TimeSpan.FromSeconds(8).Milliseconds;
+            }
 
             this.AnswerStartIndex = this.SuSuan;
             this.RememberEndIndex = this.QuestionCount - 1;

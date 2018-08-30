@@ -25,7 +25,10 @@ namespace Client.View.Games.CRW
                 this.LevelName = "{0}溯答".FormatWith(this.SuSuan);
             }
 
-            this.QuestionCount = 20 + this.SuSuan * 2;
+            // TODO 测试模式减少题目数量
+            // this.QuestionCount = 20 + this.SuSuan * 2;
+            this.QuestionCount = 2 + this.SuSuan * 2;
+
             this.MaxIndex = this.QuestionCount + this.SuSuan - 1;
 
             this.YuSu = 1;

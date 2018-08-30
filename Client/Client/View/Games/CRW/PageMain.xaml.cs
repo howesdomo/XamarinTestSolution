@@ -80,10 +80,10 @@ namespace Client.View.Games.CRW
 
         private void BtnResetLevel_Clicked(object sender, EventArgs e)
         {
-            changeLevel();
+            changeLevelForTest();
         }
 
-        void changeLevel()
+        void changeLevelForTest()
         {
             this.ViewModel.CurrentIndex = null;
             readLevel();
@@ -92,38 +92,8 @@ namespace Client.View.Games.CRW
 
         private void readLevel()
         {
-            // TODO 到SQLite读取Level
-
             int levelNo = int.Parse(this.txtLevelNo.Text);
             CRW_Level level = new CRW_Level(levelNo);
-
-            //#region 
-
-            //level.LevelNo = int.Parse(this.txtLevelNo.Text);
-
-            //level.SuSuan = level.LevelNo / 2 + level.LevelNo % 2;
-
-            //if (level.LevelNo % 2 == 0)
-            //{
-            //    level.LevelName = "快速{0}溯答".FormatWith(level.SuSuan);
-            //}
-            //else
-            //{
-            //    level.LevelName = "{0}溯答".FormatWith(level.SuSuan);
-            //}
-
-            //level.QuestionCount = 20 + level.SuSuan * 2;
-            //level.MaxIndex = level.QuestionCount + level.SuSuan - 1;
-
-            //level.YuSu = 1;
-            //level.AnswerTime = TimeSpan.FromSeconds(5).Milliseconds;
-
-            //level.AnswerStartIndex = level.SuSuan;
-            //level.RememberEndIndex = level.QuestionCount - 1;
-
-
-            //#endregion
-
             this.ViewModel.Level = level;
         }
 
@@ -154,9 +124,12 @@ namespace Client.View.Games.CRW
                 string msg = "{0}".FormatWith("答题完毕, 计算正确率, 准备下一局游戏");
                 System.Diagnostics.Debug.WriteLine(msg);
 
-                var level = mBll.CalcLevel(this.ViewModel.Level, this.ViewModel.QuestionList);
+                this.ViewModel.CurrentIndex = null;
 
+                var level = mBll.CalcLevel(this.ViewModel.Level, this.ViewModel.QuestionList);
                 this.ViewModel.Level = level;
+                this.calcQuestion();
+
                 return;
             }
             else

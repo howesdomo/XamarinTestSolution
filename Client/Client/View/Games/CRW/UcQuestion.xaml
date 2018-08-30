@@ -43,8 +43,15 @@
                 </Grid.Resources>
                 <Label x:Name="lbl" HorizontalTextAlignment="Center"
                        Text="{Binding ResultInfo}" />
+
+                <!--
                 <Image Source="game_CRW_Wrong.png" IsVisible="{Binding WrongImageVisible}" />
                 <Image Source="game_CRW_Correct.png" IsVisible="{Binding CorrectImageVisible}" />
+                -->
+
+                <Image Source="{Binding WrongImageSource}" IsVisible="{Binding WrongImageVisible}" />
+                <Image Source="{Binding CorrectImageSource}" IsVisible="{Binding CorrectImageVisible}" />
+                
             </Grid>
         </Grid>
     </ContentView.Content>

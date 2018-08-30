@@ -31,6 +31,10 @@ namespace Client.View.Games.CRW
 
         public CRW_Question_Status Status { get; set; }
 
+        public string WrongImageSource { get; set; }
+
+        public string CorrectImageSource { get; set; }
+
         public bool WrongImageVisible { get; set; }
 
         public bool CorrectImageVisible { get; set; }

@@ -93,35 +93,36 @@ namespace Client.View.Games.CRW
         private void readLevel()
         {
             // TODO 到SQLite读取Level
-            CRW_Level level = new CRW_Level();
 
-            #region
+            int levelNo = int.Parse(this.txtLevelNo.Text);
+            CRW_Level level = new CRW_Level(levelNo);
 
-            level.LevelNo = int.Parse(this.txtLevelNo.Text);
+            //#region 
 
-            level.SuSuan = level.LevelNo / 2 + level.LevelNo % 2;
+            //level.LevelNo = int.Parse(this.txtLevelNo.Text);
 
-            if (level.LevelNo % 2 == 0)
-            {
-                level.LevelName = "快速{0}溯答".FormatWith(level.SuSuan);
-            }
-            else
-            {
-                level.LevelName = "{0}溯答".FormatWith(level.SuSuan);
-            }
+            //level.SuSuan = level.LevelNo / 2 + level.LevelNo % 2;
 
-            level.QuestionCount = 20 + level.SuSuan * 2;
-            level.MaxIndex = level.QuestionCount + level.SuSuan - 1;
+            //if (level.LevelNo % 2 == 0)
+            //{
+            //    level.LevelName = "快速{0}溯答".FormatWith(level.SuSuan);
+            //}
+            //else
+            //{
+            //    level.LevelName = "{0}溯答".FormatWith(level.SuSuan);
+            //}
 
-            level.YuSu = 1;
-            level.AnswerTime = TimeSpan.FromSeconds(5).Milliseconds;
+            //level.QuestionCount = 20 + level.SuSuan * 2;
+            //level.MaxIndex = level.QuestionCount + level.SuSuan - 1;
 
-            level.AnswerStartIndex = level.SuSuan;
-            level.RememberEndIndex = level.QuestionCount - 1;
+            //level.YuSu = 1;
+            //level.AnswerTime = TimeSpan.FromSeconds(5).Milliseconds;
+
+            //level.AnswerStartIndex = level.SuSuan;
+            //level.RememberEndIndex = level.QuestionCount - 1;
 
 
-            #endregion
-
+            //#endregion
 
             this.ViewModel.Level = level;
         }
@@ -143,46 +144,32 @@ namespace Client.View.Games.CRW
 
         private void readNextQuestion()
         {
-            int index = 0;
+            var r = mBll.ReadNextQuestion(this.ViewModel.CurrentIndex, this.ViewModel.Level, this.ViewModel.QuestionList);
 
-            if (this.ViewModel.CurrentIndex.HasValue == false)
+            this.ViewModel.RememberQuestion = r.Item2;
+            this.ViewModel.AnswerQuestion = r.Item3;
+
+            if (this.ViewModel.RememberQuestion == null && this.ViewModel.AnswerQuestion == null)
             {
-                this.ViewModel.CurrentIndex = 0;
+                string msg = "{0}".FormatWith("答题完毕, 计算正确率, 准备下一局游戏");
+                System.Diagnostics.Debug.WriteLine(msg);
+
+                var level = mBll.CalcLevel(this.ViewModel.Level, this.ViewModel.QuestionList);
+
+                this.ViewModel.Level = level;
+                return;
             }
-
-            index = this.ViewModel.CurrentIndex.Value;
-
-            //if (index > this.ViewModel.Level.MaxIndex)
-            //{
-            //    return;
-            //}
-
-            CRW_Question toRemember = null;
-            CRW_Question toAnswer = null;
-
-            if (index <= this.ViewModel.Level.RememberEndIndex)
+            else
             {
-                toRemember = this.ViewModel.QuestionList[index];
-                toRemember.ChangeStatus(CRW_Question_Status.Remember);
+                this.ViewModel.CurrentIndex = r.Item1;
             }
-
-            if (index >= this.ViewModel.Level.AnswerStartIndex && index <= this.ViewModel.Level.MaxIndex)
-            {
-                toAnswer = this.ViewModel.QuestionList[index - this.ViewModel.Level.SuSuan];
-                toAnswer.ChangeStatus(CRW_Question_Status.Answer);
-            }
-
-            this.ViewModel.RememberQuestion = toRemember;
-            this.ViewModel.AnswerQuestion = toAnswer;
-
-            this.ViewModel.CurrentIndex = index + 1;
         }
 
         #endregion
 
         private void receiveUserAnswer(object sender, CRW_Keyboard_EventArgs e)
         {
-            ABC(e.Value);
+            validateUserAnswer(e.Value);
         }
 
         /// <summary>
@@ -190,7 +177,7 @@ namespace Client.View.Games.CRW
         /// </summary>
         public const int mInputCorrectAnswerSleepTime = 1000;
 
-        private void ABC(int userResult)
+        private void validateUserAnswer(int userResult)
         {
             if (this.ViewModel.AnswerQuestion == null)
             {
@@ -216,7 +203,6 @@ namespace Client.View.Games.CRW
                 {
 
                 }
-
             }
             else // 回答正确
             {

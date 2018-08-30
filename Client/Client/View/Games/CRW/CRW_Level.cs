@@ -9,6 +9,33 @@ namespace Client.View.Games.CRW
     /// </summary>
     public class CRW_Level
     {
+        public CRW_Level(int levelNo)
+        {
+
+            this.LevelNo = levelNo;
+
+            this.SuSuan = this.LevelNo / 2 + this.LevelNo % 2;
+
+            if (this.LevelNo % 2 == 0)
+            {
+                this.LevelName = "快速{0}溯答".FormatWith(this.SuSuan);
+            }
+            else
+            {
+                this.LevelName = "{0}溯答".FormatWith(this.SuSuan);
+            }
+
+            this.QuestionCount = 20 + this.SuSuan * 2;
+            this.MaxIndex = this.QuestionCount + this.SuSuan - 1;
+
+            this.YuSu = 1;
+            this.AnswerTime = TimeSpan.FromSeconds(5).Milliseconds;
+
+            this.AnswerStartIndex = this.SuSuan;
+            this.RememberEndIndex = this.QuestionCount - 1;
+
+        }
+
         public int LevelNo { get; set; }
 
         public int SuSuan { get; set; }

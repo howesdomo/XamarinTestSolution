@@ -35,11 +35,11 @@ namespace Client.View.Games.CRW
 
             if (this.LevelNo % 2 == 0) // 快速
             {
-                this.AnswerTime = TimeSpan.FromSeconds(4).Milliseconds;
+                this.AnswerTime = 3 * 1000;
             }
             else // 常速
             {
-                this.AnswerTime = TimeSpan.FromSeconds(8).Milliseconds;
+                this.AnswerTime = 5 * 1000;
             }
 
             this.AnswerStartIndex = this.SuSuan;

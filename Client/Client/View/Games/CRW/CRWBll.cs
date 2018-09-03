@@ -65,8 +65,12 @@ namespace Client.View.Games.CRW
         /// <summary>
         /// 根据正确率 判断下一局的等级
         /// </summary>
-        public CRW_Level CalcLevel(CRW_Level level, List<CRW_Question> args)
+        public Tuple<CRW_Level, string> CalcLevel(CRW_Level level, List<CRW_Question> args)
         {
+            // 语音
+            string ttsMsg = string.Empty;
+            string levelChangeMsg = string.Empty;
+
             if (level == null)
             {
                 throw new BusinessException("level is null");
@@ -83,14 +87,17 @@ namespace Client.View.Games.CRW
             if (correctPercentage <= 65m) // 降级
             {
                 tmpLevelNo = level.LevelNo - 1;
+                levelChangeMsg = "下降";
             }
             else if (correctPercentage > 85m) // 升级
             {
                 tmpLevelNo = level.LevelNo + 1;
+                levelChangeMsg = "上升";
             }
             else // 等级不变
             {
                 tmpLevelNo = level.LevelNo;
+                levelChangeMsg = "不变";
             }
 
             if (tmpLevelNo <= 0)
@@ -98,7 +105,11 @@ namespace Client.View.Games.CRW
                 tmpLevelNo = 1;
             }
 
-            return new CRW_Level(tmpLevelNo);
+            //
+            ttsMsg = "答题完毕, 正确率百分之{0}".FormatWith(correctPercentage);
+            ttsMsg += "由于是百分之{0}等级{1}".FormatWith( correctPercentage, levelChangeMsg);
+
+            return new Tuple<CRW_Level, string>(new CRW_Level(tmpLevelNo), ttsMsg);
         }
 
         public Tuple<int, CRW_Question, CRW_Question> ReadNextQuestion(int? currentIndex, CRW_Level level, List<CRW_Question> questionList)

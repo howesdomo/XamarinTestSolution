@@ -119,25 +119,31 @@ namespace Client.View.Games.CRW
             this.ViewModel.RememberQuestion = r.Item2;
             this.ViewModel.AnswerQuestion = r.Item3;
 
+            #region 答题完毕
 
             if (this.ViewModel.RememberQuestion == null && this.ViewModel.AnswerQuestion == null)
             {
-                string msg = "{0}".FormatWith("答题完毕, 计算正确率, 准备下一局游戏");
-                System.Diagnostics.Debug.WriteLine(msg);
-
                 this.ViewModel.CurrentIndex = null;
 
-                var level = mBll.CalcLevel(this.ViewModel.Level, this.ViewModel.QuestionList);
-                this.ViewModel.Level = level;
-                this.calcQuestion();
+                decimal correctPercentage = mBll.CheckCorrectPercentage(this.ViewModel.QuestionList);
+                var result = mBll.CalcLevel(this.ViewModel.Level, this.ViewModel.QuestionList);
 
+                System.Diagnostics.Debug.WriteLine(result.Item2);
+
+
+                // 设置新的等级, 计算新的题目
+                this.ViewModel.Level = result.Item1;
+                this.calcQuestion();
+                // 播放检测正确率动画, 播放完毕后执行, readNextQuestion()
+                this.playNextLevelVedio(result.Item2);
                 return;
             }
-            else
-            {
-                calcTimeOut_BgWorker_Start();
-                this.ViewModel.CurrentIndex = r.Item1;
-            }
+
+            #endregion
+
+            // 继续回答下一题
+            calcTimeOut_BgWorker_Start();
+            this.ViewModel.CurrentIndex = r.Item1;
         }
 
         #endregion
@@ -174,13 +180,17 @@ namespace Client.View.Games.CRW
             {
                 this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.InputCorrectAnswer);
                 this.ViewModel.NotifiyAnswerQuestion();
-                playInputCorrectAnswerVedio();
+                calcTimeOut_BgWorker_Stop();
+                playAnswerVedio();
             }
         }
 
         System.ComponentModel.BackgroundWorker mBGWorker_WaitCorrectAnswer { get; set; }
 
-        void playInputCorrectAnswerVedio()
+        /// <summary>
+        /// 播放显示正确答案动画
+        /// </summary>
+        void playAnswerVedio()
         {
             if (mBGWorker_WaitCorrectAnswer == null)
             {
@@ -215,68 +225,136 @@ namespace Client.View.Games.CRW
 
         private void calcTimeOut_BgWorker_Start()
         {
-            if (mBGWorker_CalcTimeout != null && mBGWorker_CalcTimeout.IsBusy)
-            {
-                string msg = "{0}".FormatWith("超时判断BgWorker正在工作中");
-                System.Diagnostics.Debug.WriteLine(msg);
-                this.DisplayAlert("错误", msg, "确定");
-            }
-
             if (mBGWorker_CalcTimeout == null)
             {
                 mBGWorker_CalcTimeout = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_CalcTimeout.WorkerSupportsCancellation = true; // 设置允许取消Bgworker
                 mBGWorker_CalcTimeout.DoWork += mBGWorker_CalcTimeout_DoWork;
                 mBGWorker_CalcTimeout.RunWorkerCompleted += mBGWorker_CalcTimeout_RunWorkerCompleted;
             }
 
+            if (mBGWorker_CalcTimeout.IsBusy == true)
+            {
+                string msg = "{0}".FormatWith("!!!!!!!!!!!!!!!!超时判断BgWorker正在工作中");
+                System.Diagnostics.Debug.WriteLine(msg);
+                return;
+            }
+
+            mCalcTimeout_Cancel = false;
             mBGWorker_CalcTimeout.RunWorkerAsync();
         }
 
+        bool mCalcTimeout_Cancel { get; set; }
+
         private void calcTimeOut_BgWorker_Stop()
         {
+            mCalcTimeout_Cancel = true;
             mBGWorker_CalcTimeout.CancelAsync();
         }
 
         private void mBGWorker_CalcTimeout_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
+            System.ComponentModel.BackgroundWorker thisBgWorker = sender as System.ComponentModel.BackgroundWorker;
+
             int argsWaitTime = this.ViewModel.Level.AnswerTime;
+            string msg = "开始答题倒计时:{0}毫秒".FormatWith(argsWaitTime);
+            System.Diagnostics.Debug.WriteLine(msg);
+
             while (argsWaitTime >= 0)
             {
-                string msg = "判断超时中:{0}".FormatWith(argsWaitTime);
-                System.Diagnostics.Debug.WriteLine(msg);
-
                 System.Threading.Thread.Sleep(100);
                 argsWaitTime -= 100;
+
+                if(mCalcTimeout_Cancel == true)
+                {
+                    break;
+                }
+            }
+
+            if (mCalcTimeout_Cancel == true)
+            {
+                msg = "取消答题倒计时（已正确回答）- 1";
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
+            else
+            {
+                msg = "停止答题倒计时:0毫秒".FormatWith(argsWaitTime);
+                System.Diagnostics.Debug.WriteLine(msg);
             }
         }
 
         private void mBGWorker_CalcTimeout_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
+            string msg = string.Empty;
+
             if (e.Error != null)
             {
-                string msg = "{0}".FormatWith();
+                msg = "{0}".FormatWith();
                 System.Diagnostics.Debug.WriteLine(msg);
                 this.DisplayAlert("错误", e.Error.Message, "确定");
                 return;
             }
 
-            if (e.Cancelled == true)
+            if (mCalcTimeout_Cancel == true)
             {
                 // 由于正确回答, 计算超时线程被取消
-                string msg = "判断超时:已正确回答";
+                msg = "取消答题倒计时（已正确回答） - 2";
                 System.Diagnostics.Debug.WriteLine(msg);
             }
             else
             {
+                if (this.ViewModel.AnswerQuestion == null)
+                {
+                    msg = "由于未开始作答, 自动跳到下一题";
+                    System.Diagnostics.Debug.WriteLine(msg);
+                    playAnswerVedio();
+                    return;
+                }
+
                 // 超出答题时间
                 // 在答案区域显示用户录入的值, 并显示开一个大红叉
+                msg = "判断答题超时";
+                System.Diagnostics.Debug.WriteLine(msg);
+
                 this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.TimeOutWrongAnswer);
                 this.ViewModel.NotifiyAnswerQuestion();
+                playAnswerVedio();
             }
         }
 
         #endregion
 
+        System.ComponentModel.BackgroundWorker mBGWorker_WaitNextLevel { get; set; }
+
+        void playNextLevelVedio(string ttsContent)
+        {
+            if (mBGWorker_WaitNextLevel == null)
+            {
+                mBGWorker_WaitNextLevel = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_WaitNextLevel.DoWork += mBGWorker_WaitNextLevel_DoWork;
+                mBGWorker_WaitNextLevel.RunWorkerCompleted += mBGWorker_WaitNextLevel_RunWorkerCompleted;
+            }
+
+            if (mBGWorker_WaitNextLevel.IsBusy == true)
+            {
+                string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
+                System.Diagnostics.Debug.WriteLine(msg);
+                return;
+            }
+
+            App.TTS.Play(ttsContent);
+            mBGWorker_WaitNextLevel.RunWorkerAsync();
+        }
+
+        private void mBGWorker_WaitNextLevel_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            System.Threading.Thread.Sleep(10 * 1000);
+        }
+
+        private void mBGWorker_WaitNextLevel_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            this.readNextQuestion();
+        }
     }
 
     public class PageMainViewModel : ViewModel.BaseViewModel

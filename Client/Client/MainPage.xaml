@@ -8,7 +8,10 @@
 
     <ScrollView>
         <StackLayout>
+            <Button x:Name="btnGames" Text="Games" />
 
+            <Button x:Name="btnPageLifecycle" Text="Page 生命周期" />
+            
             <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
             <Button x:Name="btnPageDisplayAlertDemo" >
                 <Button.Text>
@@ -38,7 +41,7 @@
 
             <Button x:Name="btnPageBaiduMenu" Text="百度" />
 
-            <Button x:Name="btnGames" Text="Games" />
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>

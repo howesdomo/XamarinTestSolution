@@ -32,6 +32,11 @@ namespace Client.Droid
 
             var app = new App();
             LoadApplication(app);
+
+            // 为了用 ContentPageAdv 实现, Navigation Back 按钮的监控
+            // 为了能进入 OnOptionsItemSelected 事件, 采用 Android.Support.V7.Widget.Toolbar 代替默认的 Toolbar
+            Android.Support.V7.Widget.Toolbar toolbar = this.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
         }
 
         private void init()
@@ -123,6 +128,100 @@ namespace Client.Droid
             if (requestCode == MyTTS.TTS_RequestCode)
             {
                 MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
+            }
+        }
+
+        /// <summary>
+        /// 用 ContentPageAdv 实现, Navigation Back 按钮的监控
+        /// 核心代码
+        /// 
+        /// * 注意 * 必须使用V7.Widget.Toolbar, 请在 onCreate 中加上以下2行代码
+        /// Android.Support.V7.Widget.Toolbar toolbar = this.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+        /// SetSupportActionBar(toolbar);
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            // check if the current item id 
+            // is equals to the back button id
+            if (item.ItemId == 16908332) // 返回按钮ID必定为 16908332
+            {
+                Xamarin.Forms.ContentPageAdv currentpage = null;
+                try
+                {
+                    var currentStack = Xamarin.Forms.Application.Current.MainPage.Navigation.NavigationStack;
+                    Xamarin.Forms.Page tmp = currentStack[currentStack.Count - 1];
+                    // NavigationStack.LastOrDefault(); // 找不到 LastOrDefault 扩展方法
+                    if (tmp is Xamarin.Forms.ContentPageAdv) // 避免强转程序报错
+                    {
+                        currentpage = tmp as Xamarin.Forms.ContentPageAdv;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string msg = "{0}".FormatWith(ex.GetFullInfo());
+                    System.Diagnostics.Debug.WriteLine(msg);
+                }
+
+                // check if the page has subscribed to 
+                // the custom back button event
+                if (currentpage?.CustomBackButtonAction != null)
+                {
+                    // invoke the Custom back button action
+                    currentpage?.CustomBackButtonAction.Invoke();
+                    // and disable the default back button action
+                    return false;
+                }
+
+                // if its not subscribed then go ahead 
+                // with the default back button action
+                return base.OnOptionsItemSelected(item);
+            }
+            else
+            {
+                // since its not the back button 
+                //click, pass the event to the base
+                return base.OnOptionsItemSelected(item);
+            }
+        }
+
+        public override void OnBackPressed()
+        {
+            // this is not necessary, but in Android user 
+            // has both Nav bar back button and
+            // physical back button its safe 
+            // to cover the both events
+
+            // retrieve the current xamarin forms page instance
+            Xamarin.Forms.ContentPageAdv currentpage = null;
+            try
+            {
+                var currentStack = Xamarin.Forms.Application.Current.MainPage.Navigation.NavigationStack;
+                Xamarin.Forms.Page tmp = currentStack[currentStack.Count - 1];
+                // NavigationStack.LastOrDefault(); // 找不到 LastOrDefault 扩展方法
+                if (tmp is Xamarin.Forms.ContentPageAdv) // 避免强转程序报错
+                {
+                    currentpage = tmp as Xamarin.Forms.ContentPageAdv;
+                }
+            }
+            catch (Exception ex)
+            {
+                string msg = "{0}".FormatWith(ex.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
+
+            // NavigationStack.LastOrDefault();
+
+            // check if the page has subscribed to 
+            // the custom back button event
+            if (currentpage?.CustomBackButtonAction != null)
+            {
+                currentpage?.CustomBackButtonAction.Invoke();
+            }
+            else
+            {
+                base.OnBackPressed();
             }
         }
 

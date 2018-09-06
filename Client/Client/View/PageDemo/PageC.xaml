@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<forms:ContentPageAdv
+    xmlns:forms="clr-namespace:Xamarin.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Client.View.PageDemo.PageC"
+    Title="测试 ContentPageAdv"
+    EnableBackButtonOverride="True"
+>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Hello ContentPageAdv" />
+        </StackLayout>
+    </ContentPage.Content>
+</forms:ContentPageAdv>

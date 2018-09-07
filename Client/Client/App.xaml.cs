@@ -15,7 +15,13 @@ namespace Client
 
 		public App ()
 		{
-			InitializeComponent();
+            // 初始化 Xamarin.LiveReload
+            #if DEBUG
+            LiveReload.Init();
+            #endif
+
+            InitializeComponent();
+
             // MainPage = new MainPage(); // 源代码注释, 采用 MainPage = new NavigationPage(new MainPage()); 代替
 
             // *** 以下代码极为重要 ***

@@ -42,12 +42,17 @@ namespace Client
             this.btnGames.Clicked += BtnGames_Clicked;
         }
 
+        async void BtnGames_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.Games.PageGamesList());
+        }
+
         async void BtnPageLifecycle_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.PageDemo.Page_Lifecycle());
         }
 
-        private void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
+        async void BtnTestUnhandledExceptionHandler_Clicked(object sender, EventArgs e)
         {
             if (Common.StaticInfo.CurrentUser == null)
             {
@@ -60,7 +65,11 @@ namespace Client
                 };
             }
 
-            throw new Exception("我来测试全局捕获异常");
+            bool r = await DisplayAlert("警告", "确认测试全局捕获异常, 按确认将会抛出。", "确认", "取消");
+            if (r == true)
+            {
+                throw new Exception("我来测试全局捕获异常");
+            }
         }
 
         async void BtnPageScreenDirection_Clicked(object sender, EventArgs e)
@@ -121,11 +130,6 @@ namespace Client
         async void BtnPageBaiduMenu_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PageBaiduMenu());
-        }
-
-        async void BtnGames_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.Games.PageGamesList());
         }
     }
 

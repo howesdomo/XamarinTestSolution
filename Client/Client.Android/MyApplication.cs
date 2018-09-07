@@ -55,6 +55,18 @@ namespace Client.Droid
 
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("账号信息:");
+
+                if (Client.Common.StaticInfo.CurrentUser == null)
+                {
+                    Client.Common.StaticInfo.CurrentUser = new DL.Model.User()
+                    {
+                        ID = Guid.Empty,
+                        LoginAccount = "D3333",
+                        UserName = "Howe",
+                        DeviceInfo = Util.JsonUtils.SerializeObject(Common.StaticInfo.DeviceInfo)
+                    };
+                }
+
                 sb.AppendLine(Client.Common.StaticInfo.CurrentUser.ID.ToString());
                 sb.AppendLine(Client.Common.StaticInfo.CurrentUser.LoginAccount);
                 sb.AppendLine(Client.Common.StaticInfo.CurrentUser.UserName);

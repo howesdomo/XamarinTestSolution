@@ -4,6 +4,12 @@ namespace Xamarin.Forms
 {
     /// <summary>
     /// 可控制 Nav Back按钮的 ContentPage
+    /// 
+    /// V2
+    /// 经测试 无需实现 ContentPageAdv ,
+    /// 只需加载 V7版本 的 Widget.Toolbar, 即可实现软硬Back的监控
+    /// 
+    /// 待测试苹果的实际效果
     /// </summary>
     public class ContentPageAdv : ContentPage
     {

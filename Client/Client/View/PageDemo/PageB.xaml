@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="测试返回"
              x:Class="Client.View.PageDemo.PageB">
     <ContentPage.Content>
         <StackLayout>
@@ -11,13 +12,16 @@
             <Label Text="Price:" />
             <Editor Text="{Binding Price}" />
             <Label Text="DeadLine:" />
-            <Editor Text="{Binding DeadLine}" />
+            <DatePicker Date="{Binding DeadLine}" />
+            <Label Text="Time:" />
+            <TimePicker x:Name="tp1" Time="{Binding DeadLine_Time}" />
 
             <Label Text="------------" />
             <Label Text="{Binding OrderNo}" />
             <Label Text="{Binding Qty}" />
             <Label Text="{Binding Price}" />
-            <Label Text="{Binding DeadLine}" />
+            <Label Text="{Binding DeadLineDisplay}" />
+            <Label Text="{Binding DeadLine_TimeDisplay}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

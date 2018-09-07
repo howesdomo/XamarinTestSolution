@@ -12,6 +12,11 @@ namespace Client.View.PageDemo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageC : ContentPageAdv
     {
+        /// <summary>
+        /// 经测试 无需实现 ContentPageAdv ,
+        /// 只需加载 V7版本 的 Widget.Toolbar, 即可实现软硬Back的监控
+        /// 故不使用 PageC的方式进行 Back 的监控
+        /// </summary>
         public PageC()
         {
             InitializeComponent();
@@ -37,11 +42,6 @@ namespace Client.View.PageDemo
         }
 
 
-        // NavigationPage返回按钮
-        // XAML 代码设置
-        // NavigationPage.HasBackButton="False"
 
-        // C# 代码设置
-        // NavigationPage.SetHasBackButton(this, false);
     }
 }

@@ -5,8 +5,11 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="lbl_PageB_Value" />
-            <Button x:Name="btnPageB" />
-            <Button x:Name="btnPageC" Text="ContentPageAdv_返回逻辑控制" />
+
+            <Label Text="推荐使用Page B中的 
+                   OnBackButtonPressed() 实现对返回按钮的监控" />
+            <Button x:Name="btnPageB" Text="Page B 测试返回内容"/>
+            <Button x:Name="btnPageC" Text="ContentPageAdv_返回逻辑控制(弃用)" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

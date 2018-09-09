@@ -41,7 +41,9 @@
 
             <Button x:Name="btnPageBaiduMenu" Text="百度" />
 
-            
+            <Button x:Name="btnPageIRDemo" Text="IR" />
+
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

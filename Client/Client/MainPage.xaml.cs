@@ -25,6 +25,7 @@ namespace Client
 
         private void initEvent()
         {
+            this.btnGames.Clicked += BtnGames_Clicked;
             this.btnPageLifecycle.Clicked += BtnPageLifecycle_Clicked;
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
             this.btnPageScreenDirection.Clicked += BtnPageScreenDirection_Clicked;
@@ -39,7 +40,7 @@ namespace Client
             this.btnPingDemo.Clicked += BtnPingDemo_Clicked;
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
-            this.btnGames.Clicked += BtnGames_Clicked;
+            this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
         }
 
         async void BtnGames_Clicked(object sender, EventArgs e)
@@ -130,6 +131,11 @@ namespace Client
         async void BtnPageBaiduMenu_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PageBaiduMenu());
+        }
+
+        async void BtnPageIRDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.IRDemo.PageIRDemo());
         }
     }
 

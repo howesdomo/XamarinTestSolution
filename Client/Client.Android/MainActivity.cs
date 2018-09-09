@@ -123,6 +123,10 @@ namespace Client.Droid
             // 初始化TTS
             MyTTS tts = MyTTS.GetInstance();
             App.TTS = tts;
+
+            // 初始化IR
+            MyIR ir = MyIR.GetInstance(ApplicationContext);
+            App.IR = ir;
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

@@ -16,6 +16,8 @@ namespace Client.View.Games.CRW
 
         PageMainViewModel ViewModel { get; set; }
 
+        bool mStop = false;
+
         public PageMain()
         {
             InitializeComponent();
@@ -75,6 +77,36 @@ namespace Client.View.Games.CRW
 
             this.gCRWKeyboard.InputValueEvent += new EventHandler<CRW_Keyboard_EventArgs>(receiveUserAnswer);
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            mStop = true;
+            showCloseDisplayAlert();
+            return true;
+        }
+
+        async void showCloseDisplayAlert()
+        {
+            var result = await this.DisplayAlert
+            (
+                title: "提示",
+                message: "确认退出？",
+                accept: "确认",
+                cancel: "取消"
+            );
+
+            if (result)
+            {
+                // TODO Quit Game
+                await Navigation.PopAsync(true);
+            }
+            else
+            {
+                mStop = false;
+            }
+        }
+
+
 
         #region Level
 

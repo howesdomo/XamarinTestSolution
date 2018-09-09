@@ -13,12 +13,14 @@ namespace Client
 
         public static Client.Common.ITTS TTS { get; set; }
 
+        public static Client.Common.I_IR IR { get; set; }
+
 		public App ()
 		{
             // ≥ı ºªØ Xamarin.LiveReload
-            #if DEBUG
+#if DEBUG
             LiveReload.Init();
-            #endif
+#endif
 
             InitializeComponent();
 

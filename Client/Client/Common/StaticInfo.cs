@@ -137,8 +137,7 @@ namespace Client.Common
             set { _WebAPISetting = value; }
         }
 
-    
-        // TODO SecurityWebSetting ???
+   
 
         #region InnerSQLite
 

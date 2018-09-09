@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.IRDemo.PageIRDemo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Freq(红外线频率)" />
+            <Editor x:Name="txtFreq" Text="38000" />
+            <Button x:Name="btn1" Text="-" />
+            <Button x:Name="btn2" Text="+" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -38,6 +38,10 @@
   <!-- 访问红外设备权限 -->
   <uses-permission android:name="android.permission.TRANSMIT_IR" />
 
+  <!-- 设置屏幕常亮权限 -->
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  
+
   <application android:label="Client.Android">
 		<service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
 			<intent-filter>

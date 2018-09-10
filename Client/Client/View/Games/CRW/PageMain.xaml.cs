@@ -16,7 +16,9 @@ namespace Client.View.Games.CRW
 
         PageMainViewModel ViewModel { get; set; }
 
-        bool mStop = false;
+        bool mStop { get; set; }
+
+        bool mQuit { get; set; }
 
         public PageMain()
         {
@@ -30,6 +32,7 @@ namespace Client.View.Games.CRW
 
             readLevel();
             calcQuestion();
+            showStopWatch();
         }
 
         #region UI        
@@ -40,6 +43,8 @@ namespace Client.View.Games.CRW
             // 由于在XAML中设置 Margin 会导致编译时报错
             // 故将部分的 Margin 设置写在C#代码中
             this.gRight.Margin = new Thickness(left: -10d, top: 0d, right: 0d, bottom: 0d);
+
+            this.lblLevelName.Margin = new Thickness(left: 10d, top: 0d, right: 0d, bottom: 0d);
         }
 
         protected override void OnAppearing()
@@ -51,6 +56,8 @@ namespace Client.View.Games.CRW
 
             Device.BeginInvokeOnMainThread(() =>
             {
+                // TODO 设置常亮
+                // 暂时无法使用 Xamarin.Essentials.ScreenLock.RequestActive 来设置屏幕常亮
                 App.ScreenDirection.ForceLandscape();
             });
         }
@@ -60,10 +67,13 @@ namespace Client.View.Games.CRW
             string msg = "{0}".FormatWith("PageMain OnDisappearing");
             System.Diagnostics.Debug.WriteLine(msg);
 
-            Device.BeginInvokeOnMainThread(() =>
+            if (mQuit)
             {
-                App.ScreenDirection.Unspecified();
-            });
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    App.ScreenDirection.Unspecified();
+                });
+            }         
 
             base.OnDisappearing();
         }
@@ -80,7 +90,6 @@ namespace Client.View.Games.CRW
 
         protected override bool OnBackButtonPressed()
         {
-            mStop = true;
             showCloseDisplayAlert();
             return true;
         }
@@ -97,16 +106,29 @@ namespace Client.View.Games.CRW
 
             if (result)
             {
-                // TODO Quit Game
-                await Navigation.PopAsync(true);
-            }
-            else
-            {
-                mStop = false;
+                quitGame();
             }
         }
 
+        private void quitGame()
+        {
 
+            mQuit = true;
+
+            mBGWorker_PlayAnswerVedio.CancelAsync();
+
+            mBGWorker_CalcTimeout.CancelAsync();
+
+            mBGWorker_WaitNextLevel.CancelAsync();
+
+
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                await Navigation.PopAsync(true);
+            });
+        }
+
+        int mCurrentStep = 0;
 
         #region Level
 
@@ -167,6 +189,9 @@ namespace Client.View.Games.CRW
                 this.ViewModel.Level = result.Item1;
                 this.calcQuestion();
                 // 播放检测正确率动画, 播放完毕后执行, readNextQuestion()
+
+                this.ViewModel.swCRW_UseTime.Stop();
+
                 this.playNextLevelVedio(result.Item2);
                 return;
             }
@@ -174,6 +199,8 @@ namespace Client.View.Games.CRW
             #endregion
 
             // 继续回答下一题
+            mCurrentStep = 0;
+            this.ViewModel.swCRW_UseTime.Start();
             calcTimeOut_BgWorker_Start();
             this.ViewModel.CurrentIndex = r.Item1;
         }
@@ -192,6 +219,20 @@ namespace Client.View.Games.CRW
 
         private void validateUserAnswer(int userResult)
         {
+            if (IsPlayingAnswerVedio == true)
+            {
+                string msg = "{0}".FormatWith("正在播放动画(Answer), 忽略结果输入");
+                System.Diagnostics.Debug.WriteLine(msg);
+                return;
+            }
+
+            if (IsWaitNextLevel == true)
+            {
+                string msg = "{0}".FormatWith("正在播放动画(Next Level), 忽略结果输入");
+                System.Diagnostics.Debug.WriteLine(msg);
+                return;
+            }
+
             if (this.ViewModel.AnswerQuestion == null)
             {
                 // 未有可以回答的问题, 暂时处理为
@@ -217,36 +258,54 @@ namespace Client.View.Games.CRW
             }
         }
 
-        System.ComponentModel.BackgroundWorker mBGWorker_WaitCorrectAnswer { get; set; }
+        System.ComponentModel.BackgroundWorker mBGWorker_PlayAnswerVedio { get; set; }
 
         /// <summary>
         /// 播放显示正确答案动画
         /// </summary>
         void playAnswerVedio()
         {
-            if (mBGWorker_WaitCorrectAnswer == null)
+            if (mBGWorker_PlayAnswerVedio == null)
             {
-                mBGWorker_WaitCorrectAnswer = new System.ComponentModel.BackgroundWorker();
-                mBGWorker_WaitCorrectAnswer.DoWork += MBGWorker_WaitCorrectAnswer_DoWork;
-                mBGWorker_WaitCorrectAnswer.RunWorkerCompleted += mBGWorker_WaitCorrectAnswer_RunWorkerCompleted;
+                mBGWorker_PlayAnswerVedio = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_PlayAnswerVedio.DoWork += mBGWorker_PlayAnswerVedio_DoWork;
+                mBGWorker_PlayAnswerVedio.RunWorkerCompleted += mBGWorker_PlayAnswerVedio_RunWorkerCompleted;
             }
 
-            if (mBGWorker_WaitCorrectAnswer.IsBusy == true)
+            if (mBGWorker_PlayAnswerVedio.IsBusy == true)
             {
                 string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
                 System.Diagnostics.Debug.WriteLine(msg);
                 return;
             }
 
-            mBGWorker_WaitCorrectAnswer.RunWorkerAsync();
+            mBGWorker_PlayAnswerVedio.RunWorkerAsync();
         }
 
-        private void MBGWorker_WaitCorrectAnswer_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        /// <summary>
+        /// 判断是否正在播放动画
+        /// </summary>
+        bool IsPlayingAnswerVedio
+        {
+            get
+            {
+                if (mBGWorker_PlayAnswerVedio != null && mBGWorker_PlayAnswerVedio.IsBusy)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        private void mBGWorker_PlayAnswerVedio_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             System.Threading.Thread.Sleep(mInputCorrectAnswerSleepTime);
         }
 
-        private void mBGWorker_WaitCorrectAnswer_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void mBGWorker_PlayAnswerVedio_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             readNextQuestion();
         }
@@ -297,7 +356,7 @@ namespace Client.View.Games.CRW
                 System.Threading.Thread.Sleep(100);
                 argsWaitTime -= 100;
 
-                if(mCalcTimeout_Cancel == true)
+                if (mCalcTimeout_Cancel == true)
                 {
                     break;
                 }
@@ -374,8 +433,24 @@ namespace Client.View.Games.CRW
                 return;
             }
 
+            mCurrentStep = 3;
             App.TTS.Play(ttsContent);
             mBGWorker_WaitNextLevel.RunWorkerAsync();
+        }
+
+        bool IsWaitNextLevel
+        {
+            get
+            {
+                if (mBGWorker_WaitNextLevel != null && mBGWorker_WaitNextLevel.IsBusy)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         private void mBGWorker_WaitNextLevel_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
@@ -386,6 +461,49 @@ namespace Client.View.Games.CRW
         private void mBGWorker_WaitNextLevel_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             this.readNextQuestion();
+        }
+
+
+        System.ComponentModel.BackgroundWorker mBGWorker_ShowStopWatch { get; set; }
+
+        private void showStopWatch()
+        {
+            if (mBGWorker_ShowStopWatch == null)
+            {
+                mBGWorker_ShowStopWatch = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_ShowStopWatch.DoWork += mBGWorker_ShowStopWatch_DoWork;
+                mBGWorker_ShowStopWatch.ProgressChanged += mBGWorker_ShowStopWatch_ProgressChanged;
+                mBGWorker_ShowStopWatch.WorkerReportsProgress = true;
+            }
+
+            if (mBGWorker_ShowStopWatch.IsBusy == true)
+            {
+                return;
+            }
+
+            mBGWorker_ShowStopWatch.RunWorkerAsync();
+        }
+
+
+        private void mBGWorker_ShowStopWatch_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            while (mQuit == false)
+            {
+                System.Threading.Thread.Sleep(1000);
+                if (mStop == false)
+                {
+                    mBGWorker_ShowStopWatch.ReportProgress(0);
+                }
+            }
+        }
+
+
+        private void mBGWorker_ShowStopWatch_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                this.ViewModel.NotifiyUseTime();
+            });
         }
     }
 
@@ -437,7 +555,7 @@ namespace Client.View.Games.CRW
             }
         }
 
-        System.Diagnostics.Stopwatch swCRW_UseTime { get; set; }
+        public System.Diagnostics.Stopwatch swCRW_UseTime = new System.Diagnostics.Stopwatch();
 
         public string CRW_UseTimeInfo
         {
@@ -464,6 +582,11 @@ namespace Client.View.Games.CRW
 
                 return r;
             }
+        }
+
+        public void NotifiyUseTime()
+        {
+            this.OnPropertyChanged("CRW_UseTimeInfo");
         }
 
         private List<CRW_Question> _QuestionList;
@@ -515,5 +638,6 @@ namespace Client.View.Games.CRW
         {
             this.OnPropertyChanged("AnswerQuestion");
         }
+
     }
 }

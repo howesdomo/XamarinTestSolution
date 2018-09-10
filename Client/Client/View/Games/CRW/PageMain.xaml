@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewCRW="clr-namespace:Client.View.Games.CRW"
              x:Class="Client.View.Games.CRW.PageMain"
-             
+             Title="溯答"
+             NavigationPage.HasNavigationBar="False"
              >
     <ContentPage.Content>
         <Grid>
@@ -26,14 +27,14 @@
                     <RowDefinition Height="0.425*" />
                 </Grid.RowDefinitions>
                 <Grid BackgroundColor="LimeGreen">
-                    <Label Text="{Binding LevelName}" />
+                    <Label x:Name="lblLevelName" Text="{Binding LevelName}" VerticalTextAlignment="Center" />
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="锻炼时间" />
-                        <Label Grid.Column="1" Text="{Binding CRW_UseTimeInfo}" />
+                        <Label Text="锻炼时间" VerticalTextAlignment="Center" />
+                        <Label Grid.Column="1" Text="{Binding CRW_UseTimeInfo}" VerticalTextAlignment="Center" />
                     </Grid>
                 </Grid>
 

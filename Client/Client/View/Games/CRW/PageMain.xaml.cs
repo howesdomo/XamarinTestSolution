@@ -12,6 +12,14 @@ namespace Client.View.Games.CRW
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageMain : ContentPage
     {
+        public static string Tag
+        {
+            get
+            {
+                return "CRW_PageMain";
+            }
+        }
+
         CRWBll mBll { get; set; }
 
         PageMainViewModel ViewModel { get; set; }
@@ -53,19 +61,56 @@ namespace Client.View.Games.CRW
 
             string msg = "{0}".FormatWith("PageMain OnAppearing");
             System.Diagnostics.Debug.WriteLine(msg);
+            App.Output.Info(Tag, msg);
 
             Device.BeginInvokeOnMainThread(() =>
             {
                 // TODO 设置常亮
                 // 暂时无法使用 Xamarin.Essentials.ScreenLock.RequestActive 来设置屏幕常亮
                 App.ScreenDirection.ForceLandscape();
+
+                gameContinue();
             });
+        }
+
+        private void gameContinue()
+        {
+            mStop = false;
+
+            switch (mCurrentStep)
+            {
+                case 0:
+                    {
+                        if (mBGWorker_CalcTimeout != null && mBGWorker_CalcTimeout.IsBusy == false)
+                        {
+                            string msg = "(游戏继续) currentStep:{0}".FormatWith(mCurrentStep);
+                            System.Diagnostics.Debug.WriteLine(msg);
+                            App.Output.Info(Tag, msg);
+
+                            mBGWorker_CalcTimeout_RunWorkerCompleted(null, new System.ComponentModel.RunWorkerCompletedEventArgs(result: null, error: null, cancelled: false));
+                        }
+                    };
+                    break;
+                case 3:
+                    {
+                        if (mBGWorker_WaitNextLevel != null && mBGWorker_WaitNextLevel.IsBusy == false)
+                        {
+                            string msg = "(游戏继续) currentStep:{0}".FormatWith(mCurrentStep);
+                            System.Diagnostics.Debug.WriteLine(msg);
+                            App.Output.Info(Tag, msg);
+
+                            mBGWorker_WaitNextLevel_RunWorkerCompleted(null, null);
+                        }
+                    }
+                    break;
+            }
         }
 
         protected override void OnDisappearing()
         {
             string msg = "{0}".FormatWith("PageMain OnDisappearing");
             System.Diagnostics.Debug.WriteLine(msg);
+            App.Output.Info(Tag, msg);
 
             if (mQuit)
             {
@@ -73,8 +118,9 @@ namespace Client.View.Games.CRW
                 {
                     App.ScreenDirection.Unspecified();
                 });
-            }         
+            }
 
+            mStop = true;
             base.OnDisappearing();
         }
 
@@ -115,7 +161,7 @@ namespace Client.View.Games.CRW
 
             mQuit = true;
 
-            mBGWorker_PlayAnswerVedio.CancelAsync();
+            mBGWorker_PlayAnswerVideo.CancelAsync();
 
             mBGWorker_CalcTimeout.CancelAsync();
 
@@ -128,7 +174,11 @@ namespace Client.View.Games.CRW
             });
         }
 
-        int mCurrentStep = 0;
+        /// <summary>
+        /// 回答问题中 - 0
+        /// 等待评级中 - 3
+        /// </summary>
+        int mCurrentStep { get; set; }
 
         #region Level
 
@@ -183,7 +233,7 @@ namespace Client.View.Games.CRW
                 var result = mBll.CalcLevel(this.ViewModel.Level, this.ViewModel.QuestionList);
 
                 System.Diagnostics.Debug.WriteLine(result.Item2);
-
+                App.Output.Info(Tag, result.Item2);
 
                 // 设置新的等级, 计算新的题目
                 this.ViewModel.Level = result.Item1;
@@ -192,7 +242,7 @@ namespace Client.View.Games.CRW
 
                 this.ViewModel.swCRW_UseTime.Stop();
 
-                this.playNextLevelVedio(result.Item2);
+                this.playNextLevelVideo(result.Item2);
                 return;
             }
 
@@ -219,10 +269,11 @@ namespace Client.View.Games.CRW
 
         private void validateUserAnswer(int userResult)
         {
-            if (IsPlayingAnswerVedio == true)
+            if (IsPlayingAnswerVideo == true)
             {
                 string msg = "{0}".FormatWith("正在播放动画(Answer), 忽略结果输入");
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Warn(Tag, msg);
                 return;
             }
 
@@ -230,6 +281,7 @@ namespace Client.View.Games.CRW
             {
                 string msg = "{0}".FormatWith("正在播放动画(Next Level), 忽略结果输入");
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Warn(Tag, msg);
                 return;
             }
 
@@ -253,43 +305,50 @@ namespace Client.View.Games.CRW
             {
                 this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.InputCorrectAnswer);
                 this.ViewModel.NotifiyAnswerQuestion();
+
+                string msg = "(正确回答）校验用户录入结果";
+                System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
+
                 calcTimeOut_BgWorker_Stop();
-                playAnswerVedio();
+                playAnswerVideo();
             }
         }
 
-        System.ComponentModel.BackgroundWorker mBGWorker_PlayAnswerVedio { get; set; }
+        System.ComponentModel.BackgroundWorker mBGWorker_PlayAnswerVideo { get; set; }
 
         /// <summary>
         /// 播放显示正确答案动画
         /// </summary>
-        void playAnswerVedio()
+        void playAnswerVideo()
         {
-            if (mBGWorker_PlayAnswerVedio == null)
+            if (mBGWorker_PlayAnswerVideo == null)
             {
-                mBGWorker_PlayAnswerVedio = new System.ComponentModel.BackgroundWorker();
-                mBGWorker_PlayAnswerVedio.DoWork += mBGWorker_PlayAnswerVedio_DoWork;
-                mBGWorker_PlayAnswerVedio.RunWorkerCompleted += mBGWorker_PlayAnswerVedio_RunWorkerCompleted;
+                mBGWorker_PlayAnswerVideo = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_PlayAnswerVideo.DoWork += mBGWorker_PlayAnswerVideo_DoWork;
+                mBGWorker_PlayAnswerVideo.RunWorkerCompleted += mBGWorker_PlayAnswerVideo_RunWorkerCompleted;
             }
 
-            if (mBGWorker_PlayAnswerVedio.IsBusy == true)
+            if (mBGWorker_PlayAnswerVideo.IsBusy == true)
             {
-                string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
+                string msg = "(警告)播放显示正确答案动画BgWorker正在工作中，有操作尝试再次进入，请程序员排除异常";
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Warn(Tag, msg);
+
                 return;
             }
 
-            mBGWorker_PlayAnswerVedio.RunWorkerAsync();
+            mBGWorker_PlayAnswerVideo.RunWorkerAsync();
         }
 
         /// <summary>
         /// 判断是否正在播放动画
         /// </summary>
-        bool IsPlayingAnswerVedio
+        bool IsPlayingAnswerVideo
         {
             get
             {
-                if (mBGWorker_PlayAnswerVedio != null && mBGWorker_PlayAnswerVedio.IsBusy)
+                if (mBGWorker_PlayAnswerVideo != null && mBGWorker_PlayAnswerVideo.IsBusy)
                 {
                     return true;
                 }
@@ -300,12 +359,12 @@ namespace Client.View.Games.CRW
             }
         }
 
-        private void mBGWorker_PlayAnswerVedio_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void mBGWorker_PlayAnswerVideo_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             System.Threading.Thread.Sleep(mInputCorrectAnswerSleepTime);
         }
 
-        private void mBGWorker_PlayAnswerVedio_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void mBGWorker_PlayAnswerVideo_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             readNextQuestion();
         }
@@ -326,8 +385,9 @@ namespace Client.View.Games.CRW
 
             if (mBGWorker_CalcTimeout.IsBusy == true)
             {
-                string msg = "{0}".FormatWith("!!!!!!!!!!!!!!!!超时判断BgWorker正在工作中");
+                string msg = "(警告)判断回答是否超时BgWorker正在工作中，有操作尝试再次进入，请程序员排除异常";
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Warn(Tag, msg);
                 return;
             }
 
@@ -350,6 +410,7 @@ namespace Client.View.Games.CRW
             int argsWaitTime = this.ViewModel.Level.AnswerTime;
             string msg = "开始答题倒计时:{0}毫秒".FormatWith(argsWaitTime);
             System.Diagnostics.Debug.WriteLine(msg);
+            App.Output.Info(Tag, msg);
 
             while (argsWaitTime >= 0)
             {
@@ -362,54 +423,60 @@ namespace Client.View.Games.CRW
                 }
             }
 
-            if (mCalcTimeout_Cancel == true)
-            {
-                msg = "取消答题倒计时（已正确回答）- 1";
-                System.Diagnostics.Debug.WriteLine(msg);
-            }
-            else
+            if (mCalcTimeout_Cancel == false)
             {
                 msg = "停止答题倒计时:0毫秒".FormatWith(argsWaitTime);
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
             }
         }
 
         private void mBGWorker_CalcTimeout_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             string msg = string.Empty;
+            if (mStop == true)
+            {
+                msg = "(游戏暂停)CurrentStep:{0}".FormatWith(mCurrentStep);
+                System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
+                return;
+            }
 
             if (e.Error != null)
             {
-                msg = "{0}".FormatWith();
+                msg = "{0}".FormatWith(e.Error.GetFullInfo());
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Error(Tag, msg);
+
                 this.DisplayAlert("错误", e.Error.Message, "确定");
                 return;
             }
 
-            if (mCalcTimeout_Cancel == true)
+
+            if (mCalcTimeout_Cancel == true) // 由于正确回答, 计算超时线程被取消
             {
-                // 由于正确回答, 计算超时线程被取消
-                msg = "取消答题倒计时（已正确回答） - 2";
+                msg = "（正确回答）取消答题倒计时";
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
             }
             else
             {
                 if (this.ViewModel.AnswerQuestion == null)
                 {
-                    msg = "由于未开始作答, 自动跳到下一题";
+                    msg = "(等待回答)由于开始溯答, 自动跳到下一题";
                     System.Diagnostics.Debug.WriteLine(msg);
-                    playAnswerVedio();
+                    App.Output.Info(Tag, msg);
+                    playAnswerVideo();
                     return;
                 }
 
-                // 超出答题时间
-                // 在答案区域显示用户录入的值, 并显示开一个大红叉
-                msg = "判断答题超时";
+                msg = "(错误回答)由于未在规定时间内正确回答, 显示答案后自动跳到下一题";
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
 
                 this.ViewModel.AnswerQuestion.ChangeStatus(CRW_Question_Status.TimeOutWrongAnswer);
                 this.ViewModel.NotifiyAnswerQuestion();
-                playAnswerVedio();
+                playAnswerVideo();
             }
         }
 
@@ -417,7 +484,7 @@ namespace Client.View.Games.CRW
 
         System.ComponentModel.BackgroundWorker mBGWorker_WaitNextLevel { get; set; }
 
-        void playNextLevelVedio(string ttsContent)
+        void playNextLevelVideo(string ttsContent)
         {
             if (mBGWorker_WaitNextLevel == null)
             {
@@ -430,6 +497,8 @@ namespace Client.View.Games.CRW
             {
                 string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
                 System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Warn(Tag, msg);
+
                 return;
             }
 
@@ -460,9 +529,19 @@ namespace Client.View.Games.CRW
 
         private void mBGWorker_WaitNextLevel_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            this.readNextQuestion();
+            if (mStop == false)
+            {
+                this.readNextQuestion();
+            }
+            else
+            {
+                string msg = "(游戏暂停) CurrentStep:{0}".FormatWith(mCurrentStep);
+                System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
+            }
         }
 
+        #region 锻炼时间
 
         System.ComponentModel.BackgroundWorker mBGWorker_ShowStopWatch { get; set; }
 
@@ -505,6 +584,8 @@ namespace Client.View.Games.CRW
                 this.ViewModel.NotifiyUseTime();
             });
         }
+
+        #endregion
     }
 
     public class PageMainViewModel : ViewModel.BaseViewModel

@@ -110,6 +110,9 @@ namespace Client.Droid
                 }
             );
 
+            // 实现IOutput接口 - 用 Logcat 来实现
+            App.Output = new MyOutput();
+
             // 屏幕方向
             App.ScreenDirection = new ScreenDirection(this);
 

@@ -78,6 +78,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyApplication.cs" />
     <Compile Include="MyIR.cs" />
+    <Compile Include="MyOutput.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MyTTS.cs">

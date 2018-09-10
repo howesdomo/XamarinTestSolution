@@ -2,11 +2,11 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Client
 {
-	public partial class App : Application
-	{
+    public partial class App : Application
+    {
         public static Util.XamariN.IScreenDirection ScreenDirection { get; set; }
 
         public static Client.Common.ILBS LBS { get; set; }
@@ -15,8 +15,11 @@ namespace Client
 
         public static Client.Common.I_IR IR { get; set; }
 
-		public App ()
-		{
+        public static Client.Common.IOutput Output { get; set; }
+
+
+        public App()
+        {
             // ≥ı ºªØ Xamarin.LiveReload
 #if DEBUG
             LiveReload.Init();
@@ -31,19 +34,19 @@ namespace Client
             MainPage = new NavigationPage(new MainPage());
         }
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }

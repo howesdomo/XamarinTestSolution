@@ -28,6 +28,7 @@ namespace Client
             this.btnGames.Clicked += BtnGames_Clicked;
             this.btnPageLifecycle.Clicked += BtnPageLifecycle_Clicked;
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
+            this.btnPageOutputDemo.Clicked += BtnPageOutputDemo_Clicked;
             this.btnPageScreenDirection.Clicked += BtnPageScreenDirection_Clicked;
             this.btnPageDisplayAlertDemo.Clicked += BtnPageDisplayAlertDemo_Clicked;
             this.btnPageMessagingCenterDemo.Clicked += BtnPageMessagingCenterDemo_Clicked;
@@ -42,6 +43,8 @@ namespace Client
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
         }
+
+        
 
         async void BtnGames_Clicked(object sender, EventArgs e)
         {
@@ -71,6 +74,11 @@ namespace Client
             {
                 throw new Exception("我来测试全局捕获异常");
             }
+        }
+
+        async void BtnPageOutputDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Client.View.PageOutputDemo());            
         }
 
         async void BtnPageScreenDirection_Clicked(object sender, EventArgs e)

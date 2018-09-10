@@ -19,6 +19,8 @@
                 </Button.Text>
             </Button>
 
+            <Button x:Name="btnPageOutputDemo" Text="IOutput实现" />
+
             <Button x:Name="btnPageScreenDirection" Text="屏幕方向(IScreenDirection)" />
             
             <Button x:Name="btnPageMessagingCenterDemo" Text="MessagingCenter Demo - 类似安卓的广播" />

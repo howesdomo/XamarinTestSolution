@@ -56,6 +56,23 @@ namespace Client.View.Games
             this.btnScreenCanTurnOff.Clicked += BtnScreenCanTurnOff_Clicked;
         }
 
+
+        async void BtnCRW_Clicked(object sender, EventArgs e)
+        {
+            if (App.TTS.Check_InitTextToSpeech() == false)
+            {
+                bool r1 = await this.DisplayAlert("提示", "检测到未打开TTS合成语音, 确认打开?", "确认", "取消");
+
+                if (r1 == true)
+                {
+                    App.TTS.InitTextToSpeech();
+                    return;
+                }
+            }
+
+            await Navigation.PushAsync(new Client.View.Games.CRW.PageMain());
+        }
+
         /// <summary>
         /// 测试失败
         /// </summary>
@@ -74,7 +91,7 @@ namespace Client.View.Games
             {
 
                 string msg = "{0}".FormatWith(ex.GetFullInfo());
-                System.Diagnostics.Debug.WriteLine(msg);    
+                System.Diagnostics.Debug.WriteLine(msg);
             }
         }
 
@@ -97,11 +114,6 @@ namespace Client.View.Games
             }
         }
 
-        async void BtnCRW_Clicked(object sender, EventArgs e)
-        {
-            
-            await Navigation.PushAsync(new Client.View.Games.CRW.PageMain());
-        }
 
 
     }

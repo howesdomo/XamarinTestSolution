@@ -142,6 +142,8 @@ namespace Client.View.Games.CRW
 
         async void showCloseDisplayAlert()
         {
+            mStop = true;
+
             var result = await this.DisplayAlert
             (
                 title: "提示",
@@ -154,19 +156,20 @@ namespace Client.View.Games.CRW
             {
                 quitGame();
             }
+            else
+            {
+                gameContinue();
+            }
         }
 
         private void quitGame()
         {
-
+            mStop = true;
             mQuit = true;
 
-            mBGWorker_PlayAnswerVideo.CancelAsync();
-
-            mBGWorker_CalcTimeout.CancelAsync();
-
-            mBGWorker_WaitNextLevel.CancelAsync();
-
+            string msg = "(退出游戏)";
+            System.Diagnostics.Debug.WriteLine(msg);
+            App.Output.Info(Tag, msg);
 
             Device.BeginInvokeOnMainThread(async () =>
             {
@@ -262,11 +265,6 @@ namespace Client.View.Games.CRW
             validateUserAnswer(e.Value);
         }
 
-        /// <summary>
-        /// 录入正确答案后等待动画时间
-        /// </summary>
-        public const int mInputCorrectAnswerSleepTime = 1000;
-
         private void validateUserAnswer(int userResult)
         {
             if (IsPlayingAnswerVideo == true)
@@ -315,6 +313,8 @@ namespace Client.View.Games.CRW
             }
         }
 
+        #region 播放显示答案动画
+
         System.ComponentModel.BackgroundWorker mBGWorker_PlayAnswerVideo { get; set; }
 
         /// <summary>
@@ -359,6 +359,11 @@ namespace Client.View.Games.CRW
             }
         }
 
+        /// <summary>
+        /// 录入正确答案后等待动画时间
+        /// </summary>
+        public const int mInputCorrectAnswerSleepTime = 1000;
+
         private void mBGWorker_PlayAnswerVideo_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             System.Threading.Thread.Sleep(mInputCorrectAnswerSleepTime);
@@ -368,6 +373,8 @@ namespace Client.View.Games.CRW
         {
             readNextQuestion();
         }
+
+        #endregion
 
         #region 判断回答是否超时
 
@@ -482,6 +489,8 @@ namespace Client.View.Games.CRW
 
         #endregion
 
+        #region 播放下一等级动画
+
         System.ComponentModel.BackgroundWorker mBGWorker_WaitNextLevel { get; set; }
 
         void playNextLevelVideo(string ttsContent)
@@ -540,6 +549,8 @@ namespace Client.View.Games.CRW
                 App.Output.Info(Tag, msg);
             }
         }
+
+        #endregion
 
         #region 锻炼时间
 

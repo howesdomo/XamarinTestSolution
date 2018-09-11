@@ -77,6 +77,8 @@ namespace Client.Droid
                 sb.AppendLine("异常信息:");
                 sb.AppendLine(errorMsg);
 
+                Android.Util.Log.Error("UnhandledEx", errorMsg);
+
                 new WebService().CollectUnhandleException
                 (
                     sb.ToString(),

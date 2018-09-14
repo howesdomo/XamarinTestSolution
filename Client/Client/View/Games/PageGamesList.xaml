@@ -8,6 +8,8 @@
             <Button x:Name="btnCRW" Text="溯算" />
             <Button x:Name="btnScreenStayOn" Text="测试屏幕常亮" />
             <Button x:Name="btnScreenCanTurnOff" Text="测试取消屏幕常亮" />
+
+            <Button x:Name="btnDB" Text="测试DB" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

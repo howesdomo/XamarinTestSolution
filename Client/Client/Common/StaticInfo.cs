@@ -65,7 +65,7 @@ namespace Client.Common
             }
         }
 
-        private static String _AppName;
+        private static String _AppName = "HoweApp";
 
         /// <summary>
         /// 程序名称
@@ -185,6 +185,13 @@ namespace Client.Common
                 {
                     if (StaticInfo.ExternalSQLiteConnStr.IsNullOrWhiteSpace() == false)
                     {
+
+                        var fileInfo = new System.IO.FileInfo(StaticInfo.ExternalSQLiteConnStr);
+                        if (System.IO.Directory.Exists(fileInfo.DirectoryName) == false)
+                        {
+                            System.IO.Directory.CreateDirectory(fileInfo.DirectoryName);
+                        }
+
                         _ExternalSQLiteDB = new Client.Data.SQLiteDB(Data.LocationEnum.External, ExternalSQLiteConnStr);
                     }
                 }

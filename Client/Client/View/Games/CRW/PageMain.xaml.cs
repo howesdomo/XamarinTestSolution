@@ -129,8 +129,6 @@ namespace Client.View.Games.CRW
         private void initEvent()
         {
             this.btnGiveUp.Clicked += BtnGiveUp_Clicked;
-            this.btnResetLevel.Clicked += BtnResetLevel_Clicked;
-
             this.gCRWKeyboard.InputValueEvent += new EventHandler<CRW_Keyboard_EventArgs>(receiveUserAnswer);
         }
 
@@ -185,21 +183,18 @@ namespace Client.View.Games.CRW
 
         #region Level
 
-        private void BtnResetLevel_Clicked(object sender, EventArgs e)
-        {
-            changeLevelForTest();
-        }
-
-        void changeLevelForTest()
-        {
-            this.ViewModel.CurrentIndex = null;
-            readLevel();
-            calcQuestion();
-        }
+        //void changeLevelForTest()
+        //{
+        //    this.ViewModel.CurrentIndex = null;
+        //    readLevel();
+        //    calcQuestion();
+        //}
 
         private void readLevel()
         {
-            int levelNo = int.Parse(this.txtLevelNo.Text);
+            // TODO Read Level In SQLite
+            // int levelNo = int.Parse(this.txtLevelNo.Text);
+            int levelNo = 1;
             CRW_Level level = new CRW_Level(levelNo);
             this.ViewModel.Level = level;
         }

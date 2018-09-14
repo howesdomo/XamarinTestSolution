@@ -95,7 +95,7 @@ namespace Client.Droid
             string externalSQLiteConnStr = System.IO.Path.Combine
             (
                 Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, // 获取 Android 外部存储路径
-                Util.Principle.DatabaseName_SQLite
+                Util.Principle.ExternalStorageDirectoryTemplate.FormatWith(Client.Common.StaticInfo.AppName, Util.Principle.DatabaseName_SQLite)                
             );
 
             Client.Common.StaticInfo.Init

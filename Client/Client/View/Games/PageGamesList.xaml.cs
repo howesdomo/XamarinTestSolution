@@ -54,8 +54,18 @@ namespace Client.View.Games
 
             this.btnScreenStayOn.Clicked += BtnScreenStayOn_Clicked;
             this.btnScreenCanTurnOff.Clicked += BtnScreenCanTurnOff_Clicked;
+
+            this.btnDB.Clicked += BtnDB_Clicked;
         }
 
+        private void BtnDB_Clicked(object sender, EventArgs e)
+        {
+            var o = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = "Howe" });
+
+            
+            string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(o));
+            System.Diagnostics.Debug.WriteLine(msg);
+        }
 
         async void BtnCRW_Clicked(object sender, EventArgs e)
         {

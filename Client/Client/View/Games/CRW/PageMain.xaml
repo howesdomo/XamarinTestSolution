@@ -12,10 +12,6 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <!--
-                <ColumnDefinition Width="0.6*" />
-                <ColumnDefinition Width="0.4*" />
-                -->
                 <ColumnDefinition Width="0.6*" />
                 <ColumnDefinition Width="0.4*" />
             </Grid.ColumnDefinitions>
@@ -51,22 +47,11 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <viewCRW:UcCRWKeyboard x:Name="gCRWKeyboard" />
 
                 <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-
-                    <Editor x:Name="txtLevelNo" Text="1" />
-                    <Button x:Name="btnResetLevel" Grid.Column="1" Margin="0" Text="重设关卡" />
-                </Grid>
-
-                <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />

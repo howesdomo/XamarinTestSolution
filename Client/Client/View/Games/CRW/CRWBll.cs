@@ -29,12 +29,18 @@ namespace Client.View.Games.CRW
                 toAdd.CorrectImageSource = "game_CRW_Correct.png";
                 toAdd.WrongImageSource = "game_CRW_Wrong.png";
 
+                toAdd.CRWTypeID = level.CRWTypeID;
+
                 toAdd.No = index + 1;
                 toAdd.Left = randTiKu.Left;
                 toAdd.Symbol = randTiKu.Symbol;
                 toAdd.Right = randTiKu.Right;
                 toAdd.EqualsSymbol = randTiKu.EqualsSymbol;
                 toAdd.Result = randTiKu.Result;
+                toAdd.TTSMsg = "{0}{1}{2}".FormatWith(ToChineseNumber(toAdd.Left),
+                                                      ToChineseSymbol(toAdd.Symbol),
+                                                      ToChineseNumber(toAdd.Right));
+
 
                 toAdd.ChangeStatus(CRW_Question_Status.Remember);
 
@@ -106,9 +112,16 @@ namespace Client.View.Games.CRW
             }
 
             ttsMsg = "答题完毕, 正确率百分之{0}".FormatWith(this.ToChineseNumber(correctPercentage));
-            ttsMsg += "由于是百分之{0}等级{1}".FormatWith(this.ToChineseNumber(correctPercentage), levelChangeMsg);
 
-            return new Tuple<CRW_Level, string>(new CRW_Level(tmpLevelNo), ttsMsg);
+            switch (levelChangeMsg)
+            {
+                case "上升": ttsMsg += "由于超过百分之{0}等级{1}".FormatWith(this.ToChineseNumber(85), levelChangeMsg); break;
+                case "不变": ttsMsg += "由于是百分之{0}等级{1}".FormatWith(this.ToChineseNumber(correctPercentage), levelChangeMsg); break;
+                case "下降": ttsMsg += "由于低于百分之{0}等级{1}".FormatWith(this.ToChineseNumber(65), levelChangeMsg); break;
+            }
+            // ttsMsg += "由于是百分之{0}等级{1}".FormatWith(this.ToChineseNumber(correctPercentage), levelChangeMsg);
+
+            return new Tuple<CRW_Level, string>(new CRW_Level(tmpLevelNo, level.CRWTypeID), ttsMsg);
         }
 
         public Tuple<int, CRW_Question, CRW_Question> ReadNextQuestion(int? currentIndex, CRW_Level level, List<CRW_Question> questionList)
@@ -240,6 +253,20 @@ namespace Client.View.Games.CRW
         }
 
         #endregion
+
+        public string ToChineseSymbol(string args)
+        {
+            string r = string.Empty;
+
+            switch (args)
+            {
+                case "+": r = "加"; break;
+                case "-": r = "减"; break;
+            }
+
+            return r;
+        }
+
 
     }
 }

@@ -5,11 +5,18 @@
              Title="游戏列表">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="用户名" />
+            <Editor x:Name="txtUser" Text="Howe" />
+
+            <Label Text="游戏列表" />
             <Button x:Name="btnCRW" Text="溯算" />
+            <Button x:Name="btnCRW_Type2" Text="听力溯算" />
+
+            <Label Text="Test" />
             <Button x:Name="btnScreenStayOn" Text="测试屏幕常亮" />
             <Button x:Name="btnScreenCanTurnOff" Text="测试取消屏幕常亮" />
-
             <Button x:Name="btnDB" Text="测试DB" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

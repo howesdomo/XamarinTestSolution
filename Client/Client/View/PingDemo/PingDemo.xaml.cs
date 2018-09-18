@@ -52,7 +52,6 @@ namespace Client.View
         {
             if (mBgWorker != null && mBgWorker.IsBusy == true)
             {
-                // TODO 提醒
                 return;
             }
 

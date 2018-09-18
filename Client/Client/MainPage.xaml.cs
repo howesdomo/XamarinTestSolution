@@ -42,9 +42,8 @@ namespace Client
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
+            this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
         }
-
-        
 
         async void BtnGames_Clicked(object sender, EventArgs e)
         {
@@ -144,6 +143,11 @@ namespace Client
         async void BtnPageIRDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.IRDemo.PageIRDemo());
+        }
+
+        async void BtnPageShuangSeQiu_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.ShuangSeQiu.PageShuangSeQiu());
         }
     }
 

@@ -24,9 +24,13 @@ namespace Client.View.Games.CRW
 
         public int Level { get; set; }
 
-        public int DateValue { get; set; }
+        public long DateValue { get; set; }
 
         public string DateDisplay { get; set; }
+
+        public long UpdateTimeValue { get; set; }
+
+        public string UpdateTimeDisplay { get; set; }
 
         /// <summary>
         /// 成功率
@@ -38,16 +42,12 @@ namespace Client.View.Games.CRW
         /// <summary>
         /// 锻炼时间
         /// </summary>
-        public int? UseTime { get; set; }
+        public long? UseTime { get; set; }
 
         /// <summary>
         /// 锻炼时间
         /// </summary>
         public string UseTimeDisplay { get; set; }
 
-
-        public int UpdateTimeValue { get; set; }
-
-        public string UpdateTimeDisplay { get; set; }
     }
 }

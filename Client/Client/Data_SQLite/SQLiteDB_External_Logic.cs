@@ -25,16 +25,7 @@ namespace Client.Data
                 initExternalDBStruct_v1(dbVersion);
             }
 
-            //// 2 根据数据库版本号升级数据库结构
-            //if (dbVersion.Version < 2)
-            //{
-            //    updateExternalDBStruct_v2(dbVersion); // update database struct script
-            //}
-
-            //if (dbVersion.Version < 3)
-            //{
-            //    updateExternalDBStruct_v3(dbVersion);// update database struct script
-            //}
+ 
         }
 
         private void initExternalDBStruct_v1(DBVersion dbVersion)
@@ -84,6 +75,54 @@ namespace Client.Data
             }
 
             return taskResult.Result[0];
+        }
+
+        public View.Games.CRW.CRWLog CRW_rLog(View.Games.CRW.Game_User args, int argsCRWTypeID)
+        {
+            var taskResult = mDatabase.Table<View.Games.CRW.CRWLog>()
+                             .Where(i => i.UserID == args.ID && i.CRWTypeID == argsCRWTypeID)
+                             .OrderByDescending(i => i.UpdateTimeValue)
+                             .FirstOrDefaultAsync();
+
+            if (taskResult != null )
+            {
+                if (taskResult.Result != null)
+                {
+                    return taskResult.Result;
+                }
+            }
+
+            var now = DateTime.Now;
+            var today = now.Date;
+
+            var toAdd = new View.Games.CRW.CRWLog()
+            {
+                UserID = args.ID,
+                CRWTypeID = argsCRWTypeID,
+                Level = 1,
+                DateValue = today.Ticks,
+                DateDisplay = today.ToString("yyyy-MM-dd"),
+                UpdateTimeValue = now.Ticks,
+                UpdateTimeDisplay = now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
+                Percentage = null,
+                NextLevel = null,
+                UseTime = null,
+                UseTimeDisplay = string.Empty
+            };
+
+            CRW_cLog(toAdd);
+
+            return CRW_rLog(args, argsCRWTypeID);
+        }
+
+        public void CRW_cLog(View.Games.CRW.CRWLog args)
+        {
+            mDatabase.InsertAsync(args);
+        }
+
+        public void CRW_uLog(View.Games.CRW.CRWLog args)
+        {
+            mDatabase.UpdateAsync(args);
         }
 
         #endregion

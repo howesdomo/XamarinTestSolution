@@ -9,9 +9,9 @@ namespace Client.View.Games.CRW
     /// </summary>
     public class CRW_Level
     {
-        public CRW_Level(int levelNo)
+        public CRW_Level(int levelNo, int argsCRWTypeID)
         {
-
+            this.CRWTypeID = argsCRWTypeID;
             this.LevelNo = levelNo;
 
             this.SuSuan = this.LevelNo / 2 + this.LevelNo % 2;
@@ -25,13 +25,22 @@ namespace Client.View.Games.CRW
                 this.LevelName = "{0}溯答".FormatWith(this.SuSuan);
             }
 
+            
+            this.QuestionCount = 20 + this.SuSuan * 2;
             // TODO 测试模式减少题目数量
-            // this.QuestionCount = 20 + this.SuSuan * 2;
             this.QuestionCount = 2 + this.SuSuan * 2;
 
             this.MaxIndex = this.QuestionCount + this.SuSuan - 1;
 
-            this.YuSu = 1;
+            if (this.LevelNo % 2 == 0)
+            {
+                this.SpeechRate = 0.5f;
+            }
+            else
+            {
+                this.SpeechRate = 1f;
+            }
+
 
             if (this.LevelNo % 2 == 0) // 快速
             {
@@ -47,6 +56,12 @@ namespace Client.View.Games.CRW
 
         }
 
+        /// <summary>
+        /// 1 溯答
+        /// 2 听力溯答
+        /// </summary>
+        public int CRWTypeID { get; set; }
+
         public int LevelNo { get; set; }
 
         public int SuSuan { get; set; }
@@ -59,7 +74,7 @@ namespace Client.View.Games.CRW
         /// <summary>
         /// 等级语速
         /// </summary>
-        public int YuSu { get; set; }
+        public float SpeechRate { get; set; }
 
         /// <summary>
         /// 规定时间内完成答题

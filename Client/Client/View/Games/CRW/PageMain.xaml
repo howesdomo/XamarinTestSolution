@@ -50,6 +50,14 @@
                 </Grid.RowDefinitions>
 
                 <viewCRW:UcCRWKeyboard x:Name="gCRWKeyboard" />
+                <Grid x:Name="gNextLevel" BackgroundColor="Gray" IsVisible="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center" />
+                    <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" />
+                </Grid>
 
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>

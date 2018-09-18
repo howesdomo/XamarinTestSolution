@@ -45,6 +45,8 @@
 
             <Button x:Name="btnPageIRDemo" Text="IR" />
 
+            <Button x:Name="btnPageShuangSeQiu" Text="双色球" />
+
 
         </StackLayout>
     </ScrollView>

@@ -6,6 +6,12 @@ namespace Client.View.Games.CRW
 {
     public class CRW_Question : ViewModel.BaseViewModel
     {
+        /// <summary>
+        /// 1 溯答
+        /// 2 听力溯答
+        /// </summary>
+        public int CRWTypeID { get; set; }
+
         public int No { get; set; }
 
         public string NoInfo { get; set; }
@@ -40,73 +46,146 @@ namespace Client.View.Games.CRW
         public bool CorrectImageVisible { get; set; }
 
 
+        public string TTSMsg { get; set; }
+
+
         public const string cQuestionMark = "?";
 
         public void ChangeStatus(CRW_Question_Status status)
         {
-            switch (status)
+            if (CRWTypeID == 2)
             {
-                case CRW_Question_Status.Remember:
-                    {
-                        this.NoInfo = "{0}题".FormatWith(this.No);
-                        this.LeftInfo = this.Left.ToString();
-                        this.SymbolInfo = this.Symbol.ToString();
-                        this.RightInfo = this.Right.ToString();
-                        this.ResultInfo = cQuestionMark;
-                        this.Status = CRW_Question_Status.Remember;
-                    }
-                    break;
+                switch (status)
+                {
+                    case CRW_Question_Status.Remember:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = cQuestionMark;
+                            this.SymbolInfo = cQuestionMark;
+                            this.RightInfo = cQuestionMark;
+                            this.ResultInfo = cQuestionMark;
+                            this.Status = CRW_Question_Status.Remember;
+                        }
+                        break;
 
-                case CRW_Question_Status.Answer:
-                    {
-                        this.NoInfo = "{0}题".FormatWith(this.No);
-                        this.LeftInfo = cQuestionMark;
-                        this.SymbolInfo = cQuestionMark;
-                        this.RightInfo = cQuestionMark;
-                        this.ResultInfo = cQuestionMark;
-                        this.Status = CRW_Question_Status.Answer;
-                    }
-                    break;
+                    case CRW_Question_Status.Answer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = cQuestionMark;
+                            this.SymbolInfo = cQuestionMark;
+                            this.RightInfo = cQuestionMark;
+                            this.ResultInfo = cQuestionMark;
+                            this.Status = CRW_Question_Status.Answer;
+                        }
+                        break;
 
-                case CRW_Question_Status.InputWrongAnswer:
-                    {
-                        this.NoInfo = "{0}题".FormatWith(this.No);
-                        this.LeftInfo = cQuestionMark;
-                        this.SymbolInfo = cQuestionMark;
-                        this.RightInfo = cQuestionMark;
-                        // this.ResultInfo = cQuestionMark;
-                        this.Status = CRW_Question_Status.InputWrongAnswer;
-                    }
-                    break;
+                    case CRW_Question_Status.InputWrongAnswer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = cQuestionMark;
+                            this.SymbolInfo = cQuestionMark;
+                            this.RightInfo = cQuestionMark;
+                            // this.ResultInfo = cQuestionMark;
+                            this.Status = CRW_Question_Status.InputWrongAnswer;
+                        }
+                        break;
 
-                case CRW_Question_Status.InputCorrectAnswer:
-                    {
-                        this.NoInfo = "{0}题".FormatWith(this.No);
-                        this.LeftInfo = this.Left.ToString();
-                        this.SymbolInfo = this.Symbol.ToString();
-                        this.RightInfo = this.Right.ToString();
-                        this.ResultInfo = this.Result.ToString();
-                        this.Status = CRW_Question_Status.InputCorrectAnswer;
-                        this.CorrectImageVisible = true;
-                        this.WrongImageVisible = false;
-                    }
-                    break;
+                    case CRW_Question_Status.InputCorrectAnswer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = this.Left.ToString();
+                            this.SymbolInfo = this.Symbol.ToString();
+                            this.RightInfo = this.Right.ToString();
+                            this.ResultInfo = this.Result.ToString();
+                            this.Status = CRW_Question_Status.InputCorrectAnswer;
+                            this.CorrectImageVisible = true;
+                            this.WrongImageVisible = false;
+                        }
+                        break;
 
-                case CRW_Question_Status.TimeOutWrongAnswer:
-                    {
-                        this.NoInfo = "{0}题".FormatWith(this.No);
-                        this.LeftInfo = this.Left.ToString();
-                        this.SymbolInfo = this.Symbol.ToString();
-                        this.RightInfo = this.Right.ToString();
-                        this.ResultInfo = this.Result.ToString();
-                        this.Status = CRW_Question_Status.TimeOutWrongAnswer;
-                        this.CorrectImageVisible = false;
-                        this.WrongImageVisible = true;
-                    }
-                    break;
+                    case CRW_Question_Status.TimeOutWrongAnswer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = this.Left.ToString();
+                            this.SymbolInfo = this.Symbol.ToString();
+                            this.RightInfo = this.Right.ToString();
+                            this.ResultInfo = this.Result.ToString();
+                            this.Status = CRW_Question_Status.TimeOutWrongAnswer;
+                            this.CorrectImageVisible = false;
+                            this.WrongImageVisible = true;
+                        }
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                switch (status)
+                {
+                    case CRW_Question_Status.Remember:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = this.Left.ToString();
+                            this.SymbolInfo = this.Symbol.ToString();
+                            this.RightInfo = this.Right.ToString();
+                            this.ResultInfo = cQuestionMark;
+                            this.Status = CRW_Question_Status.Remember;
+                        }
+                        break;
+
+                    case CRW_Question_Status.Answer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = cQuestionMark;
+                            this.SymbolInfo = cQuestionMark;
+                            this.RightInfo = cQuestionMark;
+                            this.ResultInfo = cQuestionMark;
+                            this.Status = CRW_Question_Status.Answer;
+                        }
+                        break;
+
+                    case CRW_Question_Status.InputWrongAnswer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = cQuestionMark;
+                            this.SymbolInfo = cQuestionMark;
+                            this.RightInfo = cQuestionMark;
+                            // this.ResultInfo = cQuestionMark;
+                            this.Status = CRW_Question_Status.InputWrongAnswer;
+                        }
+                        break;
+
+                    case CRW_Question_Status.InputCorrectAnswer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = this.Left.ToString();
+                            this.SymbolInfo = this.Symbol.ToString();
+                            this.RightInfo = this.Right.ToString();
+                            this.ResultInfo = this.Result.ToString();
+                            this.Status = CRW_Question_Status.InputCorrectAnswer;
+                            this.CorrectImageVisible = true;
+                            this.WrongImageVisible = false;
+                        }
+                        break;
+
+                    case CRW_Question_Status.TimeOutWrongAnswer:
+                        {
+                            this.NoInfo = "{0}题".FormatWith(this.No);
+                            this.LeftInfo = this.Left.ToString();
+                            this.SymbolInfo = this.Symbol.ToString();
+                            this.RightInfo = this.Right.ToString();
+                            this.ResultInfo = this.Result.ToString();
+                            this.Status = CRW_Question_Status.TimeOutWrongAnswer;
+                            this.CorrectImageVisible = false;
+                            this.WrongImageVisible = true;
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
             }
 
             NotifyUI();

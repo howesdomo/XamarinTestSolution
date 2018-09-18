@@ -13,6 +13,8 @@ namespace Client.View.Games
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageGamesList : ContentPage
     {
+        public static CRW.Game_User Game_User { get; set; }
+
         public PageGamesList()
         {
             InitializeComponent();
@@ -51,6 +53,7 @@ namespace Client.View.Games
         private void initEvent()
         {
             this.btnCRW.Clicked += BtnCRW_Clicked;
+            this.btnCRW_Type2.Clicked += BtnCRW_Type2_Clicked;
 
             this.btnScreenStayOn.Clicked += BtnScreenStayOn_Clicked;
             this.btnScreenCanTurnOff.Clicked += BtnScreenCanTurnOff_Clicked;
@@ -60,9 +63,8 @@ namespace Client.View.Games
 
         private void BtnDB_Clicked(object sender, EventArgs e)
         {
-            var o = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = "Howe" });
+            CRW.Game_User o = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = "Howe" });
 
-            
             string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(o));
             System.Diagnostics.Debug.WriteLine(msg);
         }
@@ -80,7 +82,32 @@ namespace Client.View.Games
                 }
             }
 
-            await Navigation.PushAsync(new Client.View.Games.CRW.PageMain());
+            Game_User = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
+
+            var page = new Client.View.Games.CRW.PageMain(1);
+
+            await Navigation.PushAsync(page);
+        }
+
+
+        async void BtnCRW_Type2_Clicked(object sender, EventArgs e)
+        {
+            if (App.TTS.Check_InitTextToSpeech() == false)
+            {
+                bool r1 = await this.DisplayAlert("提示", "检测到未打开TTS合成语音, 确认打开?", "确认", "取消");
+
+                if (r1 == true)
+                {
+                    App.TTS.InitTextToSpeech();
+                    return;
+                }
+            }
+
+            Game_User = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
+
+            var page = new Client.View.Games.CRW.PageMain(2);
+
+            await Navigation.PushAsync(page);
         }
 
         /// <summary>

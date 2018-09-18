@@ -28,7 +28,7 @@ namespace Client.View.Games.CRW
 
         bool mQuit { get; set; }
 
-        public PageMain()
+        public PageMain(int selectedCRWTypeID)
         {
             InitializeComponent();
             initUI();
@@ -37,6 +37,8 @@ namespace Client.View.Games.CRW
             this.initEvent();
             this.ViewModel = new PageMainViewModel();
             this.BindingContext = this.ViewModel;
+
+            this.ViewModel.CRWTypeID = selectedCRWTypeID;
 
             readLevel();
             calcQuestion();
@@ -53,6 +55,8 @@ namespace Client.View.Games.CRW
             this.gRight.Margin = new Thickness(left: -10d, top: 0d, right: 0d, bottom: 0d);
 
             this.lblLevelName.Margin = new Thickness(left: 10d, top: 0d, right: 0d, bottom: 0d);
+
+            this.lblNextLevel.Margin = new Thickness(left: 10d, top: 0d, right: 10d, bottom: 0d);
         }
 
         protected override void OnAppearing()
@@ -130,6 +134,8 @@ namespace Client.View.Games.CRW
         {
             this.btnGiveUp.Clicked += BtnGiveUp_Clicked;
             this.gCRWKeyboard.InputValueEvent += new EventHandler<CRW_Keyboard_EventArgs>(receiveUserAnswer);
+
+            this.btnNextLevel.Clicked += BtnNextLevel_Clicked;
         }
 
         protected override bool OnBackButtonPressed()
@@ -192,11 +198,47 @@ namespace Client.View.Games.CRW
 
         private void readLevel()
         {
-            // TODO Read Level In SQLite
-            // int levelNo = int.Parse(this.txtLevelNo.Text);
-            int levelNo = 1;
-            CRW_Level level = new CRW_Level(levelNo);
+            CRWLog log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+            if (log.NextLevel.HasValue)
+            {
+                var now = DateTime.Now;
+                var today = now.Date;
+
+                var toAdd = new CRWLog()
+                {
+                    UserID = log.UserID,
+                    CRWTypeID = this.ViewModel.CRWTypeID,
+                    Level = log.NextLevel.Value,
+                    DateValue = today.Ticks,
+                    DateDisplay = today.ToString("yyyy-MM-dd"),
+                    UpdateTimeValue = now.Ticks,
+                    UpdateTimeDisplay = now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
+                    Percentage = null,
+                    NextLevel = null,
+                    UseTime = null,
+                    UseTimeDisplay = string.Empty
+                };
+
+                Client.Common.StaticInfo.ExternalSQLiteDB.CRW_cLog(toAdd);
+
+                // 再次获取
+                log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+            }
+
+            CRW_Level level = new CRW_Level(log.Level, this.ViewModel.CRWTypeID);
             this.ViewModel.Level = level;
+
+            #region 听力溯算 根据难度调整语速
+
+            if (
+                this.ViewModel.CRWTypeID == 2 &&
+                this.ViewModel.Level != null
+               )
+            {
+                App.TTS.SetSpeechRateSilent(this.ViewModel.Level.SpeechRate);
+            }
+
+            #endregion
         }
 
         #endregion
@@ -221,10 +263,25 @@ namespace Client.View.Games.CRW
             this.ViewModel.RememberQuestion = r.Item2;
             this.ViewModel.AnswerQuestion = r.Item3;
 
+            #region 听力溯算 播放题目内容
+
+            if (
+                this.ViewModel.CRWTypeID == 2 &&
+                this.ViewModel.RememberQuestion != null &&
+                this.ViewModel.RememberQuestion.TTSMsg.IsNullOrWhiteSpace() == false
+               )
+            {
+                App.TTS.Play(this.ViewModel.RememberQuestion.TTSMsg);
+            }
+
+            #endregion
+
             #region 答题完毕
 
             if (this.ViewModel.RememberQuestion == null && this.ViewModel.AnswerQuestion == null)
             {
+                this.ViewModel.swCRW_UseTime.Stop();
+
                 this.ViewModel.CurrentIndex = null;
 
                 decimal correctPercentage = mBll.CheckCorrectPercentage(this.ViewModel.QuestionList);
@@ -233,12 +290,38 @@ namespace Client.View.Games.CRW
                 System.Diagnostics.Debug.WriteLine(result.Item2);
                 App.Output.Info(Tag, result.Item2);
 
+                var lastestLog = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+                lastestLog.NextLevel = result.Item1.LevelNo;
+                lastestLog.Percentage = Convert.ToInt32(correctPercentage);
+                lastestLog.UseTime = this.ViewModel.swCRW_UseTime.ElapsedTicks;
+                lastestLog.UseTimeDisplay = this.ViewModel.CRW_UseTimeInfo;
+
+                Client.Common.StaticInfo.ExternalSQLiteDB.CRW_uLog(lastestLog);
+
                 // 设置新的等级, 计算新的题目
                 this.ViewModel.Level = result.Item1;
                 this.calcQuestion();
                 // 播放检测正确率动画, 播放完毕后执行, readNextQuestion()
 
-                this.ViewModel.swCRW_UseTime.Stop();
+                var now = DateTime.Now;
+                var today = now.Date;
+
+                var toAdd = new CRWLog()
+                {
+                    UserID = PageGamesList.Game_User.ID,
+                    CRWTypeID = 1,
+                    Level = this.ViewModel.Level.LevelNo,
+                    DateValue = today.Ticks,
+                    DateDisplay = today.ToString("yyyy-MM-dd"),
+                    UpdateTimeValue = now.Ticks,
+                    UpdateTimeDisplay = now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
+                    Percentage = null,
+                    NextLevel = null,
+                    UseTime = this.ViewModel.swCRW_UseTime.ElapsedTicks,
+                    UseTimeDisplay = this.ViewModel.CRW_UseTimeInfo
+                };
+
+                Client.Common.StaticInfo.ExternalSQLiteDB.CRW_cLog(toAdd);
 
                 this.playNextLevelVideo(result.Item2);
                 return;
@@ -507,6 +590,12 @@ namespace Client.View.Games.CRW
             }
 
             mCurrentStep = 3;
+
+            gNextLevel.IsVisible = true;
+            btnNextLevel.IsEnabled = false;
+            lblNextLevel.Text = ttsContent;
+
+            App.TTS.SetSpeechRateSilent(1f);
             App.TTS.Play(ttsContent);
             mBGWorker_WaitNextLevel.RunWorkerAsync();
         }
@@ -535,7 +624,8 @@ namespace Client.View.Games.CRW
         {
             if (mStop == false)
             {
-                this.readNextQuestion();
+                // this.readNextQuestion();
+                this.btnNextLevel.IsEnabled = true;
             }
             else
             {
@@ -543,6 +633,13 @@ namespace Client.View.Games.CRW
                 System.Diagnostics.Debug.WriteLine(msg);
                 App.Output.Info(Tag, msg);
             }
+        }
+
+        private void BtnNextLevel_Clicked(object sender, EventArgs e)
+        {
+            this.gNextLevel.IsVisible = false;
+            this.lblNextLevel.Text = string.Empty;
+            this.readNextQuestion();
         }
 
         #endregion
@@ -596,6 +693,21 @@ namespace Client.View.Games.CRW
 
     public class PageMainViewModel : ViewModel.BaseViewModel
     {
+        private int _CRWTypeID;
+
+        public int CRWTypeID
+        {
+            get
+            {
+                return _CRWTypeID;
+            }
+            set
+            {
+                _CRWTypeID = value;
+
+            }
+        }
+
         private CRW_Level _Level;
 
         public CRW_Level Level

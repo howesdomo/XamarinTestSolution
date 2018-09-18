@@ -13,5 +13,11 @@ namespace Client.Common
         void Play(string content);
 
         void SetSpeechRate(float args);
+
+        /// <summary>
+        /// 设置语速 静默模式
+        /// </summary>
+        /// <param name="args"></param>
+        void SetSpeechRateSilent(float args);
     }
 }

@@ -86,7 +86,7 @@ namespace Client.Common
         /// <summary>
         /// 当前登录用户
         /// </summary>
-        public static DL.Model.User CurrentUser; // TODO 待处理
+        public static DL.Model.User CurrentUser;
 
         /// <summary>
         /// 当前运行设备信息

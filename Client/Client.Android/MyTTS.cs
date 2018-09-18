@@ -140,6 +140,16 @@ namespace Client.Droid
 
         /// <summary>
         /// 实现 ITTS 接口方法
+        /// 设置语速
+        /// </summary>
+        /// <param name="args"></param>
+        public void SetSpeechRateSilent(float args)
+        {
+            mTextToSpeech.SetSpeechRate(args);
+        }
+
+        /// <summary>
+        /// 实现 ITTS 接口方法
         /// 播放语音
         /// </summary>
         /// <param name="content"></param>

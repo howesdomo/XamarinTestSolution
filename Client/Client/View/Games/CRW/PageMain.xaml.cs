@@ -223,7 +223,7 @@ namespace Client.View.Games.CRW
 
                 // 再次获取
                 log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
-            }
+            }           
 
             CRW_Level level = new CRW_Level(log.Level, this.ViewModel.CRWTypeID);
             this.ViewModel.Level = level;

@@ -50,14 +50,7 @@
                 </Grid.RowDefinitions>
 
                 <viewCRW:UcCRWKeyboard x:Name="gCRWKeyboard" />
-                <Grid x:Name="gNextLevel" BackgroundColor="Gray" IsVisible="True">
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center" />
-                    <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" />
-                </Grid>
+
 
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -66,6 +59,15 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="btnClear" Grid.Row="0" Text="消除" />
                     <Button x:Name="btnGiveUp" Grid.Row="0" Grid.Column="1" Margin="0" Text="放弃" />
+                </Grid>
+
+                <Grid x:Name="gNextLevel" BackgroundColor="Gray" Grid.RowSpan="2" IsVisible="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center" />
+                    <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" />
                 </Grid>
 
             </Grid>

@@ -107,6 +107,18 @@ namespace Client.View.Games.CRW
                         }
                     }
                     break;
+                case 4:
+                    {
+                        if (mBGWorker_StartGame != null && mBGWorker_StartGame.IsBusy == false)
+                        {
+                            string msg = "(游戏继续) currentStep:{0}".FormatWith(mCurrentStep);
+                            System.Diagnostics.Debug.WriteLine(msg);
+                            App.Output.Info(Tag, msg);
+
+                            mBGWorker_StartGame_RunWorkerCompleted(null, null);
+                        }
+                    }
+                    break;
             }
         }
 
@@ -184,6 +196,7 @@ namespace Client.View.Games.CRW
         /// <summary>
         /// 回答问题中 - 0
         /// 等待评级中 - 3
+        /// 开始新一局 - 4
         /// </summary>
         int mCurrentStep { get; set; }
 
@@ -223,7 +236,7 @@ namespace Client.View.Games.CRW
 
                 // 再次获取
                 log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
-            }           
+            }
 
             CRW_Level level = new CRW_Level(log.Level, this.ViewModel.CRWTypeID);
             this.ViewModel.Level = level;
@@ -567,7 +580,7 @@ namespace Client.View.Games.CRW
 
         #endregion
 
-        #region 播放下一等级动画
+        #region 播放计算成绩动画
 
         System.ComponentModel.BackgroundWorker mBGWorker_WaitNextLevel { get; set; }
 
@@ -582,7 +595,7 @@ namespace Client.View.Games.CRW
 
             if (mBGWorker_WaitNextLevel.IsBusy == true)
             {
-                string msg = "{0}".FormatWith("正在等待回答正确的BackgroundWorker结束");
+                string msg = "{0}".FormatWith("(警告)正在播放计算成绩动画，有操作尝试再次进入，请程序员排除异常");
                 System.Diagnostics.Debug.WriteLine(msg);
                 App.Output.Warn(Tag, msg);
 
@@ -617,7 +630,7 @@ namespace Client.View.Games.CRW
 
         private void mBGWorker_WaitNextLevel_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            System.Threading.Thread.Sleep(10 * 1000);
+            System.Threading.Thread.Sleep(8 * 1000);
         }
 
         private void mBGWorker_WaitNextLevel_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
@@ -635,11 +648,64 @@ namespace Client.View.Games.CRW
             }
         }
 
+        #endregion
+
+        #region 播放开始新一局溯答动画
+
         private void BtnNextLevel_Clicked(object sender, EventArgs e)
         {
-            this.gNextLevel.IsVisible = false;
-            this.lblNextLevel.Text = string.Empty;
-            this.readNextQuestion();
+            startGame();
+        }
+
+        System.ComponentModel.BackgroundWorker mBGWorker_StartGame { get; set; }
+
+        void startGame()
+        {
+            if (mBGWorker_StartGame == null)
+            {
+                mBGWorker_StartGame = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_StartGame.DoWork += mBGWorker_StartGame_DoWork;
+                mBGWorker_StartGame.RunWorkerCompleted += mBGWorker_StartGame_RunWorkerCompleted;
+            }
+
+            if (mBGWorker_StartGame.IsBusy == true)
+            {
+                
+                string msg = "{0}".FormatWith("(警告)正在播放开始新一局溯答动画，有操作尝试再次进入，请程序员排除异常");
+                System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Warn(Tag, msg);
+
+                return;
+            }
+
+            mCurrentStep = 4;
+            mBGWorker_StartGame.RunWorkerAsync();
+        }
+
+        private void mBGWorker_StartGame_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            App.TTS.SetSpeechRate(1f);
+            App.TTS.Play(this.ViewModel.Level.LevelTTSName);
+            System.Threading.Thread.Sleep(this.ViewModel.Level.LevelTTS_SleepTime);
+            App.TTS.Play("开始");
+            System.Threading.Thread.Sleep(1000);
+        }
+
+        private void mBGWorker_StartGame_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (mStop == false)
+            {
+                this.gNextLevel.IsVisible = false;
+                this.lblNextLevel.Text = string.Empty;
+
+                this.readNextQuestion();
+            }
+            else
+            {
+                string msg = "(游戏暂停) CurrentStep:{0}".FormatWith(mCurrentStep);
+                System.Diagnostics.Debug.WriteLine(msg);
+                App.Output.Info(Tag, msg);
+            }
         }
 
         #endregion

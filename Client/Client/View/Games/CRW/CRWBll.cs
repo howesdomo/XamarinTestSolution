@@ -111,16 +111,15 @@ namespace Client.View.Games.CRW
                 tmpLevelNo = 1;
             }
 
-            ttsMsg = "答题完毕, 正确率百分之{0}".FormatWith(this.ToChineseNumber(correctPercentage));
+            ttsMsg = "答题完毕, 正确率百分之{0}".FormatWith(CRWBll.ToChineseNumber(correctPercentage));
 
             switch (levelChangeMsg)
             {
-                case "上升": ttsMsg += "由于超过百分之{0}等级{1}".FormatWith(this.ToChineseNumber(85), levelChangeMsg); break;
-                case "不变": ttsMsg += "由于是百分之{0}等级{1}".FormatWith(this.ToChineseNumber(correctPercentage), levelChangeMsg); break;
-                case "下降": ttsMsg += "由于低于百分之{0}等级{1}".FormatWith(this.ToChineseNumber(65), levelChangeMsg); break;
+                case "上升": ttsMsg += "由于超过百分之{0}等级{1}".FormatWith(CRWBll.ToChineseNumber(85), levelChangeMsg); break;
+                case "不变": ttsMsg += "由于是百分之{0}等级{1}".FormatWith(CRWBll.ToChineseNumber(correctPercentage), levelChangeMsg); break;
+                case "下降": ttsMsg += "由于低于百分之{0}等级{1}".FormatWith(CRWBll.ToChineseNumber(65), levelChangeMsg); break;
             }
-            // ttsMsg += "由于是百分之{0}等级{1}".FormatWith(this.ToChineseNumber(correctPercentage), levelChangeMsg);
-
+            
             return new Tuple<CRW_Level, string>(new CRW_Level(tmpLevelNo, level.CRWTypeID), ttsMsg);
         }
 
@@ -160,7 +159,7 @@ namespace Client.View.Games.CRW
 
         #region 数字转中文数字
 
-        public string ToChineseNumber(decimal args, bool isUpper = false)
+        public static string ToChineseNumber(decimal args, bool isUpper = false)
         {
             string r = string.Empty;
 
@@ -187,7 +186,7 @@ namespace Client.View.Games.CRW
             return r;
         }
 
-        private char zhongwen(char c, bool isUpper)
+        private static char zhongwen(char c, bool isUpper)
         {
             char r = '零';
 
@@ -227,7 +226,7 @@ namespace Client.View.Games.CRW
             return r;
         }
 
-        private string weishu(int index)
+        private static string weishu(int index)
         {
             string r = string.Empty;
             switch (index)
@@ -254,7 +253,7 @@ namespace Client.View.Games.CRW
 
         #endregion
 
-        public string ToChineseSymbol(string args)
+        public static string ToChineseSymbol(string args)
         {
             string r = string.Empty;
 

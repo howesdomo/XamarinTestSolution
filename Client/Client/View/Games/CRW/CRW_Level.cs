@@ -19,13 +19,16 @@ namespace Client.View.Games.CRW
             if (this.LevelNo % 2 == 0)
             {
                 this.LevelName = "快速{0}溯答".FormatWith(this.SuSuan);
+                this.LevelTTSName = "快速{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuSuan));
+                this.LevelTTS_SleepTime = 3000;
             }
             else
             {
                 this.LevelName = "{0}溯答".FormatWith(this.SuSuan);
+                this.LevelTTSName = "{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuSuan));
+                this.LevelTTS_SleepTime = 1500;
             }
 
-            
             this.QuestionCount = 20 + this.SuSuan * 2;
             // TODO 测试模式减少题目数量
             this.QuestionCount = 2 + this.SuSuan * 2;
@@ -67,9 +70,19 @@ namespace Client.View.Games.CRW
         public int SuSuan { get; set; }
 
         /// <summary>
-        /// 登记名称
+        /// 等级名称
         /// </summary>
         public string LevelName { get; set; }
+
+        /// <summary>
+        /// 等级名称 TTS 播放使用
+        /// </summary>
+        public string LevelTTSName { get; set; }
+
+        /// <summary>
+        /// 等级名称 TTS 播放等待时间
+        /// </summary>
+        public int LevelTTS_SleepTime { get; set; }
 
         /// <summary>
         /// 等级语速

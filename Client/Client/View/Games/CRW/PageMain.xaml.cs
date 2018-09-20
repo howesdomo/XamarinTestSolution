@@ -755,6 +755,7 @@ namespace Client.View.Games.CRW
         }
 
         #endregion
+
     }
 
     public class PageMainViewModel : ViewModel.BaseViewModel

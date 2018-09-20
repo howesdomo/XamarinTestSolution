@@ -6,7 +6,7 @@ namespace Client.Common
 {
     public class WebDateTime
     {
-        public public WebDateTime()
+        public WebDateTime()
         {
 
         }

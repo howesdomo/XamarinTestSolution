@@ -40,6 +40,9 @@ namespace Client.View.Games.CRW
 
             this.ViewModel.CRWTypeID = selectedCRWTypeID;
 
+            CRWLog log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+            this.ViewModel.DB_Today_CRWUseTimeInfo = TimeSpan.FromTicks(log.UseTime.Value);
+
             readLevel();
             calcQuestion();
             showStopWatch();
@@ -160,6 +163,8 @@ namespace Client.View.Games.CRW
         {
             mStop = true;
 
+            this.gPause.IsVisible = true;
+            
             var result = await this.DisplayAlert
             (
                 title: "提示",
@@ -174,6 +179,7 @@ namespace Client.View.Games.CRW
             }
             else
             {
+                this.gPause.IsVisible = false;
                 gameContinue();
             }
         }
@@ -214,7 +220,7 @@ namespace Client.View.Games.CRW
             CRWLog log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
             if (log.NextLevel.HasValue)
             {
-                var now = DateTime.Now;
+                var now = WebDateTime.Now;
                 var today = now.Date;
 
                 var toAdd = new CRWLog()
@@ -228,8 +234,8 @@ namespace Client.View.Games.CRW
                     UpdateTimeDisplay = now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
                     Percentage = null,
                     NextLevel = null,
-                    UseTime = null,
-                    UseTimeDisplay = string.Empty
+                    UseTime = log.UseTime,
+                    UseTimeDisplay = log.UseTimeDisplay
                 };
 
                 Client.Common.StaticInfo.ExternalSQLiteDB.CRW_cLog(toAdd);
@@ -316,7 +322,7 @@ namespace Client.View.Games.CRW
                 this.calcQuestion();
                 // 播放检测正确率动画, 播放完毕后执行, readNextQuestion()
 
-                var now = DateTime.Now;
+                var now = WebDateTime.Now; // DateTime.Now;
                 var today = now.Date;
 
                 var toAdd = new CRWLog()
@@ -330,7 +336,7 @@ namespace Client.View.Games.CRW
                     UpdateTimeDisplay = now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
                     Percentage = null,
                     NextLevel = null,
-                    UseTime = this.ViewModel.swCRW_UseTime.ElapsedTicks,
+                    UseTime = this.ViewModel.DB_Today_CRWUseTimeInfo.Ticks + this.ViewModel.swCRW_UseTime.ElapsedTicks, // 数据库记录的使用时间 + 当前计时器的使用时间
                     UseTimeDisplay = this.ViewModel.CRW_UseTimeInfo
                 };
 
@@ -670,7 +676,7 @@ namespace Client.View.Games.CRW
 
             if (mBGWorker_StartGame.IsBusy == true)
             {
-                
+
                 string msg = "{0}".FormatWith("(警告)正在播放开始新一局溯答动画，有操作尝试再次进入，请程序员排除异常");
                 System.Diagnostics.Debug.WriteLine(msg);
                 App.Output.Warn(Tag, msg);
@@ -679,12 +685,14 @@ namespace Client.View.Games.CRW
             }
 
             mCurrentStep = 4;
+
+            this.btnNextLevel.IsEnabled = false;
             mBGWorker_StartGame.RunWorkerAsync();
         }
 
         private void mBGWorker_StartGame_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            App.TTS.SetSpeechRate(1f);
+            App.TTS.SetSpeechRateSilent(1f);
             App.TTS.Play(this.ViewModel.Level.LevelTTSName);
             System.Threading.Thread.Sleep(this.ViewModel.Level.LevelTTS_SleepTime);
             App.TTS.Play("开始");
@@ -760,6 +768,11 @@ namespace Client.View.Games.CRW
 
     public class PageMainViewModel : ViewModel.BaseViewModel
     {
+        public PageMainViewModel()
+        {
+            swCRW_UseTime = new System.Diagnostics.Stopwatch();
+        }
+
         private int _CRWTypeID;
 
         public int CRWTypeID
@@ -821,7 +834,9 @@ namespace Client.View.Games.CRW
             }
         }
 
-        public System.Diagnostics.Stopwatch swCRW_UseTime = new System.Diagnostics.Stopwatch();
+        public System.Diagnostics.Stopwatch swCRW_UseTime { get; set; }
+
+        public TimeSpan DB_Today_CRWUseTimeInfo { get; set; }
 
         public string CRW_UseTimeInfo
         {
@@ -831,7 +846,7 @@ namespace Client.View.Games.CRW
 
                 if (swCRW_UseTime != null)
                 {
-                    var a = TimeSpan.FromTicks(swCRW_UseTime.ElapsedTicks);
+                    var a = TimeSpan.FromTicks(swCRW_UseTime.ElapsedTicks).Add(DB_Today_CRWUseTimeInfo);
                     int tmpM = a.Minutes;
                     int tmpS = a.Seconds;
 
@@ -839,7 +854,6 @@ namespace Client.View.Games.CRW
                     {
                         r = "{0}分{1}秒".FormatWith(tmpM, tmpS);
                     }
-
                     else
                     {
                         r = "{0}秒".FormatWith(tmpS);

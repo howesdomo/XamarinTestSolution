@@ -92,7 +92,7 @@ namespace Client.Data
                 }
             }
 
-            var now = DateTime.Now;
+            var now = WebDateTime.Now;
             var today = now.Date;
 
             var toAdd = new View.Games.CRW.CRWLog()
@@ -106,8 +106,8 @@ namespace Client.Data
                 UpdateTimeDisplay = now.ToString("yyyy-MM-dd HH:mm:ss.fff"),
                 Percentage = null,
                 NextLevel = null,
-                UseTime = null,
-                UseTimeDisplay = string.Empty
+                UseTime = 0,
+                UseTimeDisplay = "0秒"
             };
 
             CRW_cLog(toAdd);

@@ -126,7 +126,6 @@ namespace Client.View.Games
             }
             catch (Exception ex)
             {
-
                 string msg = "{0}".FormatWith(ex.GetFullInfo());
                 System.Diagnostics.Debug.WriteLine(msg);
             }

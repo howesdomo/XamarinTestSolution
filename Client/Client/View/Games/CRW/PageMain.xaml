@@ -8,69 +8,72 @@
              >
     <ContentPage.Content>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.6*" />
-                <ColumnDefinition Width="0.4*" />
-            </Grid.ColumnDefinitions>
-            <Grid x:Name="gLeft" BackgroundColor="Pink">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.15*" />
-                    <RowDefinition Height="0.425*" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="0.425*" />
-                </Grid.RowDefinitions>
-                <Grid BackgroundColor="LimeGreen">
-                    <Label x:Name="lblLevelName" Text="{Binding LevelName}" VerticalTextAlignment="Center" />
-                    <Grid Grid.Column="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="锻炼时间" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="1" Text="{Binding CRW_UseTimeInfo}" VerticalTextAlignment="Center" />
-                    </Grid>
-                </Grid>
-
-                <viewCRW:UcQuestion x:Name="gRemember" Grid.Row="1" BindingContext="{Binding RememberQuestion}" />
-
-                <Grid Grid.Row="2" BackgroundColor="Black">
-                    <Label Text="." FontSize="0.8" />
-                </Grid>
-                <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="3" BindingContext="{Binding AnswerQuestion}" />
-            </Grid>
-            <Grid x:Name="gRight"
-                  Grid.Column="1"
-                  BackgroundColor="Gray">
+            <Grid x:Name="gMain">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-
-                <viewCRW:UcCRWKeyboard x:Name="gCRWKeyboard" />
-
-
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Button x:Name="btnClear" Grid.Row="0" Text="消除" />
-                    <Button x:Name="btnGiveUp" Grid.Row="0" Grid.Column="1" Margin="0" Text="放弃" />
-                </Grid>
-
-                <Grid x:Name="gNextLevel" BackgroundColor="Gray" Grid.RowSpan="2" IsVisible="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*" />
+                    <ColumnDefinition Width="0.4*" />
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="gLeft" BackgroundColor="Pink">
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
+                        <RowDefinition Height="0.15*" />
+                        <RowDefinition Height="0.425*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.425*" />
                     </Grid.RowDefinitions>
-                    <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center" />
-                    <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" />
-                </Grid>
+                    <Grid BackgroundColor="LimeGreen">
+                        <Label x:Name="lblLevelName" Text="{Binding LevelName}" VerticalTextAlignment="Center" />
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="锻炼时间" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1" Text="{Binding CRW_UseTimeInfo}" VerticalTextAlignment="Center" />
+                        </Grid>
+                    </Grid>
 
+                    <viewCRW:UcQuestion x:Name="gRemember" Grid.Row="1" BindingContext="{Binding RememberQuestion}" />
+
+                    <Grid Grid.Row="2" BackgroundColor="Black">
+                        <Label Text="." FontSize="0.8" />
+                    </Grid>
+                    <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="3" BindingContext="{Binding AnswerQuestion}" />
+                </Grid>
+                <Grid x:Name="gRight"
+                  Grid.Column="1"
+                  BackgroundColor="Gray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <viewCRW:UcCRWKeyboard x:Name="gCRWKeyboard" />
+
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btnClear" Grid.Row="0" Text="消除" />
+                        <Button x:Name="btnGiveUp" Grid.Row="0" Grid.Column="1" Margin="0" Text="放弃" />
+                    </Grid>
+
+                    <Grid x:Name="gNextLevel" BackgroundColor="Gray" Grid.RowSpan="2" IsVisible="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center" />
+                        <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" />
+                    </Grid>
+
+                </Grid>
             </Grid>
+            <Grid x:Name="gPause" BackgroundColor="Black" IsVisible="False" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -20,13 +20,13 @@ namespace Client.View.Games.CRW
             {
                 this.LevelName = "快速{0}溯答".FormatWith(this.SuSuan);
                 this.LevelTTSName = "快速{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuSuan));
-                this.LevelTTS_SleepTime = 3000;
+                this.LevelTTS_SleepTime = 3500;
             }
             else
             {
                 this.LevelName = "{0}溯答".FormatWith(this.SuSuan);
                 this.LevelTTSName = "{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuSuan));
-                this.LevelTTS_SleepTime = 1500;
+                this.LevelTTS_SleepTime = 2000;
             }
 
             this.QuestionCount = 20 + this.SuSuan * 2;

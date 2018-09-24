@@ -9,8 +9,8 @@
             <Editor x:Name="txtUser" Text="Howe" />
 
             <Label Text="游戏列表" />
-            <Button x:Name="btnCRW" Text="溯算" />
-            <Button x:Name="btnCRW_Type2" Text="听力溯算" />
+            <Button x:Name="btnCRW" Text="看题溯答" />
+            <Button x:Name="btnCRW_Type2" Text="听算溯答" />
 
             <Label Text="Test" />
             <Button x:Name="btnScreenStayOn" Text="测试屏幕常亮" />

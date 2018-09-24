@@ -51,7 +51,7 @@ namespace Client.View.Games.CRW
             }
             else // 常速
             {
-                this.AnswerTime = 5 * 1000;
+                this.AnswerTime = 4 * 1000;
             }
 
             this.AnswerStartIndex = this.SuSuan;

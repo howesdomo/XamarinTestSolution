@@ -382,9 +382,7 @@ namespace Client.View.Games.CRW
 
             if (this.ViewModel.AnswerQuestion == null)
             {
-                // 未有可以回答的问题, 暂时处理为
-                // 读取下一条问题
-                readNextQuestion();
+                // 未有可以回答的问题, 等待自动播放下一题
                 return;
             }
 
@@ -512,6 +510,11 @@ namespace Client.View.Games.CRW
             System.ComponentModel.BackgroundWorker thisBgWorker = sender as System.ComponentModel.BackgroundWorker;
 
             int argsWaitTime = this.ViewModel.Level.AnswerTime;
+            if (this.ViewModel.AnswerQuestion == null) // 在没有回答题目的情况下, 读题时间为 2 秒
+            {
+                argsWaitTime = 2000;
+            }
+
             string msg = "开始答题倒计时:{0}毫秒".FormatWith(argsWaitTime);
             System.Diagnostics.Debug.WriteLine(msg);
             App.Output.Info(Tag, msg);

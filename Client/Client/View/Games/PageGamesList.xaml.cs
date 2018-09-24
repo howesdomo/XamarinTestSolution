@@ -69,45 +69,77 @@ namespace Client.View.Games
             System.Diagnostics.Debug.WriteLine(msg);
         }
 
-        async void BtnCRW_Clicked(object sender, EventArgs e)
+        System.ComponentModel.BackgroundWorker mBGWorker_OpenGamePage_CRW { get; set; }
+
+        void BtnCRW_Clicked(object sender, EventArgs e)
         {
-            if (App.TTS.Check_InitTextToSpeech() == false)
-            {
-                bool r1 = await this.DisplayAlert("提示", "检测到未打开TTS合成语音, 确认打开?", "确认", "取消");
-
-                if (r1 == true)
-                {
-                    App.TTS.InitTextToSpeech();
-                    return;
-                }
-            }
-
-            Game_User = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
-
-            var page = new Client.View.Games.CRW.PageMain(1);
-
-            await Navigation.PushAsync(page);
+            openGamePage_CRW(CRWTypeID: 1);
         }
 
-
-        async void BtnCRW_Type2_Clicked(object sender, EventArgs e)
+        void BtnCRW_Type2_Clicked(object sender, EventArgs e)
         {
-            if (App.TTS.Check_InitTextToSpeech() == false)
-            {
-                bool r1 = await this.DisplayAlert("提示", "检测到未打开TTS合成语音, 确认打开?", "确认", "取消");
+            openGamePage_CRW(CRWTypeID: 2);
+        }
 
-                if (r1 == true)
-                {
-                    App.TTS.InitTextToSpeech();
-                    return;
-                }
+        async void openGamePage_CRW(int CRWTypeID)
+        {
+            if (App.TTS.Check_InitTextToSpeech() == true)
+            {
+                Game_User = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
+                var page = new Client.View.Games.CRW.PageMain(CRWTypeID);
+                await Navigation.PushAsync(page);
+                return;
             }
 
-            Game_User = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
+            // else -- App.TTS.Check_InitTextToSpeech() == false 
+            await this.DisplayAlert("提示", "确认打开TTS合成语音", "确认");
+            App.TTS.InitTextToSpeech();
 
-            var page = new Client.View.Games.CRW.PageMain(2);
+            if (mBGWorker_OpenGamePage_CRW == null)
+            {
+                mBGWorker_OpenGamePage_CRW = new System.ComponentModel.BackgroundWorker();
+                mBGWorker_OpenGamePage_CRW.DoWork += mBGWorker_DoWork;
+                mBGWorker_OpenGamePage_CRW.RunWorkerCompleted += mBGWorker_RunWorkerCompleted;
+            }
 
-            await Navigation.PushAsync(page);
+            if (mBGWorker_OpenGamePage_CRW.IsBusy == true)
+            {
+                return;
+            }
+
+            mBGWorker_OpenGamePage_CRW.RunWorkerAsync(CRWTypeID);
+        }
+
+        private void mBGWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            int countDown = 2;
+
+            int argsCRWTypeID = (int)e.Argument;
+
+            while (countDown > 0)
+            {
+                if (App.TTS.Check_InitTextToSpeech() == true)
+                {
+                    break;
+                }
+                System.Threading.Thread.Sleep(500);
+            }
+
+            e.Result = argsCRWTypeID;
+        }
+
+        void mBGWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                string msg = "{0}".FormatWith(e.Error.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
+            else
+            {
+                int rCRWTypeID = (int)e.Result;
+                openGamePage_CRW(rCRWTypeID);
+            }
         }
 
         /// <summary>
@@ -152,5 +184,18 @@ namespace Client.View.Games
 
 
 
+    }
+
+    public class PageGameListEventArgs : EventArgs
+    {
+        public PageGameListEventArgs(int _CRWTypeID, bool _IsTTSOpen)
+        {
+            this.CRWTypeID = _CRWTypeID;
+            this.IsTTSOpen = _IsTTSOpen;
+        }
+
+        public int CRWTypeID { get; private set; }
+
+        public bool IsTTSOpen { get; private set; }
     }
 }

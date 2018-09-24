@@ -7,8 +7,8 @@ namespace Client.View.Games.CRW
     public class CRW_Question : ViewModel.BaseViewModel
     {
         /// <summary>
-        /// 1 溯答
-        /// 2 听力溯答
+        /// 1 看题溯答
+        /// 2 听算溯答
         /// </summary>
         public int CRWTypeID { get; set; }
 
@@ -53,7 +53,7 @@ namespace Client.View.Games.CRW
 
         public void ChangeStatus(CRW_Question_Status status)
         {
-            if (CRWTypeID == 2)
+            if (CRWTypeID == 2) // 
             {
                 switch (status)
                 {

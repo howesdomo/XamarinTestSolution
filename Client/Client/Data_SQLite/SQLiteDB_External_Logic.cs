@@ -79,8 +79,11 @@ namespace Client.Data
 
         public View.Games.CRW.CRWLog CRW_rLog(View.Games.CRW.Game_User args, int argsCRWTypeID)
         {
+            var now = WebDateTime.Now;
+            var today = now.Date;
+
             var taskResult = mDatabase.Table<View.Games.CRW.CRWLog>()
-                             .Where(i => i.UserID == args.ID && i.CRWTypeID == argsCRWTypeID)
+                             .Where(i => i.UserID == args.ID && i.CRWTypeID == argsCRWTypeID && i.DateValue == today.Ticks)
                              .OrderByDescending(i => i.UpdateTimeValue)
                              .FirstOrDefaultAsync();
 
@@ -92,10 +95,12 @@ namespace Client.Data
                 }
             }
 
-            var now = WebDateTime.Now;
-            var today = now.Date;
+            var nearLastest = mDatabase.Table<View.Games.CRW.CRWLog>()
+                 .Where(i => i.UserID == args.ID && i.CRWTypeID == argsCRWTypeID)
+                 .OrderByDescending(i => i.UpdateTimeValue)
+                 .FirstOrDefaultAsync();
 
-            var toAdd = new View.Games.CRW.CRWLog()
+            View.Games.CRW.CRWLog toAdd = new View.Games.CRW.CRWLog()
             {
                 UserID = args.ID,
                 CRWTypeID = argsCRWTypeID,
@@ -109,6 +114,15 @@ namespace Client.Data
                 UseTime = 0,
                 UseTimeDisplay = "0秒"
             };
+
+
+            if (nearLastest != null && nearLastest.Result != null)
+            {
+                var lastestLog = nearLastest.Result;
+
+                toAdd.Level = lastestLog.Level;
+                toAdd.NextLevel = lastestLog.NextLevel;
+            }
 
             CRW_cLog(toAdd);
 

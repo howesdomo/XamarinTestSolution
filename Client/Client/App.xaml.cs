@@ -17,6 +17,8 @@ namespace Client
 
         public static Client.Common.IOutput Output { get; set; }
 
+        public static Client.Common.IPermission Permission { get; set; }
+
 
         public App()
         {

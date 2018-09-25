@@ -47,7 +47,8 @@
 
             <Button x:Name="btnPageShuangSeQiu" Text="双色球" />
 
-
+            <Button x:Name="btnAndroidPermission" Text="安卓权限" />
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>

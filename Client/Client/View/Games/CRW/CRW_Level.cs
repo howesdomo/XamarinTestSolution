@@ -14,26 +14,26 @@ namespace Client.View.Games.CRW
             this.CRWTypeID = argsCRWTypeID;
             this.LevelNo = levelNo;
 
-            this.SuSuan = this.LevelNo / 2 + this.LevelNo % 2;
+            this.SuDa = this.LevelNo / 2 + this.LevelNo % 2;
 
             if (this.LevelNo % 2 == 0)
             {
-                this.LevelName = "快速{0}溯答".FormatWith(this.SuSuan);
-                this.LevelTTSName = "快速{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuSuan));
+                this.LevelName = "快速{0}溯答".FormatWith(this.SuDa);
+                this.LevelTTSName = "快速{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuDa));
                 this.LevelTTS_SleepTime = 3500;
             }
             else
             {
-                this.LevelName = "{0}溯答".FormatWith(this.SuSuan);
-                this.LevelTTSName = "{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuSuan));
+                this.LevelName = "{0}溯答".FormatWith(this.SuDa);
+                this.LevelTTSName = "{0}溯答".FormatWith(CRWBll.ToChineseNumber(this.SuDa));
                 this.LevelTTS_SleepTime = 2000;
             }
 
-            this.QuestionCount = 20 + this.SuSuan * 2;
+            this.QuestionCount = 20 + this.SuDa * 2;
             // TODO 测试模式减少题目数量
-            this.QuestionCount = 2 + this.SuSuan * 2;
+            // this.QuestionCount = 2 + this.SuSuan * 2;
 
-            this.MaxIndex = this.QuestionCount + this.SuSuan - 1;
+            this.MaxIndex = this.QuestionCount + this.SuDa - 1;
 
             if (this.LevelNo % 2 == 0)
             {
@@ -54,7 +54,7 @@ namespace Client.View.Games.CRW
                 this.AnswerTime = 4 * 1000;
             }
 
-            this.AnswerStartIndex = this.SuSuan;
+            this.AnswerStartIndex = this.SuDa;
             this.RememberEndIndex = this.QuestionCount - 1;
 
         }
@@ -67,7 +67,11 @@ namespace Client.View.Games.CRW
 
         public int LevelNo { get; set; }
 
-        public int SuSuan { get; set; }
+        /// <summary>
+        /// 溯答
+        /// (快速) x 溯答
+        /// </summary>
+        public int SuDa { get; set; }
 
         /// <summary>
         /// 等级名称

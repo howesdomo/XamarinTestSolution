@@ -95,7 +95,7 @@ namespace Client.Droid
             string externalSQLiteConnStr = System.IO.Path.Combine
             (
                 Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, // 获取 Android 外部存储路径
-                Util.Principle.ExternalStorageDirectoryTemplate.FormatWith(Client.Common.StaticInfo.AppName, Util.Principle.DatabaseName_SQLite)                
+                Util.Principle.ExternalStorageDirectoryTemplate.FormatWith(Client.Common.StaticInfo.AppName, Util.Principle.DatabaseName_SQLite)
             );
 
             Client.Common.StaticInfo.Init
@@ -130,6 +130,10 @@ namespace Client.Droid
             // 初始化IR
             MyIR ir = MyIR.GetInstance(ApplicationContext);
             App.IR = ir;
+
+            // 初始化动态权限
+            MyPermission myPermission = new MyPermission();
+            App.Permission = myPermission;
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -242,6 +246,38 @@ namespace Client.Droid
         //}
 
         #endregion
+        
+        
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            doNext(requestCode, grantResults);
+        }
+
+        private void doNext(int requestCode, [GeneratedEnum] Permission[] grantResults)
+        {
+            if (requestCode == MyPermission.WRITE_EXTERNAL_STORAGE_REQUEST_CODE)
+            {
+                if (grantResults[0] == Permission.Granted) // 允许授权
+                {
+                    System.Threading.Tasks.Task.Run(() =>
+                    {
+                        Looper.Prepare();
+                        Toast.MakeText(this, "授权成功", ToastLength.Long).Show();
+                        Looper.Loop();
+                    });
+                }
+                else // 拒绝授权
+                {
+                    System.Threading.Tasks.Task.Run(() =>
+                    {
+                        Looper.Prepare();
+                        Toast.MakeText(this, "授权失败", ToastLength.Long).Show();
+                        Looper.Loop();
+                    });
+                }
+            }
+        }
 
     }
 

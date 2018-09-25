@@ -145,7 +145,7 @@ namespace Client.View.Games.CRW
 
             if (index >= level.AnswerStartIndex && index <= level.MaxIndex)
             {
-                toAnswer = questionList[index - level.SuSuan];
+                toAnswer = questionList[index - level.SuDa];
                 toAnswer.ChangeStatus(CRW_Question_Status.Answer);
             }
 

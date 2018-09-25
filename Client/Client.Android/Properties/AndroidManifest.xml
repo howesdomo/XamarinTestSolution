@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.howesdomo.Client" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="25" />
+  <!-- 由于Android6.0之后有运行时权限，故修改版本号使其不用运行时获取权限 -->
+  <!--<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="25" />-->
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
 
   
   <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />

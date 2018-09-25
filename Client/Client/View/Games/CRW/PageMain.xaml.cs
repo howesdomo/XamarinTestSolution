@@ -40,8 +40,12 @@ namespace Client.View.Games.CRW
 
             this.ViewModel.CRWTypeID = selectedCRWTypeID;
 
+            #region 数据库锻炼时间赋值
+
             CRWLog log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
             this.ViewModel.DB_Today_CRWUseTimeInfo = TimeSpan.FromTicks(log.UseTime.Value);
+
+            #endregion
 
             readLevel();
             calcQuestion();
@@ -562,6 +566,8 @@ namespace Client.View.Games.CRW
 
             if (mCalcTimeout_Cancel == true) // 由于正确回答, 计算超时线程被取消
             {
+                mCalcTimeout_Cancel = false;
+
                 msg = "（正确回答）取消答题倒计时";
                 System.Diagnostics.Debug.WriteLine(msg);
                 App.Output.Info(Tag, msg);

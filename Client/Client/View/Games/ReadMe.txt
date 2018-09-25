@@ -1,1 +1,1 @@
-CRW(Calc Remember Write) - 溯算 ( 山寨魔鬼锻炼溯算 )
+CRW(Calc Remember Write) - 溯算 ( 魔鬼计算 & 魔鬼听算 )

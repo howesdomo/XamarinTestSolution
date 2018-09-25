@@ -106,12 +106,15 @@ namespace Client.View
                 {
                     // ** 引用 Xamarin.Essentials 包 **
                     // 将内容复制到剪贴板
-                    Xamarin.Essentials.Clipboard.SetText(result.Text);
+                    Xamarin.Essentials.Clipboard.SetText(result.Text); 
 
-                    msg += "\r\n扫描内容已复制到粘贴板";
+                    msg += "\r\n扫描内容已复制到粘贴板"; 
                 }
                 catch (Exception ex)
                 {
+                    // 已查明 复制内容到剪贴板报错是由于 android 6.0 以后的动态权限导致的
+                    // 改用 targetSdkVersion 为 21, 避开 android 6.0 动态权限后, 原本报错的设备正常运行
+
                     string msg2 = "{0}".FormatWith(ex.GetFullInfo());
                     System.Diagnostics.Debug.WriteLine(msg2);
 

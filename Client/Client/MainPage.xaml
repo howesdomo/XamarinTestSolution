@@ -48,7 +48,9 @@
             <Button x:Name="btnPageShuangSeQiu" Text="双色球" />
 
             <Button x:Name="btnAndroidPermission" Text="安卓权限" />
-            
+
+            <Button x:Name="btnDevExpress" Text="DevExpress.Mobile.Grid" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

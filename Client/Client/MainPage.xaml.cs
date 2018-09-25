@@ -44,6 +44,7 @@ namespace Client
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
             this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
             this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;
+            this.btnDevExpress.Clicked += BtnDevExpress_Clicked;
         }
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
@@ -205,6 +206,11 @@ namespace Client
         async void BtnPageShuangSeQiu_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.ShuangSeQiu.PageShuangSeQiu());
+        }
+
+        async void BtnDevExpress_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.DevExpressDemo.PageHelloDevExpress());
         }
     }
 

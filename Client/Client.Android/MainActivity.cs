@@ -134,6 +134,9 @@ namespace Client.Droid
             // 初始化动态权限
             MyPermission myPermission = new MyPermission();
             App.Permission = myPermission;
+
+            // 初始化 DevExpress.Mobile.Forms
+            DevExpress.Mobile.Forms.Init();
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- PageHelloDevExpress : 自动建立Column -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             x:Class="Client.View.DevExpressDemo.PageDevExpressV2"
+             Title="DevExpress.Moblie.Grid 自定义列 与 实时调试UI 测试"
+             >
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <dxg:GridControl x:Name="grid" ItemsSource="{Binding Orders}" >
+            <dxg:GridControl.Columns>
+                <!--
+                <dxg:ImageColumn FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False" />
+                <dxg:TemplateColumn Caption="ABC" Width="200">
+                    <dxg:TemplateColumn.DisplayTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </dxg:TemplateColumn.DisplayTemplate>
+                </dxg:TemplateColumn>
+                -->
+                <dxg:SwitchColumn Caption="选择" FieldName="IsSelected" IsReadOnly="False" />
+                <dxg:ImageColumn Caption="照片" FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False" />
+                <dxg:TextColumn Caption="订单号" FieldName="OrderNo" />
+                <dxg:DateColumn Caption="创建时间" FieldName="CreateTime" />
+                <dxg:NumberColumn Caption="总价格" FieldName="TotalPrice" />
+                <dxg:DateColumn Caption="发运时间" FieldName="DeliveryTime" />
+                <dxg:NumberColumn Caption="缺货金额" FieldName="LackPrice" />
+
+                <dxg:TemplateColumn Caption="明细" FieldName="Description" AllowSort="False"> <!-- TODO 解决TemplateColumn点解列排序报错的问题 -->
+                    <dxg:TemplateColumn.DisplayTemplate>
+                        <DataTemplate>
+                            <Grid BindingContext="{Binding Source}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="{Binding CreateTime}" BackgroundColor="Silver" />
+                                <Label Grid.Row="1" Text="{Binding Msg}" />
+                            </Grid>
+                        </DataTemplate>
+                    </dxg:TemplateColumn.DisplayTemplate>
+                </dxg:TemplateColumn>
+
+                
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </ContentPage.Content>
+</ContentPage>

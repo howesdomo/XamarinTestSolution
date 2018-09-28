@@ -38,11 +38,16 @@ namespace Client.View.DevExpressDemo
     {
         public PageHelloDevExpressViewModel()
         {
-            var toShow = new ObservableCollection<HelloDevExpressOrder>();
+            var toShow = new ObservableCollection<HelloDevExpressOrder>();   
 
-            toShow.Add(new HelloDevExpressOrder() { OrderNo = "A1", CreateTime = DateTime.Now, TotalPrice = 13.50m, DeliveryTime = DateTime.Now, LackPrice = 5m, Description = new Sub_HelloDevExpressOrder() { Msg = "12315", CreateTime = DateTime.Now } });
-            toShow.Add(new HelloDevExpressOrder() { OrderNo = "A3", CreateTime = DateTime.Now, TotalPrice = 89.32m, DeliveryTime = null, LackPrice = 1m, Description = new Sub_HelloDevExpressOrder() { Msg = "12315", CreateTime = DateTime.Now } });
-            toShow.Add(new HelloDevExpressOrder() { OrderNo = "A2", CreateTime = DateTime.Now, TotalPrice = 0m, DeliveryTime = null, LackPrice = 3m, Description = new Sub_HelloDevExpressOrder() { Msg = "12315", CreateTime = DateTime.Now } });
+            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("1.jpg"),
+            OrderNo = "A1", CreateTime = DateTime.Now, TotalPrice = 13.50m, DeliveryTime = DateTime.Now, LackPrice = 5m, Description = new Sub_HelloDevExpressOrder() { Msg = "123415", CreateTime = DateTime.Now } });
+
+            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("3.jpg"),
+                OrderNo = "A3", CreateTime = DateTime.Now.AddDays(2), TotalPrice = 89.32m, DeliveryTime = null, LackPrice = 1m, Description = new Sub_HelloDevExpressOrder() { Msg = "132315", CreateTime = DateTime.Now } });
+
+            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("2222.jpg"), // 测试没有此图片资源
+                OrderNo = "A2", CreateTime = DateTime.Now.AddDays(-1), TotalPrice = 0m, DeliveryTime = null, LackPrice = 3m, Description = new Sub_HelloDevExpressOrder() { Msg = "125315", CreateTime = DateTime.Now } });
 
             Orders = toShow;
         }
@@ -63,25 +68,5 @@ namespace Client.View.DevExpressDemo
         }
     }
 
-    public class HelloDevExpressOrder
-    {
-        public string OrderNo { get; set; }
-
-        public DateTime CreateTime { get; set; }
-
-        public decimal TotalPrice { get; set; }
-
-        public DateTime? DeliveryTime { get; set; }
-
-        public decimal? LackPrice { get; set; }
-
-        public Sub_HelloDevExpressOrder Description { get; set; }
-    }
-
-    public class Sub_HelloDevExpressOrder
-    {
-        public string Msg { get; set; }
-
-        public DateTime CreateTime { get; set; }
-    }
+    
 }

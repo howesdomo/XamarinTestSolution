@@ -5,6 +5,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\DevExpressDemo\1.jpg" />
+    <None Remove="Images\DevExpressDemo\2.jpg" />
+    <None Remove="Images\DevExpressDemo\3.jpg" />
+    <None Remove="Images\DevExpressDemo\4.jpg" />
+    <None Remove="Images\DevExpressDemo\5.jpg" />
+    <None Remove="Images\DevExpressDemo\6.jpg" />
+    <None Remove="Images\DevExpressDemo\7.jpg" />
+    <None Remove="Images\DevExpressDemo\8.jpg" />
+    <None Remove="Images\DevExpressDemo\9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\DevExpressDemo\1.jpg" />
+    <Content Include="Images\DevExpressDemo\2.jpg" />
+    <Content Include="Images\DevExpressDemo\3.jpg" />
+    <Content Include="Images\DevExpressDemo\4.jpg" />
+    <Content Include="Images\DevExpressDemo\5.jpg" />
+    <Content Include="Images\DevExpressDemo\6.jpg" />
+    <Content Include="Images\DevExpressDemo\7.jpg" />
+    <Content Include="Images\DevExpressDemo\8.jpg" />
+    <Content Include="Images\DevExpressDemo\9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DevExpress.Mobile.Grid" Version="18.1.4" />
     <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
@@ -37,6 +61,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\BaiduDemo\PageBaiduMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressV2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\DevExpressDemo\PageHelloDevExpress.xaml">

@@ -137,6 +137,10 @@ namespace Client.Droid
 
             // 初始化 DevExpress.Mobile.Forms
             DevExpress.Mobile.Forms.Init();
+            // 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
+            // 这里初始化主题颜色为 Theme.Light
+            DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
+            DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

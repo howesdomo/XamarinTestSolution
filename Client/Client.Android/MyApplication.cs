@@ -79,6 +79,7 @@ namespace Client.Droid
 
                 Android.Util.Log.Error("UnhandledEx", errorMsg);
 
+
                 new WebService().CollectUnhandleException
                 (
                     sb.ToString(),

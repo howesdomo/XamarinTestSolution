@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\BaseView\CheckBox\check.jpg" />
+    <None Remove="Images\BaseView\CheckBox\uncheck.jpg" />
     <None Remove="Images\DevExpressDemo\1.jpg" />
     <None Remove="Images\DevExpressDemo\2.jpg" />
     <None Remove="Images\DevExpressDemo\3.jpg" />
@@ -17,15 +19,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Images\DevExpressDemo\1.jpg" />
-    <Content Include="Images\DevExpressDemo\2.jpg" />
-    <Content Include="Images\DevExpressDemo\3.jpg" />
-    <Content Include="Images\DevExpressDemo\4.jpg" />
-    <Content Include="Images\DevExpressDemo\5.jpg" />
-    <Content Include="Images\DevExpressDemo\6.jpg" />
-    <Content Include="Images\DevExpressDemo\7.jpg" />
-    <Content Include="Images\DevExpressDemo\8.jpg" />
-    <Content Include="Images\DevExpressDemo\9.jpg" />
+    <EmbeddedResource Include="Images\BaseView\CheckBox\check.jpg" />
+    <EmbeddedResource Include="Images\BaseView\CheckBox\uncheck.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\1.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\2.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\3.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\4.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\5.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\6.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\7.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\8.jpg" />
+    <EmbeddedResource Include="Images\DevExpressDemo\9.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,6 +67,9 @@
     <EmbeddedResource Update="View\BaiduDemo\PageBaiduMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressDemoMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressV2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -73,6 +80,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Games\CRW\PageMain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Games\CRW\PageUserList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Games\CRW\UcCRWKeyboard.xaml">

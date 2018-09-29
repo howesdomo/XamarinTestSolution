@@ -7,7 +7,8 @@ namespace Client.View.DevExpressDemo
     public class HelloDevExpressOrder
     {
 
-        public bool? IsSelected { get; set; }
+        // public bool? IsSelected { get; set; } // 一直抛错
+        public bool IsSelected { get; set; }
 
         public Xamarin.Forms.ImageSource Photo { get; set; }
 

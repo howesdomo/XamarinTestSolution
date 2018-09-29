@@ -10,6 +10,8 @@
         <StackLayout>
             <Button x:Name="btnGames" Text="Games" />
 
+            <Button x:Name="btnDevExpress" Text="DevExpress.Mobile.Grid" />
+
             <Button x:Name="btnPageLifecycle" Text="Page 生命周期" />
             
             <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
@@ -49,7 +51,7 @@
 
             <Button x:Name="btnAndroidPermission" Text="安卓权限" />
 
-            <Button x:Name="btnDevExpress" Text="DevExpress.Mobile.Grid" />
+            
 
         </StackLayout>
     </ScrollView>

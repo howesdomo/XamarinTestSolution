@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- PageHelloDevExpress : 自动建立Column -->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:bv="clr-namespace:Client.BaseView"
              xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
-             x:Class="Client.View.DevExpressDemo.PageDevExpressV2"
-             Title="DevExpress.Moblie.Grid 自定义列 与 实时调试UI 测试"
+             
+             x:Class="Client.View.Games.CRW.PageUserList"
+             Title="查看-用户列表"
              >
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
@@ -24,32 +25,15 @@
                 </dxg:GridControl.RowHeight>
 
                 <dxg:GridControl.Columns>
-                    <!--<dxg:TextColumn Caption="选择" FieldName="IsSelected" DisplayFormat="{}{0}" Width="20" />--><!-- 采用自制的CheckBox控件 仍无法解决点击选取的问题 -->
-                    <dxg:TemplateColumn Caption="选择" Width="0">
-                        <dxg:TemplateColumn.DisplayTemplate>
-                            <DataTemplate>
-                                <!-- 由于Xamarin.Forms 没有Checkbox控件, 自制了一个CheckBox控件, 这里是绑定的实例 -->
-                                <Grid BindingContext="{Binding Source}">
-                                    <bv:Checkbox Checked="{Binding IsSelected}" />
-                                </Grid>
-                            </DataTemplate>
-                        </dxg:TemplateColumn.DisplayTemplate>
-                    </dxg:TemplateColumn>
-
-
-                    <dxg:ImageColumn Caption="照片" FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False">
+                    <dxg:TextColumn Caption="用户名" FieldName="OrderNo" />
+                    
+                    <dxg:ImageColumn Caption="头像" FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False">
                         <dxg:ImageColumn.Width>
                             <OnIdiom x:TypeArguments="sys:Double" Tablet="100" Phone="70" />
                         </dxg:ImageColumn.Width>
                     </dxg:ImageColumn>
-                    <dxg:TextColumn Caption="订单号" FieldName="OrderNo" SortOrder="Descending" />
-                    <dxg:DateColumn Caption="创建时间" FieldName="CreateTime" DisplayFormat="{}{0:yyyyMMdd}" SortOrder="Descending" Width="70" /> <!-- SortOrder 只会在最后一次设置时生效 -->
-                    <dxg:NumberColumn Caption="总价格" FieldName="TotalPrice" DisplayFormat="{}{0:C1}" /><!-- C 会出人民币符合, 1 会保留一位小数-->
-                    <!--<dxg:DateColumn Caption="发运时间" FieldName="DeliveryTime" />-->
-                    <!-- 编辑时这里为空貌似有问题 -->
-                    <dxg:NumberColumn Caption="缺货金额" FieldName="LackPrice" />
 
-                    <dxg:TemplateColumn Caption="明细" AllowSort="False">
+                    <dxg:TemplateColumn Caption="看题溯答" AllowSort="False">
                         <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
                         <dxg:TemplateColumn.DisplayTemplate>
                             <DataTemplate>
@@ -66,7 +50,25 @@
                             </DataTemplate>
                         </dxg:TemplateColumn.DisplayTemplate>
                     </dxg:TemplateColumn>
-                    
+
+                    <dxg:TemplateColumn Caption="听算溯答" AllowSort="False">
+                        <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
+                        <dxg:TemplateColumn.DisplayTemplate>
+                            <DataTemplate>
+                                <Grid BindingContext="{Binding Source}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="{Binding Description.CreateTime, StringFormat='{}{0:yyyy-MM-dd}'}" BackgroundColor="Silver" />
+                                    <Label Grid.Row="1" Text="{Binding Description.CreateTime, StringFormat='{}{0:HH:mm:ss}'}" BackgroundColor="SpringGreen" />
+                                    <Label Grid.Row="2" Text="{Binding Description.Msg}" />
+                                </Grid>
+                            </DataTemplate>
+                        </dxg:TemplateColumn.DisplayTemplate>
+                    </dxg:TemplateColumn>
+
                 </dxg:GridControl.Columns>
             </dxg:GridControl>
         </Grid>

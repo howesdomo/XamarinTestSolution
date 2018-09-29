@@ -38,16 +38,21 @@ namespace Client.View.DevExpressDemo
     {
         public PageHelloDevExpressViewModel()
         {
-            var toShow = new ObservableCollection<HelloDevExpressOrder>();   
+            DateTime now = new DateTime(2018, 9, 5);
 
-            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("1.jpg"),
-            OrderNo = "A1", CreateTime = DateTime.Now, TotalPrice = 13.50m, DeliveryTime = DateTime.Now, LackPrice = 5m, Description = new Sub_HelloDevExpressOrder() { Msg = "123415", CreateTime = DateTime.Now } });
+            ObservableCollection<HelloDevExpressOrder> toShow = new ObservableCollection<HelloDevExpressOrder>();
+            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("Client.Images.DevExpressDemo.1.jpg"), IsSelected = true,
+                OrderNo = "A1", CreateTime = now, TotalPrice = 13.50m, DeliveryTime = now, LackPrice = 5.72m,
+                Description = new Sub_HelloDevExpressOrder() { Msg = "A1-415", CreateTime = DateTime.Now } });
 
-            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("3.jpg"),
-                OrderNo = "A3", CreateTime = DateTime.Now.AddDays(2), TotalPrice = 89.32m, DeliveryTime = null, LackPrice = 1m, Description = new Sub_HelloDevExpressOrder() { Msg = "132315", CreateTime = DateTime.Now } });
+            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("Client.Images.DevExpressDemo.3.jpg"),
+                OrderNo = "A3", CreateTime = now.AddDays(2), TotalPrice = 89.32m, DeliveryTime = null, LackPrice = 1.142m,
+                Description = new Sub_HelloDevExpressOrder() { Msg = "A3-215", CreateTime = DateTime.Now } });
 
-            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("2222.jpg"), // 测试没有此图片资源
-                OrderNo = "A2", CreateTime = DateTime.Now.AddDays(-1), TotalPrice = 0m, DeliveryTime = null, LackPrice = 3m, Description = new Sub_HelloDevExpressOrder() { Msg = "125315", CreateTime = DateTime.Now } });
+            // 测试过若没有图片资源不会报错
+            toShow.Add(new HelloDevExpressOrder() { Photo = ImageSource.FromResource("Client.Images.DevExpressDemo.2.jpg"), 
+                OrderNo = "A2", CreateTime = now.AddDays(-1), TotalPrice = 0m, DeliveryTime = null, LackPrice = 3.88m,
+                Description = new Sub_HelloDevExpressOrder() { Msg = "A2-531", CreateTime = DateTime.Now } });
 
             Orders = toShow;
         }

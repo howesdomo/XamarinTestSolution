@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:bv="clr-namespace:Client.BaseView"
+             x:Class="Client.View.DevExpressDemo.PageDevExpressDemoMenu">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnPageHelloDevExpress" Text="PageHelloDevExpress" />
+            <Button x:Name="btnDevExpressV2" Text="PageDevExpressV2" />
+
+            <Label Text="------------ 测试读取内嵌图片 ------------" />
+            <Image x:Name="imgTest" />
+            <Editor x:Name="txtImgTest" Text="Client.Images.DevExpressDemo.1.jpg" /><!--测试成功-->
+            <Button x:Name="btnImgTest" Text="测试" />
+
+            <Label Text="------------ 测试使用自制Checkbo ------------" />
+            <bv:Checkbox Text="测试自制CheckBox" Checked="True" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

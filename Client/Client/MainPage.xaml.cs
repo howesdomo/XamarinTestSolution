@@ -210,8 +210,7 @@ namespace Client
 
         async void BtnDevExpress_Clicked(object sender, EventArgs e)
         {
-            // await Navigation.PushAsync(new View.DevExpressDemo.PageHelloDevExpress());
-            await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressV2());
+            await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressDemoMenu());
         }
     }
 

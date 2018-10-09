@@ -55,6 +55,8 @@ namespace Client.View.Games
             this.btnCRW.Clicked += BtnCRW_Clicked;
             this.btnCRW_Type2.Clicked += BtnCRW_Type2_Clicked;
 
+            this.btnUserList.Clicked += BtnUserList_Clicked;
+
             this.btnScreenStayOn.Clicked += BtnScreenStayOn_Clicked;
             this.btnScreenCanTurnOff.Clicked += BtnScreenCanTurnOff_Clicked;
 
@@ -140,6 +142,11 @@ namespace Client.View.Games
                 int rCRWTypeID = (int)e.Result;
                 openGamePage_CRW(rCRWTypeID);
             }
+        }
+
+        async void BtnUserList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Client.View.Games.CRW.PageUserList());
         }
 
         /// <summary>

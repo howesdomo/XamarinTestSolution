@@ -18,21 +18,23 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label Text="共 {0} 条, 选中 {1} 条" />
-            <dxg:GridControl x:Name="grid" Grid.Row="1" ItemsSource="{Binding Orders}" >
+            <Label Text="{Binding ListInfo}" />
+            <dxg:GridControl x:Name="grid" Grid.Row="1" ItemsSource="{Binding Users}" AllowEditRows="False">
+                <!-- SelectedDataObject="{Binding SelectedUser}" 失效 -->
                 <dxg:GridControl.RowHeight>
                     <OnIdiom x:TypeArguments="sys:Double" Tablet="70" Phone="70" />
                 </dxg:GridControl.RowHeight>
 
                 <dxg:GridControl.Columns>
-                    <dxg:TextColumn Caption="用户名" FieldName="OrderNo" />
-                    
-                    <dxg:ImageColumn Caption="头像" FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False">
+
+                    <dxg:ImageColumn Caption="" FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False">
                         <dxg:ImageColumn.Width>
                             <OnIdiom x:TypeArguments="sys:Double" Tablet="100" Phone="70" />
                         </dxg:ImageColumn.Width>
                     </dxg:ImageColumn>
-
+                    
+                    <dxg:TextColumn Caption="用户名" FieldName="User.Account" />
+                    
                     <dxg:TemplateColumn Caption="看题溯答" AllowSort="False">
                         <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
                         <dxg:TemplateColumn.DisplayTemplate>
@@ -41,11 +43,9 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
-                                        <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Text="{Binding Description.CreateTime, StringFormat='{}{0:yyyy-MM-dd}'}" BackgroundColor="Silver" />
-                                    <Label Grid.Row="1" Text="{Binding Description.CreateTime, StringFormat='{}{0:HH:mm:ss}'}" BackgroundColor="SpringGreen" />
-                                    <Label Grid.Row="2" Text="{Binding Description.Msg}" />
+                                    <Label Grid.Row="0" Text="{Binding Type1_CRW_LevelLog.DateDisplay}" />
+                                    <Label Grid.Row="1" Text="{Binding Type1_CRW_Level.LevelName}" />
                                 </Grid>
                             </DataTemplate>
                         </dxg:TemplateColumn.DisplayTemplate>
@@ -59,15 +59,28 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
-                                        <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Text="{Binding Description.CreateTime, StringFormat='{}{0:yyyy-MM-dd}'}" BackgroundColor="Silver" />
-                                    <Label Grid.Row="1" Text="{Binding Description.CreateTime, StringFormat='{}{0:HH:mm:ss}'}" BackgroundColor="SpringGreen" />
-                                    <Label Grid.Row="2" Text="{Binding Description.Msg}" />
+                                    <Label Grid.Row="0" Text="{Binding Type2_CRW_LevelLog.DateDisplay}" />
+                                    <Label Grid.Row="1" Text="{Binding Type2_CRW_Level.LevelName}" />
                                 </Grid>
                             </DataTemplate>
                         </dxg:TemplateColumn.DisplayTemplate>
                     </dxg:TemplateColumn>
+
+                    <dxg:TemplateColumn FieldName="rowItemBtn" Caption="进入" AllowSort="False">
+                        <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
+                        <dxg:TemplateColumn.DisplayTemplate>
+                            <DataTemplate>
+                                <Grid BindingContext="{Binding Source}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button Text="查看详情" />
+                                </Grid>
+                            </DataTemplate>
+                        </dxg:TemplateColumn.DisplayTemplate>
+                    </dxg:TemplateColumn>
+
 
                 </dxg:GridControl.Columns>
             </dxg:GridControl>

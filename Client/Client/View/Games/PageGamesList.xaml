@@ -11,6 +11,7 @@
             <Label Text="游戏列表" />
             <Button x:Name="btnCRW" Text="看题溯答" />
             <Button x:Name="btnCRW_Type2" Text="听算溯答" />
+            <Button x:Name="btnUserList" Text="用户列表" />
 
             <Label Text="Test" />
             <Button x:Name="btnScreenStayOn" Text="测试屏幕常亮" />

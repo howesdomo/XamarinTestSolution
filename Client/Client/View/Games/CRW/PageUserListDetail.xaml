@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Client.View.Games.CRW"
+             x:Class="Client.View.Games.CRW.PageUserListDetail">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="用户 : " />
+                <Label Text="{Binding User.Account}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="1" BackgroundColor="Gray">
+                <Button x:Name="btnCRW_Type1" Text="看题溯答" />
+                <Button x:Name="btnCRW_Type2" Text="听力溯答" />
+            </StackLayout>
+            <Grid x:Name="gTabbed" Grid.Row="2">
+                <local:UcUserListDetail_CRWType1 x:Name="uc1" />
+                <local:UcUserListDetail_CRWType2 x:Name="uc2" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

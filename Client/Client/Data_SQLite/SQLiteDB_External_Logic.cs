@@ -140,5 +140,75 @@ namespace Client.Data
         }
 
         #endregion
+
+        #region Game - 玩家信息
+
+        public List<View.Games.CRW.ModelA> Game_rUserList()
+        {
+            List<View.Games.CRW.ModelA> r = new List<View.Games.CRW.ModelA>();
+
+            var taskResult = mDatabase.Table<View.Games.CRW.Game_User>().ToListAsync();
+
+            foreach (View.Games.CRW.Game_User user in taskResult.Result)
+            {
+                var lastCRWType1 = mDatabase.Table<View.Games.CRW.CRWLog>()
+                        .Where(i=>i.CRWTypeID == 1)
+                        .Where(i=>i.UserID == user.ID)
+                        .OrderByDescending(i=>i.DateValue)
+                        .FirstOrDefaultAsync();
+
+                var lastCRWType2 = mDatabase.Table<View.Games.CRW.CRWLog>()
+                        .Where(i => i.CRWTypeID == 2)
+                        .Where(i => i.UserID == user.ID)
+                        .OrderByDescending(i => i.DateValue)
+                        .FirstOrDefaultAsync();
+
+                var toAdd = new View.Games.CRW.ModelA()
+                {
+                    User = user,
+                    Type1_CRW_LevelLog = lastCRWType1.Result,
+                    Type2_CRW_LevelLog = lastCRWType2.Result
+                };
+
+                if (toAdd.Type1_CRW_LevelLog != null)
+                {
+                    var lastCRWType1_MaxLevel = mDatabase.Table<View.Games.CRW.CRWLog>()
+                                     .Where(i => i.CRWTypeID == 1)
+                                     .Where(i => i.UserID == user.ID)
+                                     .Where(i => i.DateValue == toAdd.Type1_CRW_LevelLog.DateValue)
+                                     .OrderByDescending(i => i.Level)
+                                     .FirstAsync();
+
+                    toAdd.Type1_CRW_Level = new View.Games.CRW.CRW_Level(lastCRWType1_MaxLevel.Result.Level, 1);
+                }
+
+                if (toAdd.Type2_CRW_LevelLog != null)
+                {
+                    var lastCRWType2_MaxLevel = mDatabase.Table<View.Games.CRW.CRWLog>()
+                                     .Where(i => i.CRWTypeID == 2)
+                                     .Where(i => i.UserID == user.ID)
+                                     .Where(i => i.DateValue == toAdd.Type2_CRW_LevelLog.DateValue)
+                                     .OrderByDescending(i => i.Level)
+                                     .FirstAsync();
+
+                    toAdd.Type2_CRW_Level = new View.Games.CRW.CRW_Level(lastCRWType2_MaxLevel.Result.Level, 2);
+                }
+
+                r.Add(toAdd);
+            }
+
+            return r;
+        }
+
+        public void Game_rUserDetail(View.Games.CRW.Game_User user)
+        {
+            var taskResult = mDatabase.Table<View.Games.CRW.CRWLog>()
+                .Where(i => i.UserID == user.ID)
+                .Where(i => i.CRWTypeID == 1);
+                // .GroupBy
+
+        }
+
+        #endregion
     }
 }

@@ -55,56 +55,10 @@ namespace Client.View.Games.CRW
             #region init Data
 
             var users = new ObservableCollection<ModelA>();
-            users.Add(new ModelA()
+            foreach (ModelA toAdd in Common.StaticInfo.ExternalSQLiteDB.Game_rUserList())
             {
-                User = new Game_User()
-                {
-                    ID = Guid.NewGuid().ToString(),
-                    Account = "Howe"
-                },
-                Type1_CRW_LevelLog = new CRWLog()
-                {
-                    DateDisplay = "2018-10-01",
-                    Level = 4,
-                },
-                Type1_CRW_Level = new CRW_Level(4, 1),
-                Type2_CRW_LevelLog = new CRWLog()
-                {
-                    DateDisplay = "2018-10-08",
-                    Level = 2
-                },
-                Type2_CRW_Level = new CRW_Level(2, 2),
-            });
-
-            users.Add(new ModelA()
-            {
-                User = new Game_User()
-                {
-                    ID = Guid.NewGuid().ToString(),
-                    Account = "DOMO"
-                },
-                Type2_CRW_LevelLog = new CRWLog()
-                {
-                    DateDisplay = "2018-10-08",
-                    Level = 2
-                },
-                Type2_CRW_Level = new CRW_Level(2, 2),
-            });
-
-            users.Add(new ModelA()
-            {
-                User = new Game_User()
-                {
-                    ID = Guid.NewGuid().ToString(),
-                    Account = "DXH"
-                },
-                Type1_CRW_LevelLog = new CRWLog()
-                {
-                    DateDisplay = "2018-10-08",
-                    Level = 4
-                },
-                Type1_CRW_Level = new CRW_Level(4, 1),
-            });
+                users.Add(toAdd);
+            }
 
             this.ViewModel.Users = users;
 
@@ -116,7 +70,7 @@ namespace Client.View.Games.CRW
             this.grid.RowTap += Grid_RowTap;
         }
 
-        private void Grid_RowTap(object sender, DevExpress.Mobile.DataGrid.RowTapEventArgs e)
+        async void Grid_RowTap(object sender, DevExpress.Mobile.DataGrid.RowTapEventArgs e)
         {
             if (this.grid.SelectedDataObject != null && this.grid.SelectedDataObject is ModelA)
             {
@@ -127,7 +81,8 @@ namespace Client.View.Games.CRW
             {
                 string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedUser));
                 System.Diagnostics.Debug.WriteLine(msg);
-                // TODO 进入用户详细成绩画面
+
+                await Navigation.PushAsync(new Client.View.Games.CRW.PageUserListDetail(this.ViewModel.SelectedUser.User));
             }
         }
 

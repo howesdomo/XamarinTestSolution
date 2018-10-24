@@ -202,11 +202,17 @@ namespace Client.Data
 
         public void Game_rUserDetail(View.Games.CRW.Game_User user)
         {
-            var taskResult = mDatabase.Table<View.Games.CRW.CRWLog>()
-                .Where(i => i.UserID == user.ID)
-                .Where(i => i.CRWTypeID == 1);
-                // .GroupBy
+            string sql = "select UserID, CRWTypeID, Level, DateValue, DateDisplay, Max(UseTime) as UseTime" +
+                         "from CRWLog " +
+                         "where UserID = ?" +
+                         "group by UserID, CRWTypeID, Level, DateValue, DateDisplay";
 
+            var taskResult = mDatabase.QueryAsync<View.Games.CRW.CRWLog>(sql, user.ID);
+            foreach (var item in taskResult.Result)
+            {
+                string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(item));
+                System.Diagnostics.Debug.WriteLine(msg); 
+            }
         }
 
         #endregion

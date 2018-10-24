@@ -67,6 +67,8 @@ namespace Client.View.Games.CRW
                 case 1: uc1.IsVisible = true; break;
                 case 2: uc2.IsVisible = true; break;
             }
+
+            Common.StaticInfo.ExternalSQLiteDB.Game_rUserDetail(this.ViewModel.User);
         }
 
     }

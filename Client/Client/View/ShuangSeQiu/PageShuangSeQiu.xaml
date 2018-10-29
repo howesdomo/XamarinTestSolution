@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.ShuangSeQiu.PageShuangSeQiu">
+             x:Class="Client.View.ShuangSeQiu.PageShuangSeQiu"
+             Title="双色球"
+             >
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -42,8 +44,9 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                 </Grid>
-
-                <Button x:Name="btnCalc" Text="输出" />
+                
+                <Button x:Name="btnExport" Text="输出" />
+                <Button x:Name="btnClear" Text="清空" />
             </StackLayout>            
         </ScrollView>
     </ContentPage.Content>

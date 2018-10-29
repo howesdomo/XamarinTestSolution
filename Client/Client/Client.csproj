@@ -16,6 +16,7 @@
     <None Remove="Images\DevExpressDemo\7.jpg" />
     <None Remove="Images\DevExpressDemo\8.jpg" />
     <None Remove="Images\DevExpressDemo\9.jpg" />
+    <None Remove="Images\ShuangSeQiu\TheGodofFortune.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,7 @@
     <EmbeddedResource Include="Images\DevExpressDemo\7.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\8.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\9.jpg" />
+    <EmbeddedResource Include="Images\ShuangSeQiu\TheGodofFortune.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -137,6 +139,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ShuangSeQiu\PageShuangSeQiu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\ShuangSeQiu\PageShuangSeQiuExport.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ShuangSeQiu\UcShuangSeQiu.xaml">

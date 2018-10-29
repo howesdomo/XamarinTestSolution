@@ -27,6 +27,8 @@ namespace Client.View.ShuangSeQiu
 
         public void SetIsSelected(bool arg, bool isRedBall = true)
         {
+            IsSelected = arg;
+
             if (arg == true)
             {
                 if (isRedBall)

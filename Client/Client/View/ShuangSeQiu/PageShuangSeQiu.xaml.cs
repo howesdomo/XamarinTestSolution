@@ -32,8 +32,6 @@ namespace Client.View.ShuangSeQiu
             initEvent();
         }
 
-
-
         private void initUI()
         {
             this.RedArray = new UcShuangSeQiu[33];
@@ -99,6 +97,9 @@ namespace Client.View.ShuangSeQiu
         {
             this.btnRandomRed6.Clicked += BtnRandomRed6_Clicked;
             this.btnRandomBlue1.Clicked += BtnRandomBlue1_Clicked;
+
+            this.btnExport.Clicked += BtnExport_Clicked;
+            this.btnClear.Clicked += BtnClear_Clicked;
         }
 
         private void BtnRandomRed6_Clicked(object sender, EventArgs e)
@@ -197,6 +198,37 @@ namespace Client.View.ShuangSeQiu
             }
         }
 
+        async void BtnExport_Clicked(object sender, EventArgs e)
+        {
+            var page = new View.ShuangSeQiu.PageShuangSeQiuExport();
+            var viewModel = new View.ShuangSeQiu.PageShuangSeQiuExport_ViewModel();
+
+            viewModel.RedInfo = this.RedArray
+                .Where(i => i.IsSelected == true)
+                .Select(i => i.Btn.Text)
+                .CombineString<string>(symbol: ",");
+
+            viewModel.BlueInfo = this.BlueArray
+                .Where(i => i.IsSelected == true)
+                .Select(i => i.Btn.Text)
+                .CombineString<string>(symbol: ",");
+
+            page.BindingContext = viewModel;
+            await Navigation.PushAsync(page);
+        }
+
+        private void BtnClear_Clicked(object sender, EventArgs e)
+        {
+            for (int i = 0; i < this.RedMax; i++)
+            {
+                this.RedArray[i].SetIsSelected(false);
+            }
+
+            for (int i = 0; i < this.BlueMax; i++)
+            {
+                this.BlueArray[i].SetIsSelected(false, isRedBall: false);
+            }
+        }
     }
 
     public class PageShuangSeQiuViewModel : ViewModel.BaseViewModel

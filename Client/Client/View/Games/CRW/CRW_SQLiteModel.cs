@@ -50,4 +50,18 @@ namespace Client.View.Games.CRW
         public string UseTimeDisplay { get; set; }
 
     }
+
+    public class DailyUserRecord
+    {
+        public string DateDisplay { get; set; }
+
+        public int Level { get; set; }
+
+        public string MaxLevelName { get; set; }
+
+        public long MaxUseTime { get; set; }
+
+        public string MaxUseTimeDisplay { get; set; }
+
+    }
 }

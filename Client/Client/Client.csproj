@@ -52,6 +52,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\Games\CRW\UcUserListDetail.xaml.cs">
+      <DependentUpon>UcUserListDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\ScreenDirectionDemo\PageScreenDirection.xaml.cs">
       <DependentUpon>PageScreenDirection.xaml</DependentUpon>
     </Compile>
@@ -94,10 +97,7 @@
     <EmbeddedResource Update="View\Games\CRW\UcUserListDetailTabItem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Games\CRW\UcUserListDetail_CRWType1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Games\CRW\UcUserListDetail_CRWType2.xaml">
+    <EmbeddedResource Update="View\Games\CRW\UcUserListDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Games\PageGamesList.xaml">

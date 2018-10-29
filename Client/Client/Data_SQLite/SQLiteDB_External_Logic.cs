@@ -25,7 +25,7 @@ namespace Client.Data
                 initExternalDBStruct_v1(dbVersion);
             }
 
- 
+
         }
 
         private void initExternalDBStruct_v1(DBVersion dbVersion)
@@ -87,7 +87,7 @@ namespace Client.Data
                              .OrderByDescending(i => i.UpdateTimeValue)
                              .FirstOrDefaultAsync();
 
-            if (taskResult != null )
+            if (taskResult != null)
             {
                 if (taskResult.Result != null)
                 {
@@ -152,9 +152,9 @@ namespace Client.Data
             foreach (View.Games.CRW.Game_User user in taskResult.Result)
             {
                 var lastCRWType1 = mDatabase.Table<View.Games.CRW.CRWLog>()
-                        .Where(i=>i.CRWTypeID == 1)
-                        .Where(i=>i.UserID == user.ID)
-                        .OrderByDescending(i=>i.DateValue)
+                        .Where(i => i.CRWTypeID == 1)
+                        .Where(i => i.UserID == user.ID)
+                        .OrderByDescending(i => i.DateValue)
                         .FirstOrDefaultAsync();
 
                 var lastCRWType2 = mDatabase.Table<View.Games.CRW.CRWLog>()
@@ -200,19 +200,33 @@ namespace Client.Data
             return r;
         }
 
-        public void Game_rUserDetail(View.Games.CRW.Game_User user)
+        public List<View.Games.CRW.DailyUserRecord> Game_rUserDetail(View.Games.CRW.Game_User user, int _CRWTypeID)
         {
-            string sql = "select UserID, CRWTypeID, Level, DateValue, DateDisplay, Max(UseTime) as UseTime" +
-                         "from CRWLog " +
-                         "where UserID = ?" +
-                         "group by UserID, CRWTypeID, Level, DateValue, DateDisplay";
+            string sql = "select UserID, CRWTypeID, DateValue, DateDisplay, Max(Level) as Level, Max(UseTime) as UseTime " +
+                         " from CRWLog " +
+                         " where UserID = ? and " +
+                         " CRWTypeID = ? and " +
+                         " NextLevel is not null " +
+                         " group by UserID, CRWTypeID, DateValue, DateDisplay ";
 
-            var taskResult = mDatabase.QueryAsync<View.Games.CRW.CRWLog>(sql, user.ID);
-            foreach (var item in taskResult.Result)
+            var taskResult = mDatabase.QueryAsync<View.Games.CRW.CRWLog>(sql, new object[2] { user.ID, _CRWTypeID });
+
+            List<View.Games.CRW.DailyUserRecord> r = new List<View.Games.CRW.DailyUserRecord>();
+
+            foreach (View.Games.CRW.CRWLog item in taskResult.Result)
             {
-                string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(item));
-                System.Diagnostics.Debug.WriteLine(msg); 
+
+                r.Add(new View.Games.CRW.DailyUserRecord()
+                {
+                    DateDisplay = item.DateDisplay,
+                    Level = item.Level,
+                    MaxLevelName = new View.Games.CRW.CRW_Level(item.Level, _CRWTypeID).LevelName,
+                    MaxUseTime = item.UseTime.Value,
+                    MaxUseTimeDisplay = TimeSpan.FromTicks(item.UseTime.Value).ToStringAdv()
+                });
             }
+
+            return r;
         }
 
         #endregion

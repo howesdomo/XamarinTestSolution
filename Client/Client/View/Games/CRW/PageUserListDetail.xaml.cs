@@ -14,6 +14,34 @@ namespace Client.View.Games.CRW
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageUserListDetail : ContentPage
     {
+        public static string Tag
+        {
+            get
+            {
+                return "PageUserListDetail";
+            }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                App.ScreenDirection.ForceLandscape();
+            });
+        }
+
+        protected override void OnDisappearing()
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                App.ScreenDirection.Unspecified();
+            });
+
+            base.OnDisappearing();
+        }
+
         PageUserListDetailViewModel ViewModel { get; set; }
 
         public PageUserListDetail(Game_User user)
@@ -31,7 +59,26 @@ namespace Client.View.Games.CRW
 
         private void initData()
         {
-            
+            var a1 = new ObservableCollection<DailyUserRecord>();
+
+            foreach (var item in Common.StaticInfo.ExternalSQLiteDB.Game_rUserDetail(this.ViewModel.User, 1))
+            {
+                a1.Add(item);
+            }
+
+            this.ViewModel.CRWType1List = a1;
+            uc1.SetBindingContext(this.ViewModel.CRWType1List);
+
+
+            var a2 = new ObservableCollection<DailyUserRecord>();
+
+            foreach (var item in Common.StaticInfo.ExternalSQLiteDB.Game_rUserDetail(this.ViewModel.User, 2))
+            {
+                a2.Add(item);
+            }
+
+            this.ViewModel.CRWType2List = a2;
+            uc2.SetBindingContext(this.ViewModel.CRWType2List);
         }
 
         private void initUI()
@@ -39,7 +86,6 @@ namespace Client.View.Games.CRW
             uc1.IsVisible = true;
             uc2.IsVisible = false;
         }
-
 
         private void initEvent()
         {
@@ -49,15 +95,15 @@ namespace Client.View.Games.CRW
 
         private void BtnCRW_Type1_Clicked(object sender, EventArgs e)
         {
-            A(1);
+            btnClick(1);
         }
 
         private void BtnCRW_Type2_Clicked(object sender, EventArgs e)
         {
-            A(2);
+            btnClick(2);
         }
 
-        private void A(int i)
+        private void btnClick(int i)
         {
             uc1.IsVisible = false;
             uc2.IsVisible = false;
@@ -67,8 +113,6 @@ namespace Client.View.Games.CRW
                 case 1: uc1.IsVisible = true; break;
                 case 2: uc2.IsVisible = true; break;
             }
-
-            Common.StaticInfo.ExternalSQLiteDB.Game_rUserDetail(this.ViewModel.User);
         }
 
     }
@@ -90,8 +134,8 @@ namespace Client.View.Games.CRW
         }
 
 
-        private ObservableCollection<AAA> _CRWType1List;
-        public ObservableCollection<AAA> CRWType1List
+        private ObservableCollection<DailyUserRecord> _CRWType1List;
+        public ObservableCollection<DailyUserRecord> CRWType1List
         {
             get
             {
@@ -104,8 +148,9 @@ namespace Client.View.Games.CRW
             }
         }
 
-        private ObservableCollection<AAA> _CRWType2List;
-        public ObservableCollection<AAA> CRWType2List
+
+        private ObservableCollection<DailyUserRecord> _CRWType2List;
+        public ObservableCollection<DailyUserRecord> CRWType2List
         {
             get
             {
@@ -118,14 +163,5 @@ namespace Client.View.Games.CRW
             }
         }
 
-    }
-
-    public class AAA
-    {
-        public string Date { get; set; }
-
-        public string LevelName { get; set; }
-
-        public string Time { get; set; }
     }
 }

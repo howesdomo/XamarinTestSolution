@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.View.ShuangSeQiu.UcShuangSeQiu">
     <ContentView.Content>
-        <Button />
+        <Grid x:Name="gMain" />
     </ContentView.Content>
 </ContentView>

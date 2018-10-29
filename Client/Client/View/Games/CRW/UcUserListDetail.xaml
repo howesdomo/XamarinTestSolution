@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             x:Class="Client.View.Games.CRW.UcUserListDetail">
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <dxg:GridControl x:Name="grid" Grid.Row="1" AllowEditRows="False">
+                <dxg:GridControl.FormatConditions>
+                    <!--<dxg:FormatCondition FieldName="MaxUseTime" Expression="[MaxUseTime]&lt;0" PredefinedFormatName="RedText"/> &lt; html转意 小于或 -->
+                    <dxg:FormatCondition FieldName="MaxUseTime" Expression="[MaxUseTime]&lt;3000000000" PredefinedFormatName="RedText"/>
+                    <dxg:FormatCondition FieldName="MaxUseTime" Expression="[MaxUseTime]>=3000000000" PredefinedFormatName="GreenText"/>
+                </dxg:GridControl.FormatConditions>
+                <dxg:GridControl.Columns>
+                    <dxg:TextColumn Caption="日期" FieldName="DateDisplay" />
+                    <dxg:TextColumn Caption="最高锻炼等级" FieldName="MaxLevelName" />
+                    <dxg:TextColumn Caption="锻炼时间" FieldName="MaxUseTimeDisplay" />
+
+                    <dxg:TextColumn Caption="MaxLevel(测试图表)" FieldName="Level" />
+                    <dxg:TextColumn Caption="锻炼时间(测试图表)" FieldName="MaxUseTime" />
+                </dxg:GridControl.Columns>
+            </dxg:GridControl>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

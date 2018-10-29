@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Client.View.Games.CRW"
-             x:Class="Client.View.Games.CRW.PageUserListDetail">
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             x:Class="Client.View.Games.CRW.PageUserListDetail"
+             Title="用户详细列表"
+             >
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -20,8 +23,16 @@
                 <Button x:Name="btnCRW_Type2" Text="听力溯答" />
             </StackLayout>
             <Grid x:Name="gTabbed" Grid.Row="2">
-                <local:UcUserListDetail_CRWType1 x:Name="uc1" />
-                <local:UcUserListDetail_CRWType2 x:Name="uc2" />
+                <!--<dxg:GridControl x:Name="uc1" ItemsSource="{Binding CRWType1List}" AllowEditRows="False">
+                    <dxg:GridControl.Columns>
+                        <dxg:TextColumn Caption="日期" FieldName="DateDisplay" />
+                        <dxg:TextColumn Caption="最高锻炼等级" FieldName="MaxLevelName" />
+                        <dxg:TextColumn Caption="锻炼时间" FieldName="MaxUseTimeDisplay" />
+                    </dxg:GridControl.Columns>
+                </dxg:GridControl>-->
+
+                <local:UcUserListDetail x:Name="uc1" />
+                <local:UcUserListDetail x:Name="uc2" />
             </Grid>
         </Grid>
     </ContentPage.Content>

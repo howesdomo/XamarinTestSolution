@@ -10,6 +10,10 @@
         <StackLayout>
             <Button x:Name="btnGames" Text="Games" />
 
+            <Button x:Name="btnTimer" Text="定时助手" />
+            
+            <Button x:Name="btnPageShuangSeQiu" Text="双色球" />
+
             <Button x:Name="btnDevExpress" Text="DevExpress.Mobile.Grid" />
 
             <Button x:Name="btnPageLifecycle" Text="Page 生命周期" />
@@ -46,8 +50,6 @@
             <Button x:Name="btnPageBaiduMenu" Text="百度" />
 
             <Button x:Name="btnPageIRDemo" Text="IR" />
-
-            <Button x:Name="btnPageShuangSeQiu" Text="双色球" />
 
             <Button x:Name="btnAndroidPermission" Text="安卓权限" />
 

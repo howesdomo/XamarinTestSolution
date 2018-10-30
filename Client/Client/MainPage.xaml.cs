@@ -26,6 +26,9 @@ namespace Client
         private void initEvent()
         {
             this.btnGames.Clicked += BtnGames_Clicked;
+            this.btnTimer.Clicked += BtnTimer_Clicked;
+            this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
+            this.btnDevExpress.Clicked += BtnDevExpress_Clicked;
             this.btnPageLifecycle.Clicked += BtnPageLifecycle_Clicked;
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
             this.btnPageOutputDemo.Clicked += BtnPageOutputDemo_Clicked;
@@ -41,10 +44,8 @@ namespace Client
             this.btnPingDemo.Clicked += BtnPingDemo_Clicked;
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
-            this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
-            this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
-            this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;
-            this.btnDevExpress.Clicked += BtnDevExpress_Clicked;
+            this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;            
+            this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;            
         }
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
@@ -106,6 +107,21 @@ namespace Client
         async void BtnGames_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.Games.PageGamesList());
+        }
+
+        async void BtnTimer_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.PageTimer());
+        }
+
+        async void BtnPageShuangSeQiu_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.ShuangSeQiu.PageShuangSeQiu());
+        }
+
+        async void BtnDevExpress_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressDemoMenu());
         }
 
         async void BtnPageLifecycle_Clicked(object sender, EventArgs e)
@@ -203,15 +219,7 @@ namespace Client
             await Navigation.PushAsync(new View.IRDemo.PageIRDemo());
         }
 
-        async void BtnPageShuangSeQiu_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.ShuangSeQiu.PageShuangSeQiu());
-        }
 
-        async void BtnDevExpress_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressDemoMenu());
-        }
     }
 
 

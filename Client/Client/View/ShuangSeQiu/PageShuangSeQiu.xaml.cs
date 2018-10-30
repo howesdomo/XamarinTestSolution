@@ -23,6 +23,7 @@ namespace Client.View.ShuangSeQiu
         }
 
         UcShuangSeQiu[] RedArray { get; set; }
+
         UcShuangSeQiu[] BlueArray { get; set; }
 
         public PageShuangSeQiu()
@@ -51,6 +52,9 @@ namespace Client.View.ShuangSeQiu
 
                     UcShuangSeQiu toAdd = new UcShuangSeQiu();
                     toAdd.Btn.Text = "{0}".FormatWith(count);
+
+                    toAdd.Btn.Clicked += redBallBtn_Clicked;
+
                     gRedBalls.Children.Add(toAdd);
                     this.RedArray[count - 1] = toAdd;
 
@@ -79,6 +83,9 @@ namespace Client.View.ShuangSeQiu
 
                     UcShuangSeQiu toAdd = new UcShuangSeQiu();
                     toAdd.Btn.Text = "{0}".FormatWith(count);
+
+                    toAdd.Btn.Clicked += blueBallBtn_Clicked;
+
                     gBlueBalls.Children.Add(toAdd);
                     this.BlueArray[count - 1] = toAdd;
 
@@ -91,6 +98,20 @@ namespace Client.View.ShuangSeQiu
                     break;
                 }
             }
+        }
+
+        private void redBallBtn_Clicked(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int index = Convert.ToInt32(btn.Text) - 1;
+            this.RedArray[index].SetIsSelected(!this.RedArray[index].IsSelected, isRedBall: true);
+        }
+
+        private void blueBallBtn_Clicked(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int index = Convert.ToInt32(btn.Text) - 1;
+            this.BlueArray[index].SetIsSelected(!this.BlueArray[index].IsSelected, isRedBall: false);
         }
 
         private void initEvent()
@@ -200,21 +221,58 @@ namespace Client.View.ShuangSeQiu
 
         async void BtnExport_Clicked(object sender, EventArgs e)
         {
+            if (exportValidate() == false)
+            {
+                await this.DisplayAlert
+                (
+                    title: "提示",
+                    message: "请选择6个红球, 1个蓝球",
+                    cancel: "确认"
+                );
+
+                return;
+            }
+
             var page = new View.ShuangSeQiu.PageShuangSeQiuExport();
             var viewModel = new View.ShuangSeQiu.PageShuangSeQiuExport_ViewModel();
 
             viewModel.RedInfo = this.RedArray
                 .Where(i => i.IsSelected == true)
                 .Select(i => i.Btn.Text)
-                .CombineString<string>(symbol: ",");
+                .CombineString<string>(symbol: ", ");
 
             viewModel.BlueInfo = this.BlueArray
                 .Where(i => i.IsSelected == true)
                 .Select(i => i.Btn.Text)
-                .CombineString<string>(symbol: ",");
+                .CombineString<string>(symbol: ", ");
 
             page.BindingContext = viewModel;
             await Navigation.PushAsync(page);
+        }
+
+        private bool exportValidate()
+        {
+            bool r = true;
+
+            int countRed = this.RedArray
+                            .Where(i => i.IsSelected == true)
+                            .Count();
+
+            if (countRed != 6)
+            {
+                r = r && false;
+            }
+
+            int countBlue = this.BlueArray
+                            .Where(i => i.IsSelected == true)
+                            .Count();
+
+            if (countBlue != 1)
+            {
+                r = r && false;
+            }
+
+            return r;
         }
 
         private void BtnClear_Clicked(object sender, EventArgs e)
@@ -230,13 +288,4 @@ namespace Client.View.ShuangSeQiu
             }
         }
     }
-
-    public class PageShuangSeQiuViewModel : ViewModel.BaseViewModel
-    {
-        //public UcShuangSeQiu[] SelectedRedArray = new UcShuangSeQiu[6];
-
-        //public UcShuangSeQiu[] SelectedBlueArray = new UcShuangSeQiu[1];
-
-    }
-
 }

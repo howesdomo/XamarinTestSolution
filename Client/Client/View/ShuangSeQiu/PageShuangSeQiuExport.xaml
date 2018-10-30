@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.ShuangSeQiu.PageShuangSeQiuExport">
+             x:Class="Client.View.ShuangSeQiu.PageShuangSeQiuExport"
+             Title="恭喜发财"
+             >
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image x:Name="img" />
-            <Label Grid.Row="1" TextColor="Red" FontSize="48" Text="{Binding RedInfo}" />
-            <Label Grid.Row="2" TextColor="SkyBlue" FontSize="48" Text="{Binding BlueInfo}" />
+            <Image x:Name="img" Grid.RowSpan="3" />
+            <Label x:Name="lblRedInfo" Grid.Row="0" TextColor="Red" FontSize="48" Text="{Binding RedInfo}" BackgroundColor="Gold" HorizontalTextAlignment="Center" />
+            <Label x:Name="lblBlueInfo" Grid.Row="1" TextColor="SkyBlue" FontSize="48" Text="{Binding BlueInfo}" BackgroundColor="Gold" HorizontalTextAlignment="Center" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -7,6 +7,7 @@
         <StackLayout>
             <Button x:Name="btnPageHelloDevExpress" Text="PageHelloDevExpress" />
             <Button x:Name="btnDevExpressV2" Text="PageDevExpressV2" />
+            <Button x:Name="btnDevExpressV3" Text="PageDevExpressV3" />
 
             <Label Text="------------ 测试读取内嵌图片 ------------" />
             <Image x:Name="imgTest" />

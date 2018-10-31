@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.DevExpressDemo.PageDevExpressV3"
+             
+             xmlns:bv="clr-namespace:Client.BaseView"
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             
+             Title="测试单击修改CheckBox的值">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="共 {0} 条, 选中 {1} 条" />
+            <dxg:GridControl x:Name="grid" Grid.Row="1"
+                             ItemsSource="{Binding Orders}"
+                             AllowEditRows="False" AllowDeleteRows="False" AllowGroup="False" AllowGroupCollapse="False"> 
+                <dxg:GridControl.Columns>
+                    <dxg:TemplateColumn FieldName="IsChecked" Caption="选择" Width="0">
+                        <dxg:TemplateColumn.DisplayTemplate>
+                            <DataTemplate>
+                                <!-- 由于Xamarin.Forms 没有Checkbox控件, 自制了一个CheckBox控件, 这里是绑定的实例 -->
+                                <Grid BindingContext="{Binding Source}">
+                                    <bv:Checkbox Checked="{Binding IsChecked}" />
+                                </Grid>
+                            </DataTemplate>
+                        </dxg:TemplateColumn.DisplayTemplate>
+                    </dxg:TemplateColumn>
+                    
+                    <dxg:TextColumn Caption="名称" FieldName="Name" SortOrder="Descending" />
+                    
+                </dxg:GridControl.Columns>
+            </dxg:GridControl>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

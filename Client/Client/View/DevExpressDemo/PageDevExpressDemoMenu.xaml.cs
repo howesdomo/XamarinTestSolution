@@ -32,6 +32,7 @@ namespace Client.View.DevExpressDemo
         {
             this.btnPageHelloDevExpress.Clicked += BtnPageHelloDevExpress_Clicked;
             this.btnDevExpressV2.Clicked += BtnDevExpressV2_Clicked;
+            this.btnDevExpressV3.Clicked += BtnDevExpressV3_Clicked;
 
             this.btnImgTest.Clicked += BtnImgTest_Clicked;
         }
@@ -45,6 +46,13 @@ namespace Client.View.DevExpressDemo
         {
             await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressV2());
         }
+
+
+        async void BtnDevExpressV3_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressV3());
+        }
+
 
         private void BtnImgTest_Clicked(object sender, EventArgs e)
         {

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.View.Games.CRW.UcQuestion">
     <ContentView.Content>
-        <Grid>
+        <Grid x:Name="gRoot">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80" />
                 <ColumnDefinition Width="0.7*" />
@@ -49,9 +49,9 @@
                 <Image Source="game_CRW_Correct.png" IsVisible="{Binding CorrectImageVisible}" />
                 -->
 
-                <Image Source="{Binding WrongImageSource}" IsVisible="{Binding WrongImageVisible}" />
-                <Image Source="{Binding CorrectImageSource}" IsVisible="{Binding CorrectImageVisible}" />
-                
+                <Image x:Name="imgWrong" Source="{Binding WrongImageSource}" IsVisible="{Binding WrongImageVisible}" />
+                <Image x:Name="imgCorrect" Source="{Binding CorrectImageSource}" IsVisible="{Binding CorrectImageVisible}" />
+
             </Grid>
         </Grid>
     </ContentView.Content>

@@ -37,9 +37,25 @@ namespace Client.View.Games.CRW
 
         public CRW_Question_Status Status { get; set; }
 
-        public string WrongImageSource { get; set; }
+        // private static Xamarin.Forms.ImageSource Wrong = Xamarin.Forms.ImageSource.FromResource("Client.Images.Game.CRW.game_CRW_Wrong.png");
+        public Xamarin.Forms.ImageSource WrongImageSource
+        {
+            get
+            {
+                // return CRW_Question.Wrong;
+                return Xamarin.Forms.ImageSource.FromResource("Client.Images.Game.CRW.game_CRW_Wrong.png");
+            }
+        }
 
-        public string CorrectImageSource { get; set; }
+        // private static Xamarin.Forms.ImageSource Correct = Xamarin.Forms.ImageSource.FromResource("Client.Images.Game.CRW.game_CRW_Correct.png");
+        public Xamarin.Forms.ImageSource CorrectImageSource
+        {
+            get
+            {
+                // return CRW_Question.Correct;
+                return Xamarin.Forms.ImageSource.FromResource("Client.Images.Game.CRW.game_CRW_Correct.png");
+            }
+        }
 
         public bool WrongImageVisible { get; set; }
 

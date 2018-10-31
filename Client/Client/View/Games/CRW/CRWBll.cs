@@ -26,8 +26,6 @@ namespace Client.View.Games.CRW
                 var randTiKu = list[randomIndex];
 
                 CRW_Question toAdd = new CRW_Question();
-                toAdd.CorrectImageSource = "game_CRW_Correct.png";
-                toAdd.WrongImageSource = "game_CRW_Wrong.png";
 
                 toAdd.CRWTypeID = level.CRWTypeID;
 

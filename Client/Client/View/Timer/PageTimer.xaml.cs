@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Client.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PageTimer : ContentPage
-	{
-		public PageTimer ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PageTimer : ContentPage
+    {
+        public PageTimer()
+        {
+            InitializeComponent();
+        }
+    }
 }

@@ -31,7 +31,7 @@ namespace Client.View.Games.CRW
 
             this.QuestionCount = 20 + this.SuDa * 2;
             // TODO 测试模式减少题目数量
-            // this.QuestionCount = 2 + this.SuSuan * 2;
+            this.QuestionCount = 2 + this.SuDa * 2;
 
             this.MaxIndex = this.QuestionCount + this.SuDa - 1;
 

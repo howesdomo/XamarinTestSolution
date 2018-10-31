@@ -207,7 +207,8 @@ namespace Client.Data
                          " where UserID = ? and " +
                          " CRWTypeID = ? and " +
                          " NextLevel is not null " +
-                         " group by UserID, CRWTypeID, DateValue, DateDisplay ";
+                         " group by UserID, CRWTypeID, DateValue, DateDisplay " +
+                         " order by DateValue desc ";
 
             var taskResult = mDatabase.QueryAsync<View.Games.CRW.CRWLog>(sql, new object[2] { user.ID, _CRWTypeID });
 

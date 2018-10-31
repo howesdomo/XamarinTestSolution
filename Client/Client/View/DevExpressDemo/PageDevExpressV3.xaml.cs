@@ -34,13 +34,14 @@ namespace Client.View.DevExpressDemo
                 {
                     int sourceRowIndex = grid.GetSourceRowIndex(e.RowHandle);
                     this.ViewModel.Orders[sourceRowIndex].IsChecked = !this.ViewModel.Orders[sourceRowIndex].IsChecked;
+                    this.ViewModel._Orders_CollectionChanged(null, null);
                 }
             };
         }
 
         private void initData()
         {
-            DevExpress.Mobile.Core.Containers.BindingList<DevExpressV3_DataModel> list = new DevExpress.Mobile.Core.Containers.BindingList<DevExpressV3_DataModel>();
+            System.Collections.ObjectModel.ObservableCollection<DevExpressV3_DataModel> list = new System.Collections.ObjectModel.ObservableCollection<DevExpressV3_DataModel>();
 
             for (int i = 0; i < 10; i++)
             {
@@ -57,9 +58,9 @@ namespace Client.View.DevExpressDemo
 
     public class DevExpressV3_ViewModel : ViewModel.BaseViewModel
     {
-        private DevExpress.Mobile.Core.Containers.BindingList<DevExpressV3_DataModel> _Orders;
+        private System.Collections.ObjectModel.ObservableCollection<DevExpressV3_DataModel> _Orders;
 
-        public DevExpress.Mobile.Core.Containers.BindingList<DevExpressV3_DataModel> Orders
+        public System.Collections.ObjectModel.ObservableCollection<DevExpressV3_DataModel> Orders
         {
             get
             {
@@ -68,7 +69,33 @@ namespace Client.View.DevExpressDemo
             set
             {
                 _Orders = value;
+
+                if (_Orders != null)
+                {
+                    _Orders.CollectionChanged += _Orders_CollectionChanged;
+                }
+
                 this.OnPropertyChanged("Orders");
+                this.OnPropertyChanged("OrdersInfo");
+            }
+        }
+
+        public void _Orders_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            // 只有在增加 删除 移位 才会触发
+            this.OnPropertyChanged("OrdersInfo");
+        }
+
+        public string OrdersInfo
+        {
+            get
+            {
+                string r = string.Empty;
+                if (this.Orders != null && this.Orders.Count > 0)
+                {
+                    r = "共 {0} 条, 选中 {1} 条".FormatWith(this.Orders.Count, this.Orders.Count(i => i.IsChecked == true));
+                }
+                return r;
             }
         }
     }

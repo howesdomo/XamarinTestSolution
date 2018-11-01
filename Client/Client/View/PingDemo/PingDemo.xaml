@@ -6,10 +6,10 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="IP" />
+            <Label Text="  请输入 IP 或 网址 (不带 http://)" />
             <Editor x:Name="txtIP" />
-            <Button x:Name="btnPingTest" Text="Ping Test" />
-            <Button x:Name="btnPingTestStop" Text="Stop" />
+            <Button x:Name="btnPingTest" Text="Ping" />
+            <Button x:Name="btnPingTestStop" Text="Stop" IsEnabled="False" />
             <ListView x:Name="lv" 
                       ItemsSource="{Binding Result, Mode=OneWay}">
                 <ListView.ItemTemplate>

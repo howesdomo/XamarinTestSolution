@@ -26,6 +26,7 @@ namespace Client.View
             //// Reset the 'resume' id, since we just want to re-start here
             //((App)App.Current).ResumeAtTodoId = -1;
             listView.ItemsSource = await StaticInfo.InnerSQLiteDB.GetItemsAsync();
+            
         }
 
         async void OnItemAdded(object sender, EventArgs e)

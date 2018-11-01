@@ -19,6 +19,8 @@
     <None Remove="Images\Game\CRW\game_CRW_Correct.png" />
     <None Remove="Images\Game\CRW\game_CRW_Wrong.png" />
     <None Remove="Images\ShuangSeQiu\TheGodofFortune.png" />
+    <None Remove="Images\SQLiteDemo\check.png" />
+    <None Remove="Images\SQLiteDemo\plus.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +38,8 @@
     <EmbeddedResource Include="Images\Game\CRW\game_CRW_Correct.png" />
     <EmbeddedResource Include="Images\Game\CRW\game_CRW_Wrong.png" />
     <EmbeddedResource Include="Images\ShuangSeQiu\TheGodofFortune.png" />
+    <EmbeddedResource Include="Images\SQLiteDemo\check.png" />
+    <EmbeddedResource Include="Images\SQLiteDemo\plus.png" />
   </ItemGroup>
 
   <ItemGroup>

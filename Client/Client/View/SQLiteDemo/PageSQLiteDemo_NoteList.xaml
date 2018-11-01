@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Client"
              x:Class="Client.View.PageSQLiteDemo_NoteList">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnItemAdded">
@@ -12,17 +13,24 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+
+
+        <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                             <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                            <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
+                            <Image Source="{local:EmbeddedResource Client.Images.SQLiteDemo.check.png}"
+                                   IsVisible="{Binding Done}"
+                                   WidthRequest="15" HeightRequest="15"
+                                   VerticalOptions="Center" HorizontalOptions="End"
+                                   Aspect="AspectFit" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
     </ContentPage.Content>
 </ContentPage>

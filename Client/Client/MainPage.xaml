@@ -53,7 +53,7 @@
 
             <Button x:Name="btnAndroidPermission" Text="安卓权限" />
 
-            
+            <Button x:Name="btnAudioPlayer" Text="播放音频" />
 
         </StackLayout>
     </ScrollView>

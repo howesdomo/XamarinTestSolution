@@ -45,7 +45,21 @@ namespace Client
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;            
-            this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;            
+            this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;
+            this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
+        }
+
+        private void BtnAudioPlayer_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.AudioPlayer.PlayAudioFile("error.wav");
+            }
+            catch (Exception ex)
+            {
+                string msg = "{0}".FormatWith(ex.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
         }
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)

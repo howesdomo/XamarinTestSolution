@@ -11,6 +11,8 @@ namespace Client
 
         public static Client.Common.ILBS LBS { get; set; }
 
+        public static Client.Common.IAudioPlayer AudioPlayer { get; set; }
+
         public static Client.Common.ITTS TTS { get; set; }
 
         public static Client.Common.I_IR IR { get; set; }

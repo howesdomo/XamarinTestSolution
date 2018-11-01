@@ -77,6 +77,7 @@
     <Compile Include="BaiduLBS.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyApplication.cs" />
+    <Compile Include="MyAudioPlayer.cs" />
     <Compile Include="MyIR.cs" />
     <Compile Include="MyOutput.cs" />
     <Compile Include="MyPermission.cs" />
@@ -151,9 +152,8 @@
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable\xaml.png" />
-    <AndroidResource Include="Resources\drawable\plus.png">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
+    <AndroidResource Include="Resources\raw\error.mp3" />
+    <AndroidResource Include="Resources\raw\beep.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

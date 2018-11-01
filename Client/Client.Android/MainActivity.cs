@@ -19,11 +19,11 @@ namespace Client.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(bundle);
-
+            base.OnCreate(bundle); // Android Resources 在 raw 中放入 音频资源后报错, 挪动到首位后没有报错.
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             // Add by Howe
@@ -122,6 +122,10 @@ namespace Client.Droid
             // 初始化百度定位
             BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
             App.LBS = baiduLBS;
+
+            // 初始化Audio
+            MyAudioPlayer audioPlayer = new MyAudioPlayer();
+            App.AudioPlayer = audioPlayer;
 
             // 初始化TTS
             MyTTS tts = MyTTS.GetInstance();

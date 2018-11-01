@@ -44,14 +44,15 @@ namespace Client.View
 
         private void initData()
         {
-            this.txtIP.Text = "http://app.enpot.com.cn";
-            this.txtIP.Text = "47.96.14.178";
+            this.txtIP.Text = "app.enpot.com.cn";
+            // this.txtIP.Text = "47.96.14.178";
         }
 
-        private void BtnPingTest_Clicked(object sender, EventArgs e)
+        async void BtnPingTest_Clicked(object sender, EventArgs e)
         {
             if (mBgWorker != null && mBgWorker.IsBusy == true)
             {
+                await DisplayAlert("警告", "mBgWorker.IsBusy == true", "确定");
                 return;
             }
 
@@ -65,6 +66,11 @@ namespace Client.View
             }
 
             mContinue = true;
+
+            this.ViewModel.Result.Clear();
+
+            this.btnPingTest.IsEnabled = false;
+            this.btnPingTestStop.IsEnabled = true;
             mBgWorker.RunWorkerAsync();
         }
 
@@ -93,8 +99,7 @@ namespace Client.View
                     if (mReply.Status == System.Net.NetworkInformation.IPStatus.Success)
                     {
                         toAdd.Foreground = "Transparent";
-                        // toAdd.Content = "来自 {0} 的回复: 字节={1} 时间={2}".FormatWith(mReply.Address, mReply.Buffer.Length, mReply.RoundtripTime);
-                        toAdd.Content = "来自 {0} 的回复: 字节={1} 时间={2}".FormatWith("", mReply.Buffer.Length, mReply.RoundtripTime);
+                        toAdd.Content = "来自 {0} 的回复: 字节={1} 时间={2}".FormatWith(mReply.Address.ToString(), mReply.Buffer.Length, mReply.RoundtripTime);
                     }
                     else
                     {
@@ -118,13 +123,13 @@ namespace Client.View
 
         private void Bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            this.btnPingTest.IsEnabled = true;
+            this.btnPingTestStop.IsEnabled = false;
+
             if (e.Error != null)
             {
-                // WPFMessageBox.MessageBox.ShowError(e.Error);
-            }
-            else
-            {
-
+                string msg = "{0}".FormatWith(e.Error.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
             }
         }
 
@@ -148,7 +153,10 @@ namespace Client.View
             set
             {
                 _Result = value;
-                _Result.CollectionChanged += _Result_CollectionChanged;
+                if (_Result != null)
+                {
+                    _Result.CollectionChanged += _Result_CollectionChanged;
+                }
                 this.OnPropertyChanged("Result");
             }
         }

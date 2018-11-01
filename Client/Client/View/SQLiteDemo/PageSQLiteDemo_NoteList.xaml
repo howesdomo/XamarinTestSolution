@@ -3,15 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Client"
              x:Class="Client.View.PageSQLiteDemo_NoteList">
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnItemAdded">
-            <ToolbarItem.Icon>
+            <ToolbarItem.Icon>-->
+                <!--资源在 Client.Android 调用方式
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="Android" Value="plus.png" />
+                </OnPlatform>-->
+
+                <!-- 资源嵌入到 Client 的写法无法实现, 无法将嵌入到 Client 的图片调用, 处理这个问题请全部使用 NavigationPage.TitleView --><!--
+                <OnPlatform x:TypeArguments="Image">
+                    <On Platform="Android" Value="Client.Images.SQLiteDemo.plus.png" />
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Label Text="SQLiteDemo" FontSize="16" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+            <Image x:Name="btnAdd"
+                   Source="{local:EmbeddedResource Client.Images.SQLiteDemo.plus.png}" 
+                   WidthRequest="20" HeightRequest="20" 
+                   HorizontalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnItemAdded" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label WidthRequest="10" />
+        </StackLayout>        
+    </NavigationPage.TitleView>
     <ContentPage.Content>
 
 

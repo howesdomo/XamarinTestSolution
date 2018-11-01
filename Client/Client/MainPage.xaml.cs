@@ -49,19 +49,6 @@ namespace Client
             this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
         }
 
-        private void BtnAudioPlayer_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                App.AudioPlayer.PlayAudioFile("error.wav");
-            }
-            catch (Exception ex)
-            {
-                string msg = "{0}".FormatWith(ex.GetFullInfo());
-                System.Diagnostics.Debug.WriteLine(msg);
-            }
-        }
-
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
         {
             // 通过校验
@@ -233,7 +220,10 @@ namespace Client
             await Navigation.PushAsync(new View.IRDemo.PageIRDemo());
         }
 
-
+        async void BtnAudioPlayer_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.PageAudioDemo());
+        }
     }
 
 

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.PageAudioDemo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="测试 - 播放 Resources/raw 中的音频文件" />
+            <Button x:Name="btn1" Text="播放Beep" />
+            <Button x:Name="btn2" Text="播放Error" />
+            <Label Text="测试 - 播放 Assets 中的音频文件" />
+            <Editor x:Name="txtAssetsFileName" Text="dingdong.wav" />
+            <Button x:Name="btn3" Text="根据文件名播放" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

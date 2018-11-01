@@ -148,6 +148,7 @@
     <None Include="Key\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\dingdong.wav" />
     <Content Include="DLL\BindingLibrary.BaiduLBS.dll" />
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\icon.png" />

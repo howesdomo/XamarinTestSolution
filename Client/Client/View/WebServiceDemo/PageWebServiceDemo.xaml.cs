@@ -34,6 +34,9 @@ namespace Client.View
             this.btnTest3.Clicked += BtnTest3_Clicked;
             this.btnWebServiceLastest.Clicked += BtnWebServiceLastest_Clicked;
 
+            this.btnTest5_1.Clicked += BtnTest5_1_Clicked;
+            this.btnTest5_2.Clicked += BtnTest5_2_Clicked;
+
         }
 
         private void BtnTestWebAPI_Clicked(object sender, EventArgs e)
@@ -156,5 +159,121 @@ namespace Client.View
 
         }
 
+
+        async void BtnTest5_1_Clicked(object sender, EventArgs e)
+        {
+            Random random = new Random();
+
+            DateTime now = DateTime.Now;
+            List<DL.Model.Order> orders = new List<DL.Model.Order>();
+            int orderCount = Convert.ToInt32(this.txtListCount.Text);
+
+            for (int i = 0; i < orderCount; i++)
+            {
+                DL.Model.Order toAdd = new DL.Model.Order();
+                orders.Add(toAdd);
+
+                toAdd.OrderNo = "Order{0}".FormatWith(i);
+                decimal tempDiffQty = i * random.Next(4) + i * random.Next(5);
+                toAdd.ScanQty = i * random.Next(6) + i * random.Next(7);
+                toAdd.PlanQty = toAdd.ScanQty.Value + tempDiffQty;
+                toAdd.CreateTime = now;
+                toAdd.EndTime = DateTime.Now;
+                toAdd.CartonList = new List<DL.Model.Carton>();
+                toAdd.CartonList.Add(new DL.Model.Carton() { CartonNo = "CartonNo{0}".FormatWith(i) });
+            }
+
+            new WebService().TestWebService_GetOrders_isCompress_False
+            (
+                orders: orders,
+                u: Common.StaticInfo.CurrentUser,
+                page: this,
+                handle: (soapResult) =>
+                {
+                    if (soapResult.IsComplete == false)
+                    {
+                        DisplayAlert("Error", soapResult.ExceptionInfo, "确定");
+                        return;
+                    }
+                    else if (soapResult.IsSuccess == false)
+                    {
+                        DisplayAlert("Error", soapResult.BusinessExceptionInfo, "确定");
+                        return;
+                    }
+                    else
+                    {
+                        int len = soapResult.ReturnObjectJson.Length;
+                        string msg = "接收信息长度 {0}".FormatWith(len);
+
+                        // 1 解密
+                        // 2 解压
+                        List<DL.Model.Order> fromWebService = Util.JsonUtils.DeserializeObject<List<DL.Model.Order>>(soapResult.ReturnObjectJson);
+                        msg += "\r\nList<DL.Model.Order> 的长度 {0}".FormatWith(fromWebService.Count);
+                        DisplayAlert("成功接收", msg, "确定");
+                        return;
+                    }
+                }
+            );
+        }
+
+
+        async void BtnTest5_2_Clicked(object sender, EventArgs e)
+        {
+
+            Random random = new Random();
+
+            DateTime now = DateTime.Now;
+            List<DL.Model.Order> orders = new List<DL.Model.Order>();
+
+            // 尝试过发送 1百万条压缩过的数据到服务器中, 服务器能成功接收到
+            // 记录到的 压缩信息文件大小为 28.2MB
+            // 但由于返回的数据未进行压缩, 暂时会由于内存溢出而崩掉
+
+            int orderCount = Convert.ToInt32(this.txtListCount.Text);
+            for (int i = 0; i < orderCount; i++)
+            {
+                DL.Model.Order toAdd = new DL.Model.Order();
+                orders.Add(toAdd);
+
+                toAdd.OrderNo = "Order{0}".FormatWith(i);
+                decimal tempDiffQty = i * random.Next(4) + i * random.Next(5);
+                toAdd.ScanQty = i * random.Next(6) + i * random.Next(7);
+                toAdd.PlanQty = toAdd.ScanQty.Value + tempDiffQty;
+                toAdd.CreateTime = now;
+                toAdd.EndTime = DateTime.Now;
+                toAdd.CartonList = new List<DL.Model.Carton>();
+                toAdd.CartonList.Add(new DL.Model.Carton() { CartonNo = "CartonNo{0}".FormatWith(i) });
+            }
+
+            new WebService().TestWebService_GetOrders_isCompress_True
+            (
+                orders: orders,
+                u: Common.StaticInfo.CurrentUser,
+                page: this,
+                handle: (soapResult) =>
+                {
+                    if (soapResult.IsComplete == false)
+                    {
+                        DisplayAlert("Error", soapResult.ExceptionInfo, "确定");
+                        return;
+                    }
+                    else if (soapResult.IsSuccess == false)
+                    {
+                        DisplayAlert("Error", soapResult.BusinessExceptionInfo, "确定");
+                        return;
+                    }
+                    else
+                    {
+                        int len = soapResult.ReturnObjectJson.Length;
+                        string msg = "接收信息长度 {0}".FormatWith(len);                        
+                        List<DL.Model.Order> fromWebService = Util.JsonUtils.DeserializeObject<List<DL.Model.Order>>(soapResult.ReturnObjectJson);
+                        msg += "\r\nList<DL.Model.Order> 的长度 {0}".FormatWith(fromWebService.Count);
+                        DisplayAlert("成功接收", msg, "确定");
+                        return;
+                    }
+                }
+            );
+
+        }
     }
 }

@@ -55,6 +55,7 @@
 
             <Button x:Name="btnAudioPlayer" Text="播放音频" />
 
+            <Button x:Name="btnExcelByAsposeCell" Text="Excel Aspose.Cell" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

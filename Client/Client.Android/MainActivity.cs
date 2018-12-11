@@ -105,6 +105,7 @@ namespace Client.Droid
                     AppName = "你好Xamarin",
                     AppWebSetting = appWebSetting,
                     WebAPISetting = webAPISetting,
+                    AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath,
                     InnerSQLiteConnStr = innerSQLiteConnStr,
                     ExternalSQLiteConnStr = externalSQLiteConnStr
                 }

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.PageExcel_Aspose">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnImportExcel" Text="加载Excel文件(无法再Xamarin中调用)" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -18,6 +18,11 @@ namespace Client.Common
                 _AppWebSetting = args.AppWebSetting;
             }
 
+            if (args.AndroidExternalPath.IsNullOrWhiteSpace() == false)
+            {
+                _AndroidExternalPath = args.AndroidExternalPath;
+            }
+
             #region InnerSQLite
             if (args.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
             {
@@ -137,7 +142,16 @@ namespace Client.Common
             set { _WebAPISetting = value; }
         }
 
-   
+
+        private static string _AndroidExternalPath;
+
+        /// <summary>
+        /// Android 外部存储器路径
+        /// </summary>
+        public static string AndroidExternalPath
+        {
+            get { return _AndroidExternalPath; }
+        }
 
         #region InnerSQLite
 
@@ -215,7 +229,12 @@ namespace Client.Common
         public WebSetting AppWebSetting { get; set; }
 
         public WebSetting WebAPISetting { get; set; }
-        
+
+        /// <summary>
+        /// Android 外部存储器路径
+        /// </summary>
+        public string AndroidExternalPath { get; set; }
+
         /// <summary>
         /// 程序内部SQLite数据库连接字符串
         /// </summary>
@@ -225,5 +244,7 @@ namespace Client.Common
         /// 外部存储器SQLite数据库连接字符串
         /// </summary>
         public string ExternalSQLiteConnStr { get; set; }
+
+
     }
 }

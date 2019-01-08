@@ -160,7 +160,7 @@ namespace Client.View
         }
 
 
-        async void BtnTest5_1_Clicked(object sender, EventArgs e)
+        void BtnTest5_1_Clicked(object sender, EventArgs e)
         {
             Random random = new Random();
 
@@ -217,7 +217,7 @@ namespace Client.View
         }
 
 
-        async void BtnTest5_2_Clicked(object sender, EventArgs e)
+        void BtnTest5_2_Clicked(object sender, EventArgs e)
         {
 
             Random random = new Random();

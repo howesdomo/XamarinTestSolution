@@ -25,6 +25,7 @@ namespace Client
 
         private void initEvent()
         {
+            this.btnBuBuGao.Clicked += BtnBuBuGao_Clicked;
             this.btnGames.Clicked += BtnGames_Clicked;
             this.btnTimer.Clicked += BtnTimer_Clicked;
             this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
@@ -230,6 +231,12 @@ namespace Client
         {
             await Navigation.PushAsync(new View.PageExcel_Aspose());
         }
+
+        async void BtnBuBuGao_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.BuBuGao.PageBuBuGao1());
+        }
+
     }
 
 

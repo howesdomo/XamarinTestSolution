@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.BuBuGao.PageBuBuGao1">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnStudy" Text="学习" />
+                <Button x:Name="btnPractice" Text="练习" />
+            </StackLayout>
+            
+            <ListView x:Name="lvAll" Grid.Row="1"
+                      ItemsSource="{Binding All}" SelectedItem="{Binding SelectedQuestion}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"  />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal">
+                <Editor x:Name="txtAddNew" WidthRequest="250" HorizontalOptions="StartAndExpand" />
+                <Button x:Name="btnAddNew" Text="新增" />
+            </StackLayout>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

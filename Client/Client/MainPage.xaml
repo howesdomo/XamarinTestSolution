@@ -8,6 +8,8 @@
 
     <ScrollView>
         <StackLayout>
+            <Button x:Name="btnBuBuGao" Text="补补高点读机" />
+            
             <Button x:Name="btnGames" Text="Games" />
 
             <Button x:Name="btnTimer" Text="定时助手" />

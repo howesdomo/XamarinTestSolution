@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\WebviewDemo\WebPage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Images\BaseView\CheckBox\check.jpg" />
     <None Remove="Images\BaseView\CheckBox\uncheck.jpg" />
     <None Remove="Images\DevExpressDemo\1.jpg" />
@@ -79,6 +83,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\BaiduDemo\PageBaiduMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\BuBuGao\PageBuBuGao1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\BuBuGao\PageBuBuGao2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressDemoMenu.xaml">
@@ -178,6 +188,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\WebviewDemo\PageWebviewMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\WebviewDemo\WebPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinEssentials\DeviceInfo\PageDeviceInfo.xaml">

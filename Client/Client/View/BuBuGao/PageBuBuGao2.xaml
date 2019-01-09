@@ -8,26 +8,27 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
 
             <StackLayout x:Name="gHead" Orientation="Horizontal">
-                <Button x:Name="btnLast" Text="last" />
-                <Editor x:Name="txtCurrentRowNumber" />
-                <Button x:Name="btnNext2" Text="next" />
+                <Button x:Name="btnLast" Text="&lt;" WidthRequest="40" HorizontalOptions="StartAndExpand" />
+                <Editor x:Name="txtCurrentRowNumber" Text="{Binding RowNumber}" HorizontalOptions="FillAndExpand" />
+                <Button x:Name="btnNext2" Text="&gt;" WidthRequest="40" HorizontalOptions="EndAndExpand" />
             </StackLayout>
+
+            <Button x:Name="btnNext" Text="{Binding Content}" Grid.Row="1" FontSize="100" />
             
-            <Button x:Name="btnNext" Text="{Binding Content}" Grid.Row="1" FontSize="100">
-
-            </Button>
-
-            <Button x:Name="btnPlaySound" Text="播放" BackgroundColor="Green" Grid.Row="1">
-
-            </Button>
-
-            <StackLayout x:Name="gBottom" Orientation="Horizontal">
-                <Button x:Name="btnPass" Text="正确" />
-                <Button x:Name="btnFail" Text="错误" />
-            </StackLayout>
+            <Button x:Name="btnPlaySound" Text="播放" BackgroundColor="#84d945" Grid.Row="2" />
+            
+            <Grid x:Name="gBottom" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnPass" Text="已熟练" BackgroundColor="{Binding btnPassBackgroundColor}" Grid.Column="0" />
+                <Button x:Name="btnFail" Text="未掌握" BackgroundColor="{Binding btnFailBackgroundColor}" Grid.Column="1" />
+            </Grid>
             
         </Grid>
         

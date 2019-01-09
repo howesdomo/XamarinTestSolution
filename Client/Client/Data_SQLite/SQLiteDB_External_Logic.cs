@@ -1,6 +1,7 @@
 ﻿using Client.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Client.Data
@@ -58,6 +59,8 @@ namespace Client.Data
             mDatabase.CreateTableAsync<View.BuBuGao.Question>().Wait();
 
             #region 基本数据
+            DateTime now = DateTime.Now;
+
             View.BuBuGao.Question a1 = new View.BuBuGao.Question();
             a1.Name = "天空";
             a1.Words = new List<View.BuBuGao.Word>();
@@ -73,6 +76,7 @@ namespace Client.Data
             a1.Words.Add(new View.BuBuGao.Word() { Content = "轻松" });
             a1.Words.Add(new View.BuBuGao.Word() { Content = "松树" });
             a1.Words.Add(new View.BuBuGao.Word() { Content = "树木" });
+            a1.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a2 = new View.BuBuGao.Question();
             a2.Name = "大人";
@@ -89,6 +93,7 @@ namespace Client.Data
             a2.Words.Add(new View.BuBuGao.Word() { Content = "试验" });
             a2.Words.Add(new View.BuBuGao.Word() { Content = "验证" });
             a2.Words.Add(new View.BuBuGao.Word() { Content = "证明" });
+            a2.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a3 = new View.BuBuGao.Question();
             a3.Name = "红豆";
@@ -105,6 +110,7 @@ namespace Client.Data
             a3.Words.Add(new View.BuBuGao.Word() { Content = "约见" });
             a3.Words.Add(new View.BuBuGao.Word() { Content = "见面" });
             a3.Words.Add(new View.BuBuGao.Word() { Content = "面粉" });
+            a3.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a4 = new View.BuBuGao.Question();
             a4.Name = "太黑";
@@ -121,6 +127,7 @@ namespace Client.Data
             a4.Words.Add(new View.BuBuGao.Word() { Content = "气球" });
             a4.Words.Add(new View.BuBuGao.Word() { Content = "球体" });
             a4.Words.Add(new View.BuBuGao.Word() { Content = "体检" });
+            a4.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a5 = new View.BuBuGao.Question();
             a5.Name = "上面";
@@ -138,6 +145,8 @@ namespace Client.Data
             a5.Words.Add(new View.BuBuGao.Word() { Content = "格子" });
             a5.Words.Add(new View.BuBuGao.Word() { Content = "子孙" });
             a5.Words.Add(new View.BuBuGao.Word() { Content = "孙悟空" });
+            a5.CreateDateTimeValue = now.Ticks;
+
 
             #endregion 基本数据
 
@@ -359,6 +368,11 @@ namespace Client.Data
                 foreach (var item in task.Result)
                 {
                     item.Words = mDatabase.Table<View.BuBuGao.Word>().Where(i => i.QuestionID == item.ID).ToListAsync().Result;
+                    item.CreateDateTime = new DateTime(item.CreateDateTimeValue);
+                    item.LastStudyDateTime = item.LastStudyDateTimeValue > 0 ? new DateTime(item.LastStudyDateTimeValue) : new Nullable<DateTime>();
+                    item.LastPracticeDateTime = item.LastPracticeDateTimeValue > 0 ? new DateTime(item.LastPracticeDateTimeValue) : new Nullable<DateTime>();
+                    item.IsPassWordsCount = item.Words.Count(i => i.IsPass == 1);
+                    item.IsNotPassWordsCount = item.Words.Count(i => i.IsPass == -1);
                 }
             }
 
@@ -378,6 +392,16 @@ namespace Client.Data
         public void BuBuGao_cQuestion(View.BuBuGao.Question question)
         {
             mDatabase.InsertAsync(question);
+        }
+
+        public void BuBuGao_uQuestion(View.BuBuGao.Question question)
+        {
+            mDatabase.UpdateAsync(question);
+        }
+
+        public void BuBuGao_uWord(View.BuBuGao.Word word)
+        {
+            mDatabase.UpdateAsync(word);
         }
 
         #endregion

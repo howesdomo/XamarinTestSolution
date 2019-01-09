@@ -124,11 +124,9 @@ namespace Client.View.BuBuGao
             touchItem(cloneArgs, false);
         }
 
-        async void touchItem(Question q, bool isSoundPlay)
+        async void touchItem(Question q, bool isAutoPlaySound)
         {
-            var page = new PageBuBuGao2();
-            page.ViewModel.Question = q;
-            page.ViewModel.IsSoundPlay = isSoundPlay;
+            var page = new PageBuBuGao2(q, isAutoPlaySound);
             await Navigation.PushAsync(page);
         }
 
@@ -213,6 +211,56 @@ namespace Client.View.BuBuGao
 
         [Ignore]
         public List<Word> Words { get; set; }
+
+        public int StudyTimes { get; set; }
+
+        public int PracticeTimes { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public long CreateDateTimeValue { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [Ignore]
+        public DateTime CreateDateTime { get; set; }
+
+        /// <summary>
+        /// 最后一次学习时间
+        /// </summary>
+        public long LastStudyDateTimeValue { get; set; }
+
+        /// <summary>
+        /// 最后一次学习时间
+        /// </summary>
+        [Ignore]
+        public DateTime? LastStudyDateTime { get; set; }
+
+        /// <summary>
+        /// 最后一次测试时间
+        /// </summary>
+        public long LastPracticeDateTimeValue { get; set; }
+
+        /// <summary>
+        /// 最后一次测试时间
+        /// </summary>
+        [Ignore]
+        public DateTime? LastPracticeDateTime { get; set; }
+
+        /// <summary>
+        /// 已熟练数量
+        /// </summary>
+        [Ignore]
+        public int IsPassWordsCount { get; set; }
+
+        /// <summary>
+        /// 未掌握数量
+        /// </summary>
+        [Ignore]
+        public int IsNotPassWordsCount { get; set; }
+
     }
 
     public class Word
@@ -224,5 +272,10 @@ namespace Client.View.BuBuGao
 
         [Indexed]
         public int QuestionID { get; set; }
+
+        // 1 通过
+        // 0 未标记
+        // -1 失败
+        public int IsPass { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.View.BuBuGao.PageBuBuGao1"
-             Title="补补高点读机 - V1.1"
+             Title="补补高点读机 - V1.2"
              >
     <ContentPage.Content>
         <Grid>
@@ -32,6 +32,14 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Name}"  />
+                                <Label Text="|学习次数:"  />
+                                <Label Text="{Binding StudyTimes}"  />
+                                <Label Text="|练习次数:"  />
+                                <Label Text="{Binding PracticeTimes}"  />
+                                <Label Text="|已熟是/否:"  />
+                                <Label Text="{Binding IsPassWordsCount}"  />
+                                <Label Text="/"  />
+                                <Label Text="{Binding IsNotPassWordsCount}"  />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

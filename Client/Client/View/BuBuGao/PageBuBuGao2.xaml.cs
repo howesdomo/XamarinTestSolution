@@ -17,9 +17,17 @@ namespace Client.View.BuBuGao
         public PageBuBuGao2()
         {
             InitializeComponent();
+            initUI();
+
             this.ViewModel = new PageBuBuGao2_ViewModel();
             this.BindingContext = this.ViewModel;
             initEvent();
+        }
+
+        private void initUI()
+        {
+            this.btnLast.Text = "<";
+            this.btnNext2.Text = ">";
         }
 
         private void initEvent()

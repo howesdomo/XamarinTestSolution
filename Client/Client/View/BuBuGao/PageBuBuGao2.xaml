@@ -5,18 +5,30 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
+
+            <StackLayout x:Name="gHead" Orientation="Horizontal">
+                <Button x:Name="btnLast" Text="last" />
+                <Editor x:Name="txtCurrentRowNumber" />
+                <Button x:Name="btnNext2" Text="next" />
+            </StackLayout>
             
-            <Button x:Name="btnNext" Text="{Binding Content}" FontSize="100">
+            <Button x:Name="btnNext" Text="{Binding Content}" Grid.Row="1" FontSize="100">
 
             </Button>
 
-            <Button x:Name="btnPlaySound" Text="再次播放" BackgroundColor="Green" Grid.Row="1">
+            <Button x:Name="btnPlaySound" Text="播放" BackgroundColor="Green" Grid.Row="1">
 
             </Button>
 
+            <StackLayout x:Name="gBottom" Orientation="Horizontal">
+                <Button x:Name="btnPass" Text="正确" />
+                <Button x:Name="btnFail" Text="错误" />
+            </StackLayout>
+            
         </Grid>
         
     </ContentPage.Content>

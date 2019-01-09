@@ -349,15 +349,20 @@ namespace Client.Data
 
         public List<View.BuBuGao.Question> BuBuGao_rQuestionList()
         {
-            mDatabase.Table<View.BuBuGao.Question>().ToListAsync().ContinueWith((t) =>
+            var task = mDatabase.Table<View.BuBuGao.Question>().ToListAsync();
+            if (task.Exception != null)
             {
-                foreach (var item in t.Result)
+                throw task.Exception;
+            }
+            else
+            {
+                foreach (var item in task.Result)
                 {
                     item.Words = mDatabase.Table<View.BuBuGao.Word>().Where(i => i.QuestionID == item.ID).ToListAsync().Result;
                 }
-            });
+            }
 
-            return new List<View.BuBuGao.Question>();
+            return task.Result;
         }
 
 

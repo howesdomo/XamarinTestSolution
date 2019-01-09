@@ -12,11 +12,19 @@
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <StackLayout Orientation="Horizontal">
-                <Button x:Name="btnStudy" Text="学习" />
-                <Button x:Name="btnPractice" Text="练习" />
-            </StackLayout>
-            
+
+            <ScrollView HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <Button x:Name="btnStudy" Text="学习" />
+                    <Button x:Name="btnPractice" Text="练习" />
+                    <Button x:Name="btnStudyDesc" Text="学习(逆序)" TextColor="DarkBlue" />
+                    <Button x:Name="btnPracticeDesc" Text="练习(逆序)" TextColor="DarkBlue" />
+                    <Button x:Name="btnStudyRand" Text="学习(乱序)" TextColor="Red" />
+                    <Button x:Name="btnPracticeRand" Text="练习(乱序)" TextColor="Red" />
+                </StackLayout>
+            </ScrollView>
+
             <ListView x:Name="lvAll" Grid.Row="1"
                       ItemsSource="{Binding All}" SelectedItem="{Binding SelectedQuestion}">
                 <ListView.ItemTemplate>
@@ -36,6 +44,6 @@
             </StackLayout>
 
         </Grid>
-        
+
     </ContentPage.Content>
 </ContentPage>

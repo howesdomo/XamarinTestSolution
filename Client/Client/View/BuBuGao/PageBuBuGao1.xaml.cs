@@ -37,18 +37,91 @@ namespace Client.View.BuBuGao
         private void initEvent()
         {
             this.btnStudy.Clicked += BtnStudy_Clicked;
+            this.btnStudyDesc.Clicked += BtnStudyDesc_Clicked;
+            this.btnStudyRand.Clicked += BtnStudyRand_Clicked;
+
             this.btnPractice.Clicked += BtnPractice_Clicked;
+            this.btnPracticeDesc.Clicked += BtnPracticeDesc_Clicked;
+            this.btnPracticeRand.Clicked += BtnPracticeRand_Clicked;
+
             this.btnAddNew.Clicked += BtnAddNew_Clicked;
         }
 
+
         private void BtnStudy_Clicked(object sender, EventArgs e)
         {
-            touchItem(this.ViewModel.SelectedQuestion, true);
+            if (this.ViewModel.SelectedQuestion == null)
+            {
+                DisplayAlert("提示", "请选择 1 项", "确认");
+                return;
+            }
+
+            var cloneArgs = Util.JsonUtils.DeserializeObject<Question>(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedQuestion));
+            touchItem(cloneArgs, true);
+        }
+
+        private void BtnStudyDesc_Clicked(object sender, EventArgs e)
+        {
+            if (this.ViewModel.SelectedQuestion == null)
+            {
+                DisplayAlert("提示", "请选择 1 项", "确认");
+                return;
+            }
+
+            var cloneArgs = Util.JsonUtils.DeserializeObject<Question>(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedQuestion));
+            cloneArgs.Words = cloneArgs.Words.OrderByDescending(i => i.ID).ToList();
+            touchItem(cloneArgs, true);
+        }
+
+        private void BtnStudyRand_Clicked(object sender, EventArgs e)
+        {
+            if (this.ViewModel.SelectedQuestion == null)
+            {
+                DisplayAlert("提示", "请选择 1 项", "确认");
+                return;
+            }
+
+            var cloneArgs = Util.JsonUtils.DeserializeObject<Question>(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedQuestion));
+            cloneArgs.Words = cloneArgs.Words.OrderByRandom().ToList();
+            touchItem(cloneArgs, true);
         }
 
         private void BtnPractice_Clicked(object sender, EventArgs e)
         {
-            touchItem(this.ViewModel.SelectedQuestion, false);
+            if (this.ViewModel.SelectedQuestion == null)
+            {
+                DisplayAlert("提示", "请选择 1 项", "确认");
+                return;
+            }
+
+            var cloneArgs = Util.JsonUtils.DeserializeObject<Question>(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedQuestion));
+            touchItem(cloneArgs, false);
+        }
+
+        private void BtnPracticeDesc_Clicked(object sender, EventArgs e)
+        {
+            if (this.ViewModel.SelectedQuestion == null)
+            {
+                DisplayAlert("提示", "请选择 1 项", "确认");
+                return;
+            }
+
+            var cloneArgs = Util.JsonUtils.DeserializeObject<Question>(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedQuestion));
+            cloneArgs.Words = cloneArgs.Words.OrderByDescending(i => i.ID).ToList();
+            touchItem(cloneArgs, false);
+        }
+
+        private void BtnPracticeRand_Clicked(object sender, EventArgs e)
+        {
+            if (this.ViewModel.SelectedQuestion == null)
+            {
+                DisplayAlert("提示", "请选择 1 项", "确认");
+                return;
+            }
+
+            var cloneArgs = Util.JsonUtils.DeserializeObject<Question>(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedQuestion));
+            cloneArgs.Words = cloneArgs.Words.OrderByRandom().ToList();
+            touchItem(cloneArgs, false);
         }
 
         async void touchItem(Question q, bool isSoundPlay)
@@ -94,7 +167,7 @@ namespace Client.View.BuBuGao
             toAdd.Name = toAdd.Words[0].Content;
 
             this.ViewModel.All_Add(toAdd);
-            
+
         }
     }
 

@@ -3,10 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.View.BuBuGao.PageBuBuGao_AddQuestion">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Editor x:Name="txtAddNew" WidthRequest="250" HorizontalOptions="StartAndExpand" />
+                <Button x:Name="btnAddNew" Text="新增" />
+            </StackLayout>
+            <Label Grid.Row="1" Text="{Binding ListInfo}" />
+            <ListView x:Name="lvAll" Grid.Row="2"
+                      ItemsSource="{Binding ToAddWords}" SelectedItem="{Binding SelectedQuestion}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Content}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnSave" Text="保存" Grid.Column="0" />
+                <Button x:Name="btnClear" Text="清除" Grid.Column="1" />
+            </Grid>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

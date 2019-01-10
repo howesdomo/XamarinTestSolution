@@ -45,6 +45,7 @@ namespace Client.View.BuBuGao
             this.btnPracticeRand.Clicked += BtnPracticeRand_Clicked;
 
             this.btnAddNew.Clicked += BtnAddNew_Clicked;
+            
         }
 
 
@@ -167,6 +168,11 @@ namespace Client.View.BuBuGao
             this.ViewModel.All_Add(toAdd);
 
         }
+
+        async void OnItemAdded(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageBuBuGao_AddQuestion());
+        }
     }
 
     public class PageBuBuGao1_ViewModel : ViewModel.BaseViewModel
@@ -263,7 +269,7 @@ namespace Client.View.BuBuGao
 
     }
 
-    public class Word
+    public class Word : ViewModel.BaseViewModel
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }

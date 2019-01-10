@@ -1,9 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.BuBuGao.PageBuBuGao1"
-             Title="补补高点读机 - V1.2"
-             >
+             xmlns:local="clr-namespace:Client"
+             x:Class="Client.View.BuBuGao.PageBuBuGao1">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="补补高点读机 - V1.2" VerticalTextAlignment="Center" TextColor="White" />
+            <Image x:Name="btnAddQuesiton"
+                   Source="{local:EmbeddedResource Client.Images.SQLiteDemo.plus.png}" 
+                   WidthRequest="20" HeightRequest="20" 
+                   HorizontalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnItemAdded" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label WidthRequest="10" HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>

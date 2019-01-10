@@ -11,6 +11,9 @@
   <ItemGroup>
     <None Remove="Images\BaseView\CheckBox\check.jpg" />
     <None Remove="Images\BaseView\CheckBox\uncheck.jpg" />
+    <None Remove="Images\BuBuGao\minus.png" />
+    <None Remove="Images\BuBuGao\plus.png" />
+    <None Remove="Images\BuBuGao\scan.png" />
     <None Remove="Images\DevExpressDemo\1.jpg" />
     <None Remove="Images\DevExpressDemo\2.jpg" />
     <None Remove="Images\DevExpressDemo\3.jpg" />
@@ -30,6 +33,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\BaseView\CheckBox\check.jpg" />
     <EmbeddedResource Include="Images\BaseView\CheckBox\uncheck.jpg" />
+    <EmbeddedResource Include="Images\BuBuGao\minus.png" />
+    <EmbeddedResource Include="Images\BuBuGao\plus.png" />
+    <EmbeddedResource Include="Images\BuBuGao\scan.png" />
     <EmbeddedResource Include="Images\DevExpressDemo\1.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\2.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\3.jpg" />
@@ -79,6 +85,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Common\ZXingBarcodeScanner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\BaiduDemo\PageBaiduLocation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -4,19 +4,31 @@
              xmlns:local="clr-namespace:Client"
              x:Class="Client.View.BuBuGao.PageBuBuGao1">
     <NavigationPage.TitleView>
-        <StackLayout>
-            <Label Text="补补高点读机 - V1.2" VerticalTextAlignment="Center" TextColor="White" />
-            <Image x:Name="btnAddQuesiton"
-                   Source="{local:EmbeddedResource Client.Images.SQLiteDemo.plus.png}" 
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!-- Title -->
+            <Label Text="补补高点读机 - V1.2" />
+
+            <!-- 1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right-->
+            <StackLayout Grid.Column="1" Orientation="Horizontal">
+                <Image x:Name="btnAddQuesiton"
                    WidthRequest="20" HeightRequest="20" 
-                   HorizontalOptions="End">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                        Tapped="OnItemAdded" />
-                </Image.GestureRecognizers>
-            </Image>
-            <Label WidthRequest="10" HorizontalOptions="End" />
-        </StackLayout>
+                   Source="{local:EmbeddedResource Client.Images.BuBuGao.plus.png}" />
+                <BoxView BackgroundColor="Transparent" WidthRequest="5" />
+            </StackLayout>
+
+        </Grid>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <Grid>

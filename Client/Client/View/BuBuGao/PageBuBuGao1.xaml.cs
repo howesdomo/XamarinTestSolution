@@ -45,7 +45,12 @@ namespace Client.View.BuBuGao
             this.btnPracticeRand.Clicked += BtnPracticeRand_Clicked;
 
             this.btnAddNew.Clicked += BtnAddNew_Clicked;
-            
+
+
+            // 点击图片事件
+            TapGestureRecognizer imageTapGesture = new TapGestureRecognizer();
+            imageTapGesture.Tapped += imageTapGesture_Tapped;
+            btnAddQuesiton.GestureRecognizers.Add(imageTapGesture);
         }
 
 
@@ -169,7 +174,7 @@ namespace Client.View.BuBuGao
 
         }
 
-        async void OnItemAdded(object sender, EventArgs e)
+        async void imageTapGesture_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PageBuBuGao_AddQuestion());
         }

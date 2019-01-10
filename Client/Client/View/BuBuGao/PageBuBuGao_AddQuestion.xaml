@@ -1,7 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Client"
              x:Class="Client.View.BuBuGao.PageBuBuGao_AddQuestion">
+
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+            <!-- Title -->
+            <Label Text="新增" />
+
+            <!-- 1 -->
+            <StackLayout Grid.Column="1" Orientation="Horizontal">
+                <Image x:Name="btnAddWordsByScan"
+                       Source="{local:EmbeddedResource Client.Images.BuBuGao.scan.png}" 
+                       WidthRequest="20" HeightRequest="20" />
+                <BoxView BackgroundColor="Transparent" WidthRequest="5" />
+                <Image x:Name="btnMinusWords"
+                       Source="{local:EmbeddedResource Client.Images.BuBuGao.minus.png}" 
+                       WidthRequest="20" HeightRequest="20" />
+                <BoxView BackgroundColor="Transparent" WidthRequest="5" />
+            </StackLayout>
+            
+        </Grid>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>

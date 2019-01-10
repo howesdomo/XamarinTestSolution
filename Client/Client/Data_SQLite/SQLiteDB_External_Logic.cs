@@ -63,88 +63,100 @@ namespace Client.Data
 
             View.BuBuGao.Question a1 = new View.BuBuGao.Question();
             a1.Name = "天空";
-            a1.Words = new List<View.BuBuGao.Word>();
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "天空" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "空气" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "气体" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "体力" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "力度" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "度过" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "过去" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "去年" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "年轻" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "轻松" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "松树" });
-            a1.Words.Add(new View.BuBuGao.Word() { Content = "树木" });
+            a1.Words = new List<View.BuBuGao.Word>()
+            {
+               new View.BuBuGao.Word() { Content = "天空" },
+               new View.BuBuGao.Word() { Content = "空气" },
+               new View.BuBuGao.Word() { Content = "气体" },
+               new View.BuBuGao.Word() { Content = "体力" },
+               new View.BuBuGao.Word() { Content = "力度" },
+               new View.BuBuGao.Word() { Content = "度过" },
+               new View.BuBuGao.Word() { Content = "过去" },
+               new View.BuBuGao.Word() { Content = "去年" },
+               new View.BuBuGao.Word() { Content = "年轻" },
+               new View.BuBuGao.Word() { Content = "轻松" },
+               new View.BuBuGao.Word() { Content = "松树" },
+               new View.BuBuGao.Word() { Content = "树木" }
+            };
+
             a1.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a2 = new View.BuBuGao.Question();
             a2.Name = "大人";
-            a2.Words = new List<View.BuBuGao.Word>();
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "大人" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "人生" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "生命" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "命运" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "运货" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "货物" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "物品" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "品尝" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "尝试" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "试验" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "验证" });
-            a2.Words.Add(new View.BuBuGao.Word() { Content = "证明" });
+            a2.Words = new List<View.BuBuGao.Word>()
+            {
+                new View.BuBuGao.Word() { Content = "大人" },
+                new View.BuBuGao.Word() { Content = "人生" },
+                new View.BuBuGao.Word() { Content = "生命" },
+                new View.BuBuGao.Word() { Content = "命运" },
+                new View.BuBuGao.Word() { Content = "运货" },
+                new View.BuBuGao.Word() { Content = "货物" },
+                new View.BuBuGao.Word() { Content = "物品" },
+                new View.BuBuGao.Word() { Content = "品尝" },
+                new View.BuBuGao.Word() { Content = "尝试" },
+                new View.BuBuGao.Word() { Content = "试验" },
+                new View.BuBuGao.Word() { Content = "验证" },
+                new View.BuBuGao.Word() { Content = "证明" }
+            };
             a2.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a3 = new View.BuBuGao.Question();
             a3.Name = "红豆";
-            a3.Words = new List<View.BuBuGao.Word>();
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "红豆" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "豆沙" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "沙子" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "子女" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "女巫" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "巫师" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "师父" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "父亲节" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "节约" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "约见" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "见面" });
-            a3.Words.Add(new View.BuBuGao.Word() { Content = "面粉" });
+            a3.Words = new List<View.BuBuGao.Word>()
+            {
+                new View.BuBuGao.Word() { Content = "红豆" },
+                new View.BuBuGao.Word() { Content = "豆沙" },
+                new View.BuBuGao.Word() { Content = "沙子" },
+                new View.BuBuGao.Word() { Content = "子女" },
+                new View.BuBuGao.Word() { Content = "女巫" },
+                new View.BuBuGao.Word() { Content = "巫师" },
+                new View.BuBuGao.Word() { Content = "师父" },
+                new View.BuBuGao.Word() { Content = "父亲节" },
+                new View.BuBuGao.Word() { Content = "节约" },
+                new View.BuBuGao.Word() { Content = "约见" },
+                new View.BuBuGao.Word() { Content = "见面" },
+                new View.BuBuGao.Word() { Content = "面粉" }
+            };
+
             a3.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a4 = new View.BuBuGao.Question();
             a4.Name = "太黑";
-            a4.Words = new List<View.BuBuGao.Word>();
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "太黑" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "黑白" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "白饭" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "饭菜" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "菜园" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "园丁" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "丁香花" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "花生" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "生气" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "气球" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "球体" });
-            a4.Words.Add(new View.BuBuGao.Word() { Content = "体检" });
+            a4.Words = new List<View.BuBuGao.Word>()
+            {
+                new View.BuBuGao.Word() { Content = "太黑" },
+                new View.BuBuGao.Word() { Content = "黑白" },
+                new View.BuBuGao.Word() { Content = "白饭" },
+                new View.BuBuGao.Word() { Content = "饭菜" },
+                new View.BuBuGao.Word() { Content = "菜园" },
+                new View.BuBuGao.Word() { Content = "园丁" },
+                new View.BuBuGao.Word() { Content = "丁香花" },
+                new View.BuBuGao.Word() { Content = "花生" },
+                new View.BuBuGao.Word() { Content = "生气" },
+                new View.BuBuGao.Word() { Content = "气球" },
+                new View.BuBuGao.Word() { Content = "球体" },
+                new View.BuBuGao.Word() { Content = "体检" }
+            };
+
             a4.CreateDateTimeValue = now.Ticks;
 
             View.BuBuGao.Question a5 = new View.BuBuGao.Question();
             a5.Name = "上面";
-            a5.Words = new List<View.BuBuGao.Word>();
-
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "上面" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "面条" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "条件" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "件数" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "数学" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "学习" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "习惯" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "惯性" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "性格" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "格子" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "子孙" });
-            a5.Words.Add(new View.BuBuGao.Word() { Content = "孙悟空" });
+            a5.Words = new List<View.BuBuGao.Word>()
+            {
+                new View.BuBuGao.Word() { Content = "上面" },
+                new View.BuBuGao.Word() { Content = "面条" },
+                new View.BuBuGao.Word() { Content = "条件" },
+                new View.BuBuGao.Word() { Content = "件数" },
+                new View.BuBuGao.Word() { Content = "数学" },
+                new View.BuBuGao.Word() { Content = "学习" },
+                new View.BuBuGao.Word() { Content = "习惯" },
+                new View.BuBuGao.Word() { Content = "惯性" },
+                new View.BuBuGao.Word() { Content = "性格" },
+                new View.BuBuGao.Word() { Content = "格子" },
+                new View.BuBuGao.Word() { Content = "子孙" },
+                new View.BuBuGao.Word() { Content = "孙悟空" }
+            };
             a5.CreateDateTimeValue = now.Ticks;
 
 
@@ -154,7 +166,7 @@ namespace Client.Data
             mDatabase.InsertAsync(a2);
             mDatabase.InsertAsync(a3);
             mDatabase.InsertAsync(a4);
-            mDatabase.InsertAsync(a5).Wait();
+            mDatabase.InsertAsync(a5).Wait(); // 等待的原因 - 等待 a1 ~ a5 插入完毕, 并且取回插入到 Sqlite后 由系统自动生成的ID
 
 
             BuBuGao_cWordList(a1);
@@ -389,9 +401,9 @@ namespace Client.Data
             }
         }
 
-        public void BuBuGao_cQuestion(View.BuBuGao.Question question)
+        public async System.Threading.Tasks.Task<int> BuBuGao_cQuestion(View.BuBuGao.Question question)
         {
-            mDatabase.InsertAsync(question);
+            return await mDatabase.InsertAsync(question);
         }
 
         public void BuBuGao_uQuestion(View.BuBuGao.Question question)

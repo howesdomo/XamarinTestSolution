@@ -19,13 +19,6 @@ namespace Client.View.BuBuGao
         {
             InitializeComponent();
             this.ViewModel = new PageBuBuGao_AddQuestion_ViewModel();
-
-            var abc = new ObservableCollection<WordModel>();
-            abc.Add(new WordModel(new Word() { Content = "中岛" }));
-            abc.Add(new WordModel(new Word() { Content = "美雪" }));
-
-            this.ViewModel.ToAddWords = abc;
-
             this.BindingContext = this.ViewModel;
             initEvent();
 
@@ -33,10 +26,57 @@ namespace Client.View.BuBuGao
 
         private void initEvent()
         {
+            this.txtAddNew.TextChanged += TxtAddNew_TextChanged;
             this.btnAddNew.Clicked += BtnAddNew_Clicked;
             this.btnClear.Clicked += BtnClear_Clicked;
             this.btnSave.Clicked += BtnSave_Clicked;
 
+            // 点击图片事件
+            TapGestureRecognizer imageAddWordByScan_TapGesture = new TapGestureRecognizer();
+            imageAddWordByScan_TapGesture.Tapped += imageAddWordByScan_TapGesture_Tapped;
+            btnAddWordsByScan.GestureRecognizers.Add(imageAddWordByScan_TapGesture);
+
+            // 点击图片事件
+            TapGestureRecognizer imageMinusWords_TapGesture = new TapGestureRecognizer();
+            imageMinusWords_TapGesture.Tapped += imageMinusWords_TapGesture_Tapped;
+            btnMinusWords.GestureRecognizers.Add(imageMinusWords_TapGesture);
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            showCloseDisplayAlert();
+            return true;
+        }
+
+        async void showCloseDisplayAlert()
+        {
+            if (this.ViewModel.ToAddWords.Count > 0)
+            {
+                var result = await this.DisplayAlert
+                (
+                    title: "提示",
+                    message: "确认退出？",
+                    accept: "确认",
+                    cancel: "取消"
+                );
+
+                if (result == false)
+                {
+                    return;
+                }
+            }
+
+            await Navigation.PopAsync();
+
+        }
+
+
+        private void TxtAddNew_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue.Contains("\n") || e.NewTextValue.Contains("\r"))
+            {
+                addWord(this.txtAddNew.Text);
+            }
         }
 
 
@@ -57,17 +97,56 @@ namespace Client.View.BuBuGao
 
         async void addWord(string args)
         {
-            if (args.IsNullOrWhiteSpace() == true)
+            var value = args.TrimAdv();
+            if (value.IsNullOrWhiteSpace() == true)
             {
                 await DisplayAlert("提示", "请输入词组", "确认");
                 return;
             }
 
-            this.ViewModel.AddWord(args);
+            this.ViewModel.AddWord(value);
+            this.txtAddNew.Text = string.Empty;
+        }
+
+        async void imageAddWordByScan_TapGesture_Tapped(object sender, EventArgs e)
+        {
+            var page = new Common.ZXingBarcodeScanner
+            (
+                title: "补补高 扫码新增",
+                isScanContinuously : true,
+                scanResultHandle: scanResultHandle
+            );
+
+            await Navigation.PushAsync(page);
+        }
+
+        async void scanResultHandle(ZXing.Result result, Common.ZXingBarcodeScanner page)
+        {
+            string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(result));
+            System.Diagnostics.Debug.WriteLine(msg);
+
+            addWord(result.Text);
+
+
+            bool r = await DisplayAlert("添加成功", "已成功添加[{0}]".FormatWith(result.Text), "确认", "取消");
+
+            msg = "{0}".FormatWith(r);
+            System.Diagnostics.Debug.WriteLine(msg);
+
+            page.endWith();
         }
 
         #endregion
 
+
+        #region 删除
+
+        async void imageMinusWords_TapGesture_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("提示", "TODO 删除单项 / 多项", "取消");
+        }
+
+        #endregion
 
         #region 清空
 
@@ -76,7 +155,7 @@ namespace Client.View.BuBuGao
             var task = DisplayAlert("提示", "确认清除?", "确认", "取消");
             if (task.Result == true)
             {
-                this.ViewModel.ToAddWords = new ObservableCollection<WordModel>();
+                this.ViewModel.ToAddWords = new ObservableCollection<Word>();
             }
         }
 
@@ -98,13 +177,14 @@ namespace Client.View.BuBuGao
                 Question toSave = new Question();
 
                 toSave.Words = new List<Word>();
-                toSave.Words.AddRange(this.ViewModel.ToAddWords.Select(i => i.Model));
+                toSave.Words.AddRange(this.ViewModel.ToAddWords);
 
                 toSave.Name = toSave.Words[0].Content;
                 toSave.CreateDateTime = DateTime.Now;
                 toSave.CreateDateTimeValue = toSave.CreateDateTime.Ticks;
 
-                Common.StaticInfo.ExternalSQLiteDB.BuBuGao_cQuestion(toSave);
+                var temp = Common.StaticInfo.ExternalSQLiteDB.BuBuGao_cQuestion(toSave); // TODO 等待 QuestionID
+                await temp;
 
                 foreach (var item in toSave.Words)
                 {
@@ -129,9 +209,9 @@ namespace Client.View.BuBuGao
 
     public class PageBuBuGao_AddQuestion_ViewModel : ViewModel.BaseViewModel
     {
-        private ObservableCollection<WordModel> toAddWords = new ObservableCollection<WordModel>();
+        private ObservableCollection<Word> toAddWords = new ObservableCollection<Word>();
 
-        public ObservableCollection<WordModel> ToAddWords
+        public ObservableCollection<Word> ToAddWords
         {
             get { return toAddWords; }
             set
@@ -157,30 +237,31 @@ namespace Client.View.BuBuGao
 
         public void AddWord(string a)
         {
-            WordModel toAdd = new WordModel(new Word() { Content = a });
+            Word toAdd = new Word() { Content = a };
             this.ToAddWords.Add(toAdd);
-            this.ToAddWords = this.ToAddWords;
+            this.OnPropertyChanged("ToAddWords");
+            this.OnPropertyChanged("ListInfo");
         }
 
     }
 
-    public class WordModel : ViewModel.ModelItem<Word>
-    {
-        public WordModel(Word m) : base(m)
-        {
-            this.Model = m;
-        }
+    //public class WordModel : ViewModel.ModelItem<Word>
+    //{
+    //    public WordModel(Word m) : base(m)
+    //    {
+    //        this.Model = m;
+    //    }
 
-        public string Content
-        {
-            get { return this.Model.Content; }
-            set
-            {
-                this.Model.Content = value;
-                this.OnPropertyChanged("Content");
-            }
-        }
+    //    public string Content
+    //    {
+    //        get { return this.Model.Content; }
+    //        set
+    //        {
+    //            this.Model.Content = value;
+    //            this.OnPropertyChanged("Content");
+    //        }
+    //    }
 
-    }
+    //}
 
 }

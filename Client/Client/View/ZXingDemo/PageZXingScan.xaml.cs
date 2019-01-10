@@ -64,8 +64,8 @@ namespace Client.View
 
         private void initEvent()
         {
-            mZXingScannerView.OnScanResult += MZXingScannerView_OnScanResult;
-            mZXingOverlay.FlashButtonClicked += MZXingOverlay_FlashButtonClicked;
+            mZXingScannerView.OnScanResult += mZXingScannerView_OnScanResult;
+            mZXingOverlay.FlashButtonClicked += mZXingOverlay_FlashButtonClicked;
         }
 
         protected override void OnAppearing()
@@ -86,7 +86,7 @@ namespace Client.View
         /// 处理扫描结果
         /// </summary>
         /// <param name="result"></param>
-        private void MZXingScannerView_OnScanResult(ZXing.Result result)
+        private void mZXingScannerView_OnScanResult(ZXing.Result result)
         {
             if (mIsBusy == false)
             {
@@ -152,7 +152,7 @@ namespace Client.View
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MZXingOverlay_FlashButtonClicked(Button sender, EventArgs e)
+        private void mZXingOverlay_FlashButtonClicked(Button sender, EventArgs e)
         {
             try
             {

@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml.cs" />
     <Compile Remove="View\WebviewDemo\WebPage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,14 +64,13 @@
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
-    <PackageReference Include="Xamarin.Essentials" Version="0.10.0-preview" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
     <PackageReference Include="Xamarin.LiveReload" Version="0.3.27" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.Excel.Aspose\Util.Excel.Aspose.csproj" />
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj" />
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj" />
     <ProjectReference Include="..\..\DL.Model\DL.Model.csproj" />
@@ -160,9 +164,6 @@
     <EmbeddedResource Update="View\MessagingCenterDemo\PageMessagingCenterDemo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Excel_AsposeDemo\PageExcel_Aspose.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="View\Timer\PageTimer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -233,5 +234,9 @@
 
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="View\Excel_AsposeDemo\" />
   </ItemGroup>
 </Project>

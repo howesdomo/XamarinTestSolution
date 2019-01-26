@@ -48,7 +48,7 @@ namespace Client
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;            
             this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;
             this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
-            this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
+            // this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
         }
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
@@ -227,10 +227,10 @@ namespace Client
             await Navigation.PushAsync(new View.PageAudioDemo());
         }
 
-        async void BtnExcelByAsposeCell_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.PageExcel_Aspose());
-        }
+        //async void BtnExcelByAsposeCell_Clicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new View.PageExcel_Aspose());
+        //}
 
         async void BtnBuBuGao_Clicked(object sender, EventArgs e)
         {

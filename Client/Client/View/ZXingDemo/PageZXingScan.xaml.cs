@@ -106,7 +106,8 @@ namespace Client.View
                 {
                     // ** 引用 Xamarin.Essentials 包 **
                     // 将内容复制到剪贴板
-                    Xamarin.Essentials.Clipboard.SetText(result.Text); 
+                    // Xamarin.Essentials.Clipboard.SetText(result.Text); 
+                    await Xamarin.Essentials.Clipboard.SetTextAsync(result.Text);
 
                     msg += "\r\n扫描内容已复制到粘贴板"; 
                 }

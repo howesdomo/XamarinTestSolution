@@ -24,6 +24,7 @@ namespace Client
 
         public App()
         {
+
             // ≥ı ºªØ Xamarin.LiveReload
 #if DEBUG
             LiveReload.Init();

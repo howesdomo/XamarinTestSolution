@@ -161,7 +161,8 @@ namespace Client.View.Games
 
             try
             {
-                Xamarin.Essentials.ScreenLock.RequestActive();
+                // Xamarin.Essentials.ScreenLock.RequestActive();
+                Xamarin.Essentials.DeviceDisplay.KeepScreenOn = true;
             }
             catch (Exception ex)
             {
@@ -179,7 +180,8 @@ namespace Client.View.Games
         {
             try
             {
-                Xamarin.Essentials.ScreenLock.RequestRelease();
+                // Xamarin.Essentials.ScreenLock.RequestRelease();
+                Xamarin.Essentials.DeviceDisplay.KeepScreenOn = false;
             }
             catch (Exception ex)
             {

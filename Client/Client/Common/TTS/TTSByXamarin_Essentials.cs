@@ -79,7 +79,7 @@ namespace Client.Common
         // ***************************************************** Step 4
         public async Task SpeakNow()
         {
-            var settings = new SpeakSettings()
+            var settings = new SpeechOptions()
             {
                 Volume = 0.75f,
                 Pitch = 1.0f
@@ -101,7 +101,7 @@ namespace Client.Common
                 locale = locales.GetEnumerator().Current;
             }
 
-            var settings = new SpeakSettings()
+            var settings = new SpeechOptions()
             {
                 Volume = 0.75f,
                 Pitch = 1.0f,

@@ -106,6 +106,7 @@ namespace Client.View.BuBuGao
 
             this.ViewModel.AddWord(value);
             this.txtAddNew.Text = string.Empty;
+            this.txtAddNew.Focus();
         }
 
         async void imageAddWordByScan_TapGesture_Tapped(object sender, EventArgs e)
@@ -183,7 +184,7 @@ namespace Client.View.BuBuGao
                 toSave.CreateDateTime = DateTime.Now;
                 toSave.CreateDateTimeValue = toSave.CreateDateTime.Ticks;
 
-                var temp = Common.StaticInfo.ExternalSQLiteDB.BuBuGao_cQuestion(toSave); // TODO 等待 QuestionID
+                var temp = Common.StaticInfo.InnerSQLiteDB.BuBuGao_cQuestion(toSave); // TODO 等待 QuestionID
                 await temp;
 
                 foreach (var item in toSave.Words)
@@ -191,7 +192,7 @@ namespace Client.View.BuBuGao
                     item.QuestionID = toSave.ID;
                 }
 
-                Common.StaticInfo.ExternalSQLiteDB.BuBuGao_cWordList(toSave);
+                Common.StaticInfo.InnerSQLiteDB.BuBuGao_cWordList(toSave);
 
                 await DisplayAlert("提示", "保存成功。", "确认");
                 await Navigation.PopAsync();

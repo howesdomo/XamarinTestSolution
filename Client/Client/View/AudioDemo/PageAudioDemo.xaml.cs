@@ -20,22 +20,68 @@ namespace Client.View
 
         private void initEvent()
         {
-            this.btn1.Clicked += Btn1_Clicked;
-            this.btn2.Clicked += Btn2_Clicked;
-            this.btn3.Clicked += Btn3_Clicked;
+            this.btnSoundEffect_Beep.Clicked += btnSoundEffect_Beep_Clicked;
+            this.btnSoundEffect_Error.Clicked += btnSoundEffect_Error_Clicked;
+            this.btnSoundEffect.Clicked += BtnSoundEffect_Clicked;
+            this.btnBGMPlay.Clicked += BtnBGMPlay_Clicked;
+            this.btnBGMStop.Clicked += BtnBGMStop_Clicked;
+
+            this.btnAssetsFileName.Clicked += BtnAssetsFileName_Clicked;
         }
 
-        private void Btn1_Clicked(object sender, EventArgs e)
+        private void btnSoundEffect_Beep_Clicked(object sender, EventArgs e)
         {
             App.AudioPlayer.PlayBeep();
         }
 
-        private void Btn2_Clicked(object sender, EventArgs e)
+        private void btnSoundEffect_Error_Clicked(object sender, EventArgs e)
         {
             App.AudioPlayer.PlayError();
         }
 
-        async void Btn3_Clicked(object sender, EventArgs e)
+        async void BtnSoundEffect_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.AudioPlayer.PlaySoundEffect(this.txtSoundEffect.Text);
+            }
+            catch (Exception ex)
+            {
+                string msg = "{0}".FormatWith(ex.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+                await DisplayAlert("错误", msg, "确定");
+            }
+        }
+
+        async void BtnBGMPlay_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.AudioPlayer.PlayBackgroundMusic(this.txtBGM.Text);
+            }
+            catch (Exception ex)
+            {
+                string msg = "{0}".FormatWith(ex.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+                await DisplayAlert("错误", msg, "确定");
+            }
+        }
+
+        async void BtnBGMStop_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.AudioPlayer.StopBackgroundMusic();
+            }
+            catch (Exception ex)
+            {
+                string msg = "{0}".FormatWith(ex.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+                await DisplayAlert("错误", msg, "确定");
+            }
+        }
+
+        async void BtnAssetsFileName_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -48,5 +94,7 @@ namespace Client.View
                 await DisplayAlert("错误", msg, "确定");
             }
         }
+
+
     }
 }

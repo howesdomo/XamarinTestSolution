@@ -22,93 +22,139 @@ namespace Client.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            //// Start 注册全局异常捕获事件
-            //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-            //System.Threading.Tasks.TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
-            //// End
+            #region 注册全局异常捕获事件
+
+            AppDomain.CurrentDomain.UnhandledException += MyApplication.CurrentDomain_UnhandledException;
+            System.Threading.Tasks.TaskScheduler.UnobservedTaskException += MyApplication.TaskScheduler_UnobservedTaskException;
+
+            #endregion
 
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            // Add by Howe
+
+            init();
+
+            // End Add by Howe
+
             return base.FinishedLaunching(app, options);
         }
 
-        //#region iOS 全局异常捕获
+        private void init()
+        {
+            #region VN7
 
-        //private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        //{
-        //    string msg = "{0}".FormatWith(e.ExceptionObject.ToString());
-        //    System.Diagnostics.Debug.WriteLine(msg);
-        //    DisplayCrashReport();
-        //}
+            Common.WebSetting appWebSetting = new Common.WebSetting
+            (
+                serviceSettingName: "A",
+                ipOrWebAddress: "192.168.1.215",
+                port: "17911",
+                appName: "AppWebApplication461/APPWebServiceHandler.ashx"
+            ); // TODO Read In webSetting.json
 
-        //private void TaskScheduler_UnobservedTaskException(object sender, System.Threading.Tasks.UnobservedTaskExceptionEventArgs e)
-        //{
-        //    string msg = "{0}".FormatWith(e.Exception.GetFullInfo());
-        //    System.Diagnostics.Debug.WriteLine(msg);
-        //    DisplayCrashReport();
-        //}
+            Common.WebSetting webAPISetting = new Common.WebSetting
+            (
+                serviceSettingName: "A",
+                ipOrWebAddress: "192.168.1.215",
+                port: "17911",
+                appName: "AppWebApplication461/api/orders"
+            ); // TODO Read In webSetting.json
 
-        /////<summary>
-        ////If there is an unhandled exception, the exception information is diplayed 
-        ////on screen the next time the app is started (only in debug configuration)
-        /////</summary>
-        //[System.Diagnostics.Conditional("DEBUG")]
-        //private static void DisplayCrashReport()
-        //{
-        //    const string errorFilename = "Fatal.log";
-        //    var libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Resources);
-        //    var errorFilePath = System.IO.Path.Combine(libraryPath, errorFilename);
-        //    if (System.IO.File.Exists(errorFilePath) == false)
-        //    {
-        //        return;
-        //    }
-        //    var errorText = System.IO.File.ReadAllText(errorFilePath);
+            #endregion
 
-        //    #region UIAlert 已被弃用
+            #region HOME-PC
 
-        //    //var alertView = new UIAlertView
-        //    //(
-        //    //    title: "Crash Report",
-        //    //    message: errorText,
-        //    //    del: null,
-        //    //    cancelButtonTitle: "关闭",
-        //    //    otherButtons: "Clear"
-        //    //);
+            //Common.WebSetting appWebSetting = new Common.WebSetting
+            //(
+            //    serviceSettingName: "A",
+            //    ipOrWebAddress: "192.168.1.216",
+            //    port: "17911",
+            //    appName: "AppWebApplication461/AppWebService.asmx"
+            //); // TODO Read In webSetting.json
 
-        //    //alertView.UserInteractionEnabled = true;
+            //Common.WebSetting webAPISetting = new Common.WebSetting
+            //(
+            //    serviceSettingName: "A",
+            //    ipOrWebAddress: "192.168.1.216",
+            //    port: "17911",
+            //    appName: "AppWebApplication461/api/orders"
+            //); // TODO Read In webSetting.json
 
-        //    //alertView.Clicked += (sender, args) =>
-        //    //{
-        //    //    if (args.ButtonIndex != 0)
-        //    //    {
-        //    //        System.IO.File.Delete(errorFilePath);
-        //    //    }
-        //    //};
-        //    //alertView.Show();
-
-        //    #endregion
+            #endregion
 
 
-        //    UIAlertController alert = UIAlertController.Create("Login", "Enter your credentials", UIAlertControllerStyle.Alert);
+            string innerSQLiteConnStr = System.IO.Path.Combine
+            (
+                System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
+                Util.Principle.DatabaseName_SQLite
+            );
 
-        //    alert.AddAction(UIAlertAction.Create("Login", UIAlertActionStyle.Default, action => {
-        //        // This code is invoked when the user taps on login, and this shows how to access the field values
-        //        Console.WriteLine("User: {0}/Password: {1}", alert.TextFields[0].Text, alert.TextFields[1].Text);
-        //    }));
+            //// iOS 数据库存储位置 (拷贝自 TODO 项目), 值得参考
+            //string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            //string libFolder = System.IO.Path.Combine(docFolder, "..", "Library", "Databases");
+            //if (!Directory.Exists(libFolder))
+            //{
+            //    Directory.CreateDirectory(libFolder);
+            //}
 
-        //    alert.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, myCancel));
-        //    alert.AddTextField((field) => {
-        //        field.Placeholder = "email address";
-        //    });
-        //    alert.AddTextField((field) => {
-        //        field.SecureTextEntry = true;
-        //    });
-        //    PresentViewController(alert, animated: true, completionHandler: null);
 
-        //}
 
-        //#endregion
+            //string externalSQLiteConnStr = System.IO.Path.Combine
+            //(
+            //    Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, // 获取 Android 外部存储路径
+            //    Util.Principle.ExternalStorageDirectoryTemplate.FormatWith(Client.Common.StaticInfo.AppName, Util.Principle.DatabaseName_SQLite)
+            //);
+
+            Client.Common.StaticInfo.Init
+            (
+                new Client.Common.StaticInfoInitArgs()
+                {
+                    AppName = "你好Xamarin",
+                    AppWebSetting = appWebSetting,
+                    WebAPISetting = webAPISetting,
+                    // AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath,
+                    InnerSQLiteConnStr = innerSQLiteConnStr,
+                    // ExternalSQLiteConnStr = externalSQLiteConnStr
+                }
+            );
+
+            //// 实现IOutput接口 - 用 Logcat 来实现
+            //App.Output = new MyOutput();
+
+            // 屏幕方向
+            App.ScreenDirection = new ScreenDirection();
+
+            // 初始化条码扫描器
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+
+            //// 初始化百度定位
+            //BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
+            //App.LBS = baiduLBS;
+
+            // 初始化Audio
+            MyAudioPlayer audioPlayer = MyAudioPlayer.GetInstance();
+            App.AudioPlayer = audioPlayer;
+
+            // 初始化TTS
+            MyTTS tts = MyTTS.GetInstance();
+            App.TTS = tts;
+
+            //// 初始化IR (苹果暂时没有红外)
+            //MyIR ir = MyIR.GetInstance(ApplicationContext);
+            //App.IR = ir;
+
+            //// 初始化动态权限
+            //MyPermission myPermission = new MyPermission();
+            //App.Permission = myPermission;
+
+            // 初始化 DevExpress.Mobile.Forms
+            DevExpress.Mobile.Forms.Init();
+            // 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
+            // 这里初始化主题颜色为 Theme.Light
+            DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
+            DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
+        }
     }
 }

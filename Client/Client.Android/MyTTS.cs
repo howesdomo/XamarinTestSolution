@@ -127,7 +127,7 @@ namespace Client.Droid
         /// <param name="args"></param>
         public void SetSpeechRate(float args)
         {
-            mTextToSpeech.SetSpeechRate(args);
+            SetSpeechRateSilent(args);
 
             string msg = "语速设置为 {0}".FormatWith(args);
             System.Threading.Tasks.Task.Run(() =>
@@ -140,7 +140,7 @@ namespace Client.Droid
 
         /// <summary>
         /// 实现 ITTS 接口方法
-        /// 设置语速
+        /// 设置语速(静默模式)
         /// </summary>
         /// <param name="args"></param>
         public void SetSpeechRateSilent(float args)

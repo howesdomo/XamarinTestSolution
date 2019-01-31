@@ -125,7 +125,7 @@ namespace Client.Droid
             App.LBS = baiduLBS;
 
             // 初始化Audio
-            MyAudioPlayer audioPlayer = new MyAudioPlayer();
+            MyAudioPlayer audioPlayer = MyAudioPlayer.GetInstance();
             App.AudioPlayer = audioPlayer;
 
             // 初始化TTS

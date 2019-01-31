@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dingdong.wav" />
+    <AndroidAsset Include="Assets\bor.mp3" />
     <Content Include="DLL\BindingLibrary.BaiduLBS.dll" />
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\icon.png" />

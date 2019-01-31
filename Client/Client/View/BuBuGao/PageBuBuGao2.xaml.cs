@@ -105,7 +105,7 @@ namespace Client.View.BuBuGao
         {
             var match = this.ViewModel.Question.Words[this.ViewModel.Index];
             match.IsPass = -1;
-            Common.StaticInfo.ExternalSQLiteDB.BuBuGao_uWord(match);
+            Common.StaticInfo.InnerSQLiteDB.BuBuGao_uWord(match);
             this.ViewModel.ViewModelOnPropertyChanged("btnFailBackgroundColor");
         }
 
@@ -113,7 +113,7 @@ namespace Client.View.BuBuGao
         {
             var match = this.ViewModel.Question.Words[this.ViewModel.Index];
             match.IsPass = 1;
-            Common.StaticInfo.ExternalSQLiteDB.BuBuGao_uWord(match);
+            Common.StaticInfo.InnerSQLiteDB.BuBuGao_uWord(match);
             this.ViewModel.ViewModelOnPropertyChanged("btnPassBackgroundColor");
         }
 
@@ -134,13 +134,17 @@ namespace Client.View.BuBuGao
             get { return rowNumber; }
             set
             {
+                if (this.Index != value - 1)
+                {
+                    this.Index = value - 1;
+                }
+
                 rowNumber = value;
                 this.OnPropertyChanged("RowNumber");
-                this.Index = value - 1;
             }
         }
 
-        private int index = 0;
+        private int index = -1;
 
         public int Index
         {
@@ -200,7 +204,7 @@ namespace Client.View.BuBuGao
             match.LastStudyDateTime = DateTime.Now;
             match.LastStudyDateTimeValue = match.LastStudyDateTime.Value.Ticks;
             match.StudyTimes += 1;
-            Common.StaticInfo.ExternalSQLiteDB.BuBuGao_uQuestion(match);
+            Common.StaticInfo.InnerSQLiteDB.BuBuGao_uQuestion(match);
         }
 
         #endregion
@@ -213,7 +217,7 @@ namespace Client.View.BuBuGao
             match.LastPracticeDateTime = DateTime.Now;
             match.LastPracticeDateTimeValue = match.LastPracticeDateTime.Value.Ticks;
             match.PracticeTimes += 1;
-            Common.StaticInfo.ExternalSQLiteDB.BuBuGao_uQuestion(match);
+            Common.StaticInfo.InnerSQLiteDB.BuBuGao_uQuestion(match);
         }
 
         #endregion

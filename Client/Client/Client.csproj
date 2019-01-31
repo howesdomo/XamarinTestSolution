@@ -71,6 +71,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.Data_SQLite\Util.Data_SQLite.csproj" />
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj" />
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj" />
     <ProjectReference Include="..\..\DL.Model\DL.Model.csproj" />
@@ -90,6 +91,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Common\ZXingBarcodeScanner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BaseView\UcAudioSetting.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\BaiduDemo\PageBaiduLocation.xaml">
@@ -237,6 +241,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Connected Services\" />
+    <Folder Include="Model\" />
     <Folder Include="View\Excel_AsposeDemo\" />
   </ItemGroup>
 </Project>

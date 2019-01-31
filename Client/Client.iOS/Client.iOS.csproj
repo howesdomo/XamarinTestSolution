@@ -98,10 +98,15 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FileLooper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="ScreenDirection.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
+    <Compile Include="MyApplication.cs" />
+    <Compile Include="MyAudioPlayer.cs" />
+    <Compile Include="MyTTS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,9 +161,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN.iOs\Util.XamariN.iOs.csproj">
+      <Project>{7bae38de-ed6c-4cc0-925f-ece110382062}</Project>
+      <Name>Util.XamariN.iOs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj">
       <Project>{5fe21ebe-0678-4384-80b0-a45764c877b5}</Project>
       <Name>Util.XamariN</Name>
@@ -172,8 +184,15 @@
       <Name>Client</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\raw\beep.mp3" />
+  </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\raw\bor.mp3" />
+    <BundleResource Include="Resources\raw\dingdong.wav" />
+    <Content Include="Resources\raw\error.mp3" />
   </ItemGroup>
 </Project>

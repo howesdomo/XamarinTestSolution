@@ -31,7 +31,7 @@ namespace Client.View.BuBuGao
 
         private void getLastestData()
         {
-            this.ViewModel.All = Common.StaticInfo.ExternalSQLiteDB.BuBuGao_rQuestionList();
+            this.ViewModel.All = Common.StaticInfo.InnerSQLiteDB.BuBuGao_rQuestionList();
         }
 
         private void initEvent()

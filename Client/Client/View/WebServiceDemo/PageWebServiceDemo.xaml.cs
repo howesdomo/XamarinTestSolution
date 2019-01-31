@@ -13,7 +13,7 @@ namespace Client.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageWebServiceDemo : ContentPage
     {
-        AppWebWebService mAppWeb { get; set; }
+        //AppWebWebService mAppWeb { get; set; }
 
         public PageWebServiceDemo()
         {
@@ -22,14 +22,14 @@ namespace Client.View
             // test 1 == 运行 await mAppWeb.GetOrderAsync(); 报错
             // mAppWeb = new AppWebWebService(); 
 
-            mAppWeb = new AppWebWebService(AppWebServiceReference.AppWebServiceSoapClient.EndpointConfiguration.AppWebServiceSoap);
+            //mAppWeb = new AppWebWebService(AppWebServiceReference.AppWebServiceSoapClient.EndpointConfiguration.AppWebServiceSoap);
 
             initEvent();
         }
 
         private void initEvent()
         {
-            this.btnTest.Clicked += BtnTest_Clicked;
+            // this.btnTest.Clicked += BtnTest_Clicked;
             this.btnTestWebAPI.Clicked += BtnTestWebAPI_Clicked;
             this.btnTest3.Clicked += BtnTest3_Clicked;
             this.btnWebServiceLastest.Clicked += BtnWebServiceLastest_Clicked;
@@ -46,20 +46,20 @@ namespace Client.View
             web.GetOrder();
         }
 
-        async void BtnTest_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                // 报错 无法调用 asmx // TODO
-                var r = await mAppWeb.GetOrderAsync();
-                System.Diagnostics.Debug.WriteLine(Util.JsonUtils.SerializeObject(r));
-            }
-            catch (Exception ex)
-            {
-                string errorMsg = ex.GetFullInfo();
-                await DisplayAlert("Error", errorMsg, "确定");
-            }
-        }
+        //async void BtnTest_Clicked(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        // 报错 无法调用 asmx // TODO
+        //        var r = await mAppWeb.GetOrderAsync();
+        //        System.Diagnostics.Debug.WriteLine(Util.JsonUtils.SerializeObject(r));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string errorMsg = ex.GetFullInfo();
+        //        await DisplayAlert("Error", errorMsg, "确定");
+        //    }
+        //}
 
         async void BtnTest3_Clicked(object sender, EventArgs e)
         {

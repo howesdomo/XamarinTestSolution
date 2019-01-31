@@ -4,7 +4,7 @@
              x:Class="Client.View.PageWebServiceDemo">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="btnTest" Text="Click" />
+            <Button x:Name="btnTest" Text="Click(弃用)" />
 
             <Button x:Name="btnTestWebAPI" Text="Click" />
 

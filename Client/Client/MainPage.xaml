@@ -4,8 +4,7 @@
              xmlns:local="clr-namespace:Client"
              x:Class="Client.MainPage"
              Title="V 1.0.0.1"
-             >
-
+             >    
     <ScrollView>
         <StackLayout>
             <Button x:Name="btnBuBuGao" Text="补补高点读机" />

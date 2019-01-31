@@ -4,10 +4,17 @@
              x:Class="Client.View.PageScreenDirection">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="----------- 系统原生 -----------" />            
             <Button x:Name="btn1" Text="根据陀螺仪" />
             <Button x:Name="btn2" Text="竖屏" />
             <Button x:Name="btn3" Text="横屏" />
-            <Button x:Name="btn4" Text="不根据陀螺仪" />            
+            <Button x:Name="btn4" Text="不根据陀螺仪" />
+
+            <Label Text="----------- Essentials -----------" />
+            <Button x:Name="btnEss1" Text="根据陀螺仪" />
+            <Button x:Name="btnEss2" Text="竖屏" />
+            <Button x:Name="btnEss3" Text="横屏" />
+            <Button x:Name="btnEss4" Text="不根据陀螺仪" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

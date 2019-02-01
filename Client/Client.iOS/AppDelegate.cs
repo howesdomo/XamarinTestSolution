@@ -129,9 +129,10 @@ namespace Client.iOS
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
-            //// 初始化百度定位
-            //BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
-            //App.LBS = baiduLBS;
+            // 初始化百度定位
+            // BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
+            MyLocation myLocation = MyLocation.GetInstance();
+            App.LBS = myLocation;
 
             // 初始化Audio
             MyAudioPlayer audioPlayer = MyAudioPlayer.GetInstance();

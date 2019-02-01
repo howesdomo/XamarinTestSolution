@@ -78,7 +78,7 @@ namespace Client.View.Games.CRW
             {
                 // TODO 设置常亮
                 // 暂时无法使用 Xamarin.Essentials.ScreenLock.RequestActive 来设置屏幕常亮
-                App.ScreenDirection.ForceLandscape();
+                App.ScreenDirection.ForceLandscapeLeft();
 
                 gameContinue();
             });

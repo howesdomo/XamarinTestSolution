@@ -27,7 +27,7 @@ namespace Client.View.Games.CRW
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                App.ScreenDirection.ForceLandscape();
+                App.ScreenDirection.ForceLandscapeLeft();
             });
         }
 

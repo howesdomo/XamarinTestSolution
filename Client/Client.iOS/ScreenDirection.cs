@@ -10,25 +10,59 @@ namespace Client.iOS
 {
     public class ScreenDirection : Util.XamariN.IScreenDirection
     {
+        // UIInterfaceOrientation.Unknown
+        // UIInterfaceOrientation.LandscapeLeft
+        // UIInterfaceOrientation.LandscapeRight
+        // UIInterfaceOrientation.Portrait
+        // UIInterfaceOrientation.PortraitUpsideDown
 
-        public void ForceLandscape()
+        /// <summary>
+        /// 屏幕方向根据陀螺仪监控结果改变
+        /// </summary>
+        public void Unspecified()
         {
-            UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.LandscapeLeft), new NSString("orientation"));
+            UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.Unknown), new NSString("orientation"));
         }
 
-        public void ForceNosensor()
-        {
-            // throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// 屏幕方向强制竖屏
+        /// </summary>
         public void ForcePortrait()
         {
             UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.Portrait), new NSString("orientation"));
         }
 
-        public void Unspecified()
+        /// <summary>
+        /// 屏幕方向强制倒转竖屏
+        /// </summary>
+        public void ForceReversePortrait()
         {
-            // throw new NotImplementedException();
+            UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.PortraitUpsideDown), new NSString("orientation"));
         }
+
+        /// <summary>
+        /// 屏幕方向强制向左横屏
+        /// </summary>
+        public void ForceLandscapeLeft()
+        {
+            UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.LandscapeLeft), new NSString("orientation"));
+        }
+
+        /// <summary>
+        /// 屏幕方向强制向右横屏
+        /// </summary>
+        public void ForceLandscapeRight()
+        {
+            UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.LandscapeRight), new NSString("orientation"));
+        }
+
+        /// <summary>
+        /// 屏幕方向固定 ( 不根据陀螺仪监控结果改变 )
+        /// </summary>
+        public void ForceNosensor()
+        {
+            UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.Portrait), new NSString("orientation"));
+        }
+
     }
 }

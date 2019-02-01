@@ -27,7 +27,7 @@ namespace Client.View.DevExpressDemo
 
         private void PageDevExpressV2_Appearing(object sender, EventArgs e)
         {
-            App.ScreenDirection.ForceLandscape();
+            App.ScreenDirection.ForceLandscapeLeft();
         }
 
         private void PageDevExpressV2_Disappearing(object sender, EventArgs e)

@@ -26,19 +26,30 @@ namespace Client.Droid
             this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Unspecified;
         }
 
-        public void ForceLandscape()
+        public void ForcePortrait()
+        {
+            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
+        }
+
+        public void ForceReversePortrait()
+        {
+            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReversePortrait;
+        }
+
+
+        public void ForceLandscapeLeft()
         {
             this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Landscape;
+        }
+
+        public void ForceLandscapeRight()
+        {
+            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReverseLandscape;
         }
 
         public void ForceNosensor()
         {
             this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Nosensor;
-        }
-
-        public void ForcePortrait()
-        {
-            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
         }
 
 

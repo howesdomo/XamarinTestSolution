@@ -121,7 +121,7 @@ namespace Client.Droid
 
         public void PlaySoundEffect(string fileName)
         {
-            if (mIsBackgroundMusicOn == false)
+            if (mIsEffectsOn == false)
             {
                 return;
             }
@@ -139,6 +139,7 @@ namespace Client.Droid
             };
             Android.Content.Res.AssetFileDescriptor assetFileDescriptor = Application.Context.Assets.OpenFd(fileName);
             mPlayer_SoundEffect.SetDataSource(assetFileDescriptor.FileDescriptor, assetFileDescriptor.StartOffset, assetFileDescriptor.Length);
+            mPlayer_SoundEffect.SetVolume(mEffectsVolume, mEffectsVolume);
             mPlayer_SoundEffect.Prepare();
         }
 
@@ -165,8 +166,16 @@ namespace Client.Droid
             {
                 mPlayer_BackgroundMusic.Start();
             };
+
+            mPlayer_BackgroundMusic.SeekComplete += (s, e) => // 循环播放背景音乐
+            {
+                mPlayer_BackgroundMusic.SeekTo(0);
+                mPlayer_BackgroundMusic.Start();
+            };
+
             Android.Content.Res.AssetFileDescriptor assetFileDescriptor = Application.Context.Assets.OpenFd(fileName);
             mPlayer_BackgroundMusic.SetDataSource(assetFileDescriptor.FileDescriptor, assetFileDescriptor.StartOffset, assetFileDescriptor.Length);
+            mPlayer_BackgroundMusic.SetVolume(mBackgroundMusicVolume, mBackgroundMusicVolume);
             mPlayer_BackgroundMusic.Prepare();
         }
 
@@ -222,11 +231,17 @@ namespace Client.Droid
         {
             lock (_LOCK_)
             {
+                if (mIsEffectsOn == false)
+                {
+                    return;
+                }
+
                 if (mPlayer_SoundEffect_Beep == null)
                 {
                     mPlayer_SoundEffect_Beep = Android.Media.MediaPlayer.Create((Activity)Xamarin.Forms.Forms.Context, Resource.Raw.beep);
                 }
 
+                mPlayer_SoundEffect_Beep.SetVolume(mEffectsVolume, mEffectsVolume);
                 mPlayer_SoundEffect_Beep.Start();
             }
         }
@@ -237,11 +252,17 @@ namespace Client.Droid
         {
             lock (_LOCK_)
             {
+                if (mIsEffectsOn == false)
+                {
+                    return;
+                }
+
                 if (mPlayer_SoundEffect_Error == null)
                 {
                     mPlayer_SoundEffect_Error = Android.Media.MediaPlayer.Create((Activity)Xamarin.Forms.Forms.Context, Resource.Raw.error);
                 }
 
+                mPlayer_SoundEffect_Error.SetVolume(mEffectsVolume, mEffectsVolume);
                 mPlayer_SoundEffect_Error.Start();
             }
         }

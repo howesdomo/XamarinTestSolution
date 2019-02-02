@@ -29,7 +29,6 @@ namespace Client.iOS
 
             #endregion
 
-
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
@@ -38,6 +37,9 @@ namespace Client.iOS
             init();
 
             // End Add by Howe
+
+            Xamarin.Forms.DependencyService.Register<Util.XamariN.Essentials.IDeviceInfoUtils>();
+            Xamarin.Forms.DependencyService.Register<Util.XamariN.Essentials.IDisplayInfoUtils>();
 
             return base.FinishedLaunching(app, options);
         }
@@ -130,9 +132,9 @@ namespace Client.iOS
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
             // 初始化百度定位
-            // BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
-            MyLocation myLocation = MyLocation.GetInstance();
-            App.LBS = myLocation;
+            // BaiduLBS myLBS = new BaiduLBS();
+            MyLocation myLBS = MyLocation.GetInstance();
+            App.LBS = myLBS;
 
             // 初始化Audio
             MyAudioPlayer audioPlayer = MyAudioPlayer.GetInstance();

@@ -107,7 +107,9 @@ namespace Client.Common
             {
                 if (_DeviceInfo == null)
                 {
-                    _DeviceInfo = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>().GetDeviceInfo();
+                    // _DeviceInfo = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>().GetDeviceInfo();
+                    var q = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>();
+                    _DeviceInfo = q.GetDeviceInfo();
                 }
                 return _DeviceInfo;
             }

@@ -121,12 +121,12 @@ namespace Client.iOS
             }
         }
 
+        #endregion
+
         public void GetGPSInfo(object args = null)
         {
             Start();
         }
-
-        #endregion
 
     }
 }

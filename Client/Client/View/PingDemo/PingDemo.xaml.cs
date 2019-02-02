@@ -130,6 +130,7 @@ namespace Client.View
             {
                 string msg = "{0}".FormatWith(e.Error.GetFullInfo());
                 System.Diagnostics.Debug.WriteLine(msg);
+                DisplayAlert("捕获异常", e.Error.GetFullInfo(), "确定");
             }
         }
 

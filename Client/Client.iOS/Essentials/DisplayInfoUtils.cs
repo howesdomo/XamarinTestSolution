@@ -1,12 +1,11 @@
 ﻿using Xamarin.Forms;
 
-[assembly: Dependency(typeof(Client.iOS.DisplayInfoUtilsV2))]
+[assembly: Dependency(typeof(Client.iOS.DisplayInfoUtils))]
 namespace Client.iOS
-// namespace Util.XamariN.Essentials
 {
-    public class DisplayInfoUtilsV2 : Util.XamariN.Essentials.IDisplayInfoUtils
+    public class DisplayInfoUtils : Util.XamariN.Essentials.IDisplayInfoUtils
     {
-        public DisplayInfoUtilsV2()
+        public DisplayInfoUtils()
         {
 
         }

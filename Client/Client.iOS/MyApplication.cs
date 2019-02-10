@@ -16,7 +16,6 @@ namespace Client.iOS
         {
             string msg = "{0}".FormatWith(e.ExceptionObject.ToString());
             System.Diagnostics.Debug.WriteLine(msg);
-            // DisplayCrashReport();
             HandleException("CurrentDomain_UnhandledException", new Exception(msg));
         }
 
@@ -24,13 +23,11 @@ namespace Client.iOS
         {
             string msg = "{0}".FormatWith(e.Exception.GetFullInfo());
             System.Diagnostics.Debug.WriteLine(msg);
-            // DisplayCrashReport();
             HandleException("TaskScheduler_UnobservedTaskException", e.Exception);
         }
 
         private static void HandleException(string from, Exception ex)
         {
-
             System.Diagnostics.Debug.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             System.Diagnostics.Debug.WriteLine("Has Exception from : {0}".FormatWith(from));
             System.Diagnostics.Debug.WriteLine("{0}".FormatWith(ex.GetFullInfo()));
@@ -41,69 +38,95 @@ namespace Client.iOS
 
             try
             {
-                const string errorFilename = "Fatal.log";
-                var libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Resources);
-                var errorFilePath = System.IO.Path.Combine(libraryPath, errorFilename);
+                //const string errorFilename = "Fatal.log";
+                //var libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Resources);
+                //var errorFilePath = System.IO.Path.Combine(libraryPath, errorFilename);
 
-                string[] directories = System.IO.Directory.GetDirectories(libraryPath);
+                //string[] directories = System.IO.Directory.GetDirectories(libraryPath);
 
-                //if (System.IO.Directory.Exists(libraryPath) == true)
+                ////if (System.IO.Directory.Exists(libraryPath) == true)
+                ////{
+                ////    getDir(libraryPath, 1);
+                ////}
+
+                //if (System.IO.File.Exists(errorFilePath) == true)
                 //{
-                //    getDir(libraryPath, 1);
+                //    var errorText = System.IO.File.ReadAllText(errorFilePath);
+                //    System.Diagnostics.Debug.WriteLine(errorText);
                 //}
 
-                if (System.IO.File.Exists(errorFilePath) == true)
+                #region 处理程序（记录 异常、设备信息、时间等重要信息）
+
+                StringBuilder sb = new StringBuilder();
+
+                string errorMsg = ex.GetFullInfo();
+                System.Diagnostics.Debug.WriteLine(errorMsg);
+
+                sb.AppendLine("账号信息:");
+
+                if (Client.Common.StaticInfo.CurrentUser == null)
                 {
-                    var errorText = System.IO.File.ReadAllText(errorFilePath);
-                    System.Diagnostics.Debug.WriteLine(errorText);
+                    Client.Common.StaticInfo.CurrentUser = new DL.Model.User()
+                    {
+                        ID = Guid.Empty,
+                        LoginAccount = "D3333",
+                        UserName = "Howe",
+                        DeviceInfo = Util.JsonUtils.SerializeObject(Common.StaticInfo.DeviceInfo)
+                    };
                 }
 
+                sb.AppendLine(Client.Common.StaticInfo.CurrentUser.ID.ToString());
+                sb.AppendLine(Client.Common.StaticInfo.CurrentUser.LoginAccount);
+                sb.AppendLine(Client.Common.StaticInfo.CurrentUser.UserName);
+                sb.AppendLine();
+                sb.AppendLine("设备信息:");
+                sb.AppendLine(Client.Common.StaticInfo.DeviceInfo.ToString());
+                sb.AppendLine();
+                sb.AppendLine("异常信息:");
+                sb.AppendLine(errorMsg);
 
-                // TODO 将错误信息传导服务器中
+                // Android.Util.Log.Error("UnhandledEx", errorMsg); // TODO Log
 
-                //var alert = UIAlertController.Create("捕获全局异常", ex.GetFullInfo(), UIAlertControllerStyle.Alert);
-                //alert.AddAction(UIAlertAction.Create("Yes",
-                //    UIAlertActionStyle.Default,
-                //    null
-                //    // TODO 将错误信息发送到服务器
-                //    //action => 
-                //    //{
-                //    //    // throw new Exception("Throw Exception By Howe"); 
-                //    //}
-                // ));
-                //Window.RootViewController.PresentViewController(viewControllerToPresent: alert, animated: false, completionHandler: null);
+                new WebService().CollectUnhandleException
+                (
+                    sb.ToString(),
+                    Client.Common.StaticInfo.CurrentUser
+                 );
 
+                #endregion
 
-                //var alertView = new UIAlertView
-                //(
-                //    title: "Crash Report",
-                //    message: ex.GetFullInfo(),
-                //    del: null,
-                //    cancelButtonTitle: "关闭",
-                //    otherButtons: "Clear"
-                //);
+                Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    var alertView = new UIAlertView
+                    (
+                        title: "Crash Report",
+                        message: sb.ToString(), // ex.GetFullInfo(),
+                        del: null,
+                        cancelButtonTitle: "关闭",
+                        otherButtons: "Clear"
+                    );
 
-                //alertView.UserInteractionEnabled = true;
+                    alertView.UserInteractionEnabled = true;
 
-                //alertView.Clicked += (sender, args) =>
-                //{
-                //    System.Diagnostics.Debug.WriteLine("Click alterView");
-                //};
+                    alertView.Clicked += (sender, args) =>
+                    {
+                        System.Diagnostics.Debug.WriteLine("Click alterView");
+                    };
 
-                //alertView.Show();
+                    alertView.Show();
+                });
             }
             catch (Exception ex2)
             {
 #if DEBUG
                 System.Diagnostics.Debugger.Break();
 #endif
+
                 System.Diagnostics.Debug.WriteLine("+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O+O");
                 System.Diagnostics.Debug.WriteLine(ex2.GetFullInfo());
             }
         }
 
-
-        // #endregion
 
     }
 }

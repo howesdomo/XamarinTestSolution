@@ -69,6 +69,9 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchExtraArgs>-v -v -v -v -cxx -gcc_flags "-ObjC -lsqlite3.0 -lc++ -framework CoreLocation -framework SystemConfiguration -framework Security -framework CoreTelephony -framework AdSupport"</MtouchExtraArgs>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>

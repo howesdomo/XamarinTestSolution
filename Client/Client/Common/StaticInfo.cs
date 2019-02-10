@@ -107,9 +107,15 @@ namespace Client.Common
             {
                 if (_DeviceInfo == null)
                 {
-                    // _DeviceInfo = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>().GetDeviceInfo();
-                    var q = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>();
-                    _DeviceInfo = q.GetDeviceInfo();
+                    Util.XamariN.Essentials.IDeviceInfoUtils match = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDeviceInfoUtils>();
+                    if (match == null)
+                    {
+                        throw new Exception("未能找到实现 Util.XamariN.Essentials.IDeviceInfoUtils 的依赖");
+                    }
+                    else
+                    {
+                        _DeviceInfo = match.GetDeviceInfo();
+                    }
                 }
                 return _DeviceInfo;
             }
@@ -122,10 +128,19 @@ namespace Client.Common
         {
             get
             {
-                // 采用接口方式处理 Android / iOS 的调用问题
+                // 采用依赖注入接口方式处理 Android / iOS 的调用问题
                 // 具体如何实现接口请参考 CoreUtil.XamariN.AndroiD , DisplayInfoUtils
+                
                 // 由于屏幕会旋转, 所以每次都获取最新信息
-                return Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDisplayInfoUtils>().GetDisplayInfo();
+                Util.XamariN.Essentials.IDisplayInfoUtils match = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDisplayInfoUtils>();
+                if (match == null)
+                {
+                    throw new Exception("未能找到实现 Util.XamariN.Essentials.IDisplayInfoUtils 的依赖");
+                }
+                else
+                {
+                    return match.GetDisplayInfo();
+                }
             }
         }
 

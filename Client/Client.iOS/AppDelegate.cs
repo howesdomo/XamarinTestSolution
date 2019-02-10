@@ -38,8 +38,12 @@ namespace Client.iOS
 
             // End Add by Howe
 
-            Xamarin.Forms.DependencyService.Register<Util.XamariN.Essentials.IDeviceInfoUtils>();
-            Xamarin.Forms.DependencyService.Register<Util.XamariN.Essentials.IDisplayInfoUtils>();
+            var Model = Xamarin.Essentials.DeviceInfo.Model;
+            var Platform = Xamarin.Essentials.DeviceInfo.Platform;
+            var Manufacturer = Xamarin.Essentials.DeviceInfo.Manufacturer;
+
+            //Xamarin.Forms.DependencyService.Register<Util.XamariN.Essentials.IDeviceInfoUtils>();
+            //Xamarin.Forms.DependencyService.Register<Util.XamariN.Essentials.IDisplayInfoUtils>();
 
             return base.FinishedLaunching(app, options);
         }

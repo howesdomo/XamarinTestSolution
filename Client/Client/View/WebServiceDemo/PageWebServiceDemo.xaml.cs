@@ -13,7 +13,7 @@ namespace Client.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageWebServiceDemo : ContentPage
     {
-        //AppWebWebService mAppWeb { get; set; }
+        
 
         public PageWebServiceDemo()
         {
@@ -31,21 +31,14 @@ namespace Client.View
         {
             // this.btnTest.Clicked += BtnTest_Clicked;
             this.btnTestWebAPI.Clicked += BtnTestWebAPI_Clicked;
-            this.btnTest3.Clicked += BtnTest3_Clicked;
-            this.btnWebServiceLastest.Clicked += BtnWebServiceLastest_Clicked;
+            this.btnUploadUncatchException.Clicked += btnUploadUncatchException_Clicked;
 
             this.btnTest5_1.Clicked += BtnTest5_1_Clicked;
             this.btnTest5_2.Clicked += BtnTest5_2_Clicked;
-
         }
 
-        private void BtnTestWebAPI_Clicked(object sender, EventArgs e)
-        {
-            string uri = "http://192.168.1.215:17911/AppWebApplication461/api/orders";
-            Data_WebAPI.MyWebClient web = new Data_WebAPI.MyWebClient(uri);
-            web.GetOrder();
-        }
-
+        //AppWebWebService mAppWeb { get; set; }
+        //
         //async void BtnTest_Clicked(object sender, EventArgs e)
         //{
         //    try
@@ -61,7 +54,18 @@ namespace Client.View
         //    }
         //}
 
-        async void BtnTest3_Clicked(object sender, EventArgs e)
+        private void BtnTestWebAPI_Clicked(object sender, EventArgs e)
+        {
+            string uri = "http://192.168.1.215:17911/AppWebApplication461/api/orders";
+            Data_WebAPI.MyWebClient web = new Data_WebAPI.MyWebClient(uri);
+            web.GetOrder();
+        }
+
+
+        #region 上传全局捕获异常信息到服务器 (过时) 请用下方最新的写法
+
+        [Obsolete]
+        async void btnUploadUncatchException_Clicked_Obsolete(object sender, EventArgs e)
         {
             if (Common.StaticInfo.CurrentUser == null)
             {
@@ -119,8 +123,11 @@ namespace Client.View
             }
         }
 
+        #endregion
 
-        private void BtnWebServiceLastest_Clicked(object sender, EventArgs e)
+        #region 上传全局捕获异常信息到服务器 (最新)
+
+        private void btnUploadUncatchException_Clicked(object sender, EventArgs e)
         {
             if (Common.StaticInfo.CurrentUser == null)
             {
@@ -159,6 +166,9 @@ namespace Client.View
 
         }
 
+        #endregion
+
+        #region 含有 压缩&加密 的WebService
 
         void BtnTest5_1_Clicked(object sender, EventArgs e)
         {
@@ -215,7 +225,6 @@ namespace Client.View
                 }
             );
         }
-
 
         void BtnTest5_2_Clicked(object sender, EventArgs e)
         {
@@ -275,5 +284,7 @@ namespace Client.View
             );
 
         }
+
+        #endregion
     }
 }

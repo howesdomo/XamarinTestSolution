@@ -4,21 +4,17 @@
              x:Class="Client.View.PageWebServiceDemo">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="btnTest" Text="Click(弃用)" />
 
             <Button x:Name="btnTestWebAPI" Text="Click" />
 
-            <Button x:Name="btnTest3" Text="WebServiceV1" />
+            <Button x:Name="btnUploadUncatchException" Text="上传全局捕获异常信息到服务器" />
 
-            <Button x:Name="btnWebServiceLastest" Text="WebService Lastest" />
-
-            <Button x:Name="btnTest5" Text="GZip压缩与RSA加密的 WebService" />
-
-
+            <Label Text="GZip压缩与RSA加密的 WebService" />
             <Label>
                 填写List Count个数
             </Label>
-            <Editor x:Name="txtListCount" Text="400000" />
+            
+            <Editor x:Name="txtListCount" Text="4000" />
 
             <Button x:Name="btnTest5_1" Text="根据ListCount生产数据传输测试(不压缩)" />
 

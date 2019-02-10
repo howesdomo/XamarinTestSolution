@@ -100,8 +100,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BaiduLBS.cs" />
-    <Compile Include="Essentials\DeviceInfo.cs" />
-    <Compile Include="Essentials\DisplayInfoUtils.cs" />
+    <Compile Include="Essentials\DeviceInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Essentials\DisplayInfoUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FileLooper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -205,6 +209,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\raw\bor.mp3" />
     <BundleResource Include="Resources\raw\dingdong.wav" />
+    <None Include="Essentials\ReadMe.txt" />
     <Content Include="Resources\raw\error.mp3" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

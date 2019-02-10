@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 
-[assembly: Dependency(typeof(Client.iOS.DeviceInfoUtils))]
-namespace Client.iOS
+[assembly: Dependency(typeof(Util.XamariN.Essentials.DeviceInfoUtils))]
+namespace Util.XamariN.Essentials
 {
     public class DeviceInfoUtils : Util.XamariN.Essentials.IDeviceInfoUtils
     {

@@ -45,10 +45,11 @@ namespace Client
             this.btnPingDemo.Clicked += BtnPingDemo_Clicked;
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
-            this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;            
+            this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
             this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;
             this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
             // this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
+            this.btnSharpIf.Clicked += BtnSharpIf_Clicked;
         }
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace Client
                 System.Diagnostics.Debug.WriteLine(msg);
                 return;
             }
-            
+
             if (Common.StaticInfo.DeviceInfo.VersionMajor < 6)
             {
                 string msg = "{0}".FormatWith("(无需进行动态权限设置)版本号小于6");
@@ -93,7 +94,7 @@ namespace Client
             }
 
             // 网络定位
-            args = "android.permission.ACCESS_COARSE_LOCATION"; 
+            args = "android.permission.ACCESS_COARSE_LOCATION";
             if (App.Permission.CheckPermission(args) == false)
             {
                 toRequest.Add(args);
@@ -154,7 +155,7 @@ namespace Client
 
         async void BtnPageOutputDemo_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Client.View.PageOutputDemo());            
+            await Navigation.PushAsync(new Client.View.PageOutputDemo());
         }
 
         async void BtnPageScreenDirection_Clicked(object sender, EventArgs e)
@@ -235,6 +236,29 @@ namespace Client
         async void BtnBuBuGao_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.BuBuGao.PageBuBuGao1());
+        }
+
+
+        async void BtnSharpIf_Clicked(object sender, EventArgs e)
+        {
+            string msg = "没有进入代码块";
+
+#if __IOS__
+            msg = "Run at iOS(进入代码块)";
+#elif __ANDROID__
+            msg = "Run at Android(进入代码块)";
+#endif
+
+            if (msg.Equals("没有进入代码块") == true)
+            {
+                switch (Common.StaticInfo.DeviceInfo_Platform)
+                {
+                    case "ANDROID": msg = "Run at Android (没有进入代码块)"; break;
+                    case "IOS": msg = "Run at iOS (没有进入代码块)"; break;
+                }
+            }
+
+            await DisplayAlert("提示", msg, "确认");
         }
 
     }

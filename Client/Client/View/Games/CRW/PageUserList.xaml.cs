@@ -55,7 +55,7 @@ namespace Client.View.Games.CRW
             #region init Data
 
             var users = new ObservableCollection<ModelA>();
-            foreach (ModelA toAdd in Common.StaticInfo.ExternalSQLiteDB.Game_rUserList())
+            foreach (ModelA toAdd in Common.StaticInfo.InnerSQLiteDB.Game_rUserList())
             {
                 users.Add(toAdd);
             }

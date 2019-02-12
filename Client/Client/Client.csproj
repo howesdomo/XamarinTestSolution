@@ -4,6 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml.cs" />
     <Compile Remove="View\WebviewDemo\WebPage.cs" />
@@ -14,8 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\BaseView\back.png" />
     <None Remove="Images\BaseView\CheckBox\check.jpg" />
+    <None Remove="Images\BaseView\CheckBox\check.png" />
     <None Remove="Images\BaseView\CheckBox\uncheck.jpg" />
+    <None Remove="Images\BaseView\CheckBox\uncheck.png" />
     <None Remove="Images\BuBuGao\minus.png" />
     <None Remove="Images\BuBuGao\plus.png" />
     <None Remove="Images\BuBuGao\scan.png" />
@@ -36,8 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\BaseView\CheckBox\check.jpg" />
-    <EmbeddedResource Include="Images\BaseView\CheckBox\uncheck.jpg" />
+    <EmbeddedResource Include="Images\BaseView\back.png" />
+    <EmbeddedResource Include="Images\BaseView\CheckBox\check.png" />
+    <EmbeddedResource Include="Images\BaseView\CheckBox\uncheck.png" />
     <EmbeddedResource Include="Images\BuBuGao\minus.png" />
     <EmbeddedResource Include="Images\BuBuGao\plus.png" />
     <EmbeddedResource Include="Images\BuBuGao\scan.png" />

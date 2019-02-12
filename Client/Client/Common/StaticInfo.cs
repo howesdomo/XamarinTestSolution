@@ -122,6 +122,24 @@ namespace Client.Common
         }
 
         /// <summary>
+        /// 当前运行设备平台
+        /// </summary>
+        public static string DeviceInfo_Platform
+        {
+            get
+            {
+                if (DeviceInfo == null)
+                {
+                    return string.Empty;
+                }
+                else
+                {
+                    return DeviceInfo.Platform.ToUpper();
+                }
+            }
+        }
+
+        /// <summary>
         /// 当前运行设备显示信息
         /// </summary>
         public static Util.XamariN.Essentials.DisplayInfo DisplayInfo

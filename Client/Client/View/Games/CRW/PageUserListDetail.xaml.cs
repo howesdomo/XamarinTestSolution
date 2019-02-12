@@ -61,7 +61,7 @@ namespace Client.View.Games.CRW
         {
             var a1 = new ObservableCollection<DailyUserRecord>();
 
-            foreach (var item in Common.StaticInfo.ExternalSQLiteDB.Game_rUserDetail(this.ViewModel.User, 1))
+            foreach (var item in Common.StaticInfo.InnerSQLiteDB.Game_rUserDetail(this.ViewModel.User, 1))
             {
                 a1.Add(item);
             }
@@ -72,7 +72,7 @@ namespace Client.View.Games.CRW
 
             var a2 = new ObservableCollection<DailyUserRecord>();
 
-            foreach (var item in Common.StaticInfo.ExternalSQLiteDB.Game_rUserDetail(this.ViewModel.User, 2))
+            foreach (var item in Common.StaticInfo.InnerSQLiteDB.Game_rUserDetail(this.ViewModel.User, 2))
             {
                 a2.Add(item);
             }

@@ -13,7 +13,8 @@ namespace Client.iOS
     public class MyTTS : Client.Common.ITTS
     {
         private float mVolume = 0.5f;
-        private float mPitch = 1.0f;
+        private float mPitch = 1.0f; // 音高
+        private float mRate = 1.0f; // 语速
 
         private AVSpeechSynthesizer mSpeechSynthesizer = new AVSpeechSynthesizer();
 
@@ -82,7 +83,8 @@ namespace Client.iOS
         /// <param name="args"></param>
         public void SetSpeechRateSilent(float args)
         {
-            this.mPitch = args;
+            // this.mPitch = args;
+            this.mRate = args;
         }
 
         /// <summary>
@@ -104,8 +106,10 @@ namespace Client.iOS
                     Rate = AVSpeechUtterance.MaximumSpeechRate / 3,
                     Voice = AVSpeechSynthesisVoice.FromLanguage("zh-CN"),
                     Volume = mVolume,
-                    PitchMultiplier = mPitch
+                    PitchMultiplier = mPitch,
                 };
+
+                speechUtterance.Rate = mRate;
 
                 mSpeechSynthesizer.SpeakUtterance(speechUtterance);
 

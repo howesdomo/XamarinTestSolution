@@ -36,15 +36,14 @@ namespace Client.Droid
             this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReversePortrait;
         }
 
-
         public void ForceLandscapeLeft()
         {
-            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Landscape;
+            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReverseLandscape;
         }
 
         public void ForceLandscapeRight()
         {
-            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReverseLandscape;
+            this.At.RequestedOrientation = Android.Content.PM.ScreenOrientation.Landscape;
         }
 
         public void ForceNosensor()

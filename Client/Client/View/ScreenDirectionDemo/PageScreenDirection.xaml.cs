@@ -28,6 +28,11 @@ namespace Client.View
             this.btn4.Clicked += Btn4_Clicked;
         }
 
+        protected override void OnDisappearing()
+        {
+            App.ScreenDirection.Unspecified();
+            base.OnDisappearing();
+        }
 
         private void Btn1_Clicked(object sender, EventArgs e)
         {

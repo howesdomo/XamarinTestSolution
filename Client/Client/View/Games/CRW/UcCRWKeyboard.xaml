@@ -16,19 +16,19 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btn7" Grid.Row="0" Grid.Column="0" Text="7" />
-            <Button x:Name="btn8" Grid.Row="0" Grid.Column="1" Text="8" />
-            <Button x:Name="btn9" Grid.Row="0" Grid.Column="2" Text="9" />
+            <Button x:Name="btn7" Grid.Row="0" Grid.Column="0" Text="7" BackgroundColor="Silver" />
+            <Button x:Name="btn8" Grid.Row="0" Grid.Column="1" Text="8" BackgroundColor="Silver"  />
+            <Button x:Name="btn9" Grid.Row="0" Grid.Column="2" Text="9" BackgroundColor="Silver"  />
 
-            <Button x:Name="btn4" Grid.Row="1" Grid.Column="0" Text="4" />
-            <Button x:Name="btn5" Grid.Row="1" Grid.Column="1" Text="5" />
-            <Button x:Name="btn6" Grid.Row="1" Grid.Column="2" Text="6" />
+            <Button x:Name="btn4" Grid.Row="1" Grid.Column="0" Text="4" BackgroundColor="Silver"  />
+            <Button x:Name="btn5" Grid.Row="1" Grid.Column="1" Text="5" BackgroundColor="Silver"  />
+            <Button x:Name="btn6" Grid.Row="1" Grid.Column="2" Text="6" BackgroundColor="Silver"  />
 
-            <Button x:Name="btn1" Grid.Row="2" Grid.Column="0" Text="1" />
-            <Button x:Name="btn2" Grid.Row="2" Grid.Column="1" Text="2" />
-            <Button x:Name="btn3" Grid.Row="2" Grid.Column="2" Text="3" />
+            <Button x:Name="btn1" Grid.Row="2" Grid.Column="0" Text="1" BackgroundColor="Silver"  />
+            <Button x:Name="btn2" Grid.Row="2" Grid.Column="1" Text="2" BackgroundColor="Silver"  />
+            <Button x:Name="btn3" Grid.Row="2" Grid.Column="2" Text="3" BackgroundColor="Silver"  />
 
-            <Button x:Name="btn0" Grid.Row="3" Grid.Column="1" Text="0" />
+            <Button x:Name="btn0" Grid.Row="3" Grid.Column="1" Text="0" BackgroundColor="Silver"  />
         </Grid>
   </ContentView.Content>
 </ContentView>

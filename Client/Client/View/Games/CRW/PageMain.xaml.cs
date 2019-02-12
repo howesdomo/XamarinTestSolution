@@ -42,7 +42,7 @@ namespace Client.View.Games.CRW
 
             #region 数据库锻炼时间赋值
 
-            CRWLog log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+            CRWLog log = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
             this.ViewModel.DB_Today_CRWUseTimeInfo = TimeSpan.FromTicks(log.UseTime.Value);
 
             #endregion
@@ -64,6 +64,8 @@ namespace Client.View.Games.CRW
             this.lblLevelName.Margin = new Thickness(left: 10d, top: 0d, right: 0d, bottom: 0d);
 
             this.lblNextLevel.Margin = new Thickness(left: 10d, top: 0d, right: 10d, bottom: 0d);
+
+            this.btnNextLevel.Margin = new Thickness(left: 5d, top: 5d, right: 5d, bottom: 5d);
         }
 
         protected override void OnAppearing()
@@ -76,10 +78,8 @@ namespace Client.View.Games.CRW
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                // TODO 设置常亮
-                // 暂时无法使用 Xamarin.Essentials.ScreenLock.RequestActive 来设置屏幕常亮
-                App.ScreenDirection.ForceLandscapeLeft();
-
+                // TODO 设置常亮 -- 暂时无法使用 Xamarin.Essentials.ScreenLock.RequestActive 来设置屏幕常亮
+                App.ScreenDirection.ForceLandscapeRight();
                 gameContinue();
             });
         }
@@ -155,6 +155,16 @@ namespace Client.View.Games.CRW
             this.gCRWKeyboard.InputValueEvent += new EventHandler<CRW_Keyboard_EventArgs>(receiveUserAnswer);
 
             this.btnNextLevel.Clicked += BtnNextLevel_Clicked;
+
+            // 点击图片事件
+            TapGestureRecognizer imageTapGesture = new TapGestureRecognizer();
+            imageTapGesture.Tapped += ImageTapGesture_Tapped;
+            btnBack.GestureRecognizers.Add(imageTapGesture);
+        }
+
+        private void ImageTapGesture_Tapped(object sender, EventArgs e)
+        {
+            showCloseDisplayAlert();
         }
 
         protected override bool OnBackButtonPressed()
@@ -221,7 +231,7 @@ namespace Client.View.Games.CRW
 
         private void readLevel()
         {
-            CRWLog log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+            CRWLog log = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
             if (log.NextLevel.HasValue)
             {
                 var now = WebDateTime.Now;
@@ -242,10 +252,10 @@ namespace Client.View.Games.CRW
                     UseTimeDisplay = log.UseTimeDisplay
                 };
 
-                Client.Common.StaticInfo.ExternalSQLiteDB.CRW_cLog(toAdd);
+                Client.Common.StaticInfo.InnerSQLiteDB.CRW_cLog(toAdd);
 
                 // 再次获取
-                log = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+                log = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
             }
 
             CRW_Level level = new CRW_Level(log.Level, this.ViewModel.CRWTypeID);
@@ -313,13 +323,13 @@ namespace Client.View.Games.CRW
                 System.Diagnostics.Debug.WriteLine(result.Item2);
                 App.Output.Info(Tag, result.Item2);
 
-                var lastestLog = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
+                var lastestLog = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
                 lastestLog.NextLevel = result.Item1.LevelNo;
                 lastestLog.Percentage = Convert.ToInt32(correctPercentage);
                 lastestLog.UseTime = this.ViewModel.swCRW_UseTime.ElapsedTicks;
                 lastestLog.UseTimeDisplay = this.ViewModel.CRW_UseTimeInfo;
 
-                Client.Common.StaticInfo.ExternalSQLiteDB.CRW_uLog(lastestLog);
+                Client.Common.StaticInfo.InnerSQLiteDB.CRW_uLog(lastestLog);
 
                 // 设置新的等级, 计算新的题目
                 this.ViewModel.Level = result.Item1;
@@ -344,7 +354,7 @@ namespace Client.View.Games.CRW
                     UseTimeDisplay = this.ViewModel.CRW_UseTimeInfo
                 };
 
-                Client.Common.StaticInfo.ExternalSQLiteDB.CRW_cLog(toAdd);
+                Client.Common.StaticInfo.InnerSQLiteDB.CRW_cLog(toAdd);
 
                 this.playNextLevelVideo(result.Item2);
                 return;
@@ -623,7 +633,7 @@ namespace Client.View.Games.CRW
             btnNextLevel.IsEnabled = false;
             lblNextLevel.Text = ttsContent;
 
-            App.TTS.SetSpeechRateSilent(1f);
+            App.TTS.SetSpeechRateSilent(this.ViewModel.Level.SpeechRate);
             App.TTS.Play(ttsContent);
             mBGWorker_WaitNextLevel.RunWorkerAsync();
         }
@@ -701,7 +711,7 @@ namespace Client.View.Games.CRW
 
         private void mBGWorker_StartGame_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            App.TTS.SetSpeechRateSilent(1f);
+            App.TTS.SetSpeechRateSilent(this.ViewModel.Level.SpeechRate);
             App.TTS.Play(this.ViewModel.Level.LevelTTSName);
             System.Threading.Thread.Sleep(this.ViewModel.Level.LevelTTS_SleepTime);
             App.TTS.Play("开始");

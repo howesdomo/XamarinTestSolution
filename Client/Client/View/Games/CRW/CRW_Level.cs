@@ -37,11 +37,19 @@ namespace Client.View.Games.CRW
 
             if (this.LevelNo % 2 == 0)
             {
-                this.SpeechRate = 0.5f;
+                switch (Common.StaticInfo.DeviceInfo_Platform)
+                {
+                    case "ANDROID": this.SpeechRate = 0.5f; break;
+                    case "IOS": this.SpeechRate = 0.5f; break;
+                }
             }
             else
             {
-                this.SpeechRate = 1f;
+                switch (Common.StaticInfo.DeviceInfo_Platform)
+                {
+                    case "ANDROID": this.SpeechRate = 1f; break;
+                    case "IOS": this.SpeechRate = 0.55f; break;
+                }
             }
 
 

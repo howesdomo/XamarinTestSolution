@@ -119,8 +119,8 @@ namespace Client.iOS
                 }
             );
 
-            //// 实现IOutput接口 - 用 Logcat 来实现
-            //App.Output = new MyOutput();
+            // 实现IOutput接口 - 用 Logcat 来实现
+            App.Output = new MyOutput(); // TODO 未知道 iOS 是否有类似安卓的 LogUtil
 
             // 屏幕方向
             App.ScreenDirection = new ScreenDirection();

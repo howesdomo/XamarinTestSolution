@@ -16,8 +16,8 @@ namespace Client.BaseView
         private readonly Label _label;
 
         //CHANGE THESE 2 STRINGS ACCORDING TO YOUR NAMESPACE AND IMAGE
-        static string imgUnchecked = "Client.Images.BaseView.CheckBox.uncheck.jpg";
-        static string imgChecked = "Client.Images.BaseView.CheckBox.check.jpg";
+        static string imgUnchecked = "Client.Images.BaseView.CheckBox.uncheck.png";
+        static string imgChecked = "Client.Images.BaseView.CheckBox.check.png";
 
         public static readonly BindableProperty CommandProperty = BindableProperty.Create("Command", typeof(ICommand), typeof(Checkbox));
 

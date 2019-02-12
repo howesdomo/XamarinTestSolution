@@ -23,6 +23,14 @@ namespace Client.iOS
         {
             string msg = "{0}".FormatWith(e.Exception.GetFullInfo());
             System.Diagnostics.Debug.WriteLine(msg);
+
+            if (msg.IsNullOrWhiteSpace() == false 
+                && msg.StartsWith(@"A Task's exception(s) were not observed either by Waiting on the Task or accessing its Exception property. As a result, the unobserved exception was rethrown by the finalizer thread.") == true)
+            {
+                // 暂时未能找出为什么经常会捕获到此异常的原因, 暂时忽略此错误
+                return;
+            }
+
             HandleException("TaskScheduler_UnobservedTaskException", e.Exception);
         }
 

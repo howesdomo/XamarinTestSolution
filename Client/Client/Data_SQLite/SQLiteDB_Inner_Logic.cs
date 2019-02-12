@@ -52,6 +52,7 @@ namespace Client.Data
             initNoteItemStructure();
             initGameStructure();
             initBuBuGaoStructure();
+            initCRWStructure();
         }
 
         private void updateInnerDBStruct_v2(DBVersion dbVersion)
@@ -110,6 +111,12 @@ namespace Client.Data
         }
 
         #endregion
+
+        private void initCRWStructure()
+        {
+            mDatabase.CreateTableAsync<View.Games.CRW.Game_User>().Wait();
+            mDatabase.CreateTableAsync<View.Games.CRW.CRWLog>().Wait();
+        }
 
         #region Game - CRW
 

@@ -34,6 +34,12 @@ namespace Client.View.Games
             return true;
         }
 
+        protected override void OnAppearing()
+        {
+            App.ScreenDirection.Unspecified();
+            base.OnAppearing();
+        }
+
         async void showCloseDisplayAlert()
         {
             var result = await this.DisplayAlert
@@ -65,7 +71,7 @@ namespace Client.View.Games
 
         private void BtnDB_Clicked(object sender, EventArgs e)
         {
-            CRW.Game_User o = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = "Howe" });
+            CRW.Game_User o = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = "Howe" });
 
             string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(o));
             System.Diagnostics.Debug.WriteLine(msg);
@@ -87,7 +93,7 @@ namespace Client.View.Games
         {
             if (App.TTS.Check_InitTextToSpeech() == true)
             {
-                Game_User = Client.Common.StaticInfo.ExternalSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
+                Game_User = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
                 var page = new Client.View.Games.CRW.PageMain(CRWTypeID);
                 await Navigation.PushAsync(page);
                 return;

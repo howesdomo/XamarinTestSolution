@@ -50,7 +50,9 @@ namespace Client
             this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
             // this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
             this.btnSharpIf.Clicked += BtnSharpIf_Clicked;
+            this.btnAccommodatingViewAndKeyboard.Clicked += BtnAccommodatingViewAndKeyboard_Clicked;
         }
+
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
         {
@@ -259,6 +261,11 @@ namespace Client
             }
 
             await DisplayAlert("提示", msg, "确认");
+        }
+
+        async void BtnAccommodatingViewAndKeyboard_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.AccommodatingViewAndKeyboard.Page1());
         }
 
     }

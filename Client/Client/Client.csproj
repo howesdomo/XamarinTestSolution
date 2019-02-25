@@ -104,6 +104,9 @@
     <EmbeddedResource Update="BaseView\UcAudioSetting.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\AccommodatingViewAndKeyboard\Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\BaiduDemo\PageBaiduLocation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -252,5 +255,6 @@
     <Folder Include="Connected Services\" />
     <Folder Include="Model\" />
     <Folder Include="View\Excel_AsposeDemo\" />
+    <Folder Include="View\Moving\" />
   </ItemGroup>
 </Project>

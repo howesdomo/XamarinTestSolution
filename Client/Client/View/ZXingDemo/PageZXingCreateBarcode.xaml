@@ -4,18 +4,20 @@
              xmlns:zxView="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              x:Class="Client.View.ZXingDemo.PageZXingCreateBarcode">
     <ContentPage.Content>
-        <Grid x:Name="gMain">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <zxView:ZXingBarcodeImageView x:Name="barcodeImageView1" />
-            <Entry x:Name="txtContent" Text="Hello Xamarin" Grid.Row="1" />
-            <Button x:Name="btnCreate" Text="Create Barcode" Grid.Row="2" />
-        </Grid>
+        <ScrollView>
+            <Grid x:Name="gMain">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <zxView:ZXingBarcodeImageView x:Name="barcodeImageView1" />
+                <Entry x:Name="txtContent" Text="Hello Xamarin" Grid.Row="1" />
+                <Button x:Name="btnCreate" Text="Create Barcode" Grid.Row="2" />
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

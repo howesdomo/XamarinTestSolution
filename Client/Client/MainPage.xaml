@@ -59,7 +59,11 @@
             <Button x:Name="btnExcelByAsposeCell" Text="Excel Aspose.Cell" />
 
             <Button x:Name="btnSharpIf" Text="#if something" />
-            
+
+            <Button x:Name="btnAccommodatingViewAndKeyboard" Text="对于软键盘自动调整画面(iOS)" />
+
+            <Button x:Name="btnAccommodatingViewAndKeyboard2" Text="对于软键盘自动调整画面(Android)" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

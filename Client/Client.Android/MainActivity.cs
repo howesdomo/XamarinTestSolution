@@ -111,6 +111,9 @@ namespace Client.Droid
                 }
             );
 
+            // 设置软键盘显示时, View 自动调整适应
+            // Window.SetSoftInputMode(Android.Views.SoftInput.AdjustResize);
+
             // 实现IOutput接口 - 用 Logcat 来实现
             App.Output = new MyOutput();
 

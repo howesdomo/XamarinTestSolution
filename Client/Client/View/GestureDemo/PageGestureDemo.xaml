@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.GestureDemo.PageGestureDemo">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="lblTap" Text="请点击我两次"
+                HeightRequest="200"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="LightBlue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="2"
+                                          Tapped="TapGestureRecognizer_Tapped"
+                                          />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label x:Name="lblTap2" Text="请点击我两次(手势识别C#定义)"
+                HeightRequest="200"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="LightBlue" />
+
+
+
+                <Image x:Name="imgPinch"
+                        WidthRequest="200"
+                        HeightRequest="200">
+                    <Image.GestureRecognizers>
+                        <PinchGestureRecognizer PinchUpdated="PinchGestureRecognizer_PinchUpdated" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+                <Label x:Name="lblPan" Text="平移手势"
+                HeightRequest="200"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="LightBlue">
+                    <Label.GestureRecognizers>
+                        <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+                <Label x:Name="lblSwipe" Text="滑动手势"
+                HeightRequest="200"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="LightBlue">
+                    <Label.GestureRecognizers>
+                        <SwipeGestureRecognizer Direction="Left" Swiped="SwipeGestureRecognizer_Swiped" />
+                        <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped"/>
+                        <SwipeGestureRecognizer Direction="Right" Swiped="SwipeGestureRecognizer_Swiped" />
+                        <SwipeGestureRecognizer Direction="Down" Swiped="SwipeGestureRecognizer_Swiped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Text="**占位用**"
+                HeightRequest="200" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

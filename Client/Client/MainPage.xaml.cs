@@ -25,10 +25,29 @@ namespace Client
 
         private void initEvent()
         {
+            #region 隐藏内容
+
+            TapGestureRecognizer tapShowHidden = new TapGestureRecognizer()
+            {
+                NumberOfTapsRequired = 2,
+                Command = new Command(() =>
+                {
+                    this.btnGames.IsVisible = !this.btnGames.IsVisible;
+                    this.btnBuBuGao.IsVisible = !this.btnBuBuGao.IsVisible;
+                    this.btnPageShuangSeQiu.IsVisible = !this.btnPageShuangSeQiu.IsVisible;
+                })
+            };
+            this.btnShowHidden.GestureRecognizers.Add(tapShowHidden);
+
             this.btnBuBuGao.Clicked += BtnBuBuGao_Clicked;
             this.btnGames.Clicked += BtnGames_Clicked;
-            this.btnTimer.Clicked += BtnTimer_Clicked;
             this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
+
+            #endregion
+
+            this.btnAllPage.Clicked += BtnAllPage_Clicked;
+            this.btnLayoutDemoList.Clicked += BtnLayoutDemoList_Clicked;
+            this.btnTimer.Clicked += BtnTimer_Clicked;
             this.btnDevExpress.Clicked += BtnDevExpress_Clicked;
             this.btnPageLifecycle.Clicked += BtnPageLifecycle_Clicked;
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
@@ -51,8 +70,21 @@ namespace Client
             // this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
             this.btnSharpIf.Clicked += BtnSharpIf_Clicked;
             this.btnAccommodatingViewAndKeyboard.Clicked += BtnAccommodatingViewAndKeyboard_Clicked;
+            this.btnGestureDemo.Clicked += BtnGestureDemo_Clicked;
+            this.btnGesturePinchDemo.Clicked += BtnGesturePinchDemo_Clicked;
         }
 
+
+
+        async void BtnAllPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.AllPageDemo.AllPageList());
+        }
+
+        async void BtnLayoutDemoList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.LayoutDemo.LayoutDemoList());
+        }
 
         void BtnAndroidPermission_Clicked(object sender, EventArgs e)
         {
@@ -266,6 +298,17 @@ namespace Client
         async void BtnAccommodatingViewAndKeyboard_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.AccommodatingViewAndKeyboard.Page1());
+        }
+
+        async void BtnGestureDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.GestureDemo.PageGestureDemo());
+        }
+
+
+        async void BtnGesturePinchDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.GestureDemo.PagePinch());
         }
 
     }

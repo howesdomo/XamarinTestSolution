@@ -3,22 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Client"
              x:Class="Client.MainPage"
-             Title="V 1.0.0.1"
-             >    
+             >
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!-- Title -->
+            <Label Text="V 1.0.0.1" />
+
+            <!-- 1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right-->
+            <StackLayout Grid.Column="1" Orientation="Horizontal">
+                <Image x:Name="btnShowHidden"
+                   WidthRequest="20" HeightRequest="20" 
+                   Source="{local:EmbeddedResource Client.Images.BuBuGao.plus.png}" />
+                <BoxView BackgroundColor="Transparent" WidthRequest="5" />
+            </StackLayout>
+
+        </Grid>
+    </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout>
-            <Button x:Name="btnBuBuGao" Text="补补高点读机" />
             
-            <Button x:Name="btnGames" Text="Games" />
+            <!-- 隐藏内容 -->
+            <Button x:Name="btnBuBuGao" Text="补补高点读机" IsVisible="False" />
 
-            <Button x:Name="btnTimer" Text="定时助手" />
-            
-            <Button x:Name="btnPageShuangSeQiu" Text="双色球" />
+            <Button x:Name="btnGames" Text="Games" IsVisible="False" />
+
+            <Button x:Name="btnPageShuangSeQiu" Text="双色球" IsVisible="False" />
+
+
+            <!-- 正常内容 -->
+
+            <Button x:Name="btnAllPage" Text="01 - Page测试实例" />
+
+            <Button x:Name="btnLayoutDemoList" Text="02 - Layout测试实例" />
+
+            <Button x:Name="btnTimer" Text="定时助手" />            
 
             <Button x:Name="btnDevExpress" Text="DevExpress.Mobile.Grid" />
 
             <Button x:Name="btnPageLifecycle" Text="Page 生命周期" />
-            
+
             <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
             <Button x:Name="btnPageDisplayAlertDemo" >
                 <Button.Text>
@@ -29,7 +64,7 @@
             <Button x:Name="btnPageOutputDemo" Text="IOutput实现" />
 
             <Button x:Name="btnPageScreenDirection" Text="屏幕方向(IScreenDirection)" />
-            
+
             <Button x:Name="btnPageMessagingCenterDemo" Text="MessagingCenter Demo - 类似安卓的广播" />
 
             <Button x:Name="btnPageSQLiteDemo" Text="SQLite Demo" />
@@ -62,7 +97,9 @@
 
             <Button x:Name="btnAccommodatingViewAndKeyboard" Text="对于软键盘自动调整画面(iOS)" />
 
-            <Button x:Name="btnAccommodatingViewAndKeyboard2" Text="对于软键盘自动调整画面(Android)" />
+            <Button x:Name="btnGestureDemo" Text="手势识别" />
+
+            <Button x:Name="btnGesturePinchDemo" Text="手势识别_缩放手势" />
 
         </StackLayout>
     </ScrollView>

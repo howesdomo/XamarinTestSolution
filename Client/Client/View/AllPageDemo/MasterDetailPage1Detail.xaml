@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.AllPageDemo.MasterDetailPage1Detail"
+             Title="Master Detail Page 2222">
+    <!--使用 NavigationPage.TitleView 没有效果-->
+    <!--<NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Master Detail Page 2222" />
+        </Grid>
+    </NavigationPage.TitleView>-->
+    <StackLayout Padding="10">
+        <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
+        <Label Text="在左边缘往右滑动, 使 MasterDetailPage1Master 显示出来"/>
+    </StackLayout>
+</ContentPage>

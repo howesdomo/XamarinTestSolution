@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Client.BaseView" 
+             x:Class="Client.View.GestureDemo.PagePinch">
+    <ContentPage.Content>
+        <StackLayout>
+            <local:PinchToZoomContainer>
+                <local:PinchToZoomContainer.Content>
+                    <Image x:Name="imgPinch" />
+                </local:PinchToZoomContainer.Content>
+            </local:PinchToZoomContainer>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

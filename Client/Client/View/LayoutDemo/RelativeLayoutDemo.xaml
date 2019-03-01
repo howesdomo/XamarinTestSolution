@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.LayoutDemo.RelativeLayoutDemo">
+    <ContentPage.Content>
+
+
+        <!--
+
+        分别使用XConstraint和YConstraint确定位置和大小，ConstraintExpression的四个属性：
+        - Type：约束是相对于父容器还是某个视图；
+        - Property：使用哪个属性约束的基础；
+        - Factor：属性值因素。起始位置为0，结束位置为1，中间为0.5。例如：上图中使用0.5，故第一个BoxView的左上角本应在中心；
+        - Constant：偏移量。如上xaml。例如：第一个BoxView偏移量为向左，向上分别偏移25个像素，使其中心位于屏幕中心。
+        
+        -->
+
+
+        <RelativeLayout>
+
+            <!-- 相对于 parent 定位 -->
+            <BoxView x:Name="boxViewRed"
+                     BackgroundColor="Red"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5, Constant=0}"
+                     />
+
+            <BoxView BackgroundColor="Blue"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-75}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5, Constant=-75}"
+                     />
+
+
+            <!-- 相对于 boxViewRed 定位 -->
+            <BoxView BackgroundColor="Orange"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=X, Factor=1, Constant=50}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=Y, Factor=1, Constant=0}" />
+
+            <BoxView BackgroundColor="OrangeRed"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=X, Factor=1, Constant=-50}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=Y, Factor=1, Constant=0}" />
+
+            <BoxView BackgroundColor="Purple"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=X, Factor=1, Constant=0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=Y, Factor=1, Constant=50}" />
+
+            <BoxView BackgroundColor="Salmon"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=X, Factor=1, Constant=50}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=boxViewRed, Property=Y, Factor=1, Constant=50}" />
+            
+            
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

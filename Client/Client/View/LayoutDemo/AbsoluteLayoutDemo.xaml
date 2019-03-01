@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.LayoutDemo.AbsoluteLayoutDemo">
+    <ContentPage.Content>
+
+        <!--
+            1.LayoutBounds其实是一个Rectangle，其四个值分别是"x,y,width,height"：
+                - x：水平位置 x；
+                - y：垂直位置 y；
+                - width：视图宽度 width；
+                - height：视图高度 heght；
+        -->
+
+        <AbsoluteLayout>
+            <BoxView AbsoluteLayout.LayoutBounds="0, 0, 50, 50" BackgroundColor="Red" />
+            <BoxView AbsoluteLayout.LayoutBounds="50, 50, 50, 50" BackgroundColor="Orange" />
+            <BoxView AbsoluteLayout.LayoutBounds="0, 100, 50, 50" BackgroundColor="Blue" />
+            <BoxView AbsoluteLayout.LayoutBounds="185, 300, 50, 50" BackgroundColor="Green" />
+            <BoxView AbsoluteLayout.LayoutBounds="0, 450, 50, 50" BackgroundColor="Yellow" />
+            <BoxView AbsoluteLayout.LayoutBounds="300, 450, 50, 50" BackgroundColor="Purple" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

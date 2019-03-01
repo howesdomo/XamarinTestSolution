@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.LayoutDemo.FlexLayoutDemo">
+    <ContentPage.Content>
+
+<!--
+FlexLayout：通过包装水平或垂直布局组织视图。
+可以理解为StackLayout加了包装盒，内容一行放不下时，自动换行显示。
+        
+        
+FlexLayout有以下重要属性：
+- Direction：按行或按列显示。默认按行显示；
+- Wrap：包装方式。如果行或列中子视图内容太多，会自动换行或换列显示；
+- AlignContent：内容对齐；
+- JustifyContent：设置子视图在行或列上的排列方式。
+-->
+
+        <FlexLayout
+            Direction="Row"
+            Wrap="Wrap"
+            AlignContent="Start"
+            JustifyContent="SpaceAround">
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+            <BoxView Color="Blue" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Purple" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Red" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Orange" WidthRequest="50" HeightRequest="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" />
+
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

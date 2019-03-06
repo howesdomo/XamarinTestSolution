@@ -14,7 +14,7 @@ namespace Client.iOS
     {
         private float mVolume = 0.5f;
         private float mPitch = 1.0f; // 音高
-        private float mRate = 1.0f; // 语速
+        private float mRate = 0.5f; // 语速
 
         private AVSpeechSynthesizer mSpeechSynthesizer = new AVSpeechSynthesizer();
 

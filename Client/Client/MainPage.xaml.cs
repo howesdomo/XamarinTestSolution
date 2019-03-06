@@ -72,9 +72,8 @@ namespace Client
             this.btnAccommodatingViewAndKeyboard.Clicked += BtnAccommodatingViewAndKeyboard_Clicked;
             this.btnGestureDemo.Clicked += BtnGestureDemo_Clicked;
             this.btnGesturePinchDemo.Clicked += BtnGesturePinchDemo_Clicked;
+            this.btnMarqueeDemo.Clicked += BtnMarqueeDemo_Clicked;
         }
-
-
 
         async void BtnAllPage_Clicked(object sender, EventArgs e)
         {
@@ -305,12 +304,15 @@ namespace Client
             await Navigation.PushAsync(new View.GestureDemo.PageGestureDemo());
         }
 
-
         async void BtnGesturePinchDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.GestureDemo.PagePinch());
         }
 
+        async void BtnMarqueeDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.MarqueeDemo.MarqueeLabel_V1());
+        }
     }
 
 

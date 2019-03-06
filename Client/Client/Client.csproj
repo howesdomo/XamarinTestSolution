@@ -97,6 +97,9 @@
     <Compile Update="View\Games\CRW\UcUserListDetail.xaml.cs">
       <DependentUpon>UcUserListDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Update="View\MarqueeDemo\MarqueeLabel_V1.xaml.cs">
+      <DependentUpon>MarqueeLabel_V1.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\ScreenDirectionDemo\PageScreenDirection.xaml.cs">
       <DependentUpon>PageScreenDirection.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\MessagingCenterDemo\PageMessagingCenterDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Timer\PageTimer.xaml">

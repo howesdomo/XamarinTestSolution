@@ -101,6 +101,8 @@
 
             <Button x:Name="btnGesturePinchDemo" Text="手势识别_缩放手势" />
 
+            <Button x:Name="btnMarqueeDemo" Text="跑马灯效果Demo集合" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -144,6 +144,64 @@ namespace Client.iOS
             myTask.Start();
         }
 
+
+        /// <summary>
+        /// 实现 ITTS 接口方法
+        /// 播放语音
+        /// </summary>
+        /// <param name="content"></param>
+        public void PlayJapanese(string content)
+        {
+            if (Check_InitTextToSpeech() == false)
+            {
+                return;
+            }
+
+            Task myTask = new Task(() =>
+            {
+                AVSpeechUtterance speechUtterance = new AVSpeechUtterance(content)
+                {
+                    Rate = AVSpeechUtterance.MaximumSpeechRate / 3,
+                    Voice = AVSpeechSynthesisVoice.FromLanguage("ja-JP"),
+                    Volume = mVolume,
+                    PitchMultiplier = mPitch,
+                };
+
+                speechUtterance.Rate = mRate;
+
+                mSpeechSynthesizer.SpeakUtterance(speechUtterance);
+
+            });
+
+            myTask.ContinueWith((task) =>
+            {
+                if (task.IsFaulted == true)
+                {
+                    string msg = string.Empty;
+                    if (task.Exception != null)
+                    {
+                        msg = "TTS Play 异常 : \r\n{0}".FormatWith(task.Exception.GetFullInfo());
+                    }
+                    else
+                    {
+                        msg = "TTS Play 异常 : ".FormatWith();
+                    }
+
+                    System.Diagnostics.Debug.WriteLine(msg);
+
+                    // TODO iOS MyTTS 弹窗提示
+                    //System.Threading.Tasks.Task.Run(() =>
+                    //{
+                    //    Looper.Prepare();
+                    //    Toast.MakeText(((Activity)Xamarin.Forms.Forms.Context), msg, ToastLength.Long).Show();
+                    //    Looper.Loop();
+                    //});
+                }
+            });
+
+            myTask.Start();
+        }
+
         // avspeech支持的语言种类包括：
         //"[AVSpeechSynthesisVoice 0x978a0b0]Language: th-TH", 
         //"[AVSpeechSynthesisVoice 0x977a450]Language: pt-BR", 

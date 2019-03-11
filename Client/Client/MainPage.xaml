@@ -37,6 +37,8 @@
             <!-- 隐藏内容 -->
             <Button x:Name="btnBuBuGao" Text="补补高点读机" IsVisible="False" />
 
+            <Button x:Name="btnBuBuGao_Japanese" Text="补补高点读机(日文)" IsVisible="False" />
+
             <Button x:Name="btnGames" Text="Games" IsVisible="False" />
 
             <Button x:Name="btnPageShuangSeQiu" Text="双色球" IsVisible="False" />
@@ -102,6 +104,8 @@
             <Button x:Name="btnGesturePinchDemo" Text="手势识别_缩放手势" />
 
             <Button x:Name="btnMarqueeDemo" Text="跑马灯效果Demo集合" />
+
+            <Button x:Name="btnLabelDemo" Text="Label Demo" />
 
         </StackLayout>
     </ScrollView>

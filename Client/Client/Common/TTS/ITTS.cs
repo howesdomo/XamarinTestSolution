@@ -12,6 +12,8 @@ namespace Client.Common
 
         void Play(string content);
 
+        void PlayJapanese(string content);
+
         void SetSpeechRate(float args);
 
         /// <summary>

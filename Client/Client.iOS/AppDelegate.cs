@@ -35,6 +35,7 @@ namespace Client.iOS
             // Add by Howe
 
             init();
+            initXLabs();
 
             // End Add by Howe
 
@@ -155,6 +156,14 @@ namespace Client.iOS
             // 这里初始化主题颜色为 Theme.Light
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
+        }
+
+        // XLabs
+        private void initXLabs()
+        {
+            var resolverContainer = new global::XLabs.Ioc.SimpleContainer();
+            resolverContainer.Register<XLabs.Platform.Services.Media.IMediaPicker, XLabs.Platform.Services.Media.MediaPicker>();
+            XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
         }
     }
 }

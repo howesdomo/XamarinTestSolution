@@ -27,7 +27,10 @@ namespace Client.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             // Add by Howe
+
             init();
+            initXLabs();
+
             // End Add by Howe
 
             var app = new App();
@@ -149,6 +152,14 @@ namespace Client.Droid
             // 这里初始化主题颜色为 Theme.Light
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
+        }
+
+        // XLabs
+        private void initXLabs()
+        {
+            var resolverContainer = new global::XLabs.Ioc.SimpleContainer();
+            resolverContainer.Register<XLabs.Platform.Services.Media.IMediaPicker, XLabs.Platform.Services.Media.MediaPicker>();
+            XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

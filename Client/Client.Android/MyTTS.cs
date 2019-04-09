@@ -191,6 +191,46 @@ namespace Client.Droid
 
             myTask.Start();
         }
+
+        public void PlayJapanese(string content)
+        {
+            // TODO 使用TTS播放日语
+            if (Check_InitTextToSpeech() == false)
+            {
+                return;
+            }
+
+            Task myTask = new Task(() =>
+            {
+                mTextToSpeech.Speak(content, QueueMode.Flush, null);
+            });
+
+            myTask.ContinueWith((task) =>
+            {
+                if (task.IsFaulted == true)
+                {
+                    string msg = string.Empty;
+                    if (task.Exception != null)
+                    {
+                        msg = "TTS Play 异常 : \r\n{0}".FormatWith(task.Exception.GetFullInfo());
+                    }
+                    else
+                    {
+                        msg = "TTS Play 异常 : ".FormatWith();
+                    }
+
+                    System.Diagnostics.Debug.WriteLine(msg);
+                    System.Threading.Tasks.Task.Run(() =>
+                    {
+                        Looper.Prepare();
+                        Toast.MakeText(((Activity)Xamarin.Forms.Forms.Context), msg, ToastLength.Long).Show();
+                        Looper.Loop();
+                    });
+                }
+            });
+
+            myTask.Start();
+        }
     }
 
 }

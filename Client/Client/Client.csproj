@@ -29,9 +29,104 @@
     <None Remove="Images\BaseView\CheckBox\check.png" />
     <None Remove="Images\BaseView\CheckBox\uncheck.jpg" />
     <None Remove="Images\BaseView\CheckBox\uncheck.png" />
+    <None Remove="Images\BaseView\minus.png" />
+    <None Remove="Images\BaseView\plus.png" />
+    <None Remove="Images\BaseView\scan.png" />
     <None Remove="Images\BuBuGao\minus.png" />
     <None Remove="Images\BuBuGao\plus.png" />
     <None Remove="Images\BuBuGao\scan.png" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\10_ko.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\11_sa.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\12_shi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\13_su.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\14_se.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\15_so.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\16_ta.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\17_chi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\18_tsu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\19_te.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\1_a.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\20_to.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\21_na.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\22_ni.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\23_nu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\24_ne.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\25_no.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\26_ha.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\27_hi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\28_fu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\29_he.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\2_i.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\30_ho.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\31_ma.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\32_mi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\33_mu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\34_me.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\35_mo.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\36_ya.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\37_yu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\38_yo.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\39_ra.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\3_u.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\40_ri.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\41_ru.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\42_re.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\43_ro.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\44_wa.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\45_o.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\46_n.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\4_e.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\5_o.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\6_ka.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\7_ki.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\8_ku.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Hiragana\9_ke.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\10_ko.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\11_sa.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\12_shi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\13_su.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\14_se.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\15_so.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\16_ta.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\17_chi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\18_tsu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\19_te.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\1_a.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\20_to.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\21_na.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\22_ni.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\23_nu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\24_ne.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\25_no.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\26_ha.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\27_hi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\28_fu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\29_he.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\2_i.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\30_ho.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\31_ma.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\32_mi.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\33_mu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\34_me.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\35_mo.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\36_ya.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\37_yu.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\38_yo.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\39_ra.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\3_u.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\40_ri.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\41_ru.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\42_re.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\43_ro.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\44_wa.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\45_o.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\46_n.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\4_e.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\5_o.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\6_ka.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\7_ki.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\8_ku.gif" />
+    <None Remove="Images\BuBuGao_Japanese\Katakana\9_ke.gif" />
     <None Remove="Images\DevExpressDemo\1.jpg" />
     <None Remove="Images\DevExpressDemo\2.jpg" />
     <None Remove="Images\DevExpressDemo\3.jpg" />
@@ -53,9 +148,104 @@
     <EmbeddedResource Include="Images\BaseView\back.png" />
     <EmbeddedResource Include="Images\BaseView\CheckBox\check.png" />
     <EmbeddedResource Include="Images\BaseView\CheckBox\uncheck.png" />
+    <EmbeddedResource Include="Images\BaseView\minus.png" />
+    <EmbeddedResource Include="Images\BaseView\plus.png" />
+    <EmbeddedResource Include="Images\BaseView\scan.png" />
     <EmbeddedResource Include="Images\BuBuGao\minus.png" />
     <EmbeddedResource Include="Images\BuBuGao\plus.png" />
     <EmbeddedResource Include="Images\BuBuGao\scan.png" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\10_ko.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\11_sa.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\12_shi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\13_su.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\14_se.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\15_so.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\16_ta.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\17_chi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\18_tsu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\19_te.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\1_a.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\20_to.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\21_na.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\22_ni.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\23_nu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\24_ne.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\25_no.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\26_ha.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\27_hi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\28_fu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\29_he.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\2_i.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\30_ho.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\31_ma.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\32_mi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\33_mu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\34_me.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\35_mo.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\36_ya.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\37_yu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\38_yo.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\39_ra.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\3_u.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\40_ri.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\41_ru.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\42_re.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\43_ro.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\44_wa.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\45_o.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\46_n.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\4_e.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\5_o.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\6_ka.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\7_ki.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\8_ku.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Hiragana\9_ke.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\10_ko.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\11_sa.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\12_shi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\13_su.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\14_se.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\15_so.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\16_ta.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\17_chi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\18_tsu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\19_te.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\1_a.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\20_to.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\21_na.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\22_ni.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\23_nu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\24_ne.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\25_no.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\26_ha.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\27_hi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\28_fu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\29_he.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\2_i.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\30_ho.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\31_ma.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\32_mi.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\33_mu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\34_me.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\35_mo.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\36_ya.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\37_yu.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\38_yo.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\39_ra.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\3_u.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\40_ri.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\41_ru.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\42_re.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\43_ro.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\44_wa.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\45_o.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\46_n.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\4_e.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\5_o.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\6_ka.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\7_ki.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\8_ku.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\9_ke.gif" />
     <EmbeddedResource Include="Images\DevExpressDemo\1.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\2.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\3.jpg" />
@@ -83,6 +273,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
     <PackageReference Include="Xamarin.LiveReload" Version="0.3.27" />
+    <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
 
@@ -181,6 +372,9 @@
     <EmbeddedResource Update="View\DisplayAlertDemo\PageDisplayAlertDemoList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\FakeSerialPort\PageFakeSerialPort.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\Games\CRW\PageMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -259,6 +453,9 @@
     <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\SocketDemo\PageSocketDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\Timer\PageTimer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -308,6 +505,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinEssentials\PageXamarinEssentialsDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XLabDemo\PageCamera1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ZXingDemo\PageZXingCreateBarcode.xaml">

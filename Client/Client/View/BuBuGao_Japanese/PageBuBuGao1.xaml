@@ -1,12 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Client"
              x:Class="Client.View.BuBuGao_Japanese.PageBuBuGao1">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!-- Title -->
+            <Label Text="补补高点读机 - V1.2" />
+
+            <!-- 1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right-->
+            <StackLayout Grid.Column="1" Orientation="Horizontal">
+                <BoxView BackgroundColor="Transparent" WidthRequest="5" />
+            </StackLayout>
+
+        </Grid>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <ScrollView HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <Button x:Name="btnStudy" Text="学习" />
+                    <Button x:Name="btnPractice" Text="练习" />
+                    <Button x:Name="btnStudyDesc" Text="学习(逆序)" TextColor="DarkBlue" />
+                    <Button x:Name="btnPracticeDesc" Text="练习(逆序)" TextColor="DarkBlue" />
+                    <Button x:Name="btnStudyRand" Text="学习(乱序)" TextColor="Red" />
+                    <Button x:Name="btnPracticeRand" Text="练习(乱序)" TextColor="Red" />
+                </StackLayout>
+            </ScrollView>
+
+            <ListView x:Name="lvAll" Grid.Row="1"
+                      ItemsSource="{Binding All}" SelectedItem="{Binding SelectedQuestion}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"  />
+                                <Label Text="|学习次数:"  />
+                                <Label Text="{Binding StudyTimes}"  />
+                                <Label Text="|练习次数:"  />
+                                <Label Text="{Binding PracticeTimes}"  />
+                                <Label Text="|已熟是/否:"  />
+                                <Label Text="{Binding IsPassWordsCount}"  />
+                                <Label Text="/"  />
+                                <Label Text="{Binding IsNotPassWordsCount}"  />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal">
+                <Editor x:Name="txtAddNew" WidthRequest="250" HorizontalOptions="StartAndExpand" />
+                <Button x:Name="btnAddNew" Text="新增" />
+            </StackLayout>
+
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

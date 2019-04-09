@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.SocketDemo.PageSocketDemo">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackLayout>
+                    <Editor x:Name="txtIP" Text="10.0.2.2"></Editor>
+                    <Editor x:Name="txtPort" Text="48001"></Editor>
+                    <Button x:Name="btnStart" Text="Start"></Button>
+                    <Button x:Name="btnStop" Text="Stop"></Button>
+                    <Button x:Name="btnSend" Text="Send"></Button>
+                </StackLayout>
+                <Editor x:Name="txtToSend" Grid.Row="1" BackgroundColor="Yellow"></Editor>
+                <Editor x:Name="txtReceive" Grid.Row="2" BackgroundColor="Green"></Editor>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

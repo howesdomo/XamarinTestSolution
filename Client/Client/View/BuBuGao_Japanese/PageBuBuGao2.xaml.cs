@@ -19,7 +19,7 @@ namespace Client.View.BuBuGao_Japanese
 
         private PageBuBuGao2_ViewModel ViewModel { get; set; }
 
-        public PageBuBuGao2(BuBuGao.Question q, bool isAutoPlaySound)
+        public PageBuBuGao2(Question_Japanese q, bool isAutoPlaySound)
         {
             InitializeComponent();
             initUI();
@@ -227,15 +227,22 @@ namespace Client.View.BuBuGao_Japanese
 
         #endregion
 
-        private BuBuGao.Word selectedWord;
+        private Word_Japanese selectedWord;
 
-        public BuBuGao.Word SelectedWord
+        public Word_Japanese SelectedWord
         {
             get { return selectedWord; }
             set
             {
                 selectedWord = value;
                 this.OnPropertyChanged("Content");
+                this.OnPropertyChanged("HiraganaContent");
+                this.OnPropertyChanged("KatakanaContent");
+                this.OnPropertyChanged("ChineseEtymology");
+
+                this.OnPropertyChanged("HiraganaGifImage");
+                this.OnPropertyChanged("KatakanaGifImage");
+
                 this.OnPropertyChanged("btnPassBackgroundColor");
                 this.OnPropertyChanged("btnFailBackgroundColor");
 
@@ -256,6 +263,85 @@ namespace Client.View.BuBuGao_Japanese
                     r = this.SelectedWord.Content;
                 }
                 return r;
+            }
+        }
+
+        public string HiraganaContent
+        {
+            get
+            {
+                string r = string.Empty;
+                if (this.SelectedWord != null)
+                {
+                    r = this.SelectedWord.HiraganaContent;
+                }
+                return r;
+            }
+        }
+
+        public string KatakanaContent
+        {
+            get
+            {
+                string r = string.Empty;
+                if (this.SelectedWord != null)
+                {
+                    r = this.SelectedWord.KatakanaContent;
+                }
+                return r;
+            }
+        }
+
+        public string ChineseEtymology
+        {
+            get
+            {
+                string r = string.Empty;
+                if (this.SelectedWord != null)
+                {
+                    r = this.SelectedWord.ChineseEtymology;
+                }
+                return r;
+            }
+        }
+
+        public Xamarin.Forms.ImageSource HiraganaGifImage
+        {
+            get
+            {
+                Xamarin.Forms.ImageSource s = null;
+                if (this.SelectedWord != null)
+                {
+                    string resources = "Client.Images.BuBuGao_Japanese.Hiragana.{0}_{1}.gif"
+                    .FormatWith
+                    (
+                        this.SelectedWord.ID,
+                        this.SelectedWord.Content
+                    );
+
+                    s = ImageSource.FromResource(resources);
+                }
+                return s;
+            }
+        }
+
+        public Xamarin.Forms.ImageSource KatakanaGifImage
+        {
+            get
+            {
+                Xamarin.Forms.ImageSource s = null;
+                if (this.SelectedWord != null)
+                {
+                    string resources = "Client.Images.BuBuGao_Japanese.Katakana.{0}_{1}.gif"
+                    .FormatWith
+                    (
+                        this.SelectedWord.ID,
+                        this.SelectedWord.Content
+                    );
+
+                    s = ImageSource.FromResource(resources);
+                }
+                return s;
             }
         }
 
@@ -285,9 +371,9 @@ namespace Client.View.BuBuGao_Japanese
             }
         }
 
-        private BuBuGao.Question question;
+        private Question_Japanese question;
 
-        public BuBuGao.Question Question
+        public Question_Japanese Question
         {
             get { return question; }
             set

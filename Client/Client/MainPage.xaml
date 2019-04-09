@@ -25,7 +25,7 @@
             <StackLayout Grid.Column="1" Orientation="Horizontal">
                 <Image x:Name="btnShowHidden"
                    WidthRequest="20" HeightRequest="20" 
-                   Source="{local:EmbeddedResource Client.Images.BuBuGao.plus.png}" />
+                   Source="{local:EmbeddedResource Client.Images.BaseView.plus.png}" />
                 <BoxView BackgroundColor="Transparent" WidthRequest="5" />
             </StackLayout>
 
@@ -106,6 +106,12 @@
             <Button x:Name="btnMarqueeDemo" Text="跑马灯效果Demo集合" />
 
             <Button x:Name="btnLabelDemo" Text="Label Demo" />
+
+            <Button x:Name="btnXLabsDemo" Text="XLabs Demo" />
+
+            <Button x:Name="btnSocketDemo" Text="Socket Demo" />
+
+            <Button x:Name="btnFakeSerailPort" Text="模拟串口助手" />
 
         </StackLayout>
     </ScrollView>

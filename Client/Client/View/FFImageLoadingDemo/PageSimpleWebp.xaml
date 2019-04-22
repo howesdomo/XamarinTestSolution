@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Client"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="Client.View.FFImageLoadingDemo.PageSimpleWebp">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <ffimageloading:CachedImage
+                    WidthRequest="300" 
+                    HeightRequest="300"
+                    DownsampleToViewSize="true" 
+                    LoadingPlaceholder="{local:EmbeddedResource Client.Images.FFImageLoading.loading.png}"
+                    ErrorPlaceholder="{local:EmbeddedResource Client.Images.FFImageLoading.error.png}"
+                    Source="https://www.gstatic.com/webp/gallery/1.sm.webp" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

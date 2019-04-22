@@ -12,11 +12,6 @@ namespace Client.View.BuBuGao_Japanese
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageBuBuGao2 : ContentPage
     {
-        public PageBuBuGao2()
-        {
-            InitializeComponent();
-        }
-
         private PageBuBuGao2_ViewModel ViewModel { get; set; }
 
         public PageBuBuGao2(Question_Japanese q, bool isAutoPlaySound)
@@ -54,6 +49,14 @@ namespace Client.View.BuBuGao_Japanese
                 Right = 5,
                 Bottom = 2
             };
+
+            this.btnSwitch.Margin = new Thickness()
+            {
+                Left = 0,
+                Top = 0,
+                Right = 10,
+                Bottom = 0
+            };
         }
 
         private void initEvent()
@@ -66,6 +69,18 @@ namespace Client.View.BuBuGao_Japanese
 
             this.btnPass.Clicked += BtnPass_Clicked;
             this.btnFail.Clicked += BtnFail_Clicked;
+
+
+            var imgTapGestureRecognizer = new TapGestureRecognizer();
+            imgTapGestureRecognizer.Tapped += (s, e) =>
+            {
+                imgHiragana.IsVisible = !imgHiragana.IsVisible;
+                imgKatakana.IsVisible = !imgKatakana.IsVisible;
+            };
+
+            this.btnSwitch.GestureRecognizers.Add(imgTapGestureRecognizer);
+
+            //imgHiragana.
         }
 
         private void BtnLast_Clicked(object sender, EventArgs e)
@@ -101,7 +116,7 @@ namespace Client.View.BuBuGao_Japanese
 
         private void BtnPlaySound_Clicked(object sender, EventArgs e)
         {
-            App.TTS.PlayJapanese(this.ViewModel.Content);
+            App.TTS.PlayJapanese(this.ViewModel.HiraganaContent);
         }
 
         #region 通过 & 未通过
@@ -243,12 +258,14 @@ namespace Client.View.BuBuGao_Japanese
                 this.OnPropertyChanged("HiraganaGifImage");
                 this.OnPropertyChanged("KatakanaGifImage");
 
+                this.OnPropertyChanged("WordInfo");                
+
                 this.OnPropertyChanged("btnPassBackgroundColor");
                 this.OnPropertyChanged("btnFailBackgroundColor");
 
                 if (this.IsAutoPlaySound && value != null)
                 {
-                    App.TTS.PlayJapanese(value.Content);
+                    App.TTS.PlayJapanese(value.HiraganaContent);
                 }
             }
         }
@@ -305,11 +322,30 @@ namespace Client.View.BuBuGao_Japanese
             }
         }
 
+        public string WordInfo
+        {
+            get
+            {
+                string r = string.Empty;
+                if (this.SelectedWord != null)
+                {
+                    r = "发音:{0}; 汉字字源:{1}".FormatWith(this.SelectedWord.Content, this.selectedWord.ChineseEtymology);
+                }
+                return r;
+            }
+        }
+
+        Xamarin.Forms.ImageSource _HiraganaGifImage = null;
         public Xamarin.Forms.ImageSource HiraganaGifImage
         {
             get
             {
-                Xamarin.Forms.ImageSource s = null;
+                if (_HiraganaGifImage != null)
+                {
+                    _HiraganaGifImage = null;
+                    GC.Collect();
+                }
+
                 if (this.SelectedWord != null)
                 {
                     string resources = "Client.Images.BuBuGao_Japanese.Hiragana.{0}_{1}.gif"
@@ -319,17 +355,23 @@ namespace Client.View.BuBuGao_Japanese
                         this.SelectedWord.Content
                     );
 
-                    s = ImageSource.FromResource(resources);
+                    _HiraganaGifImage = ImageSource.FromResource(resources);
                 }
-                return s;
+                return _HiraganaGifImage;
             }
         }
 
+        Xamarin.Forms.ImageSource _KatakanaGifImage = null;
         public Xamarin.Forms.ImageSource KatakanaGifImage
         {
             get
             {
-                Xamarin.Forms.ImageSource s = null;
+                if (_KatakanaGifImage != null)
+                {
+                    _KatakanaGifImage = null;
+                    GC.Collect();
+                }
+
                 if (this.SelectedWord != null)
                 {
                     string resources = "Client.Images.BuBuGao_Japanese.Katakana.{0}_{1}.gif"
@@ -339,9 +381,9 @@ namespace Client.View.BuBuGao_Japanese
                         this.SelectedWord.Content
                     );
 
-                    s = ImageSource.FromResource(resources);
+                    _KatakanaGifImage = ImageSource.FromResource(resources);
                 }
-                return s;
+                return _KatakanaGifImage;
             }
         }
 

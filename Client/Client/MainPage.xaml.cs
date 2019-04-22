@@ -79,6 +79,8 @@ namespace Client
             this.btnXLabsDemo.Clicked += BtnXLabsDemo_Clicked;
             this.btnSocketDemo.Clicked += BtnSocketDemo_Clicked;
             this.btnFakeSerailPort.Clicked += BtnFakeSerailPort_Clicked;
+            this.btnFFImageLoading.Clicked += BtnFFImageLoading_Clicked;
+            this.btnFileExplorer.Clicked += BtnFileExplorer_Clicked;
         }
 
 
@@ -281,61 +283,6 @@ namespace Client
 
         async void BtnBuBuGao_Japanese_Clicked(object sender, EventArgs e)
         {
-            //View.BuBuGao.Question q = new View.BuBuGao.Question();
-            //q.Name = "50音片假名";
-            //q.Words = new List<View.BuBuGao.Word>()
-            //{
-            //    new View.BuBuGao.Word(){ Content = "ア" },
-            //    new View.BuBuGao.Word(){ Content = "イ" },
-            //    new View.BuBuGao.Word(){ Content = "ウ" },
-            //    new View.BuBuGao.Word(){ Content = "エ" },
-            //    new View.BuBuGao.Word(){ Content = "オ" },
-            //    new View.BuBuGao.Word(){ Content = "カ" },
-            //    new View.BuBuGao.Word(){ Content = "キ" },
-            //    new View.BuBuGao.Word(){ Content = "ク" },
-            //    new View.BuBuGao.Word(){ Content = "ケ" },
-            //    new View.BuBuGao.Word(){ Content = "コ" },
-            //    new View.BuBuGao.Word(){ Content = "サ" },
-            //    new View.BuBuGao.Word(){ Content = "シ" },
-            //    new View.BuBuGao.Word(){ Content = "ス" },
-            //    new View.BuBuGao.Word(){ Content = "セ" },
-            //    new View.BuBuGao.Word(){ Content = "ソ" },
-            //    new View.BuBuGao.Word(){ Content = "タ" },
-            //    new View.BuBuGao.Word(){ Content = "チ" },
-            //    new View.BuBuGao.Word(){ Content = "ツ" },
-            //    new View.BuBuGao.Word(){ Content = "テ" },
-            //    new View.BuBuGao.Word(){ Content = "ト" },
-            //    new View.BuBuGao.Word(){ Content = "ナ" },
-            //    new View.BuBuGao.Word(){ Content = "ニ" },
-            //    new View.BuBuGao.Word(){ Content = "ヌ" },
-            //    new View.BuBuGao.Word(){ Content = "ネ" },
-            //    new View.BuBuGao.Word(){ Content = "ノ" },
-            //    new View.BuBuGao.Word(){ Content = "ハ" },
-            //    new View.BuBuGao.Word(){ Content = "ヒ" },
-            //    new View.BuBuGao.Word(){ Content = "フ" },
-            //    new View.BuBuGao.Word(){ Content = "ヘ" },
-            //    new View.BuBuGao.Word(){ Content = "ホ" },
-            //    new View.BuBuGao.Word(){ Content = "マ" },
-            //    new View.BuBuGao.Word(){ Content = "ミ" },
-            //    new View.BuBuGao.Word(){ Content = "ム" },
-            //    new View.BuBuGao.Word(){ Content = "メ" },
-            //    new View.BuBuGao.Word(){ Content = "モ" },
-            //    new View.BuBuGao.Word(){ Content = "ヤ" },
-            //    new View.BuBuGao.Word(){ Content = "ユ" },
-            //    new View.BuBuGao.Word(){ Content = "ヨ" },
-            //    new View.BuBuGao.Word(){ Content = "ラ" },
-            //    new View.BuBuGao.Word(){ Content = "リ" },
-            //    new View.BuBuGao.Word(){ Content = "ル" },
-            //    new View.BuBuGao.Word(){ Content = "レ" },
-            //    new View.BuBuGao.Word(){ Content = "ロ" },
-            //    new View.BuBuGao.Word(){ Content = "ワ" },
-            //    new View.BuBuGao.Word(){ Content = "ヲ" },
-            //    new View.BuBuGao.Word(){ Content = "ン" },
-            //};
-            //q.CreateDateTimeValue = DateTime.Now.Ticks;
-            //App.TTS.SetSpeechRateSilent(0.2f);
-            //await Navigation.PushAsync(new View.BuBuGao_Japanese.PageBuBuGao2(q, true));
-
             await Navigation.PushAsync(new View.BuBuGao_Japanese.PageBuBuGao1());
         }
 
@@ -396,10 +343,19 @@ namespace Client
             await Navigation.PushAsync(new View.SocketDemo.PageSocketDemo());
         }
 
-
         async void BtnFakeSerailPort_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.FakeSerialPort.PageFakeSerialPort());
+        }
+
+        async void BtnFFImageLoading_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.FFImageLoadingDemo.PageDemoMenu());
+        }
+
+        async void BtnFileExplorer_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorerMenu());
         }
 
     }

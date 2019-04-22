@@ -12,7 +12,7 @@ namespace Client.iOS
 {
     public class MyTTS : Client.Common.ITTS
     {
-        private float mVolume = 0.5f;
+        private float mVolume = 1f; // 音量
         private float mPitch = 1.0f; // 音高
         private float mRate = 0.5f; // 语速
 

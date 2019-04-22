@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="Client.View.FileExplorer.PageFileExplorer">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5" />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="1" Grid.Column="0" Text="筛选" VerticalTextAlignment="Center" />
+                <Editor x:Name="txtFilter" Text="{Binding Filter}" 
+                        Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow" VerticalOptions="Center" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="地址" VerticalTextAlignment="Center" />
+                <ScrollView x:Name="scrollViewCurrentDirectory" 
+                            Grid.Row="2" Grid.Column="1" 
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalScrollBarVisibility="Never"
+                            Orientation="Horizontal">
+                    <StackLayout x:Name="stacklayoutCurrentDirectory" Orientation="Horizontal" HorizontalOptions="Fill">
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+
+            <ListView x:Name="lv" ItemsSource="{Binding FilterList}">
+                <!--Header="{Binding}" Footer="{Binding}"-->
+                <!--
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <ContentView BackgroundColor="Beige">
+                                <Label Margin="10" HorizontalOptions="CenterAndExpand" Text="{Binding ItemsCount, StringFormat='Items Total : {0}'}"  TextColor="Black"/>
+                            </ContentView>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+                    -->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <ffimageloading:CachedImage WidthRequest="40" HeightRequest="40" Source="{Binding ModelIcon}" Margin="5"/>
+
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="{Binding Info}" FontSize="10" VerticalTextAlignment="Center" />
+
+                                    <Grid Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Text="{Binding Info2}" FontSize="10" VerticalTextAlignment="End" TextColor="Silver" />
+                                        <Label Grid.Column="1" Text="-drw-" FontSize="10" VerticalTextAlignment="Center" />
+                                        <Grid Grid.Column="2" HeightRequest="20">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Row="0" Text="{Binding LastWriteDateInfo}" FontSize="9" VerticalTextAlignment="Start" />
+                                            <Label Grid.Row="1" Text="{Binding LastWriteTimeInfo}" FontSize="9" VerticalTextAlignment="End" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+
+                                <Label Grid.Column="2" Text="."  Margin="5" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <!--
+                    <ListView.FooterTemplate>
+                        <DataTemplate>
+                            <ContentView BackgroundColor="Aquamarine">
+                                <Label Margin="10" Text="{Binding ItemsSummary, StringFormat='Total: {0:C2}'}" TextColor="Blue" HorizontalTextAlignment="End"/>
+                            </ContentView>
+                        </DataTemplate>
+                    </ListView.FooterTemplate>
+                    -->
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

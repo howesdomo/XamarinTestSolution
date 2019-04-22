@@ -127,6 +127,7 @@
     <None Remove="Images\BuBuGao_Japanese\Katakana\7_ki.gif" />
     <None Remove="Images\BuBuGao_Japanese\Katakana\8_ku.gif" />
     <None Remove="Images\BuBuGao_Japanese\Katakana\9_ke.gif" />
+    <None Remove="Images\BuBuGao_Japanese\refresh.png" />
     <None Remove="Images\DevExpressDemo\1.jpg" />
     <None Remove="Images\DevExpressDemo\2.jpg" />
     <None Remove="Images\DevExpressDemo\3.jpg" />
@@ -136,6 +137,24 @@
     <None Remove="Images\DevExpressDemo\7.jpg" />
     <None Remove="Images\DevExpressDemo\8.jpg" />
     <None Remove="Images\DevExpressDemo\9.jpg" />
+    <None Remove="Images\FFImageLoading\error.png" />
+    <None Remove="Images\FFImageLoading\loading.png" />
+    <None Remove="Images\FFImageLoading\sample.svg" />
+    <None Remove="Images\FileExplorer\doc.svg" />
+    <None Remove="Images\FileExplorer\file.png" />
+    <None Remove="Images\FileExplorer\file.svg" />
+    <None Remove="Images\FileExplorer\file2.svg" />
+    <None Remove="Images\FileExplorer\html.svg" />
+    <None Remove="Images\FileExplorer\javascript.svg" />
+    <None Remove="Images\FileExplorer\jpg.svg" />
+    <None Remove="Images\FileExplorer\pdf.svg" />
+    <None Remove="Images\FileExplorer\png.svg" />
+    <None Remove="Images\FileExplorer\record.png" />
+    <None Remove="Images\FileExplorer\record.svg" />
+    <None Remove="Images\FileExplorer\txt.svg" />
+    <None Remove="Images\FileExplorer\xls.svg" />
+    <None Remove="Images\FileExplorer\xml.svg" />
+    <None Remove="Images\FileExplorer\zip.svg" />
     <None Remove="Images\Game\CRW\game_CRW_Correct.png" />
     <None Remove="Images\Game\CRW\game_CRW_Wrong.png" />
     <None Remove="Images\GestureDemo\Pinch.png" />
@@ -246,6 +265,9 @@
     <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\7_ki.gif" />
     <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\8_ku.gif" />
     <EmbeddedResource Include="Images\BuBuGao_Japanese\Katakana\9_ke.gif" />
+    <EmbeddedResource Include="Images\BuBuGao_Japanese\refresh.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Images\DevExpressDemo\1.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\2.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\3.jpg" />
@@ -255,6 +277,24 @@
     <EmbeddedResource Include="Images\DevExpressDemo\7.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\8.jpg" />
     <EmbeddedResource Include="Images\DevExpressDemo\9.jpg" />
+    <EmbeddedResource Include="Images\FFImageLoading\error.png" />
+    <EmbeddedResource Include="Images\FFImageLoading\loading.png" />
+    <EmbeddedResource Include="Images\FFImageLoading\sample.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\doc.svg" />
+    <Content Include="Images\FileExplorer\file.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\file.png" />
+    <EmbeddedResource Include="Images\FileExplorer\file2.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\html.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\javascript.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\jpg.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\pdf.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\png.svg" />
+    <Content Include="Images\FileExplorer\record.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\record.png" />
+    <EmbeddedResource Include="Images\FileExplorer\txt.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\xls.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\xml.svg" />
+    <EmbeddedResource Include="Images\FileExplorer\zip.svg" />
     <EmbeddedResource Include="Images\Game\CRW\game_CRW_Correct.png" />
     <EmbeddedResource Include="Images\Game\CRW\game_CRW_Wrong.png" />
     <EmbeddedResource Include="Images\GestureDemo\Pinch.png" />
@@ -271,6 +311,10 @@
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
     <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.4.859" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.4.859" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.4.859" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.4.859" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
     <PackageReference Include="Xamarin.LiveReload" Version="0.3.27" />
     <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
@@ -373,6 +417,24 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\FakeSerialPort\PageFakeSerialPort.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FFImageLoadingDemo\PageDemoMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FFImageLoadingDemo\PageSimpleGif.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FFImageLoadingDemo\PageSimpleSVG.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FFImageLoadingDemo\PageSimpleWebp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FileExplorer\PageFileExplorer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\FileExplorer\PageFileExplorerMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Games\CRW\PageMain.xaml">

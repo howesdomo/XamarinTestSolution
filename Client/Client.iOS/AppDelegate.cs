@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 using Foundation;
 using UIKit;
@@ -156,6 +157,10 @@ namespace Client.iOS
             // 这里初始化主题颜色为 Theme.Light
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
+
+            // FFImageLoading
+            var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
         }
 
         // XLabs

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 using Android.App;
 using Android.Content.PM;
@@ -11,6 +12,7 @@ using Android.OS;
 using System.Text;
 using Com.Baidu.Location;
 using Android.Content;
+
 
 namespace Client.Droid
 {
@@ -141,8 +143,8 @@ namespace Client.Droid
             // 初始化IR
             MyIR ir = MyIR.GetInstance(ApplicationContext);
             App.IR = ir;
-
             // 初始化动态权限
+
             MyPermission myPermission = new MyPermission();
             App.Permission = myPermission;
 
@@ -152,6 +154,17 @@ namespace Client.Droid
             // 这里初始化主题颜色为 Theme.Light
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
+
+
+            // 初始化 FFImageLoading
+            // 2.4.4.589(稳定版)执行 init 方式会报错 
+            // System.TypeLoadException: Could not load list of method overrides due to Method not found: void
+            // Nuget 引用 2.4.5.880-pre
+            // 1) Xamarin.FFImageLoading
+            // 2) Xamarin.FFImageLoading.Forms
+            // 然后以下的执行初始化语句
+            var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;                                  // <-- 追加
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
         }
 
         // XLabs
@@ -272,8 +285,8 @@ namespace Client.Droid
         //}
 
         #endregion
-        
-        
+
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -307,6 +320,24 @@ namespace Client.Droid
 
     }
 
+
+    public class CustomLogger : FFImageLoading.Helpers.IMiniLogger
+    {
+        public void Debug(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+        public void Error(string errorMessage)
+        {
+            Console.WriteLine(errorMessage);
+        }
+
+        public void Error(string errorMessage, Exception ex)
+        {
+            Error(errorMessage + System.Environment.NewLine + ex.ToString());
+        }
+    }
 
 
 }

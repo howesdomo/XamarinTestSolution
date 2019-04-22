@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+            x:Class="Client.View.FFImageLoadingDemo.PageSimpleSVG"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Client"
+            xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+            xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+            xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" 
+            >
+    
+    <ContentPage.Resources>
+        <!--
+        <ResourceDictionary>
+            <ffimageloadingsvg:SvgImageSourceConverter x:Key="SvgImageSourceConverter" />
+        </ResourceDictionary>
+        -->
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                
+                <!-- FIRST APPROACH: --><!--
+                <Label Text="1" />
+                <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="platform_resource_sample.svg"/>-->
+
+                <!-- SECOND APPROACH (PCL EmbeddedResource): -->
+                <Label Text="1" />
+                <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="Client.Images.FFImageLoading.sample.svg"/>
+                
+                <Label Text="2" />
+                <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="{local:EmbeddedResource Client.Images.FFImageLoading.sample.svg}"/>
+                
+                <Label Text="3" />
+                <ffimageloadingsvg:SvgCachedImage x:Name="svg2" WidthRequest="200" HeightRequest="200" />
+
+                <Label Text="4" />
+                <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="http://s.cdpn.io/3/kiwi.svg" />
+                
+
+                <!-- THIRD APPROACH: --><!--
+                <Label Text="5" />
+                <ffimageloading:CachedImage 
+                    WidthRequest="200"
+                    HeightRequest="200"
+                    Source="{Binding Source, Converter={StaticResource SvgImageSourceConverter}}">
+                </ffimageloading:CachedImage>-->
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.FFImageLoadingDemo.PageDemoMenu">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnPageSimpleGif" Text="Simple Gif" />
+            <Button x:Name="btnPageSimpleWebp" Text="Simple Webp" />
+            <Button x:Name="btnPageSimpleSvg" Text="Simple Svg" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -113,6 +113,10 @@
 
             <Button x:Name="btnFakeSerailPort" Text="模拟串口助手" />
 
+            <Button x:Name="btnFFImageLoading" Text="FFImageLoading Demos" />
+
+            <Button x:Name="btnFileExplorer" Text="FileExplorer" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

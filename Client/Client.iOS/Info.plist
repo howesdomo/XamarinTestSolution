@@ -28,7 +28,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
-	<string>(未设置)</string>
+	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>Client</string>
 	<key>CFBundleDocumentTypes</key>
@@ -48,5 +48,7 @@
 	<string>想要获取您的定位信息</string>
 	<key>NSCameraUsageDescription</key>
 	<string>想要使用您的摄像机</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>

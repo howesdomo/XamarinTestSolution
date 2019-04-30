@@ -50,5 +50,7 @@
 	<string>想要使用您的摄像机</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 </dict>
 </plist>

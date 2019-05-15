@@ -18,15 +18,11 @@ namespace Client.View.FakeSerialPort
     {
         private PageFakeSerialPort_ViewModel ViewModel { get; set; }
 
-        //定义Socket对象
-        Socket mClientSocket;
+        // 定义Socket对象
+        TcpClient mTcpClient { get; set; }
 
-        //创建接收消息的线程
-        Thread mThreadReceive;
-
-        //接收服务端发送的数据
-        string str;
-
+        // 创建接收消息的线程
+        Task mReceiveTask { get; set; }
 
         public PageFakeSerialPort()
         {
@@ -44,25 +40,34 @@ namespace Client.View.FakeSerialPort
         }
 
         async void BtnStart_Clicked(object sender, EventArgs e)
-
         {
-            IPAddress ip = IPAddress.Parse(this.txtIP.Text.Trim());
-            mClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            this.btnStart.IsEnabled = false;
             try
             {
-                //连接服务端
-                mClientSocket.Connect(ip, Convert.ToInt32(this.txtPort.Text.Trim()));
-                //开启线程不停的接收服务端发送的数据
-                mThreadReceive = new Thread(new ThreadStart(Receive));
-                mThreadReceive.IsBackground = true;
-                mThreadReceive.Start();
+                IPAddress ip = IPAddress.Parse(this.txtIP.Text.TrimAdv());
+                int port = Convert.ToInt32(this.txtPort.Text.TrimAdv());
+
+                // 连接服务端
+                mTcpClient = new TcpClient();
+                mTcpClient.Connect(ip, port); // 开始侦听
+
+                // 开启线程不停的接收服务端发送的数据
+                mReceiveTask = new Task(() => Receive());
+                mReceiveTask.Start();
 
                 this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "连接服务器成功。", Foreground = "Green" });
+
+                this.btnStop.IsEnabled = true;
+                this.btnScan.IsEnabled = true;
             }
             catch (Exception ex)
             {
-                mClientSocket = null;
-                mThreadReceive = null;
+                // obj
+                mTcpClient = null;
+                mReceiveTask = null;
+
+                // UI
+                this.btnStart.IsEnabled = true;
 
                 this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "连接服务器失败。", Foreground = "Red" });
                 await DisplayAlert("连接服务器失败", ex.GetFullInfo(), "确定");
@@ -72,50 +77,59 @@ namespace Client.View.FakeSerialPort
         //接收服务端消息的线程方法
         async void Receive()
         {
-            try
+            while (true)
             {
-                while (true)
+                try
                 {
-                    byte[] buff = new byte[20000];
-                    int r = mClientSocket.Receive(buff);
-                    str = Encoding.Default.GetString(buff, 0, r);                    
+                    string str = mTcpClient.Receive();
                     Device.BeginInvokeOnMainThread(new Action(() =>
                     {
                         this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "接收", Content = str, Foreground = "Silver" });
-                        // this.txtReceive.Text += "\r\n{0}".FormatWith(str);
                     }));
                 }
-            }
-            catch (Exception ex)
-            {
-                this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "接收服务器信息失败。", Foreground = "Red" });
-                await DisplayAlert("接收服务器信息失败", ex.GetFullInfo(), "确定");
+                catch (System.IO.IOException ioException)
+                {
+                    if (mTcpClient.Connected == false)
+                    {
+                        break;
+                    }
+
+                    string msg = "{0}".FormatWith(ioException.GetFullInfo());
+                    System.Diagnostics.Debug.WriteLine(msg);
+
+                    throw ioException;
+                }
+                catch (Exception ex)
+                {
+                    this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "接收服务器信息失败。", Foreground = "Red" });
+                    await DisplayAlert("接收服务器信息失败", ex.GetFullInfo(), "确定");
+                }
             }
         }
 
         async void BtnStop_Clicked(object sender, EventArgs e)
         {
-            if (mClientSocket == null || mThreadReceive == null)
-            {
-                await DisplayAlert("Error", "未连接服务器", "确定");
-                return;
-            }
-
+            this.btnStop.IsEnabled = false;
             try
             {
-                mClientSocket.Close();
-                mThreadReceive.Abort();
+                mTcpClient.Close();
+
+                this.btnStart.IsEnabled = true;
+                this.btnScan.IsEnabled = false;
+
+                this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "停止连接服务器。", Foreground = "Green" });
             }
             catch (Exception ex)
             {
                 this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "停止连接服务器失败。", Foreground = "Red" });
                 await DisplayAlert("停止连接服务器失败", ex.GetFullInfo(), "确定");
+                this.btnStop.IsEnabled = true;
             }
         }
 
         async void BtnSend_Clicked(object sender, EventArgs e)
         {
-            if (mClientSocket == null || mThreadReceive == null)
+            if (mTcpClient == null || mReceiveTask == null)
             {
                 await DisplayAlert("Error", "请连接服务器", "确定");
                 return;
@@ -133,29 +147,34 @@ namespace Client.View.FakeSerialPort
 
         async void scanResultHandle(ZXing.Result result, Common.ZXingBarcodeScanner page)
         {
-            string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(result));
-            System.Diagnostics.Debug.WriteLine(msg);
-
-            App.AudioPlayer.PlayBeep();
-
-            // Send to Server
             try
             {
-                byte[] buffer = Encoding.Default.GetBytes(result.Text);
-                mClientSocket.Send(buffer);
+                string str = result.Text;
+                mTcpClient.Send(result.Text);
 
-                this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "发送", Content = str, Foreground = "Silver" });
+                var toAdd = new FakeSerialPortModel() { MsgType = "发送", Content = str, Foreground = "Silver" };
+                this.ViewModel.Result.Add(toAdd);
+
+                App.AudioPlayer.PlayBeep();
+                Thread.Sleep(500);
+                await DisplayAlert("成功发送", str, "确定");
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    lv.ScrollTo(toAdd, ScrollToPosition.End, false);
+                });
             }
             catch (Exception ex)
             {
                 this.ViewModel.Result.Add(new FakeSerialPortModel() { MsgType = "系统", Content = "发送信息到服务器失败。", Foreground = "Red" });
+
+                App.AudioPlayer.PlayError();
+                Thread.Sleep(500);
                 await DisplayAlert("发送信息到服务器失败", ex.GetFullInfo(), "确定");
             }
 
-            Thread.Sleep(1000);
-            page.endWith();
+            page.EndWith();
         }
-
     }
 
     public class PageFakeSerialPort_ViewModel : ViewModel.BaseViewModel

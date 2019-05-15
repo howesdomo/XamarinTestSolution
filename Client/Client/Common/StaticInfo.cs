@@ -53,7 +53,8 @@ namespace Client.Common
 
                 try
                 {
-                    string a = Util.IO.FileUtils.GetString("");
+                    // string a = System.IO.File.ReadAllText("");
+                    string a = string.Empty;
 
                     if (a.Contains("debugMode:true"))
                     {

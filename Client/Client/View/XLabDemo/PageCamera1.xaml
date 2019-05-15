@@ -8,13 +8,20 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Button x:Name="btnTakePhoto" Text="拍照" Grid.Row="0" />
             <Button x:Name="btnTakeVedio" Text="视频" Grid.Row="1" />
             <Button x:Name="btnSelectPhoto" Text="打开相簿" Grid.Row="2" />
-            <Image x:Name="img1" Grid.Row="3" />
+
+            <Label Text="---------------" Grid.Row="3" />
+            <Label Text="照片路径" Grid.Row="4" />
+            <Label x:Name="txtImgPath" Grid.Row="5" />
+            <Image x:Name="img1" Grid.Row="6" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

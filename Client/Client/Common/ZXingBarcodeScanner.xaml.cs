@@ -65,11 +65,10 @@ namespace Client.Common
 
             mZXingOverlay = new ZXingOverlay
             {
-                // LabelTopText = "请对准条码",
-
-                ShowFlashButton = false,
                 LabelScanTipsText = "将二维码/条码放入框内, 即可自动扫描", // TODO 通过参数区分 二维码 / 条码
-                ButtonFlashText = "闪光灯开关"
+
+                ShowFlashButton = true,
+                ButtonFlashText = "开灯"
             };
             grid.Children.Add(mZXingOverlay);
 
@@ -229,11 +228,12 @@ namespace Client.Common
     /// </summary>
     public class ZXingOverlay : Grid
     {
-        Label txtTop;
         Label txtScanTipsText;
         Button btnFlash;
 
-        int scanLineY = -120;
+        int scanLineOriginY = -9999;
+        int scanLineY = 0;
+
         bool scanLineOpacityDirection = false;
 
         public delegate void FlashButtonClickedDelegate(Button sender, EventArgs e);
@@ -309,27 +309,36 @@ namespace Client.Common
 
             var slScanArea = new AbsoluteLayout();
 
+            slScanArea.InputTransparent = true;
+            Children.Add(slScanArea, 1, 1);
+            SetColumnSpan(slScanArea, 3);
+
             var scanLine = new Image
             {
                 Source = ImageSource.FromResource("Client.Images.BaseView.scanLine.png")
             };
 
+            scanLine.InputTransparent = true;
             AbsoluteLayout.SetLayoutBounds(scanLine, new Rectangle(1, scanLineY, 1, 1));
             AbsoluteLayout.SetLayoutFlags(scanLine, AbsoluteLayoutFlags.SizeProportional);
             slScanArea.Children.Add(scanLine);
-            Children.Add(slScanArea, 1, 1);
-            SetColumnSpan(slScanArea, 3);
 
             Device.StartTimer(TimeSpan.FromSeconds(0.1), () =>
             {
+                if (scanLineOriginY == -9999) // 初始化 -- 只执行一次
+                {                    
+                    scanLineOriginY = -(((int)slScanArea.Height) / 2);
+                    scanLineY = scanLineOriginY;
+                }
+
                 #region 上下移动效果
 
-                //scanLineY += 7;
-                //AbsoluteLayout.SetLayoutBounds(scanLine, new Rectangle(1, scanLineY, 1, 1));
-                //if (scanLineY > 150)
-                //{
-                //    scanLineY = -100;
-                //}
+                scanLineY += 5;
+                AbsoluteLayout.SetLayoutBounds(scanLine, new Rectangle(1, scanLineY, 1, 1));
+                if (scanLineY >= slScanArea.Height / 2)
+                {
+                    scanLineY = scanLineOriginY;
+                }
 
                 #endregion
 
@@ -355,18 +364,6 @@ namespace Client.Common
                 return true;
             });
 
-
-            //txtTop = new Label
-            //{
-            //    VerticalOptions = LayoutOptions.Center,
-            //    HorizontalOptions = LayoutOptions.Center,
-            //    TextColor = Color.White,
-            //    AutomationId = "zxingDefaultOverlay_TopTextLabel",
-            //};
-            //txtTop.SetBinding(Label.TextProperty, new Binding(nameof(LabelTopText)));
-            //Children.Add(txtTop, 0, 0);
-            //SetColumnSpan(txtTop, 5);
-
             txtScanTipsText = new Label
             {
                 VerticalOptions = LayoutOptions.Center,
@@ -374,6 +371,7 @@ namespace Client.Common
                 TextColor = Color.White,
                 AutomationId = "zxingDefaultOverlay_BottomTextLabel",
             };
+
             txtScanTipsText.SetBinding(Label.TextProperty, new Binding(nameof(LabelScanTipsText)));
 
             #endregion
@@ -390,7 +388,7 @@ namespace Client.Common
             {
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center,
-                Margin = new Thickness(left: 20, top: 0, right: 20, bottom: 0),
+                Padding = new Thickness(left: 15, top: 0, right: 15, bottom: 0),
                 Text = "按钮",
                 TextColor = Color.White,
                 BackgroundColor = Color.Silver,
@@ -411,15 +409,6 @@ namespace Client.Common
 
             #endregion
         }
-
-        //public static readonly BindableProperty TopTextProperty =
-        //    BindableProperty.Create(nameof(LabelTopText), typeof(string), typeof(ZXingOverlay), string.Empty);
-
-        //public string LabelTopText
-        //{
-        //    get { return (string)GetValue(TopTextProperty); }
-        //    set { SetValue(TopTextProperty, value); }
-        //}
 
         public static readonly BindableProperty BottomTextProperty =
             BindableProperty.Create(nameof(LabelScanTipsText), typeof(string), typeof(ZXingOverlay), string.Empty);

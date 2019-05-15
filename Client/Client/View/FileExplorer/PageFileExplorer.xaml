@@ -3,6 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="Client.View.FileExplorer.PageFileExplorer">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!-- Title -->
+            <Label Text="FileExplorer" />
+        </Grid>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
             <Grid>
@@ -76,8 +94,8 @@
                                                 <RowDefinition Height="*" />
                                                 <RowDefinition Height="*" />
                                             </Grid.RowDefinitions>
-                                            <Label Grid.Row="0" Text="{Binding LastWriteDateInfo}" FontSize="9" VerticalTextAlignment="Start" />
-                                            <Label Grid.Row="1" Text="{Binding LastWriteTimeInfo}" FontSize="9" VerticalTextAlignment="End" />
+                                            <Label Grid.Row="0" Text="{Binding LastWriteDateInfo}" FontSize="9" VerticalTextAlignment="Start" BackgroundColor="Transparent" />
+                                            <Label Grid.Row="1" Text="{Binding LastWriteTimeInfo}" FontSize="9" VerticalTextAlignment="End" BackgroundColor="Transparent" />
                                         </Grid>
                                     </Grid>
                                 </Grid>

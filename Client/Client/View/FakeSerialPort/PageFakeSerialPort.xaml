@@ -2,22 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.View.FakeSerialPort.PageFakeSerialPort">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!-- Title -->
+            <Label Text="模拟串口助手" />
+        </Grid>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="450" />
                     <RowDefinition />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <StackLayout>
-                    <Editor x:Name="txtIP" Text="10.0.2.2"></Editor>
-                    <Editor x:Name="txtPort" Text="48001"></Editor>
-                    <Button x:Name="btnStart" Text="连接服务器"></Button>
-                    <Button x:Name="btnStop" Text="停止连接服务器"></Button>
-                    <Button x:Name="btnScan" Text="Scan Barcode"></Button>
-                </StackLayout>
-                <ListView x:Name="lv" Grid.Row="1"
-                      ItemsSource="{Binding Result, Mode=OneWay}">
+                <ListView x:Name="lv" Grid.Row="0" HeightRequest="1"
+                          ItemsSource="{Binding Result, Mode=OneWay}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -27,15 +38,19 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding MsgType}" VerticalTextAlignment="Center" HorizontalOptions="Fill" />
-                                    <Label Text="{Binding Content}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"
-                                           Grid.Column="1"
-                                           />
+                                    <Label Text="{Binding Content}" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" Grid.Column="1"/>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
+                <StackLayout Grid.Row="1">
+                    <Entry x:Name="txtIP" Text="10.0.2.2" Placeholder="请输入服务器IP" />
+                    <Entry x:Name="txtPort" Text="48001" Keyboard="Numeric"  Placeholder="请输入服务器端口" />
+                    <Button x:Name="btnStart" Text="连接服务器" />
+                    <Button x:Name="btnStop" Text="停止连接服务器" IsEnabled="false" />
+                    <Button x:Name="btnScan" Text="Scan Barcode" IsEnabled="false" />
+                </StackLayout>
             </Grid>
         </ScrollView>
     </ContentPage.Content>

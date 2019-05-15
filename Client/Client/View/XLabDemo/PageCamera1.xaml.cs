@@ -40,6 +40,7 @@ namespace Client.View.XLabDemo
                 });
 
                 System.Diagnostics.Debug.WriteLine($"picture path : { mediaFile.Path }");
+                this.txtImgPath.Text = mediaFile.Path;
                 img1.Source = mediaFile.Path;
             }
             catch (Exception ex)
@@ -56,6 +57,8 @@ namespace Client.View.XLabDemo
                 XLabs.Platform.Services.Media.MediaFile mediaFile = await mediaPicker.SelectPhotoAsync(new XLabs.Platform.Services.Media.CameraMediaStorageOptions());
 
                 System.Diagnostics.Debug.WriteLine($"picture path : { mediaFile.Path }");
+
+                this.txtImgPath.Text = mediaFile.Path;
                 img1.Source = mediaFile.Path;
             }
             catch (Exception ex)

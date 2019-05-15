@@ -25,7 +25,7 @@ namespace Client.View.FileExplorer
         }
 
         private void initEvent()
-        {            
+        {
             lv.ItemTapped += Lv_ItemTapped;
         }
 
@@ -57,6 +57,9 @@ namespace Client.View.FileExplorer
         /// <param name="level">Level.</param>
         private void loopDirectoriesAndFiles(string dirPath, int level, IList<FileInfoModel> list)
         {
+            List<Exception> dirExList = new List<Exception>();
+            List<Exception> fileExList = new List<Exception>();
+
             try
             {
                 #region 若不是根目录, 在第一位加上目录 .. (返回)
@@ -92,67 +95,81 @@ namespace Client.View.FileExplorer
 
                 foreach (var item in System.IO.Directory.GetDirectories(dirPath).OrderBy(i => i))
                 {
-                    string msg = "|{0}{1}".FormatWith("".PadLeft(level, '_'), item);
-                    System.Diagnostics.Debug.WriteLine(msg);
-                    System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(item);
-
-                    FileInfoModel toAdd = new FileInfoModel()
+                    try
                     {
-                        IsDirectory = true,
+                        string msg = "|{0}{1}".FormatWith("".PadLeft(level, '_'), item);
+                        System.Diagnostics.Debug.WriteLine(msg);
+                        System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(item);
 
-                        // 通用
-                        Level = level,
-                        LastWriteTime = di.LastWriteTime,
+                        FileInfoModel toAdd = new FileInfoModel()
+                        {
+                            IsDirectory = true,
 
-                        // 目录
-                        DirectoryName = di.Name,
-                        Directory = di.FullName,
-                        ContainFileCount = di.GetFiles().Length,
+                            // 通用
+                            Level = level,
+                            LastWriteTime = di.LastWriteTime,
 
-                        // 文件
-                        Name = di.Name,
-                        Extension = di.Extension,
-                        FullName = di.FullName,
+                            // 目录
+                            DirectoryName = di.Name,
+                            Directory = di.FullName,
+                            ContainFileCount = di.GetFiles().Length,
 
-                        // 图标
-                        ModelIcon = ImageSource.FromResource("Client.Images.FileExplorer.record.png")
-                    };
+                            // 文件
+                            Name = di.Name,
+                            Extension = di.Extension,
+                            FullName = di.FullName,
 
-                    list.Add(toAdd);
+                            // 图标
+                            ModelIcon = ImageSource.FromResource("Client.Images.FileExplorer.record.png")
+                        };
+
+                        list.Add(toAdd);
+                    }
+                    catch (Exception dirEx)
+                    {
+                        dirExList.Add(dirEx);
+                    }
                 }
 
                 foreach (var item in System.IO.Directory.GetFiles(dirPath).OrderBy(i => i))
                 {
-                    string msg = "|{0}{1}".FormatWith("".PadLeft(level, '_'), item);
-                    System.Diagnostics.Debug.WriteLine(msg);
-                    System.IO.FileInfo di = new System.IO.FileInfo(item);
-
-                    FileInfoModel toAdd = new FileInfoModel()
+                    try
                     {
-                        IsDirectory = false,
+                        string msg = "|{0}{1}".FormatWith("".PadLeft(level, '_'), item);
+                        System.Diagnostics.Debug.WriteLine(msg);
+                        System.IO.FileInfo di = new System.IO.FileInfo(item);
 
-                        // 通用
-                        Level = level,
-                        LastWriteTime = di.LastWriteTime,
+                        FileInfoModel toAdd = new FileInfoModel()
+                        {
+                            IsDirectory = false,
 
-                        // 目录
-                        DirectoryName = di.DirectoryName,
-                        Directory = di.Directory.FullName,
+                            // 通用
+                            Level = level,
+                            LastWriteTime = di.LastWriteTime,
 
-                        // 文件
-                        Name = di.Name,
-                        Extension = di.Extension,
-                        FullName = di.FullName,
-                        FileLength = di.Length,
-                        FileLengthInfo = Util.IO.FileUtils.GetFileLengthInfo(di.Length),
+                            // 目录
+                            DirectoryName = di.DirectoryName,
+                            Directory = di.Directory.FullName,
 
-                        // 图标
-                        // ModelIcon = ImageSource.FromResource("Client.Images.FileExplorer.file.svg")
-                        ModelIcon = ImageSource.FromResource("Client.Images.FileExplorer.file.png")
-                        // ModelIcon = ImageSource.FromFile()
-                    };
+                            // 文件
+                            Name = di.Name,
+                            Extension = di.Extension,
+                            FullName = di.FullName,
+                            FileLength = di.Length,
+                            FileLengthInfo = Util.IO.FileUtils.GetFileLengthInfo(di.Length),
 
-                    list.Add(toAdd);
+                            // 图标
+                            // ModelIcon = ImageSource.FromResource("Client.Images.FileExplorer.file.svg")
+                            ModelIcon = ImageSource.FromResource("Client.Images.FileExplorer.file.png")
+                            // ModelIcon = ImageSource.FromFile()
+                        };
+
+                        list.Add(toAdd);
+                    }
+                    catch (Exception fileEx)
+                    {
+                        fileExList.Add(fileEx);
+                    }
                 }
             }
             catch (Exception ex)
@@ -160,6 +177,25 @@ namespace Client.View.FileExplorer
                 string msg = ex.GetFullInfo();
                 System.Diagnostics.Debug.WriteLine(msg);
                 DisplayAlert("Error", msg, "确认");
+            }
+            finally
+            {
+                string msg = string.Empty;
+                if (dirExList.Count > 0)
+                {
+                    msg += $"遍历文件夹时捕获到读取文件夹信息错误共 {dirExList.Count} 个;";
+                }
+
+                if (fileExList.Count > 0)
+                {
+                    msg += $"遍历文件夹时捕获到读取文件错误共 {fileExList.Count} 个;";
+                }
+
+                if (msg.IsNullOrWhiteSpace() == false)
+                {
+                    System.Diagnostics.Debug.WriteLine(msg);
+                    DisplayAlert("Error", msg, "确认");
+                }
             }
         }
 
@@ -477,7 +513,7 @@ namespace Client.View.FileExplorer
                 string r = string.Empty;
                 if (IsDirectoryBack == false)
                 {
-                    this.LastWriteTime.ToString("HH:mm:ss.fff");
+                    r = this.LastWriteTime.ToString("HH:mm:ss.fff");
                 }
                 return r;
             }

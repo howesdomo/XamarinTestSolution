@@ -9,7 +9,7 @@
             <Grid.Resources>
                 <Style TargetType="Label">
                     <Setter Property="VerticalTextAlignment" Value="Center" />
-                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="TextColor" Value="Black" />
                     <Setter Property="FontSize" Value="20" />
                 </Style>
             </Grid.Resources>

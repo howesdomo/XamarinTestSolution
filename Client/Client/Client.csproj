@@ -32,6 +32,7 @@
     <None Remove="Images\BaseView\minus.png" />
     <None Remove="Images\BaseView\plus.png" />
     <None Remove="Images\BaseView\scan.png" />
+    <None Remove="Images\BaseView\scanLine.png" />
     <None Remove="Images\BuBuGao\minus.png" />
     <None Remove="Images\BuBuGao\plus.png" />
     <None Remove="Images\BuBuGao\scan.png" />
@@ -170,6 +171,7 @@
     <EmbeddedResource Include="Images\BaseView\minus.png" />
     <EmbeddedResource Include="Images\BaseView\plus.png" />
     <EmbeddedResource Include="Images\BaseView\scan.png" />
+    <EmbeddedResource Include="Images\BaseView\scanLine.png" />
     <EmbeddedResource Include="Images\BuBuGao\minus.png" />
     <EmbeddedResource Include="Images\BuBuGao\plus.png" />
     <EmbeddedResource Include="Images\BuBuGao\scan.png" />

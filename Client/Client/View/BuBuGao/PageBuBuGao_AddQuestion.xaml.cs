@@ -134,7 +134,7 @@ namespace Client.View.BuBuGao
             msg = "{0}".FormatWith(r);
             System.Diagnostics.Debug.WriteLine(msg);
 
-            page.endWith();
+            page.EndWith();
         }
 
         #endregion

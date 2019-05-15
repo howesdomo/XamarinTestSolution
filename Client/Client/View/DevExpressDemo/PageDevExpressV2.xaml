@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:bv="clr-namespace:Client.BaseView"
-             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2"
              x:Class="Client.View.DevExpressDemo.PageDevExpressV2"
              Title="DevExpress.Moblie.Grid 自定义列 与 实时调试UI 测试"
              >

@@ -4,7 +4,7 @@
              
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:bv="clr-namespace:Client.BaseView"
-             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2"
              
              x:Class="Client.View.Games.CRW.PageUserList"
              Title="查看-用户列表"

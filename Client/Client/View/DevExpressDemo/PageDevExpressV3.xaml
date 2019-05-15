@@ -4,7 +4,7 @@
              x:Class="Client.View.DevExpressDemo.PageDevExpressV3"
              
              xmlns:bv="clr-namespace:Client.BaseView"
-             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
+             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2"
              
              Title="测试单击修改CheckBox的值">
     <ContentPage.Content>

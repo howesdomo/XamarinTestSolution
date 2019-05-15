@@ -65,10 +65,11 @@ namespace Client.Common
 
             mZXingOverlay = new ZXingOverlay
             {
-                TopText = "请对准条码",
-                BottomText = "光线不足请打开闪光灯",
-                ShowFlashButton = true,
-                ButtonText = "开灯"
+                // LabelTopText = "请对准条码",
+
+                ShowFlashButton = false,
+                LabelScanTipsText = "将二维码/条码放入框内, 即可自动扫描", // TODO 通过参数区分 二维码 / 条码
+                ButtonFlashText = "闪光灯开关"
             };
             grid.Children.Add(mZXingOverlay);
 
@@ -166,11 +167,11 @@ namespace Client.Common
 
                 await DisplayAlert("扫描内容：", msg, "确定");
 
-                endWith();
+                EndWith();
             });
         }
 
-        public async void endWith()
+        public async void EndWith()
         {
             if (mIsScanContinuously == true)
             {
@@ -228,29 +229,48 @@ namespace Client.Common
     /// </summary>
     public class ZXingOverlay : Grid
     {
-        Label topText;
-        Label botText;
-        Button flash;
-        int weizhi = -120;
+        Label txtTop;
+        Label txtScanTipsText;
+        Button btnFlash;
+
+        int scanLineY = -120;
+        bool scanLineOpacityDirection = false;
+
         public delegate void FlashButtonClickedDelegate(Button sender, EventArgs e);
+
         public event FlashButtonClickedDelegate FlashButtonClicked;
 
         public ZXingOverlay()
         {
             BindingContext = this;
-            //ColumnSpacing = 0;
             VerticalOptions = LayoutOptions.FillAndExpand;
             HorizontalOptions = LayoutOptions.FillAndExpand;
 
-            RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            RowDefinitions.Add(new RowDefinition { Height = new GridLength(3, GridUnitType.Star) });
-            RowDefinitions.Add(new RowDefinition { Height = new GridLength(2, GridUnitType.Star) });
-            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            var boxview = new BoxView
+            // RowDefinitions - 3行
+            RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) }); // *
+            RowDefinitions.Add(new RowDefinition { Height = new GridLength(3, GridUnitType.Star) }); // 2*
+            RowDefinitions.Add(new RowDefinition { Height = new GridLength(2, GridUnitType.Star) }); // 3*
+
+            // ColumnDefinitions - 5列
+            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }); // *
+            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }); // *
+            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }); // *
+            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }); // *
+            ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }); // *
+
+            this.RowSpacing = 0;
+
+            #region BoxView - Black
+
+            var bv_Top_Black = new BoxView
+            {
+                VerticalOptions = LayoutOptions.Fill,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                BackgroundColor = Color.Black,
+                Opacity = 0.7,
+            };
+
+            var bv_Bottom_Black = new BoxView
             {
                 VerticalOptions = LayoutOptions.Fill,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -258,146 +278,170 @@ namespace Client.Common
                 Opacity = 0.7,
 
             };
-            var boxview2 = new BoxView
+
+            Children.Add(bv_Top_Black, 0, 0);
+            Children.Add(bv_Bottom_Black, 0, 2);
+
+            SetColumnSpan(bv_Top_Black, 5);
+            SetColumnSpan(bv_Bottom_Black, 5);
+
+            var bv_Left_Black = new BoxView
             {
                 VerticalOptions = LayoutOptions.Fill,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 BackgroundColor = Color.Black,
                 Opacity = 0.7,
-
             };
-            Children.Add(boxview, 0, 0);
-            Children.Add(boxview2, 0, 2);
+            Children.Add(bv_Left_Black, 0, 1);
 
-            SetColumnSpan(boxview, 5);
-            SetColumnSpan(boxview2, 5);
-            // Children.Add(boxview, 0, 3);
-            Children.Add(new BoxView
+            var bv_Right_Black = new BoxView
             {
                 VerticalOptions = LayoutOptions.Fill,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 BackgroundColor = Color.Black,
                 Opacity = 0.7,
-            }, 0, 1);
-            Children.Add(new BoxView
+            };
+            Children.Add(bv_Right_Black, 4, 1);
+
+            #endregion
+
+            #region ScanArea
+
+            var slScanArea = new AbsoluteLayout();
+
+            var scanLine = new Image
             {
-                VerticalOptions = LayoutOptions.Fill,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                BackgroundColor = Color.Black,
-                Opacity = 0.7,
-            }, 4, 1);
-            //Children.Add(new BoxView
+                Source = ImageSource.FromResource("Client.Images.BaseView.scanLine.png")
+            };
+
+            AbsoluteLayout.SetLayoutBounds(scanLine, new Rectangle(1, scanLineY, 1, 1));
+            AbsoluteLayout.SetLayoutFlags(scanLine, AbsoluteLayoutFlags.SizeProportional);
+            slScanArea.Children.Add(scanLine);
+            Children.Add(slScanArea, 1, 1);
+            SetColumnSpan(slScanArea, 3);
+
+            Device.StartTimer(TimeSpan.FromSeconds(0.1), () =>
+            {
+                #region 上下移动效果
+
+                //scanLineY += 7;
+                //AbsoluteLayout.SetLayoutBounds(scanLine, new Rectangle(1, scanLineY, 1, 1));
+                //if (scanLineY > 150)
+                //{
+                //    scanLineY = -100;
+                //}
+
+                #endregion
+
+                #region 闪烁效果
+
+                if (scanLineOpacityDirection == true)
+                {
+                    scanLine.Opacity = scanLine.Opacity - 0.1;
+                }
+
+                if (scanLineOpacityDirection == false)
+                {
+                    scanLine.Opacity = scanLine.Opacity + 0.1;
+                }
+
+                if (scanLine.Opacity == 0 || scanLine.Opacity == 1)
+                {
+                    scanLineOpacityDirection = !scanLineOpacityDirection;
+                }
+
+                #endregion
+
+                return true;
+            });
+
+
+            //txtTop = new Label
             //{
-            //    VerticalOptions = LayoutOptions.Fill,
-            //    HorizontalOptions = LayoutOptions.FillAndExpand,
-            //    BackgroundColor = Color.Black,
-            //    Opacity = 0.7,
-            //}, 0, 3);
-            //Children.Add(new BoxView
-            //{
-            //    VerticalOptions = LayoutOptions.Fill,
-            //    HorizontalOptions = LayoutOptions.FillAndExpand,
-            //    BackgroundColor = Color.Black,
-            //    Opacity = 0.7,
-            //}, 0, 2);
-            var AbsoluteLayouts = new AbsoluteLayout();
+            //    VerticalOptions = LayoutOptions.Center,
+            //    HorizontalOptions = LayoutOptions.Center,
+            //    TextColor = Color.White,
+            //    AutomationId = "zxingDefaultOverlay_TopTextLabel",
+            //};
+            //txtTop.SetBinding(Label.TextProperty, new Binding(nameof(LabelTopText)));
+            //Children.Add(txtTop, 0, 0);
+            //SetColumnSpan(txtTop, 5);
 
-            var redline = new Image
-            {
-                Source = "saomiao.png"
-            };
-            AbsoluteLayout.SetLayoutBounds(redline, new Rectangle(1, weizhi, 1, 1));
-            AbsoluteLayout.SetLayoutFlags(redline, AbsoluteLayoutFlags.SizeProportional);
-            AbsoluteLayouts.Children.Add(redline);
-            Children.Add(AbsoluteLayouts, 1, 1);
-            SetColumnSpan(AbsoluteLayouts, 3);
-            topText = new Label
-            {
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center,
-                TextColor = Color.White,
-                AutomationId = "zxingDefaultOverlay_TopTextLabel",
-            };
-            topText.SetBinding(Label.TextProperty, new Binding(nameof(TopText)));
-            Children.Add(topText, 0, 0);
-            SetColumnSpan(topText, 5);
-            botText = new Label
+            txtScanTipsText = new Label
             {
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center,
                 TextColor = Color.White,
                 AutomationId = "zxingDefaultOverlay_BottomTextLabel",
             };
-            botText.SetBinding(Label.TextProperty, new Binding(nameof(BottomText)));
-            //Children.Add(botText, 0, 2);
-            //SetColumnSpan(botText, 5);
-            var MyStackLayout = new StackLayout
-            {
+            txtScanTipsText.SetBinding(Label.TextProperty, new Binding(nameof(LabelScanTipsText)));
 
+            #endregion
+
+            #region Flash Area
+
+            var slFlash = new StackLayout
+            {
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            flash = new Button
+            btnFlash = new Button
             {
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center,
-                //HeightRequest = 3,
+                Margin = new Thickness(left: 20, top: 0, right: 20, bottom: 0),
                 Text = "按钮",
                 TextColor = Color.White,
-                BackgroundColor = Color.Black,
+                BackgroundColor = Color.Silver,
                 Opacity = 0.7,
                 AutomationId = "zxingDefaultOverlay_FlashButton",
             };
-            flash.SetBinding(Button.IsVisibleProperty, new Binding(nameof(ShowFlashButton)));
-            flash.SetBinding(Button.TextProperty, new Binding(nameof(ButtonText)));
-            flash.Clicked += (sender, e) =>
+            btnFlash.SetBinding(Button.IsVisibleProperty, new Binding(nameof(ShowFlashButton)));
+            btnFlash.SetBinding(Button.TextProperty, new Binding(nameof(ButtonFlashText)));
+            btnFlash.Clicked += (sender, e) =>
             {
-                FlashButtonClicked?.Invoke(flash, e);
+                FlashButtonClicked?.Invoke(btnFlash, e);
             };
-            MyStackLayout.Children.Add(botText);
-            MyStackLayout.Children.Add(flash);
-            Children.Add(MyStackLayout, 0, 2);
-            SetColumnSpan(MyStackLayout, 5);
-            //this.ColumnSpacing = 0;
-            this.RowSpacing = 0;
-            Device.StartTimer(TimeSpan.FromSeconds(0.2), () =>
-            {
-                weizhi += 7;
-                AbsoluteLayout.SetLayoutBounds(redline, new Rectangle(1, weizhi, 1, 1));
-                if (weizhi > 150)
-                {
-                    weizhi = -100;
-                }
-                return true;
-            });
+
+            slFlash.Children.Add(txtScanTipsText);
+            slFlash.Children.Add(btnFlash);
+            Children.Add(slFlash, 0, 2);
+            SetColumnSpan(slFlash, 5);
+
+            #endregion
         }
 
-        public static readonly BindableProperty TopTextProperty =
-            BindableProperty.Create(nameof(TopText), typeof(string), typeof(ZXingOverlay), string.Empty);
-        public string TopText
-        {
-            get { return (string)GetValue(TopTextProperty); }
-            set { SetValue(TopTextProperty, value); }
-        }
+        //public static readonly BindableProperty TopTextProperty =
+        //    BindableProperty.Create(nameof(LabelTopText), typeof(string), typeof(ZXingOverlay), string.Empty);
+
+        //public string LabelTopText
+        //{
+        //    get { return (string)GetValue(TopTextProperty); }
+        //    set { SetValue(TopTextProperty, value); }
+        //}
 
         public static readonly BindableProperty BottomTextProperty =
-            BindableProperty.Create(nameof(BottomText), typeof(string), typeof(ZXingOverlay), string.Empty);
-        public string BottomText
+            BindableProperty.Create(nameof(LabelScanTipsText), typeof(string), typeof(ZXingOverlay), string.Empty);
+
+        public string LabelScanTipsText
         {
             get { return (string)GetValue(BottomTextProperty); }
             set { SetValue(BottomTextProperty, value); }
         }
 
         public static readonly BindableProperty ButtonTextProperty =
-        BindableProperty.Create(nameof(ButtonText), typeof(string), typeof(ZXingOverlay), string.Empty);
-        public string ButtonText
+        BindableProperty.Create(nameof(ButtonFlashText), typeof(string), typeof(ZXingOverlay), string.Empty);
+
+        public string ButtonFlashText
         {
             get { return (string)GetValue(ButtonTextProperty); }
             set { SetValue(ButtonTextProperty, value); }
         }
+
         public static readonly BindableProperty ShowFlashButtonProperty =
             BindableProperty.Create(nameof(ShowFlashButton), typeof(bool), typeof(ZXingOverlay), false);
+
         public bool ShowFlashButton
         {
             get { return (bool)GetValue(ShowFlashButtonProperty); }
@@ -408,6 +452,7 @@ namespace Client.Common
             BindableProperty.Create(nameof(FlashCommand), typeof(System.Windows.Input.ICommand), typeof(ZXingOverlay),
                 defaultValue: default(System.Windows.Input.ICommand),
                 propertyChanged: OnFlashCommandChanged);
+
         public System.Windows.Input.ICommand FlashCommand
         {
             get { return (System.Windows.Input.ICommand)GetValue(FlashCommandProperty); }
@@ -417,8 +462,8 @@ namespace Client.Common
         private static void OnFlashCommandChanged(BindableObject bindable, object oldvalue, object newValue)
         {
             var overlay = bindable as ZXingOverlay;
-            if (overlay?.flash == null) return;
-            overlay.flash.Command = newValue as Command;
+            if (overlay?.btnFlash == null) return;
+            overlay.btnFlash.Command = newValue as Command;
         }
     }
 }

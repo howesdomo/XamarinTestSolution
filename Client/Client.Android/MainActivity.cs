@@ -165,6 +165,9 @@ namespace Client.Droid
             // 然后以下的执行初始化语句
             var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;                                  // <-- 追加
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+
+            // Plugin.MediaManager.Forms ( 视频播放 )
+            MediaManager.Forms.Platforms.Android.VideoViewRenderer.Init();
         }
 
         // XLabs

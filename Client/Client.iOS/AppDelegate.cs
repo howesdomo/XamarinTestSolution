@@ -158,9 +158,12 @@ namespace Client.iOS
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
 
-            // FFImageLoading
+            // FFImageLoading ( Gif 动图 ) ( SVG 矢量图显示 )
             var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+
+            // Plugin.MediaManager.Forms ( 视频播放 )
+            MediaManager.Forms.Platforms.iOS.VideoViewRenderer.Init();
         }
 
         // XLabs

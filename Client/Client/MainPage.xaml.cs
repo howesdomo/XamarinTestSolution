@@ -81,6 +81,7 @@ namespace Client
             this.btnFakeSerailPort.Clicked += BtnFakeSerailPort_Clicked;
             this.btnFFImageLoading.Clicked += BtnFFImageLoading_Clicked;
             this.btnFileExplorer.Clicked += BtnFileExplorer_Clicked;
+            this.btnPluginMediaManagerForms.Clicked += BtnPluginMediaManagerForms_Clicked;
         }
 
 
@@ -358,6 +359,10 @@ namespace Client
             await Navigation.PushAsync(new View.FileExplorer.PageFileExplorerMenu());
         }
 
+        async void BtnPluginMediaManagerForms_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.MediaManagerDemo.PageMediaManagerDemo());
+        }
     }
 
 

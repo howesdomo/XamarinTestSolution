@@ -52,5 +52,10 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

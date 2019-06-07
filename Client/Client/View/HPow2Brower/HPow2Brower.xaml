@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.HPow2Brower">
+    <ContentPage.Content>
+        <Grid x:Name="gAll">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <WebView x:Name="webView"
+                     Grid.Row="1"
+                     Grid.RowSpan="2"
+                     />
+
+            <Grid x:Name="gNavigation" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="地址模版:"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalTextAlignment="Center"
+                       />
+                <Entry x:Name="txtAddressTemplate" 
+                       Grid.Row="0"
+                       Grid.Column="1" />
+                <Button x:Name="btnCopyPasteWebviewAddress" 
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="粘贴"
+                        BackgroundColor="Violet"
+                        />
+
+                <Label Text="当前地址"
+                       VerticalTextAlignment="Center"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                     />
+                <Entry x:Name="txtAddress"
+                       Grid.Row="1"
+                       Grid.Column="1" />
+                <Button x:Name="btnCopyWebViewAddress" 
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="复制"
+                        BackgroundColor="SkyBlue"
+                        />
+
+            </Grid>
+
+            <Grid x:Name="gArgs" Grid.Row="1" BackgroundColor="Gold" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout
+                    Grid.Row="0"
+                    Orientation="Horizontal">
+                    <BoxView WidthRequest="10" />
+                    <Button x:Name="btnAddArg" Text="+" WidthRequest="50" BackgroundColor="SeaGreen" />
+                    <Button x:Name="btnRemoveArg" Text="-" WidthRequest="50" BackgroundColor="Red" />
+                </StackLayout>
+
+                <ListView 
+                      x:Name="lvArgsList"
+                      Grid.Row="1"
+                      SeparatorVisibility="None"
+                      HasUnevenRows="true"
+                      ItemsSource="{Binding ArgsList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!--<StackLayout Orientation="Horizontal" 
+                                             HorizontalOptions="FillAndExpand">
+
+                                    <Label Text="Index:"
+                                            FontSize="24"/>
+                                    <Label VerticalOptions="FillAndExpand" 
+                                            VerticalTextAlignment="Center" 
+                                            Text="{Binding Index}" 
+                                            FontSize="24" />
+
+                                    <Button x:Name="btnMinusOne" Text="-" />
+                                    
+                                    <Entry VerticalOptions="FillAndExpand"  
+                                           Text="{Binding Value}" 
+                                           FontSize="24" />
+
+                                    <Button x:Name="btnPlusOne" Text="+" />
+
+                                    <BoxView WidthRequest="5" />
+                                    
+                                    <Button x:Name="btnReset" Text="归零" />
+
+                                    <Button x:Name="btnCopyTemplate" Text="拷贝模版" />
+                                    
+                                </StackLayout>-->
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="50" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="80" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label Text="Index:"
+                                           FontSize="24" 
+                                           Grid.Column="0"
+                                           />
+                                    
+                                    <Label VerticalOptions="FillAndExpand" 
+                                           VerticalTextAlignment="Center" 
+                                           Text="{Binding Index}" 
+                                           FontSize="24"
+                                           Grid.Column="1"
+                                           />
+
+                                    <Button x:Name="btnMinusOne" Text="-" Grid.Column="2" />
+                                    
+                                    <Entry VerticalOptions="FillAndExpand"  
+                                           Text="{Binding Value}" 
+                                           FontSize="24"
+                                           Grid.Column="3"
+                                           />
+
+                                    <Button x:Name="btnPlusOne" Text="+" Grid.Column="4" />
+
+                                    <BoxView WidthRequest="5" Grid.Column="5" />
+
+                                    <Button x:Name="btnReset" Text="归零" Grid.Column="6" />
+
+                                    <Button x:Name="btnCopyTemplate" Text="拷贝模版" Grid.Column="7" />
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <Grid x:Name="gToolbar1"
+                  WidthRequest="30"
+                  HorizontalOptions="End"
+                  Grid.RowSpan="3"
+                  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button x:Name="btnGo" Text="GO" 
+                    Grid.Row="0"
+                    WidthRequest="50"
+                    />
+
+                <Button x:Name="btnBack"
+                    Grid.Row="1"
+                    WidthRequest="50"  
+                    />
+
+                <Button x:Name="btnForword"
+                    Grid.Row="2"
+                    WidthRequest="50"
+                    />
+            </Grid>
+
+            <Grid x:Name="gToolbar2"
+                  WidthRequest="30"
+                  HorizontalOptions="Start"
+                  Grid.RowSpan="3"
+                  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button x:Name="btnSetting"
+                    Text="设"
+                    Grid.Row="1"
+                    WidthRequest="50"
+                    />
+
+                <Button x:Name="btnFullScreen"
+                    Text="全"
+                    Grid.Row="2"
+                    WidthRequest="50"
+                    />
+                
+                <Button x:Name="btnLeftOrRight"
+                    Text="左"
+                    Grid.Row="3"
+                    WidthRequest="50"
+                    />
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

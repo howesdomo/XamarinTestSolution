@@ -45,7 +45,7 @@ namespace Client.View.FFImageLoadingDemo
             cachedImage.ErrorPlaceholder = ImageSource.FromResource("Client.Images.FFImageLoading.error.png"); // 读取失败时没有出现 Error 图片
             // cachedImage.Source = ImageSource.FromUri(new Uri(@"http://cn.bing.com/th?id=OHR.BigWindDay_ZH-CN1837859776_1920x1080.jpg"));
             // cachedImage.Source = ImageSource.FromUri(new Uri(@"http://cn.bing.com/th?id=OHR.BigWindDay_ZH-CN332211_1920x1080.jpg")); // 错误的地址 但没有显示 ErrorPlaceholder
-            cachedImage.Source = ImageSource.FromResource("Client.Images.BuBuGao_Japanese.Hiragana.1_a.gif"); // 成功
+            cachedImage.Source = ImageSource.FromResource("Client.Images.BuBuGao_Japanese.Hiragana.2_i.gif"); // 成功
             // cachedImage.Source = ImageSource.FromResource("Client.Images.FFImageLoading.error.png"); // 成功
 
             sl1.Children.Add(cachedImage);

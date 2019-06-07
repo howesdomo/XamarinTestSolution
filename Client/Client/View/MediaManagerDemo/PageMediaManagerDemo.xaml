@@ -1,23 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mediaManager="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"            
              xmlns:local="clr-namespace:Client"
              x:Class="Client.View.MediaManagerDemo.PageMediaManagerDemo">
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="Silver">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            
-            <mediaManager:VideoView x:Name="player" 
-                Grid.Row="0"
-                AspectMode="AspectFit"
-                WidthRequest="250"
-                HeightRequest="250" />
+
+            <Grid x:Name="gridPlayer"></Grid>
 
             <Grid Grid.Row="1" Margin="10,0,0,0">
                 <Grid.ColumnDefinitions>
@@ -57,10 +52,13 @@
                          HorizontalOptions="End"/>
             </Grid>
 
+
             <Entry x:Name="txtUrl"
                    Grid.Row="2"
                    Text="https://sec.ch9.ms/ch9/4c34/35791e22-062a-47df-a165-6d3849e54c34/ApplicationResources.mp4" />
-            
+
+            <!--Text="https://sec.ch9.ms/ch9/4c34/35791e22-062a-47df-a165-6d3849e54c34/ApplicationResources.mp4" />-->
+
             <Button x:Name="btnPlay" 
                     Grid.Row="3"
                     Text="读取视频" />

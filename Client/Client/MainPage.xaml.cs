@@ -66,6 +66,7 @@ namespace Client
             this.btnPingDemo.Clicked += BtnPingDemo_Clicked;
             this.btnTTSDemo.Clicked += BtnTTSDemo_Clicked;
             this.btnPageBaiduMenu.Clicked += BtnPageBaiduMenu_Clicked;
+            this.btnPageBluetoothDemo.Clicked += BtnPageBluetoothDemo_Clicked;
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
             this.btnAndroidPermission.Clicked += BtnAndroidPermission_Clicked;
             this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
@@ -82,8 +83,8 @@ namespace Client
             this.btnFFImageLoading.Clicked += BtnFFImageLoading_Clicked;
             this.btnFileExplorer.Clicked += BtnFileExplorer_Clicked;
             this.btnPluginMediaManagerForms.Clicked += BtnPluginMediaManagerForms_Clicked;
+            this.btnH_Pow2_Brower.Clicked += BtnH_Pow2_Brower_Clicked;
         }
-
 
         async void BtnAllPage_Clicked(object sender, EventArgs e)
         {
@@ -261,6 +262,11 @@ namespace Client
             await Navigation.PushAsync(new PageBaiduMenu());
         }
 
+        async void BtnPageBluetoothDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageBluetoothDemo());
+        }
+
         async void BtnPageIRDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.IRDemo.PageIRDemo());
@@ -359,9 +365,16 @@ namespace Client
             await Navigation.PushAsync(new View.FileExplorer.PageFileExplorerMenu());
         }
 
-        async void BtnPluginMediaManagerForms_Clicked(object sender, EventArgs e)
+        // async 
+            void BtnPluginMediaManagerForms_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new View.MediaManagerDemo.PageMediaManagerDemo());
+            // await Navigation.PushAsync(new View.MediaManagerDemo.PageMediaManagerDemo());
+        }
+
+
+        async void BtnH_Pow2_Brower_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.HPow2Brower());
         }
     }
 

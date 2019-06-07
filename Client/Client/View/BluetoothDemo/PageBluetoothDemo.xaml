@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Client.View.PageBluetoothDemo">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                <Button x:Name="btnOpenBluetooth" Text="打开蓝牙" />
+
+                <Button x:Name="btnBondedDevices" Text="获取已配对列表" />
+                <Button x:Name="btnDiscoveryUnbondDevices" Text="获取未配对列表" />
+
+                <Button x:Name="btnConnect" Text="打开蓝牙连接" />
+                <Editor x:Name="txtZPLContent" HeightRequest="100" IsEnabled="False" />
+                <Button x:Name="btnPrintZPL" Text="printZPL" IsEnabled="False" />
+                <Button x:Name="btnDisconnect" Text="关闭蓝牙连接" IsEnabled="False" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

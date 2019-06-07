@@ -163,7 +163,8 @@ namespace Client.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
             // Plugin.MediaManager.Forms ( 视频播放 )
-            MediaManager.Forms.Platforms.iOS.VideoViewRenderer.Init();
+            // MediaManager.Forms.Platforms.iOS.VideoViewRenderer.Init();
+            // Plugin.MediaManager.Forms.iOS.VideoViewRenderer.Init();
         }
 
         // XLabs

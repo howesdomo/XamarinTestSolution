@@ -29,15 +29,20 @@
                 <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="Client.Images.FFImageLoading.sample.svg"/>
                 
                 <Label Text="2" />
-                <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="{local:EmbeddedResource Client.Images.FFImageLoading.sample.svg}"/>
+                <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="{local:EmbeddedResource Source=Client.Images.FFImageLoading.sample.svg}" />
                 
                 <Label Text="3" />
-                <ffimageloadingsvg:SvgCachedImage x:Name="svg2" WidthRequest="200" HeightRequest="200" />
+                <ffimageloadingsvg:SvgCachedImage x:Name="svg3" WidthRequest="200" HeightRequest="200" />
 
                 <Label Text="4" />
                 <ffimageloadingsvg:SvgCachedImage WidthRequest="200" HeightRequest="200" Source="http://s.cdpn.io/3/kiwi.svg" />
-                
 
+                <Label Text="5" />
+                <ffimageloadingsvg:SvgCachedImage x:Name="svg5" WidthRequest="200" HeightRequest="200" />
+
+                <Label Text="6" />
+                <ffimageloadingsvg:SvgCachedImage x:Name="svg6" WidthRequest="200" HeightRequest="200" />
+                
                 <!-- THIRD APPROACH: --><!--
                 <Label Text="5" />
                 <ffimageloading:CachedImage 

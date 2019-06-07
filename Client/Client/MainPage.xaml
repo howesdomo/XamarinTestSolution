@@ -87,6 +87,8 @@
 
             <Button x:Name="btnPageBaiduMenu" Text="百度" />
 
+            <Button x:Name="btnPageBluetoothDemo" Text="Bluetooth" />
+            
             <Button x:Name="btnPageIRDemo" Text="IR" />
 
             <Button x:Name="btnAndroidPermission" Text="安卓权限" />
@@ -117,7 +119,9 @@
 
             <Button x:Name="btnFileExplorer" Text="FileExplorer" />
 
-            <Button x:Name="btnPluginMediaManagerForms" Text="Plugin.MediaManager.Forms Demos" />
+            <Button x:Name="btnPluginMediaManagerForms" Text="(暂停)Plugin.MediaManager.Forms Demos" />
+
+            <Button x:Name="btnH_Pow2_Brower" Text="H_Pow2浏览器" />
 
         </StackLayout>
     </ScrollView>

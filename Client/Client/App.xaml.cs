@@ -21,6 +21,7 @@ namespace Client
 
         public static Client.Common.IPermission Permission { get; set; }
 
+        public static Client.Common.IBluetooth Bluetooth { get; set; }
 
         public App()
         {

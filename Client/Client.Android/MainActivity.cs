@@ -32,6 +32,7 @@ namespace Client.Droid
 
             init();
             initXLabs();
+            testAsposeCell();
 
             // End Add by Howe
 
@@ -46,6 +47,65 @@ namespace Client.Droid
             // 为了能进入 OnOptionsItemSelected 事件, 采用 Android.Support.V7.Widget.Toolbar 代替默认的 Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = this.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
+        }        
+
+        private void testAsposeCell() // 测试结果, 暂时无法在 Xamarin.Android 中授权, 能够读取Excel文件内容
+        {
+            // TODO 待整合, 引用到iOS项目
+            //string LData = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxMaWNlbnNlPg0KICAgIDxEYXRhPg0KICAgICAgICA8TGljZW5zZWRUbz5pckRldmVsb3BlcnMuY29tPC9MaWNlbnNlZFRvPg0KICAgICAgICA8RW1haWxUbz5pbmZvQGlyRGV2ZWxvcGVycy5jb208L0VtYWlsVG8+DQogICAgICAgIDxMaWNlbnNlVHlwZT5EZXZlbG9wZXIgT0VNPC9MaWNlbnNlVHlwZT4NCiAgICAgICAgPExpY2Vuc2VOb3RlPkxpbWl0ZWQgdG8gMTAwMCBkZXZlbG9wZXIsIHVubGltaXRlZCBwaHlzaWNhbCBsb2NhdGlvbnM8L0xpY2Vuc2VOb3RlPg0KICAgICAgICA8T3JkZXJJRD43ODQzMzY0Nzc4NTwvT3JkZXJJRD4NCiAgICAgICAgPFVzZXJJRD4xMTk0NDkyNDM3OTwvVXNlcklEPg0KICAgICAgICA8T0VNPlRoaXMgaXMgYSByZWRpc3RyaWJ1dGFibGUgbGljZW5zZTwvT0VNPg0KICAgICAgICA8UHJvZHVjdHM+DQogICAgICAgICAgICA8UHJvZHVjdD5Bc3Bvc2UuVG90YWwgUHJvZHVjdCBGYW1pbHk8L1Byb2R1Y3Q+DQogICAgICAgIDwvUHJvZHVjdHM+DQogICAgICAgIDxFZGl0aW9uVHlwZT5FbnRlcnByaXNlPC9FZGl0aW9uVHlwZT4NCiAgICAgICAgPFNlcmlhbE51bWJlcj57RjJCOTcwNDUtMUIyOS00QjNGLUJENTMtNjAxRUZGQTE1QUE5fTwvU2VyaWFsTnVtYmVyPg0KICAgICAgICA8U3Vic2NyaXB0aW9uRXhwaXJ5PjIwOTkxMjMxPC9TdWJzY3JpcHRpb25FeHBpcnk+DQogICAgICAgIDxMaWNlbnNlVmVyc2lvbj4zLjA8L0xpY2Vuc2VWZXJzaW9uPg0KICAgIDwvRGF0YT4NCiAgICA8U2lnbmF0dXJlPlFYTndiM05sTGxSdmRHRnNMb1B5YjJSMVkzUWdSbUZ0YVd4NTwvU2lnbmF0dXJlPg0KPC9MaWNlbnNlPg==";
+            //System.IO.Stream stream = new System.IO.MemoryStream(Convert.FromBase64String(LData));
+            //stream.Seek(0, System.IO.SeekOrigin.Begin);
+            //Aspose.Cells.License license = new Aspose.Cells.License();
+            //license.SetLicense(stream);
+
+            //try
+            //{
+            //    string path = System.IO.Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "Aspose.xlsx");
+
+            //    StringBuilder sb = new StringBuilder();
+
+            //    Aspose.Cells.Workbook wb = null;
+
+            //    if (System.IO.File.Exists(path) == false)
+            //    {
+            //        wb = new Aspose.Cells.Workbook();
+            //    }
+            //    else
+            //    {
+            //        wb = new Aspose.Cells.Workbook(path);
+            //    }
+
+            //    if (wb != null)
+            //    {
+            //        bool isLicensed = wb.IsLicensed;
+            //        if (isLicensed == false)
+            //        {
+            //            sb.AppendLine("Run Time {0} : isLicensed = false;".FormatWith(0));
+            //        }
+
+            //        if (wb.Worksheets.Count > 1)
+            //        {
+            //            sb.AppendLine("Run Time {0} : Worksheets Count = {1};".FormatWith(0, wb.Worksheets.Count));
+            //        }
+
+            //        var ws = wb.Worksheets[0];
+            //        Aspose.Cells.Cell cell0 = ws.Cells[0, 0];
+
+            //        string msg = "{0}".FormatWith(cell0.Value);
+            //        System.Diagnostics.Debug.WriteLine(msg);
+
+            //        cell0.Value = "A1 hello";
+
+            //        // 保存
+            //        string savePath = System.IO.Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "Aspose_Save.xlsx");
+            //        wb.Save(savePath);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    string msg = "{0}".FormatWith(ex.GetInfo());
+            //    System.Diagnostics.Debug.WriteLine(msg);
+            //}
         }
 
         private void init()
@@ -143,10 +203,14 @@ namespace Client.Droid
             // 初始化IR
             MyIR ir = MyIR.GetInstance(ApplicationContext);
             App.IR = ir;
-            // 初始化动态权限
 
+            // 初始化动态权限
             MyPermission myPermission = new MyPermission();
             App.Permission = myPermission;
+
+            // 初始化Bluetooth
+            MyBluetooth myBluetooth = MyBluetooth.GetInstance(this);
+            App.Bluetooth = myBluetooth;
 
             // 初始化 DevExpress.Mobile.Forms
             DevExpress.Mobile.Forms.Init();
@@ -166,8 +230,8 @@ namespace Client.Droid
             var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;                                  // <-- 追加
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
 
-            // Plugin.MediaManager.Forms ( 视频播放 )
-            MediaManager.Forms.Platforms.Android.VideoViewRenderer.Init();
+            // Plugin.MediaManager.Forms ( 视频播放类库 )
+            //MediaManager.CrossMediaManager.Current.Init();
         }
 
         // XLabs
@@ -185,6 +249,11 @@ namespace Client.Droid
             if (requestCode == MyTTS.TTS_RequestCode)
             {
                 MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
+            }
+
+            if (requestCode == MyBluetooth.Bluetooth_RequestCode)
+            {
+                MyBluetooth.GetInstance().Handle_OpenBluetooth(requestCode, resultCode, data);
             }
         }
 

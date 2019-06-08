@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Client.Common;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,10 +12,14 @@ namespace Client.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageBluetoothDemo : ContentPage
     {
+        PageBluetoothDemo_ViewModel ViewModel { get; set; }
+
         public PageBluetoothDemo()
         {
             InitializeComponent();
             initEvent();
+            this.ViewModel = new PageBluetoothDemo_ViewModel();
+            this.BindingContext = this.ViewModel;
 
             this.txtZPLContent.Text = @"^XA
 ^LH0,0
@@ -26,21 +30,87 @@ namespace Client.View
 
         private void initEvent()
         {
-            this.btnOpenBluetooth.Clicked += BtnOpenBluetooth_Clicked;
+            this.swBluetoothEnable.Toggled += swBluetoothEnable_Toggled;
 
             this.btnBondedDevices.Clicked += BtnBondedDevices_Clicked;
             this.btnDiscoveryUnbondDevices.Clicked += BtnDiscoveryUnbondDevices_Clicked;
+            this.lvBoudedList.ItemSelected += lvBoudedList_ItemSelected;
+            this.lvUnboudList.ItemSelected += lvUnboudList_ItemSelected;
 
             this.btnConnect.Clicked += BtnConnect_Clicked;
             this.btnPrintZPL.Clicked += BtnPrintZPL_Clicked;
             this.btnDisconnect.Clicked += BtnDisconnect_Clicked;
+
+            this.btnShowSLConnection.Clicked += btnShowSLConnection_Clicked;
+            this.btnShowSLCommunication.Clicked += btnShowSLCommunication_Clicked;
+
+            this.Appearing += PageBluetoothDemo_Appearing;
+
+            Common.Bluetooth.UpdateInfo += new EventHandler<Common.BLuetoothEventArgs>(this.UpdateInfo_Handle);
         }
 
-        private void BtnOpenBluetooth_Clicked(object sender, EventArgs e)
+
+
+        private void btnShowSLConnection_Clicked(object sender, EventArgs e)
+        {
+            slCommunication.IsVisible = false;
+        }
+
+        private void btnShowSLCommunication_Clicked(object sender, EventArgs e)
+        {
+            slCommunication.IsVisible = true;
+        }
+
+        private void UpdateInfo_Handle(object sender, BLuetoothEventArgs e)
+        {
+            if (this.lvBoudedList.ItemsSource != null)
+            {
+                foreach (var item in this.lvBoudedList.ItemsSource)
+                {
+                    var device = item as Util.XamariN.BluetoothDeviceInfo;
+                    if (device.Equals(e.Update) == true)
+                    {
+                        device.IsConnected = e.Update.IsConnected;
+                    }
+                }
+            }
+        }
+
+        #region 两个 ListView 的 SelectedItem 互斥
+
+        private void lvUnboudList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            lvBoudedList.SelectedItem = null;
+        }
+
+        private void lvBoudedList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            lvUnboudList.SelectedItem = null;
+        }
+
+        #endregion
+
+        private void PageBluetoothDemo_Appearing(object sender, EventArgs e)
+        {
+            UpdateUI();
+        }
+
+        private void swBluetoothEnable_Toggled(object sender, ToggledEventArgs e)
         {
             try
             {
-                App.Bluetooth.OpenBluetooth();
+                swBluetoothEnable_Toggled_ActualMethod(e.Value);
+                UpdateUI();
             }
             catch (Exception ex)
             {
@@ -49,11 +119,31 @@ namespace Client.View
             }
         }
 
+        private void swBluetoothEnable_Toggled_ActualMethod(bool value)
+        {
+            if (App.Bluetooth.mBluetoothIsEnabled == value)
+            {
+                return;
+            }
+            else
+            {
+                if (value == true)
+                {
+                    App.Bluetooth.OpenBluetooth();
+                }
+                else
+                {
+                    App.Bluetooth.CloseBluetooth();
+                }
+            }
+        }
+
         async void BtnBondedDevices_Clicked(object sender, EventArgs e)
         {
             try
             {
                 List<Util.XamariN.BluetoothDeviceInfo> list = App.Bluetooth.GetBondedDevices();
+                this.lvBoudedList.ItemsSource = list;
             }
             catch (BluetoothException btEx)
             {
@@ -67,11 +157,12 @@ namespace Client.View
             }
         }
 
-        private void BtnDiscoveryUnbondDevices_Clicked(object sender, EventArgs e)
+        async void BtnDiscoveryUnbondDevices_Clicked(object sender, EventArgs e)
         {
             try
             {
-                List<Util.XamariN.BluetoothDeviceInfo> list = App.Bluetooth.DiscoveryUnbondDevices();
+                List<Util.XamariN.BluetoothDeviceInfo> list = await App.Bluetooth.DiscoveryUnbondDevices(countDown: 10);
+                this.lvUnboudList.ItemsSource = list;
             }
             catch (Exception ex)
             {
@@ -93,11 +184,27 @@ namespace Client.View
 
         private void UpdateUI()
         {
-            this.btnConnect.IsEnabled = !App.Bluetooth.mIsConnected;
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                // 注销检测事件
+                this.swBluetoothEnable.Toggled -= swBluetoothEnable_Toggled;
+                System.Threading.Thread.Sleep(200);
 
-            this.txtZPLContent.IsEnabled = App.Bluetooth.mIsConnected;
-            this.btnPrintZPL.IsEnabled = App.Bluetooth.mIsConnected;
-            this.btnDisconnect.IsEnabled = App.Bluetooth.mIsConnected;
+                this.swBluetoothEnable.IsToggled = App.Bluetooth.mBluetoothIsEnabled;
+
+                this.slConnection.IsVisible = App.Bluetooth.mBluetoothIsEnabled;
+
+                this.btnBondedDevices.IsEnabled = App.Bluetooth.mBluetoothIsEnabled;
+                this.btnDiscoveryUnbondDevices.IsEnabled = App.Bluetooth.mBluetoothIsEnabled;
+
+                this.btnConnect.IsEnabled = !App.Bluetooth.mIsConnected;
+                this.txtZPLContent.IsEnabled = App.Bluetooth.mIsConnected;
+                this.btnPrintZPL.IsEnabled = App.Bluetooth.mIsConnected;
+                this.btnDisconnect.IsEnabled = App.Bluetooth.mIsConnected;
+
+                // 重新注测检测事件
+                this.swBluetoothEnable.Toggled += swBluetoothEnable_Toggled;
+            });
         }
 
         void BtnPrintZPL_Clicked(object sender, EventArgs e)
@@ -105,11 +212,29 @@ namespace Client.View
             App.Bluetooth.SendZPL(txtZPLContent.Text);
         }
 
-
         private void BtnDisconnect_Clicked(object sender, EventArgs e)
         {
             App.Bluetooth.Disconnect();
             UpdateUI();
+        }
+
+
+    }
+
+    public class PageBluetoothDemo_ViewModel : ViewModel.BaseViewModel
+    {
+        private Util.XamariN.BluetoothDeviceInfo _SelectedBluetoothDeviceInfo;
+
+        public Util.XamariN.BluetoothDeviceInfo SelectedBluetoothDeviceInfo
+        {
+            get
+            {
+                return this._SelectedBluetoothDeviceInfo;
+            }
+            set
+            {
+                _SelectedBluetoothDeviceInfo = value;
+            }
         }
     }
 }

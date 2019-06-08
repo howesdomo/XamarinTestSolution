@@ -21,12 +21,16 @@
             <!-- Title -->
             <Label Text="V 1.0.0.1" />
 
-            <!-- 1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right-->
             <StackLayout Grid.Column="1" Orientation="Horizontal">
                 <Image x:Name="btnShowHidden"
-                   WidthRequest="20" HeightRequest="20" 
+                   WidthRequest="20" 
+                   HeightRequest="20"
+                   Margin="5,0,5,0"
                    Source="{local:EmbeddedResource Client.Images.BaseView.plus.png}" />
-                <BoxView BackgroundColor="Transparent" WidthRequest="5" />
+                
+                <!-- 1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right-->
+                <!-- 已解决 -->
+                <!--<BoxView BackgroundColor="Transparent" WidthRequest="5" />-->
             </StackLayout>
 
         </Grid>

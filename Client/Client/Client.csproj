@@ -27,6 +27,8 @@
 
   <ItemGroup>
     <None Remove="Images\BaseView\back.png" />
+    <None Remove="Images\BaseView\Bluetooth\earphones.png" />
+    <None Remove="Images\BaseView\Bluetooth\smartphone.png" />
     <None Remove="Images\BaseView\CheckBox\check.jpg" />
     <None Remove="Images\BaseView\CheckBox\check.png" />
     <None Remove="Images\BaseView\CheckBox\uncheck.jpg" />
@@ -37,6 +39,7 @@
     <None Remove="Images\BaseView\MediaPlayer\play.png" />
     <None Remove="Images\BaseView\minus.png" />
     <None Remove="Images\BaseView\plus.png" />
+    <None Remove="Images\BaseView\refresh.png" />
     <None Remove="Images\BaseView\scan.png" />
     <None Remove="Images\BaseView\scanLine.png" />
     <None Remove="Images\BuBuGao\minus.png" />
@@ -172,6 +175,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Images\BaseView\back.png" />
+    <EmbeddedResource Include="Images\BaseView\Bluetooth\earphones.png" />
+    <EmbeddedResource Include="Images\BaseView\Bluetooth\smartphone.png" />
     <EmbeddedResource Include="Images\BaseView\CheckBox\check.png" />
     <EmbeddedResource Include="Images\BaseView\CheckBox\uncheck.png" />
     <EmbeddedResource Include="Images\BaseView\MediaPlayer\fullscreen.png" />
@@ -180,6 +185,7 @@
     <EmbeddedResource Include="Images\BaseView\MediaPlayer\play.png" />
     <EmbeddedResource Include="Images\BaseView\minus.png" />
     <EmbeddedResource Include="Images\BaseView\plus.png" />
+    <EmbeddedResource Include="Images\BaseView\refresh.png" />
     <EmbeddedResource Include="Images\BaseView\scan.png" />
     <EmbeddedResource Include="Images\BaseView\scanLine.png" />
     <EmbeddedResource Include="Images\BuBuGao\minus.png" />

@@ -11,15 +11,20 @@ using Android.Bluetooth;
 using Android.Content;
 using Java.IO;
 using Java.Util;
+using Util.XamariN;
+using Android.Runtime;
 
 namespace Client.Droid
 {
     public class MyBluetooth :
           Android.Content.BroadcastReceiver
+        , IBluetoothProfileServiceListener
         , Client.Common.IBluetooth
 
     {
-        public static int Bluetooth_RequestCode = 8766;
+        private static object _LOCK_ = new object();
+
+        public static int Bluetooth_RequestCode = 8766; // Blue
 
         private BluetoothSocket mBluetoothSocket { get; set; } = null;
 
@@ -68,7 +73,7 @@ namespace Client.Droid
         /// 蓝牙是否已开启
         /// </summary>
         /// <returns></returns>
-        public bool BluetoothIsEnabled
+        public bool mBluetoothIsEnabled
         {
             get
             {
@@ -95,7 +100,7 @@ namespace Client.Droid
         /// </summary>
         public void OpenBluetooth()
         {
-            if (this.BluetoothIsEnabled == false)
+            if (this.mBluetoothIsEnabled == false)
             {
                 // 打开授权 : XXX应用, 想要打开蓝牙。
                 Intent intent = new Intent(BluetoothAdapter.ActionRequestEnable);
@@ -103,9 +108,20 @@ namespace Client.Droid
             }
         }
 
+        /// <summary>
+        /// 关闭蓝牙
+        /// </summary>
+        public void CloseBluetooth()
+        {
+            if (this.mBluetoothIsEnabled == true)
+            {
+                BluetoothAdapter.DefaultAdapter.Disable();
+            }
+        }
+
         public void Handle_OpenBluetooth(int requestCode, Android.App.Result resultCode, Intent data)
         {
-            // TODO switch
+            // TODO 设想, 对于未开启蓝牙的情况下, 要求某个蓝牙的操作, 在开启后根据 requestCode 自动执行对应行动(某个蓝牙的操作)
             switch (requestCode)
             {
                 case 8766:
@@ -141,7 +157,7 @@ namespace Client.Droid
         /// </summary>
         public List<Util.XamariN.BluetoothDeviceInfo> GetBondedDevices()
         {
-            if (this.BluetoothIsEnabled == false)
+            if (this.mBluetoothIsEnabled == false)
             {
                 throw new BluetoothException("蓝牙未开启");
             }
@@ -167,49 +183,111 @@ namespace Client.Droid
                 );
             }
 
+            // 查看是否蓝牙是否连接到三种设备的一种，以此来判断是否处于连接状态还是打开并没有连接的状态
+            Android.Bluetooth.ProfileState a2dp = adapter.GetProfileConnectionState(ProfileType.A2dp); // 可操控蓝牙设备，如带播放暂停功能的蓝牙耳机
+            Android.Bluetooth.ProfileState headset = adapter.GetProfileConnectionState(ProfileType.Headset); // 蓝牙头戴式耳机，支持语音输入输出
+            Android.Bluetooth.ProfileState health = adapter.GetProfileConnectionState(ProfileType.Health); // 蓝牙穿戴式设备
+
+            if (a2dp == ProfileState.Connected)
+            {
+                BluetoothAdapter.DefaultAdapter.GetProfileProxy
+                (
+                    context: mAppActivity.ApplicationContext,
+                    listener: this,
+                    profile: ProfileType.A2dp
+                );
+            }
+
+            if (headset == ProfileState.Connected)
+            {
+                BluetoothAdapter.DefaultAdapter.GetProfileProxy
+                (
+                    context: mAppActivity.ApplicationContext,
+                    listener: this,
+                    profile: ProfileType.Headset
+                );
+            }
+
+            if (health == ProfileState.Connected)
+            {
+                BluetoothAdapter.DefaultAdapter.GetProfileProxy
+                (
+                    context: mAppActivity.ApplicationContext,
+                    listener: this,
+                    profile: ProfileType.Health
+                );
+            }
+
             return r;
         }
 
-        private static object _LOCK_ = new object();
+        #region 搜索 未配对蓝牙 设备
 
+        /// <summary>
+        /// 正在搜索蓝牙中
+        /// </summary>
         private bool mDiscoverying { get; set; }
 
-        private List<Util.XamariN.BluetoothDeviceInfo> mUnbondDevicesList { get; set; }
+        /// <summary>
+        /// 搜索蓝牙等待剩余秒数
+        /// </summary>
+        private int mCountDown { get; set; }
 
-        public List<Util.XamariN.BluetoothDeviceInfo> DiscoveryUnbondDevices()
+        /// <summary>
+        /// 安卓系统专用
+        /// </summary>
+        private List<Android.Bluetooth.BluetoothDevice> mUnbondDevicesList { get; set; } = new List<BluetoothDevice>();
+
+        /// <summary>
+        /// Xamarin.Forms 合用
+        /// </summary>
+        private List<Util.XamariN.BluetoothDeviceInfo> mUnbondDeviceInfoList { get; set; } = new List<BluetoothDeviceInfo>();
+
+        public async Task<List<Util.XamariN.BluetoothDeviceInfo>> DiscoveryUnbondDevices(int countDown = 10)
         {
-            // 新东西
-            // BluetoothDevice.ExtraDevice
-            // BluetoothDevice.ActionFound
-
-            lock (_LOCK_)
+            if (mDiscoverying == true)
             {
-                mDiscoverying = true;
-                mUnbondDevicesList = new List<Util.XamariN.BluetoothDeviceInfo>();
-
-                Task.Run(() =>
-                {
-                    IntentFilter filter = new IntentFilter(BluetoothDevice.ActionFound);
-                    mAppActivity.RegisterReceiver(this, filter);
-
-                    BluetoothAdapter.DefaultAdapter.StartDiscovery();
-                });
-
-                int countDown = 10; // 最长等待秒数
-                while (mDiscoverying)
-                {
-                    if (countDown <= 0)
-                    {
-                        break;
-                    }
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
-                    countDown -= 1;
-                }
-
-                return mUnbondDevicesList;
+                throw new Exception("mDiscoverying is true");
             }
+
+            mDiscoverying = true;
+            mUnbondDeviceInfoList = new List<Util.XamariN.BluetoothDeviceInfo>();
+
+            // 广播接收器 - 动态注册
+            IntentFilter filter = new IntentFilter(BluetoothDevice.ActionFound);
+            mAppActivity.RegisterReceiver(GetInstance(), filter);
+
+            // 开始搜索蓝牙
+            BluetoothAdapter.DefaultAdapter.StartDiscovery(); // 请到 public override void OnReceive() 中编写发现蓝牙逻辑
+
+            // 蓝牙搜索过程持续等待 x 秒
+            mCountDown = countDown; // 设置 搜索蓝牙等待剩余秒数
+            await Task.Run(waitForDiscoveryComplete);
+
+            return mUnbondDeviceInfoList;
         }
 
+        /// <summary>
+        /// 蓝牙搜索过程持续等待
+        /// </summary>
+        /// <returns></returns>
+        private Task waitForDiscoveryComplete()
+        {
+            while (mCountDown > 0)
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                mCountDown -= 1;
+            }
+
+            mDiscoverying = false;
+            mAppActivity.UnregisterReceiver(GetInstance()); // 广播接收器 - 取消注册
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region 连接蓝牙设备
 
         public async Task<bool> Connect(string name)
         {
@@ -294,11 +372,75 @@ namespace Client.Droid
             return false;
         }
 
+        public async Task<bool> ConnectV2(Util.XamariN.BluetoothDeviceInfo bluetoothDevice, string pinCode = null)
+        {
+            mCancellationTokenSource = new CancellationTokenSource();
+            while (mCancellationTokenSource.IsCancellationRequested == false)
+            {
+                if (mBluetoothIsEnabled == false)
+                {
+                    return false; // 缺少蓝牙设备抛错, 故这里可以不做逻辑
+                }
+
+                BluetoothAdapter adapter = BluetoothAdapter.DefaultAdapter;
+
+                // 从已配对列表寻找
+                var device = adapter.BondedDevices.FirstOrDefault(i => i.Address == bluetoothDevice.Address);
+                if (device == null)
+                {
+
+                    // 未配对设备, 使用PIN码进行蓝牙配对
+                    if (pinCode.IsNullOrWhiteSpace() == true)
+                    {
+                        byte[] pinCodeByteArr = System.Text.Encoding.Default.GetBytes(pinCode);
+                        device.SetPin(pinCodeByteArr);
+                    }
+                    // else if ...... 
+                    // {
+                    //     device.SetPairingConfirmation(true);
+                    // }
+                    else
+                    {
+                        throw new BluetoothException("");
+                    }
+
+                }
+
+                // var uuid = UUID.FromString("00001101-0000-1000-8000-00805f9b34fb");
+                var uuid = UUID.FromString(Guid.NewGuid().ToString());
+                mBluetoothSocket = device.CreateInsecureRfcommSocketToServiceRecord(uuid);
+                await mBluetoothSocket.ConnectAsync();
+
+                mIsConnected = mBluetoothSocket.IsConnected;
+                if (mIsConnected)
+                {
+                    mDeviceName = device.Name;
+                    await Task.Run(TalkToDevice);
+                }
+
+                // 未知道下面这些 State 有何作用
+                var a2dp = adapter.GetProfileConnectionState(ProfileType.A2dp);
+                var gatt = adapter.GetProfileConnectionState(ProfileType.Gatt);
+                var gattserver = adapter.GetProfileConnectionState(ProfileType.GattServer);
+                var headset = adapter.GetProfileConnectionState(ProfileType.Headset);
+                var health = adapter.GetProfileConnectionState(ProfileType.Health);
+                var sap = adapter.GetProfileConnectionState(ProfileType.Sap);
+
+                return mIsConnected;
+            }
+
+            return false;
+        }
+
         private Task TalkToDevice()
         {
             // check _socket.IsConnected, read w/InputStreamReader, BufferedReader
             return Task.CompletedTask;
         }
+
+        #endregion
+
+        #region 断开蓝牙连接
 
         public void Disconnect()
         {
@@ -320,6 +462,44 @@ namespace Client.Droid
             }
         }
 
+        #endregion
+
+        public override void OnReceive(Context context, Intent intent)
+        {
+            switch (intent.Action)
+            {
+                case BluetoothDevice.ActionFound: // 搜索到的蓝牙设备
+                    bluetoothDeviceFound(intent);
+                    break;
+                case BluetoothAdapter.ActionStateChanged:
+                    string toDO = string.Empty;
+                    break;
+            }
+        }
+
+        private void bluetoothDeviceFound(Intent intent)
+        {
+            BluetoothDevice bluetoothDevice = (BluetoothDevice)intent.GetParcelableExtra(BluetoothDevice.ExtraDevice);
+
+            if (mUnbondDevicesList.Exists(i => i.Address == bluetoothDevice.Address) == true)
+            {
+                return; // 已存在
+            }
+
+            mUnbondDevicesList.Add(bluetoothDevice);
+
+            mUnbondDeviceInfoList.Add
+            (
+                new Util.XamariN.BluetoothDeviceInfo
+                (
+                    name: bluetoothDevice.Name,
+                    address: bluetoothDevice.Address,
+                    bluetoothDeviceType: (int)bluetoothDevice.Type,
+                    bluetoothBondState: (int)bluetoothDevice.BondState
+                )
+            );
+        }
+
         public void SendZPL(string zpl, Encoding encoding = null)
         {
             if (encoding == null)
@@ -331,30 +511,24 @@ namespace Client.Droid
             mBluetoothSocket.OutputStream.WriteAsync(bBuf, 0, bBuf.Length);
         }
 
-
-        public override void OnReceive(Context context, Intent intent)
+        public void OnServiceConnected(ProfileType profile, IBluetoothProfile proxy)
         {
-            string action = intent.Action;
-            if (BluetoothDevice.ActionFound.Equals(action) == true) // 搜索到的蓝牙设备
+            string msg = "Profile Type : {0}".FormatWith(profile.ToString());
+            System.Diagnostics.Debug.WriteLine(msg);
+
+            foreach (BluetoothDevice item in proxy.ConnectedDevices)
             {
-                BluetoothDevice item = (BluetoothDevice)intent.GetParcelableExtra(BluetoothDevice.ExtraDevice);
-                mUnbondDevicesList.Add
-                (
-                    new Util.XamariN.BluetoothDeviceInfo
-                    (
-                        name: item.Name,
-                        address: item.Address,
-                        bluetoothDeviceType: (int)item.Type,
-                        bluetoothBondState: (int)item.BondState
-                    )
-                );
+                msg = "Connected Device Name:{0}".FormatWith(item.Name);
+                System.Diagnostics.Debug.WriteLine(msg);
+                
+                var args = new Common.BLuetoothEventArgs(new BluetoothDeviceInfo(item.Name, item.Address, (int)item.Type, (int)item.BondState) { IsConnected = true });
+                Client.Common.Bluetooth.OnUpdateInfo(args);
             }
-            else
-            {
-                // 取消注册
-                mDiscoverying = false;
-                mAppActivity.UnregisterReceiver(this);
-            }
+        }
+
+        public void OnServiceDisconnected(ProfileType profile)
+        {
+
         }
     }
 }

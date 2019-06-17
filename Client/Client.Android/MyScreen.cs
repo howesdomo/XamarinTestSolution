@@ -14,43 +14,71 @@ namespace Client.Droid
 {
     public class MyScreen : Util.XamariN.IScreen
     {
-        MainActivity mMainActivity { get; set; }
+        #region 构造函数 + 单例模式
 
-        public MyScreen(MainActivity mainActivity)
+        private MyScreen()
         {
-            mMainActivity = mainActivity;
+
         }
+
+        private static MyScreen s_Instance;
+
+        private Activity mAppActivity { get; set; }
+
+        private static object objLock = new object();
+
+        public static MyScreen GetInstance(Android.App.Activity activity = null)
+        {
+            lock (objLock)
+            {
+                if (s_Instance == null)
+                {
+                    s_Instance = new MyScreen();
+                    if (s_Instance.mAppActivity == null && activity == null)
+                    {
+                        throw new Exception("MyBluetooth.GetInstance 蓝牙单例首次创建, 请传入 activity 参数");
+                    }
+                    if (activity != null)
+                    {
+                        s_Instance.mAppActivity = activity;
+                    }
+                }
+                return s_Instance;
+            }
+        }
+
+        #endregion        
 
         #region ScreenDirection
 
         public void Unspecified()
         {
-            this.mMainActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Unspecified;
+            this.mAppActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Unspecified;
         }
 
         public void ForcePortrait()
         {
-            this.mMainActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
+            this.mAppActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
         }
 
         public void ForceReversePortrait()
         {
-            this.mMainActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReversePortrait;
+            this.mAppActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReversePortrait;
         }
 
         public void ForceLandscapeLeft()
         {
-            this.mMainActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReverseLandscape;
+            this.mAppActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.ReverseLandscape;
         }
 
         public void ForceLandscapeRight()
         {
-            this.mMainActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Landscape;
+            this.mAppActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Landscape;
         }
 
         public void ForceNosensor()
         {
-            this.mMainActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Nosensor;
+            this.mAppActivity.RequestedOrientation = Android.Content.PM.ScreenOrientation.Nosensor;
         }
 
         #endregion
@@ -62,6 +90,11 @@ namespace Client.Droid
 
         private bool _IsScreenKeepOn = false;
 
+        /// <summary>
+        /// 屏幕常亮
+        /// Get 获取是否屏幕常亮状态
+        /// Set 设置/取消 屏幕常亮
+        /// </summary>
         public bool ScreenKeepOn
         {
             get
@@ -92,7 +125,7 @@ namespace Client.Droid
         {
             if (mPowerManager == null)
             {
-                mPowerManager = (PowerManager)mMainActivity.GetSystemService(Context.PowerService);
+                mPowerManager = (PowerManager)mAppActivity.GetSystemService(Context.PowerService);
             }
 
             if (mWakeLock == null)
@@ -115,6 +148,5 @@ namespace Client.Droid
         }
 
         #endregion
-
     }
 }

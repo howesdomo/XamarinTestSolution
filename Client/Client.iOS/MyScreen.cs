@@ -74,31 +74,12 @@ namespace Client.iOS
         //PowerManager mPowerManager = null;
         //PowerManager.WakeLock mWakeLock = null;
 
-        public void ScreenKeepOn()
-        {
-            //if (mPowerManager == null)
-            //{
-            //    mPowerManager = (PowerManager)mMainActivity.GetSystemService(Context.PowerService);
-            //}
-
-            //if (mWakeLock == null)
-            //{
-            //    mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenBright, "MyWakeLock");
-            //}
-
-            //mWakeLock.Acquire();
-        }
-
-        public void ScreenCancelKeepOn()
-        {
-            //if (mPowerManager == null || mWakeLock == null)
-            //{
-            //    return;
-            //}
-
-            //mWakeLock.Release();
-            //mWakeLock = null;
-        }
+        /// <summary>
+        /// 屏幕常亮
+        /// Get 获取是否屏幕常亮状态
+        /// Set 设置/取消 屏幕常亮
+        /// </summary>
+        public bool ScreenKeepOn { get; set; }
 
         #endregion
 

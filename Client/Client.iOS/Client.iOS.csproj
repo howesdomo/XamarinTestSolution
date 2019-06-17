@@ -116,7 +116,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="MyLocation.cs" />
     <Compile Include="MyOutput.cs" />
-    <Compile Include="ScreenDirection.cs" />
+    <Compile Include="MyScreen.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="MyApplication.cs" />

@@ -59,7 +59,7 @@ namespace Client.View.PageDemo
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                App.ScreenDirection.ForcePortrait();
+                App.Screen.ForcePortrait();
             });
         }
 
@@ -70,7 +70,7 @@ namespace Client.View.PageDemo
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                App.ScreenDirection.Unspecified();
+                App.Screen.Unspecified();
             });
 
             base.OnDisappearing();

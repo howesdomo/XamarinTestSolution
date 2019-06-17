@@ -14,7 +14,7 @@ namespace Client.Droid
 {
     // 处理这些异常的时候，应用程序已经崩溃且无法恢复，这时android系统已经杀死了应用程序，
     // 唯一能做的就是：记录异常、场景等重要信息，在合适的时候发送到服务器，以供错误分析
-    [Application(Label = "Xamarin.Forms Demo")] // TODO 修改程序名称 // 已测试 若这里不填写任何值 则显示 Client.Android
+    [Application(Label = "Xamarin.Forms Demo")] // 修改程序名称 // 已测试 若这里不填写任何值 则显示 Client.Android
     public class MyApplication : Application
     {
         public MyApplication(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)

@@ -26,13 +26,13 @@ namespace Client.BaseView
 
         private void initUI()
         {
-            gMain.Margin = new Thickness() { Top = 5, Bottom = 5 };
+            //gMain.Margin = new Thickness() { Top = 5, Bottom = 5 };
 
-            lbl1.Margin = new Thickness() { Left = 20 };
-            sld1.Margin = new Thickness() { Left = 20, Right = 20 };
+            //lbl1.Margin = new Thickness() { Left = 20 };
+            //sld1.Margin = new Thickness() { Left = 20, Right = 20 };
 
-            lbl2.Margin = new Thickness() { Left = 20 };
-            sld2.Margin = new Thickness() { Left = 20, Right = 20 };
+            //lbl2.Margin = new Thickness() { Left = 20 };
+            //sld2.Margin = new Thickness() { Left = 20, Right = 20 };
         }
 
         private void initData()

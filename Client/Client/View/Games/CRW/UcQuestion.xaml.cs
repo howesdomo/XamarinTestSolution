@@ -39,7 +39,7 @@ namespace Client.View.Games.CRW
 
         private void initUI()
         {
-            this.lbl.Margin = new Thickness(left: 0d, top: 0d, right: 0d, bottom: 0d);
+            // this.lbl.Margin = new Thickness(left: 0d, top: 0d, right: 0d, bottom: 0d);
         }
     }
 }

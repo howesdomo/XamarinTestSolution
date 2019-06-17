@@ -46,7 +46,7 @@ namespace Client.View.FileExplorer
 
             drawStacklayoutCurrentDirectory(path, level);
 
-            // TODO 自动滚动到最后
+            // 自动滚动到最后
             await scrollViewCurrentDirectory.ScrollToAsync(element: scrollViewCurrentDirectory, position: ScrollToPosition.End, animated: true);
         }
 
@@ -221,7 +221,7 @@ namespace Client.View.FileExplorer
                 }
                 else
                 {
-                    // TODO Open File
+                    // TODO 长按 或 点击 弹出打开方式菜单
                 }
             }
         }

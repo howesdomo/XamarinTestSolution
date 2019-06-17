@@ -119,7 +119,7 @@
     <Compile Include="MyTTS.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ScreenDirection.cs" />
+    <Compile Include="MyScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

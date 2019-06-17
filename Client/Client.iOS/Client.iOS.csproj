@@ -103,6 +103,7 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AsposeCellsHelper.cs" />
     <Compile Include="BaiduLBS.cs" />
     <Compile Include="Essentials\DeviceInfo.cs">
       <SubType>Code</SubType>
@@ -170,6 +171,15 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>DLL\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N" />
+    <Reference Include="I18N.CJK" />
+    <Reference Include="I18N.MidEast" />
+    <Reference Include="I18N.Other" />
+    <Reference Include="I18N.Rare" />
+    <Reference Include="I18N.West" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -240,5 +250,7 @@
     <BundleResource Include="Resources\Images\FFImageLoading\sample.svg" />
     <Content Include="Resources\raw\error.mp3" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
 </Project>

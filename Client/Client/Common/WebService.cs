@@ -25,7 +25,6 @@ namespace Client.Common
 
     //        if (StaticInfo.IsDebugMode)
     //        {
-    //            // TODO AppWeb DebugMode 
     //            // uri = string.Format("http://localhost:18888/PCWebService.asmx");
     //        }
 
@@ -38,7 +37,6 @@ namespace Client.Common
     //        string uri = string.Format("http://{0}:{1}/{2}", setting.IPOrWebAddress, setting.Port, setting.AppName);
     //        if (StaticInfo.IsDebugMode)
     //        {
-    //            // TODO AppWeb DebugMode 
     //            // uri = string.Format("http://localhost:18888/PCWebService.asmx");
     //        }
 

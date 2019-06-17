@@ -23,6 +23,16 @@ namespace Client
             initEvent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            // 回到主界面, 重新根据陀螺仪来改变屏幕方向
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                App.Screen.Unspecified(); 
+            });
+        }
+
         private void initEvent()
         {
             #region 隐藏内容
@@ -54,7 +64,7 @@ namespace Client
             this.btnPageLifecycle.Clicked += BtnPageLifecycle_Clicked;
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
             this.btnPageOutputDemo.Clicked += BtnPageOutputDemo_Clicked;
-            this.btnPageScreenDirection.Clicked += BtnPageScreenDirection_Clicked;
+            this.btnPageScreen.Clicked += BtnPageScreen_Clicked;
             this.btnPageDisplayAlertDemo.Clicked += BtnPageDisplayAlertDemo_Clicked;
             this.btnPageMessagingCenterDemo.Clicked += BtnPageMessagingCenterDemo_Clicked;
             this.btnPageSQLiteDemo.Clicked += BtnPageSQLiteDemo_Clicked;
@@ -84,6 +94,7 @@ namespace Client
             this.btnFileExplorer.Clicked += BtnFileExplorer_Clicked;
             this.btnPluginMediaManagerForms.Clicked += BtnPluginMediaManagerForms_Clicked;
             this.btnH_Pow2_Brower.Clicked += BtnH_Pow2_Brower_Clicked;
+            this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
         }
 
         async void BtnAllPage_Clicked(object sender, EventArgs e)
@@ -202,9 +213,9 @@ namespace Client
             await Navigation.PushAsync(new Client.View.PageOutputDemo());
         }
 
-        async void BtnPageScreenDirection_Clicked(object sender, EventArgs e)
+        async void BtnPageScreen_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PageScreenDirection());
+            await Navigation.PushAsync(new PageScreen());
         }
 
         async void BtnPageDisplayAlertDemo_Clicked(object sender, EventArgs e)
@@ -365,8 +376,7 @@ namespace Client
             await Navigation.PushAsync(new View.FileExplorer.PageFileExplorerMenu());
         }
 
-        // async 
-            void BtnPluginMediaManagerForms_Clicked(object sender, EventArgs e)
+        void BtnPluginMediaManagerForms_Clicked(object sender, EventArgs e)
         {
             // await Navigation.PushAsync(new View.MediaManagerDemo.PageMediaManagerDemo());
         }
@@ -375,6 +385,19 @@ namespace Client
         async void BtnH_Pow2_Brower_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.HPow2Brower());
+        }
+
+        private void BtnExcelByAsposeCell_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.ExcelUtils_Aspose.test();
+            }
+            catch (Exception ex)
+            {
+                string msg = "{0}".FormatWith(ex.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+            }
         }
     }
 

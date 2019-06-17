@@ -209,7 +209,7 @@ namespace Client.Common
                 {
                     if (StaticInfo.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
                     {
-                        _InnerSQLiteDB = new Client.Data.SQLiteDB(Data.LocationEnum.Inner, InnerSQLiteConnStr);
+                        _InnerSQLiteDB = new Client.Data.SQLiteDB(Util.Data_SQLite.LocationEnum.Inner, InnerSQLiteConnStr);
                     }
                 }
                 return _InnerSQLiteDB;
@@ -242,7 +242,7 @@ namespace Client.Common
                             System.IO.Directory.CreateDirectory(fileInfo.DirectoryName);
                         }
 
-                        _ExternalSQLiteDB = new Client.Data.SQLiteDB(Data.LocationEnum.External, ExternalSQLiteConnStr);
+                        _ExternalSQLiteDB = new Client.Data.SQLiteDB(Util.Data_SQLite.LocationEnum.External, ExternalSQLiteConnStr);
                     }
                 }
                 return _ExternalSQLiteDB;

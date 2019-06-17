@@ -184,8 +184,10 @@ namespace Client.View.BuBuGao
                 toSave.CreateDateTime = DateTime.Now;
                 toSave.CreateDateTimeValue = toSave.CreateDateTime.Ticks;
 
-                var temp = Common.StaticInfo.InnerSQLiteDB.BuBuGao_cQuestion(toSave); // TODO 等待 QuestionID
-                await temp;
+                //var temp = Common.StaticInfo.InnerSQLiteDB.BuBuGao_cQuestion(toSave);
+                //await temp;
+
+                var temp = await Common.StaticInfo.InnerSQLiteDB.BuBuGao_cQuestion(toSave); // 上面代码简化得出
 
                 foreach (var item in toSave.Words)
                 {

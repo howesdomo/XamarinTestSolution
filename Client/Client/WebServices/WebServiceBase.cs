@@ -63,7 +63,6 @@ namespace Client
                 string data = string.Empty;
                 try
                 {
-                    // TODO 测试超时, 超长内容
                     #region 先压缩, 后加密
 
                     requestData.IsCompress = isCompress;
@@ -189,7 +188,6 @@ namespace Client
             string data = string.Empty;
             try
             {
-                // TODO 测试超时, 超长内容
                 data = mClient.UploadString(uri, "POST", Util.JsonUtils.SerializeObject(requestData));
             }
             catch (System.Net.WebException webEx)
@@ -230,7 +228,6 @@ namespace Client
                 string data = string.Empty;
                 try
                 {
-                    // TODO 测试超时, 超长内容
                     data = mClient.UploadString(uri, "POST", Util.JsonUtils.SerializeObject(requestData));
                 }
                 catch (System.Net.WebException webEx)
@@ -355,7 +352,6 @@ namespace Client
                 string data = string.Empty;
                 try
                 {
-                    // TODO 测试超时, 超长内容
                     data = mClient.UploadString(uri, "POST", Util.JsonUtils.SerializeObject(requestData));
                 }
                 catch (System.Net.WebException webEx)
@@ -461,7 +457,6 @@ namespace Client
                 string data = string.Empty;
                 try
                 {
-                    // TODO 测试超时, 超长内容
                     #region 先压缩, 后加密
 
                     requestData.IsCompress = isCompress;

@@ -121,7 +121,7 @@ namespace Client.Droid
 
         public void Handle_OpenBluetooth(int requestCode, Android.App.Result resultCode, Intent data)
         {
-            // TODO 设想, 对于未开启蓝牙的情况下, 要求某个蓝牙的操作, 在开启后根据 requestCode 自动执行对应行动(某个蓝牙的操作)
+            // TODO 设想 : 对于未开启蓝牙的情况下, 要求某个蓝牙的操作, 在开启后根据 requestCode 自动执行对应行动(某个蓝牙的操作)
             switch (requestCode)
             {
                 case 8766:

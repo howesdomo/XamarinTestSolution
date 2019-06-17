@@ -8,8 +8,10 @@ using UIKit;
 
 namespace Client.iOS
 {
-    public class ScreenDirection : Util.XamariN.IScreenDirection
+    public class MyScreen : Util.XamariN.IScreen
     {
+        #region ScreenDirection
+
         // UIInterfaceOrientation.Unknown
         // UIInterfaceOrientation.LandscapeLeft
         // UIInterfaceOrientation.LandscapeRight
@@ -63,6 +65,42 @@ namespace Client.iOS
         {
             UIDevice.CurrentDevice.SetValueForKey(new NSNumber((int)UIInterfaceOrientation.Portrait), new NSString("orientation"));
         }
+
+        #endregion
+
+        #region ScreenKeepOn
+        // TODO iOS系统 屏幕常亮代码实现
+
+        //PowerManager mPowerManager = null;
+        //PowerManager.WakeLock mWakeLock = null;
+
+        public void ScreenKeepOn()
+        {
+            //if (mPowerManager == null)
+            //{
+            //    mPowerManager = (PowerManager)mMainActivity.GetSystemService(Context.PowerService);
+            //}
+
+            //if (mWakeLock == null)
+            //{
+            //    mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenBright, "MyWakeLock");
+            //}
+
+            //mWakeLock.Acquire();
+        }
+
+        public void ScreenCancelKeepOn()
+        {
+            //if (mPowerManager == null || mWakeLock == null)
+            //{
+            //    return;
+            //}
+
+            //mWakeLock.Release();
+            //mWakeLock = null;
+        }
+
+        #endregion
 
     }
 }

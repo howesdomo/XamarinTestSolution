@@ -1,8 +1,5 @@
-﻿using Client.Common;
-using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SQLite;
+using Util.Data_SQLite;
 
 /// <summary>
 /// howe 的 设计思路
@@ -33,32 +30,4 @@ namespace Client.Data
             }
         }
     }
-
-    public class DBVersion
-    {
-        [PrimaryKey]
-        public string ID
-        {
-            get
-            {
-                return "DBVersion";
-            }
-            set
-            {
-
-            }
-        }
-
-        public LocationEnum Loaction { get; set; }
-
-        public int Version { get; set; }
-
-    }
-
-    public enum LocationEnum
-    {
-        Inner = 0,
-        External = 1
-    }
-
 }

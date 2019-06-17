@@ -27,12 +27,12 @@ namespace Client.View.DevExpressDemo
 
         private void PageDevExpressV2_Appearing(object sender, EventArgs e)
         {
-            App.ScreenDirection.ForceLandscapeLeft();
+            App.Screen.ForceLandscapeLeft();
         }
 
         private void PageDevExpressV2_Disappearing(object sender, EventArgs e)
         {
-            App.ScreenDirection.Unspecified();
+            App.Screen.Unspecified();
         }
 
         async void BindData()

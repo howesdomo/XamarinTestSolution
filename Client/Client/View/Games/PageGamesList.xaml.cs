@@ -36,7 +36,7 @@ namespace Client.View.Games
 
         protected override void OnAppearing()
         {
-            App.ScreenDirection.Unspecified();
+            App.Screen.Unspecified();
             base.OnAppearing();
         }
 
@@ -62,9 +62,6 @@ namespace Client.View.Games
             this.btnCRW_Type2.Clicked += BtnCRW_Type2_Clicked;
 
             this.btnUserList.Clicked += BtnUserList_Clicked;
-
-            this.btnScreenStayOn.Clicked += BtnScreenStayOn_Clicked;
-            this.btnScreenCanTurnOff.Clicked += BtnScreenCanTurnOff_Clicked;
 
             this.btnDB.Clicked += BtnDB_Clicked;
         }
@@ -154,51 +151,6 @@ namespace Client.View.Games
         {
             await Navigation.PushAsync(new Client.View.Games.CRW.PageUserList());
         }
-
-        /// <summary>
-        /// 测试失败
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnScreenStayOn_Clicked(object sender, EventArgs e)
-        {
-            // Xamarin.Essentials.Platform.GetCurrentActivity (System.Boolean throwOnNull) [0x00018] in <805b0dc2c64d43b7831031b129534f87>:0 
-            // 由于获取到的 GetCurrentActivity 故无法设置常亮
-
-            try
-            {
-                // Xamarin.Essentials.ScreenLock.RequestActive();
-                Xamarin.Essentials.DeviceDisplay.KeepScreenOn = true;
-            }
-            catch (Exception ex)
-            {
-                string msg = "{0}".FormatWith(ex.GetFullInfo());
-                System.Diagnostics.Debug.WriteLine(msg);
-            }
-        }
-
-        /// <summary>
-        /// 测试失败
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnScreenCanTurnOff_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                // Xamarin.Essentials.ScreenLock.RequestRelease();
-                Xamarin.Essentials.DeviceDisplay.KeepScreenOn = false;
-            }
-            catch (Exception ex)
-            {
-
-                string msg = "{0}".FormatWith(ex.GetFullInfo());
-                System.Diagnostics.Debug.WriteLine(msg);
-            }
-        }
-
-
-
     }
 
     public class PageGameListEventArgs : EventArgs

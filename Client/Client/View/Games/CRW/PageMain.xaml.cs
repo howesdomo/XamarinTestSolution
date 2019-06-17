@@ -56,16 +56,7 @@ namespace Client.View.Games.CRW
 
         private void initUI()
         {
-            // Xamarin.Forms 版本 3.0.0.530893
-            // 由于在XAML中设置 Margin 会导致编译时报错
-            // 故将部分的 Margin 设置写在C#代码中
-            this.gRight.Margin = new Thickness(left: -10d, top: 0d, right: 0d, bottom: 0d);
 
-            this.lblLevelName.Margin = new Thickness(left: 10d, top: 0d, right: 0d, bottom: 0d);
-
-            this.lblNextLevel.Margin = new Thickness(left: 10d, top: 0d, right: 10d, bottom: 0d);
-
-            this.btnNextLevel.Margin = new Thickness(left: 5d, top: 5d, right: 5d, bottom: 5d);
         }
 
         protected override void OnAppearing()
@@ -78,8 +69,8 @@ namespace Client.View.Games.CRW
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                // TODO 设置常亮 -- 暂时无法使用 Xamarin.Essentials.ScreenLock.RequestActive 来设置屏幕常亮
-                App.ScreenDirection.ForceLandscapeRight();
+                App.Screen.ScreenKeepOn = true;
+                App.Screen.ForceLandscapeRight();
                 gameContinue();
             });
         }
@@ -139,7 +130,7 @@ namespace Client.View.Games.CRW
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    App.ScreenDirection.Unspecified();
+                    App.Screen.Unspecified();
                 });
             }
 

@@ -24,12 +24,15 @@ namespace Client.View
             this.ViewModel = new HPow2Brower_ViewModel();
             this.BindingContext = this.ViewModel;
 
+            // 安卓需要输入包含 http://
+            // 苹果则不需要
+            // TODO 待完美解决两个平台不同的需要
             // txtAddressTemplate.Text = ""; // 默认网址
         }
 
         private void initUI()
         {
-            gNavigation.Margin = new Thickness(left: 5, top: 5, right: 5, bottom: 0);
+            // gNavigation.Margin = new Thickness(left: 5, top: 5, right: 5, bottom: 0);
 
             btnBack.Text = "<-";
             btnForword.Text = "->";

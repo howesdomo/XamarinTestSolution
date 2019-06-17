@@ -20,7 +20,7 @@ namespace Client.View.FFImageLoadingDemo
             this.ViewModel = new PageSimpleSVG_ViewModel();
             this.BindingContext = this.ViewModel;
 
-            // TODO SVG资源放置到 Client 中 无法正常读取
+            // SVG资源放置到 Client 中 无法正常读取
             svg3.Source = ImageSource.FromResource("Client.Images.FFImageLoading.sample.svg");
 
             // SVG资源放置到 Client.iOS 中能正常读取

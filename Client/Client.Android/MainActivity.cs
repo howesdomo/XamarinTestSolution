@@ -33,6 +33,7 @@ namespace Client.Droid
             init();
             initXLabs();
             testAsposeCell();
+            // initWakeLock();
 
             // End Add by Howe
 
@@ -51,7 +52,6 @@ namespace Client.Droid
 
         private void testAsposeCell() // 测试结果, 暂时无法在 Xamarin.Android 中授权, 能够读取Excel文件内容
         {
-            // TODO 待整合, 引用到iOS项目
             //string LData = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxMaWNlbnNlPg0KICAgIDxEYXRhPg0KICAgICAgICA8TGljZW5zZWRUbz5pckRldmVsb3BlcnMuY29tPC9MaWNlbnNlZFRvPg0KICAgICAgICA8RW1haWxUbz5pbmZvQGlyRGV2ZWxvcGVycy5jb208L0VtYWlsVG8+DQogICAgICAgIDxMaWNlbnNlVHlwZT5EZXZlbG9wZXIgT0VNPC9MaWNlbnNlVHlwZT4NCiAgICAgICAgPExpY2Vuc2VOb3RlPkxpbWl0ZWQgdG8gMTAwMCBkZXZlbG9wZXIsIHVubGltaXRlZCBwaHlzaWNhbCBsb2NhdGlvbnM8L0xpY2Vuc2VOb3RlPg0KICAgICAgICA8T3JkZXJJRD43ODQzMzY0Nzc4NTwvT3JkZXJJRD4NCiAgICAgICAgPFVzZXJJRD4xMTk0NDkyNDM3OTwvVXNlcklEPg0KICAgICAgICA8T0VNPlRoaXMgaXMgYSByZWRpc3RyaWJ1dGFibGUgbGljZW5zZTwvT0VNPg0KICAgICAgICA8UHJvZHVjdHM+DQogICAgICAgICAgICA8UHJvZHVjdD5Bc3Bvc2UuVG90YWwgUHJvZHVjdCBGYW1pbHk8L1Byb2R1Y3Q+DQogICAgICAgIDwvUHJvZHVjdHM+DQogICAgICAgIDxFZGl0aW9uVHlwZT5FbnRlcnByaXNlPC9FZGl0aW9uVHlwZT4NCiAgICAgICAgPFNlcmlhbE51bWJlcj57RjJCOTcwNDUtMUIyOS00QjNGLUJENTMtNjAxRUZGQTE1QUE5fTwvU2VyaWFsTnVtYmVyPg0KICAgICAgICA8U3Vic2NyaXB0aW9uRXhwaXJ5PjIwOTkxMjMxPC9TdWJzY3JpcHRpb25FeHBpcnk+DQogICAgICAgIDxMaWNlbnNlVmVyc2lvbj4zLjA8L0xpY2Vuc2VWZXJzaW9uPg0KICAgIDwvRGF0YT4NCiAgICA8U2lnbmF0dXJlPlFYTndiM05sTGxSdmRHRnNMb1B5YjJSMVkzUWdSbUZ0YVd4NTwvU2lnbmF0dXJlPg0KPC9MaWNlbnNlPg==";
             //System.IO.Stream stream = new System.IO.MemoryStream(Convert.FromBase64String(LData));
             //stream.Seek(0, System.IO.SeekOrigin.Begin);
@@ -118,7 +118,7 @@ namespace Client.Droid
                 ipOrWebAddress: "192.168.1.215",
                 port: "17911",
                 appName: "AppWebApplication461/APPWebServiceHandler.ashx"
-            ); // TODO Read In webSetting.json
+            ); // TODO 从配置文件读取服务器设置
 
             Common.WebSetting webAPISetting = new Common.WebSetting
             (
@@ -126,7 +126,7 @@ namespace Client.Droid
                 ipOrWebAddress: "192.168.1.215",
                 port: "17911",
                 appName: "AppWebApplication461/api/orders"
-            ); // TODO Read In webSetting.json
+            ); // TODO 从配置文件读取服务器设置
 
             #endregion
 
@@ -183,7 +183,7 @@ namespace Client.Droid
             App.Output = new MyOutput();
 
             // 屏幕方向
-            App.ScreenDirection = new ScreenDirection(this);
+            App.Screen = new MyScreen(this);
 
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
@@ -233,6 +233,17 @@ namespace Client.Droid
             // Plugin.MediaManager.Forms ( 视频播放类库 )
             //MediaManager.CrossMediaManager.Current.Init();
         }
+
+
+        //PowerManager mPowerManager = null;
+        //PowerManager.WakeLock mWakeLock = null;
+
+        //private void initWakeLock()
+        //{
+        //    mPowerManager = (PowerManager)GetSystemService(Context.PowerService);            
+        //    mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenBright, "MyWakeLock");
+        //    mWakeLock.Acquire();
+        //}
 
         // XLabs
         private void initXLabs()

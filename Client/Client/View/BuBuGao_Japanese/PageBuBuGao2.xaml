@@ -25,15 +25,15 @@
                 <ff:CachedImage x:Name="imgHiragana" Source="{Binding HiraganaGifImage}" InputTransparent="True" />
                 <ff:CachedImage x:Name="imgKatakana" Source="{Binding KatakanaGifImage}" InputTransparent="True" IsVisible="False" />
 
-                <Image x:Name="btnSwitch" WidthRequest="40" HeightRequest="40" HorizontalOptions="End" VerticalOptions="Start"
+                <Image x:Name="btnSwitch" WidthRequest="40" HeightRequest="40" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,10,0"
                        Source="{local:EmbeddedResource Client.Images.BuBuGao_Japanese.refresh.png}" />
 
                 <Label Text="{Binding WordInfo}" VerticalOptions="End" HorizontalOptions="StartAndExpand" />
             </Grid>
 
-            <Button x:Name="btnPlaySound" Text="播放" BackgroundColor="#84d945" Grid.Row="2" />
+            <Button x:Name="btnPlaySound" Text="播放" BackgroundColor="#84d945" Grid.Row="2" Margin="5,0,5,0" />
 
-            <Grid x:Name="gBottom" Grid.Row="3">
+            <Grid x:Name="gBottom" Grid.Row="3" Margin="5,0,5,2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />

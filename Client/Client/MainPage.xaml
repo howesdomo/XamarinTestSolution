@@ -69,7 +69,7 @@
 
             <Button x:Name="btnPageOutputDemo" Text="IOutput实现" />
 
-            <Button x:Name="btnPageScreenDirection" Text="屏幕方向(IScreenDirection)" />
+            <Button x:Name="btnPageScreen" Text="屏幕(IScreen)" />
 
             <Button x:Name="btnPageMessagingCenterDemo" Text="MessagingCenter Demo - 类似安卓的广播" />
 
@@ -126,6 +126,8 @@
             <Button x:Name="btnPluginMediaManagerForms" Text="(暂停)Plugin.MediaManager.Forms Demos" />
 
             <Button x:Name="btnH_Pow2_Brower" Text="H_Pow2浏览器" />
+
+            <Button x:Name="btnExcel" Text="Aspose.Cells 测试" />
 
         </StackLayout>
     </ScrollView>

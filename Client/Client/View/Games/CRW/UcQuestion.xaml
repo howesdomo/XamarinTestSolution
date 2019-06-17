@@ -41,7 +41,7 @@
                         <Setter Property="VerticalTextAlignment" Value="Center" />
                     </Style>
                 </Grid.Resources>
-                <Label x:Name="lbl" HorizontalTextAlignment="Center"
+                <Label x:Name="lbl" HorizontalTextAlignment="Center" Margin="0,0,0,0"
                        Text="{Binding ResultInfo}" />
 
                 <!--

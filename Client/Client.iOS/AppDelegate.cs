@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-
+using System.Text;
 using Foundation;
 using UIKit;
 
@@ -38,6 +38,8 @@ namespace Client.iOS
             init();
             initXLabs();
 
+            Client.App.ExcelUtils_Aspose = new AsposeCellsHelper();
+
             // End Add by Howe
 
             return base.FinishedLaunching(app, options);
@@ -53,7 +55,7 @@ namespace Client.iOS
                 ipOrWebAddress: "192.168.1.215",
                 port: "17911",
                 appName: "AppWebApplication461/APPWebServiceHandler.ashx"
-            ); // TODO Read In webSetting.json
+            ); // TODO 从配置文件读取服务器设置
 
             Common.WebSetting webAPISetting = new Common.WebSetting
             (
@@ -61,7 +63,7 @@ namespace Client.iOS
                 ipOrWebAddress: "192.168.1.215",
                 port: "17911",
                 appName: "AppWebApplication461/api/orders"
-            ); // TODO Read In webSetting.json
+            ); // TODO 从配置文件读取服务器设置
 
             #endregion
 
@@ -125,7 +127,7 @@ namespace Client.iOS
             App.Output = new MyOutput(); // TODO 未知道 iOS 是否有类似安卓的 LogUtil
 
             // 屏幕方向
-            App.ScreenDirection = new ScreenDirection();
+            App.Screen = new MyScreen();
 
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();

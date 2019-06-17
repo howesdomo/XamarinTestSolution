@@ -34,29 +34,29 @@ namespace Client.View.BuBuGao_Japanese
 
         private void initUI()
         {
-            this.btnPlaySound.Margin = new Thickness()
-            {
-                Left = 5,
-                Top = 0,
-                Right = 5,
-                Bottom = 0
-            };
+            //this.btnPlaySound.Margin = new Thickness()
+            //{
+            //    Left = 5,
+            //    Top = 0,
+            //    Right = 5,
+            //    Bottom = 0
+            //};
 
-            this.gBottom.Margin = new Thickness()
-            {
-                Left = 5,
-                Top = 0,
-                Right = 5,
-                Bottom = 2
-            };
+            //this.gBottom.Margin = new Thickness()
+            //{
+            //    Left = 5,
+            //    Top = 0,
+            //    Right = 5,
+            //    Bottom = 2
+            //};
 
-            this.btnSwitch.Margin = new Thickness()
-            {
-                Left = 0,
-                Top = 0,
-                Right = 10,
-                Bottom = 0
-            };
+            //this.btnSwitch.Margin = new Thickness()
+            //{
+            //    Left = 0,
+            //    Top = 0,
+            //    Right = 10,
+            //    Bottom = 0
+            //};
         }
 
         private void initEvent()

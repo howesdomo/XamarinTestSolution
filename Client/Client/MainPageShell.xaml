@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+
+             x:Class="Client.MainPageShell">
+    <FlyoutItem
+        Title="A01"
+        FlyoutDisplayOptions="AsMultipleItems"
+        >
+
+        <Tab Title="Domestic">
+            <ShellContent Route="cats"
+                          
+                          Title="Cats"
+                          Icon="cat.png"
+                           />
+            <ShellContent Route="dogs"
+                          
+                          Title="Dogs"
+                          Icon="dog.png"
+                           />
+        </Tab>
+
+        <!--<ShellContent Route="monkeys"
+                      Style="{StaticResource MonkeysShell}"
+                      Title="Monkeys"
+                      Icon="monkey.png"
+                      ContentTemplate="{DataTemplate views:MonkeysPage}" />
+        <ShellContent Route="elephants"
+                      Style="{StaticResource ElephantsShell}"
+                      Title="Elephants"
+                      Icon="elephant.png"
+                      ContentTemplate="{DataTemplate views:ElephantsPage}" />
+        <ShellContent Route="bears"
+                      Style="{StaticResource BearsShell}"
+                      Title="Bears"
+                      Icon="bear.png"
+                      ContentTemplate="{DataTemplate views:BearsPage}" />-->
+
+    </FlyoutItem>
+
+    <!--<ShellContent Route="about"
+                  Style="{StaticResource AboutShell}"
+                  Title="About"
+                  Icon="info.png"
+                  ContentTemplate="{DataTemplate views:AboutPage}" />
+
+    <MenuItem Text="Random"
+              Icon="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              Icon="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />-->
+</Shell>

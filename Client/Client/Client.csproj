@@ -360,8 +360,8 @@
     <Compile Update="View\MarqueeDemo\MarqueeLabel_V1.xaml.cs">
       <DependentUpon>MarqueeLabel_V1.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\ScreenDirectionDemo\PageScreenDirection.xaml.cs">
-      <DependentUpon>PageScreenDirection.xaml</DependentUpon>
+    <Compile Update="View\ScreenDemo\PageScreen.xaml.cs">
+      <DependentUpon>PageScreen.xaml</DependentUpon>
     </Compile>
     <Compile Update="View\SQLiteDemo\PageSQLiteDemo_NodeItem.xaml.cs">
       <DependentUpon>PageSQLiteDemo_NodeItem.xaml</DependentUpon>
@@ -373,6 +373,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="BaseView\UcAudioSetting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPageShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\AccommodatingViewAndKeyboard\Page1.xaml">
@@ -558,7 +561,7 @@
     <EmbeddedResource Update="View\PingDemo\PingDemo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\ScreenDirectionDemo\PageScreenDirection.xaml">
+    <EmbeddedResource Update="View\ScreenDemo\PageScreen.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ShuangSeQiu\PageShuangSeQiu.xaml">

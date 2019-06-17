@@ -2,12 +2,12 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-
 using System.Threading.Tasks;
 
 using SQLite;
 
 using Client.Model;
+using Util.Data_SQLite;
 
 namespace Client.Data
 {

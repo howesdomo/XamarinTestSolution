@@ -34,21 +34,21 @@ namespace Client.View.BuBuGao
 
         private void initUI()
         {
-            this.btnPlaySound.Margin = new Thickness()
-            {
-                Left = 5,
-                Top = 0,
-                Right = 5,
-                Bottom = 0
-            };
+            //this.btnPlaySound.Margin = new Thickness()
+            //{
+            //    Left = 5,
+            //    Top = 0,
+            //    Right = 5,
+            //    Bottom = 0
+            //};
 
-            this.gBottom.Margin = new Thickness()
-            {
-                Left = 5,
-                Top = 0,
-                Right = 5,
-                Bottom = 2
-            };
+            //this.gBottom.Margin = new Thickness()
+            //{
+            //    Left = 5,
+            //    Top = 0,
+            //    Right = 5,
+            //    Bottom = 2
+            //};
         }
 
         private void initEvent()

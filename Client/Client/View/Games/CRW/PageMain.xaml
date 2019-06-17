@@ -32,7 +32,9 @@
                         </Grid.ColumnDefinitions>
                         
                         <Image x:Name="btnBack" WidthRequest="20" Source="{local:EmbeddedResource Client.Images.BaseView.back.png}" />
-                        <Label x:Name="lblLevelName" Grid.Column="1" Text="{Binding LevelName}" VerticalTextAlignment="Center" />
+                        <Label x:Name="lblLevelName" Grid.Column="1" Text="{Binding LevelName}" VerticalTextAlignment="Center"
+                               Margin="10,0,0,0"
+                               />
                         <Grid Grid.Column="2">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
@@ -51,6 +53,7 @@
                     <viewCRW:UcQuestion x:Name="gAnswer"  Grid.Row="3" BindingContext="{Binding AnswerQuestion}" />
                 </Grid>
                 <Grid x:Name="gRight"
+                      Margin="-10,0,0,0"
                   Grid.Column="1"
                   BackgroundColor="Gray">
                     <Grid.RowDefinitions>
@@ -75,8 +78,11 @@
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center" />
-                        <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" BackgroundColor="Silver" />
+                        <Label x:Name="lblNextLevel" Text="" VerticalTextAlignment="Center"
+                               Margin="10,0,10,0" />
+                        <Button x:Name="btnNextLevel" Text="开始" Grid.Row="1" BackgroundColor="Silver"
+                                Margin="5, 5, 5, 5"
+                                />
                     </Grid>
 
                 </Grid>

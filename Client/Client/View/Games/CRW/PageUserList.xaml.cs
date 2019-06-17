@@ -27,7 +27,7 @@ namespace Client.View.Games.CRW
 
             Device.BeginInvokeOnMainThread(() =>
             {
-                App.ScreenDirection.ForceLandscapeLeft();
+                App.Screen.ForceLandscapeRight();
             });
         }
 
@@ -35,7 +35,7 @@ namespace Client.View.Games.CRW
         {
             Device.BeginInvokeOnMainThread(() =>
             {
-                App.ScreenDirection.Unspecified();
+                App.Screen.Unspecified();
             });
 
             base.OnDisappearing();

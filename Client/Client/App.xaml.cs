@@ -7,7 +7,7 @@ namespace Client
 {
     public partial class App : Application
     {
-        public static Util.XamariN.IScreenDirection ScreenDirection { get; set; }
+        public static Util.XamariN.IScreen Screen { get; set; }
 
         public static Client.Common.ILBS LBS { get; set; }
 
@@ -22,6 +22,8 @@ namespace Client
         public static Client.Common.IPermission Permission { get; set; }
 
         public static Client.Common.IBluetooth Bluetooth { get; set; }
+
+        public static Client.Common.IExcelUtils_Aspose ExcelUtils_Aspose { get; set; }
 
         public App()
         {

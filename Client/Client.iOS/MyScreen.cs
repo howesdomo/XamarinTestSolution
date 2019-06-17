@@ -69,17 +69,49 @@ namespace Client.iOS
         #endregion
 
         #region ScreenKeepOn
-        // TODO iOS系统 屏幕常亮代码实现
 
-        //PowerManager mPowerManager = null;
-        //PowerManager.WakeLock mWakeLock = null;
+        private bool _IsScreenKeepOn = false;
 
         /// <summary>
         /// 屏幕常亮
         /// Get 获取是否屏幕常亮状态
         /// Set 设置/取消 屏幕常亮
         /// </summary>
-        public bool ScreenKeepOn { get; set; }
+        public bool ScreenKeepOn
+        {
+            get
+            {
+                return _IsScreenKeepOn;
+            }
+            set
+            {
+                if (value == _IsScreenKeepOn)
+                {
+                    return;
+                }
+
+                if (value == true)
+                {
+                    screenKeepOn_ActualMethod();
+                }
+                else
+                {
+                    screenCancelKeepOn_ActualMethod();
+                }
+
+                _IsScreenKeepOn = value;
+            }
+        }
+
+        private void screenKeepOn_ActualMethod()
+        {
+            UIApplication.SharedApplication.IdleTimerDisabled = true;
+        }
+
+        private void screenCancelKeepOn_ActualMethod()
+        {
+            UIApplication.SharedApplication.IdleTimerDisabled = false;
+        }
 
         #endregion
 

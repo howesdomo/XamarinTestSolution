@@ -16,6 +16,7 @@
 
             <Label Text="------------ 测试使用自制Checkbo ------------" />
             <bv:Checkbox Text="测试自制CheckBox" Checked="True" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

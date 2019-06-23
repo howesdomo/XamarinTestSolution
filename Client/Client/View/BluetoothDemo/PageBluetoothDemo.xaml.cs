@@ -173,7 +173,21 @@ namespace Client.View
 
         async void BtnConnect_Clicked(object sender, EventArgs e)
         {
-            bool r = await App.Bluetooth.Connect("ZT410"); // TODO 从列表中选择
+            if (this.ViewModel.SelectedBluetoothDeviceInfo == null)
+            {
+                await DisplayAlert(title: "错误", message: "请选择需要连接的蓝牙设备", cancel: "确定");
+                return;
+            }
+
+            //if (this.ViewModel.SelectedBluetoothDeviceInfo.BluetoothBondState.Info == "Bonded" &&
+            //    this.txtPinCode.Text.IsNullOrWhiteSpace()
+            //    )
+            //{
+            //    await DisplayAlert(title: "错误", message: "当前蓝牙设备未配对, 请输入PinCode 或者 进行配对", cancel: "确定");
+            //    return;
+            //}
+
+            bool r = await App.Bluetooth.ConnectV2(this.ViewModel.SelectedBluetoothDeviceInfo, this.txtPinCode.Text.TrimAdv());
             UpdateUI();
 
             if (r == false)
@@ -233,7 +247,13 @@ namespace Client.View
             }
             set
             {
+                if (value == null)
+                {
+                    return;
+                }
+
                 _SelectedBluetoothDeviceInfo = value;
+                this.OnPropertyChanged("SelectedBluetoothDeviceInfo");
             }
         }
     }

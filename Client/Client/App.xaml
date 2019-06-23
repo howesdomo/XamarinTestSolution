@@ -3,6 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Client.App">
 	<Application.Resources>
-    
+        <Style TargetType="Button">
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="BackgroundColor" Value="Silver" />
+            <Setter Property="Margin" Value="3,3,3,3" />
+            <Setter Property="BorderWidth" Value="-1" />
+            <Setter Property="BorderRadius" Value="8" />
+
+            <!--
+            <Setter Property="V">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Frame HorizontalOptions="FillAndExpand" Padding="1,1,1,1" Margin="5,5,5,5" OutlineColor="#00000088" HasShadow="True">
+                            <ContentPresenter x:Name="contentPresenter" />
+                        </Frame>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            -->
+
+        </Style>
 	</Application.Resources>
 </Application>

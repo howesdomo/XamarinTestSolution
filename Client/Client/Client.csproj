@@ -335,7 +335,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
-    <PackageReference Include="Xamarin.LiveReload" Version="0.3.27" />
+    <PackageReference Include="Xamarin.HotReload" Version="1.4.10" />
     <PackageReference Include="XLabs.Forms" Version="2.3.0-pre05" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
@@ -351,9 +351,7 @@
     <Compile Update="View\AllPageDemo\CarousePageDetail1.xaml.cs">
       <DependentUpon>CarousePageDetail1.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\AllPageDemo\MasterDetailPage1MenuItem.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Update="View\AllPageDemo\MasterDetailPage1MenuItem.cs" />
     <Compile Update="View\Games\CRW\UcUserListDetail.xaml.cs">
       <DependentUpon>UcUserListDetail.xaml</DependentUpon>
     </Compile>
@@ -577,6 +575,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\TTSDemo\PageXamarinEssentialsTTS.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\BluetoothDemo\UcBluetoothDevice.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\WebServiceDemo\PageWebServiceDemo.xaml">

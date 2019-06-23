@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Client"
+             xmlns:view="clr-namespace:Client.View"
+             
              x:Class="Client.View.PageBluetoothDemo">
     <NavigationPage.TitleView>
         <Grid>
@@ -17,7 +19,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <!-- Title -->
-            <Label Text="蓝牙 V 1.0.0.0" />
+            <Label Text="蓝牙 V 1.0.0.1" />
         </Grid>
     </NavigationPage.TitleView>
     <ContentPage.Content>        
@@ -52,6 +54,7 @@
                             BackgroundColor="Transparent" />
                 </StackLayout>
                 <ListView x:Name="lvBoudedList"
+                          SelectedItem="{Binding SelectedBluetoothDeviceInfo}"
                           HeightRequest="150">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -101,6 +104,7 @@
                             BackgroundColor="Transparent" />
                 </StackLayout>
                 <ListView x:Name="lvUnboudList"
+                          SelectedItem="{Binding SelectedBluetoothDeviceInfo}"
                           HeightRequest="150">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -139,10 +143,11 @@
 
             <Grid x:Name="slCommunication" 
                          Grid.Row="1"
-                         BackgroundColor="Silver"
+                         BackgroundColor="#99d9ea"
                          IsVisible="False">
 
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
@@ -150,16 +155,25 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 
-                <Label Text="选中设备"
-                       Grid.Row="0" />
+                <StackLayout Grid.Row="0" Orientation="Vertical">
+                    <Label Text="选中设备" VerticalOptions="Center" />
+                    <view:UcBluetoothDevice BindingContext="{Binding SelectedBluetoothDeviceInfo}" />
+                </StackLayout>
+                
+                <StackLayout Grid.Row="1" Orientation="Vertical">
+                    <Label Text="Pin码" />
+                    <Entry x:Name="txtPinCode" Placeholder="未配对蓝牙设备请输入Pin码" />
+                </StackLayout>
+
                 <Button x:Name="btnConnect" Text="打开蓝牙连接"
-                        Grid.Row="1" />
-                <Editor x:Name="txtZPLContent" HeightRequest="100" IsEnabled="False"
                         Grid.Row="2" />
-                <Button x:Name="btnPrintZPL" Text="printZPL" IsEnabled="False" 
+                <Editor x:Name="txtZPLContent" IsEnabled="False"
                         Grid.Row="3" />
-                <Button x:Name="btnDisconnect" Text="关闭蓝牙连接" IsEnabled="False" 
+                <Button x:Name="btnPrintZPL" Text="printZPL" IsEnabled="False" 
                         Grid.Row="4" />
+                <Button x:Name="btnDisconnect" Text="关闭蓝牙连接" IsEnabled="False" 
+                        Grid.Row="5" />
+                
             </Grid>
 
             <Grid Grid.Row="2">

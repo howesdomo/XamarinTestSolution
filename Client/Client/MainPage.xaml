@@ -61,11 +61,8 @@
             <Button x:Name="btnPageLifecycle" Text="Page 生命周期" />
 
             <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
-            <Button x:Name="btnPageDisplayAlertDemo" >
-                <Button.Text>
-                    弹窗 Demo
-                </Button.Text>
-            </Button>
+            
+            <Button x:Name="btnPageDisplayAlertDemo" Text="弹窗 Demo" />
 
             <Button x:Name="btnPageOutputDemo" Text="IOutput实现" />
 
@@ -125,7 +122,7 @@
 
             <Button x:Name="btnPluginMediaManagerForms" Text="(暂停)Plugin.MediaManager.Forms Demos" />
 
-            <Button x:Name="btnH_Pow2_Brower" Text="H_Pow2浏览器" />
+            <Button x:Name="btnH_Pow2_Brower" Text="H^2浏览器" />
 
             <Button x:Name="btnExcel" Text="Aspose.Cells 测试" />
 

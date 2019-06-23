@@ -251,7 +251,9 @@ namespace Client.Droid
             }
 
             mDiscoverying = true;
-            mUnbondDeviceInfoList = new List<Util.XamariN.BluetoothDeviceInfo>();
+
+            mUnbondDevicesList = new List<BluetoothDevice>(); // 清空安卓专用列表
+            mUnbondDeviceInfoList = new List<Util.XamariN.BluetoothDeviceInfo>(); // 清空Xamarin.Forms专用列表
 
             // 广播接收器 - 动态注册
             IntentFilter filter = new IntentFilter(BluetoothDevice.ActionFound);
@@ -388,13 +390,19 @@ namespace Client.Droid
                 var device = adapter.BondedDevices.FirstOrDefault(i => i.Address == bluetoothDevice.Address);
                 if (device == null)
                 {
+                    device = mUnbondDevicesList.FirstOrDefault(i => i.Address == bluetoothDevice.Address);
+                    if (device == null)
+                    {
+                        throw new BluetoothException("mUnbondDevicesList 找不到 {0}[{1}] 设备".FormatWith(bluetoothDevice.Name, bluetoothDevice.Address));
+                    }
 
                     // 未配对设备, 使用PIN码进行蓝牙配对
-                    if (pinCode.IsNullOrWhiteSpace() == true)
+                    if (pinCode.IsNullOrWhiteSpace() == false)
                     {
                         byte[] pinCodeByteArr = System.Text.Encoding.Default.GetBytes(pinCode);
                         device.SetPin(pinCodeByteArr);
                     }
+                    // // TODO 未配对, 但用户不输入pin码, 弹出配对窗口????? 待测试
                     // else if ...... 
                     // {
                     //     device.SetPairingConfirmation(true);
@@ -406,8 +414,8 @@ namespace Client.Droid
 
                 }
 
-                // var uuid = UUID.FromString("00001101-0000-1000-8000-00805f9b34fb");
-                var uuid = UUID.FromString(Guid.NewGuid().ToString());
+                var uuid = UUID.FromString("00001101-0000-1000-8000-00805f9b34fb");
+
                 mBluetoothSocket = device.CreateInsecureRfcommSocketToServiceRecord(uuid);
                 await mBluetoothSocket.ConnectAsync();
 

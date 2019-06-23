@@ -27,13 +27,19 @@ namespace Client
 
         public App()
         {
-
-            // 初始化 Xamarin.LiveReload
-#if DEBUG
-            LiveReload.Init();
-#endif
-
             InitializeComponent();
+
+#if DEBUG
+
+            HotReloader.Current.Run(this);
+
+            // HotReloader.Current.Run(this);
+
+            //HotReloader.Current.Run(this, new HotReloader.Configuration
+            //{
+            //    ExtensionIpAddress = System.Net.IPAddress.Parse("192.168.1.215") // 填写你电脑的ip
+            //});
+#endif
 
             // MainPage = new MainPage(); // 源代码注释, 采用 MainPage = new NavigationPage(new MainPage()); 代替
 

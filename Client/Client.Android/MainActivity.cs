@@ -21,7 +21,6 @@ namespace Client.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
-
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -33,7 +32,6 @@ namespace Client.Droid
             init();
             initXLabs();
             testAsposeCell();
-            // initWakeLock();
 
             // End Add by Howe
 
@@ -233,17 +231,6 @@ namespace Client.Droid
             // Plugin.MediaManager.Forms ( 视频播放类库 )
             //MediaManager.CrossMediaManager.Current.Init();
         }
-
-
-        //PowerManager mPowerManager = null;
-        //PowerManager.WakeLock mWakeLock = null;
-
-        //private void initWakeLock()
-        //{
-        //    mPowerManager = (PowerManager)GetSystemService(Context.PowerService);            
-        //    mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenBright, "MyWakeLock");
-        //    mWakeLock.Acquire();
-        //}
 
         // XLabs
         private void initXLabs()

@@ -130,7 +130,14 @@ namespace Client.Droid
 
             if (mWakeLock == null)
             {
-                mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenBright, "MyWakeLock");
+                //levelAndFlags           CPU是否运行 屏幕是否亮着 键盘灯是否亮着
+                //PARTIAL_WAKE_LOCK       是           否            否
+                //SCREEN_DIM_WAKE_LOCK    是           低亮度        否
+                //SCREEN_BRIGHT_WAKE_LOCK 是           高亮度        否
+                //FULL_WAKE_LOCK          是           是            是
+
+                // mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenBright, "MyWakeLock");
+                mWakeLock = mPowerManager.NewWakeLock(WakeLockFlags.ScreenDim, "MyWakeLock");
             }
 
             mWakeLock.Acquire();
@@ -148,5 +155,7 @@ namespace Client.Droid
         }
 
         #endregion
+
+
     }
 }

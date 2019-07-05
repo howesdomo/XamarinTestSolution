@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Client.View.PingDemoMini"
+             Title="Mini PingDemo"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Label Text="  请输入 IP 或 网址 (不带 http://)" />
+                <Editor x:Name="txtIP" />
+                <Button x:Name="btnPingTest" Text="Ping" />
+                <Button x:Name="btnPingTestStop" Text="Stop" IsEnabled="False" />
+                <ListView x:Name="lv" 
+                      ItemsSource="{Binding Result, Mode=OneWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="{Binding Foreground}">
+                                    <Label Text="{Binding Content}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Grid x:Name="gPingDisplay" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label x:Name="txtLastStatus" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

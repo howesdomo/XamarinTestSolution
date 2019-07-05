@@ -16,7 +16,7 @@ using Android.Content;
 
 namespace Client.Droid
 {
-    [Activity(Label = "Client", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "MiniPing", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -32,6 +32,12 @@ namespace Client.Droid
             init();
             initXLabs();
             testAsposeCell();
+
+            //// start 设置全屏 (隐藏标题栏)
+            //var uiOptions = SystemUiFlags.HideNavigation | SystemUiFlags.ImmersiveSticky | SystemUiFlags.Fullscreen
+            //                        | SystemUiFlags.LayoutFullscreen | SystemUiFlags.LayoutHideNavigation;
+            //this.Window.DecorView.SystemUiVisibility = (StatusBarVisibility)uiOptions;
+            //// end 设置全屏
 
             // End Add by Howe
 

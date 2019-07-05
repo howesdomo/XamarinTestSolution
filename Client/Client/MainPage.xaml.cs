@@ -46,6 +46,7 @@ namespace Client
                     this.btnBuBuGao.IsVisible = !this.btnBuBuGao.IsVisible;
                     this.btnBuBuGao_Japanese.IsVisible = !this.btnBuBuGao_Japanese.IsVisible;
                     this.btnPageShuangSeQiu.IsVisible = !this.btnPageShuangSeQiu.IsVisible;
+                    this.btnPingDemoMini.IsVisible = !this.btnPingDemoMini.IsVisible;
                 })
             };
             this.btnShowHidden.GestureRecognizers.Add(tapShowHidden);
@@ -54,6 +55,7 @@ namespace Client
             this.btnBuBuGao_Japanese.Clicked += BtnBuBuGao_Japanese_Clicked;
             this.btnGames.Clicked += BtnGames_Clicked;
             this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
+            this.btnPingDemoMini.Clicked += BtnPingDemoMini_Clicked;
 
             #endregion
 
@@ -261,6 +263,11 @@ namespace Client
         async void BtnPingDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PingDemo());
+        }
+
+        async void BtnPingDemoMini_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PingDemoMini());
         }
 
         async void BtnTTSDemo_Clicked(object sender, EventArgs e)

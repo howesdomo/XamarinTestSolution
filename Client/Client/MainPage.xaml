@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Client"
-             x:Class="Client.MainPage"
-             >
+<ContentPage
+    x:Class="Client.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Client">
     <NavigationPage.TitleView>
         <Grid>
             <Grid.Resources>
@@ -18,115 +18,293 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <!-- Title -->
-            <Label Text="V 1.0.0.1" />
+            <!--  Title  -->
+            <Label x:Name="lblTitle" />
 
-            <StackLayout Grid.Column="1" Orientation="Horizontal">
-                <Image x:Name="btnShowHidden"
-                   WidthRequest="20" 
-                   HeightRequest="20"
-                   Margin="5,0,5,0"
-                   Source="{local:EmbeddedResource Client.Images.BaseView.plus.png}" />
-                
-                <!-- 1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right-->
-                <!-- 已解决 -->
+            <StackLayout
+                Grid.Column="1"
+                Orientation="Horizontal">
+                <Image
+                    x:Name="btnShowHidden"
+                    Margin="5,0,5,0"
+                    HeightRequest="20"
+                    Source="{local:EmbeddedResource Client.Images.BaseView.plus.png}"
+                    WidthRequest="20" />
+
+                <!--  1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right  -->
+                <!--  已解决  -->
                 <!--<BoxView BackgroundColor="Transparent" WidthRequest="5" />-->
             </StackLayout>
 
         </Grid>
     </NavigationPage.TitleView>
-    <ScrollView>
+    <ScrollView Orientation="Vertical">
         <StackLayout>
-            
-            <!-- 隐藏内容 -->
-            <Button x:Name="btnBuBuGao" Text="补补高点读机" IsVisible="False" />
+            <Grid
+                x:Name="gHiddenContent"
+                IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="HoweTools" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnBuBuGao"
+                            Text="补补高点读机" />
+                        <Button
+                            x:Name="btnBuBuGao_Japanese"
+                            Text="补补高点读机(日文)" />
+                        <Button
+                            x:Name="btnGames"
+                            Text="Games" />
+                        <Button
+                            x:Name="btnPageShuangSeQiu"
+                            Text="双色球" />
+                        <Button
+                            x:Name="btnPingDemoMini"
+                            Text="Ping Mini" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="实用工具" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnPageZXingDemo"
+                            Text="ZXingScan Demo" />
+                        <Button
+                            x:Name="btnSocketDemo"
+                            Text="Socket Demo" />
+                        <Button
+                            x:Name="btnFakeSerailPort"
+                            Text="模拟串口助手" />
+                        <Button
+                            x:Name="btnH_Pow2_Brower"
+                            Text="H^2浏览器" />
+                        <Button
+                            x:Name="btnPingDemo"
+                            Text="PingDemo" />
+                        <Button
+                            x:Name="btnPageBluetoothDemo"
+                            Text="Bluetooth" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
 
-            <Button x:Name="btnBuBuGao_Japanese" Text="补补高点读机(日文)" IsVisible="False" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="SQLite" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnPageSQLiteDemo"
+                            Text="SQLite Demo" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
 
-            <Button x:Name="btnGames" Text="Games" IsVisible="False" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="第三方DLL库测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnDevExpress"
+                            Text="DevExpress.Mobile.Grid" />
+                        <Button
+                            x:Name="btnTTSDemo"
+                            Text="TTS语音合成" />
+                        <Button
+                            x:Name="btnPageBaiduMenu"
+                            Text="百度" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
 
-            <Button x:Name="btnPageShuangSeQiu" Text="双色球" IsVisible="False" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="待测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnXLabsDemo"
+                            Text="XLabs Demo" />
+                        <Button
+                            x:Name="btnFFImageLoading"
+                            Text="FFImageLoading Demos" />
+                        <Button
+                            x:Name="btnFileExplorer"
+                            Text="FileExplorer" />
+                        <Button
+                            x:Name="btnPluginMediaManagerForms"
+                            Text="(暂停)Plugin.MediaManager.Forms Demos" />
+                        <Button
+                            x:Name="btnExcel"
+                            Text="Aspose.Cells 测试" />
+                        <Button
+                            x:Name="btnExcelByAsposeCell"
+                            Text="Excel Aspose.Cell" />
+                        <Button
+                            x:Name="btnMarqueeDemo"
+                            Text="跑马灯效果Demo集合" />
+                        <Button
+                            x:Name="btnTimer"
+                            Text="定时助手" />
 
-            <Button x:Name="btnPingDemoMini" Text="Ping Mini" IsVisible="False" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="安卓功能测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnPageIRDemo"
+                            Text="IR(红外线)" />
+                        <Button
+                            x:Name="btnAndroidPermission"
+                            Text="安卓权限" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="iOS功能测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnAccommodatingViewAndKeyboard"
+                            Text="对于软键盘自动调整画面(iOS)" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="C#测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnSharpIf"
+                            Text="#if something" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="Xamarin.Forms 基本功能" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnAllPage"
+                            Text="01 - Page测试实例" />
+                        <Button
+                            x:Name="btnLayoutDemoList"
+                            Text="02 - Layout测试实例" />
+                        <Button
+                            x:Name="btnPageLifecycle"
+                            Text="Page 生命周期" />
+                        <Button
+                            x:Name="btnTestUnhandledExceptionHandler"
+                            Text="测试全局捕获异常" />
+                        <Button
+                            x:Name="btnPageDisplayAlertDemo"
+                            Text="弹窗 Demo" />
+                        <Button
+                            x:Name="btnPageOutputDemo"
+                            Text="IOutput实现" />
+                        <Button
+                            x:Name="btnPageScreen"
+                            Text="屏幕(IScreen)" />
+                        <Button
+                            x:Name="btnPageMessagingCenterDemo"
+                            Text="MessagingCenter Demo - 类似安卓的广播" />
+                        <Button
+                            x:Name="btnPageWebviewDemo"
+                            Text="Webview DEMO" />
+                        <Button
+                            x:Name="btnPickerDemo"
+                            Text="PickerDemo" />
+                        <Button
+                            x:Name="btnPageXamarinEssentialsDemo"
+                            Text="Xamarin Essentials Demo" />
+                        <Button
+                            x:Name="btnPageWebServiceReferenceDemo"
+                            Text="WebService Reference Demo" />
+                        <Button
+                            x:Name="btnGestureDemo"
+                            Text="手势识别" />
+                        <Button
+                            x:Name="btnGesturePinchDemo"
+                            Text="手势识别_缩放手势" />
+                        <Button
+                            x:Name="btnLabelDemo"
+                            Text="Label Demo" />
+                        <Button
+                            x:Name="btnAudioPlayer"
+                            Text="播放音频" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="菜单Seed" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
 
-            <!-- 正常内容 -->
-
-            <Button x:Name="btnAllPage" Text="01 - Page测试实例" />
-
-            <Button x:Name="btnLayoutDemoList" Text="02 - Layout测试实例" />
-
-            <Button x:Name="btnTimer" Text="定时助手" />            
-
-            <Button x:Name="btnDevExpress" Text="DevExpress.Mobile.Grid" />
-
-            <Button x:Name="btnPageLifecycle" Text="Page 生命周期" />
-
-            <Button x:Name="btnTestUnhandledExceptionHandler" Text="测试全局捕获异常" />
-            
-            <Button x:Name="btnPageDisplayAlertDemo" Text="弹窗 Demo" />
-
-            <Button x:Name="btnPageOutputDemo" Text="IOutput实现" />
-
-            <Button x:Name="btnPageScreen" Text="屏幕(IScreen)" />
-
-            <Button x:Name="btnPageMessagingCenterDemo" Text="MessagingCenter Demo - 类似安卓的广播" />
-
-            <Button x:Name="btnPageSQLiteDemo" Text="SQLite Demo" />
-
-            <Button x:Name="btnPageZXingDemo" Text="ZXingScan Demo" />
-
-            <Button x:Name="btnPageXamarinEssentialsDemo" Text="Xamarin Essentials Demo" />
-
-            <Button x:Name="btnPageWebServiceReferenceDemo" Text="WebService Reference Demo" />
-
-            <Button x:Name="btnPageWebviewDemo" Text="Webview DEMO" />
-
-            <Button x:Name="btnPickerDemo" Text="PickerDemo" />
-
-            <Button x:Name="btnPingDemo" Text="PingDemo" />
-
-            <Button x:Name="btnTTSDemo" Text="TTS语音合成" />
-
-            <Button x:Name="btnPageBaiduMenu" Text="百度" />
-
-            <Button x:Name="btnPageBluetoothDemo" Text="Bluetooth" />
-            
-            <Button x:Name="btnPageIRDemo" Text="IR" />
-
-            <Button x:Name="btnAndroidPermission" Text="安卓权限" />
-
-            <Button x:Name="btnAudioPlayer" Text="播放音频" />
-
-            <Button x:Name="btnExcelByAsposeCell" Text="Excel Aspose.Cell" />
-
-            <Button x:Name="btnSharpIf" Text="#if something" />
-
-            <Button x:Name="btnAccommodatingViewAndKeyboard" Text="对于软键盘自动调整画面(iOS)" />
-
-            <Button x:Name="btnGestureDemo" Text="手势识别" />
-
-            <Button x:Name="btnGesturePinchDemo" Text="手势识别_缩放手势" />
-
-            <Button x:Name="btnMarqueeDemo" Text="跑马灯效果Demo集合" />
-
-            <Button x:Name="btnLabelDemo" Text="Label Demo" />
-
-            <Button x:Name="btnXLabsDemo" Text="XLabs Demo" />
-
-            <Button x:Name="btnSocketDemo" Text="Socket Demo" />
-
-            <Button x:Name="btnFakeSerailPort" Text="模拟串口助手" />
-
-            <Button x:Name="btnFFImageLoading" Text="FFImageLoading Demos" />
-
-            <Button x:Name="btnFileExplorer" Text="FileExplorer" />
-
-            <Button x:Name="btnPluginMediaManagerForms" Text="(暂停)Plugin.MediaManager.Forms Demos" />
-
-            <Button x:Name="btnH_Pow2_Brower" Text="H^2浏览器" />
-
-            <Button x:Name="btnExcel" Text="Aspose.Cells 测试" />
-
+                    <StackLayout Orientation="Horizontal" />
+                </ScrollView>
+            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

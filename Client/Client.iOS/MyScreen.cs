@@ -115,5 +115,17 @@ namespace Client.iOS
 
         #endregion
 
+        public void FullScreen()
+        {
+            // TODO 实现 iOS - MyScreen.FullScreen
+            throw new NotImplementedException();
+        }
+
+        public void CancelFullScreen()
+        {
+            // TODO 实现 iOS - MyScreen.CancelFullScreen
+            throw new NotImplementedException();
+        }
+
     }
 }

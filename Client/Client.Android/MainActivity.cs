@@ -185,7 +185,7 @@ namespace Client.Droid
 
             var staticInfoInitArgs = new Common.StaticInfoInitArgs();
 
-            staticInfoInitArgs.AppName = "FNL小包包装系统看板";
+            staticInfoInitArgs.AppName = "XamarinTest";
 
             #region 安卓项目路径赋值
 
@@ -269,6 +269,29 @@ namespace Client.Droid
 
             // 初始化Bluetooth
             App.Bluetooth = Util.XamariN.AndroiD.MyBluetooth.GetInstance(this);
+
+            #region 安卓特有
+
+            // 访问 Assets 资源
+            App.AndroidAssetsUtils = Util.XamariN.AndroiD.MyAndroidAssetsUtils.GetInstance(this);
+
+            // 初始化 Intent 工具类
+            App.AndroidIntentUtils = Util.XamariN.AndroiD.MyAndroidIntentUtils.GetInstance(this);
+
+            // 初始化 Android 权限工具类
+            App.AndroidPermissionUtils = Util.XamariN.AndroiD.MyAndroidPermission.GetInstance(this);
+
+            #endregion
+
+
+
+
+
+
+
+
+
+
 
             // 初始化 DevExpress.Mobile.Forms
             DevExpress.Mobile.Forms.Init();

@@ -26,6 +26,16 @@ namespace Client
 
         public static Client.Common.IExcelUtils_Aspose ExcelUtils_Aspose { get; set; }
 
+        #region °²×¿
+
+        public static Util.XamariN.IAndroidAssetsUtils AndroidAssetsUtils { get; set; }
+
+        public static Util.XamariN.IAndroidIntentUtils AndroidIntentUtils { get; set; }
+
+        public static Util.XamariN.IAndroidPermission AndroidPermissionUtils { get; set; } // TODO
+
+        #endregion
+
         public App()
         {
             InitializeComponent();

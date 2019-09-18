@@ -8,7 +8,7 @@ using UIKit;
 
 namespace Client.iOS
 {
-    public class MyAudioPlayer : Common.IAudioPlayer
+    public class MyAudioPlayer : Util.XamariN.IAudioPlayer
     {
         #region 构造函数 + 单例模式
 

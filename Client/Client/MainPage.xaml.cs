@@ -20,7 +20,18 @@ namespace Client
         public MainPage()
         {
             InitializeComponent();
+            initUI();
             initEvent();
+        }
+
+        private void initUI()
+        {
+            lblTitle.Text = $"V {Xamarin.Essentials.VersionTracking.CurrentVersion}";
+
+            if (Common.StaticInfo.DebugMode > 0)
+            {
+                lblTitle.Text = lblTitle.Text + $" (Debug模式{Common.StaticInfo.DebugMode})";
+            }
         }
 
         protected override void OnAppearing()
@@ -29,7 +40,7 @@ namespace Client
             // 回到主界面, 重新根据陀螺仪来改变屏幕方向
             Device.BeginInvokeOnMainThread(() =>
             {
-                App.Screen.Unspecified(); 
+                App.Screen.Unspecified();
             });
         }
 
@@ -42,11 +53,7 @@ namespace Client
                 NumberOfTapsRequired = 2,
                 Command = new Command(() =>
                 {
-                    this.btnGames.IsVisible = !this.btnGames.IsVisible;
-                    this.btnBuBuGao.IsVisible = !this.btnBuBuGao.IsVisible;
-                    this.btnBuBuGao_Japanese.IsVisible = !this.btnBuBuGao_Japanese.IsVisible;
-                    this.btnPageShuangSeQiu.IsVisible = !this.btnPageShuangSeQiu.IsVisible;
-                    this.btnPingDemoMini.IsVisible = !this.btnPingDemoMini.IsVisible;
+                    this.gHiddenContent.IsVisible = !this.gHiddenContent.IsVisible;
                 })
             };
             this.btnShowHidden.GestureRecognizers.Add(tapShowHidden);

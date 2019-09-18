@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Client.iOS
 {
-    public class MyTTS : Client.Common.ITTS
+    public class MyTTS : Util.XamariN.ITTS
     {
         private float mVolume = 1f; // 音量
         private float mPitch = 1.0f; // 音高

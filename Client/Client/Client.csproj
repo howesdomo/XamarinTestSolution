@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -343,7 +343,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.Data_SQLite\Util.Data_SQLite.csproj" />
     <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util.XamariN\Util.XamariN.csproj" />
-    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj" />
     <ProjectReference Include="..\..\DL.Model\DL.Model.csproj" />
   </ItemGroup>
 

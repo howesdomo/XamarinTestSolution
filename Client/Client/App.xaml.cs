@@ -9,19 +9,20 @@ namespace Client
     {
         public static Util.XamariN.IScreen Screen { get; set; }
 
+        public static Util.XamariN.IAudioPlayer AudioPlayer { get; set; }
+
+        public static Util.XamariN.ITTS TTS { get; set; }
+
+        public static Util.XamariN.IBluetooth Bluetooth { get; set; }
+
+
         public static Client.Common.ILBS LBS { get; set; }
-
-        public static Client.Common.IAudioPlayer AudioPlayer { get; set; }
-
-        public static Client.Common.ITTS TTS { get; set; }
 
         public static Client.Common.I_IR IR { get; set; }
 
         public static Client.Common.IOutput Output { get; set; }
 
         public static Client.Common.IPermission Permission { get; set; }
-
-        public static Client.Common.IBluetooth Bluetooth { get; set; }
 
         public static Client.Common.IExcelUtils_Aspose ExcelUtils_Aspose { get; set; }
 

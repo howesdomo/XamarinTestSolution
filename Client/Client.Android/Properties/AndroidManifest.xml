@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.howesdomo.Client" android:installLocation="auto">
 	<!-- 由于Android6.0之后有运行时权限，故修改版本号使其不用运行时获取权限 -->
 	<!--<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="25" />-->
-	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
+	<uses-sdk android:targetSdkVersion="26" />
 	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 	<!-- start ZXing.Barcode -->
 	<!-- 这个权限用于打开摄像头-->
@@ -35,13 +35,12 @@
 	<uses-permission android:name="android.permission.TRANSMIT_IR" />
 	<!-- 设置屏幕常亮权限 -->
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
-  <!-- 蓝牙 -->
-  <uses-permission android:name="android.permission.BLUETOOTH" />
-  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-  <!--<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />--> <!--配对连接时需要-->
-
-
-  <application android:label="Client.Android">
+	<!-- 蓝牙 -->
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<!--<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />-->
+	<!--配对连接时需要-->
+	<application android:label="Client.Android">
 		<service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
 			<intent-filter>
 				<action android:name="com.baidu.location.service_v2.2"></action>

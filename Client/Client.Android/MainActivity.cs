@@ -16,7 +16,7 @@ using Android.Content;
 
 namespace Client.Droid
 {
-    [Activity(Label = "MiniPing", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "XamarinTest", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -180,6 +180,64 @@ namespace Client.Droid
                 }
             );
 
+
+            #region 初始化 Common.StaticInfo
+
+            var staticInfoInitArgs = new Common.StaticInfoInitArgs();
+
+            staticInfoInitArgs.AppName = "FNL小包包装系统看板";
+
+            #region 安卓项目路径赋值
+
+            // 安卓系统外部存储绝对路径
+            staticInfoInitArgs.AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+
+            // App外部缓存绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/cache
+            foreach (var item in this.GetExternalCacheDirs())
+            {
+                staticInfoInitArgs.AndroidExternalCachePath = item.AbsolutePath;
+                break;
+            }
+
+            // App外部文件绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/files
+            foreach (var item in this.GetExternalFilesDirs(string.Empty))
+            {
+                staticInfoInitArgs.AndroidExternalFilesPath = item.AbsolutePath;
+                break;
+            }
+
+            #endregion
+
+            #region 服务器配置
+
+            string pathServiceSettings = Common.ServiceSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AndroidExternalFilesPath);
+
+            if (System.IO.File.Exists(pathServiceSettings) == false)
+            {
+                Common.ServiceSettingsUtils.InitConfig(pathServiceSettings);
+            }
+
+            Common.ServiceSettingsUtils.ReadConfig(pathServiceSettings, staticInfoInitArgs);
+
+            #endregion
+
+            #region 本机配置
+
+            string pathNativeSettings = Common.NativeSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AndroidExternalFilesPath);
+
+            if (System.IO.File.Exists(pathNativeSettings) == false)
+            {
+                Common.NativeSettingsUtils.InitConfig(pathNativeSettings);
+            }
+
+            Common.NativeSettingsUtils.ReadConfig(pathNativeSettings, staticInfoInitArgs);
+
+            #endregion
+
+            Common.StaticInfo.Init(staticInfoInitArgs);
+
+            #endregion
+
             // 设置软键盘显示时, View 自动调整适应
             // Window.SetSoftInputMode(Android.Views.SoftInput.AdjustResize);
 
@@ -187,22 +245,19 @@ namespace Client.Droid
             App.Output = new MyOutput();
 
             // 屏幕方向
-            App.Screen = MyScreen.GetInstance(this);
+            App.Screen = Util.XamariN.AndroiD.MyScreen.GetInstance(this);
 
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
 
             // 初始化百度定位
-            BaiduLBS baiduLBS = new BaiduLBS(ApplicationContext);
-            App.LBS = baiduLBS;
+            App.LBS = new BaiduLBS(ApplicationContext);
 
             // 初始化Audio
-            MyAudioPlayer audioPlayer = MyAudioPlayer.GetInstance();
-            App.AudioPlayer = audioPlayer;
+            App.AudioPlayer = Util.XamariN.AndroiD.MyAudioPlayer.GetInstance();
 
             // 初始化TTS
-            MyTTS tts = MyTTS.GetInstance();
-            App.TTS = tts;
+            App.TTS = Util.XamariN.AndroiD.MyTTS.GetInstance();
 
             // 初始化IR
             MyIR ir = MyIR.GetInstance(ApplicationContext);
@@ -213,8 +268,7 @@ namespace Client.Droid
             App.Permission = myPermission;
 
             // 初始化Bluetooth
-            MyBluetooth myBluetooth = MyBluetooth.GetInstance(this);
-            App.Bluetooth = myBluetooth;
+            App.Bluetooth = Util.XamariN.AndroiD.MyBluetooth.GetInstance(this);
 
             // 初始化 DevExpress.Mobile.Forms
             DevExpress.Mobile.Forms.Init();
@@ -250,14 +304,14 @@ namespace Client.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
-            if (requestCode == MyTTS.TTS_RequestCode)
+            if (requestCode == Util.XamariN.AndroiD.MyTTS.TTS_RequestCode)
             {
-                MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
+                Util.XamariN.AndroiD.MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
             }
 
-            if (requestCode == MyBluetooth.Bluetooth_RequestCode)
+            if (requestCode == Util.XamariN.AndroiD.MyBluetooth.Bluetooth_RequestCode)
             {
-                MyBluetooth.GetInstance().Handle_OpenBluetooth(requestCode, resultCode, data);
+                Util.XamariN.AndroiD.MyBluetooth.GetInstance().Handle_OpenBluetooth(requestCode, resultCode, data);
             }
         }
 

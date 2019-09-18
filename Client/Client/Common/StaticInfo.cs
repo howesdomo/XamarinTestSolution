@@ -41,33 +41,16 @@ namespace Client.Common
             #endregion
         }
 
-        public static bool IsDebugMode
+        private static int _DebugMode = 0;
+        public static int DebugMode
         {
             get
             {
-                // 设计思路 
-                // 外部存储器中读取指定路径文件, 判断 DebugMode, 一般 DebugMode 为false
-                // 这样做可以灵活修改已发布的版本
-                // 测试机只需要放置配置文件到指定路径即可
-                bool r = false;
-
-                try
-                {
-                    // string a = System.IO.File.ReadAllText("");
-                    string a = string.Empty;
-
-                    if (a.Contains("debugMode:true"))
-                    {
-                        r = true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    string msg = "{0}".FormatWith(ex.GetFullInfo());
-                    System.Diagnostics.Debug.WriteLine(msg);
-                }
-
-                return r;
+                return _DebugMode;
+            }
+            set
+            {
+                _DebugMode = value;
             }
         }
 
@@ -163,6 +146,37 @@ namespace Client.Common
             }
         }
 
+
+
+        private static string _IP;
+        /// <summary>
+        /// 通用的IP
+        /// </summary>
+        public static string IP
+        {
+            get { return _IP; }
+            set
+            {
+                _IP = value;
+                ServiceSettingsUtils.UpdateIPOrAddress(value);
+            }
+        }
+
+        private static string _Port;
+        /// <summary>
+        /// 通用的Port
+        /// </summary>
+        public static string Port
+        {
+            get { return _Port; }
+            set
+            {
+                _Port = value;
+                ServiceSettingsUtils.UpdatePort(value);
+            }
+        }
+
+
         private static WebSetting _AppWebSetting;
 
         public static WebSetting AppWebSetting
@@ -180,13 +194,24 @@ namespace Client.Common
 
 
         private static string _AndroidExternalPath;
-
         /// <summary>
         /// Android 外部存储器路径
         /// </summary>
         public static string AndroidExternalPath
         {
             get { return _AndroidExternalPath; }
+        }
+
+        private static string _AndroidExternalFilesPath;
+        public static string AndroidExternalFilesPath
+        {
+            get { return _AndroidExternalFilesPath; }
+        }
+
+        private static string _AndroidExternalCachePath;
+        public static string AndroidExternalCachePath
+        {
+            get { return _AndroidExternalCachePath; }
         }
 
         #region InnerSQLite
@@ -255,9 +280,18 @@ namespace Client.Common
     public class StaticInfoInitArgs
     {
         /// <summary>
+        /// 调试模式
+        /// </summary>
+        public int? DebugMode { get; set; }
+
+        /// <summary>
         /// 程序名称
         /// </summary>
         public string AppName { get; set; }
+
+        public string IP { get; set; }
+
+        public string Port { get; set; }
 
         /// <summary>
         /// App Web 服务配置
@@ -265,11 +299,6 @@ namespace Client.Common
         public WebSetting AppWebSetting { get; set; }
 
         public WebSetting WebAPISetting { get; set; }
-
-        /// <summary>
-        /// Android 外部存储器路径
-        /// </summary>
-        public string AndroidExternalPath { get; set; }
 
         /// <summary>
         /// 程序内部SQLite数据库连接字符串
@@ -282,5 +311,79 @@ namespace Client.Common
         public string ExternalSQLiteConnStr { get; set; }
 
 
+
+        /// <summary>
+        /// Android 外部存储器路径
+        /// </summary>
+        public string AndroidExternalPath { get; set; }
+
+        public string AndroidExternalFilesPath { get; set; }
+
+        public string AndroidExternalCachePath { get; set; }
+    }
+
+    /// <summary>
+    /// V 1.0.1 2019-9-16 16:47:45 增加属性 IsIndependent
+    /// V 1.0.0 2018-6-4 17:37:19 创建 WebSetting 类, 用于定义 .asmx, .ashx, web api 等 Web 应用
+    /// </summary>
+    public class WebSetting
+    {
+        /// <summary>
+        /// 是独立的
+        /// 若 '是', 执行 GetUri 只用回自身的 IP 与 Port, 不跟随 StaticInfo 的 IP, Port
+        /// 若 '否', 则跟随
+        /// </summary>
+        public bool IsIndependent { get; set; }
+
+        /// <summary>
+        /// 服务名称，配置文件对应的名称
+        /// </summary>
+        public string ServiceSettingName { get; set; }
+
+        /// <summary>
+        /// IP地址 / 网址
+        /// </summary>
+        public string IPOrWebAddress { get; set; }
+
+        /// <summary>
+        /// 端口
+        /// </summary>
+        public string Port { get; set; }
+
+        /// <summary>
+        /// 应用程序
+        /// </summary>
+        public string AppName { get; set; }
+
+        public WebSetting()
+        {
+
+        }
+
+        public WebSetting(string serviceSettingName, string ipOrWebAddress, string port, string appName, bool isIndependent = false)
+        {
+            this.ServiceSettingName = serviceSettingName;
+            this.IPOrWebAddress = ipOrWebAddress;
+            this.Port = port;
+            this.AppName = appName;
+
+            this.IsIndependent = isIndependent;
+        }
+
+        public Uri GetUri()
+        {
+            string r = string.Empty;
+
+            if (IsIndependent)
+            {
+                r = string.Format("http://{0}:{1}/{2}", this.IPOrWebAddress, this.Port, this.AppName);
+            }
+            else
+            {
+                r = string.Format("http://{0}:{1}/{2}", StaticInfo.IP, StaticInfo.Port, this.AppName);
+            }
+
+            return new Uri(r);
+        }
     }
 }

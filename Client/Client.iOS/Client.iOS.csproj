@@ -222,10 +222,6 @@
       <Project>{5fe21ebe-0678-4384-80b0-a45764c877b5}</Project>
       <Name>Util.XamariN</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\HoweStandardUtil\Util\Util.csproj">
-      <Project>{275af5f5-7f5b-406e-8fb5-7215e1fd96a6}</Project>
-      <Name>Util</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\DL.Model\DL.Model.csproj">
       <Project>{14c8833e-7140-4ef7-a152-17cae3c46ea9}</Project>
       <Name>DL.Model</Name>

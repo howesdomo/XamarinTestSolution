@@ -12,8 +12,22 @@ using Xamarin.Forms.Xaml;
 namespace Client.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PingDemoMini : ContentPage
+    public partial class MiniPing : ContentPage
     {
+        public MiniPing()
+        {
+            InitializeComponent();
+            mPing = new System.Net.NetworkInformation.Ping();
+
+            this.ViewModel = new PingDemoViewModel();
+            this.BindingContext = this.ViewModel;
+
+            initEvent();
+            initData();
+
+            this.gPingDisplay.IsVisible = false;
+        }
+
         System.Net.NetworkInformation.Ping mPing { get; set; }
 
         PingDemoViewModel ViewModel { get; set; }
@@ -24,25 +38,13 @@ namespace Client.View
 
         List<Color> colorList = new List<Color>()
         {
-            Color.Red,
-            Color.Orange,
-            Color.Yellow,
-            Color.Green,
-            Color.Blue,
-            Color.Purple,
+            Color.FromHex("#f78766"),
+            Color.FromHex("#f4bc68"),
+            Color.FromHex("#fbfbc4"),
+            Color.FromHex("#aff8ba"),
+            Color.FromHex("#afd9f8"),
+            Color.FromHex("#d7b0f7")
         };
-
-        public PingDemoMini()
-        {
-            InitializeComponent();
-            mPing = new System.Net.NetworkInformation.Ping();
-
-            this.ViewModel = new PingDemoViewModel();
-            this.BindingContext = this.ViewModel;
-
-            initEvent();
-            initData();
-        }
 
         protected override void OnAppearing()
         {
@@ -56,6 +58,8 @@ namespace Client.View
         {
             App.Screen.ScreenKeepOn = false;
             App.Screen.Unspecified();
+
+            App.Screen.CancelFullScreen();
 
             base.OnDisappearing();
         }
@@ -105,6 +109,8 @@ namespace Client.View
 
             mContinue = true;
 
+            App.Screen.FullScreen(); // 由于输入栏有可能导致全屏设置失效, 故这里重新设置全屏
+
             PingReplyModel toAdd = new PingReplyModel();
             toAdd.Foreground = "Green";
             toAdd.Content = "开始ping";
@@ -114,23 +120,41 @@ namespace Client.View
             this.btnPingTestStop.IsEnabled = true;
             this.gPingDisplay.IsVisible = true;
 
-            mBgWorker.RunWorkerAsync();
+            mBgWorker.RunWorkerAsync(new object[] { this.txtIP.Text.Trim() });
         }
 
         private bool mContinue { get; set; }
         private System.Net.NetworkInformation.PingReply mReply { get; set; }
 
+        int mCountDown
+        {
+            get { return 3000; }
+        }
+
         private void Bg_DoWork(object sender, DoWorkEventArgs e)
         {
-            string ipOrAddress = this.txtIP.Text;
+
+            object[] bgArgs = e.Argument as object[];
+            string ipOrAddress = bgArgs[0].ToString();
+            int timeout = 60000;
+
+            mBgWorker.ReportProgress(0); // 刷新一下界面
+
             while (mContinue)
             {
                 mReply = mPing.Send(ipOrAddress, 5000, new byte[32]);
                 mBgWorker.ReportProgress(200);
-                System.Threading.Thread.Sleep(1000);
+                for (int i = timeout; i > 0;)
+                {
+                    if (mContinue == false)
+                    {
+                        break;
+                    }
+                    System.Threading.Thread.Sleep(mCountDown);
+                    i = i - mCountDown;
+                }
             }
         }
-
 
         private void Bg_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -157,14 +181,19 @@ namespace Client.View
                 }
 
                 string msg = "{0} - {1}".FormatWith(toAdd.Content, DateTime.Now.ToString());
-                System.Diagnostics.Debug.WriteLine(msg);
                 this.txtLastStatus.Text = msg;
 
                 Grid.SetRow(this.txtLastStatus, rand.Next(colorList.Count));
                 this.gPingDisplay.BackgroundColor = this.colorList[rand.Next(colorList.Count)];
+            }
+            else
+            {
+                PingReplyModel toAdd = new PingReplyModel();
+                string msg = "Ping...";
+                this.txtLastStatus.Text = msg;
 
-                //this.ViewModel.Result.Add(toAdd);
-                //this.lv.ScrollTo(toAdd, ScrollToPosition.Start, true);
+                Grid.SetRow(this.txtLastStatus, rand.Next(colorList.Count));
+                this.gPingDisplay.BackgroundColor = this.colorList[rand.Next(colorList.Count)];
             }
         }
 
@@ -181,11 +210,17 @@ namespace Client.View
                 DisplayAlert("捕获异常", e.Error.GetFullInfo(), "确定");
             }
 
+            if (e.Cancelled == true)
+            {
+                string msg = "{0}".FormatWith(e.Error.GetFullInfo());
+                System.Diagnostics.Debug.WriteLine(msg);
+                DisplayAlert("提示", "用户取消", "确定");
+            }
+
             PingReplyModel toAdd = new PingReplyModel();
             toAdd.Foreground = "Red";
             toAdd.Content = "结束ping";
             this.ViewModel.Result.Add(toAdd);
         }
-
     }
 }

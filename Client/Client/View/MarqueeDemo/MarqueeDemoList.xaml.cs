@@ -20,6 +20,19 @@ namespace Client.View.MarqueeDemo
 
         private void initUI()
         {
+            Button btnAndroidLabel = new Button()
+            {
+                Text = "安卓原生Label开启Marquee效果"
+            };
+
+            btnAndroidLabel.Clicked += async (s, e) =>
+            {
+                await Navigation.PushAsync(new PageTest_MarqueeLabel());
+            };
+
+            sMain.Children.Add(btnAndroidLabel);
+
+
             Button btn1 = new Button()
             {
                 Text = "Label跑马灯V1(效果不好)"

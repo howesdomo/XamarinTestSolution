@@ -15,6 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Common\WebService.cs" />
+    <Compile Remove="Common\WebServiceSetting.cs" />
     <Compile Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml.cs" />
     <Compile Remove="View\MediaManagerDemo\PageMediaManagerDemo.xaml.cs" />
     <Compile Remove="View\WebviewDemo\WebPage.cs" />
@@ -322,6 +324,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
     <PackageReference Include="DevExpress.Mobile.Grid" Version="18.2.3" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.5.3" />
@@ -356,6 +359,9 @@
     </Compile>
     <Compile Update="View\MarqueeDemo\MarqueeLabel_V1.xaml.cs">
       <DependentUpon>MarqueeLabel_V1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\PingDemo\MiniPing.xaml.cs">
+      <DependentUpon>MiniPing.xaml</DependentUpon>
     </Compile>
     <Compile Update="View\ScreenDemo\PageScreen.xaml.cs">
       <DependentUpon>PageScreen.xaml</DependentUpon>
@@ -540,7 +546,7 @@
     <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\PingDemo\PingDemoMini.xaml">
+    <EmbeddedResource Update="View\PingDemo\MiniPing.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\SocketDemo\PageSocketDemo.xaml">
@@ -625,8 +631,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Common\AppUpdate\" />
     <Folder Include="Connected Services\" />
     <Folder Include="View\Excel_AsposeDemo\" />
     <Folder Include="View\MediaManagerDemo\" />
+    <Folder Include="View\AcrUserDialogDemo\" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@ namespace Client
 {
     public class WebService
     {
+        #region (系统框架) 上传异常信息到服务器
 
         public void CollectUnhandleException
         (
@@ -123,8 +124,37 @@ namespace Client
             new WebServiceBase().ExecuteV3(uri, requestData, page, handle);
         }
 
+        #endregion
+
+        #region (系统框架) 检测程序是否有更新
+
+        public void GetLastestVersion
+        (
+            string updateInfoJsonStr,
+            Xamarin.Forms.Page page = null,
+            Action<Util.WebService.SOAPResult> handle = null
+        )
+        {
+            Uri uri = Common.StaticInfo.AppWebSetting.GetUri();
+
+            // 方法名
+            string methodName = "GetLastestVersion";
+
+            // 方法参数
+            List<string> args = new List<string>();
+            args.Add(updateInfoJsonStr);
 
 
+            Util.WebService.RequestData requestData = new Util.WebService.RequestData();
+            requestData.MethodName = methodName;
+            requestData.JsonArgs = args;
+
+            new WebServiceBase().Execute(uri, requestData, page, handle);
+        }
+
+        #endregion
+
+        #region 测试采用压缩方式后提交集合信息
 
         public void TestWebService_GetOrders_isCompress_True
         (
@@ -189,5 +219,7 @@ namespace Client
                 isEncrypt: false
             );
         }
+
+        #endregion        
     }
 }

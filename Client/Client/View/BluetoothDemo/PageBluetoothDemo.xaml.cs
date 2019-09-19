@@ -25,6 +25,9 @@ namespace Client.View
 ^LH0,0
 ^FO20,20^A1N,25,25
 ^FDHello World^FS
+^FO100,100^BY3
+^BCN,100,Y,N,N
+^FD123456^FS
 ^XZ";
         }
 

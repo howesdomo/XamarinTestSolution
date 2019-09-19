@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.MarqueeDemo.PageTest_MarqueeLabel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uxComponent="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+                x:Name="btn1ToFocus"
+                Text="btn2" />
+            <uxComponent:MarqueeLabel Text="一二三四五上山打老虎五四三二一一二三四五上山打老虎五四三二一一二三四五上山打老虎五四三二一。" />
+            <Label
+                Margin="0,5,0,5"
+                HorizontalTextAlignment="Center"
+                Text="---分隔符---" />
+            <uxComponent:MarqueeLabel
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Settings allow you to separate the parameters that configure the behavior of your app separate from the code, which allows you to change that behavior without rebuilding the app. This is handle at the app level for things like server addresses and API keys and at the user level for things like restoring the last user input and theme preferences. Xamarin.Forms provides direct support for neither, but that doesn't mean you can't easily add it yourself." />
+            <Button
+                x:Name="btn2ToFocus"
+                Text="btn2" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

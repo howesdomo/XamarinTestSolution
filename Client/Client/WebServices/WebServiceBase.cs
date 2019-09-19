@@ -16,12 +16,11 @@ namespace Client
         }
 
         // Execute 永远是最新的方法, 要优化Copy一份加 V{版本号}
-
         /// <summary>
-        /// Copy From V4
+        /// Copy From V5
         /// 
-        /// 在V3的基础上
-        /// 增加对 requestData.JsonArgs 的压缩与加密
+        /// 1 修复 page, handle 的处理方式
+        /// 2 去掉 string.FormatWith 的字符串转换方式
         /// </summary>
         /// <param name="uri">Web Service Uri</param>
         /// <param name="requestData">参数</param>
@@ -42,18 +41,30 @@ namespace Client
             var current = Xamarin.Essentials.Connectivity.NetworkAccess;
             if (current == Xamarin.Essentials.NetworkAccess.None)
             {
-                string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。".FormatWith(requestData.MethodName);
-                if (page == null)
+                string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。";
+                if (handle == null)
                 {
-                    System.Diagnostics.Debug.WriteLine(msg);
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", msg, "确定");
+                    }
                 }
-                else
+                else // handle != null
                 {
-                    page.DisplayAlert("Error", msg, "确定");
+                    Util.WebService.SOAPResult soapResultHasError = new Util.WebService.SOAPResult();
+
+                    soapResultHasError.IsComplete = false;
+                    soapResultHasError.ExceptionInfo = $"{msg}";
+                    soapResultHasError.IsSuccess = false;
+                    handle.Invoke(soapResultHasError);
+                    return;
                 }
                 return;
             }
-
 
             System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
 
@@ -91,7 +102,7 @@ namespace Client
                 }
                 catch (System.Net.WebException webEx)
                 {
-                    string msg = "执行 {0} 发生未知错误".FormatWith(requestData.MethodName);
+                    string msg = $"执行 {requestData.MethodName} 发生未知错误";
                     throw new Exception(msg, webEx);
                 }
                 finally
@@ -104,74 +115,100 @@ namespace Client
             };
 
 
-            bw.RunWorkerCompleted += (obj, args) =>
+            bw.RunWorkerCompleted += async (obj, args) =>
             {
-                if (args.Error != null)
-                {
-                    string msg = "{0}".FormatWith(args.Error.GetFullInfo());
-                    if (page == null)
-                    {
-                        System.Diagnostics.Debug.WriteLine(msg);
-                    }
-                    else
-                    {
-                        page.DisplayAlert("Error", msg, "确定");
-                    }
-                    return;
-                }
-
-                if (args.Result == null)
-                {
-                    string msg = "执行 {0} 发生未知错误：args.Result为空值".FormatWith(requestData.MethodName);
-                    if (page == null)
-                    {
-                        System.Diagnostics.Debug.WriteLine(msg);
-                    }
-                    else
-                    {
-                        page.DisplayAlert("Error", msg, "确定");
-                    }
-                    return;
-                }
-
                 if (handle == null)
                 {
+                    if (args.Error != null)
+                    {
+                        string msg = $"{args.Error.GetFullInfo()}";
+                        if (page == null)
+                        {
+                            System.Diagnostics.Debug.WriteLine(msg);
+                        }
+                        else
+                        {
+                            await page.DisplayAlert("Error", msg, "确定");
+                        }
+                        return;
+                    }
+
+                    if (args.Result == null)
+                    {
+                        string msg = $"执行 {requestData.MethodName} 发生未知错误：args.Result为空值";
+                        if (page == null)
+                        {
+                            System.Diagnostics.Debug.WriteLine(msg);
+                        }
+                        else
+                        {
+                            await page.DisplayAlert("Error", msg, "确定");
+                        }
+                        return;
+                    }
+
+                    // 程序员没有传入返回结果的后续处理, 就此结束
                     return;
                 }
-
-                Util.WebService.SOAPResult soapResult = args.Result as Util.WebService.SOAPResult;
-
-                #region soapResult.ReturnObjectJson 解密 & 解压
-
-                // 1 是否经过加密, 若是进行解密
-                if (soapResult.IsEncrypt == true)
+                else // Handle != null
                 {
-                    switch (soapResult.EncryptType.ToUpper())
+                    if (args.Error != null)
                     {
-                        case "RSA": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.RSA_Decrypt(); break;
-                        case "DES": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.DES_Decrypt(); break;
-                        default: break;
+                        Util.WebService.SOAPResult soapResultHasError = new Util.WebService.SOAPResult();
+
+                        soapResultHasError.IsComplete = false;
+                        soapResultHasError.ExceptionInfo = args.Error.GetFullInfo();
+                        soapResultHasError.IsSuccess = false;
+                        handle.Invoke(soapResultHasError);
+                        return;
                     }
 
-                    soapResult.IsEncrypt = false; // 解密后设置为False
-                }
-
-                // 2 是否经过压缩, 若是进行解压
-                if (soapResult.IsCompress == true)
-                {
-                    switch (soapResult.CompressType.ToUpper())
+                    if (args.Result == null)
                     {
-                        case "GZIP": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.GZip_Decompress2String(); break;
-                        default: break;
+                        string msg = $"执行 {requestData.MethodName} 发生未知错误：args.Result为空值";
+
+                        Util.WebService.SOAPResult soapResultHasError = new Util.WebService.SOAPResult();
+
+                        soapResultHasError.IsComplete = false;
+                        soapResultHasError.ExceptionInfo = $"{msg}\r\n{args.Error.GetFullInfo()}";
+                        soapResultHasError.IsSuccess = false;
+                        handle.Invoke(soapResultHasError);
+                        return;
                     }
 
-                    soapResult.IsEncrypt = false; // 解压后设置为False
+                    Util.WebService.SOAPResult soapResult = args.Result as Util.WebService.SOAPResult;
+
+                    #region soapResult.ReturnObjectJson 解密 & 解压
+
+                    // 1 是否经过加密, 若是进行解密
+                    if (soapResult.IsEncrypt == true)
+                    {
+                        switch (soapResult.EncryptType.ToUpper())
+                        {
+                            case "RSA": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.RSA_Decrypt(); break;
+                            case "DES": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.DES_Decrypt(); break;
+                            default: break;
+                        }
+
+                        soapResult.IsEncrypt = false; // 解密后设置为False
+                    }
+
+                    // 2 是否经过压缩, 若是进行解压
+                    if (soapResult.IsCompress == true)
+                    {
+                        switch (soapResult.CompressType.ToUpper())
+                        {
+                            case "GZIP": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.GZip_Decompress2String(); break;
+                            default: break;
+                        }
+
+                        soapResult.IsEncrypt = false; // 解压后设置为False
+                    }
+
+                    #endregion
+
+                    handle.Invoke(soapResult);
                 }
-
-                #endregion
-
-                handle.Invoke(soapResult);
-
             };
 
             bw.RunWorkerAsync();
@@ -328,20 +365,20 @@ namespace Client
             Action<Util.WebService.SOAPResult> handle = null
         )
         {
-            var current = Xamarin.Essentials.Connectivity.NetworkAccess;
-            if (current == Xamarin.Essentials.NetworkAccess.None)
-            {
-                string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。".FormatWith(requestData.MethodName);
-                if (page == null)
-                {
-                    System.Diagnostics.Debug.WriteLine(msg);
-                }
-                else
-                {
-                    page.DisplayAlert("Error", msg, "确定");
-                }
-                return;
-            }
+            //var current = Xamarin.Essentials.Connectivity.NetworkAccess;
+            //if (current == Xamarin.Essentials.NetworkAccess.None)
+            //{
+            //    string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。".FormatWith(requestData.MethodName);
+            //    if (page == null)
+            //    {
+            //        System.Diagnostics.Debug.WriteLine(msg);
+            //    }
+            //    else
+            //    {
+            //        page.DisplayAlert("Error", msg, "确定");
+            //    }
+            //    return;
+            //}
 
 
             System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
@@ -433,20 +470,20 @@ namespace Client
             bool isEncrypt = false
         )
         {
-            var current = Xamarin.Essentials.Connectivity.NetworkAccess;
-            if (current == Xamarin.Essentials.NetworkAccess.None)
-            {
-                string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。".FormatWith(requestData.MethodName);
-                if (page == null)
-                {
-                    System.Diagnostics.Debug.WriteLine(msg);
-                }
-                else
-                {
-                    page.DisplayAlert("Error", msg, "确定");
-                }
-                return;
-            }
+            //var current = Xamarin.Essentials.Connectivity.NetworkAccess;
+            //if (current == Xamarin.Essentials.NetworkAccess.None)
+            //{
+            //    string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。".FormatWith(requestData.MethodName);
+            //    if (page == null)
+            //    {
+            //        System.Diagnostics.Debug.WriteLine(msg);
+            //    }
+            //    else
+            //    {
+            //        page.DisplayAlert("Error", msg, "确定");
+            //    }
+            //    return;
+            //}
 
 
             System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
@@ -566,6 +603,203 @@ namespace Client
 
                 handle.Invoke(soapResult);
 
+            };
+
+            bw.RunWorkerAsync();
+        }
+
+
+        /// <summary>
+        /// 1 修复 page, handle 的处理方式
+        /// 2 去掉 string.FormatWith 的字符串转换方式
+        /// </summary>
+        /// <param name="uri">Web Service Uri</param>
+        /// <param name="requestData">参数</param>
+        /// <param name="page">UI Page</param>
+        /// <param name="handle">UI Handler</param>
+        /// <param name="isCompress">是否压缩(默认不压缩)</param>
+        /// <param name="isEncrypt">是否加密(默认不加密)</param>
+        public void ExecuteV5
+        (
+            Uri uri,
+            Util.WebService.RequestData requestData,
+            Xamarin.Forms.Page page = null,
+            Action<Util.WebService.SOAPResult> handle = null,
+            bool isCompress = false,
+            bool isEncrypt = false
+        )
+        {
+            var current = Xamarin.Essentials.Connectivity.NetworkAccess;
+            if (current == Xamarin.Essentials.NetworkAccess.None)
+            {
+                string msg = "检测设备没有可用的网络，请开启 数据 或 Wifi。";
+                if (handle == null)
+                {
+                    if (page == null)
+                    {
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                    else
+                    {
+                        page.DisplayAlert("Error", msg, "确定");
+                    }
+                }
+                else // handle != null
+                {
+                    Util.WebService.SOAPResult soapResultHasError = new Util.WebService.SOAPResult();
+
+                    soapResultHasError.IsComplete = false;
+                    soapResultHasError.ExceptionInfo = $"{msg}";
+                    soapResultHasError.IsSuccess = false;
+                    handle.Invoke(soapResultHasError);
+                    return;
+                }
+                return;
+            }
+
+            System.ComponentModel.BackgroundWorker bw = new System.ComponentModel.BackgroundWorker();
+
+            bw.DoWork += (s, e) =>
+            {
+
+                string data = string.Empty;
+                try
+                {
+                    #region 先压缩, 后加密
+
+                    requestData.IsCompress = isCompress;
+                    if (requestData.IsCompress)
+                    {
+                        requestData.CompressType = "GZip"; // 默认使用GZip压缩
+                        for (int i = 0; i < requestData.JsonArgs.Count; i++)
+                        {
+                            requestData.JsonArgs[i] = requestData.JsonArgs[i].GZip_Compress2String();
+                        }
+                    }
+
+                    requestData.IsEncrypt = isEncrypt;
+                    if (requestData.IsEncrypt)
+                    {
+                        requestData.EncryptType = "RSA"; // 默认使用RSA加密
+                        for (int i = 0; i < requestData.JsonArgs.Count; i++)
+                        {
+                            requestData.JsonArgs[i] = requestData.JsonArgs[i].RSA_Encrypt();
+                        }
+                    }
+
+                    #endregion
+
+                    data = mClient.UploadString(uri, "POST", Util.JsonUtils.SerializeObject(requestData));
+                }
+                catch (System.Net.WebException webEx)
+                {
+                    string msg = $"执行 {requestData.MethodName} 发生未知错误";
+                    throw new Exception(msg, webEx);
+                }
+                finally
+                {
+                    mClient.Dispose();
+                }
+
+                Util.WebService.SOAPResult soapResult = Util.JsonUtils.DeserializeObject<Util.WebService.SOAPResult>(data);
+                e.Result = soapResult;
+            };
+
+
+            bw.RunWorkerCompleted += async (obj, args) =>
+            {
+                if (handle == null)
+                {
+                    if (args.Error != null)
+                    {
+                        string msg = $"{args.Error.GetFullInfo()}";
+                        if (page == null)
+                        {
+                            System.Diagnostics.Debug.WriteLine(msg);
+                        }
+                        else
+                        {
+                            await page.DisplayAlert("Error", msg, "确定");
+                        }
+                        return;
+                    }
+
+                    if (args.Result == null)
+                    {
+                        string msg = $"执行 {requestData.MethodName} 发生未知错误：args.Result为空值";
+                        if (page == null)
+                        {
+                            System.Diagnostics.Debug.WriteLine(msg);
+                        }
+                        else
+                        {
+                            await page.DisplayAlert("Error", msg, "确定");
+                        }
+                        return;
+                    }
+
+                    // 程序员没有传入返回结果的后续处理, 就此结束
+                    return;
+                }
+                else // Handle != null
+                {
+                    if (args.Error != null)
+                    {
+                        Util.WebService.SOAPResult soapResultHasError = new Util.WebService.SOAPResult();
+
+                        soapResultHasError.IsComplete = false;
+                        soapResultHasError.ExceptionInfo = args.Error.GetFullInfo();
+                        soapResultHasError.IsSuccess = false;
+                        handle.Invoke(soapResultHasError);
+                        return;
+                    }
+
+                    if (args.Result == null)
+                    {
+                        string msg = $"执行 {requestData.MethodName} 发生未知错误：args.Result为空值";
+
+                        Util.WebService.SOAPResult soapResultHasError = new Util.WebService.SOAPResult();
+
+                        soapResultHasError.IsComplete = false;
+                        soapResultHasError.ExceptionInfo = $"{msg}\r\n{args.Error.GetFullInfo()}";
+                        soapResultHasError.IsSuccess = false;
+                        handle.Invoke(soapResultHasError);
+                        return;
+                    }
+
+                    Util.WebService.SOAPResult soapResult = args.Result as Util.WebService.SOAPResult;
+
+                    #region soapResult.ReturnObjectJson 解密 & 解压
+
+                    // 1 是否经过加密, 若是进行解密
+                    if (soapResult.IsEncrypt == true)
+                    {
+                        switch (soapResult.EncryptType.ToUpper())
+                        {
+                            case "RSA": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.RSA_Decrypt(); break;
+                            case "DES": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.DES_Decrypt(); break;
+                            default: break;
+                        }
+
+                        soapResult.IsEncrypt = false; // 解密后设置为False
+                    }
+
+                    // 2 是否经过压缩, 若是进行解压
+                    if (soapResult.IsCompress == true)
+                    {
+                        switch (soapResult.CompressType.ToUpper())
+                        {
+                            case "GZIP": soapResult.ReturnObjectJson = soapResult.ReturnObjectJson.GZip_Decompress2String(); break;
+                            default: break;
+                        }
+
+                        soapResult.IsEncrypt = false; // 解压后设置为False
+                    }
+
+                    #endregion
+
+                    handle.Invoke(soapResult);
+                }
             };
 
             bw.RunWorkerAsync();

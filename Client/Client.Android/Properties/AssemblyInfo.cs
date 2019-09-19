@@ -30,5 +30,42 @@ using Android.App;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // Add some common permissions, these can be removed if not needed
+
+// 网络
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
+[assembly: UsesPermission(Android.Manifest.Permission.ChangeNetworkState)]
+[assembly: UsesPermission(Android.Manifest.Permission.ChangeWifiState)]
+
+// 读写存储设备
+[assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
+[assembly: UsesPermission(Android.Manifest.Permission.MountUnmountFilesystems)] // SD卡读取权限，用户写入离线定位数据
+
+// 设置屏幕常亮
+[assembly: UsesPermission(Android.Manifest.Permission.WakeLock)]
+
+// 蓝牙
+[assembly: UsesPermission(Android.Manifest.Permission.Bluetooth)]
+[assembly: UsesPermission(Android.Manifest.Permission.BluetoothAdmin)]
+
+// 安装
+[assembly: UsesPermission(Android.Manifest.Permission.InstallPackages)]
+
+
+// ZXing.Barcode
+[assembly: UsesPermission(Android.Manifest.Permission.Camera)]
+[assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
+
+// 定位
+[assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)] // ACCESS_COARSE_LOCATION访问CellID或WiFi,只要当前设备可以接收到基站的服务信号，便可获得位置信息。（COARSE英文原意为：粗略的，可以理解为这种方式获得的位置信息是相对粗略的数据）。
+[assembly: UsesPermission(Android.Manifest.Permission.AccessFineLocation)]
+[assembly: UsesPermission(Android.Manifest.Permission.AccessWifiState)]
+[assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
+
+[assembly: UsesPermission(Android.Manifest.Permission.ReadPhoneState)]
+
+// 红外
+[assembly: UsesPermission(Android.Manifest.Permission.TransmitIr)]
+
+
+

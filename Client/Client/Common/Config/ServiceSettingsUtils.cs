@@ -72,19 +72,26 @@ namespace Client.Common
             // 新版 XML+Json 的配置文件
             List<WebSetting> list = new List<WebSetting>();
 
+            // Step 1 修改 IP Port
+            string tmpIP = "192.168.1.215";
+            string tmpPort = "17911";
+
+
+            // Step 2 修改 WebSetting
             #region 各个程序自行配置
 
             list.Add(new WebSetting(
-                        serviceSettingName: "AppWebServer_WebServiceHandler",
-                        ipOrWebAddress: "10.20.1.49",
-                        port: "80",
-                        appName: "PCWebServer/APPWebServiceHandler.ashx"
+                        serviceSettingName: "AppWebSetting",
+                        ipOrWebAddress: "192.168.1.215",
+                        port: "17911",
+                        appName: "AppWebApplication461/APPWebServiceHandler.ashx",
+                        isIndependent: false
                     ));
 
             list.Add(new WebSetting(
                         serviceSettingName: "WebAPISetting",
-                        ipOrWebAddress: "110.114.119.120",
-                        port: "7974",
+                        ipOrWebAddress: "192.168.1.215",
+                        port: "17911",
                         appName: "test0/test1",
                         isIndependent: true
                     ));
@@ -101,11 +108,11 @@ namespace Client.Common
                     new XComment("通用的IP端口配置"),
                     new XElement
                     (
-                        "IP", "10.20.1.49"
+                        "IP", tmpIP
                     ),
                     new XElement
                     (
-                        "Port", "80"
+                        "Port", tmpPort
                     ),
 
                     new XComment("服务器配置集合"),

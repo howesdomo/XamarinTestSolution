@@ -65,8 +65,8 @@
                             x:Name="btnPageShuangSeQiu"
                             Text="双色球" />
                         <Button
-                            x:Name="btnPingDemoMini"
-                            Text="Ping Mini" />
+                            x:Name="btnH_Pow2_Brower"
+                            Text="H^2浏览器" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -81,20 +81,20 @@
                     Orientation="Horizontal">
                     <StackLayout Orientation="Horizontal">
                         <Button
-                            x:Name="btnPageZXingDemo"
-                            Text="ZXingScan Demo" />
-                        <Button
-                            x:Name="btnSocketDemo"
-                            Text="Socket Demo" />
+                            x:Name="btnBarcodeScanner"
+                            Text="条码扫描(连续)" />
                         <Button
                             x:Name="btnFakeSerailPort"
                             Text="模拟串口助手" />
                         <Button
-                            x:Name="btnH_Pow2_Brower"
-                            Text="H^2浏览器" />
-                        <Button
                             x:Name="btnPingDemo"
-                            Text="PingDemo" />
+                            Text="Ping(模拟CMD)" />
+                        <Button
+                            x:Name="btnPingDemoMini"
+                            Text="Ping Mini(模拟CMD)" />
+                        <Button
+                            x:Name="btnSocketDemo"
+                            Text="Socket Demo" />
                         <Button
                             x:Name="btnPageBluetoothDemo"
                             Text="Bluetooth" />
@@ -130,11 +130,17 @@
                     Orientation="Horizontal">
                     <StackLayout Orientation="Horizontal">
                         <Button
-                            x:Name="btnDevExpress"
-                            Text="DevExpress.Mobile.Grid" />
+                            x:Name="btnPageZXingDemo"
+                            Text="ZXing.Net(二维码扫描与生成)" />
+                        <Button
+                            x:Name="btnAcrUserDialogsDemo"
+                            Text="Acr.User.Dialog" />
                         <Button
                             x:Name="btnTTSDemo"
                             Text="TTS语音合成" />
+                        <Button
+                            x:Name="btnDevExpress"
+                            Text="DevExpress.Mobile.Grid" />
                         <Button
                             x:Name="btnPageBaiduMenu"
                             Text="百度" />
@@ -196,6 +202,12 @@
                         <Button
                             x:Name="btnAndroidPermission"
                             Text="安卓权限" />
+                        <Button
+                            x:Name="btnAndroidIntentUtils_InstallAPK"
+                            Text="打开APK安装程序" />
+                        <Button
+                            x:Name="btnAndroidPermissionV2"
+                            Text="安卓权限V2" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -212,6 +224,25 @@
                         <Button
                             x:Name="btnAccommodatingViewAndKeyboard"
                             Text="对于软键盘自动调整画面(iOS)" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="系统框架功能测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnTest_CheckUpdate_DownloadFromApplication"
+                            Text="获取服务器最新程序版本_本程序下载" />
+                        <Button
+                            x:Name="btnTest_CheckUpdate_DownloadFromBrowser"
+                            Text="获取服务器最新程序版本_用浏览器下载" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

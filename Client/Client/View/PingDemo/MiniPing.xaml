@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.MiniPing"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Mini Ping"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Label Text="  请输入 IP 或 网址 (不带 http://)" />
+                <Editor x:Name="txtIP" />
+                <Button
+                    x:Name="btnPingTest"
+                    Text="Ping" />
+                <Button
+                    x:Name="btnPingTestStop"
+                    IsEnabled="False"
+                    Text="Stop" />
+                <ListView
+                    x:Name="lv"
+                    ItemsSource="{Binding Result, Mode=OneWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="{Binding Foreground}">
+                                    <Label
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="{Binding Content}"
+                                        VerticalTextAlignment="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Grid
+                x:Name="gPingDisplay"
+                IsVisible="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label
+                    x:Name="txtLastStatus"
+                    VerticalTextAlignment="Center" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

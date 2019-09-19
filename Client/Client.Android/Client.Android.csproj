@@ -20,7 +20,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidKeyStore>true</AndroidKeyStore>
-    <AndroidSigningKeyStore>D:\SC_Github\XamarinTestSolution\SC\Client\Client.Android\Key\xamarin_KeyStore.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyStore>.\Key\xamarin_KeyStore.keystore</AndroidSigningKeyStore>
     <AndroidSigningKeyAlias>Key</AndroidSigningKeyAlias>
     <AndroidSigningStorePass>1qazxsw@</AndroidSigningStorePass>
     <AndroidSigningKeyPass>1qazxsw@</AndroidSigningKeyPass>
@@ -34,16 +34,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AotAssemblies>true</AotAssemblies>
+    <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidSupportedAbis />
+    <AndroidSupportedAbis>armeabi-v7a</AndroidSupportedAbis>
     <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
-    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>false</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
@@ -52,9 +54,15 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidSupportedAbis />
+    <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
     <DefineConstants>__ANDROID__</DefineConstants>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AotAssemblies>true</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Cells, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
@@ -71,6 +79,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.4</Version>
+    </PackageReference>
     <PackageReference Include="BindingLibrary.AndroiD.BaiduLBS">
       <Version>1.0.0</Version>
     </PackageReference>
@@ -175,6 +186,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\dingdong.wav" />
     <AndroidAsset Include="Assets\bor.mp3" />
+    <AndroidResource Include="Resources\xml\file_paths.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <None Include="DLL\Aspose.Cells.dll" />
     <AndroidResource Include="Resources\drawable\csharp.png" />
     <AndroidResource Include="Resources\drawable\icon.png" />

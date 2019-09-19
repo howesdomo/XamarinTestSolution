@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.AcrUserDialogDemo.PageTestAcrUserDialog"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Button
+                    x:Name="btnAlter"
+                    Text="Alter" />
+                <Button
+                    x:Name="btnAlterWithOnAction"
+                    Text="Alter(传参 OnAction)" />
+                <Button
+                    x:Name="btnConfirm"
+                    Text="Confirm" />
+                <Button
+                    x:Name="btnToast"
+                    Text="Toast" />
+                <Button
+                    x:Name="btnLoadingDialog"
+                    Text="Loading" />
+                <Button
+                    x:Name="btnProgressDialog"
+                    Text="ProgressDialog" />
+                <Button
+                    x:Name="btnDate"
+                    Text="Date" />
+                <Button
+                    x:Name="btnTime"
+                    Text="Time" />
+                <Button
+                    x:Name="btnPrompt"
+                    Text="Prompt" />
+                <Button
+                    x:Name="btnActionSheet"
+                    Text="ActionSheet" />
+                <Button
+                    x:Name="btnLogin"
+                    Text="Login" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

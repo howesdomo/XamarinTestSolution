@@ -8,9 +8,26 @@ namespace Client.Common
     {
         public static void Init(StaticInfoInitArgs args)
         {
+            if (args.DebugMode.HasValue == true && args.DebugMode.Value >= 0)
+            {
+                _DebugMode = args.DebugMode.Value;
+            }
+
             if (args.AppName.IsNullOrWhiteSpace() == false)
             {
                 _AppName = args.AppName;
+            }
+
+            #region 服务器配置
+
+            if (args.IP.IsNullOrWhiteSpace() == false)
+            {
+                _IP = args.IP;
+            }
+
+            if (args.Port.IsNullOrWhiteSpace() == false)
+            {
+                _Port = args.Port;
             }
 
             if (args.AppWebSetting != null)
@@ -18,10 +35,12 @@ namespace Client.Common
                 _AppWebSetting = args.AppWebSetting;
             }
 
-            if (args.AndroidExternalPath.IsNullOrWhiteSpace() == false)
+            if (args.WebAPISetting != null)
             {
-                _AndroidExternalPath = args.AndroidExternalPath;
+                _WebAPISetting = args.WebAPISetting;
             }
+
+            #endregion
 
             #region InnerSQLite
             if (args.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
@@ -36,6 +55,28 @@ namespace Client.Common
             if (args.ExternalSQLiteConnStr.IsNullOrWhiteSpace() == false)
             {
                 StaticInfo.ExternalSQLiteConnStr = args.ExternalSQLiteConnStr;
+            }
+
+            #endregion
+
+            #region 安卓项目路径赋值
+
+            // 安卓系统外部存储绝对路径
+            if (args.AndroidExternalPath.IsNullOrWhiteSpace() == false)
+            {
+                _AndroidExternalPath = args.AndroidExternalPath;
+            }
+
+            // App外部缓存绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/cache
+            if (args.AndroidExternalCachePath.IsNullOrWhiteSpace() == false)
+            {
+                _AndroidExternalCachePath = args.AndroidExternalCachePath;
+            }
+
+            // App外部文件绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/files
+            if (args.AndroidExternalFilesPath.IsNullOrWhiteSpace() == false)
+            {
+                _AndroidExternalFilesPath = args.AndroidExternalFilesPath;
             }
 
             #endregion

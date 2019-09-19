@@ -15,6 +15,7 @@ namespace Client.View
     public partial class PingDemo : ContentPage
     {
         System.Net.NetworkInformation.Ping mPing { get; set; }
+
         PingDemoViewModel ViewModel { get; set; }
 
         BackgroundWorker mBgWorker { get; set; }
@@ -75,6 +76,7 @@ namespace Client.View
         }
 
         private bool mContinue { get; set; }
+
         private System.Net.NetworkInformation.PingReply mReply { get; set; }
 
         private void Bg_DoWork(object sender, DoWorkEventArgs e)
@@ -87,7 +89,6 @@ namespace Client.View
                 System.Threading.Thread.Sleep(200);
             }
         }
-
 
         private void Bg_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -134,44 +135,5 @@ namespace Client.View
             }
         }
 
-    }
-
-    public class PingDemoViewModel : ViewModel.BaseViewModel
-    {
-        public PingDemoViewModel()
-        {
-            Result = new ObservableCollection<PingReplyModel>();
-        }
-
-        private ObservableCollection<PingReplyModel> _Result;
-
-        public ObservableCollection<PingReplyModel> Result
-        {
-            get
-            {
-                return _Result;
-            }
-            set
-            {
-                _Result = value;
-                if (_Result != null)
-                {
-                    _Result.CollectionChanged += _Result_CollectionChanged;
-                }
-                this.OnPropertyChanged("Result");
-            }
-        }
-
-        private void _Result_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            this.OnPropertyChanged("Result");
-        }
-    }
-
-    public class PingReplyModel
-    {
-        public string Content { get; set; }
-
-        public string Foreground { get; set; }
     }
 }

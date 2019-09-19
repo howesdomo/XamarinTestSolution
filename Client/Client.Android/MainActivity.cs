@@ -277,6 +277,8 @@ namespace Client.Droid
 
             // 初始化 Intent 工具类
             App.AndroidIntentUtils = Util.XamariN.AndroiD.MyAndroidIntentUtils.GetInstance(this);
+            string auth = $"{this.Application.PackageName}.fileprovider";
+            App.AndroidIntentUtils.SetFileProvider_Authority(auth);
 
             // 初始化 Android 权限工具类
             App.AndroidPermissionUtils = Util.XamariN.AndroiD.MyAndroidPermission.GetInstance(this);
@@ -289,9 +291,8 @@ namespace Client.Droid
 
 
 
-
-
-
+            // 初始化 Acr.UserDialogs
+            Acr.UserDialogs.UserDialogs.Init(this);
 
             // 初始化 DevExpress.Mobile.Forms
             DevExpress.Mobile.Forms.Init();

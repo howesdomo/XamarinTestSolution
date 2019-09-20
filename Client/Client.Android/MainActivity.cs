@@ -52,7 +52,7 @@ namespace Client.Droid
             // 为了能进入 OnOptionsItemSelected 事件, 采用 Android.Support.V7.Widget.Toolbar 代替默认的 Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = this.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-        }        
+        }
 
         private void testAsposeCell() // 测试结果, 暂时无法在 Xamarin.Android 中授权, 能够读取Excel文件内容
         {
@@ -114,73 +114,6 @@ namespace Client.Droid
 
         private void init()
         {
-            #region VN7
-
-            Common.WebSetting appWebSetting = new Common.WebSetting
-            (
-                serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.215",
-                port: "17911",
-                appName: "AppWebApplication461/APPWebServiceHandler.ashx"
-            ); // TODO 从配置文件读取服务器设置
-
-            Common.WebSetting webAPISetting = new Common.WebSetting
-            (
-                serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.215",
-                port: "17911",
-                appName: "AppWebApplication461/api/orders"
-            ); // TODO 从配置文件读取服务器设置
-
-            #endregion
-
-            #region HOME-PC
-
-            //Common.WebSetting appWebSetting = new Common.WebSetting
-            //(
-            //    serviceSettingName: "A",
-            //    ipOrWebAddress: "192.168.1.216",
-            //    port: "17911",
-            //    appName: "AppWebApplication461/AppWebService.asmx"
-            //); // TODO Read In webSetting.json
-
-            //Common.WebSetting webAPISetting = new Common.WebSetting
-            //(
-            //    serviceSettingName: "A",
-            //    ipOrWebAddress: "192.168.1.216",
-            //    port: "17911",
-            //    appName: "AppWebApplication461/api/orders"
-            //); // TODO Read In webSetting.json
-
-            #endregion
-
-
-            string innerSQLiteConnStr = System.IO.Path.Combine
-            (
-                System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
-                Util.Principle.DatabaseName_SQLite
-            );
-
-            string externalSQLiteConnStr = System.IO.Path.Combine
-            (
-                Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, // 获取 Android 外部存储路径
-                Util.Principle.ExternalStorageDirectoryTemplate.FormatWith(Client.Common.StaticInfo.AppName, Util.Principle.DatabaseName_SQLite)
-            );
-
-            Client.Common.StaticInfo.Init
-            (
-                new Client.Common.StaticInfoInitArgs()
-                {
-                    AppName = "你好Xamarin",
-                    AppWebSetting = appWebSetting,
-                    WebAPISetting = webAPISetting,
-                    AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath,
-                    InnerSQLiteConnStr = innerSQLiteConnStr,
-                    ExternalSQLiteConnStr = externalSQLiteConnStr
-                }
-            );
-
-
             #region 初始化 Common.StaticInfo
 
             var staticInfoInitArgs = new Common.StaticInfoInitArgs();
@@ -234,6 +167,22 @@ namespace Client.Droid
 
             #endregion
 
+            #region SQLite
+
+            staticInfoInitArgs.InnerSQLiteConnStr = System.IO.Path.Combine
+            (
+                System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
+                Util.Principle.DatabaseName_SQLite
+            );
+
+            staticInfoInitArgs.ExternalSQLiteConnStr = System.IO.Path.Combine
+            (
+                staticInfoInitArgs.AndroidExternalFilesPath,
+                Util.Principle.DatabaseName_SQLite
+            );
+
+            #endregion
+
             Common.StaticInfo.Init(staticInfoInitArgs);
 
             #endregion
@@ -264,8 +213,8 @@ namespace Client.Droid
             App.IR = ir;
 
             // 初始化动态权限
-            MyPermission myPermission = new MyPermission();
-            App.Permission = myPermission;
+            MyAndroidPermission_InTestSolution myPermission = MyAndroidPermission_InTestSolution.GetInstance(this);
+            App.AndroidPermissionUtils_InTestSolution = myPermission;
 
             // 初始化Bluetooth
             App.Bluetooth = Util.XamariN.AndroiD.MyBluetooth.GetInstance(this);
@@ -289,7 +238,7 @@ namespace Client.Droid
 
 
 
-
+            #region 初始化第三方 DLL 库
 
             // 初始化 Acr.UserDialogs
             Acr.UserDialogs.UserDialogs.Init(this);
@@ -314,6 +263,8 @@ namespace Client.Droid
 
             // Plugin.MediaManager.Forms ( 视频播放类库 )
             //MediaManager.CrossMediaManager.Current.Init();
+
+            #endregion
         }
 
         // XLabs
@@ -444,34 +395,18 @@ namespace Client.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            doNext(requestCode, grantResults);
-        }
-
-        private void doNext(int requestCode, [GeneratedEnum] Permission[] grantResults)
-        {
-            if (requestCode == MyPermission.WRITE_EXTERNAL_STORAGE_REQUEST_CODE)
+            if (grantResults != null && grantResults.Length > 0)
             {
-                if (grantResults[0] == Permission.Granted) // 允许授权
+                bool[] grantResultArr = new bool[grantResults.Length];
+
+                for (int i = 0; i < grantResults.Length; i++)
                 {
-                    System.Threading.Tasks.Task.Run(() =>
-                    {
-                        Looper.Prepare();
-                        Toast.MakeText(this, "授权成功", ToastLength.Long).Show();
-                        Looper.Loop();
-                    });
+                    grantResultArr[i] = (grantResults[i] == Permission.Granted);
                 }
-                else // 拒绝授权
-                {
-                    System.Threading.Tasks.Task.Run(() =>
-                    {
-                        Looper.Prepare();
-                        Toast.MakeText(this, "授权失败", ToastLength.Long).Show();
-                        Looper.Loop();
-                    });
-                }
+
+                MyAndroidPermission_InTestSolution.GetInstance().OnRequestPermissionsResult(requestCode, grantResultArr);
             }
         }
-
     }
 
 

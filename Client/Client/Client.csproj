@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Common\IPermission.cs" />
     <Compile Remove="Common\WebService.cs" />
     <Compile Remove="Common\WebServiceSetting.cs" />
     <Compile Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml.cs" />

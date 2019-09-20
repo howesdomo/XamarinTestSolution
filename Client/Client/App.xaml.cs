@@ -22,7 +22,7 @@ namespace Client
 
         public static Client.Common.IOutput Output { get; set; }
 
-        public static Client.Common.IPermission Permission { get; set; }
+        
 
         public static Client.Common.IExcelUtils_Aspose ExcelUtils_Aspose { get; set; }
 
@@ -32,7 +32,9 @@ namespace Client
 
         public static Util.XamariN.IAndroidIntentUtils AndroidIntentUtils { get; set; }
 
-        public static Util.XamariN.IAndroidPermission AndroidPermissionUtils { get; set; } // TODO
+        public static Util.XamariN.IAndroidPermission AndroidPermissionUtils { get; set; }
+
+        public static Util.XamariN.IAndroidPermission AndroidPermissionUtils_InTestSolution { get; set; }
 
         #endregion
 

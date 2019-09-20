@@ -83,7 +83,7 @@ namespace Client
 
             this.btnPageBluetoothDemo.Clicked += BtnPageBluetoothDemo_Clicked;
             this.btnPageIRDemo.Clicked += BtnPageIRDemo_Clicked;
-            
+
             this.btnAudioPlayer.Clicked += BtnAudioPlayer_Clicked;
             // this.btnExcelByAsposeCell.Clicked += BtnExcelByAsposeCell_Clicked;
             this.btnSharpIf.Clicked += BtnSharpIf_Clicked;
@@ -93,7 +93,7 @@ namespace Client
             this.btnMarqueeDemo.Clicked += BtnMarqueeDemo_Clicked;
             this.btnLabelDemo.Clicked += BtnLabelDemo_Clicked;
             this.btnXLabsDemo.Clicked += BtnXLabsDemo_Clicked;
-            
+
             this.btnFFImageLoading.Clicked += BtnFFImageLoading_Clicked;
             this.btnFileExplorer.Clicked += BtnFileExplorer_Clicked;
             this.btnPluginMediaManagerForms.Clicked += BtnPluginMediaManagerForms_Clicked;
@@ -186,7 +186,7 @@ namespace Client
             new Client.Common.AppUpdateUtils(this).CheckUpdate_DownloadFromApplication();
         }
 
-        void btnAndroidPermission_Clicked(object sender, EventArgs e)
+        async void btnAndroidPermission_Clicked(object sender, EventArgs e)
         {
             // 通过校验
             // 1. android 平台
@@ -216,29 +216,31 @@ namespace Client
 
             // 外部存储设备读写权限
             args = "android.permission.READ_EXTERNAL_STORAGE";
-            if (App.Permission.CheckPermission(args) == false)
+            if (App.AndroidPermissionUtils_InTestSolution.CheckPermission(args) == false)
             {
                 toRequest.Add(args);
             }
 
             args = "android.permission.WRITE_EXTERNAL_STORAGE";
-            if (App.Permission.CheckPermission(args) == false)
+            if (App.AndroidPermissionUtils_InTestSolution.CheckPermission(args) == false)
             {
                 toRequest.Add(args);
             }
 
             // 网络定位
             args = "android.permission.ACCESS_COARSE_LOCATION";
-            if (App.Permission.CheckPermission(args) == false)
+            if (App.AndroidPermissionUtils_InTestSolution.CheckPermission(args) == false)
             {
                 toRequest.Add(args);
             }
 
-
-            // 需要申请的权限列表 大于 0
-            if (toRequest.Count > 0)
+            if (toRequest.Count <= 0)
             {
-                App.Permission.RequestPermissions(toRequest.ToArray());
+                await DisplayAlert("提示", "没有需要请求的权限", "确定");
+            }
+            else // 需要申请的权限列表 大于 0
+            {
+                App.AndroidPermissionUtils_InTestSolution.RequestPermissions(toRequest.ToArray());
             }
         }
 
@@ -274,14 +276,14 @@ namespace Client
                 toRequest.Add(args);
             }
 
-            if (toRequest.Count > 0)
+            if (toRequest.Count <= 0)
+            {
+                await DisplayAlert("提示", "没有需要请求的权限", "确定");
+            }
+            else // 需要申请的权限列表 大于 0
             {
                 // TODO 安卓权限V2 Android 9 测试效果未达到理想效果
                 App.AndroidPermissionUtils.RequestPermissions(toRequest.ToArray());
-            }
-            else
-            {
-                await DisplayAlert("提示", "没有需要请求的权限", "确定");
             }
         }
 
@@ -298,7 +300,7 @@ namespace Client
             await Navigation.PushAsync(new View.LayoutDemo.LayoutDemoList());
         }
 
-        
+
 
         async void BtnGames_Clicked(object sender, EventArgs e)
         {

@@ -76,25 +76,49 @@ namespace Client.Common
             string tmpIP = "192.168.1.215";
             string tmpPort = "17911";
 
-
             // Step 2 修改 WebSetting
             #region 各个程序自行配置
 
-            list.Add(new WebSetting(
-                        serviceSettingName: "AppWebSetting",
-                        ipOrWebAddress: "192.168.1.215",
-                        port: "17911",
-                        appName: "AppWebApplication461/APPWebServiceHandler.ashx",
-                        isIndependent: false
-                    ));
+            #region VN7
 
-            list.Add(new WebSetting(
-                        serviceSettingName: "WebAPISetting",
-                        ipOrWebAddress: "192.168.1.215",
-                        port: "17911",
-                        appName: "test0/test1",
-                        isIndependent: true
-                    ));
+            list.Add(new WebSetting
+            (
+                serviceSettingName: "AppWebSetting",
+                ipOrWebAddress: "192.168.1.215",
+                port: "17911",
+                appName: "AppWebApplication461/APPWebServiceHandler.ashx",
+                isIndependent: false
+            ));
+
+            list.Add(new Common.WebSetting
+            (
+                serviceSettingName: "WebAPISetting",
+                ipOrWebAddress: "192.168.1.215",
+                port: "17911",
+                appName: "AppWebApplication461/api/orders"
+            ));
+
+            #endregion
+
+            #region HOME-PC
+
+            //list.Add(new Common.WebSetting
+            //(
+            //    serviceSettingName: "A",
+            //    ipOrWebAddress: "192.168.1.216",
+            //    port: "17911",
+            //    appName: "AppWebApplication461/AppWebService.asmx"
+            //));
+
+            //list.Add(new Common.WebSetting
+            //(
+            //    serviceSettingName: "A",
+            //    ipOrWebAddress: "192.168.1.216",
+            //    port: "17911",
+            //    appName: "AppWebApplication461/api/orders"
+            //));
+
+            #endregion
 
             #endregion
 

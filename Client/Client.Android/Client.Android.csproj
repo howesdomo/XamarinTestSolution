@@ -196,9 +196,9 @@
     <AndroidResource Include="Resources\raw\error.mp3" />
     <AndroidResource Include="Resources\raw\beep.mp3" />
     <AndroidResource Include="Resources\drawable\platform_resource_sample.svg" />
-    <Content Include="Resources\drawable\sample.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <AndroidResource Include="Resources\drawable\sample.svg">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

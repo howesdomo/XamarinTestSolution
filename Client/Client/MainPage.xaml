@@ -101,53 +101,6 @@
                     </StackLayout>
                 </ScrollView>
             </Grid>
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="100" />
-                </Grid.RowDefinitions>
-                <Label Text="SQLite" />
-                <ScrollView
-                    Grid.Row="1"
-                    Orientation="Horizontal">
-                    <StackLayout Orientation="Horizontal">
-                        <Button
-                            x:Name="btnPageSQLiteDemo"
-                            Text="SQLite Demo" />
-                    </StackLayout>
-                </ScrollView>
-            </Grid>
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="100" />
-                </Grid.RowDefinitions>
-                <Label Text="第三方DLL库测试" />
-                <ScrollView
-                    Grid.Row="1"
-                    Orientation="Horizontal">
-                    <StackLayout Orientation="Horizontal">
-                        <Button
-                            x:Name="btnPageZXingDemo"
-                            Text="ZXing.Net(二维码扫描与生成)" />
-                        <Button
-                            x:Name="btnAcrUserDialogsDemo"
-                            Text="Acr.User.Dialog" />
-                        <Button
-                            x:Name="btnTTSDemo"
-                            Text="TTS语音合成" />
-                        <Button
-                            x:Name="btnDevExpress"
-                            Text="DevExpress.Mobile.Grid" />
-                        <Button
-                            x:Name="btnPageBaiduMenu"
-                            Text="百度" />
-                    </StackLayout>
-                </ScrollView>
-            </Grid>
-
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -171,9 +124,6 @@
                             x:Name="btnPluginMediaManagerForms"
                             Text="(暂停)Plugin.MediaManager.Forms Demos" />
                         <Button
-                            x:Name="btnExcel"
-                            Text="Aspose.Cells 测试" />
-                        <Button
                             x:Name="btnExcelByAsposeCell"
                             Text="Excel Aspose.Cell" />
                         <Button
@@ -182,7 +132,63 @@
                         <Button
                             x:Name="btnTimer"
                             Text="定时助手" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="常用功能(已测试)" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnPageSQLiteDemo"
+                            Text="SQLite Demo" />
+                        <Button
+                            x:Name="btnAudioPlayer"
+                            Text="播放音频" />
+                        <Button
+                            x:Name="btnTTSDemo"
+                            Text="TTS语音合成" />
+                        <Button
+                            x:Name="btnPageScreen"
+                            Text="屏幕(IScreen)" />
+                        <Button
+                            x:Name="btnSendEMail"
+                            Text="发送邮件" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="第三方DLL库测试" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnPageXamarinEssentialsDemo"
+                            Text="Xamarin Essentials Demo" />
+                        <Button
+                            x:Name="btnPageZXingDemo"
+                            Text="ZXing.Net(二维码扫描与生成)" />
+                        <Button
+                            x:Name="btnAcrUserDialogsDemo"
+                            Text="Acr.User.Dialog" />
 
+                        <Button
+                            x:Name="btnDevExpress"
+                            Text="DevExpress.Mobile.Grid" />
+                        <Button
+                            x:Name="btnPageBaiduMenu"
+                            Text="百度" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -291,9 +297,6 @@
                             x:Name="btnPageOutputDemo"
                             Text="IOutput实现" />
                         <Button
-                            x:Name="btnPageScreen"
-                            Text="屏幕(IScreen)" />
-                        <Button
                             x:Name="btnPageMessagingCenterDemo"
                             Text="MessagingCenter Demo - 类似安卓的广播" />
                         <Button
@@ -302,9 +305,6 @@
                         <Button
                             x:Name="btnPickerDemo"
                             Text="PickerDemo" />
-                        <Button
-                            x:Name="btnPageXamarinEssentialsDemo"
-                            Text="Xamarin Essentials Demo" />
                         <Button
                             x:Name="btnPageWebServiceReferenceDemo"
                             Text="WebService Reference Demo" />
@@ -317,9 +317,7 @@
                         <Button
                             x:Name="btnLabelDemo"
                             Text="Label Demo" />
-                        <Button
-                            x:Name="btnAudioPlayer"
-                            Text="播放音频" />
+
                     </StackLayout>
                 </ScrollView>
             </Grid>

@@ -340,7 +340,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
     <PackageReference Include="Xamarin.HotReload" Version="1.4.10" />
-    <PackageReference Include="XLabs.Forms" Version="2.3.0-pre05" />
+    <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
 
@@ -637,5 +637,281 @@
     <Folder Include="View\Excel_AsposeDemo\" />
     <Folder Include="View\MediaManagerDemo\" />
     <Folder Include="View\AcrUserDialogDemo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="BaseView\UcAudioSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Common\ZXingBarcodeScanner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPageShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AccommodatingViewAndKeyboard\Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AcrUserDialogDemo\PageTestAcrUserDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\AllPageList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\CarousePageDetail1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\CarousePageDetail2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\CarousePageDetail3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\MasterDetailPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\MasterDetailPage1Detail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AllPageDemo\MasterDetailPage1Master.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\AudioDemo\PageAudioDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BaiduDemo\PageBaiduLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BaiduDemo\PageBaiduMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BluetoothDemo\PageBluetoothDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BluetoothDemo\UcBluetoothDevice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BuBuGao\PageBuBuGao1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BuBuGao\PageBuBuGao2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BuBuGao\PageBuBuGao_AddQuestion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BuBuGao_Japanese\PageBuBuGao1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\BuBuGao_Japanese\PageBuBuGao2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\DevExpressDemo\PageDevExpressDemoMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\DevExpressDemo\PageDevExpressV2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\DevExpressDemo\PageDevExpressV3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\DevExpressDemo\PageHelloDevExpress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\DisplayAlertDemo\PageDisplayAlertDemoList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Excel_AsposeDemo\PageExcel_Aspose.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FakeSerialPort\PageFakeSerialPort.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FFImageLoadingDemo\PageDemoMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FFImageLoadingDemo\PageSimpleGif.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FFImageLoadingDemo\PageSimpleSVG.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FFImageLoadingDemo\PageSimpleWebp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FileExplorer\PageFileExplorer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\FileExplorer\PageFileExplorerMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\PageMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\PageUserList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\PageUserListDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\UcCRWKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\UcQuestion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\UcUserListDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\CRW\UcUserListDetailTabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Games\PageGamesList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\GestureDemo\PageGestureDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\GestureDemo\PagePinch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\HPow2Brower\HPow2Brower.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\IRDemo\PageIRDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\LabelDemo\LabelDemo_V1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\LayoutDemo\AbsoluteLayoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\LayoutDemo\FlexLayoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\LayoutDemo\LayoutDemoList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\LayoutDemo\RelativeLayoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MarqueeDemo\MarqueeDemoList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MarqueeDemo\MarqueeLabel_V1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MarqueeDemo\MarqueeLabel_V2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MarqueeDemo\MarqueeLabel_V3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MarqueeDemo\MarqueeLabel_V4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MarqueeDemo\PageTest_MarqueeLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MediaManagerDemo\PageMediaManagerDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\MessagingCenterDemo\PageMessagingCenterDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\OutputDemo\PageOutputDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PageDemo\PageB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PageDemo\PageC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PageDemo\Page_Lifecycle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PickerDemo\PickerDemoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PickerDemo\PickerItemsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PickerDemo\PickerItemsSourcePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PingDemo\MiniPing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\PingDemo\PingDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ScreenDemo\PageScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ShuangSeQiu\PageShuangSeQiu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ShuangSeQiu\PageShuangSeQiuExport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ShuangSeQiu\UcShuangSeQiu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\SocketDemo\PageSocketDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\SQLiteDemo\PageSQLiteDemo_NodeItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\SQLiteDemo\PageSQLiteDemo_NoteList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\Timer\PageTimer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\TTSDemo\PageTTSMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\TTSDemo\PageXamarinEssentialsTTS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\WebServiceDemo\PageWebServiceDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\WebviewDemo\PageWebviewMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\WebviewDemo\WebPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\XamarinEssentials\DeviceInfo\PageDeviceInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\XamarinEssentials\DeviceInfo\PageDisplayInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\XamarinEssentials\PageXamarinEssentialsDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\XLabDemo\PageCamera1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ZXingDemo\PageZXingCreateBarcode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ZXingDemo\PageZXingDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\ZXingDemo\PageZXingScan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

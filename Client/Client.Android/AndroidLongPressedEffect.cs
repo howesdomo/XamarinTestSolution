@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Client.Effects;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+
+using Client.Effects;
 
 [assembly: ResolutionGroupName("Client.Effects")]
 [assembly: ExportEffect(typeof(Client.Droid.AndroidLongPressedEffect), "LongPressedEffect")]
@@ -43,7 +33,7 @@ namespace Client.Droid
         /// </summary>
         protected override void OnAttached()
         {
-            //because an effect can be detached immediately after attached (happens in listview), only attach the handler one time.
+            // because an effect can be detached immediately after attached (happens in listview), only attach the handler one time.
             if (!_attached)
             {
                 if (Control != null)
@@ -67,7 +57,7 @@ namespace Client.Droid
         /// <param name="e">E.</param>
         private void Control_LongClick(object sender, Android.Views.View.LongClickEventArgs e)
         {
-            Console.WriteLine("Invoking long click command");
+            // System.Diagnostics.Debug.WriteLine("Invoking long click command");
             var command = LongPressedEffect.GetCommand(Element);
             command?.Execute(LongPressedEffect.GetCommandParameter(Element));
         }

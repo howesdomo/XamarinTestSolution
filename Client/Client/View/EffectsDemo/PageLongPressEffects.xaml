@@ -11,7 +11,8 @@
         <StackLayout>
             <Label
                 x:Name="lbl1"
-                effects:LongPressedEffect.Command="{Binding ShowAlertCommand, Mode=OneWay}"
+                effects:LongPressedEffect.Command="{Binding ShowAlertCommand}"
+                effects:LongPressedEffect.CommandParameter="{Binding .}"
                 FontSize="20"
                 HorizontalTextAlignment="Center"
                 Text="Long Press Me!"
@@ -21,7 +22,23 @@
                 </Label.Effects>
             </Label>
 
-            <!--  effects:LongPressedEffect.CommandParameter="{Binding .}"  -->
+            <ListView ItemsSource="{Binding OrderList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label
+                                effects:LongPressedEffect.Command="{Binding ItemLongPressCommand}"
+                                effects:LongPressedEffect.CommandParameter="{Binding OrderNo}"
+                                Text="{Binding OrderNo}">
+                                <Label.Effects>
+                                    <effects:LongPressedEffect />
+                                </Label.Effects>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

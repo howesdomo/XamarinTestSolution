@@ -16,22 +16,15 @@ namespace Client.View.EffectsDemo
 
         public PageLongPressEffects()
         {
+            InitializeComponent();
             this.ViewModel = new PageLongPressEffects_ViewModel();
             this.BindingContext = ViewModel;
 
-            InitializeComponent();
-
-
+            // 检测 XAML 中绑定 Command 是否成功
             object o = lbl1.GetValue(Client.Effects.LongPressedEffect.CommandProperty);
-            //if (o == null)
-            //{
-            //    lbl1.SetValue(Client.Effects.LongPressedEffect.CommandProperty, ShowAlertCommand);
-            //}
-
-            //o = lbl1.GetValue(Client.Effects.LongPressedEffect.CommandProperty);
             if (o != null && o is ICommand)
             {
-                string msg = "sa";
+                string msg = "sab";
                 System.Diagnostics.Debug.WriteLine(msg);
             }
         }
@@ -42,16 +35,73 @@ namespace Client.View.EffectsDemo
     {
         public PageLongPressEffects_ViewModel()
         {
-            this.ShowAlertCommand = new Command(execute: () =>
+            this.ShowAlertCommand = new Command(execute: (args) =>
             {
-                string msg = "long press!!!!";
+                string msg = $"!!!long press!!!!\r\n{Util.JsonUtils.SerializeObject(args)}";
+                System.Diagnostics.Debug.WriteLine(msg);
+            });
+
+            this.ItemLongPressCommand = new Command(execute: (args) =>
+            {
+                string msg = $"!!!item long press!!!!\r\n{Util.JsonUtils.SerializeObject(args)}";
                 System.Diagnostics.Debug.WriteLine(msg);
 
                 System.Diagnostics.Debugger.Break();
+
             });
+
+            this.OrderList = new List<CellModel>()
+            {
+                new CellModel(){ OrderNo = "1" },
+                new CellModel(){ OrderNo = "2" } ,
+                new CellModel(){ OrderNo = "3" },
+                new CellModel(){ OrderNo = "4" },
+                new CellModel(){ OrderNo = "5" }
+            };
         }
 
         public ICommand ShowAlertCommand { get; private set; }
+        public ICommand ItemLongPressCommand { get; private set; }
 
+        private List<CellModel> _OrderList;
+        public List<CellModel> OrderList
+        {
+            get
+            {
+                return _OrderList;
+            }
+            set
+            {
+                _OrderList = value;
+                this.OnPropertyChanged(nameof(OrderList));
+            }
+        }
     }
+
+    public class CellModel : ViewModel.BaseViewModel
+    {
+        public CellModel()
+        {
+            this.ItemLongPressCommand = new Command(execute: (args) =>
+            {
+                string msg = $"!!!item long press!!!!\r\n{Util.JsonUtils.SerializeObject(args)}";
+                System.Diagnostics.Debug.WriteLine(msg);
+            });
+        }
+
+        public ICommand ItemLongPressCommand { get; private set; }
+
+        private string _OrderNo;
+        public string OrderNo
+        {
+            get { return _OrderNo; }
+            set
+            {
+                _OrderNo = value;
+                this.OnPropertyChanged(nameof(OrderNo));
+            }
+        }
+    }
+
+
 }

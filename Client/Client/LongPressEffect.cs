@@ -15,20 +15,13 @@ namespace Client.Effects
         {
         }
 
+        #region Command
+
         public static readonly BindableProperty CommandProperty = BindableProperty.CreateAttached("Command", typeof(ICommand), typeof(LongPressedEffect), (object)null);
 
         public static ICommand GetCommand(BindableObject view)
         {
-            // return (ICommand)view.GetValue(CommandProperty);
-            object o = view.GetValue(CommandProperty);
-            if (o is ICommand)
-            {
-                return o as ICommand;
-            }
-            else
-            {
-                return null;
-            }
+            return (ICommand)view.GetValue(CommandProperty);
         }
 
         public static void SetCommand(BindableObject view, ICommand value)
@@ -36,6 +29,9 @@ namespace Client.Effects
             view.SetValue(CommandProperty, value);
         }
 
+        #endregion
+
+        #region CommandParameter
 
         public static readonly BindableProperty CommandParameterProperty = BindableProperty.CreateAttached("CommandParameter", typeof(object), typeof(LongPressedEffect), (object)null);
 
@@ -48,5 +44,7 @@ namespace Client.Effects
         {
             view.SetValue(CommandParameterProperty, value);
         }
+
+        #endregion
     }
 }

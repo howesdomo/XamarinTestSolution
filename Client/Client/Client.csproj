@@ -442,6 +442,9 @@
     <EmbeddedResource Update="View\DisplayAlertDemo\PageDisplayAlertDemoList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\EffectsDemo\PageLongPressEffects.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\FakeSerialPort\PageFakeSerialPort.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +26,10 @@ namespace Client.View.FileExplorer
 
         private void initEvent()
         {
+            var a = new TapGestureRecognizer();
+
+            lv.GestureRecognizers.Add(new TapGestureRecognizer());
+
             lv.ItemTapped += Lv_ItemTapped;
         }
 
@@ -415,6 +419,29 @@ namespace Client.View.FileExplorer
 
     public class FileInfoModel : Util.UIComponent.VirtualModel
     {
+        public FileInfoModel()
+        {
+            ShowAlertCommand = new Command
+            (
+                execute: () => 
+                {
+                    string msg = $"Execute";
+                    System.Diagnostics.Debug.WriteLine(msg);
+
+                    System.Diagnostics.Debugger.Break();
+                }, 
+                canExecute: () => 
+                {
+                    string msg = $"can Execute";
+                    System.Diagnostics.Debug.WriteLine(msg);
+
+                    System.Diagnostics.Debugger.Break();
+
+                    return true;
+                }
+            );
+        }
+
         public ImageSource ModelIcon { get; set; }
 
         public int Level { get; set; }
@@ -524,6 +551,10 @@ namespace Client.View.FileExplorer
 
         #endregion
 
-
+        public System.Windows.Input.ICommand ShowAlertCommand
+        {
+            get;
+            private set;
+        }
     }
 }

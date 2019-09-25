@@ -67,5 +67,8 @@ using Android.App;
 // 红外
 [assembly: UsesPermission(Android.Manifest.Permission.TransmitIr)]
 
+// 红外
+[assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
+
 
 

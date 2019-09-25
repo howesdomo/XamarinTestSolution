@@ -123,6 +123,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidLongPressedEffect.cs" />
     <Compile Include="BaiduLBS.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyApplication.cs" />

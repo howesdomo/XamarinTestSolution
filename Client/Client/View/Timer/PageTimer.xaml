@@ -1,13 +1,150 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.PageTimer"
-             Title="循环定时器">
+<ContentPage
+    x:Class="Client.View.PageTimer"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="循环定时器">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid x:Name="gRoot">
+            <Grid x:Name="gPanel">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="持续时间"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Keyboard="Numeric"
+                    Text="{Binding TypeA, Mode=TwoWay}"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="休息时间"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Keyboard="Numeric"
+                    Text="{Binding TypeB, Mode=TwoWay}"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="循环次数"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Keyboard="Numeric"
+                    Text="{Binding PlanCount, Mode=TwoWay}"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Text="开启震动"
+                    VerticalTextAlignment="Center" />
+                <Switch
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HorizontalOptions="StartAndExpand"
+                    IsToggled="{Binding IsVibrate, Mode=TwoWay}" />
+
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Text="开启语音"
+                    VerticalTextAlignment="Center" />
+                <Switch
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    HorizontalOptions="StartAndExpand"
+                    IsToggled="{Binding IsTTS, Mode=TwoWay}" />
+
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Text="屏幕常亮"
+                    VerticalTextAlignment="Center" />
+                <Switch
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    HorizontalOptions="StartAndExpand"
+                    IsToggled="{Binding IsScreenKeepOn, Mode=TwoWay}" />
+
+                <Button
+                    x:Name="btnStart"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    Text="Start" />
+
+                <StackLayout
+                    Grid.Row="7"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="StartAndExpand"
+                    Orientation="Vertical">
+                    <Label Text="预存模式" />
+                    <ScrollView
+                        HorizontalOptions="StartAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout
+                            HorizontalOptions="StartAndExpand"
+                            Orientation="Horizontal">
+                            <Button
+                                x:Name="btnModeDefault"
+                                Text="默认" />
+                            <Button
+                                x:Name="btnModeProtectEyes"
+                                Text="护眼" />
+                            <Button
+                                x:Name="btnModeKeepFit"
+                                Text="瘦身" />
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Grid>
+            <Grid
+                x:Name="gMain"
+                IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    x:Name="lblStatus"
+                    Grid.Row="0"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    x:Name="lblInfo"
+                    Grid.Row="1"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center" />
+                <Button
+                    x:Name="btnStop"
+                    Grid.Row="2"
+                    Text="Stop" />
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

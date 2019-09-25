@@ -56,6 +56,7 @@ namespace Client
                     this.gHiddenContent.IsVisible = !this.gHiddenContent.IsVisible;
                 })
             };
+
             this.btnShowHidden.GestureRecognizers.Add(tapShowHidden);
 
             this.btnBuBuGao.Clicked += btnBuBuGao_Clicked;
@@ -63,6 +64,7 @@ namespace Client
             this.btnGames.Clicked += BtnGames_Clicked;
             this.btnPageShuangSeQiu.Clicked += BtnPageShuangSeQiu_Clicked;
             this.btnH_Pow2_Brower.Clicked += btnH_Pow2_Brower_Clicked;
+            this.btnTimer.Clicked += btnTimer_Clicked;
 
             #endregion            
 
@@ -91,7 +93,7 @@ namespace Client
 
             this.btnMarqueeDemo.Clicked += btnMarqueeDemo_Clicked;
 
-            this.btnTimer.Clicked += btnTimer_Clicked;
+            this.btnLongPressEffects.Clicked += btnLongPressEffects_Clicked;
 
             #endregion
 
@@ -192,7 +194,10 @@ namespace Client
             await Navigation.PushAsync(new View.ShuangSeQiu.PageShuangSeQiu());
         }
 
-
+        async void btnTimer_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.PageTimer());
+        }
 
         #endregion
 
@@ -275,11 +280,10 @@ namespace Client
             await Navigation.PushAsync(new View.MarqueeDemo.MarqueeDemoList());
         }
 
-        async void btnTimer_Clicked(object sender, EventArgs e)
+        async void btnLongPressEffects_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new View.PageTimer());
+            await Navigation.PushAsync(new View.EffectsDemo.PageLongPressEffects());
         }
-
 
         #endregion        
 

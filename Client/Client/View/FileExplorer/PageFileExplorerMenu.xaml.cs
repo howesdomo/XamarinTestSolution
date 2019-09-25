@@ -123,21 +123,61 @@ namespace Client.View.FileExplorer
 
         private void initUIAdv()
         {
-            var btn = getButton("CurrentDirectory");
-            btn.Clicked += async (s, e) =>
-            {
-                try
-                {
-                    await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.CurrentDirectory));
-                }
-                catch (Exception ex)
-                {
-                    string msg = "{0}".FormatWith(ex.GetFullInfo());
-                    System.Diagnostics.Debug.WriteLine(msg);
-                }
-            };
-            sl.Children.Add(btn);
 
+            if (Xamarin.Essentials.DeviceInfo.Platform == Xamarin.Essentials.DevicePlatform.iOS)
+            {
+                var btn = getButton("CurrentDirectory");
+                btn.Clicked += async (s, e) =>
+                {
+                    try
+                    {
+                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.CurrentDirectory));
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = "{0}".FormatWith(ex.GetFullInfo());
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                };
+
+                sl.Children.Add(btn);
+            }
+
+            if (Xamarin.Essentials.DeviceInfo.Platform == Xamarin.Essentials.DevicePlatform.Android)
+            {
+                var btnExternalStoragePath = getButton("安卓系统外部存储根目录(ExternalStoragePath)");
+                btnExternalStoragePath.Clicked += async (s, e) =>
+                {
+                    try
+                    {
+                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Common.StaticInfo.AndroidExternalPath));
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = "{0}".FormatWith(ex.GetFullInfo());
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                };
+
+                sl.Children.Add(btnExternalStoragePath);
+
+                var btnAndroidExternalPath = getButton("安卓程序外部存储目录");
+                btnAndroidExternalPath.Clicked += async (s, e) =>
+                {
+                    try
+                    {
+                        var di = new System.IO.DirectoryInfo(Common.StaticInfo.AndroidExternalFilesPath);
+                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(di.Parent.FullName));
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = "{0}".FormatWith(ex.GetFullInfo());
+                        System.Diagnostics.Debug.WriteLine(msg);
+                    }
+                };
+
+                sl.Children.Add(btnAndroidExternalPath);                
+            }
 
             foreach (Environment.SpecialFolder enumValue in Enum.GetValues(typeof(Environment.SpecialFolder)))
             {
@@ -153,7 +193,7 @@ namespace Client.View.FileExplorer
                 catch (Exception)
                 {
                     continue;
-                }                
+                }
 
                 string enumName = Enum.GetName(typeof(Environment.SpecialFolder), enumValue);
                 var a = getButton(enumName);

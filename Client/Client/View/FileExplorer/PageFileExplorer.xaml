@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             x:Class="Client.View.FileExplorer.PageFileExplorer">
+<ContentPage
+    x:Class="Client.View.FileExplorer.PageFileExplorer"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:effects="clr-namespace:Client.Effects"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
     <NavigationPage.TitleView>
         <Grid>
             <Grid.Resources>
@@ -17,41 +19,70 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <!-- Title -->
+            <!--  Title  -->
             <Label Text="FileExplorer" />
         </Grid>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="5" />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="1" Grid.Column="0" Text="筛选" VerticalTextAlignment="Center" />
-                <Editor x:Name="txtFilter" Text="{Binding Filter}" 
-                        Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow" VerticalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
 
-                <Label Grid.Row="2" Grid.Column="0" Text="地址" VerticalTextAlignment="Center" />
-                <ScrollView x:Name="scrollViewCurrentDirectory" 
-                            Grid.Row="2" Grid.Column="1" 
-                            HorizontalOptions="FillAndExpand"
-                            HorizontalScrollBarVisibility="Never"
-                            Orientation="Horizontal">
-                    <StackLayout x:Name="stacklayoutCurrentDirectory" Orientation="Horizontal" HorizontalOptions="Fill">
+            <StackLayout
+                x:Name="slMain"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5" />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="筛选"
+                        VerticalTextAlignment="Center" />
+                    <Editor
+                        x:Name="txtFilter"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="Yellow"
+                        Text="{Binding Filter}"
+                        VerticalOptions="Center" />
 
-                    </StackLayout>
-                </ScrollView>
-            </Grid>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="地址"
+                        VerticalTextAlignment="Center" />
+                    <ScrollView
+                        x:Name="scrollViewCurrentDirectory"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalScrollBarVisibility="Never"
+                        Orientation="Horizontal">
+                        <StackLayout
+                            x:Name="stacklayoutCurrentDirectory"
+                            HorizontalOptions="Fill"
+                            Orientation="Horizontal" />
+                    </ScrollView>
+                </Grid>
 
-            <ListView x:Name="lv" ItemsSource="{Binding FilterList}">
-                <!--Header="{Binding}" Footer="{Binding}"-->
-                <!--
+                <ListView
+                    x:Name="lv"
+                    HasUnevenRows="True"
+                    ItemsSource="{Binding FilterList}">
+                    <!--  Header="{Binding}" Footer="{Binding}"  -->
+                    <!--
                     <ListView.HeaderTemplate>
                         <DataTemplate>
                             <ContentView BackgroundColor="Beige">
@@ -61,52 +92,93 @@
                     </ListView.HeaderTemplate>
                     -->
 
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell
+                                effects:LongPressedEffect.Command="{Binding ShowAlertCommand}"
+                                effects:LongPressedEffect.CommandParameter="{Binding .}">
+                                <ViewCell.Effects>
+                                    <effects:LongPressedEffect />
+                                </ViewCell.Effects>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
 
-                                <ffimageloading:CachedImage WidthRequest="40" HeightRequest="40" Source="{Binding ModelIcon}" Margin="5"/>
+                                    <ffimageloading:CachedImage
+                                        Margin="5"
+                                        HeightRequest="40"
+                                        HorizontalOptions="StartAndExpand"
+                                        Source="{Binding ModelIcon}"
+                                        WidthRequest="40" />
 
-                                <Grid Grid.Column="1">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Text="{Binding Info}" FontSize="10" VerticalTextAlignment="Center" />
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Label
+                                            Grid.Row="0"
+                                            FontSize="14"
+                                            Text="{Binding Info}"
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center" />
 
-                                    <Grid Grid.Row="1">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
 
-                                        <Label Grid.Row="0" Text="{Binding Info2}" FontSize="10" VerticalTextAlignment="End" TextColor="Silver" />
-                                        <Label Grid.Column="1" Text="-drw-" FontSize="10" VerticalTextAlignment="Center" />
-                                        <Grid Grid.Column="2" HeightRequest="20">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
-                                            <Label Grid.Row="0" Text="{Binding LastWriteDateInfo}" FontSize="9" VerticalTextAlignment="Start" BackgroundColor="Transparent" />
-                                            <Label Grid.Row="1" Text="{Binding LastWriteTimeInfo}" FontSize="9" VerticalTextAlignment="End" BackgroundColor="Transparent" />
+                                            <Label
+                                                Grid.Row="0"
+                                                FontSize="10"
+                                                Text="{Binding Info2}"
+                                                TextColor="Silver"
+                                                VerticalTextAlignment="Center" />
+                                            <Label
+                                                Grid.Column="1"
+                                                FontSize="10"
+                                                Text="-drw-"
+                                                VerticalTextAlignment="Center" />
+                                            <Grid
+                                                Grid.Column="2"
+                                                HeightRequest="25">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Label
+                                                    Grid.Row="0"
+                                                    BackgroundColor="Transparent"
+                                                    FontSize="9"
+                                                    Text="{Binding LastWriteDateInfo}"
+                                                    VerticalTextAlignment="Start" />
+                                                <Label
+                                                    Grid.Row="1"
+                                                    BackgroundColor="Transparent"
+                                                    FontSize="9"
+                                                    Text="{Binding LastWriteTimeInfo}"
+                                                    VerticalTextAlignment="End" />
+                                            </Grid>
                                         </Grid>
                                     </Grid>
+
+                                    <Label
+                                        Grid.Column="2"
+                                        Margin="5"
+                                        Text="."
+                                        VerticalOptions="Fill"
+                                        VerticalTextAlignment="Center" />
                                 </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-                                <Label Grid.Column="2" Text="."  Margin="5" />
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-
-                <!--
+                    <!--
                     <ListView.FooterTemplate>
                         <DataTemplate>
                             <ContentView BackgroundColor="Aquamarine">
@@ -115,9 +187,29 @@
                         </DataTemplate>
                     </ListView.FooterTemplate>
                     -->
-            </ListView>
+                </ListView>
 
-        </StackLayout>
+            </StackLayout>
+
+            <ScrollView
+                x:Name="slToolbar"
+                IsVisible="False"
+                Orientation="Horizontal">
+                <StackLayout
+                    BackgroundColor="Gold"
+                    Orientation="Horizontal">
+                    <Button
+                        x:Name="btnSendMail"
+                        Text="添加到邮件附件" />
+                    <Button
+                        x:Name="btnDelete"
+                        Text="删除" />
+                    <Button
+                        x:Name="btnRename"
+                        Text="重命名" />
+                </StackLayout>
+            </ScrollView>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
-    

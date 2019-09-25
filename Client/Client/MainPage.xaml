@@ -132,6 +132,9 @@
                         <Button
                             x:Name="btnTimer"
                             Text="定时助手" />
+                        <Button
+                            x:Name="btnLongPressEffects"
+                            Text="测试LongPressEffects" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

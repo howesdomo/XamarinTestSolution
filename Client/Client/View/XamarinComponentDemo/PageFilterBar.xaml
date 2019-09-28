@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XamarinComponentDemo.PageFilterBar"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Client.Components"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="30" />
+                </Grid.ColumnDefinitions>
+                <BoxView
+                    x:Name="imgFilter"
+                    Grid.Column="0"
+                    BackgroundColor="Orange"
+                    HeightRequest="20"
+                    WidthRequest="20" />
+
+                <Entry
+                    x:Name="txtFilter"
+                    Grid.Column="1"
+                    BackgroundColor="Yellow"
+                    VerticalOptions="EndAndExpand" />
+
+                <BoxView
+                    x:Name="imgDel"
+                    Grid.Column="2"
+                    BackgroundColor="Orange"
+                    HeightRequest="20"
+                    WidthRequest="20" />
+            </Grid>
+            <Label
+                BackgroundColor="Purple"
+                Text="=========分隔符===========" />
+            <components:FilterBar />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

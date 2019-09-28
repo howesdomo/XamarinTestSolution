@@ -320,7 +320,9 @@
                         <Button
                             x:Name="btnLabelDemo"
                             Text="Label Demo" />
-
+                        <Button
+                            x:Name="btnXamarinComponentDemo"
+                            Text="Xamarin Component Demo" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

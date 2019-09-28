@@ -168,7 +168,7 @@ namespace Client
             this.btnGestureDemo.Clicked += BtnGestureDemo_Clicked;
             this.btnGesturePinchDemo.Clicked += BtnGesturePinchDemo_Clicked;
             this.btnLabelDemo.Clicked += BtnLabelDemo_Clicked;
-
+            this.btnXamarinComponentDemo.Clicked += btnXamarinComponentDemo_Clicked;
             #endregion
         }
 
@@ -659,6 +659,11 @@ namespace Client
         async void BtnLabelDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.LabelDemo.LabelDemo_V1());
+        }
+
+        async void btnXamarinComponentDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.XamarinComponentDemo.PageXamarinComponentMenu());
         }
 
         #endregion

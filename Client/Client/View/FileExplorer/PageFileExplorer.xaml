@@ -30,68 +30,57 @@
                 <RowDefinition Height="30" />
             </Grid.RowDefinitions>
 
-            <StackLayout
-                x:Name="slMain"
+            <Grid
+                x:Name="gMain"
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.Column="0">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="5" />
-                        <RowDefinition />
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Text="筛选"
-                        VerticalTextAlignment="Center" />
-                    <Editor
-                        x:Name="txtFilter"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        BackgroundColor="Yellow"
-                        Text="{Binding Filter}"
-                        VerticalOptions="Center" />
 
-                    <Label
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        Text="地址"
-                        VerticalTextAlignment="Center" />
-                    <ScrollView
-                        x:Name="scrollViewCurrentDirectory"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        HorizontalOptions="FillAndExpand"
-                        HorizontalScrollBarVisibility="Never"
-                        Orientation="Horizontal">
-                        <StackLayout
-                            x:Name="stacklayoutCurrentDirectory"
-                            HorizontalOptions="Fill"
-                            Orientation="Horizontal" />
-                    </ScrollView>
-                </Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="筛选"
+                    VerticalTextAlignment="Center" />
+                <Editor
+                    x:Name="txtFilter"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="{Binding Filter}"
+                    VerticalOptions="Center" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="地址"
+                    VerticalTextAlignment="Center" />
+                <ScrollView
+                    x:Name="scrollViewCurrentDirectory"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalScrollBarVisibility="Never"
+                    Orientation="Horizontal">
+                    <StackLayout
+                        x:Name="stacklayoutCurrentDirectory"
+                        HorizontalOptions="Fill"
+                        Orientation="Horizontal" />
+                </ScrollView>
 
                 <ListView
                     x:Name="lv"
+                    Grid.ColumnSpan="2"
                     HasUnevenRows="True"
                     ItemsSource="{Binding FilterList}">
-                    <!--  Header="{Binding}" Footer="{Binding}"  -->
-                    <!--
-                    <ListView.HeaderTemplate>
-                        <DataTemplate>
-                            <ContentView BackgroundColor="Beige">
-                                <Label Margin="10" HorizontalOptions="CenterAndExpand" Text="{Binding ItemsCount, StringFormat='Items Total : {0}'}"  TextColor="Black"/>
-                            </ContentView>
-                        </DataTemplate>
-                    </ListView.HeaderTemplate>
-                    -->
-
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell
@@ -177,23 +166,13 @@
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-
-                    <!--
-                    <ListView.FooterTemplate>
-                        <DataTemplate>
-                            <ContentView BackgroundColor="Aquamarine">
-                                <Label Margin="10" Text="{Binding ItemsSummary, StringFormat='Total: {0:C2}'}" TextColor="Blue" HorizontalTextAlignment="End"/>
-                            </ContentView>
-                        </DataTemplate>
-                    </ListView.FooterTemplate>
-                    -->
                 </ListView>
-
-            </StackLayout>
+            </Grid>
 
             <ScrollView
                 x:Name="slToolbar"
-                IsVisible="False"
+                Grid.Row="1"
+                IsVisible="True"
                 Orientation="Horizontal">
                 <StackLayout
                     BackgroundColor="Gold"

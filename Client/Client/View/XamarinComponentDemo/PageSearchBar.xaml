@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XamarinComponentDemo.PageSearchBar"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Client.Components"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Xamarin.Forms 原生 ( 缺点 : 输入框没有内容时不会触发 SearchCommand" />
+            <SearchBar
+                x:Name="sb1"
+                SearchCommand="{Binding PerformSearch}"
+                SearchCommandParameter="{Binding Text, Source={x:Reference sb1}}" />
+
+            <!--<Label Text="采用 Renderer 修复 输入框没有内容时不会触发 SearchCommand 的问题" />
+            <components:SearchBarFix
+                x:Name="sbf1"
+                SearchCommand="{Binding PerformSearch}"
+                SearchCommandParameter="{Binding Text, Source={x:Reference sbf1}}" />-->
+
+            <components:FilterBar x:Name="fb" />
+
+            <!--<components:EditorAdv
+                x:Name="txt2"
+                Placeholder="EditorAdv" />
+
+            <components:EntryAdv
+                x:Name="txt1"
+                Completed="Txt1_Completed"
+                Placeholder="EntryAdv" />-->
+
+            <ListView
+                x:Name="searchResults"
+                ItemsSource="{Binding SearchResults}" />
+            <!--<SearchBar
+                Placeholder="筛选"
+                SearchCommand="{Binding SearchCommand}"
+                SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}" />-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

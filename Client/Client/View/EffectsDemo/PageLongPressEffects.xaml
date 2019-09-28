@@ -26,18 +26,39 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label
-                                effects:LongPressedEffect.Command="{Binding ItemLongPressCommand}"
-                                effects:LongPressedEffect.CommandParameter="{Binding OrderNo}"
-                                Text="{Binding OrderNo}">
-                                <Label.Effects>
-                                    <effects:LongPressedEffect />
-                                </Label.Effects>
-                            </Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="50" />
+                                </Grid.ColumnDefinitions>
+                                <Label
+                                    BackgroundColor="OldLace"
+                                    Text="No." />
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding OrderNo}" />
+                                <BoxView
+                                    Grid.Column="2"
+                                    effects:LongPressedEffect.Command="{Binding ItemLongPressCommand}"
+                                    effects:LongPressedEffect.CommandParameter="{Binding OrderNo}"
+                                    BackgroundColor="Orange">
+                                    <BoxView.Effects>
+                                        <effects:LongPressedEffect />
+                                    </BoxView.Effects>
+                                </BoxView>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <Label
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="------------分隔符------------" />
+
+            
 
         </StackLayout>
     </ContentPage.Content>

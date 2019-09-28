@@ -29,16 +29,13 @@ namespace Client.Droid
 
             // Add by Howe
 
+            //// 初始化 Xamarin.Essentials 尝试使用传入 Applaction 的方法
+            //Xamarin.Essentials.Platform.Init(activity:this, bundle: bundle);
+            Xamarin.Essentials.Platform.Init(application: Application);
+
             init();
             initXLabs();
-            testAsposeCell();
-
-            //// start 设置全屏 (隐藏标题栏)
-            //var uiOptions = SystemUiFlags.HideNavigation | SystemUiFlags.ImmersiveSticky | SystemUiFlags.Fullscreen
-            //                        | SystemUiFlags.LayoutFullscreen | SystemUiFlags.LayoutHideNavigation;
-            //this.Window.DecorView.SystemUiVisibility = (StatusBarVisibility)uiOptions;
-            //// end 设置全屏
-
+            
             // End Add by Howe
 
             var app = new App();
@@ -52,64 +49,6 @@ namespace Client.Droid
             // 为了能进入 OnOptionsItemSelected 事件, 采用 Android.Support.V7.Widget.Toolbar 代替默认的 Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = this.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-        }
-
-        private void testAsposeCell() // 测试结果, 暂时无法在 Xamarin.Android 中授权, 能够读取Excel文件内容
-        {
-            //string LData = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxMaWNlbnNlPg0KICAgIDxEYXRhPg0KICAgICAgICA8TGljZW5zZWRUbz5pckRldmVsb3BlcnMuY29tPC9MaWNlbnNlZFRvPg0KICAgICAgICA8RW1haWxUbz5pbmZvQGlyRGV2ZWxvcGVycy5jb208L0VtYWlsVG8+DQogICAgICAgIDxMaWNlbnNlVHlwZT5EZXZlbG9wZXIgT0VNPC9MaWNlbnNlVHlwZT4NCiAgICAgICAgPExpY2Vuc2VOb3RlPkxpbWl0ZWQgdG8gMTAwMCBkZXZlbG9wZXIsIHVubGltaXRlZCBwaHlzaWNhbCBsb2NhdGlvbnM8L0xpY2Vuc2VOb3RlPg0KICAgICAgICA8T3JkZXJJRD43ODQzMzY0Nzc4NTwvT3JkZXJJRD4NCiAgICAgICAgPFVzZXJJRD4xMTk0NDkyNDM3OTwvVXNlcklEPg0KICAgICAgICA8T0VNPlRoaXMgaXMgYSByZWRpc3RyaWJ1dGFibGUgbGljZW5zZTwvT0VNPg0KICAgICAgICA8UHJvZHVjdHM+DQogICAgICAgICAgICA8UHJvZHVjdD5Bc3Bvc2UuVG90YWwgUHJvZHVjdCBGYW1pbHk8L1Byb2R1Y3Q+DQogICAgICAgIDwvUHJvZHVjdHM+DQogICAgICAgIDxFZGl0aW9uVHlwZT5FbnRlcnByaXNlPC9FZGl0aW9uVHlwZT4NCiAgICAgICAgPFNlcmlhbE51bWJlcj57RjJCOTcwNDUtMUIyOS00QjNGLUJENTMtNjAxRUZGQTE1QUE5fTwvU2VyaWFsTnVtYmVyPg0KICAgICAgICA8U3Vic2NyaXB0aW9uRXhwaXJ5PjIwOTkxMjMxPC9TdWJzY3JpcHRpb25FeHBpcnk+DQogICAgICAgIDxMaWNlbnNlVmVyc2lvbj4zLjA8L0xpY2Vuc2VWZXJzaW9uPg0KICAgIDwvRGF0YT4NCiAgICA8U2lnbmF0dXJlPlFYTndiM05sTGxSdmRHRnNMb1B5YjJSMVkzUWdSbUZ0YVd4NTwvU2lnbmF0dXJlPg0KPC9MaWNlbnNlPg==";
-            //System.IO.Stream stream = new System.IO.MemoryStream(Convert.FromBase64String(LData));
-            //stream.Seek(0, System.IO.SeekOrigin.Begin);
-            //Aspose.Cells.License license = new Aspose.Cells.License();
-            //license.SetLicense(stream);
-
-            //try
-            //{
-            //    string path = System.IO.Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "Aspose.xlsx");
-
-            //    StringBuilder sb = new StringBuilder();
-
-            //    Aspose.Cells.Workbook wb = null;
-
-            //    if (System.IO.File.Exists(path) == false)
-            //    {
-            //        wb = new Aspose.Cells.Workbook();
-            //    }
-            //    else
-            //    {
-            //        wb = new Aspose.Cells.Workbook(path);
-            //    }
-
-            //    if (wb != null)
-            //    {
-            //        bool isLicensed = wb.IsLicensed;
-            //        if (isLicensed == false)
-            //        {
-            //            sb.AppendLine("Run Time {0} : isLicensed = false;".FormatWith(0));
-            //        }
-
-            //        if (wb.Worksheets.Count > 1)
-            //        {
-            //            sb.AppendLine("Run Time {0} : Worksheets Count = {1};".FormatWith(0, wb.Worksheets.Count));
-            //        }
-
-            //        var ws = wb.Worksheets[0];
-            //        Aspose.Cells.Cell cell0 = ws.Cells[0, 0];
-
-            //        string msg = "{0}".FormatWith(cell0.Value);
-            //        System.Diagnostics.Debug.WriteLine(msg);
-
-            //        cell0.Value = "A1 hello";
-
-            //        // 保存
-            //        string savePath = System.IO.Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "Aspose_Save.xlsx");
-            //        wb.Save(savePath);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    string msg = "{0}".FormatWith(ex.GetInfo());
-            //    System.Diagnostics.Debug.WriteLine(msg);
-            //}
         }
 
         private void init()
@@ -390,11 +329,20 @@ namespace Client.Droid
         //}
 
         #endregion
-
-
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+            
+            
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
+            
+
+            // TODO 如何区分处理 我自己的权限 还是 Xamarin.Essentials.Platform
+
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+
+
             if (grantResults != null && grantResults.Length > 0)
             {
                 bool[] grantResultArr = new bool[grantResults.Length];
@@ -427,7 +375,6 @@ namespace Client.Droid
             Error(errorMessage + System.Environment.NewLine + ex.ToString());
         }
     }
-
 
 }
 

@@ -18,6 +18,8 @@
     <Compile Remove="Common\IPermission.cs" />
     <Compile Remove="Common\WebService.cs" />
     <Compile Remove="Common\WebServiceSetting.cs" />
+    <Compile Remove="View\EffectsDemo\UcSelectFile.cs" />
+    <Compile Remove="View\EffectsDemo\UcSelectFile.Designer.cs" />
     <Compile Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml.cs" />
     <Compile Remove="View\MediaManagerDemo\PageMediaManagerDemo.xaml.cs" />
     <Compile Remove="View\WebviewDemo\WebPage.cs" />
@@ -338,7 +340,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
     <PackageReference Include="Xamarin.HotReload" Version="1.4.10" />
     <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
@@ -377,6 +379,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="BaseView\UcAudioSetting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FilterBar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MainPageShell.xaml">
@@ -443,6 +448,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\EffectsDemo\PageLongPressEffects.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\EffectsDemo\UcSelectFile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\FakeSerialPort\PageFakeSerialPort.xaml">
@@ -599,6 +607,18 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\WebviewDemo\WebPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XamarinComponentDemo\PageEntry.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XamarinComponentDemo\PageFilterBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XamarinComponentDemo\PageSearchBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XamarinComponentDemo\PageXamarinComponentMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinEssentials\DeviceInfo\PageDeviceInfo.xaml">

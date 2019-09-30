@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XamarinComponentDemo.PageLabel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Label"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="原始状态" />
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    BackgroundColor="LemonChiffon"
+                    Text="这是一个很长的Label1" />
+                <Label
+                    BackgroundColor="HotPink"
+                    Text="这是一个很长的Label2" />
+                <Label
+                    BackgroundColor="LemonChiffon"
+                    Text="这是一个很长的Label3" />
+                <Label
+                    BackgroundColor="HotPink"
+                    Text="这是一个很长的Label4" />
+            </StackLayout>
+
+            <Label Text="测试 LineBreakMode(Head/Middle/Tail/NoWarp)" />
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    BackgroundColor="LemonChiffon"
+                    LineBreakMode="HeadTruncation"
+                    Text="这是一个很长的Label1" />
+                <Label
+                    BackgroundColor="HotPink"
+                    LineBreakMode="MiddleTruncation"
+                    Text="这是一个很长的Label2" />
+                <Label
+                    BackgroundColor="LemonChiffon"
+                    LineBreakMode="TailTruncation"
+                    Text="这是一个很长的Label3" />
+                <Label
+                    BackgroundColor="HotPink"
+                    LineBreakMode="NoWrap"
+                    Text="这是一个很长的Label4" />
+            </StackLayout>
+
+            <Label Text="测试 LineBreakMode(WordWrap)" />
+            <Label
+                BackgroundColor="LemonChiffon"
+                LineBreakMode="WordWrap"
+                Text="The XamlKeypad project also includes the code that was added to the page and this is add by HowesDOMO App classes in PersistentKeypad to save the keypad text when the program is terminated." />
+
+            <Label Text="测试 LineBreakMode(CharacterWrap) -- 效果未如理想, 本以为PersistenKeypad 会分成上下两行" />
+            <Label
+                BackgroundColor="HotPink"
+                LineBreakMode="CharacterWrap"
+                Text="The XamlKeypad project also includes the code that was added to the page and this is add by HowesDOMO App classes in PersistentKeypad to save the keypad text when the program is terminated." />
+
+            <Label Text="测试 Label.FormattedText" />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="Title"
+                            ForegroundColor="Red"
+                            Text="Hell" />
+                        <Span
+                            FontSize="Micro"
+                            Text="o" />
+                        <Span
+                            FontAttributes="Italic"
+                            FontSize="Body"
+                            Text="World" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

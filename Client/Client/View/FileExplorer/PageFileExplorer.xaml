@@ -46,6 +46,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -79,9 +80,35 @@
                         Orientation="Horizontal" />
                 </ScrollView>
 
+                <!--<CollectionView
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    HeightRequest="40"
+                    ItemsSource="{Binding FilterList}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding Name}" />
+                                <Label
+                                    Grid.Column="1"
+                                    Text="/" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <ListItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                </CollectionView>-->
+
                 <ListView
                     x:Name="lv"
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Grid.ColumnSpan="2"
                     HasUnevenRows="True"
                     ItemsSource="{Binding FilterList}">

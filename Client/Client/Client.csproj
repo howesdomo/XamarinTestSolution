@@ -618,7 +618,13 @@
     <EmbeddedResource Update="View\XamarinComponentDemo\PageFilterBar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="View\XamarinComponentDemo\PageLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinComponentDemo\PageSearchBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XamarinComponentDemo\PageStepper.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinComponentDemo\PageXamarinComponentMenu.xaml">

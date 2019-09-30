@@ -15,30 +15,49 @@ namespace Client.View.XamarinComponentDemo
         public PageXamarinComponentMenu()
         {
             InitializeComponent();
-            initEvent();
+            this.BindingContext = new PageXamarinComponentMenu_ViewModel();
         }
+    }
 
-        private void initEvent()
+    public class PageXamarinComponentMenu_ViewModel : ViewModel.BaseViewModel
+    {
+        public PageXamarinComponentMenu_ViewModel()
         {
-            this.btnEntry.Clicked += btnEntry_Clicked;
-            this.btnSearchBar.Clicked += btnSearchBar_Clicked;
-            this.btnFilterBar.Clicked += btnFilterBar_Clicked;
+            BtnPageLabel_Command = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new PageLabel());
+            });
+
+            BtnPageEntry_Command = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new PageEntry());
+            });
+
+            BtnPageStepper_Command = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new PageStepper());
+            });
+
+            BtnPageSearchBar_Command = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new PageSearchBar());
+            });
+
+            BtnPageFilter_Command = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new PageFilterBar());
+            });
         }
 
+        public Command BtnPageLabel_Command { get; set; }
 
-        async void btnEntry_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PageEntry());
-        }
+        public Command BtnPageEntry_Command { get; set; }
 
-        async void btnSearchBar_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PageSearchBar());
-        }
+        public Command BtnPageStepper_Command { get; set; }
 
-        async void btnFilterBar_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PageFilterBar());
-        }
+        public Command BtnPageSearchBar_Command { get; set; }
+
+        public Command BtnPageFilter_Command { get; set; }
+        
     }
 }

@@ -3,62 +3,83 @@
     x:Class="Client.View.XamarinComponentDemo.PageEntry"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Client.Behaviors"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
 
-            <Entry
-                Grid.Row="0"
-                Grid.Column="0"
-                Placeholder="01" />
+        <ScrollView>
 
-            <Entry
-                Grid.Row="0"
-                Grid.Column="1"
-                Placeholder="02" />
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-            <Entry
-                Grid.Row="1"
-                Grid.Column="0"
-                Placeholder="03" />
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Placeholder="01" />
 
-            <Entry
-                Grid.Row="1"
-                Grid.Column="1"
-                Placeholder="04" />
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="02" />
 
-            <Entry
-                Grid.Row="2"
-                Grid.Column="0"
-                Placeholder="07" />
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Placeholder="03" />
 
-            <Entry
-                Grid.Row="2"
-                Grid.Column="1"
-                Placeholder="08" />
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="04" />
 
-            <Entry
-                Grid.Row="3"
-                Grid.Column="0"
-                Placeholder="05" />
+                    <Entry
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Placeholder="07" />
 
-            <Entry
-                Grid.Row="3"
-                Grid.Column="1"
-                Placeholder="06" />
-        </Grid>
+                    <Entry
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Placeholder="08" />
+
+                    <Entry
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Placeholder="05" />
+
+                    <Entry
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Placeholder="06" />
+                </Grid>
+
+                <StackLayout>
+                    <Label Text="输入身份证号 ( 使用 Entry.Behaviors )" />
+                    <Entry
+                        Keyboard="Numeric"
+                        Text="{Binding IDCode, Mode=TwoWay}">
+                        <Entry.Behaviors>
+                            <behaviors:MaskedBehavior Mask="XXXXXX XXXX XX XX XXXX" />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Button
+                        Command="{Binding BtnShowIDCode_Command}"
+                        Text="显示身份证号码" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

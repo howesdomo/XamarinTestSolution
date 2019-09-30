@@ -21,7 +21,7 @@ namespace Client.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication uiApp, NSDictionary options)
         {
             #region 注册全局异常捕获事件
 
@@ -30,69 +30,99 @@ namespace Client.iOS
 
             #endregion
 
+            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // 设置支持 CollectionView
+
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            var app = new App();
+            LoadApplication(app);
 
             // Add by Howe
 
             init();
-            initXLabs();
 
+            // TODO Remove this
+            // Aspose.Cells
             Client.App.ExcelUtils_Aspose = new AsposeCellsHelper();
 
             // End Add by Howe
 
-            return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(uiApp, options);
         }
 
         private void init()
         {
-            #region VN7
+            #region 初始化 Common.StaticInfo
 
-            Common.WebSetting appWebSetting = new Common.WebSetting
-            (
-                serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.215",
-                port: "17911",
-                appName: "AppWebApplication461/APPWebServiceHandler.ashx"
-            ); // TODO 从配置文件读取服务器设置
+            var staticInfoInitArgs = new Common.StaticInfoInitArgs();
 
-            Common.WebSetting webAPISetting = new Common.WebSetting
-            (
-                serviceSettingName: "A",
-                ipOrWebAddress: "192.168.1.215",
-                port: "17911",
-                appName: "AppWebApplication461/api/orders"
-            ); // TODO 从配置文件读取服务器设置
+            staticInfoInitArgs.AppName = "XamarinTest";
 
-            #endregion
+            #region iOS项目路径赋值
 
-            #region HOME-PC
+            //// 安卓系统外部存储绝对路径
+            //staticInfoInitArgs.AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
 
-            //Common.WebSetting appWebSetting = new Common.WebSetting
-            //(
-            //    serviceSettingName: "A",
-            //    ipOrWebAddress: "192.168.1.216",
-            //    port: "17911",
-            //    appName: "AppWebApplication461/AppWebService.asmx"
-            //); // TODO Read In webSetting.json
+            //// App外部缓存绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/cache
+            //foreach (var item in this.GetExternalCacheDirs())
+            //{
+            //    staticInfoInitArgs.AndroidExternalCachePath = item.AbsolutePath;
+            //    break;
+            //}
 
-            //Common.WebSetting webAPISetting = new Common.WebSetting
-            //(
-            //    serviceSettingName: "A",
-            //    ipOrWebAddress: "192.168.1.216",
-            //    port: "17911",
-            //    appName: "AppWebApplication461/api/orders"
-            //); // TODO Read In webSetting.json
+            //// App外部文件绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/files
+            //foreach (var item in this.GetExternalFilesDirs(string.Empty))
+            //{
+            //    staticInfoInitArgs.AndroidExternalFilesPath = item.AbsolutePath;
+            //    break;
+            //}
 
             #endregion
 
+            #region 服务器配置
 
-            string innerSQLiteConnStr = System.IO.Path.Combine
+            string pathServiceSettings = Common.ServiceSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AndroidExternalFilesPath);
+
+            if (System.IO.File.Exists(pathServiceSettings) == false)
+            {
+                Common.ServiceSettingsUtils.InitConfig(pathServiceSettings);
+            }
+
+            Common.ServiceSettingsUtils.ReadConfig(pathServiceSettings, staticInfoInitArgs);
+
+            #endregion
+
+            #region 本机配置
+
+            string pathNativeSettings = Common.NativeSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AndroidExternalFilesPath);
+
+            if (System.IO.File.Exists(pathNativeSettings) == false)
+            {
+                Common.NativeSettingsUtils.InitConfig(pathNativeSettings);
+            }
+
+            Common.NativeSettingsUtils.ReadConfig(pathNativeSettings, staticInfoInitArgs);
+
+            #endregion
+
+            #region SQLite
+
+            staticInfoInitArgs.InnerSQLiteConnStr = System.IO.Path.Combine
             (
                 System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
                 Util.Principle.DatabaseName_SQLite
             );
+
+            //staticInfoInitArgs.ExternalSQLiteConnStr = System.IO.Path.Combine
+            //(
+            //    staticInfoInitArgs.AndroidExternalFilesPath,
+            //    Util.Principle.DatabaseName_SQLite
+            //);
+
+            #endregion
+
+            Common.StaticInfo.Init(staticInfoInitArgs);
+
+            #endregion
 
             //// iOS 数据库存储位置 (拷贝自 TODO 项目), 值得参考
             //string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -101,27 +131,6 @@ namespace Client.iOS
             //{
             //    Directory.CreateDirectory(libFolder);
             //}
-
-
-
-            //string externalSQLiteConnStr = System.IO.Path.Combine
-            //(
-            //    Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, // 获取 Android 外部存储路径
-            //    Util.Principle.ExternalStorageDirectoryTemplate.FormatWith(Client.Common.StaticInfo.AppName, Util.Principle.DatabaseName_SQLite)
-            //);
-
-            Client.Common.StaticInfo.Init
-            (
-                new Client.Common.StaticInfoInitArgs()
-                {
-                    AppName = "你好Xamarin",
-                    AppWebSetting = appWebSetting,
-                    WebAPISetting = webAPISetting,
-                    // AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath,
-                    InnerSQLiteConnStr = innerSQLiteConnStr,
-                    // ExternalSQLiteConnStr = externalSQLiteConnStr
-                }
-            );
 
             // 实现IOutput接口 - 用 Logcat 来实现
             App.Output = new MyOutput(); // TODO 未知道 iOS 是否有类似安卓的 LogUtil
@@ -132,49 +141,61 @@ namespace Client.iOS
             // 初始化条码扫描器
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
-            // 初始化百度定位
-            // BaiduLBS myLBS = new BaiduLBS();
-            MyLocation myLBS = MyLocation.GetInstance();
-            App.LBS = myLBS;
+            // 初始化定位
+            App.LBS = MyLocation.GetInstance();
 
             // 初始化Audio
-            MyAudioPlayer audioPlayer = MyAudioPlayer.GetInstance();
-            App.AudioPlayer = audioPlayer;
+            App.AudioPlayer = MyAudioPlayer.GetInstance();
 
             // 初始化TTS
-            MyTTS tts = MyTTS.GetInstance();
-            App.TTS = tts;
+            App.TTS = MyTTS.GetInstance();
 
-            //// 初始化IR (苹果暂时没有红外)
-            //MyIR ir = MyIR.GetInstance(ApplicationContext);
-            //App.IR = ir;
+            //// 初始化IR ( iOS设备暂时未发现有红外装置 )
+            //App.IR = MyIR.GetInstance(ApplicationContext);
 
-            //// 初始化动态权限
-            //MyPermission myPermission = new MyPermission();
-            //App.Permission = myPermission;
+            //// 初始化动态权限 ( iOS还没有需要 )
+
+            //// 初始化Bluetooth ( iOS未能使用Xamarin.iOS的代码监测到蓝牙设备 )
+
+
+
+
+
+
+
+            #region 初始化第三方 DLL 库
+
+            // 初始化 Acr.UserDialogs
+            // Nothing is necessary any longer as of v4.x.  There is an Init function for iOS but it is OPTIONAL and only required if you want/need to control
+            // the top level viewcontroller for things like iOS extensions.Progress prompts will not use this factory function though!
+            
 
             // 初始化 DevExpress.Mobile.Forms
-            DevExpress.Mobile.Forms.Init();
+                        DevExpress.Mobile.Forms.Init();
             // 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
             // 这里初始化主题颜色为 Theme.Light
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
 
+
             // FFImageLoading ( Gif 动图 ) ( SVG 矢量图显示 )
             var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
+
             // Plugin.MediaManager.Forms ( 视频播放 )
             // MediaManager.Forms.Platforms.iOS.VideoViewRenderer.Init();
             // Plugin.MediaManager.Forms.iOS.VideoViewRenderer.Init();
-        }
 
-        // XLabs
-        private void initXLabs()
-        {
+
+            // 初始化 XLab
             var resolverContainer = new global::XLabs.Ioc.SimpleContainer();
             resolverContainer.Register<XLabs.Platform.Services.Media.IMediaPicker, XLabs.Platform.Services.Media.MediaPicker>();
             XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
+
+
+            // TODO Aspose.Cells
+            #endregion
         }
     }
 }

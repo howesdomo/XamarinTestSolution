@@ -25,6 +25,9 @@ namespace Client.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle); // Android Resources 在 raw 中放入 音频资源后报错, 挪动到首位后没有报错.
+
+            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // 设置支持 CollectionView
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             // Add by Howe
@@ -34,7 +37,6 @@ namespace Client.Droid
             Xamarin.Essentials.Platform.Init(application: Application);
 
             init();
-            initXLabs();
             
             // End Add by Howe
 
@@ -126,9 +128,6 @@ namespace Client.Droid
 
             #endregion
 
-            // 设置软键盘显示时, View 自动调整适应
-            // Window.SetSoftInputMode(Android.Views.SoftInput.AdjustResize);
-
             // 实现IOutput接口 - 用 Logcat 来实现
             App.Output = new MyOutput();
 
@@ -148,10 +147,12 @@ namespace Client.Droid
             App.TTS = Util.XamariN.AndroiD.MyTTS.GetInstance();
 
             // 初始化IR
-            MyIR ir = MyIR.GetInstance(ApplicationContext);
-            App.IR = ir;
+            App.IR = MyIR.GetInstance(ApplicationContext);
 
             // 初始化动态权限
+            // 1)实现封装好的接口
+            App.AndroidPermissionUtils = Util.XamariN.AndroiD.MyAndroidPermission.GetInstance(this);
+            // 2)下面这个实现用于本项目快速测试, 不需要更新 Util.XamariN.AndroiD 的 DLL 到 nuget
             MyAndroidPermission_InTestSolution myPermission = MyAndroidPermission_InTestSolution.GetInstance(this);
             App.AndroidPermissionUtils_InTestSolution = myPermission;
 
@@ -182,6 +183,7 @@ namespace Client.Droid
             // 初始化 Acr.UserDialogs
             Acr.UserDialogs.UserDialogs.Init(this);
 
+
             // 初始化 DevExpress.Mobile.Forms
             DevExpress.Mobile.Forms.Init();
             // 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
@@ -200,19 +202,20 @@ namespace Client.Droid
             var svgAssembly = typeof(FFImageLoading.Svg.Forms.SvgCachedImage).GetTypeInfo().Assembly;                                  // <-- 追加
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
 
+
             // Plugin.MediaManager.Forms ( 视频播放类库 )
             //MediaManager.CrossMediaManager.Current.Init();
 
-            #endregion
-        }
 
-        // XLabs
-        private void initXLabs()
-        {
+            // 初始化 XLab
             var resolverContainer = new global::XLabs.Ioc.SimpleContainer();
             resolverContainer.Register<XLabs.Platform.Services.Media.IMediaPicker, XLabs.Platform.Services.Media.MediaPicker>();
             XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
-        }
+
+
+            // TODO Aspose.Cells
+            #endregion
+        }        
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {

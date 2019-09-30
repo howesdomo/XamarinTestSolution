@@ -8,17 +8,28 @@
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
+
             <Button
-                x:Name="btnEntry"
+                Command="{Binding BtnPageLabel_Command}"
+                Text="Label" />
+
+            <Button
+                Command="{Binding BtnPageEntry_Command}"
                 Text="Entry" />
 
             <Button
-                x:Name="btnSearchBar"
+                Command="{Binding BtnPageStepper_Command}"
+                Text="Stepper" />
+
+            <Button
+                Command="{Binding BtnPageSearchBar_Command}"
                 Text="Search Bar" />
 
             <Button
-                x:Name="btnFilterBar"
+                Command="{Binding BtnPageFilter_Command}"
                 Text="Filter Bar" />
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

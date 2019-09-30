@@ -59,6 +59,7 @@
     <CodesignProvision>EnpotXamarin(Dev)</CodesignProvision>
     <MtouchExtraArgs>-v -v -v -v -cxx -gcc_flags "-ObjC -lsqlite3.0 -lc++ -framework CoreLocation -framework SystemConfiguration -framework Security -framework CoreTelephony -framework AdSupport"</MtouchExtraArgs>
     <BuildIpa>true</BuildIpa>
+    <MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>

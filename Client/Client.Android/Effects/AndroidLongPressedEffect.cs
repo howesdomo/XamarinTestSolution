@@ -4,8 +4,8 @@ using Xamarin.Forms.Platform.Android;
 using Client.Effects;
 
 [assembly: ResolutionGroupName("Client.Effects")]
-[assembly: ExportEffect(typeof(Client.Droid.AndroidLongPressedEffect), "LongPressedEffect")]
-namespace Client.Droid
+[assembly: ExportEffect(typeof(Client.Droid.Effects.AndroidLongPressedEffect), "LongPressedEffect")]
+namespace Client.Droid.Effects
 {
     /// <summary>
     /// Android long pressed effect.

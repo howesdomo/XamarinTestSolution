@@ -37,8 +37,8 @@ namespace Client.View.EffectsDemo
         {
             this.ShowAlertCommand = new Command(execute: (args) =>
             {
-                string msg = $"!!!long press!!!!\r\n{Util.JsonUtils.SerializeObject(args)}";
-                System.Diagnostics.Debug.WriteLine(msg);
+                mLabelLongPressCount++;
+                this.LblText = $"请长按我(Labal):计数{mLabelLongPressCount}";
             });
 
             this.ItemLongPressCommand = new Command(execute: (args) =>
@@ -47,7 +47,6 @@ namespace Client.View.EffectsDemo
                 System.Diagnostics.Debug.WriteLine(msg);
 
                 System.Diagnostics.Debugger.Break();
-
             });
 
             this.OrderList = new List<CellModel>()
@@ -58,6 +57,22 @@ namespace Client.View.EffectsDemo
                 new CellModel(){ OrderNo = "4" },
                 new CellModel(){ OrderNo = "5" }
             };
+        }
+
+        private int mLabelLongPressCount = 0;
+
+        private string _lblText = "请长按我(Labal):计数0";
+        public string LblText
+        {
+            get
+            {
+                return _lblText;
+            }
+            set
+            {
+                _lblText = value;
+                this.OnPropertyChanged(nameof(LblText));
+            }
         }
 
         public ICommand ShowAlertCommand { get; private set; }

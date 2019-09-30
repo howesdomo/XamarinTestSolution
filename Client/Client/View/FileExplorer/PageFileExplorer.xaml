@@ -3,6 +3,7 @@
     x:Class="Client.View.FileExplorer.PageFileExplorer"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Client.Components"
     xmlns:effects="clr-namespace:Client.Effects"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
     <NavigationPage.TitleView>
@@ -20,7 +21,13 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <!--  Title  -->
-            <Label Text="FileExplorer" />
+            <Label
+                Grid.Column="0"
+                Text="FileExplorer" />
+            <Button
+                Grid.Column="1"
+                Command="{Binding FilterVisibleCommand}"
+                Text="F" />
         </Grid>
     </NavigationPage.TitleView>
     <ContentPage.Content>
@@ -46,26 +53,22 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label
-                    Grid.Row="1"
+                <components:FilterBar
+                    Grid.Row="0"
                     Grid.Column="0"
-                    Text="筛选"
-                    VerticalTextAlignment="Center" />
-                <Editor
-                    x:Name="txtFilter"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Text="{Binding Filter}"
-                    VerticalOptions="Center" />
+                    Grid.ColumnSpan="2"
+                    IsTextChangeExecute="True"
+                    IsVisible="{Binding IsFilterVisible}"
+                    SearchCommand="{Binding FilterBarCommand}" />
 
                 <Label
-                    Grid.Row="2"
+                    Grid.Row="1"
                     Grid.Column="0"
                     Text="地址"
                     VerticalTextAlignment="Center" />
                 <ScrollView
                     x:Name="scrollViewCurrentDirectory"
-                    Grid.Row="2"
+                    Grid.Row="1"
                     Grid.Column="1"
                     HorizontalOptions="FillAndExpand"
                     HorizontalScrollBarVisibility="Never"
@@ -78,6 +81,7 @@
 
                 <ListView
                     x:Name="lv"
+                    Grid.Row="2"
                     Grid.ColumnSpan="2"
                     HasUnevenRows="True"
                     ItemsSource="{Binding FilterList}">
@@ -156,12 +160,16 @@
                                         </Grid>
                                     </Grid>
 
-                                    <Label
+                                    <Grid
                                         Grid.Column="2"
-                                        Margin="5"
-                                        Text="."
-                                        VerticalOptions="Fill"
-                                        VerticalTextAlignment="Center" />
+                                        BackgroundColor="Orange"
+                                        WidthRequest="40">
+                                        <Label
+                                            HorizontalTextAlignment="Center"
+                                            Text=".."
+                                            VerticalTextAlignment="Center" />
+                                    </Grid>
+
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
@@ -169,23 +177,55 @@
                 </ListView>
             </Grid>
 
+            <!--  slToolbar  -->
             <ScrollView
-                x:Name="slToolbar"
                 Grid.Row="1"
                 IsVisible="True"
                 Orientation="Horizontal">
                 <StackLayout
                     BackgroundColor="Gold"
                     Orientation="Horizontal">
-                    <Button
-                        x:Name="btnSendMail"
-                        Text="添加到邮件附件" />
-                    <Button
-                        x:Name="btnDelete"
-                        Text="删除" />
-                    <Button
-                        x:Name="btnRename"
-                        Text="重命名" />
+                    <Frame
+                        Margin="3,0,3,0"
+                        Padding="0"
+                        BackgroundColor="Pink"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <Label
+                            Margin="5,0,5,0"
+                            FontSize="Micro"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="添加到邮件附件"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="60" />
+                    </Frame>
+                    <Frame
+                        Margin="3,0,3,0"
+                        Padding="0"
+                        BackgroundColor="Pink"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <Label
+                            Margin="5,0,5,0"
+                            FontSize="Micro"
+                            HorizontalTextAlignment="Center"
+                            Text="删除"
+                            VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame
+                        Margin="3,0,3,0"
+                        Padding="0"
+                        BackgroundColor="Pink"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <Label
+                            Margin="5,0,5,0"
+                            FontSize="Micro"
+                            HorizontalTextAlignment="Center"
+                            Text="重命名"
+                            VerticalTextAlignment="Center" />
+                    </Frame>
                 </StackLayout>
             </ScrollView>
 

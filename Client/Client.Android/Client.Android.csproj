@@ -126,12 +126,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndroidLongPressedEffect.cs" />
+    <Compile Include="Effects\AndroidLongPressedEffect.cs" />
     <Compile Include="BaiduLBS.cs" />
-    <Compile Include="Component\EditorAdvRenderer.cs" />
-    <Compile Include="Component\EntryAdvRenderer.cs" />
-    <Compile Include="MyListener\SearchView_OnKeyListener.cs" />
-    <Compile Include="Component\SearchBarFixRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyApplication.cs" />
     <Compile Include="MyIR.cs" />
@@ -166,6 +162,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Component\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />

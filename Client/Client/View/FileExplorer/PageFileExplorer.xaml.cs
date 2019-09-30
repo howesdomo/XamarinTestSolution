@@ -323,6 +323,20 @@ namespace Client.View.FileExplorer
         public PageFileExplorer_ViewModel(string baseDirectory)
         {
             this._BaseDirectory = baseDirectory;
+
+            this.FilterVisibleCommand = new Command(() =>
+            {
+                IsFilterVisible = !IsFilterVisible;
+            });
+
+            this.FilterBarCommand = new Command((args) =>
+            {
+                if (args is string)
+                {
+                    string query = args as string;
+                    executeFilter(query);
+                }
+            });
         }
 
         private string _BaseDirectory;
@@ -365,37 +379,65 @@ namespace Client.View.FileExplorer
             set
             {
                 list = value;
-                executeFilter();
+                executeFilter(string.Empty);
             }
         }
 
-        private string filter;
+        private Command _FilterVisibleCommand;
 
-        /// <summary>
-        /// 过滤信息
-        /// </summary>
-        public string Filter
+        public Command FilterVisibleCommand
         {
-            get { return filter; }
+            get
+            {
+                return _FilterVisibleCommand;
+            }
             set
             {
-                filter = value;
-                this.OnPropertyChanged("Filter");
-                this.executeFilter();
+                _FilterVisibleCommand = value;
+                this.OnPropertyChanged(nameof(_FilterVisibleCommand));
             }
         }
 
-        private void executeFilter()
+        private bool _IsFilterVisible = false;
+        public bool IsFilterVisible
+        {
+            get
+            {
+                return _IsFilterVisible;
+            }
+            set
+            {
+                _IsFilterVisible = value;
+                this.OnPropertyChanged(nameof(IsFilterVisible));
+            }
+        }
+
+        private Command _FilterBarCommand;
+
+        public Command FilterBarCommand
+        {
+            get
+            {
+                return _FilterBarCommand;
+            }
+            set
+            {
+                _FilterBarCommand = value;
+                this.OnPropertyChanged(nameof(FilterBarCommand));
+            }
+        }
+
+        private void executeFilter(string query)
         {
             if (this.List != null)
             {
-                if (this.Filter.IsNullOrWhiteSpace() == true)
+                if (query.IsNullOrWhiteSpace() == true)
                 {
                     this.FilterList = this.List.ToList();
                 }
                 else
                 {
-                    this.FilterList = this.List.Where(i => i.Info.IsMatch(this.Filter) == true).ToList();
+                    this.FilterList = this.List.Where(i => i.Info.IsMatch(query) == true).ToList();
                 }
             }
         }
@@ -423,14 +465,14 @@ namespace Client.View.FileExplorer
         {
             ShowAlertCommand = new Command
             (
-                execute: () => 
+                execute: () =>
                 {
                     string msg = $"Execute";
                     System.Diagnostics.Debug.WriteLine(msg);
 
                     System.Diagnostics.Debugger.Break();
-                }, 
-                canExecute: () => 
+                },
+                canExecute: () =>
                 {
                     string msg = $"can Execute";
                     System.Diagnostics.Debug.WriteLine(msg);

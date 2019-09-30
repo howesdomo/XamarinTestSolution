@@ -13,9 +13,10 @@
                 x:Name="lbl1"
                 effects:LongPressedEffect.Command="{Binding ShowAlertCommand}"
                 effects:LongPressedEffect.CommandParameter="{Binding .}"
+                BackgroundColor="Red"
                 FontSize="20"
                 HorizontalTextAlignment="Center"
-                Text="Long Press Me!"
+                Text="{Binding LblText}"
                 VerticalTextAlignment="Center">
                 <Label.Effects>
                     <effects:LongPressedEffect />
@@ -58,7 +59,7 @@
                 HorizontalTextAlignment="Center"
                 Text="------------分隔符------------" />
 
-            
+
 
         </StackLayout>
     </ContentPage.Content>

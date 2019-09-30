@@ -43,8 +43,7 @@ namespace Client
             InitializeComponent();
 
 #if DEBUG
-
-            HotReloader.Current.Run(this);
+            // VS 2019 16.3 版本后, 有内置的 Hot Reload
 
             // HotReloader.Current.Run(this);
 

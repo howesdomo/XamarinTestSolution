@@ -3,6 +3,7 @@
     x:Class="Client.Components.FilterBar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:components="clr-namespace:Client.Components"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -28,16 +29,15 @@
             <Entry
                 x:Name="txtFilter"
                 Grid.Column="1"
-                BackgroundColor="Yellow"
-                Text="{Binding FilterContent, Mode=TwoWay}"
                 VerticalOptions="EndAndExpand" />
 
             <Image
                 x:Name="imgDel"
                 Grid.Column="2"
+                Margin="0,0,10,0"
                 HeightRequest="20"
                 HorizontalOptions="Center"
-                IsVisible="{Binding ImgDelIsVisible, Mode=TwoWay}"
+                IsVisible="False"
                 VerticalOptions="Center"
                 WidthRequest="20" />
         </Grid>

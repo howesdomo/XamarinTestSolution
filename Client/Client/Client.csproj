@@ -18,6 +18,9 @@
     <Compile Remove="Common\IPermission.cs" />
     <Compile Remove="Common\WebService.cs" />
     <Compile Remove="Common\WebServiceSetting.cs" />
+    <Compile Remove="EditorAdv.cs" />
+    <Compile Remove="EntryAdv.cs" />
+    <Compile Remove="FilterBarEntry.cs" />
     <Compile Remove="View\EffectsDemo\UcSelectFile.cs" />
     <Compile Remove="View\EffectsDemo\UcSelectFile.Designer.cs" />
     <Compile Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml.cs" />
@@ -381,7 +384,7 @@
     <EmbeddedResource Update="BaseView\UcAudioSetting.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="FilterBar.xaml">
+    <EmbeddedResource Update="Components\FilterBar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MainPageShell.xaml">

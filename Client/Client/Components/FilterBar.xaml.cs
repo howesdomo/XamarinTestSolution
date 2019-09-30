@@ -4,24 +4,56 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Client.Components
 {
+    /// <summary>
+    /// V 1.0.0 - 2019-9-29 16:31:22
+    /// Xamarin.Forms 原生 SearchBar有一个缺点输入框没有内容时不会触发 SearchCommand, 
+    /// 故自制的控件 FilterBar 修复输入框没有内容时不会触发 SearchCommand 的问题
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FilterBar : ContentView
     {
-        FilterBarViewModel ViewModel { get; set; }
+        #region 依赖属性
+
+        public static readonly BindableProperty SearchCommandProperty = BindableProperty.Create
+        (
+            // 必填 3 项
+            propertyName: "SearchCommand",
+            returnType: typeof(ICommand),
+            declaringType: typeof(FilterBar),
+
+            // 选填
+            defaultValue: null
+        );
+
+        public static readonly BindableProperty IsTextChangeExecuteProperty = BindableProperty.Create
+        (
+            // 必填 3 项
+            propertyName: "IsTextChangeExecute",
+            returnType: typeof(bool),
+            declaringType: typeof(FilterBar),
+
+            // 选填
+            defaultValue: false
+        );
+
+        #endregion
 
         public FilterBar()
         {
             InitializeComponent();
+            initUI();
+            initEvent();
+        }
 
-            this.ViewModel = new FilterBarViewModel();
-            this.BindingContext = this.ViewModel;
-
+        private void initUI()
+        {
+            // TODO 存放资源文件到持久化设备
             imgFilter.Source = ImageSource.FromStream(() =>
             {
                 MemoryStream s = new MemoryStream();
@@ -42,35 +74,143 @@ namespace Client.Components
                 s.Seek(0, SeekOrigin.Begin);
                 return s;
             });
-
-        }
-    }
-
-    public class FilterBarViewModel : ViewModel.BaseViewModel
-    {
-        public FilterBarViewModel()
-        {
-
         }
 
-        private string _FilterContent;
-        public string FilterContent
+        private void initEvent()
         {
-            get { return _FilterContent; }
-            set
+            txtFilter.TextChanged += txtFilter_TextChanged;
+            txtFilter.Completed += txtFilter_Completed;
+
+            imgFilter.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                _FilterContent = value;
-                NotifyPropertyChanged();
-                this.OnPropertyChanged(nameof(ImgDelIsVisible));
+                NumberOfTapsRequired = 1,
+                Command = new Command(() =>
+                {
+                    searchCommandExecute();
+                    onSearch();
+                })
+            });
+
+            imgDel.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                NumberOfTapsRequired = 1,
+                Command = new Command(() =>
+                {
+                    txtFilter.Text = string.Empty;
+                    this.imgDel.IsVisible = false;
+
+                    if (IsTextChangeExecute == false)
+                    {                       
+                        searchCommandExecute(isEmptyQuery: true);
+                        onSearch(isEmptyQuery: true);
+                    }
+                })
+            });
+        }
+
+        private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string text = (sender as Entry).Text;
+            if (this.imgDel.IsVisible == false && string.IsNullOrEmpty(text) == false)
+            {
+                this.imgDel.IsVisible = true;
+            }
+
+            if (this.imgDel.IsVisible == true && string.IsNullOrEmpty(text) == true)
+            {
+                this.imgDel.IsVisible = false;
+            }
+
+            if (IsTextChangeExecute == true)
+            {
+                searchCommandExecute();
+                onSearch();
             }
         }
 
-        public bool ImgDelIsVisible
+        private void txtFilter_Completed(object sender, EventArgs e)
+        {
+            if (IsTextChangeExecute == false)
+            {
+                searchCommandExecute();
+                onSearch();
+            }
+        }
+
+        public ICommand SearchCommand
         {
             get
             {
-                return string.IsNullOrEmpty(this.FilterContent) == false;
+                return (ICommand)base.GetValue(SearchCommandProperty);
             }
+            set
+            {
+                base.SetValue(SearchCommandProperty, value);
+            }
+        }
+
+        public bool IsTextChangeExecute
+        {
+            get
+            {
+                return (bool)base.GetValue(IsTextChangeExecuteProperty);
+            }
+            set
+            {
+                base.SetValue(IsTextChangeExecuteProperty, value);
+            }
+        }
+
+        private void searchCommandExecute(bool? isEmptyQuery = null)
+        {
+            if (this.SearchCommand == null)
+            {
+                //string msg = "SearchCommand is null";
+                //System.Diagnostics.Debug.WriteLine(msg);
+
+                return;
+            }
+
+            if (isEmptyQuery.HasValue == true && isEmptyQuery.Value == true)
+            {
+                this.SearchCommand.Execute(string.Empty);
+            }
+            else
+            {
+                this.SearchCommand.Execute(this.txtFilter.Text);
+            }
+        }
+
+        public EventHandler<FilterBarEventArgs> Search;
+
+        private void onSearch(bool? isEmptyQuery = null)
+        {
+            if (this.Search == null)
+            {
+                //string msg = "Search is null";
+                //System.Diagnostics.Debug.WriteLine(msg);
+
+                return;
+            }
+
+            if (isEmptyQuery.HasValue == true && isEmptyQuery.Value == true)
+            {
+                Search.Invoke(this, new FilterBarEventArgs(string.Empty));
+            }
+            else
+            {
+                Search.Invoke(this, new FilterBarEventArgs(this.txtFilter.Text));
+            }
+        }
+    }
+
+    public class FilterBarEventArgs : EventArgs
+    {
+        public string Query { get; private set; }
+
+        public FilterBarEventArgs(string query)
+        {
+            this.Query = query;
         }
     }
 }

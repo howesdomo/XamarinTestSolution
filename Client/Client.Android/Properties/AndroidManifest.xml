@@ -3,7 +3,12 @@
 	<!-- 由于Android6.0之后有运行时权限，故修改版本号使其不用运行时获取权限 -->
 	<!--<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="21" />-->
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />	
-	<application android:label="Client.Android">
+	<application android:label="Client.Android"
+               android:usesCleartextTraffic="True">
+    <!-- 从Android 9.0（API级别28）开始，默认情况下禁用明文支持。因此http的url均无法在webview中加载
+    报错信息如下, XXXX网页无法加载, 因为: net::ERR_CLEARTEXT_NOT_PERMITTED
+    解决方法: 加上配置 android:usesCleartextTraffic -->
+    
 		<service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
 			<intent-filter>
 				<action android:name="com.baidu.location.service_v2.2"></action>

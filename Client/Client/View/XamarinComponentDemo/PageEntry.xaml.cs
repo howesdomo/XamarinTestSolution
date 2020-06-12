@@ -38,7 +38,7 @@ namespace Client.View.XamarinComponentDemo
             set
             {
                 _IDCode = value;
-                this.NotifyPropertyChanged();
+                this.OnPropertyChanged();
             }
         }
     }

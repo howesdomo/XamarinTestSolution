@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.MultiSelectDemo.PageDemo_MultiSelect"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:Client.View.MultiSelectDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilComponent="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <local:PageDemo_MultiSelect_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Label Text="~~~~~ 分割线( 绑定 SelectedIndex 与 SelectedItem ) ~~~~~" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Index:" />
+                    <Label Text="{Binding sl2_SelectedIndexes}" />
+                    <Label Text="Item:" />
+                    <Label Text="{Binding sl2_SelectedItems}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="No:" />
+                    <Label Text="{Binding sl2_SelectedNos}" />
+                    <Label Text="Text:" />
+                    <Label Text="{Binding sl2_SelectedTexts}" />
+                </StackLayout>
+
+                <utilComponent:BindableMultiSelectGroupView
+                    x:Name="testUI"
+                    DisplayPath="DisplayName"
+                    ItemsSource="{Binding MyList}"
+                    SelectedIndexes="{Binding sl2_SelectedIndexes, Mode=TwoWay}"
+                    SelectedItems="{Binding sl2_SelectedItems, Mode=TwoWay}"
+                    SelectedNos="{Binding sl2_SelectedNos, Mode=TwoWay}"
+                    SelectedTexts="{Binding sl2_SelectedTexts, Mode=TwoWay}" />
+
+                <Button
+                    Command="{Binding CMD_ShowValue}"
+                    Text="输出(From ViewModel 绑定)" />
+
+                <Button
+                    x:Name="btnShowValue2"
+                    Text="输出From控件" />
+
+
+                <Label Text="~~~~~ 分割线( 测试默认选中 Nos [2, 3] ) ~~~~~" />
+                <utilComponent:BindableMultiSelectGroupView
+                    ItemsSource="{Binding XueLi}"
+                    Orientation="Horizontal"
+                    SelectedNos="[2, 3]" />
+
+                <Label Text="~~~~~ 分割线( 测试默认选中 Texts [高中, 大学] ) ~~~~~" />
+                <utilComponent:BindableMultiSelectGroupView
+                    ItemsSource="{Binding XueLi}"
+                    SelectedTexts="['高中', '大学']" />
+
+                <Label Text="~~~~~ 分割线( 测试样式  ) ~~~~~" />
+                <utilComponent:BindableMultiSelectGroupView
+                    Margin="40,0,40,0"
+                    BackgroundColor="LemonChiffon"
+                    CheckBoxColor="Silver"
+                    CheckBoxMargin="0,0,50,50"
+                    FontAttributes="3"
+                    FontSize="30"
+                    ItemsSource="{Binding XingBie}"
+                    LabelMargin="50,50,0,0"
+                    TextColor="Gold" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

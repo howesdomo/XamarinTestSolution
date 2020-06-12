@@ -37,7 +37,7 @@ namespace Client.Droid
             Xamarin.Essentials.Platform.Init(application: Application);
 
             init();
-            
+
             // End Add by Howe
 
             var app = new App();
@@ -172,6 +172,12 @@ namespace Client.Droid
             // 初始化 Android 权限工具类
             App.AndroidPermissionUtils = Util.XamariN.AndroiD.MyAndroidPermission.GetInstance(this);
 
+            // 初始化截屏
+            App.AndroidScreenshot = Util.XamariN.AndroiD.MyAndroidScreenshot.GetInstance(this);
+
+            // 初始化录屏
+            App.AndroidScreenRecord = Util.XamariN.AndroiD.MyAndroidScreenRecord.GetInstance(this);
+
             #endregion
 
 
@@ -212,24 +218,9 @@ namespace Client.Droid
             resolverContainer.Register<XLabs.Platform.Services.Media.IMediaPicker, XLabs.Platform.Services.Media.MediaPicker>();
             XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
 
-
             // TODO Aspose.Cells
+
             #endregion
-        }        
-
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
-
-            if (requestCode == Util.XamariN.AndroiD.MyTTS.TTS_RequestCode)
-            {
-                Util.XamariN.AndroiD.MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
-            }
-
-            if (requestCode == Util.XamariN.AndroiD.MyBluetooth.Bluetooth_RequestCode)
-            {
-                Util.XamariN.AndroiD.MyBluetooth.GetInstance().Handle_OpenBluetooth(requestCode, resultCode, data);
-            }
         }
 
         #region (弃用) 实现软硬 Back 按钮的代码监控
@@ -332,31 +323,47 @@ namespace Client.Droid
         //}
 
         #endregion
-            
-            
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            switch (requestCode)
+            {
+                case Util.XamariN.AndroiD.MyTTS.TTS_RequestCode:
+                    Util.XamariN.AndroiD.MyTTS.GetInstance().Handle_OnActivityResult(requestCode, resultCode, data);
+                    break;
+                case Util.XamariN.AndroiD.MyBluetooth.Bluetooth_RequestCode:
+                    Util.XamariN.AndroiD.MyBluetooth.GetInstance().Handle_OpenBluetooth(requestCode, resultCode, data);
+                    break;
+                case Util.XamariN.AndroiD.MyAndroidScreenshot.s_Screenshot_Request_Code:
+                    Util.XamariN.AndroiD.MyAndroidScreenshot.GetInstance().Screenshot_ActualMethod(resultCode, data);
+                    break;
+                case Util.XamariN.AndroiD.MyAndroidScreenRecord.s_ScreenRecord_Request_Code:
+                    Util.XamariN.AndroiD.MyAndroidScreenRecord.GetInstance().StartRecord_ActualMethod(resultCode, data);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            
-
-            // TODO 如何区分处理 我自己的权限 还是 Xamarin.Essentials.Platform
-
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
+            // TODO 准备弃用自己写的安卓权限工具类
+            //if (grantResults != null && grantResults.Length > 0)
+            //{
+            //    bool[] grantResultArr = new bool[grantResults.Length];
 
+            //    for (int i = 0; i < grantResults.Length; i++)
+            //    {
+            //        grantResultArr[i] = (grantResults[i] == Permission.Granted);
+            //    }
 
-            if (grantResults != null && grantResults.Length > 0)
-            {
-                bool[] grantResultArr = new bool[grantResults.Length];
-
-                for (int i = 0; i < grantResults.Length; i++)
-                {
-                    grantResultArr[i] = (grantResults[i] == Permission.Granted);
-                }
-
-                MyAndroidPermission_InTestSolution.GetInstance().OnRequestPermissionsResult(requestCode, grantResultArr);
-            }
+            //    MyAndroidPermission_InTestSolution.GetInstance().OnRequestPermissionsResult(requestCode, grantResultArr);
+            //}
         }
     }
 

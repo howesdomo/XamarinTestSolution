@@ -62,8 +62,14 @@ namespace Client.View.Games
             this.btnCRW_Type2.Clicked += BtnCRW_Type2_Clicked;
 
             this.btnUserList.Clicked += BtnUserList_Clicked;
+            this.btnSetScreen.Clicked += BtnSetScreen_Clicked;
 
             this.btnDB.Clicked += BtnDB_Clicked;
+        }
+
+        private void BtnSetScreen_Clicked(object sender, EventArgs e)
+        {
+            App.Screen.ForcePortrait();
         }
 
         private void BtnDB_Clicked(object sender, EventArgs e)

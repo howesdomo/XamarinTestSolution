@@ -4,6 +4,10 @@ using System.Text;
 
 namespace Client.Common
 {
+    /// <summary>
+    /// V 1.0.0 - 2020-3-21 12:35:17
+    /// 首次稳定版标记
+    /// </summary>
     public class StaticInfo
     {
         public static void Init(StaticInfoInitArgs args)
@@ -42,24 +46,21 @@ namespace Client.Common
 
             #endregion
 
-            #region InnerSQLite
-            if (args.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
+            #region 程序内部存储路径 - iOS 与 Android 通用
+
+            if (args.AppFilesPath.IsNullOrWhiteSpace() == false)
             {
-                StaticInfo.InnerSQLiteConnStr = args.InnerSQLiteConnStr;
+                _AppFilesPath = args.AppFilesPath;
+            }
+
+            if (args.AppCachePath.IsNullOrWhiteSpace() == false)
+            {
+                _AppCachePath = args.AppCachePath;
             }
 
             #endregion
 
-            #region ExternalSQLite
-
-            if (args.ExternalSQLiteConnStr.IsNullOrWhiteSpace() == false)
-            {
-                StaticInfo.ExternalSQLiteConnStr = args.ExternalSQLiteConnStr;
-            }
-
-            #endregion
-
-            #region 安卓项目路径赋值
+            #region 外部存储路径 - Android 特有
 
             // 安卓系统外部存储绝对路径
             if (args.AndroidExternalPath.IsNullOrWhiteSpace() == false)
@@ -80,6 +81,23 @@ namespace Client.Common
             }
 
             #endregion
+
+            #region InnerSQLite
+            if (args.InnerSQLiteConnStr.IsNullOrWhiteSpace() == false)
+            {
+                StaticInfo.InnerSQLiteConnStr = args.InnerSQLiteConnStr;
+            }
+
+            #endregion
+
+            #region ExternalSQLite
+
+            if (args.ExternalSQLiteConnStr.IsNullOrWhiteSpace() == false)
+            {
+                StaticInfo.ExternalSQLiteConnStr = args.ExternalSQLiteConnStr;
+            }
+
+            #endregion
         }
 
         private static int _DebugMode = 0;
@@ -96,7 +114,6 @@ namespace Client.Common
         }
 
         private static String _AppName = "HoweApp";
-
         /// <summary>
         /// 程序名称
         /// </summary>
@@ -108,10 +125,6 @@ namespace Client.Common
             }
         }
 
-        /// <summary>
-        /// 公司号
-        /// </summary>
-        public static String CompanyCode = "2000";
 
         /// <summary>
         /// 当前登录用户
@@ -173,7 +186,7 @@ namespace Client.Common
             {
                 // 采用依赖注入接口方式处理 Android / iOS 的调用问题
                 // 具体如何实现接口请参考 CoreUtil.XamariN.AndroiD , DisplayInfoUtils
-                
+
                 // 由于屏幕会旋转, 所以每次都获取最新信息
                 Util.XamariN.Essentials.IDisplayInfoUtils match = Xamarin.Forms.DependencyService.Get<Util.XamariN.Essentials.IDisplayInfoUtils>();
                 if (match == null)
@@ -186,7 +199,6 @@ namespace Client.Common
                 }
             }
         }
-
 
 
         private static string _IP;
@@ -219,7 +231,6 @@ namespace Client.Common
 
 
         private static WebSetting _AppWebSetting;
-
         public static WebSetting AppWebSetting
         {
             get { return _AppWebSetting; }
@@ -233,6 +244,23 @@ namespace Client.Common
             set { _WebAPISetting = value; }
         }
 
+        #region 程序内部存储路径 - iOS 与 Android 通用
+
+        private static string _AppFilesPath;
+        public static string AppFilesPath
+        {
+            get { return _AppFilesPath; }
+        }
+
+        private static string _AppCachePath;
+        public static string AppCachePath
+        {
+            get { return _AppCachePath; }
+        }
+
+        #endregion
+
+        #region 外部存储路径 - Android 特有
 
         private static string _AndroidExternalPath;
         /// <summary>
@@ -254,6 +282,8 @@ namespace Client.Common
         {
             get { return _AndroidExternalCachePath; }
         }
+
+        #endregion
 
         #region InnerSQLite
 
@@ -316,115 +346,5 @@ namespace Client.Common
         }
 
         #endregion
-    }
-
-    public class StaticInfoInitArgs
-    {
-        /// <summary>
-        /// 调试模式
-        /// </summary>
-        public int? DebugMode { get; set; }
-
-        /// <summary>
-        /// 程序名称
-        /// </summary>
-        public string AppName { get; set; }
-
-        public string IP { get; set; }
-
-        public string Port { get; set; }
-
-        /// <summary>
-        /// App Web 服务配置
-        /// </summary>
-        public WebSetting AppWebSetting { get; set; }
-
-        public WebSetting WebAPISetting { get; set; }
-
-        /// <summary>
-        /// 程序内部SQLite数据库连接字符串
-        /// </summary>
-        public string InnerSQLiteConnStr { get; set; }
-
-        /// <summary>
-        /// 外部存储器SQLite数据库连接字符串
-        /// </summary>
-        public string ExternalSQLiteConnStr { get; set; }
-
-
-
-        /// <summary>
-        /// Android 外部存储器路径
-        /// </summary>
-        public string AndroidExternalPath { get; set; }
-
-        public string AndroidExternalFilesPath { get; set; }
-
-        public string AndroidExternalCachePath { get; set; }
-    }
-
-    /// <summary>
-    /// V 1.0.1 2019-9-16 16:47:45 增加属性 IsIndependent
-    /// V 1.0.0 2018-6-4 17:37:19 创建 WebSetting 类, 用于定义 .asmx, .ashx, web api 等 Web 应用
-    /// </summary>
-    public class WebSetting
-    {
-        /// <summary>
-        /// 是独立的
-        /// 若 '是', 执行 GetUri 只用回自身的 IP 与 Port, 不跟随 StaticInfo 的 IP, Port
-        /// 若 '否', 则跟随
-        /// </summary>
-        public bool IsIndependent { get; set; }
-
-        /// <summary>
-        /// 服务名称，配置文件对应的名称
-        /// </summary>
-        public string ServiceSettingName { get; set; }
-
-        /// <summary>
-        /// IP地址 / 网址
-        /// </summary>
-        public string IPOrWebAddress { get; set; }
-
-        /// <summary>
-        /// 端口
-        /// </summary>
-        public string Port { get; set; }
-
-        /// <summary>
-        /// 应用程序
-        /// </summary>
-        public string AppName { get; set; }
-
-        public WebSetting()
-        {
-
-        }
-
-        public WebSetting(string serviceSettingName, string ipOrWebAddress, string port, string appName, bool isIndependent = false)
-        {
-            this.ServiceSettingName = serviceSettingName;
-            this.IPOrWebAddress = ipOrWebAddress;
-            this.Port = port;
-            this.AppName = appName;
-
-            this.IsIndependent = isIndependent;
-        }
-
-        public Uri GetUri()
-        {
-            string r = string.Empty;
-
-            if (IsIndependent)
-            {
-                r = string.Format("http://{0}:{1}/{2}", this.IPOrWebAddress, this.Port, this.AppName);
-            }
-            else
-            {
-                r = string.Format("http://{0}:{1}/{2}", StaticInfo.IP, StaticInfo.Port, this.AppName);
-            }
-
-            return new Uri(r);
-        }
-    }
+    }    
 }

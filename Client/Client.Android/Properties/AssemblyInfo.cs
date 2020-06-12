@@ -55,20 +55,27 @@ using Android.App;
 // ZXing.Barcode
 [assembly: UsesPermission(Android.Manifest.Permission.Camera)]
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
+[assembly: UsesFeature("android.hardware.camera", Required = false)]
+[assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 
 // 定位
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)] // ACCESS_COARSE_LOCATION访问CellID或WiFi,只要当前设备可以接收到基站的服务信号，便可获得位置信息。（COARSE英文原意为：粗略的，可以理解为这种方式获得的位置信息是相对粗略的数据）。
 [assembly: UsesPermission(Android.Manifest.Permission.AccessFineLocation)]
 [assembly: UsesPermission(Android.Manifest.Permission.AccessWifiState)]
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
+[assembly: UsesFeature("android.hardware.location", Required = false)]
+[assembly: UsesFeature("android.hardware.location.gps", Required = false)]
+[assembly: UsesFeature("android.hardware.location.network", Required = false)]
 
 [assembly: UsesPermission(Android.Manifest.Permission.ReadPhoneState)]
 
 // 红外
 [assembly: UsesPermission(Android.Manifest.Permission.TransmitIr)]
 
-// 红外
+// 震动
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
 
+// 录音
+[assembly: UsesPermission(Android.Manifest.Permission.RecordAudio)]
 
 

@@ -78,7 +78,7 @@ namespace Client.View.XamarinComponentDemo
             set
             {
                 _Results = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -92,7 +92,7 @@ namespace Client.View.XamarinComponentDemo
             set
             {
                 searchResults = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
 

@@ -1,37 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:uc="clr-namespace:Client.BaseView"
-             x:Class="Client.View.PageAudioDemo">
+<ContentPage
+    x:Class="Client.View.PageAudioDemo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uc="clr-namespace:Client.BaseView"
+    Title="播放音频">
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <uc:UcAudioSetting Grid.Row="0"></uc:UcAudioSetting>
+                <uc:UcAudioSetting Grid.Row="0" />
 
                 <StackLayout Grid.Row="1">
                     <Label Text="播放常用音效( 独立Player, 播放完毕后不销毁)" />
-                    <Button x:Name="btnSoundEffect_Beep" Text="播放Beep" />
-                    <Button x:Name="btnSoundEffect_Error" Text="播放Error" />
+                    <Button
+                        x:Name="btnSoundEffect_Beep"
+                        Text="播放Beep" />
+                    <Button
+                        x:Name="btnSoundEffect_Error"
+                        Text="播放Error" />
+                    <Button
+                        x:Name="btnSoundEffect_Warn"
+                        Text="播放Warn" />
+                    <Button
+                        x:Name="btnSoundEffect_Takephoto"
+                        Text="播放Takephoto" />
+                    <Button
+                        x:Name="btnSoundEffect_Screenshot"
+                        Text="播放Screenshot" />
 
                     <Label Text="播放音效" />
-                    <Editor x:Name="txtSoundEffect" Text="dingdong.wav" />
-                    <Button x:Name="btnSoundEffect" Text="播放音效" />
+                    <Editor
+                        x:Name="txtSoundEffect"
+                        Text="dingdong.wav" />
+                    <Button
+                        x:Name="btnSoundEffect"
+                        Text="播放音效" />
 
                     <Label Text="播放背景音乐" />
-                    <Editor x:Name="txtBGM" Text="bor.mp3" />
-                    <Button x:Name="btnBGMPlay" Text="播放音乐" />
-                    <Button x:Name="btnBGMStop" Text="停止音乐" />
+                    <Editor
+                        x:Name="txtBGM"
+                        Text="bor.mp3" />
+                    <Button
+                        x:Name="btnBGMPlay"
+                        Text="播放音乐" />
+                    <Button
+                        x:Name="btnBGMStop"
+                        Text="停止音乐" />
 
 
                     <Label Text="----------- 安卓 -----------" />
                     <Label Text="测试 - 播放 Assets 中的音频文件" />
-                    <Editor x:Name="txtAssetsFileName" Text="dingdong.wav" />
-                    <Button x:Name="btnAssetsFileName" Text="根据文件名播放(安卓)" />
+                    <Editor
+                        x:Name="txtAssetsFileName"
+                        Text="dingdong.wav" />
+                    <Button
+                        x:Name="btnAssetsFileName"
+                        Text="根据文件名播放(安卓)" />
 
                 </StackLayout>
             </Grid>

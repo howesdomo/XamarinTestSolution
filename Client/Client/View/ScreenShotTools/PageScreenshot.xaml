@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.ScreenShotTools.PageScreenshot"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Button
+                    x:Name="btnScreenshot"
+                    Text="屏幕截图(从录制中截取)" />
+
+                <Button
+                    x:Name="btnScreenshotFromActivity"
+                    Text="屏幕截图(截取Activity)" />
+
+                <Button
+                    x:Name="btnScreenRecord_Start"
+                    Text="录制屏幕录像" />
+
+                <Button
+                    x:Name="btnScreenRecord_Stop"
+                    Text="停止录制屏幕录像" />
+
+                <Button
+                    x:Name="btnThrowExceptionAndScreenshot"
+                    Text="抛出异常并捕获异常信息截图" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

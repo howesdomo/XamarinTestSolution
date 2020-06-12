@@ -1,20 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.Games.PageGamesList"
-             Title="游戏列表">
+<ContentPage
+    x:Class="Client.View.Games.PageGamesList"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="游戏列表">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
                 <Label Text="用户名" />
-                <Editor x:Name="txtUser" Text="Howe" />
+                <Editor
+                    x:Name="txtUser"
+                    Text="Howe" />
 
                 <Label Text="游戏列表" />
-                <Button x:Name="btnCRW" Text="看题溯答" />
-                <Button x:Name="btnCRW_Type2" Text="听算溯答" />
-                <Button x:Name="btnUserList" Text="用户列表" />
+                <Button
+                    x:Name="btnCRW"
+                    Text="看题溯答" />
+                <Button
+                    x:Name="btnCRW_Type2"
+                    Text="听算溯答" />
+                <Button
+                    x:Name="btnUserList"
+                    Text="用户列表" />
 
-                <Button x:Name="btnDB" Text="测试DB" />
+                <Button
+                    x:Name="btnSetScreen"
+                    Text="设置竖屏" />
+
+                <Button
+                    x:Name="btnDB"
+                    Text="测试DB" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

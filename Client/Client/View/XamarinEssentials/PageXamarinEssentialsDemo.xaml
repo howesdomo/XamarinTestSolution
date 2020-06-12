@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.PageXamarinEssentialsDemo">
+<ContentPage
+    x:Class="Client.View.PageXamarinEssentialsDemo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Xamarin Essentials Demo">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="btnDeviceInfo" Text="DeviceInfo" />
-            <Button x:Name="btnDisplayInfo" Text="DisplayInfo" />
+            <Button
+                x:Name="btnDeviceInfo"
+                Text="DeviceInfo" />
+
+            <Button
+                x:Name="btnDisplayInfo"
+                Text="DisplayInfo" />
+
+            <Button
+                x:Name="btnGeolocation"
+                Text="Geolocation" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

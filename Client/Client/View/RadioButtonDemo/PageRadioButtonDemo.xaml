@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.RadioButtonDemo.PageRadioButtonDemo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:Client.View.RadioButtonDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilComponents="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <local:PageTest_MyRadioButtons_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button
+                    Command="{Binding CMD_ShowSL1}"
+                    HorizontalOptions="StartAndExpand"
+                    Text="AutoRelateRadioButton" />
+                <Button
+                    Command="{Binding CMD_ShowSL2}"
+                    HorizontalOptions="StartAndExpand"
+                    Text="BindableGroupView" />
+            </StackLayout>
+            <Grid>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Text="性别"
+                            VerticalOptions="Center" />
+                        <utilComponents:AutoRelateRadioButton
+                            GroupID="Sex"
+                            Text="男" />
+                        <utilComponents:AutoRelateRadioButton
+                            GroupID="Sex"
+                            Text="女" />
+                        <utilComponents:AutoRelateRadioButton
+                            GroupID="Sex"
+                            Text="保密" />
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="最高学历" />
+                        <!--  FontAttributes 可以填 0~3 或者 填名称 (Bold 等等)  -->
+                        <utilComponents:AutoRelateRadioButton
+                            FontAttributes="0"
+                            GroupID="最高学历"
+                            Text="小学" />
+                        <utilComponents:AutoRelateRadioButton
+                            FontAttributes="1"
+                            GroupID="最高学历"
+                            Text="初中" />
+                        <utilComponents:AutoRelateRadioButton
+                            FontAttributes="2"
+                            GroupID="最高学历"
+                            Text="高中" />
+                        <utilComponents:AutoRelateRadioButton
+                            FontAttributes="3"
+                            GroupID="最高学历"
+                            Text="专科" />
+                        <utilComponents:AutoRelateRadioButton
+                            Margin="40,0,40,0"
+                            BackgroundColor="LemonChiffon"
+                            CheckBoxColor="Silver"
+                            CheckBoxMargin="0,0,30,50"
+                            FontAttributes="Bold"
+                            FontSize="30"
+                            GroupID="最高学历"
+                            LabelMargin="-50,30,0,0"
+                            Text="本科"
+                            TextColor="Blue" />
+                    </StackLayout>
+                </StackLayout>
+                <ScrollView IsVisible="{Binding sl2_IsVisible}">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="~~~~~ 分割线(UI样式测试) ~~~~~~" />
+                        <utilComponents:BindableRadioGroupView
+                            Margin="40,0,40,0"
+                            BackgroundColor="LemonChiffon"
+                            CheckBoxColor="Silver"
+                            CheckBoxMargin="0,0,50,50"
+                            FontAttributes="3"
+                            FontSize="30"
+                            ItemsSource="{Binding XingBie}"
+                            LabelMargin="50,50,0,0"
+                            TextColor="#9756cf" />
+
+                        <Label Text="~~~~~ 分割线(默认不选择任何项, 横向排列) ~~~~~~" />
+                        <utilComponents:BindableRadioGroupView
+                            ItemsSource="{Binding XingBie}"
+                            Orientation="Horizontal" />
+
+                        <Label Text="~~~~~ 分割线(测试默认选中 SelectedNo = 2) ~~~~~" />
+                        <utilComponents:BindableRadioGroupView
+                            ItemsSource="{Binding XueLi}"
+                            SelectedNo="2" />
+
+                        <Label Text="~~~~~ 分割线(测试默认选中 SelectedText = 大学) ~~~~~" />
+                        <utilComponents:BindableRadioGroupView
+                            ItemsSource="{Binding XueLi}"
+                            SelectedText="大学" />
+
+                        <Label Text="~~~~~ 分割线( 绑定 SelectedIndex 与 SelectedItem ) ~~~~~" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Index:" />
+                            <Label Text="{Binding sl2_SelectedIndex}" />
+                            <Label Text="Item:" />
+                            <Label Text="{Binding sl2_SelectedItem}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="No:" />
+                            <Label Text="{Binding sl2_SelectedNo}" />
+                            <Label Text="Text:" />
+                            <Label
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding sl2_SelectedText}" />
+                        </StackLayout>
+
+                        <utilComponents:BindableRadioGroupView
+                            DisplayPath="DisplayName"
+                            ItemsSource="{Binding MyList}"
+                            SelectedIndex="{Binding sl2_SelectedIndex, Mode=TwoWay}"
+                            SelectedItem="{Binding sl2_SelectedItem, Mode=TwoWay}"
+                            SelectedNo="{Binding sl2_SelectedNo, Mode=TwoWay}"
+                            SelectedText="{Binding sl2_SelectedText, Mode=TwoWay}" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

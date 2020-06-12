@@ -144,7 +144,8 @@ namespace Client.Data
 
         public View.Games.CRW.CRWLog CRW_rLog(View.Games.CRW.Game_User args, int argsCRWTypeID)
         {
-            var now = WebDateTime.Now;
+            // var now = WebDateTime.Now;
+            var now = DateTime.Now;
             var today = now.Date;
 
             var taskResult = mDatabase.Table<View.Games.CRW.CRWLog>()

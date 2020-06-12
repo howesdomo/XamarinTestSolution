@@ -225,7 +225,8 @@ namespace Client.View.Games.CRW
             CRWLog log = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rLog(PageGamesList.Game_User, this.ViewModel.CRWTypeID);
             if (log.NextLevel.HasValue)
             {
-                var now = WebDateTime.Now;
+                // var now = WebDateTime.Now;
+                var now = DateTime.Now;
                 var today = now.Date;
 
                 var toAdd = new CRWLog()
@@ -327,7 +328,8 @@ namespace Client.View.Games.CRW
                 this.calcQuestion();
                 // 播放检测正确率动画, 播放完毕后执行, readNextQuestion()
 
-                var now = WebDateTime.Now; // DateTime.Now;
+                // var now = WebDateTime.Now; // DateTime.Now;
+                var now = DateTime.Now;
                 var today = now.Date;
 
                 var toAdd = new CRWLog()

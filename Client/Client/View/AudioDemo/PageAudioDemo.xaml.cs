@@ -22,6 +22,11 @@ namespace Client.View
         {
             this.btnSoundEffect_Beep.Clicked += btnSoundEffect_Beep_Clicked;
             this.btnSoundEffect_Error.Clicked += btnSoundEffect_Error_Clicked;
+            this.btnSoundEffect_Warn.Clicked += btnSoundEffect_Warn_Clicked;
+            this.btnSoundEffect_Takephoto.Clicked += btnSoundEffect_Takephoto_Clicked;
+            this.btnSoundEffect_Screenshot.Clicked += btnSoundEffect_Screenshot_Clicked;
+
+
             this.btnSoundEffect.Clicked += BtnSoundEffect_Clicked;
             this.btnBGMPlay.Clicked += BtnBGMPlay_Clicked;
             this.btnBGMStop.Clicked += BtnBGMStop_Clicked;
@@ -37,6 +42,21 @@ namespace Client.View
         private void btnSoundEffect_Error_Clicked(object sender, EventArgs e)
         {
             App.AudioPlayer.PlayError();
+        }
+
+        private void btnSoundEffect_Warn_Clicked(object sender, EventArgs e)
+        {
+            App.AudioPlayer.PlayWarn();
+        }
+
+        private void btnSoundEffect_Screenshot_Clicked(object sender, EventArgs e)
+        {
+            App.AudioPlayer.PlayScreenshot();
+        }
+
+        private void btnSoundEffect_Takephoto_Clicked(object sender, EventArgs e)
+        {
+            App.AudioPlayer.PlayTakePhoto();
         }
 
         async void BtnSoundEffect_Clicked(object sender, EventArgs e)

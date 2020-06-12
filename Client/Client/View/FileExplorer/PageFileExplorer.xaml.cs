@@ -297,11 +297,20 @@ namespace Client.View.FileExplorer
 
             if (di.FullName == this.ViewModel.BaseDirectory)
             {
-                a.Text = "BaseDirectory";
-                // a.Text = di.FullName;
+                // a.Text = "BaseDirectory";
+                a.Text = di.FullName;
                 a.Margin = new Thickness(left: 0, top: 0, right: 5, bottom: 0);
                 // a.BackgroundColor = Color.FromRgb(250d, 171d, 173d);
                 a.BackgroundColor = Color.MediumVioletRed;
+
+                a.GestureRecognizers.Add(new SwipeGestureRecognizer()
+                {
+                    Direction = SwipeDirection.Right,
+                    Command = new Command(()=> 
+                    {
+                        Acr.UserDialogs.UserDialogs.Instance.Toast(di.FullName);
+                    })
+                });
             }
             else
             {

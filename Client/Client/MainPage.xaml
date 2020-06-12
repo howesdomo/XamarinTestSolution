@@ -135,6 +135,15 @@
                         <Button
                             x:Name="btnLongPressEffects"
                             Text="测试LongPressEffects" />
+                        <Button
+                            x:Name="btnRadioButtonDemo"
+                            Text="RadioButton(自制控件)" />
+                        <Button
+                            x:Name="btnMultiSelectDemo"
+                            Text="MultiSelect(自制控件)" />
+                        <Button
+                            x:Name="btnColorList"
+                            Text="ColorList" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -215,8 +224,11 @@
                             x:Name="btnAndroidIntentUtils_InstallAPK"
                             Text="打开APK安装程序" />
                         <Button
-                            x:Name="btnAndroidPermissionV2"
-                            Text="安卓权限V2" />
+                            x:Name="btnAndroidPermissionV3"
+                            Text="安卓权限V3" />
+                        <Button
+                            x:Name="btnAndroidScreenshotTools"
+                            Text="屏幕截屏录像" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

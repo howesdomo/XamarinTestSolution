@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.View.XamarinEssentials;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Client.View
         {
             btnDeviceInfo.Clicked += BtnDeviceInfo_Clicked;
             btnDisplayInfo.Clicked += BtnDisplayInfo_Clicked;
+            btnGeolocation.Clicked += BtnGeolocation_Clicked;
         }
 
         async void BtnDeviceInfo_Clicked(object sender, EventArgs e)
@@ -49,6 +51,19 @@ namespace Client.View
         {
             Util.XamariN.Essentials.DisplayInfo match = Common.StaticInfo.DisplayInfo;
             await Navigation.PushAsync(new XamarinEssentials.PageDisplayInfo() { BindingContext = match });
+        }
+
+        private void BtnGeolocation_Clicked(object sender, EventArgs e)
+        {
+            App.ThrottleAction.Throttle
+            (
+                interval: App.ActionIntervalDefault,
+                action: async () =>
+                {
+                    await Navigation.PushAsync(new PageGeolocation());
+                },
+                syncInvoke: null
+            );
         }
     }
 

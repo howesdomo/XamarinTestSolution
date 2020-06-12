@@ -59,28 +59,15 @@ namespace Client.iOS
 
             #region iOS项目路径赋值
 
-            //// 安卓系统外部存储绝对路径
-            //staticInfoInitArgs.AndroidExternalPath = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            staticInfoInitArgs.AppFilesPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
-            //// App外部缓存绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/cache
-            //foreach (var item in this.GetExternalCacheDirs())
-            //{
-            //    staticInfoInitArgs.AndroidExternalCachePath = item.AbsolutePath;
-            //    break;
-            //}
-
-            //// App外部文件绝对路径 -- /{安卓系统外部存储路径}/Android/data/{appPackageName}/files
-            //foreach (var item in this.GetExternalFilesDirs(string.Empty))
-            //{
-            //    staticInfoInitArgs.AndroidExternalFilesPath = item.AbsolutePath;
-            //    break;
-            //}
+            staticInfoInitArgs.AppCachePath = System.IO.Path.Combine(staticInfoInitArgs.AppFilesPath, "..", "Library", "Cache");
 
             #endregion
 
             #region 服务器配置
 
-            string pathServiceSettings = Common.ServiceSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AndroidExternalFilesPath);
+            string pathServiceSettings = Common.ServiceSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AppFilesPath);
 
             if (System.IO.File.Exists(pathServiceSettings) == false)
             {
@@ -93,7 +80,7 @@ namespace Client.iOS
 
             #region 本机配置
 
-            string pathNativeSettings = Common.NativeSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AndroidExternalFilesPath);
+            string pathNativeSettings = Common.NativeSettingsUtils.GetConfigFilePath(argsDirPath: staticInfoInitArgs.AppFilesPath);
 
             if (System.IO.File.Exists(pathNativeSettings) == false)
             {
@@ -168,10 +155,10 @@ namespace Client.iOS
             // 初始化 Acr.UserDialogs
             // Nothing is necessary any longer as of v4.x.  There is an Init function for iOS but it is OPTIONAL and only required if you want/need to control
             // the top level viewcontroller for things like iOS extensions.Progress prompts will not use this factory function though!
-            
+
 
             // 初始化 DevExpress.Mobile.Forms
-                        DevExpress.Mobile.Forms.Init();
+            DevExpress.Mobile.Forms.Init();
             // 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
             // 这里初始化主题颜色为 Theme.Light
             DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;

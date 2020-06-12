@@ -26,6 +26,26 @@ namespace Client
 
         public static Client.Common.IExcelUtils_Aspose ExcelUtils_Aspose { get; set; }
 
+
+        #region 防止误触
+
+        /// <summary>
+        /// 默认防止误触间隔时间
+        /// </summary>
+        public static double ActionIntervalDefault { get { return 1000; } }
+
+        /// <summary>
+        /// 连续的多次调用，在每个时间段的周期内只执行第一次处理过程。
+        /// </summary>
+        public static Util.ActionUtils.ThrottleAction ThrottleAction { get; set; } = new Util.ActionUtils.ThrottleAction();
+
+        /// <summary>
+        /// 连续的多次调用，只有在调用停止之后的一段时间(指定间隔时间)内不再调用，然后才执行一次处理过程。
+        /// </summary>
+        public static Util.ActionUtils.DebounceAction DebounceAction { get; set; } = new Util.ActionUtils.DebounceAction();
+
+        #endregion
+
         #region 安卓
 
         public static Util.XamariN.IAndroidAssetsUtils AndroidAssetsUtils { get; set; }
@@ -35,6 +55,10 @@ namespace Client
         public static Util.XamariN.IAndroidPermission AndroidPermissionUtils { get; set; }
 
         public static Util.XamariN.IAndroidPermission AndroidPermissionUtils_InTestSolution { get; set; }
+
+        public static Util.XamariN.IAndroidScreenshot AndroidScreenshot { get; set; }
+
+        public static Util.XamariN.IAndroidScreenRecord AndroidScreenRecord { get; set; }
 
         #endregion
 

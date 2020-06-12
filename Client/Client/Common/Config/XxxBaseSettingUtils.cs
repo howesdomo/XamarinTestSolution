@@ -34,7 +34,7 @@ namespace Client.Common
         {
             if (argsDirPath.IsNullOrEmpty())
             {
-                return System.IO.Path.Combine(StaticInfo.AndroidExternalFilesPath, ConfigFileName);
+                return System.IO.Path.Combine(StaticInfo.AppFilesPath, ConfigFileName);
             }
             else
             {
@@ -84,7 +84,7 @@ namespace Client.Common
         {
             if (argsDirPath.IsNullOrEmpty() == true)
             {
-                return System.IO.Path.Combine(StaticInfo.AndroidExternalFilesPath, ConfigFileName);
+                return System.IO.Path.Combine(StaticInfo.AppFilesPath, ConfigFileName);
             }
             else
             {

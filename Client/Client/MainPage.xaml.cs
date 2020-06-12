@@ -11,7 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using Client.View.ScreenShotTools;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace Client
 {
@@ -95,6 +96,12 @@ namespace Client
 
             this.btnLongPressEffects.Clicked += btnLongPressEffects_Clicked;
 
+            this.btnRadioButtonDemo.Clicked += btnRadioButtonDemo_Clicked;
+
+            this.btnMultiSelectDemo.Clicked += btnMultiSelectDemo_Clicked;
+
+            this.btnColorList.Clicked += btnColorList_Clicked;
+
             #endregion
 
             #region 常用功能(已测试)
@@ -130,7 +137,9 @@ namespace Client
             this.btnPageIRDemo.Clicked += btnPageIRDemo_Clicked;
             this.btnAndroidIntentUtils_InstallAPK.Clicked += btnAndroidIntentUtils_InstallAPK_Clicked;
             this.btnAndroidPermission.Clicked += btnAndroidPermission_Clicked;
-            this.btnAndroidPermissionV2.Clicked += btnAndroidPermissionV2_Clicked;
+            // this.btnAndroidPermissionV2.Clicked += btnAndroidPermissionV2_Clicked;
+            this.btnAndroidPermissionV3.Clicked += btnAndroidPermissionV3_Clicked;
+            this.btnAndroidScreenshotTools.Clicked += btnAndroidScreenshotTools_Clicked;
 
             #endregion
 
@@ -171,6 +180,8 @@ namespace Client
             this.btnXamarinComponentDemo.Clicked += btnXamarinComponentDemo_Clicked;
             #endregion
         }
+
+
 
         #region HoweTools
 
@@ -283,6 +294,21 @@ namespace Client
         async void btnLongPressEffects_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.EffectsDemo.PageLongPressEffects());
+        }
+
+        async void btnRadioButtonDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.RadioButtonDemo.PageRadioButtonDemo());
+        }
+
+        async void btnMultiSelectDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.MultiSelectDemo.PageDemo_MultiSelect());
+        }
+
+        async void btnColorList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.ColorListDemo.PageColorListDemo());
         }
 
         #endregion        
@@ -415,6 +441,7 @@ namespace Client
             App.AndroidIntentUtils.InstallAPK(p);
         }
 
+        [Obsolete] // 弃用改用 Xamarin.Essentials.Permissions 进行授权
         async void btnAndroidPermission_Clicked(object sender, EventArgs e)
         {
             // 通过校验
@@ -473,6 +500,7 @@ namespace Client
             }
         }
 
+        [Obsolete] // 弃用改用 Xamarin.Essentials.Permissions 进行授权
         async void btnAndroidPermissionV2_Clicked(object sender, EventArgs e)
         {
             if (Xamarin.Essentials.DeviceInfo.Platform != Xamarin.Essentials.DevicePlatform.Android)
@@ -514,6 +542,102 @@ namespace Client
                 // TODO 安卓权限V2 Android 9 测试效果未达到理想效果
                 App.AndroidPermissionUtils.RequestPermissions(toRequest.ToArray());
             }
+        }
+
+        async void btnAndroidPermissionV3_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Xamarin.Essentials.PermissionStatus permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.Camera>();
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.Camera>();
+                }
+
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    System.Diagnostics.Debug.WriteLine("摄像头权限授权失败");
+                    return;
+                }
+
+                permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.Microphone>();
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.Microphone>();
+                }
+
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    System.Diagnostics.Debug.WriteLine("麦克风权限授权失败");
+                    return;
+                }
+
+                permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.StorageRead>();
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.StorageRead>();
+                }
+
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    System.Diagnostics.Debug.WriteLine("读取外部存储权限授权失败");
+                    return;
+                }
+
+                permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.StorageWrite>();
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.StorageWrite>();
+                }
+
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    System.Diagnostics.Debug.WriteLine("读取外部存储权限授权失败");
+                    return;
+                }
+
+                permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.StorageWrite>();
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.StorageWrite>();
+                }
+
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    System.Diagnostics.Debug.WriteLine("写入外部存储权限授权失败");
+                    return;
+                }
+
+
+                permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.LocationWhenInUse>();
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.LocationWhenInUse>();
+                }
+
+                if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+                {
+                    System.Diagnostics.Debug.WriteLine("获取GPS信息(在使用App期间)权限授权失败");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(title: "捕获错误", message: ex.GetFullInfo(), cancel: "确定");
+            }
+        }
+
+        void btnAndroidScreenshotTools_Clicked(object sender, EventArgs e)
+        {
+            App.ThrottleAction.Throttle
+            (
+                interval: App.ActionIntervalDefault,
+                action: async () =>
+                {
+                    await Navigation.PushAsync(new PageScreenshot());
+                },
+                syncInvoke: null
+            );
         }
 
         #endregion

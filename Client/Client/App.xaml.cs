@@ -2,7 +2,10 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+// !!!!
+// 迁移到 AssemblyInfo.cs 文件中
+// [assembly: XamlCompilation(XamlCompilationOptions.Compile)] 
+
 namespace Client
 {
     public partial class App : Application

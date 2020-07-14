@@ -338,6 +338,24 @@
                     </StackLayout>
                 </ScrollView>
             </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Label Text="Xamarin.Forms 新特性" />
+                <ScrollView
+                    Grid.Row="1"
+                    Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnXamarinFormsFeatures_4p6"
+                            Text="Xamarin.Forms 4.6 新特性" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />

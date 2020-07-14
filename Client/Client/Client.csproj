@@ -34,6 +34,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Font Awesome 5 Brands-Regular-400.otf" />
+    <None Remove="Fonts\Font Awesome 5 Pro-Regular-400.otf" />
     <None Remove="Images\BaseView\back.png" />
     <None Remove="Images\BaseView\Bluetooth\earphones.png" />
     <None Remove="Images\BaseView\Bluetooth\smartphone.png" />
@@ -182,6 +184,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\Font Awesome 5 Brands-Regular-400.otf" />
+    <EmbeddedResource Include="Fonts\Font Awesome 5 Pro-Regular-400.otf" />
     <EmbeddedResource Include="Images\BaseView\back.png" />
     <EmbeddedResource Include="Images\BaseView\Bluetooth\earphones.png" />
     <EmbeddedResource Include="Images\BaseView\Bluetooth\smartphone.png" />
@@ -343,7 +347,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1073" />
     <PackageReference Include="XLabs.Forms" Version="2.0.5782" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
   </ItemGroup>
@@ -373,6 +377,9 @@
     </Compile>
     <Compile Update="View\SQLiteDemo\PageSQLiteDemo_NodeItem.xaml.cs">
       <DependentUpon>PageSQLiteDemo_NodeItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\XF_4p6_Features\PageMain.xaml.cs">
+      <DependentUpon>PageMain.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -648,6 +655,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XamarinEssentials\PageXamarinEssentialsDemo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p6_Features\PageFontAwesome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p6_Features\PageFontEmbedded.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p6_Features\PageMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XLabDemo\PageCamera1.xaml">

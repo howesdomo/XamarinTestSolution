@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XF_4p6_Features.PageFontEmbedded"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:font="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry
+                FontFamily="FontAwesome"
+                Text="{x:Static font:FontAwesomeIcons.ArrowUp}"
+                TextColor="Purple" />
+
+            <!--  Button Text 为 IconFont  -->
+            <Button
+                FontFamily="FontAwesome"
+                Text="{x:Static font:FontAwesomeIcons.ArrowUp}"
+                TextColor="Purple" />
+
+            <!--  Button ImageSource 为 IconFont  -->
+            <Button
+                ImageSource="{FontImage FontFamily=FontAwesome_Brands,
+                                        Glyph={x:Static font:FontAwesomeIcons.Weixin},
+                                        Color=Purple,
+                                        Size=30}"
+                Text="微信登录" />
+
+            <Image Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static font:FontAwesomeIcons.ArrowUp}, Color=Purple, Size=30}" />
+
+            <!--  使用触发器 更改上下方向图标  -->
+            <Expander Margin="0,30,0,0">
+                <Expander.Header>
+                    <StackLayout
+                        BackgroundColor="Orange"
+                        HeightRequest="30"
+                        Orientation="Horizontal">
+                        <Label
+                            Margin="20,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            Text="更改Expander箭头样式" />
+
+                        <Image
+                            Margin="0,0,20,0"
+                            HorizontalOptions="End"
+                            Source="{FontImage FontFamily=FontAwesome,
+                                               Glyph={x:Static font:FontAwesomeIcons.ArrowDown},
+                                               Color=Purple,
+                                               Size=18}">
+                            <Image.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                    TargetType="Image"
+                                    Value="True">
+                                    <Setter Property="Source" Value="{FontImage FontFamily=FontAwesome, Glyph={x:Static font:FontAwesomeIcons.ArrowUp}, Color=Purple, Size=25}" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.Content>
+                    <StackLayout>
+                        <Button Text="1" />
+                        <BoxView BackgroundColor="Green" />
+                        <Button Text="2" />
+                    </StackLayout>
+                </Expander.Content>
+            </Expander>
+
+            <Expander Margin="0,5,0,0">
+                <Expander.Header>
+                    <StackLayout
+                        BackgroundColor="Orange"
+                        HeightRequest="30"
+                        Orientation="Horizontal">
+                        <Label
+                            Margin="20,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            Text="更改Expander箭头样式" />
+
+                        <Image
+                            Margin="0,0,20,0"
+                            HorizontalOptions="End"
+                            Source="{FontImage FontFamily=FontAwesome,
+                                               Glyph={x:Static font:FontAwesomeIcons.ArrowDown},
+                                               Color=Purple,
+                                               Size=18}">
+                            <Image.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                    TargetType="Image"
+                                    Value="True">
+                                    <Setter Property="Source" Value="{FontImage FontFamily=FontAwesome, Glyph={x:Static font:FontAwesomeIcons.ArrowUp}, Color=Purple, Size=25}" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.Content>
+                    <StackLayout>
+                        <Button Text="3" />
+                        <BoxView BackgroundColor="Red" />
+                        <Button Text="4" />
+                    </StackLayout>
+                </Expander.Content>
+            </Expander>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

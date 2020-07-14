@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XF_4p6_Features.PageFontAwesome"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:Client.View.XF_4p6_Features"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <view:PageFontAwesome_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <SearchBar
+                SearchCommand="{Binding CMD_Filter}"
+                Text="{Binding FilterInfo}" />
+
+            <ListView
+                x:Name="lv"
+                HasUnevenRows="True"
+                ItemsSource="{Binding FiltedList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Spacing="0">
+                                <StackLayout
+                                    Margin="20,0,0,0"
+                                    Spacing="0"
+                                    WidthRequest="150">
+                                    <Label
+                                        HorizontalTextAlignment="End"
+                                        Text="{Binding Name}" />
+                                    <Label
+                                        HorizontalTextAlignment="End"
+                                        Text="{Binding Code_XML}" />
+                                </StackLayout>
+
+                                <StackLayout WidthRequest="100">
+                                    <Image
+                                        Margin="20,0,0,0"
+                                        BackgroundColor="Silver">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="FontAwesome"
+                                                Glyph="{Binding Code}"
+                                                Size="26"
+                                                Color="Black" />
+                                        </Image.Source>
+                                    </Image>
+                                </StackLayout>
+
+                                <StackLayout WidthRequest="100">
+                                    <Image
+                                        Margin="20,0,0,0"
+                                        BackgroundColor="Silver">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="FontAwesome_Brands"
+                                                Glyph="{Binding Code}"
+                                                Size="26"
+                                                Color="Black" />
+                                        </Image.Source>
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

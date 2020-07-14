@@ -26,7 +26,8 @@ namespace Client.Droid
 
             base.OnCreate(bundle); // Android Resources 在 raw 中放入 音频资源后报错, 挪动到首位后没有报错.
 
-            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // 设置支持 CollectionView
+            // Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // 设置支持 CollectionView
+            Xamarin.Forms.Forms.SetFlags("Expander_Experimental"); // 设置支持 Expander - XF 4.6
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 

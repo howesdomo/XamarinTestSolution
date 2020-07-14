@@ -179,9 +179,13 @@ namespace Client
             this.btnLabelDemo.Clicked += BtnLabelDemo_Clicked;
             this.btnXamarinComponentDemo.Clicked += btnXamarinComponentDemo_Clicked;
             #endregion
+
+            #region Xamarin.Forms 新特性
+
+            this.btnXamarinFormsFeatures_4p6.Clicked += btnXamarinFormsFeatures_4p6_Clicked;
+
+            #endregion
         }
-
-
 
         #region HoweTools
 
@@ -788,6 +792,16 @@ namespace Client
         async void btnXamarinComponentDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.XamarinComponentDemo.PageXamarinComponentMenu());
+        }
+
+        #endregion
+
+
+        #region Xamarin.Forms 新特性
+
+        async void btnXamarinFormsFeatures_4p6_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.XF_4p6_Features.PageMain());
         }
 
         #endregion

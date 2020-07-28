@@ -1,10 +1,126 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.View.MarqueeDemo.MarqueeDemoList">
+<ContentPage
+    x:Class="Client.View.MarqueeDemo.MarqueeDemoList"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:view="clr-namespace:Client.View.MarqueeDemo">
+    <ContentPage.BindingContext>
+        <view:MarqueeDemoList_ViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout x:Name="sMain">
+        <ScrollView>
+            <StackLayout>
+                <Label Text="属性改变测试" />
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnMarginChange"
+                            Text="Margin递增" />
+                        <Button
+                            x:Name="btnPaddingChange"
+                            Text="Padding递增" />
+                        <Button
+                            x:Name="btnText20Change"
+                            Text="Text改变_20字" />
+                        <Button
+                            x:Name="btnText30Change"
+                            Text="Text改变_30字" />
+                        <Button
+                            x:Name="btnFontSizeChange"
+                            Text="FontSize递增" />
+                    </StackLayout>
+                </ScrollView>
 
-        </StackLayout>
+                <Label Text="每秒阅读字数增" />
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnWordsPerSecondPlus"
+                            Text="增2" />
+                        <Button
+                            x:Name="btnWordsPerSecondMinus"
+                            Text=" 减2" />
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="事件" />
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnSubEvent_ReadComplete"
+                            Text="注册 ReadComplete 事件" />
+                        <Button
+                            x:Name="btnUnsubEvent_ReadComplete"
+                            Text="注销 ReadComplete 事件" />
+
+                        <Button
+                            x:Name="btnSubEvent_ResetComplete"
+                            Text="注册 ResetComplete 事件" />
+                        <Button
+                            x:Name="btnUnsubEvent_ResetComplete"
+                            Text="注销 ResetComplete 事件" />
+                    </StackLayout>
+                </ScrollView>
+
+                <ui:MarqueeLabel
+                    x:Name="marqueeLabel0"
+                    Margin="20,50,20,50"
+                    Padding="5,2,5,2"
+                    BackgroundColor="Yellow"
+                    FontSize="20"
+                    Text="床前明月光,疑是地上霜,举头望明月,低头思故乡。"
+                    TextColor="Orange" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="ReadComplete更新时间" />
+                    <Label x:Name="lblReadCompleteInfo" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="ResetComplete更新时间" />
+                    <Label x:Name="lblResetCompleteInfo" />
+                </StackLayout>
+
+                <Label Text="数据绑定测试" />
+                <Entry Text="{Binding Text}" />
+                <Button
+                    x:Name="btnUpdateBinding"
+                    Text="更改绑定" />
+
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="每秒阅读字数"
+                    Text="{Binding WordsPerSecond}" />
+
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="开始阅读停顿时间"
+                    Text="{Binding StartBreakSecond}" />
+
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="完成阅读停顿时间"
+                    Text="{Binding EndBreakPoint}" />
+
+                <Entry
+                    Keyboard="Numeric"
+                    Placeholder="回滚重置持续时间"
+                    Text="{Binding ResetSecond}" />
+
+                <ui:MarqueeLabel
+                    Margin="{Binding Margin}"
+                    Padding="{Binding Padding}"
+                    BackgroundColor="{Binding BackgroundColor}"
+                    EndBreakSecond="{Binding EndBreakPoint}"
+                    FontSize="20"
+                    ResetSecond="{Binding ResetSecond}"
+                    StartBreakSecond="{Binding StartBreakSecond}"
+                    Text="{Binding Text}"
+                    TextColor="{Binding TextColor}"
+                    WordsPerSecond="{Binding WordsPerSecond}" />
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

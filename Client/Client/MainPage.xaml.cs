@@ -290,11 +290,6 @@ namespace Client
             }
         }
 
-        async void btnMarqueeDemo_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.MarqueeDemo.MarqueeDemoList());
-        }
-
         async void btnLongPressEffects_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.EffectsDemo.PageLongPressEffects());
@@ -768,12 +763,6 @@ namespace Client
             await Navigation.PushAsync(new PickerDemoPage());
         }
 
-
-
-
-
-
-
         async void BtnGestureDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.GestureDemo.PageGestureDemo());
@@ -792,6 +781,11 @@ namespace Client
         async void btnXamarinComponentDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.XamarinComponentDemo.PageXamarinComponentMenu());
+        }
+
+        async void btnMarqueeDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.MarqueeDemo.MarqueeDemoList());
         }
 
         #endregion

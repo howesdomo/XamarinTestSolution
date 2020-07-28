@@ -127,9 +127,6 @@
                             x:Name="btnExcelByAsposeCell"
                             Text="Excel Aspose.Cell" />
                         <Button
-                            x:Name="btnMarqueeDemo"
-                            Text="跑马灯效果Demo集合" />
-                        <Button
                             x:Name="btnTimer"
                             Text="定时助手" />
                         <Button
@@ -335,6 +332,9 @@
                         <Button
                             x:Name="btnXamarinComponentDemo"
                             Text="Xamarin Component Demo" />
+                        <Button
+                            x:Name="btnMarqueeDemo"
+                            Text="跑马灯Label" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

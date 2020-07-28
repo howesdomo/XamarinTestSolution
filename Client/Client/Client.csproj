@@ -366,9 +366,6 @@
     <Compile Update="View\Games\CRW\UcUserListDetail.xaml.cs">
       <DependentUpon>UcUserListDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Update="View\MarqueeDemo\MarqueeLabel_V1.xaml.cs">
-      <DependentUpon>MarqueeLabel_V1.xaml</DependentUpon>
-    </Compile>
     <Compile Update="View\PingDemo\MiniPing.xaml.cs">
       <DependentUpon>MiniPing.xaml</DependentUpon>
     </Compile>
@@ -534,15 +531,6 @@
     <EmbeddedResource Update="View\MarqueeDemo\MarqueeDemoList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V3.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V4.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="View\MultiSelectDemo\PageDemo_MultiSelect.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -565,9 +553,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\MessagingCenterDemo\PageMessagingCenterDemo.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\MarqueeDemo\MarqueeLabel_V1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\PingDemo\MiniPing.xaml">

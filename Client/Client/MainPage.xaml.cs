@@ -790,7 +790,6 @@ namespace Client
 
         #endregion
 
-
         #region Xamarin.Forms 新特性
 
         async void btnXamarinFormsFeatures_4p6_Clicked(object sender, EventArgs e)

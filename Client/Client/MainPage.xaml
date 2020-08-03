@@ -3,7 +3,10 @@
     x:Class="Client.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Client">
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
+    xmlns:local="clr-namespace:Client"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO">
     <NavigationPage.TitleView>
         <Grid>
             <Grid.Resources>
@@ -19,21 +22,25 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <!--  Title  -->
-            <Label x:Name="lblTitle" />
+            <ui:MarqueeLabel
+                x:Name="lblTitle"
+                FontSize="20"
+                TextColor="White" />
 
             <StackLayout
                 Grid.Column="1"
                 Orientation="Horizontal">
                 <Image
                     x:Name="btnShowHidden"
-                    Margin="5,0,5,0"
-                    HeightRequest="20"
-                    Source="{local:EmbeddedResource Client.Images.BaseView.plus.png}"
-                    WidthRequest="20" />
-
-                <!--  1 用于 Margin 由于设置Margin 无法编译程序, 故用 BoxView 达到 Margin Left Right  -->
-                <!--  已解决  -->
-                <!--<BoxView BackgroundColor="Transparent" WidthRequest="5" />-->
+                    Margin="5,0,15,0"
+                    Source="{FontImage FontFamily=FontAwesome,
+                                       Glyph={x:Static utilFont:FontAwesomeIcons.Plus},
+                                       Color=White,
+                                       Size=20}">
+                    <Image.Behaviors>
+                        <behaviors:ViewTapLikeButtonBehavior />
+                    </Image.Behaviors>
+                </Image>
             </StackLayout>
 
         </Grid>
@@ -54,19 +61,29 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnBuBuGao"
-                            Text="补补高点读机" />
+                            HorizontalOptions="Start"
+                            Text="补补高点读机"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnBuBuGao_Japanese"
-                            Text="补补高点读机(日文)" />
+                            HorizontalOptions="Start"
+                            Text="补补高点读机(日文)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnGames"
-                            Text="Games" />
+                            HorizontalOptions="Start"
+                            Text="Games"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageShuangSeQiu"
-                            Text="双色球" />
+                            HorizontalOptions="Start"
+                            Text="双色球"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnH_Pow2_Brower"
-                            Text="H^2浏览器" />
+                            HorizontalOptions="Start"
+                            Text="H^2浏览器"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -82,22 +99,34 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnBarcodeScanner"
-                            Text="条码扫描(连续)" />
+                            HorizontalOptions="Start"
+                            Text="条码扫描&#x0a;(连续)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnFakeSerailPort"
-                            Text="模拟串口助手" />
+                            HorizontalOptions="Start"
+                            Text="模拟串口助手"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPingDemo"
-                            Text="Ping(模拟CMD)" />
+                            HorizontalOptions="Start"
+                            Text="Ping&#x0a;(模拟CMD)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPingDemoMini"
-                            Text="Ping Mini(模拟CMD)" />
+                            HorizontalOptions="Start"
+                            Text="Ping Mini&#x0a;(模拟CMD)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnSocketDemo"
-                            Text="Socket Demo" />
+                            HorizontalOptions="Start"
+                            Text="Socket Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageBluetoothDemo"
-                            Text="Bluetooth" />
+                            HorizontalOptions="Start"
+                            Text="Bluetooth"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -113,34 +142,54 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnXLabsDemo"
-                            Text="XLabs Demo" />
+                            HorizontalOptions="Start"
+                            Text="XLabs Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnFFImageLoading"
-                            Text="FFImageLoading Demos" />
+                            HorizontalOptions="Start"
+                            Text="FFImageLoading Demos"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnFileExplorer"
-                            Text="FileExplorer" />
+                            HorizontalOptions="Start"
+                            Text="FileExplorer"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPluginMediaManagerForms"
-                            Text="(暂停)Plugin.MediaManager.Forms Demos" />
+                            HorizontalOptions="Start"
+                            Text="(暂停)Plugin.MediaManager.Forms Demos"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnExcelByAsposeCell"
-                            Text="Excel Aspose.Cell" />
+                            HorizontalOptions="Start"
+                            Text="Excel Aspose.Cell"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnTimer"
-                            Text="定时助手" />
+                            HorizontalOptions="Start"
+                            Text="定时助手"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnLongPressEffects"
-                            Text="测试LongPressEffects" />
+                            HorizontalOptions="Start"
+                            Text="测试LongPressEffects"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnRadioButtonDemo"
-                            Text="RadioButton(自制控件)" />
+                            HorizontalOptions="Start"
+                            Text="RadioButton(自制控件)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnMultiSelectDemo"
-                            Text="MultiSelect(自制控件)" />
+                            HorizontalOptions="Start"
+                            Text="MultiSelect(自制控件)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnColorList"
-                            Text="ColorList" />
+                            HorizontalOptions="Start"
+                            Text="ColorList"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -156,19 +205,29 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnPageSQLiteDemo"
-                            Text="SQLite Demo" />
+                            HorizontalOptions="Start"
+                            Text="SQLite Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnAudioPlayer"
-                            Text="播放音频" />
+                            HorizontalOptions="Start"
+                            Text="播放音频"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnTTSDemo"
-                            Text="TTS语音合成" />
+                            HorizontalOptions="Start"
+                            Text="TTS&#x0a;语音合成"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageScreen"
-                            Text="屏幕(IScreen)" />
+                            HorizontalOptions="Start"
+                            Text="屏幕(IScreen)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnSendEMail"
-                            Text="发送邮件" />
+                            HorizontalOptions="Start"
+                            Text="发送邮件"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -184,20 +243,30 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnPageXamarinEssentialsDemo"
-                            Text="Xamarin Essentials Demo" />
+                            HorizontalOptions="Start"
+                            Text="Xamarin Essentials Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageZXingDemo"
-                            Text="ZXing.Net(二维码扫描与生成)" />
+                            HorizontalOptions="Start"
+                            Text="ZXing.Net&#x0a;(二维码扫描与生成)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnAcrUserDialogsDemo"
-                            Text="Acr.User.Dialog" />
+                            HorizontalOptions="Start"
+                            Text="Acr.User.Dialog"
+                            WidthRequest="100" />
 
                         <Button
                             x:Name="btnDevExpress"
-                            Text="DevExpress.Mobile.Grid" />
+                            HorizontalOptions="Start"
+                            Text="DevExpress.Mobile.Grid"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageBaiduMenu"
-                            Text="百度" />
+                            HorizontalOptions="Start"
+                            Text="百度"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -213,19 +282,29 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnPageIRDemo"
-                            Text="IR(红外线)" />
+                            HorizontalOptions="Start"
+                            Text="IR(红外线)"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnAndroidPermission"
-                            Text="安卓权限" />
+                            HorizontalOptions="Start"
+                            Text="安卓权限"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnAndroidIntentUtils_InstallAPK"
-                            Text="打开APK安装程序" />
+                            HorizontalOptions="Start"
+                            Text="打开APK安装程序"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnAndroidPermissionV3"
-                            Text="安卓权限V3" />
+                            HorizontalOptions="Start"
+                            Text="安卓权限V3"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnAndroidScreenshotTools"
-                            Text="屏幕截屏录像" />
+                            HorizontalOptions="Start"
+                            Text="屏幕截屏录像"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -241,14 +320,16 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnAccommodatingViewAndKeyboard"
-                            Text="对于软键盘自动调整画面(iOS)" />
+                            HorizontalOptions="Start"
+                            Text="对于软键盘自动调整画面(iOS)"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="100" />
+                    <RowDefinition Height="120" />
                 </Grid.RowDefinitions>
                 <Label Text="系统框架功能测试" />
                 <ScrollView
@@ -257,10 +338,14 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnTest_CheckUpdate_DownloadFromApplication"
-                            Text="获取服务器最新程序版本_本程序下载" />
+                            HorizontalOptions="Start"
+                            Text="获取服务器最新程序版本_本程序下载"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnTest_CheckUpdate_DownloadFromBrowser"
-                            Text="获取服务器最新程序版本_用浏览器下载" />
+                            HorizontalOptions="Start"
+                            Text="获取服务器最新程序版本_用浏览器下载"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -276,7 +361,9 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnSharpIf"
-                            Text="#if something" />
+                            HorizontalOptions="Start"
+                            Text="#if something"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -292,49 +379,79 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnAllPage"
-                            Text="01 - Page测试实例" />
+                            HorizontalOptions="Start"
+                            Text="01 - Page测试实例"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnLayoutDemoList"
-                            Text="02 - Layout测试实例" />
+                            HorizontalOptions="Start"
+                            Text="02 - Layout测试实例"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageLifecycle"
-                            Text="Page 生命周期" />
+                            HorizontalOptions="Start"
+                            Text="Page 生命周期"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnTestUnhandledExceptionHandler"
-                            Text="测试全局捕获异常" />
+                            HorizontalOptions="Start"
+                            Text="测试全局捕获异常"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageDisplayAlertDemo"
-                            Text="弹窗 Demo" />
+                            HorizontalOptions="Start"
+                            Text="弹窗 Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageOutputDemo"
-                            Text="IOutput实现" />
+                            HorizontalOptions="Start"
+                            Text="IOutput实现"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageMessagingCenterDemo"
-                            Text="MessagingCenter Demo - 类似安卓的广播" />
+                            HorizontalOptions="Start"
+                            Text="MessagingCenter Demo - 类似安卓的广播"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageWebviewDemo"
-                            Text="Webview DEMO" />
+                            HorizontalOptions="Start"
+                            Text="Webview DEMO"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPickerDemo"
-                            Text="PickerDemo" />
+                            HorizontalOptions="Start"
+                            Text="PickerDemo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageWebServiceReferenceDemo"
-                            Text="WebService Reference Demo" />
+                            HorizontalOptions="Start"
+                            Text="WebService Reference Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnGestureDemo"
-                            Text="手势识别" />
+                            HorizontalOptions="Start"
+                            Text="手势识别"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnGesturePinchDemo"
-                            Text="手势识别_缩放手势" />
+                            HorizontalOptions="Start"
+                            Text="手势识别_缩放手势"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnLabelDemo"
-                            Text="Label Demo" />
+                            HorizontalOptions="Start"
+                            Text="Label Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnXamarinComponentDemo"
-                            Text="Xamarin Component Demo" />
+                            HorizontalOptions="Start"
+                            Text="Xamarin Component Demo"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnMarqueeDemo"
-                            Text="跑马灯Label" />
+                            HorizontalOptions="Start"
+                            Text="跑马灯Label"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>
@@ -351,7 +468,9 @@
                     <StackLayout Orientation="Horizontal">
                         <Button
                             x:Name="btnXamarinFormsFeatures_4p6"
-                            Text="Xamarin.Forms 4.6 新特性" />
+                            HorizontalOptions="Start"
+                            Text="XF 4.6 &#x0a;新特性"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

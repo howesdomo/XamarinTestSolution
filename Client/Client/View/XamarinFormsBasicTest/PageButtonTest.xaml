@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XamarinFormsBasicTest.PageButtonTest"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView>
+            <TableView
+                HasUnevenRows="True"
+                HorizontalOptions="Fill"
+                Intent="Settings"
+                VerticalOptions="Fill">
+
+                <TableRoot>
+                    <TableSection Title="使用 关键字 ??x0a 进行换行">
+                        <ViewCell>
+                            <Button
+                                x:Name="btnSimpleSln"
+                                Text="123&#x0a;456" />
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="原生 Button控件 添加图标 HorizontalOptions 为默认">
+                        <ViewCell>
+                            <StackLayout>
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Text="缺点占满全屏时无法使图标挨近文字" />
+                                <Button
+                                    ContentLayout="Left,20"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Left icon" />
+                                <Button
+                                    ContentLayout="Top,20"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Top icon" />
+
+                                <Button
+                                    ContentLayout="Right,20"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Right icon" />
+                                <Button
+                                    ContentLayout="Bottom,20"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Bottom " />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="原生 Button控件 添加图标 设置 HorizontalOptions Start">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button
+                                    ContentLayout="Left,20"
+                                    HorizontalOptions="Start"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Left icon" />
+                                <Button
+                                    ContentLayout="Top,20"
+                                    HorizontalOptions="Start"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Top icon" />
+
+                                <Button
+                                    ContentLayout="Right,20"
+                                    HorizontalOptions="Start"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Right icon" />
+                                <Button
+                                    ContentLayout="Bottom,20"
+                                    HorizontalOptions="Start"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Bottom " />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="增加 WidthRequest 300 后, 不能控制图标与文字的距离">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button
+                                    ContentLayout="Left,20"
+                                    HorizontalOptions="Start"
+                                    ImageSource="{FontImage Color=Purple,
+                                                            FontFamily=FontAwesome,
+                                                            Size=30,
+                                                            Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="Left icon"
+                                    WidthRequest="300" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+
+                    <TableSection Title="自制控件 Btn 普通赋值测试">
+                        <ViewCell>
+                            <ui:Btn
+                                FontAttributes="Italic"
+                                FontSize="12"
+                                Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data."
+                                TextColor="Blue"
+                                TextDecorations="Underline">
+                                <ui:Btn.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_Tapped" />
+                                </ui:Btn.GestureRecognizers>
+                            </ui:Btn>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="自制Btn左右绑定图片测试">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <ui:Btn
+                                    LeftImageSource="https://cn.bing.com/sa/simg/bing_p_rr_teal_min.ico"
+                                    RightImageSource="{FontImage Color=Purple,
+                                                                 FontFamily=FontAwesome,
+                                                                 Size=30,
+                                                                 Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="扫描" />
+
+                                <ui:Btn
+                                    LeftImageMargin="5,0,0,0"
+                                    LeftImageSource="https://cn.bing.com/sa/simg/bing_p_rr_teal_min.ico"
+                                    LeftImageWidthRequest="30"
+                                    RightImageMargin="0,0,5,0"
+                                    RightImageSource="{FontImage Color=Purple,
+                                                                 FontFamily=FontAwesome,
+                                                                 Size=30,
+                                                                 Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="扫描" />
+
+                                <ui:Btn
+                                    HorizontalOptions="FillAndExpand"
+                                    LeftImageSource="https://cn.bing.com/sa/simg/bing_p_rr_teal_min.ico"
+                                    RightImageSource="{FontImage Color=Purple,
+                                                                 FontFamily=FontAwesome,
+                                                                 Size=30,
+                                                                 Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="扫描" />
+
+                                <ui:Btn
+                                    HorizontalOptions="FillAndExpand"
+                                    RightImageMargin="35,0,0,0"
+                                    RightImageSource="{FontImage Color=Purple,
+                                                                 FontFamily=FontAwesome,
+                                                                 Size=30,
+                                                                 Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="扫描" />
+
+                                <ui:Btn
+                                    HorizontalOptions="FillAndExpand"
+                                    LeftImageMargin="0,0,35,0"
+                                    LeftImageSource="https://cn.bing.com/sa/simg/bing_p_rr_teal_min.ico"
+                                    LeftImageWidthRequest="40"
+                                    Text="扫描" />
+
+                                <ui:Btn
+                                    HorizontalOptions="FillAndExpand"
+                                    LeftImageSource="{FontImage Color=Purple,
+                                                                FontFamily=FontAwesome,
+                                                                Size=30,
+                                                                Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+
+
+                                <ui:Btn
+                                    LeftImageSource="{FontImage Color=Purple,
+                                                                FontFamily=FontAwesome,
+                                                                Size=30,
+                                                                Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data."
+                                    WidthRequest="280" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+
+                    <TableSection Title="Grid 排列( 较大高度/自适应高度/高度不足显示全 )">
+                        <ViewCell>
+                            <Grid
+                                ColumnSpacing="0"
+                                HorizontalOptions="Fill"
+                                RowSpacing="0"
+                                VerticalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="3*" />
+                                </Grid.ColumnDefinitions>
+
+                                <ui:Btn
+                                    Grid.Column="0"
+                                    HeightRequest="200"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+                                <ui:Btn
+                                    Grid.Column="1"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+                                <ui:Btn
+                                    Grid.Column="2"
+                                    HeightRequest="50"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+
+
+                    <TableSection Title="StackLayout 排列 ( 高度不足显示全/自适应高度/较大高度 ) ">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="StartAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="0"
+                                VerticalOptions="StartAndExpand">
+                                <!--  高度不足显示全  -->
+                                <ui:Btn
+                                    HeightRequest="120"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+                                <!--  自适应高度  -->
+                                <ui:Btn Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+                                <!--  较大高度  -->
+                                <ui:Btn
+                                    HeightRequest="200"
+                                    Text="A ListView Control can be used in any situation where you're displaying scrollable lists of data." />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="[注意]ViewCell直接包Btn会出现文字缺失, 请外包一层StackLayout">
+                        <ViewCell>
+
+                            <ui:Btn
+                                LeftImageSource="https://cn.bing.com/sa/simg/bing_p_rr_teal_min.ico"
+                                RightImageSource="{FontImage Color=Purple,
+                                                             FontFamily=FontAwesome,
+                                                             Size=30,
+                                                             Glyph={x:Static utilFont:FontAwesomeIcons.BarcodeScan}}"
+                                Text="扫描">
+                                <ui:Btn.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        NumberOfTapsRequired="1"
+                                        Tapped="TapGestureRecognizer_Tapped" />
+                                </ui:Btn.GestureRecognizers>
+                            </ui:Btn>
+
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="测试结束" />
+
+                </TableRoot>
+            </TableView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

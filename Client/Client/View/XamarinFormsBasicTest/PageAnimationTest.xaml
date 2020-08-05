@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XamarinFormsBasicTest.PageAnimationTest"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView>
+            <TableView
+                HasUnevenRows="True"
+                HorizontalOptions="Fill"
+                Intent="Settings"
+                VerticalOptions="Fill">
+
+                <TableRoot>
+                    <TableSection Title="Rotation">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b0"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b0_Btn0"
+                                    Clicked="b0_Btn0_Clicked"
+                                    Text="Rotation" />
+
+                                <Button
+                                    x:Name="b0_Btn1"
+                                    Clicked="b0_Btn1_Clicked"
+                                    Text="Relative Rotation" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="Scaling">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b1"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b1_Btn0"
+                                    Clicked="b1_Btn0_Clicked"
+                                    Text="Scaling" />
+
+                                <Button
+                                    x:Name="b1_Btn1"
+                                    Clicked="b1_Btn1_Clicked"
+                                    Text="Relative Scaling" />
+
+                                <Button
+                                    x:Name="b1_Reset"
+                                    Clicked="b1_Reset_Clicked"
+                                    Text="Reset" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+
+                    <TableSection Title="Scaling and Rotation with Anchors">
+                        <ViewCell>
+                            <StackLayout
+                                x:Name="sl2"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b2"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b2_Btn0"
+                                    Clicked="b2_Btn0_Clicked"
+                                    Text="Rotation with Anchors" />
+
+                                <Button
+                                    x:Name="b2_Btn1"
+                                    Clicked="b2_Btn1_Clicked"
+                                    Text="Relative Rotation with Anchors" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+
+                    <TableSection Title="Translation">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b3"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b3_Btn0"
+                                    Clicked="b3_Btn0_Clicked"
+                                    Text="Translation ( -25, 25 )" />
+
+                                <Button
+                                    x:Name="b3_Reset"
+                                    Clicked="b3_Reset_Clicked"
+                                    Text="Reset" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+
+                    <TableSection Title="Fading">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b4"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b4_Btn0"
+                                    Clicked="b4_Btn0_Clicked"
+                                    Text="FadeTo Zero" />
+
+                                <Button
+                                    x:Name="b4_Reset"
+                                    Clicked="b4_Reset_Clicked"
+                                    Text="Reset" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="Compound Animations 复合动画">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b5"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b5_Btn0"
+                                    Clicked="b5_Btn0_Clicked"
+                                    Text="连续进行多个动画" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="Composite Animations 组合动画">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b6"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b6_Btn0"
+                                    Clicked="b6_Btn0_Clicked"
+                                    Text="同时进行2个动画" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="Composite Animations 组合动画(使用 Task.WhenAny())">
+                        <ViewCell>
+                            <StackLayout
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Image
+                                    x:Name="b7"
+                                    Margin="0,50,0,50"
+                                    BackgroundColor="Red"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="{FontImage FontFamily=FontAwesome,
+                                                       Color=Orange,
+                                                       Glyph={x:Static utilFont:FontAwesomeIcons.ArrowAltUp}}"
+                                    VerticalOptions="Start"
+                                    WidthRequest="100" />
+
+                                <Button
+                                    x:Name="b7_Btn0"
+                                    Clicked="b7_Btn0_Clicked"
+                                    Text="连续进行多个动画" />
+
+                                <Button
+                                    x:Name="b7_Btn1"
+                                    Clicked="b7_Btn1_Clicked"
+                                    Text="取消动画" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+
+                    <TableSection Title="测试结束" />
+
+                </TableRoot>
+            </TableView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

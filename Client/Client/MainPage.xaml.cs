@@ -166,6 +166,8 @@ namespace Client
 
             this.btnAllPage.Clicked += BtnAllPage_Clicked;
             this.btnLayoutDemoList.Clicked += BtnLayoutDemoList_Clicked;
+            this.btnButtonDemo.Clicked += BtnButtonDemo_Clicked;
+            this.btnAnimation.Clicked += BtnAnimation_Clicked;
             this.btnPageLifecycle.Clicked += BtnPageLifecycle_Clicked;
             this.btnTestUnhandledExceptionHandler.Clicked += BtnTestUnhandledExceptionHandler_Clicked;
             this.btnPageDisplayAlertDemo.Clicked += BtnPageDisplayAlertDemo_Clicked;
@@ -178,14 +180,18 @@ namespace Client
             this.btnGesturePinchDemo.Clicked += BtnGesturePinchDemo_Clicked;
             this.btnLabelDemo.Clicked += BtnLabelDemo_Clicked;
             this.btnXamarinComponentDemo.Clicked += btnXamarinComponentDemo_Clicked;
+
             #endregion
 
             #region Xamarin.Forms 新特性
 
+            this.btnXamarinFormsFeatures_4p3.Clicked += BtnXamarinFormsFeatures_4p3_Clicked;
             this.btnXamarinFormsFeatures_4p6.Clicked += btnXamarinFormsFeatures_4p6_Clicked;
 
             #endregion
         }
+
+
 
         #region HoweTools
 
@@ -699,6 +705,15 @@ namespace Client
             await Navigation.PushAsync(new View.LayoutDemo.LayoutDemoList());
         }
 
+        async void BtnButtonDemo_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.XamarinFormsBasicTest.PageButtonTest());
+        }
+
+        async void BtnAnimation_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.XamarinFormsBasicTest.PageAnimationTest());
+        }
 
         async void BtnPageLifecycle_Clicked(object sender, EventArgs e)
         {
@@ -791,6 +806,13 @@ namespace Client
         #endregion
 
         #region Xamarin.Forms 新特性
+
+
+        async void BtnXamarinFormsFeatures_4p3_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.XF_4p3_Features.PageMain());
+
+        }
 
         async void btnXamarinFormsFeatures_4p6_Clicked(object sender, EventArgs e)
         {

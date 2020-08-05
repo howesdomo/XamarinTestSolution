@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XF_4p3_Features.PageCollectionView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:Client.View.XF_4p3_Features"
+    Title="CollectionView 基本使用方法"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <view:PageCollectionView_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout
+                HeightRequest="90"
+                Orientation="Horizontal">
+                <Button
+                    Clicked="Button_Clicked"
+                    Command="{Binding CMD_CheckSelectedItems}"
+                    Text="检测选中项s" />
+
+                <Button
+                    Command="{Binding CMD_Select3}"
+                    Text="[单选模式]&#x0a;选中3" />
+
+                <Button
+                    Command="{Binding CMD_Select1And3}"
+                    Text="[多选模式]&#x0a;清空选中项后&#x0a;选中1与3" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="当前选择模式:"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    Text="{Binding SelectionMode}"
+                    VerticalTextAlignment="Center" />
+
+                <Button
+                    Command="{Binding CMD_ChangeSelectionMode}"
+                    Text="切换" />
+            </StackLayout>
+
+            <CollectionView
+                x:Name="cv0"
+                ItemsSource="{Binding Orders}"
+                SelectedItem="{Binding SelectedItem}"
+                SelectedItems="{Binding SelectedItems, Mode=TwoWay}"
+                SelectionMode="{Binding SelectionMode}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        Span="1" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Text="{Binding Title}" />
+                            <Label
+                                Grid.Row="1"
+                                Text="{Binding OrderNo}" />
+                            <Label
+                                Grid.Row="2"
+                                Text="{Binding OrderType.Title}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

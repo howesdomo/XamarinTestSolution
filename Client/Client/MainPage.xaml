@@ -388,6 +388,16 @@
                             Text="02 - Layout测试实例"
                             WidthRequest="100" />
                         <Button
+                            x:Name="btnButtonDemo"
+                            HorizontalOptions="Start"
+                            Text="03 - Button测试实例"
+                            WidthRequest="100" />
+                        <Button
+                            x:Name="btnAnimation"
+                            HorizontalOptions="Start"
+                            Text="04 - Animation测试实例"
+                            WidthRequest="100" />
+                        <Button
                             x:Name="btnPageLifecycle"
                             HorizontalOptions="Start"
                             Text="Page 生命周期"
@@ -466,6 +476,12 @@
                     Grid.Row="1"
                     Orientation="Horizontal">
                     <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnXamarinFormsFeatures_4p3"
+                            HorizontalOptions="Start"
+                            Text="XF 4.3 &#x0a;新特性"
+                            WidthRequest="100" />
+
                         <Button
                             x:Name="btnXamarinFormsFeatures_4p6"
                             HorizontalOptions="Start"

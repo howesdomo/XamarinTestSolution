@@ -26,8 +26,18 @@ namespace Client.Droid
 
             base.OnCreate(bundle); // Android Resources 在 raw 中放入 音频资源后报错, 挪动到首位后没有报错.
 
-            // Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // 设置支持 CollectionView
-            Xamarin.Forms.Forms.SetFlags("Expander_Experimental"); // 设置支持 Expander - XF 4.6
+            // https://docs.microsoft.com/zh-cn/xamarin/xamarin-forms/internals/experimental-flags
+            // 不要多次调用 SetFlags 方法，因为后续调用将覆盖以前调用的结果。
+            //global::Xamarin.Forms.Forms.SetFlags("Expander_Experimental"); // 设置支持 Expander - XF 4.6
+            //global::Xamarin.Forms.Forms.SetFlags("SwipeView_Experimental"); // CollectionView 支持使用 SwipeView
+            //global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
+
+            // 使用此方式调用多个 SetFlags
+            Xamarin.Forms.Forms.SetFlags(new string[] 
+            {
+                "Expander_Experimental", 
+                "SwipeView_Experimental"
+            });
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 

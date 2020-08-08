@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XF_4p3_Features.PageCollectionView_UseSwipeView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:view="clr-namespace:Client.View.XF_4p3_Features"
+    Title="CollectionView SwipeView"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <view:PageCollectionView_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+                Command="{Binding CMD_CheckSelectedItems}"
+                Text="检测选中项s" />
+            <CollectionView
+                ItemsSource="{Binding Orders}"
+                SelectedItem="{Binding SelectedItem}"
+                SelectedItems="{Binding SelectedItems, Mode=TwoWay}"
+                SelectionMode="Multiple">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem
+                                        BackgroundColor="SkyBlue"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type view:PageCollectionView_ViewModel}}, Path=CMD_UpdateOrder}"
+                                        CommandParameter="{Binding}"
+                                        IconImageSource="{FontImage FontFamily=FontAwesome,
+                                                                    Color=Black,
+                                                                    Glyph={Static utilFont:FontAwesomeIcons.CloudDownloadAlt}}"
+                                        Text="更新" />
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem
+                                        BackgroundColor="LightPink"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type view:PageCollectionView_ViewModel}}, Path=CMD_DeleteOrder}"
+                                        CommandParameter="{Binding}"
+                                        IconImageSource="{FontImage FontFamily=FontAwesome,
+                                                                    Color=Black,
+                                                                    Glyph={Static utilFont:FontAwesomeIcons.TrashAlt}}"
+                                        Text="删除" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Label
+                                    Grid.Row="0"
+                                    Text="{Binding Title}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Text="{Binding OrderNo}" />
+                                <Label
+                                    Grid.Row="2"
+                                    Text="{Binding OrderType.Title}" />
+                            </Grid>
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Transparent" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Orange" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

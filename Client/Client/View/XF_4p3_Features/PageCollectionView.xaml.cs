@@ -36,6 +36,10 @@ namespace Client.View.XF_4p3_Features
 
         public Command CMD_ChangeSelectionMode { get; private set; }
 
+        public Command CMD_UpdateOrder { get; private set; }
+
+        public Command CMD_DeleteOrder { get; private set; }
+
         public PageCollectionView_ViewModel()
         {
             var o = new ObservableCollection<Order>();
@@ -73,6 +77,16 @@ namespace Client.View.XF_4p3_Features
                 this.SelectionMode =
                     this.SelectionMode == SelectionMode.Single ? SelectionMode.Multiple : SelectionMode.Single
                 ;
+            });
+
+            this.CMD_UpdateOrder = new Command<Order>((order) =>
+            {
+                Acr.UserDialogs.UserDialogs.Instance.Toast($"Update Order: {order.OrderNo}");
+            });
+
+            this.CMD_DeleteOrder = new Command<Order>((order) =>
+            {
+                Acr.UserDialogs.UserDialogs.Instance.Toast($"Delete Order: {order.OrderNo}");
             });
         }
 

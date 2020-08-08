@@ -15,7 +15,23 @@
             <StackLayout>
                 <Button
                     Command="{Binding CMD_Page_CollectionView}"
-                    Text="CollectionView" />
+                    Text="CollectionView 基本绑定用法" />
+
+                <Button
+                    Command="{Binding CMD_Page_CollectionView_UseDataTemplateSelector}"
+                    Text="CollectionView 使用 DataTemplateSelector" />
+
+                <Button
+                    Command="{Binding CMD_Page_CollectionView_UseSwipeView}"
+                    Text="CollectionView SwipeView" />
+
+                <Button
+                    Command="{Binding CMD_Page_CollectionView_RefreshView}"
+                    Text="CollectionView RefreshView" />
+
+                <Button
+                    Command="{Binding CMD_Page_CollectionView_LoadDataIncrementally}"
+                    Text="CollectionView 以增量方式加载数据" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

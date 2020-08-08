@@ -375,6 +375,9 @@
     <Compile Update="View\SQLiteDemo\PageSQLiteDemo_NodeItem.xaml.cs">
       <DependentUpon>PageSQLiteDemo_NodeItem.xaml</DependentUpon>
     </Compile>
+    <Compile Update="View\XF_4p3_Features\PageCollectionView_LoadDataIncrementally.xaml.cs">
+      <DependentUpon>PageCollectionView_LoadDataIncrementally.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\XF_4p6_Features\PageMain.xaml.cs">
       <DependentUpon>PageMain.xaml</DependentUpon>
     </Compile>
@@ -649,6 +652,18 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XF_4p3_Features\PageCollectionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p3_Features\PageCollectionView_RefreshView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p3_Features\PageCollectionView_LoadDataIncrementally.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p3_Features\PageCollectionView_UseDataTemplateSelector.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\XF_4p3_Features\PageCollectionView_UseSwipeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\XF_4p3_Features\PageMain.xaml">

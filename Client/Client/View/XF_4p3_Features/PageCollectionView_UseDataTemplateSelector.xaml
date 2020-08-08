@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.XF_4p3_Features.PageCollectionView_UseDataTemplateSelector"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Client.View.XF_4p3_Features"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:Client.View.XF_4p3_Features"
+    Title="使用 DataTemplateSelector"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <view:PageCollectionView_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <DataTemplate x:Key="Odd_DataTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    BackgroundColor="LightGray"
+                    Text="{Binding Title}" />
+                <Label
+                    Grid.Row="1"
+                    Text="{Binding OrderNo}" />
+                <Label
+                    Grid.Row="2"
+                    Text="{Binding OrderType.Title}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="Even_DataTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    BackgroundColor="SkyBlue"
+                    Text="{Binding Title}" />
+                <Label
+                    Grid.Row="1"
+                    Text="{Binding OrderNo}" />
+                <Label
+                    Grid.Row="2"
+                    Text="{Binding OrderType.Title}" />
+            </Grid>
+        </DataTemplate>
+        <view:OddEvenSelector
+            x:Key="OddEven_DataTemplate_Selector"
+            EvenData="{StaticResource Key=Even_DataTemplate}"
+            OddData="{StaticResource Key=Odd_DataTemplate}" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <CollectionView
+                x:Name="cv0"
+                ItemTemplate="{StaticResource Key=OddEven_DataTemplate_Selector}"
+                ItemsSource="{Binding Orders}"
+                SelectedItem="{Binding SelectedItem}"
+                SelectedItems="{Binding SelectedItems, Mode=TwoWay}"
+                SelectionMode="{Binding SelectionMode}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        Span="1" />
+                </CollectionView.ItemsLayout>
+
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

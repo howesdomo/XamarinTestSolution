@@ -21,17 +21,19 @@ namespace Client.View.XF_4p6_Features
 
     public class PageFontAwesome_ViewModel : ViewModel.BaseViewModel
     {
-        public Command CMD_Filter { get; set; }
+        public Command<string> CMD_Filter { get; set; }
 
         public PageFontAwesome_ViewModel()
         {
-            this.CMD_Filter = new Command(() =>
+            this.CMD_Filter = new Command<string>((args) =>
             {
                 FiltedList.Clear();
 
-                if (this.FilterInfo.IsNullOrWhiteSpace() == false)
+                string inputValue = args;
+
+                if (inputValue.IsNullOrWhiteSpace() == false)
                 {
-                    FiltedList = this.AllList.Where(i => new Regex(this.FilterInfo, RegexOptions.IgnoreCase).IsMatch(i.Name) == true)
+                    FiltedList = this.AllList.Where(i => new Regex(inputValue, RegexOptions.IgnoreCase).IsMatch(i.Name) == true)
                                              .ToList();
                 }
                 else
@@ -53,17 +55,6 @@ namespace Client.View.XF_4p6_Features
             set
             {
                 SetProperty(ref _FiltedList, value);
-            }
-        }
-
-        public string _FilterInfo;
-
-        public string FilterInfo
-        {
-            get { return _FilterInfo; }
-            set
-            {
-                SetProperty(ref _FilterInfo, value);
             }
         }
 

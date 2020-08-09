@@ -3,9 +3,10 @@
     x:Class="Client.View.XamarinComponentDemo.PageSearchBar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:components="clr-namespace:Client.Components"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
@@ -13,11 +14,11 @@
             <SearchBar
                 x:Name="sb1"
                 SearchCommand="{Binding PerformSearch}"
-                SearchCommandParameter="{Binding Text, Source={x:Reference sb1}}" />
+                SearchCommandParameter="{Binding Source={x:Reference sb1}, Path=Text}" />
 
 
-            <Label Text="采用自制的控件 FilterBar 修复输入框没有内容时不会触发 SearchCommand 的问题" />
-            <components:FilterBar
+            <Label Text="采用自制的控件 FilterBar 输入框没有内容时仍会触发 SearchCommand" />
+            <ui:FilterBar
                 x:Name="fb1"
                 SearchCommand="{Binding PerformSearch}" />
 

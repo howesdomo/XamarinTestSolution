@@ -3,9 +3,9 @@
     x:Class="Client.View.FileExplorer.PageFileExplorer"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:components="clr-namespace:Client.Components"
     xmlns:effects="clr-namespace:Client.Effects"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN">
     <NavigationPage.TitleView>
         <Grid>
             <Grid.Resources>
@@ -54,7 +54,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <components:FilterBar
+                <ui:FilterBar
                     Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"

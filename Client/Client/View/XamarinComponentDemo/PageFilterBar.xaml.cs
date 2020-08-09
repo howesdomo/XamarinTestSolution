@@ -15,14 +15,11 @@ namespace Client.View.XamarinComponentDemo
         public PageFilterBar()
         {
             InitializeComponent();
-            this.BindingContext = new PageFilterBarViewModel();
+        }
 
-            // 测试注册事件 正常
-            //fb1.Search += new EventHandler<Components.FilterBarEventArgs>((s, e) =>
-            //{
-            //    string msg = $"Search -- query:{e.Query}";
-            //    System.Diagnostics.Debug.WriteLine(msg);
-            //});
+        private void FilterBar_Search(object sender, EventArgs<string> e)
+        {
+            Acr.UserDialogs.UserDialogs.Instance.Toast(filterBar_TestSearchEvent.Text);
         }
     }
 

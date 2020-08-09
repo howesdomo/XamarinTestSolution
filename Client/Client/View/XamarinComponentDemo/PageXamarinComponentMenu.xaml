@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="控件使用实例"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
@@ -27,7 +28,7 @@
 
             <Button
                 Command="{Binding BtnPageFilter_Command}"
-                Text="Filter Bar" />
+                Text="Filter Bar(自制控件)" />
 
 
         </StackLayout>

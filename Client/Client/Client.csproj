@@ -18,6 +18,7 @@
     <Compile Remove="Common\IPermission.cs" />
     <Compile Remove="Common\WebService.cs" />
     <Compile Remove="Common\WebServiceSetting.cs" />
+    <Compile Remove="Components\FilterBar.xaml.cs" />
     <Compile Remove="EditorAdv.cs" />
     <Compile Remove="EntryAdv.cs" />
     <Compile Remove="FilterBarEntry.cs" />
@@ -29,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Components\FilterBar.xaml" />
     <EmbeddedResource Remove="View\Excel_AsposeDemo\PageExcel_Aspose.xaml" />
     <EmbeddedResource Remove="View\MediaManagerDemo\PageMediaManagerDemo.xaml" />
   </ItemGroup>
@@ -387,9 +389,6 @@
     <EmbeddedResource Update="BaseView\UcAudioSetting.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Components\FilterBar.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="MainPageShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -514,9 +513,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\IRDemo\PageIRDemo.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\LabelDemo\LabelDemo_V1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\LayoutDemo\AbsoluteLayoutDemo.xaml">
@@ -704,6 +700,7 @@
 
   <ItemGroup>
     <Folder Include="Common\AppUpdate\" />
+    <Folder Include="Components\" />
     <Folder Include="Connected Services\" />
     <Folder Include="View\Excel_AsposeDemo\" />
     <Folder Include="View\MediaManagerDemo\" />
@@ -856,9 +853,6 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="View\IRDemo\PageIRDemo.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="View\LabelDemo\LabelDemo_V1.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="View\LayoutDemo\AbsoluteLayoutDemo.xaml">

@@ -3,24 +3,53 @@
     x:Class="Client.View.XamarinComponentDemo.PageFilterBar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:components="clr-namespace:Client.Components"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:viewModel="clr-namespace:Client.View.XamarinComponentDemo"
+    Title="FilterBar(自制控件)使用实例"
     mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewModel:PageFilterBarViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="IsTextChangeExecute == false" />
-            <components:FilterBar SearchCommand="{Binding SearchCommand}" />
+        <TableView HasUnevenRows="true">
+            <TableRoot>
+                <TableSection Title="属性 IsTextChangeExecute 为 false ">
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="输入框中点击搜索 或者 点击左边漏斗图标才会调用 SearchCommand 和 Search (Event)" />
+                            <ui:FilterBar
+                                IsTextChangeExecute="False"
+                                SearchCommand="{Binding SearchCommand}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
 
+                <TableSection Title="属性 IsTextChangeExecute 为 true">
+                    <ViewCell>
+                        <StackLayout>
+                            <ui:FilterBar
+                                IsTextChangeExecute="True"
+                                SearchCommand="{Binding SearchCommand}" />
 
-            <Label Text="IsTextChangeExecute == true" />
-            <components:FilterBar
-                IsTextChangeExecute="True"
-                SearchCommand="{Binding SearchCommand}" />
+                            <ListView
+                                HeightRequest="320"
+                                ItemsSource="{Binding SearchResults}" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
 
-            <ListView
-                x:Name="searchResults"
-                ItemsSource="{Binding SearchResults}" />
-        </StackLayout>
+                <TableSection Title="注册Search事件">
+                    <ViewCell>
+                        <StackLayout>
+                            <ui:FilterBar
+                                x:Name="filterBar_TestSearchEvent"
+                                Search="FilterBar_Search" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

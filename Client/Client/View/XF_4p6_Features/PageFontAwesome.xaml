@@ -5,72 +5,83 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
     xmlns:view="clr-namespace:Client.View.XF_4p6_Features"
+    Title="FontAwesome列表"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
         <view:PageFontAwesome_ViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
+            <ui:FilterBar
+                IsTextChangeExecute="True"
+                Placeholder="输入需要查询的图标名称"
+                SearchCommand="{Binding CMD_Filter}" />
 
-            <SearchBar
-                SearchCommand="{Binding CMD_Filter}"
-                Text="{Binding FilterInfo}" />
-
-            <ListView
+            <CollectionView
                 x:Name="lv"
-                HasUnevenRows="True"
-                ItemsSource="{Binding FiltedList}">
-                <ListView.ItemTemplate>
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding FiltedList}"
+                SelectionMode="Single">
+                <CollectionView.EmptyView>
+                    <StackLayout
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                        <Label
+                            HorizontalOptions="Fill"
+                            HorizontalTextAlignment="Center"
+                            Text="搜索结果为空"
+                            VerticalOptions="Fill"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <StackLayout
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label
+                                Margin="20,0,20,0"
+                                BackgroundColor="SkyBlue"
+                                Text="{Binding Name}" />
+
                             <StackLayout
+                                Margin="20,0,0,0"
                                 Orientation="Horizontal"
                                 Spacing="0">
-                                <StackLayout
+
+                                <Label Text="{Binding Code_XML}" />
+                                <Image
                                     Margin="20,0,0,0"
-                                    Spacing="0"
-                                    WidthRequest="150">
-                                    <Label
-                                        HorizontalTextAlignment="End"
-                                        Text="{Binding Name}" />
-                                    <Label
-                                        HorizontalTextAlignment="End"
-                                        Text="{Binding Code_XML}" />
-                                </StackLayout>
+                                    BackgroundColor="Silver"
+                                    WidthRequest="100">
+                                    <Image.Source>
+                                        <FontImageSource
+                                            FontFamily="FontAwesome"
+                                            Glyph="{Binding Code}"
+                                            Size="26"
+                                            Color="Black" />
+                                    </Image.Source>
+                                </Image>
 
-                                <StackLayout WidthRequest="100">
-                                    <Image
-                                        Margin="20,0,0,0"
-                                        BackgroundColor="Silver">
-                                        <Image.Source>
-                                            <FontImageSource
-                                                FontFamily="FontAwesome"
-                                                Glyph="{Binding Code}"
-                                                Size="26"
-                                                Color="Black" />
-                                        </Image.Source>
-                                    </Image>
-                                </StackLayout>
-
-                                <StackLayout WidthRequest="100">
-                                    <Image
-                                        Margin="20,0,0,0"
-                                        BackgroundColor="Silver">
-                                        <Image.Source>
-                                            <FontImageSource
-                                                FontFamily="FontAwesome_Brands"
-                                                Glyph="{Binding Code}"
-                                                Size="26"
-                                                Color="Black" />
-                                        </Image.Source>
-                                    </Image>
-                                </StackLayout>
+                                <Image
+                                    Margin="20,0,0,0"
+                                    BackgroundColor="Silver"
+                                    WidthRequest="100">
+                                    <Image.Source>
+                                        <FontImageSource
+                                            FontFamily="FontAwesome_Brands"
+                                            Glyph="{Binding Code}"
+                                            Size="26"
+                                            Color="Black" />
+                                    </Image.Source>
+                                </Image>
                             </StackLayout>
-                        </ViewCell>
+                        </StackLayout>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

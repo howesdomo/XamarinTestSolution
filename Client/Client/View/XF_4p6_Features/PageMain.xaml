@@ -6,6 +6,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="clr-namespace:Client.View.XF_4p6_Features"
+    Title="Xamarin.Forms 4.6 新特性"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
         <view:PageMain_4point6_Features_ViewModel />

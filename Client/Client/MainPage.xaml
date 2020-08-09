@@ -448,11 +448,6 @@
                             Text="手势识别_缩放手势"
                             WidthRequest="100" />
                         <Button
-                            x:Name="btnLabelDemo"
-                            HorizontalOptions="Start"
-                            Text="Label Demo"
-                            WidthRequest="100" />
-                        <Button
                             x:Name="btnXamarinComponentDemo"
                             HorizontalOptions="Start"
                             Text="Xamarin Component Demo"

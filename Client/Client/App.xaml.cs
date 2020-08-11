@@ -69,6 +69,13 @@ namespace Client
         {
             InitializeComponent();
 
+            // 实验性标志
+            Device.SetFlags(new string[]
+            {
+                "Expander_Experimental",
+                "SwipeView_Experimental"
+            });
+
 #if DEBUG
             // VS 2019 16.3 版本后, 有内置的 Hot Reload
 

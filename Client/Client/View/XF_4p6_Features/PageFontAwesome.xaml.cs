@@ -38,7 +38,7 @@ namespace Client.View.XF_4p6_Features
                 }
                 else
                 {
-                    FiltedList.AddRange(AllList);
+                    FiltedList = this.AllList.ToList();
                 }
             });
 

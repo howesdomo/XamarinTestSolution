@@ -283,11 +283,29 @@ namespace Client.View.AcrUserDialogDemo
 
         void btnActionSheet_Clicked(object sender, EventArgs e)
         {
-            // TODO Acr.UserDialogs.UserDialogs --- ActionSheet
-            Acr.UserDialogs.UserDialogs.Instance.ActionSheet(new Acr.UserDialogs.ActionSheetConfig()
-            {
 
-            });
+            Acr.UserDialogs.UserDialogs.Instance.ActionSheet
+            (
+                new Acr.UserDialogs.ActionSheetConfig().SetTitle("选择新建类型")
+                .Add
+                (
+                    text: "文件",
+                    action: () =>
+                    { 
+                        System.Diagnostics.Debug.WriteLine("选中了创建文件");
+                    },
+                    icon: null
+                )
+                .Add
+                (
+                    text: "文件夹",
+                    action: ()=>
+                    {
+                        System.Diagnostics.Debug.WriteLine("选中了创建文件夹");
+                    },
+                    icon: null
+                )
+            );
         }
 
         void btnPrompt_Clicked(object sender, EventArgs e)

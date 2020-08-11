@@ -15,7 +15,6 @@
     <ContentPage.Content>
         <StackLayout>
             <ui:FilterBar
-                IsTextChangeExecute="True"
                 Placeholder="输入需要查询的图标名称"
                 SearchCommand="{Binding CMD_Filter}" />
 
@@ -23,7 +22,8 @@
                 x:Name="lv"
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding FiltedList}"
-                SelectionMode="Single">
+                SelectionMode="Single"
+                VerticalScrollBarVisibility="Always">
                 <CollectionView.EmptyView>
                     <StackLayout
                         HorizontalOptions="Fill"

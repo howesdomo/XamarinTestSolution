@@ -30,8 +30,6 @@ namespace Client.iOS
 
             #endregion
 
-            Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // 设置支持 CollectionView
-
             global::Xamarin.Forms.Forms.Init();
             var app = new App();
             LoadApplication(app);

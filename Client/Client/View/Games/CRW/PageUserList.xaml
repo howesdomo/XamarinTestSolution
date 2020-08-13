@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:bv="clr-namespace:Client.BaseView"
-             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2"
-             
-             x:Class="Client.View.Games.CRW.PageUserList"
-             Title="查看-用户列表"
-             >
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
-    </ContentPage.Padding>
+<ContentPage
+    x:Class="Client.View.Games.CRW.PageUserList"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:vm="clr-namespace:Client.View.Games.CRW"
+    Title="查看-用户列表"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:PageUserListViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -19,71 +19,67 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Text="{Binding ListInfo}" />
-            <dxg:GridControl x:Name="grid" Grid.Row="1" ItemsSource="{Binding Users}" AllowEditRows="False">
-                <!-- SelectedDataObject="{Binding SelectedUser}" 失效 -->
-                <dxg:GridControl.RowHeight>
-                    <OnIdiom x:TypeArguments="sys:Double" Tablet="70" Phone="70" />
-                </dxg:GridControl.RowHeight>
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding Users}"
+                SelectedItem="{Binding SelectedUser}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image
+                                Grid.Column="0"
+                                Source="{FontImage FontFamily=FontAwesome,
+                                                   Glyph={x:Static utilFont:FontAwesomeIcons.User},
+                                                   Color=SteelBlue}"
+                                WidthRequest="20" />
 
-                <dxg:GridControl.Columns>
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding User.Account}" />
 
-                    <dxg:ImageColumn Caption="" FieldName="Photo" Width="100" AllowGroup="False" AllowSort="False">
-                        <dxg:ImageColumn.Width>
-                            <OnIdiom x:TypeArguments="sys:Double" Tablet="100" Phone="70" />
-                        </dxg:ImageColumn.Width>
-                    </dxg:ImageColumn>
-                    
-                    <dxg:TextColumn Caption="用户名" FieldName="User.Account" />
-                    
-                    <dxg:TemplateColumn Caption="看题溯答" AllowSort="False">
-                        <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
-                        <dxg:TemplateColumn.DisplayTemplate>
-                            <DataTemplate>
-                                <Grid BindingContext="{Binding Source}">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition></RowDefinition>
-                                        <RowDefinition></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Text="{Binding Type1_CRW_LevelLog.DateDisplay}" />
-                                    <Label Grid.Row="1" Text="{Binding Type1_CRW_Level.LevelName}" />
-                                </Grid>
-                            </DataTemplate>
-                        </dxg:TemplateColumn.DisplayTemplate>
-                    </dxg:TemplateColumn>
+                            <Grid Grid.Column="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Label
+                                    Grid.Row="0"
+                                    Text="{Binding Type1_CRW_LevelLog.DateDisplay}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Text="{Binding Type1_CRW_Level.LevelName}" />
+                            </Grid>
 
-                    <dxg:TemplateColumn Caption="听算溯答" AllowSort="False">
-                        <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
-                        <dxg:TemplateColumn.DisplayTemplate>
-                            <DataTemplate>
-                                <Grid BindingContext="{Binding Source}">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition></RowDefinition>
-                                        <RowDefinition></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Text="{Binding Type2_CRW_LevelLog.DateDisplay}" />
-                                    <Label Grid.Row="1" Text="{Binding Type2_CRW_Level.LevelName}" />
-                                </Grid>
-                            </DataTemplate>
-                        </dxg:TemplateColumn.DisplayTemplate>
-                    </dxg:TemplateColumn>
+                            <Grid Grid.Column="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Label
+                                    Grid.Row="0"
+                                    Text="{Binding Type2_CRW_LevelLog.DateDisplay}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Text="{Binding Type2_CRW_Level.LevelName}" />
+                            </Grid>
 
-                    <dxg:TemplateColumn FieldName="rowItemBtn" Caption="进入" AllowSort="False">
-                        <!-- 设置 AllowSort="False" 解决TemplateColumn点解列排序报错的问题 -->
-                        <dxg:TemplateColumn.DisplayTemplate>
-                            <DataTemplate>
-                                <Grid BindingContext="{Binding Source}">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Button Text="查看详情" />
-                                </Grid>
-                            </DataTemplate>
-                        </dxg:TemplateColumn.DisplayTemplate>
-                    </dxg:TemplateColumn>
-
-
-                </dxg:GridControl.Columns>
-            </dxg:GridControl>
+                            <Button
+                                Grid.Column="4"
+                                Command="{Binding Path=CMD_UserDetail, Source={RelativeSource AncestorType={x:Type vm:PageUserListViewModel}}}"
+                                CommandParameter="{Binding}"
+                                Text="查看详情" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

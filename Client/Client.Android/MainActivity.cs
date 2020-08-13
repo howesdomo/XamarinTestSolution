@@ -187,13 +187,13 @@ namespace Client.Droid
             // 初始化 Acr.UserDialogs
             Acr.UserDialogs.UserDialogs.Init(this);
 
-
-            // 初始化 DevExpress.Mobile.Forms
-            DevExpress.Mobile.Forms.Init();
-            // 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
-            // 这里初始化主题颜色为 Theme.Light
-            DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
-            DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
+            //// [弃用] DevExpress.Mobile.Forms
+            //// 初始化 DevExpress.Mobile.Forms
+            //DevExpress.Mobile.Forms.Init();
+            //// 由于DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName 默认主题为 Themes.Dark, 
+            //// 这里初始化主题颜色为 Theme.Light
+            //DevExpress.Mobile.DataGrid.Theme.ThemeManager.ThemeName = DevExpress.Mobile.DataGrid.Theme.Themes.Light;
+            //DevExpress.Mobile.DataGrid.Theme.ThemeManager.RefreshTheme();
 
 
             // 初始化 FFImageLoading

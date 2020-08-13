@@ -3,33 +3,41 @@
     x:Class="Client.View.Games.PageGamesList"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="游戏列表">
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:vm="clr-namespace:Client.View.Games"
+    Title="游戏列表"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:PageGamesList_ViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
                 <Label Text="用户名" />
-                <Editor
-                    x:Name="txtUser"
-                    Text="Howe" />
+                <Entry Text="{Binding UI_UserName}" />
 
                 <Label Text="游戏列表" />
                 <Button
-                    x:Name="btnCRW"
-                    Text="看题溯答" />
+                    Command="{Binding CMD_Tap_CRW_TypeX}"
+                    Text="看题溯答">
+
+                    <Button.CommandParameter>
+                        <x:Int32>1</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
+
                 <Button
-                    x:Name="btnCRW_Type2"
-                    Text="听算溯答" />
+                    Command="{Binding CMD_Tap_CRW_TypeX}"
+                    Text="听算溯答">
+                    <Button.CommandParameter>
+                        <x:Int32>2</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
                 <Button
-                    x:Name="btnUserList"
+                    Command="{Binding CMD_TapUserList}"
                     Text="用户列表" />
-
-                <Button
-                    x:Name="btnSetScreen"
-                    Text="设置竖屏" />
-
-                <Button
-                    x:Name="btnDB"
-                    Text="测试DB" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

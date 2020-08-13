@@ -14,111 +14,73 @@ namespace Client.View.Games.CRW
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageUserListDetail : ContentPage
     {
-        public static string Tag
-        {
-            get
-            {
-                return "PageUserListDetail";
-            }
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                App.Screen.ForceLandscapeRight();
-            });
-        }
-
-        protected override void OnDisappearing()
-        {
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                App.Screen.Unspecified();
-            });
-
-            base.OnDisappearing();
-        }
-
-        PageUserListDetailViewModel ViewModel { get; set; }
+        private CRW.Game_User User { get; set; }        
 
         public PageUserListDetail(Game_User user)
         {
             InitializeComponent();
-            initUI();
-            initEvent();
-
-            this.ViewModel = new PageUserListDetailViewModel();
-            this.BindingContext = this.ViewModel;
-
-            this.ViewModel.User = user;
-            initData();
+            this.User = user;
         }
 
-        private void initData()
+        protected override void OnAppearing()
         {
-            var a1 = new ObservableCollection<DailyUserRecord>();
-
-            foreach (var item in Common.StaticInfo.InnerSQLiteDB.Game_rUserDetail(this.ViewModel.User, 1))
-            {
-                a1.Add(item);
-            }
-
-            this.ViewModel.CRWType1List = a1;
-            uc1.SetBindingContext(this.ViewModel.CRWType1List);
-
-
-            var a2 = new ObservableCollection<DailyUserRecord>();
-
-            foreach (var item in Common.StaticInfo.InnerSQLiteDB.Game_rUserDetail(this.ViewModel.User, 2))
-            {
-                a2.Add(item);
-            }
-
-            this.ViewModel.CRWType2List = a2;
-            uc2.SetBindingContext(this.ViewModel.CRWType2List);
+            (this.BindingContext as PageUserListDetail_ViewModel).initData(this.User);
+            base.OnAppearing();
         }
-
-        private void initUI()
-        {
-            uc1.IsVisible = true;
-            uc2.IsVisible = false;
-        }
-
-        private void initEvent()
-        {
-            this.btnCRW_Type1.Clicked += BtnCRW_Type1_Clicked;
-            this.btnCRW_Type2.Clicked += BtnCRW_Type2_Clicked;
-        }
-
-        private void BtnCRW_Type1_Clicked(object sender, EventArgs e)
-        {
-            btnClick(1);
-        }
-
-        private void BtnCRW_Type2_Clicked(object sender, EventArgs e)
-        {
-            btnClick(2);
-        }
-
-        private void btnClick(int i)
-        {
-            uc1.IsVisible = false;
-            uc2.IsVisible = false;
-
-            switch (i)
-            {
-                case 1: uc1.IsVisible = true; break;
-                case 2: uc2.IsVisible = true; break;
-            }
-        }
-
     }
 
-    public class PageUserListDetailViewModel : ViewModel.BaseViewModel
+    public class PageUserListDetail_ViewModel : ViewModel.BaseViewModel
     {
+        private static readonly object _LOCK_ = new object();
+
+        public PageUserListDetail_ViewModel()
+        {
+            initCommand();
+        }
+
+        public void initData(CRW.Game_User data)
+        {
+            if (this.User != null)
+            {
+                return;
+            }
+
+            lock (_LOCK_)
+            {
+                if (this.User != null)
+                {
+                    return;
+                }
+
+                this.User = data;
+
+                var a1 = new ObservableCollection<DailyUserRecord>();
+
+                foreach (var item in Common.StaticInfo.InnerSQLiteDB.Game_rUserDetail(this.User, 1))
+                {
+                    a1.Add(item);
+                }
+
+                this.CRWType1List = a1;
+
+
+                var a2 = new ObservableCollection<DailyUserRecord>();
+
+                foreach (var item in Common.StaticInfo.InnerSQLiteDB.Game_rUserDetail(this.User, 2))
+                {
+                    a2.Add(item);
+                }
+
+                this.CRWType2List = a2;
+            }
+        }
+
+        void initCommand()
+        {
+            this.CMD_TapTypeButton = new Command<int>(tapTypeButton);
+        }
+
+
         private CRW.Game_User _User;
         public CRW.Game_User User
         {
@@ -162,6 +124,53 @@ namespace Client.View.Games.CRW
                 this.OnPropertyChanged("CRWType2List");
             }
         }
+
+
+        public Command<int> CMD_TapTypeButton { get; private set; }
+
+        void tapTypeButton(int typeId)
+        {
+            this.Type1_IsVisible = false;
+            this.Type2_IsVisible = false;
+
+            switch (typeId)
+            {
+                case 1:
+                    this.Type1_IsVisible = true;
+
+                    break;
+                case 2:
+                    this.Type2_IsVisible = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        private bool _Type1_IsVisible = true;
+        public bool Type1_IsVisible
+        {
+            get { return _Type1_IsVisible; }
+            set
+            {
+                _Type1_IsVisible = value;
+                this.OnPropertyChanged();
+            }
+        }
+
+
+        private bool _Type2_IsVisible;
+        public bool Type2_IsVisible
+        {
+            get { return _Type2_IsVisible; }
+            set
+            {
+                _Type2_IsVisible = value;
+                this.OnPropertyChanged();
+            }
+        }
+
 
     }
 }

@@ -8,6 +8,7 @@ using Xamarin.Forms;
 
 namespace Client.BaseView
 {
+    [Obsolete("Xamarin.Forms已推出自身的CheckBox")]
     public class Checkbox : StackLayout
     {
         public event EventHandler CheckedChanged;

@@ -13,83 +13,44 @@ namespace Client.View.Games.CRW
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageUserList : ContentPage
     {
-        public static string Tag
+        public PageUserList()
         {
-            get
-            {
-                return "PageUserList";
-            }
+            InitializeComponent();
         }
 
         protected override void OnAppearing()
         {
+            App.Screen.ForceLandscapeRight();
             base.OnAppearing();
+        }
+    }
 
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                App.Screen.ForceLandscapeRight();
-            });
+    public class PageUserListViewModel : ViewModel.BaseViewModel
+    {
+        public PageUserListViewModel()
+        {
+            initData();
+            initCommand();
         }
 
-        protected override void OnDisappearing()
+        void initData()
         {
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                App.Screen.Unspecified();
-            });
-
-            base.OnDisappearing();
-        }
-
-        public PageUserListViewModel ViewModel { get; set; }
-
-        public PageUserList()
-        {
-            InitializeComponent();
-
-            initEvent();
-
-            this.ViewModel = new PageUserListViewModel();
-            this.BindingContext = this.ViewModel;
-
-            #region init Data
 
             var users = new ObservableCollection<ModelA>();
+
             foreach (ModelA toAdd in Common.StaticInfo.InnerSQLiteDB.Game_rUserList())
             {
                 users.Add(toAdd);
             }
 
-            this.ViewModel.Users = users;
-
-            #endregion init Data
+            this.Users = users;
         }
 
-        private void initEvent()
+        void initCommand() 
         {
-            this.grid.RowTap += Grid_RowTap;
+            this.CMD_UserDetail = new Command<ModelA>(showUserDetail);
         }
 
-        async void Grid_RowTap(object sender, DevExpress.Mobile.DataGrid.RowTapEventArgs e)
-        {
-            if (this.grid.SelectedDataObject != null && this.grid.SelectedDataObject is ModelA)
-            {
-                this.ViewModel.SelectedUser = this.grid.SelectedDataObject as ModelA;
-            }
-
-            if (e.FieldName == "rowItemBtn")
-            {
-                string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(this.ViewModel.SelectedUser));
-                System.Diagnostics.Debug.WriteLine(msg);
-
-                await Navigation.PushAsync(new Client.View.Games.CRW.PageUserListDetail(this.ViewModel.SelectedUser.User));
-            }
-        }
-
-    }
-
-    public class PageUserListViewModel : ViewModel.BaseViewModel
-    {
         private ObservableCollection<ModelA> _Users;
 
         public ObservableCollection<ModelA> Users
@@ -97,10 +58,27 @@ namespace Client.View.Games.CRW
             get { return this._Users; }
             set
             {
+                if (this.Users != null)
+                {
+                    this.Users.CollectionChanged -= Users_CollectionChanged;
+                }
+
                 this._Users = value;
+
+                if (this.Users != null)
+                {
+                    this.Users.CollectionChanged += Users_CollectionChanged;
+                }
+
                 this.OnPropertyChanged("Users");
                 this.OnPropertyChanged("ListInfo");
             }
+        }
+
+        private void Users_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            this.OnPropertyChanged("Users");
+            this.OnPropertyChanged("ListInfo");
         }
 
         public string ListInfo
@@ -137,6 +115,14 @@ namespace Client.View.Games.CRW
                 this.OnPropertyChanged("SelectedUser");
                 this.OnPropertyChanged("ListInfo");
             }
+        }
+
+        public Command<ModelA> CMD_UserDetail { get; private set; }
+
+        async void showUserDetail(ModelA m)
+        {
+            System.Diagnostics.Debug.WriteLine(Util.JsonUtils.SerializeObjectWithFormatted(m));            
+            await App.Navigation.PushAsync(new Client.View.Games.CRW.PageUserListDetail(m.User));
         }
     }
 

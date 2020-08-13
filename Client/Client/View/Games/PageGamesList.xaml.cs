@@ -18,7 +18,6 @@ namespace Client.View.Games
         public PageGamesList()
         {
             InitializeComponent();
-            initEvent();
         }
 
         /// <summary>
@@ -55,55 +54,52 @@ namespace Client.View.Games
                 await Navigation.PopAsync(true);
             }
         }
+    }
 
-        private void initEvent()
+    public class PageGamesList_ViewModel : ViewModel.BaseViewModel
+    {
+        public PageGamesList_ViewModel()
         {
-            this.btnCRW.Clicked += BtnCRW_Clicked;
-            this.btnCRW_Type2.Clicked += BtnCRW_Type2_Clicked;
-
-            this.btnUserList.Clicked += BtnUserList_Clicked;
-            this.btnSetScreen.Clicked += BtnSetScreen_Clicked;
-
-            this.btnDB.Clicked += BtnDB_Clicked;
+            initCommand();
         }
 
-        private void BtnSetScreen_Clicked(object sender, EventArgs e)
+        void initCommand() 
         {
-            App.Screen.ForcePortrait();
+            CMD_Tap_CRW_TypeX = new Command<int>(tap_CRW_TypeX);
+            CMD_TapUserList = new Command(tapUserList);
         }
 
-        private void BtnDB_Clicked(object sender, EventArgs e)
-        {
-            CRW.Game_User o = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = "Howe" });
+        private string _UI_UserName = "Howe";
 
-            string msg = "{0}".FormatWith(Util.JsonUtils.SerializeObject(o));
-            System.Diagnostics.Debug.WriteLine(msg);
+        public string UI_UserName
+        {
+            get { return _UI_UserName; }
+            set { _UI_UserName = value;
+                this.OnPropertyChanged();
+            }
+        }
+
+        public Command<int> CMD_Tap_CRW_TypeX { get; private set; }
+
+        void tap_CRW_TypeX(int CRWTypeID)
+        {
+            openGamePage_CRW(CRWTypeID);
         }
 
         System.ComponentModel.BackgroundWorker mBGWorker_OpenGamePage_CRW { get; set; }
-
-        void BtnCRW_Clicked(object sender, EventArgs e)
-        {
-            openGamePage_CRW(CRWTypeID: 1);
-        }
-
-        void BtnCRW_Type2_Clicked(object sender, EventArgs e)
-        {
-            openGamePage_CRW(CRWTypeID: 2);
-        }
 
         async void openGamePage_CRW(int CRWTypeID)
         {
             if (App.TTS.Check_InitTextToSpeech() == true)
             {
-                Game_User = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = this.txtUser.Text });
+                PageGamesList.Game_User = Client.Common.StaticInfo.InnerSQLiteDB.CRW_rcUser(new CRW.Game_User() { Account = UI_UserName });
                 var page = new Client.View.Games.CRW.PageMain(CRWTypeID);
-                await Navigation.PushAsync(page);
+                await App.Navigation.PushAsync(page);
                 return;
             }
 
             // else -- App.TTS.Check_InitTextToSpeech() == false 
-            await this.DisplayAlert("提示", "确认打开TTS合成语音", "确认");
+            await App.Navigation.DisplayAlert("提示", "确认打开TTS合成语音", "确认");
             App.TTS.InitTextToSpeech();
 
             if (mBGWorker_OpenGamePage_CRW == null)
@@ -153,10 +149,16 @@ namespace Client.View.Games
             }
         }
 
-        async void BtnUserList_Clicked(object sender, EventArgs e)
+
+
+
+        public Command CMD_TapUserList { get; private set; }
+        
+        async void tapUserList()
         {
-            await Navigation.PushAsync(new Client.View.Games.CRW.PageUserList());
+            await App.Navigation.PushAsync(new Client.View.Games.CRW.PageUserList());
         }
+
     }
 
     public class PageGameListEventArgs : EventArgs

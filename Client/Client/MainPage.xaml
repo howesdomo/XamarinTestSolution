@@ -256,12 +256,6 @@
                             HorizontalOptions="Start"
                             Text="Acr.User.Dialog"
                             WidthRequest="100" />
-
-                        <Button
-                            x:Name="btnDevExpress"
-                            HorizontalOptions="Start"
-                            Text="DevExpress.Mobile.Grid"
-                            WidthRequest="100" />
                         <Button
                             x:Name="btnPageBaiduMenu"
                             HorizontalOptions="Start"

@@ -1,11 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Client.View.Games.CRW"
-             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.1"
-             x:Class="Client.View.Games.CRW.PageUserListDetail"
-             Title="用户详细列表"
-             >
+<ContentPage
+    x:Class="Client.View.Games.CRW.PageUserListDetail"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:Client.View.Games.CRW"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:vm="clr-namespace:Client.View.Games.CRW"
+    Title="用户详细列表"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:PageUserListDetail_ViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -18,21 +25,42 @@
                 <Label Text="{Binding User.Account}" />
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Grid.Row="1" BackgroundColor="Gray">
-                <Button x:Name="btnCRW_Type1" Text="看题溯答" />
-                <Button x:Name="btnCRW_Type2" Text="听力溯答" />
-            </StackLayout>
-            <Grid x:Name="gTabbed" Grid.Row="2">
-                <!--<dxg:GridControl x:Name="uc1" ItemsSource="{Binding CRWType1List}" AllowEditRows="False">
-                    <dxg:GridControl.Columns>
-                        <dxg:TextColumn Caption="日期" FieldName="DateDisplay" />
-                        <dxg:TextColumn Caption="最高锻炼等级" FieldName="MaxLevelName" />
-                        <dxg:TextColumn Caption="锻炼时间" FieldName="MaxUseTimeDisplay" />
-                    </dxg:GridControl.Columns>
-                </dxg:GridControl>-->
+            <StackLayout
+                Grid.Row="1"
+                BackgroundColor="Gray"
+                Orientation="Horizontal">
+                <Button
+                    Command="{Binding CMD_TapTypeButton}"
+                    Text="看题溯答">
+                    <Button.CommandParameter>
+                        <x:Int32>1</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
+                <Button
+                    Command="{Binding CMD_TapTypeButton}"
+                    Text="听力溯答">
+                    <Button.CommandParameter>
+                        <x:Int32>2</x:Int32>
+                    </Button.CommandParameter>
+                </Button>
 
-                <local:UcUserListDetail x:Name="uc1" />
-                <local:UcUserListDetail x:Name="uc2" />
+            </StackLayout>
+            <Grid
+                Grid.Row="2"
+                BackgroundColor="Yellow"
+                IsVisible="{Binding Type1_IsVisible}">
+                <vm:UcUserListDetail
+                    BackgroundColor="White"
+                    BindingContext="{Binding CRWType1List}" />
+            </Grid>
+
+            <Grid
+                Grid.Row="2"
+                BackgroundColor="Orange"
+                IsVisible="{Binding Type2_IsVisible}">
+                <vm:UcUserListDetail
+                    BackgroundColor="White"
+                    BindingContext="{Binding CRWType2List}" />
             </Grid>
         </Grid>
     </ContentPage.Content>

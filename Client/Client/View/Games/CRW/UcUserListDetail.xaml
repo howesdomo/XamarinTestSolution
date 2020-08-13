@@ -1,8 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2"
-             x:Class="Client.View.Games.CRW.UcUserListDetail">
+<ContentView
+    x:Class="Client.View.Games.CRW.UcUserListDetail"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:vm="clr-namespace:Client.View.Games.CRW"
+    mc:Ignorable="d">
+
+    <!--  Title="查看-用户列表"  -->
     <ContentView.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -10,21 +17,48 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <dxg:GridControl x:Name="grid" Grid.Row="1" AllowEditRows="False">
-                <dxg:GridControl.FormatConditions>
-                    <!--<dxg:FormatCondition FieldName="MaxUseTime" Expression="[MaxUseTime]&lt;0" PredefinedFormatName="RedText"/> &lt; html转意 小于或 -->
-                    <dxg:FormatCondition FieldName="MaxUseTime" Expression="[MaxUseTime]&lt;3000000000" PredefinedFormatName="RedText"/>
-                    <dxg:FormatCondition FieldName="MaxUseTime" Expression="[MaxUseTime]>=3000000000" PredefinedFormatName="GreenText"/>
-                </dxg:GridControl.FormatConditions>
-                <dxg:GridControl.Columns>
-                    <dxg:TextColumn Caption="日期" FieldName="DateDisplay" />
-                    <dxg:TextColumn Caption="最高锻炼等级" FieldName="MaxLevelName" />
-                    <dxg:TextColumn Caption="锻炼时间" FieldName="MaxUseTimeDisplay" />
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
-                    <dxg:TextColumn Caption="MaxLevel(测试图表)" FieldName="Level" />
-                    <dxg:TextColumn Caption="锻炼时间(测试图表)" FieldName="MaxUseTime" />
-                </dxg:GridControl.Columns>
-            </dxg:GridControl>
+                            <!--
+                            <Label Caption="日期" FieldName="DateDisplay" />
+                            <Label Caption="最高锻炼等级" FieldName="MaxLevelName" />
+                            <Label Caption="锻炼时间" FieldName="MaxUseTimeDisplay" />
+                            <Label Caption="MaxLevel(测试图表)" FieldName="Level" />
+                            <Label Caption="锻炼时间(测试图表)" FieldName="MaxUseTime" />
+                            -->
+
+                            <Label
+                                Grid.Column="0"
+                                Text="{Binding DateDisplay}" />
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding MaxLevelName}" />
+                            <Label
+                                Grid.Column="2"
+                                Text="{Binding MaxUseTimeDisplay}" />
+                            <Label
+                                Grid.Column="3"
+                                Text="{Binding Level}" />
+                            <Label
+                                Grid.Column="4"
+                                Text="{Binding MaxUseTime}" />
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
     </ContentView.Content>
 </ContentView>

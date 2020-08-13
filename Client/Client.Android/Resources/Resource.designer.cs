@@ -2618,2966 +2618,6 @@ namespace Client.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Client.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Client.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Client.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_fade_in = global::Client.Droid.Resource.Animation.abc_fade_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_fade_out = global::Client.Droid.Resource.Animation.abc_fade_out;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::Client.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_popup_enter = global::Client.Droid.Resource.Animation.abc_popup_enter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_popup_exit = global::Client.Droid.Resource.Animation.abc_popup_exit;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Client.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_slide_in_bottom = global::Client.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_slide_in_top = global::Client.Droid.Resource.Animation.abc_slide_in_top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_slide_out_bottom = global::Client.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_slide_out_top = global::Client.Droid.Resource.Animation.abc_slide_out_top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_tooltip_enter = global::Client.Droid.Resource.Animation.abc_tooltip_enter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.abc_tooltip_exit = global::Client.Droid.Resource.Animation.abc_tooltip_exit;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.design_bottom_sheet_slide_in = global::Client.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.design_bottom_sheet_slide_out = global::Client.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.design_snackbar_in = global::Client.Droid.Resource.Animation.design_snackbar_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.design_snackbar_out = global::Client.Droid.Resource.Animation.design_snackbar_out;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.EnterFromLeft = global::Client.Droid.Resource.Animation.EnterFromLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.EnterFromRight = global::Client.Droid.Resource.Animation.EnterFromRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.ExitToLeft = global::Client.Droid.Resource.Animation.ExitToLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animation.ExitToRight = global::Client.Droid.Resource.Animation.ExitToRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.design_appbar_state_list_animator = global::Client.Droid.Resource.Animator.design_appbar_state_list_animator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.design_fab_hide_motion_spec = global::Client.Droid.Resource.Animator.design_fab_hide_motion_spec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.design_fab_show_motion_spec = global::Client.Droid.Resource.Animator.design_fab_show_motion_spec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_btn_state_list_anim = global::Client.Droid.Resource.Animator.mtrl_btn_state_list_anim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::Client.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_chip_state_list_anim = global::Client.Droid.Resource.Animator.mtrl_chip_state_list_anim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_fab_hide_motion_spec = global::Client.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_fab_show_motion_spec = global::Client.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::Client.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::Client.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarDivider = global::Client.Droid.Resource.Attribute.actionBarDivider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarItemBackground = global::Client.Droid.Resource.Attribute.actionBarItemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarPopupTheme = global::Client.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarSize = global::Client.Droid.Resource.Attribute.actionBarSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarSplitStyle = global::Client.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarStyle = global::Client.Droid.Resource.Attribute.actionBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarTabBarStyle = global::Client.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarTabStyle = global::Client.Droid.Resource.Attribute.actionBarTabStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarTabTextStyle = global::Client.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarTheme = global::Client.Droid.Resource.Attribute.actionBarTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionBarWidgetTheme = global::Client.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionButtonStyle = global::Client.Droid.Resource.Attribute.actionButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionDropDownStyle = global::Client.Droid.Resource.Attribute.actionDropDownStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionLayout = global::Client.Droid.Resource.Attribute.actionLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionMenuTextAppearance = global::Client.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionMenuTextColor = global::Client.Droid.Resource.Attribute.actionMenuTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeBackground = global::Client.Droid.Resource.Attribute.actionModeBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeCloseButtonStyle = global::Client.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeCloseDrawable = global::Client.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeCopyDrawable = global::Client.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeCutDrawable = global::Client.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeFindDrawable = global::Client.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModePasteDrawable = global::Client.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModePopupWindowStyle = global::Client.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeSelectAllDrawable = global::Client.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeShareDrawable = global::Client.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeSplitBackground = global::Client.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeStyle = global::Client.Droid.Resource.Attribute.actionModeStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionModeWebSearchDrawable = global::Client.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionOverflowButtonStyle = global::Client.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionOverflowMenuStyle = global::Client.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionProviderClass = global::Client.Droid.Resource.Attribute.actionProviderClass;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.actionViewClass = global::Client.Droid.Resource.Attribute.actionViewClass;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.activityChooserViewStyle = global::Client.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.alertDialogButtonGroupStyle = global::Client.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.alertDialogCenterButtons = global::Client.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.alertDialogStyle = global::Client.Droid.Resource.Attribute.alertDialogStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.alertDialogTheme = global::Client.Droid.Resource.Attribute.alertDialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.allowStacking = global::Client.Droid.Resource.Attribute.allowStacking;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.alpha = global::Client.Droid.Resource.Attribute.alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.alphabeticModifiers = global::Client.Droid.Resource.Attribute.alphabeticModifiers;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.arrowHeadLength = global::Client.Droid.Resource.Attribute.arrowHeadLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.arrowShaftLength = global::Client.Droid.Resource.Attribute.arrowShaftLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.autoCompleteTextViewStyle = global::Client.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.autoSizeMaxTextSize = global::Client.Droid.Resource.Attribute.autoSizeMaxTextSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.autoSizeMinTextSize = global::Client.Droid.Resource.Attribute.autoSizeMinTextSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.autoSizePresetSizes = global::Client.Droid.Resource.Attribute.autoSizePresetSizes;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.autoSizeStepGranularity = global::Client.Droid.Resource.Attribute.autoSizeStepGranularity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.autoSizeTextType = global::Client.Droid.Resource.Attribute.autoSizeTextType;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.background = global::Client.Droid.Resource.Attribute.background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.backgroundSplit = global::Client.Droid.Resource.Attribute.backgroundSplit;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.backgroundStacked = global::Client.Droid.Resource.Attribute.backgroundStacked;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.backgroundTint = global::Client.Droid.Resource.Attribute.backgroundTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.backgroundTintMode = global::Client.Droid.Resource.Attribute.backgroundTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.barLength = global::Client.Droid.Resource.Attribute.barLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.behavior_autoHide = global::Client.Droid.Resource.Attribute.behavior_autoHide;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.behavior_fitToContents = global::Client.Droid.Resource.Attribute.behavior_fitToContents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.behavior_hideable = global::Client.Droid.Resource.Attribute.behavior_hideable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.behavior_overlapTop = global::Client.Droid.Resource.Attribute.behavior_overlapTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.behavior_peekHeight = global::Client.Droid.Resource.Attribute.behavior_peekHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.behavior_skipCollapsed = global::Client.Droid.Resource.Attribute.behavior_skipCollapsed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.borderWidth = global::Client.Droid.Resource.Attribute.borderWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.borderlessButtonStyle = global::Client.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.bottomAppBarStyle = global::Client.Droid.Resource.Attribute.bottomAppBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.bottomNavigationStyle = global::Client.Droid.Resource.Attribute.bottomNavigationStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.bottomSheetDialogTheme = global::Client.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.bottomSheetStyle = global::Client.Droid.Resource.Attribute.bottomSheetStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxBackgroundColor = global::Client.Droid.Resource.Attribute.boxBackgroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxBackgroundMode = global::Client.Droid.Resource.Attribute.boxBackgroundMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxCollapsedPaddingTop = global::Client.Droid.Resource.Attribute.boxCollapsedPaddingTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxCornerRadiusBottomEnd = global::Client.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxCornerRadiusBottomStart = global::Client.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxCornerRadiusTopEnd = global::Client.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxCornerRadiusTopStart = global::Client.Droid.Resource.Attribute.boxCornerRadiusTopStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxStrokeColor = global::Client.Droid.Resource.Attribute.boxStrokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.boxStrokeWidth = global::Client.Droid.Resource.Attribute.boxStrokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonBarButtonStyle = global::Client.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonBarNegativeButtonStyle = global::Client.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::Client.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::Client.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonBarStyle = global::Client.Droid.Resource.Attribute.buttonBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonGravity = global::Client.Droid.Resource.Attribute.buttonGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonIconDimen = global::Client.Droid.Resource.Attribute.buttonIconDimen;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonPanelSideLayout = global::Client.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonStyle = global::Client.Droid.Resource.Attribute.buttonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonStyleSmall = global::Client.Droid.Resource.Attribute.buttonStyleSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonTint = global::Client.Droid.Resource.Attribute.buttonTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.buttonTintMode = global::Client.Droid.Resource.Attribute.buttonTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardBackgroundColor = global::Client.Droid.Resource.Attribute.cardBackgroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardCornerRadius = global::Client.Droid.Resource.Attribute.cardCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardElevation = global::Client.Droid.Resource.Attribute.cardElevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardMaxElevation = global::Client.Droid.Resource.Attribute.cardMaxElevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardPreventCornerOverlap = global::Client.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardUseCompatPadding = global::Client.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cardViewStyle = global::Client.Droid.Resource.Attribute.cardViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.checkboxStyle = global::Client.Droid.Resource.Attribute.checkboxStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.checkedChip = global::Client.Droid.Resource.Attribute.checkedChip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.checkedIcon = global::Client.Droid.Resource.Attribute.checkedIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.checkedIconEnabled = global::Client.Droid.Resource.Attribute.checkedIconEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.checkedIconVisible = global::Client.Droid.Resource.Attribute.checkedIconVisible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.checkedTextViewStyle = global::Client.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipBackgroundColor = global::Client.Droid.Resource.Attribute.chipBackgroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipCornerRadius = global::Client.Droid.Resource.Attribute.chipCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipEndPadding = global::Client.Droid.Resource.Attribute.chipEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipGroupStyle = global::Client.Droid.Resource.Attribute.chipGroupStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipIcon = global::Client.Droid.Resource.Attribute.chipIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipIconEnabled = global::Client.Droid.Resource.Attribute.chipIconEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipIconSize = global::Client.Droid.Resource.Attribute.chipIconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipIconTint = global::Client.Droid.Resource.Attribute.chipIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipIconVisible = global::Client.Droid.Resource.Attribute.chipIconVisible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipMinHeight = global::Client.Droid.Resource.Attribute.chipMinHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipSpacing = global::Client.Droid.Resource.Attribute.chipSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipSpacingHorizontal = global::Client.Droid.Resource.Attribute.chipSpacingHorizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipSpacingVertical = global::Client.Droid.Resource.Attribute.chipSpacingVertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipStandaloneStyle = global::Client.Droid.Resource.Attribute.chipStandaloneStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipStartPadding = global::Client.Droid.Resource.Attribute.chipStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipStrokeColor = global::Client.Droid.Resource.Attribute.chipStrokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipStrokeWidth = global::Client.Droid.Resource.Attribute.chipStrokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.chipStyle = global::Client.Droid.Resource.Attribute.chipStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIcon = global::Client.Droid.Resource.Attribute.closeIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIconEnabled = global::Client.Droid.Resource.Attribute.closeIconEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIconEndPadding = global::Client.Droid.Resource.Attribute.closeIconEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIconSize = global::Client.Droid.Resource.Attribute.closeIconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIconStartPadding = global::Client.Droid.Resource.Attribute.closeIconStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIconTint = global::Client.Droid.Resource.Attribute.closeIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeIconVisible = global::Client.Droid.Resource.Attribute.closeIconVisible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.closeItemLayout = global::Client.Droid.Resource.Attribute.closeItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.collapseContentDescription = global::Client.Droid.Resource.Attribute.collapseContentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.collapseIcon = global::Client.Droid.Resource.Attribute.collapseIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.collapsedTitleGravity = global::Client.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.collapsedTitleTextAppearance = global::Client.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.color = global::Client.Droid.Resource.Attribute.color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorAccent = global::Client.Droid.Resource.Attribute.colorAccent;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorBackgroundFloating = global::Client.Droid.Resource.Attribute.colorBackgroundFloating;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorButtonNormal = global::Client.Droid.Resource.Attribute.colorButtonNormal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorControlActivated = global::Client.Droid.Resource.Attribute.colorControlActivated;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorControlHighlight = global::Client.Droid.Resource.Attribute.colorControlHighlight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorControlNormal = global::Client.Droid.Resource.Attribute.colorControlNormal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorError = global::Client.Droid.Resource.Attribute.colorError;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorPrimary = global::Client.Droid.Resource.Attribute.colorPrimary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorPrimaryDark = global::Client.Droid.Resource.Attribute.colorPrimaryDark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorSecondary = global::Client.Droid.Resource.Attribute.colorSecondary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.colorSwitchThumbNormal = global::Client.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.commitIcon = global::Client.Droid.Resource.Attribute.commitIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentDescription = global::Client.Droid.Resource.Attribute.contentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentInsetEnd = global::Client.Droid.Resource.Attribute.contentInsetEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentInsetEndWithActions = global::Client.Droid.Resource.Attribute.contentInsetEndWithActions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentInsetLeft = global::Client.Droid.Resource.Attribute.contentInsetLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentInsetRight = global::Client.Droid.Resource.Attribute.contentInsetRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentInsetStart = global::Client.Droid.Resource.Attribute.contentInsetStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentInsetStartWithNavigation = global::Client.Droid.Resource.Attribute.contentInsetStartWithNavigation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentPadding = global::Client.Droid.Resource.Attribute.contentPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentPaddingBottom = global::Client.Droid.Resource.Attribute.contentPaddingBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentPaddingLeft = global::Client.Droid.Resource.Attribute.contentPaddingLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentPaddingRight = global::Client.Droid.Resource.Attribute.contentPaddingRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentPaddingTop = global::Client.Droid.Resource.Attribute.contentPaddingTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.contentScrim = global::Client.Droid.Resource.Attribute.contentScrim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.controlBackground = global::Client.Droid.Resource.Attribute.controlBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.coordinatorLayoutStyle = global::Client.Droid.Resource.Attribute.coordinatorLayoutStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.cornerRadius = global::Client.Droid.Resource.Attribute.cornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.counterEnabled = global::Client.Droid.Resource.Attribute.counterEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.counterMaxLength = global::Client.Droid.Resource.Attribute.counterMaxLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.counterOverflowTextAppearance = global::Client.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.counterTextAppearance = global::Client.Droid.Resource.Attribute.counterTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.customNavigationLayout = global::Client.Droid.Resource.Attribute.customNavigationLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.defaultQueryHint = global::Client.Droid.Resource.Attribute.defaultQueryHint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dialogCornerRadius = global::Client.Droid.Resource.Attribute.dialogCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dialogPreferredPadding = global::Client.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dialogTheme = global::Client.Droid.Resource.Attribute.dialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.displayOptions = global::Client.Droid.Resource.Attribute.displayOptions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.divider = global::Client.Droid.Resource.Attribute.divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dividerHorizontal = global::Client.Droid.Resource.Attribute.dividerHorizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dividerPadding = global::Client.Droid.Resource.Attribute.dividerPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dividerVertical = global::Client.Droid.Resource.Attribute.dividerVertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.drawableSize = global::Client.Droid.Resource.Attribute.drawableSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.drawerArrowStyle = global::Client.Droid.Resource.Attribute.drawerArrowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dropDownListViewStyle = global::Client.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::Client.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.editTextBackground = global::Client.Droid.Resource.Attribute.editTextBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.editTextColor = global::Client.Droid.Resource.Attribute.editTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.editTextStyle = global::Client.Droid.Resource.Attribute.editTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.elevation = global::Client.Droid.Resource.Attribute.elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.enforceMaterialTheme = global::Client.Droid.Resource.Attribute.enforceMaterialTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.enforceTextAppearance = global::Client.Droid.Resource.Attribute.enforceTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.errorEnabled = global::Client.Droid.Resource.Attribute.errorEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.errorTextAppearance = global::Client.Droid.Resource.Attribute.errorTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Client.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expanded = global::Client.Droid.Resource.Attribute.expanded;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleGravity = global::Client.Droid.Resource.Attribute.expandedTitleGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleMargin = global::Client.Droid.Resource.Attribute.expandedTitleMargin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleMarginBottom = global::Client.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleMarginEnd = global::Client.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleMarginStart = global::Client.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleMarginTop = global::Client.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.expandedTitleTextAppearance = global::Client.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.externalRouteEnabledDrawable = global::Client.Droid.Resource.Attribute.externalRouteEnabledDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fabAlignmentMode = global::Client.Droid.Resource.Attribute.fabAlignmentMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fabCradleMargin = global::Client.Droid.Resource.Attribute.fabCradleMargin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fabCradleRoundedCornerRadius = global::Client.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fabCradleVerticalOffset = global::Client.Droid.Resource.Attribute.fabCradleVerticalOffset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fabCustomSize = global::Client.Droid.Resource.Attribute.fabCustomSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fabSize = global::Client.Droid.Resource.Attribute.fabSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fastScrollEnabled = global::Client.Droid.Resource.Attribute.fastScrollEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Client.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Client.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Client.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Client.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.firstBaselineToTopHeight = global::Client.Droid.Resource.Attribute.firstBaselineToTopHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.floatingActionButtonStyle = global::Client.Droid.Resource.Attribute.floatingActionButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.font = global::Client.Droid.Resource.Attribute.font;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontFamily = global::Client.Droid.Resource.Attribute.fontFamily;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontProviderAuthority = global::Client.Droid.Resource.Attribute.fontProviderAuthority;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontProviderCerts = global::Client.Droid.Resource.Attribute.fontProviderCerts;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontProviderFetchStrategy = global::Client.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontProviderFetchTimeout = global::Client.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontProviderPackage = global::Client.Droid.Resource.Attribute.fontProviderPackage;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontProviderQuery = global::Client.Droid.Resource.Attribute.fontProviderQuery;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontStyle = global::Client.Droid.Resource.Attribute.fontStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontVariationSettings = global::Client.Droid.Resource.Attribute.fontVariationSettings;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.fontWeight = global::Client.Droid.Resource.Attribute.fontWeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.foregroundInsidePadding = global::Client.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.gapBetweenBars = global::Client.Droid.Resource.Attribute.gapBetweenBars;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.goIcon = global::Client.Droid.Resource.Attribute.goIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.headerLayout = global::Client.Droid.Resource.Attribute.headerLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.height = global::Client.Droid.Resource.Attribute.height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.helperText = global::Client.Droid.Resource.Attribute.helperText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.helperTextEnabled = global::Client.Droid.Resource.Attribute.helperTextEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.helperTextTextAppearance = global::Client.Droid.Resource.Attribute.helperTextTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hideMotionSpec = global::Client.Droid.Resource.Attribute.hideMotionSpec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hideOnContentScroll = global::Client.Droid.Resource.Attribute.hideOnContentScroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hideOnScroll = global::Client.Droid.Resource.Attribute.hideOnScroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hintAnimationEnabled = global::Client.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hintEnabled = global::Client.Droid.Resource.Attribute.hintEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hintTextAppearance = global::Client.Droid.Resource.Attribute.hintTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.homeAsUpIndicator = global::Client.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.homeLayout = global::Client.Droid.Resource.Attribute.homeLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.hoveredFocusedTranslationZ = global::Client.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.icon = global::Client.Droid.Resource.Attribute.icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconEndPadding = global::Client.Droid.Resource.Attribute.iconEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconGravity = global::Client.Droid.Resource.Attribute.iconGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconPadding = global::Client.Droid.Resource.Attribute.iconPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconSize = global::Client.Droid.Resource.Attribute.iconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconStartPadding = global::Client.Droid.Resource.Attribute.iconStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconTint = global::Client.Droid.Resource.Attribute.iconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconTintMode = global::Client.Droid.Resource.Attribute.iconTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.iconifiedByDefault = global::Client.Droid.Resource.Attribute.iconifiedByDefault;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.imageButtonStyle = global::Client.Droid.Resource.Attribute.imageButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.indeterminateProgressStyle = global::Client.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.initialActivityCount = global::Client.Droid.Resource.Attribute.initialActivityCount;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.insetForeground = global::Client.Droid.Resource.Attribute.insetForeground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.isLightTheme = global::Client.Droid.Resource.Attribute.isLightTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemBackground = global::Client.Droid.Resource.Attribute.itemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemHorizontalPadding = global::Client.Droid.Resource.Attribute.itemHorizontalPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemHorizontalTranslationEnabled = global::Client.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemIconPadding = global::Client.Droid.Resource.Attribute.itemIconPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemIconSize = global::Client.Droid.Resource.Attribute.itemIconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemIconTint = global::Client.Droid.Resource.Attribute.itemIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemPadding = global::Client.Droid.Resource.Attribute.itemPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemSpacing = global::Client.Droid.Resource.Attribute.itemSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemTextAppearance = global::Client.Droid.Resource.Attribute.itemTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemTextAppearanceActive = global::Client.Droid.Resource.Attribute.itemTextAppearanceActive;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemTextAppearanceInactive = global::Client.Droid.Resource.Attribute.itemTextAppearanceInactive;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.itemTextColor = global::Client.Droid.Resource.Attribute.itemTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.keylines = global::Client.Droid.Resource.Attribute.keylines;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.labelVisibilityMode = global::Client.Droid.Resource.Attribute.labelVisibilityMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.lastBaselineToBottomHeight = global::Client.Droid.Resource.Attribute.lastBaselineToBottomHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout = global::Client.Droid.Resource.Attribute.layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layoutManager = global::Client.Droid.Resource.Attribute.layoutManager;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_anchor = global::Client.Droid.Resource.Attribute.layout_anchor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_anchorGravity = global::Client.Droid.Resource.Attribute.layout_anchorGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_behavior = global::Client.Droid.Resource.Attribute.layout_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_collapseMode = global::Client.Droid.Resource.Attribute.layout_collapseMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_collapseParallaxMultiplier = global::Client.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_dodgeInsetEdges = global::Client.Droid.Resource.Attribute.layout_dodgeInsetEdges;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_insetEdge = global::Client.Droid.Resource.Attribute.layout_insetEdge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_keyline = global::Client.Droid.Resource.Attribute.layout_keyline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_scrollFlags = global::Client.Droid.Resource.Attribute.layout_scrollFlags;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.layout_scrollInterpolator = global::Client.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.liftOnScroll = global::Client.Droid.Resource.Attribute.liftOnScroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.lineHeight = global::Client.Droid.Resource.Attribute.lineHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.lineSpacing = global::Client.Droid.Resource.Attribute.lineSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::Client.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listDividerAlertDialog = global::Client.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listItemLayout = global::Client.Droid.Resource.Attribute.listItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listLayout = global::Client.Droid.Resource.Attribute.listLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listMenuViewStyle = global::Client.Droid.Resource.Attribute.listMenuViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listPopupWindowStyle = global::Client.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listPreferredItemHeight = global::Client.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listPreferredItemHeightLarge = global::Client.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listPreferredItemHeightSmall = global::Client.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::Client.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.listPreferredItemPaddingRight = global::Client.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.logo = global::Client.Droid.Resource.Attribute.logo;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.logoDescription = global::Client.Droid.Resource.Attribute.logoDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.materialButtonStyle = global::Client.Droid.Resource.Attribute.materialButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.materialCardViewStyle = global::Client.Droid.Resource.Attribute.materialCardViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.maxActionInlineWidth = global::Client.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.maxButtonHeight = global::Client.Droid.Resource.Attribute.maxButtonHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.maxImageSize = global::Client.Droid.Resource.Attribute.maxImageSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.measureWithLargestChild = global::Client.Droid.Resource.Attribute.measureWithLargestChild;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteAudioTrackDrawable = global::Client.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteButtonStyle = global::Client.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteButtonTint = global::Client.Droid.Resource.Attribute.mediaRouteButtonTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteCloseDrawable = global::Client.Droid.Resource.Attribute.mediaRouteCloseDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::Client.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteDefaultIconDrawable = global::Client.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRoutePauseDrawable = global::Client.Droid.Resource.Attribute.mediaRoutePauseDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRoutePlayDrawable = global::Client.Droid.Resource.Attribute.mediaRoutePlayDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::Client.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::Client.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteStopDrawable = global::Client.Droid.Resource.Attribute.mediaRouteStopDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteTheme = global::Client.Droid.Resource.Attribute.mediaRouteTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.mediaRouteTvIconDrawable = global::Client.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.menu = global::Client.Droid.Resource.Attribute.menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.multiChoiceItemLayout = global::Client.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.navigationContentDescription = global::Client.Droid.Resource.Attribute.navigationContentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.navigationIcon = global::Client.Droid.Resource.Attribute.navigationIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.navigationMode = global::Client.Droid.Resource.Attribute.navigationMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.navigationViewStyle = global::Client.Droid.Resource.Attribute.navigationViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.numericModifiers = global::Client.Droid.Resource.Attribute.numericModifiers;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.overlapAnchor = global::Client.Droid.Resource.Attribute.overlapAnchor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.paddingBottomNoButtons = global::Client.Droid.Resource.Attribute.paddingBottomNoButtons;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.paddingEnd = global::Client.Droid.Resource.Attribute.paddingEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.paddingStart = global::Client.Droid.Resource.Attribute.paddingStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.paddingTopNoTitle = global::Client.Droid.Resource.Attribute.paddingTopNoTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.panelBackground = global::Client.Droid.Resource.Attribute.panelBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.panelMenuListTheme = global::Client.Droid.Resource.Attribute.panelMenuListTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.panelMenuListWidth = global::Client.Droid.Resource.Attribute.panelMenuListWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.passwordToggleContentDescription = global::Client.Droid.Resource.Attribute.passwordToggleContentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.passwordToggleDrawable = global::Client.Droid.Resource.Attribute.passwordToggleDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.passwordToggleEnabled = global::Client.Droid.Resource.Attribute.passwordToggleEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.passwordToggleTint = global::Client.Droid.Resource.Attribute.passwordToggleTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.passwordToggleTintMode = global::Client.Droid.Resource.Attribute.passwordToggleTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.popupMenuStyle = global::Client.Droid.Resource.Attribute.popupMenuStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.popupTheme = global::Client.Droid.Resource.Attribute.popupTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.popupWindowStyle = global::Client.Droid.Resource.Attribute.popupWindowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.preserveIconSpacing = global::Client.Droid.Resource.Attribute.preserveIconSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.pressedTranslationZ = global::Client.Droid.Resource.Attribute.pressedTranslationZ;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.progressBarPadding = global::Client.Droid.Resource.Attribute.progressBarPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.progressBarStyle = global::Client.Droid.Resource.Attribute.progressBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.queryBackground = global::Client.Droid.Resource.Attribute.queryBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.queryHint = global::Client.Droid.Resource.Attribute.queryHint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.radioButtonStyle = global::Client.Droid.Resource.Attribute.radioButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.ratingBarStyle = global::Client.Droid.Resource.Attribute.ratingBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.ratingBarStyleIndicator = global::Client.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.ratingBarStyleSmall = global::Client.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.reverseLayout = global::Client.Droid.Resource.Attribute.reverseLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.rippleColor = global::Client.Droid.Resource.Attribute.rippleColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.scrimAnimationDuration = global::Client.Droid.Resource.Attribute.scrimAnimationDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.scrimBackground = global::Client.Droid.Resource.Attribute.scrimBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.scrimVisibleHeightTrigger = global::Client.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.searchHintIcon = global::Client.Droid.Resource.Attribute.searchHintIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.searchIcon = global::Client.Droid.Resource.Attribute.searchIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.searchViewStyle = global::Client.Droid.Resource.Attribute.searchViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.seekBarStyle = global::Client.Droid.Resource.Attribute.seekBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.selectableItemBackground = global::Client.Droid.Resource.Attribute.selectableItemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.selectableItemBackgroundBorderless = global::Client.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.showAsAction = global::Client.Droid.Resource.Attribute.showAsAction;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.showDividers = global::Client.Droid.Resource.Attribute.showDividers;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.showMotionSpec = global::Client.Droid.Resource.Attribute.showMotionSpec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.showText = global::Client.Droid.Resource.Attribute.showText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.showTitle = global::Client.Droid.Resource.Attribute.showTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.singleChoiceItemLayout = global::Client.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.singleLine = global::Client.Droid.Resource.Attribute.singleLine;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.singleSelection = global::Client.Droid.Resource.Attribute.singleSelection;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.snackbarButtonStyle = global::Client.Droid.Resource.Attribute.snackbarButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.snackbarStyle = global::Client.Droid.Resource.Attribute.snackbarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.spanCount = global::Client.Droid.Resource.Attribute.spanCount;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.spinBars = global::Client.Droid.Resource.Attribute.spinBars;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.spinnerDropDownItemStyle = global::Client.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.spinnerStyle = global::Client.Droid.Resource.Attribute.spinnerStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.splitTrack = global::Client.Droid.Resource.Attribute.splitTrack;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.srcCompat = global::Client.Droid.Resource.Attribute.srcCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.stackFromEnd = global::Client.Droid.Resource.Attribute.stackFromEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.state_above_anchor = global::Client.Droid.Resource.Attribute.state_above_anchor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.state_collapsed = global::Client.Droid.Resource.Attribute.state_collapsed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.state_collapsible = global::Client.Droid.Resource.Attribute.state_collapsible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.state_liftable = global::Client.Droid.Resource.Attribute.state_liftable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.state_lifted = global::Client.Droid.Resource.Attribute.state_lifted;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.statusBarBackground = global::Client.Droid.Resource.Attribute.statusBarBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.statusBarScrim = global::Client.Droid.Resource.Attribute.statusBarScrim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.strokeColor = global::Client.Droid.Resource.Attribute.strokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.strokeWidth = global::Client.Droid.Resource.Attribute.strokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.subMenuArrow = global::Client.Droid.Resource.Attribute.subMenuArrow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.submitBackground = global::Client.Droid.Resource.Attribute.submitBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.subtitle = global::Client.Droid.Resource.Attribute.subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.subtitleTextAppearance = global::Client.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.subtitleTextColor = global::Client.Droid.Resource.Attribute.subtitleTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.subtitleTextStyle = global::Client.Droid.Resource.Attribute.subtitleTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.suggestionRowLayout = global::Client.Droid.Resource.Attribute.suggestionRowLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.switchMinWidth = global::Client.Droid.Resource.Attribute.switchMinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.switchPadding = global::Client.Droid.Resource.Attribute.switchPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.switchStyle = global::Client.Droid.Resource.Attribute.switchStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.switchTextAppearance = global::Client.Droid.Resource.Attribute.switchTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabBackground = global::Client.Droid.Resource.Attribute.tabBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabContentStart = global::Client.Droid.Resource.Attribute.tabContentStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabGravity = global::Client.Droid.Resource.Attribute.tabGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIconTint = global::Client.Droid.Resource.Attribute.tabIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIconTintMode = global::Client.Droid.Resource.Attribute.tabIconTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIndicator = global::Client.Droid.Resource.Attribute.tabIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIndicatorAnimationDuration = global::Client.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIndicatorColor = global::Client.Droid.Resource.Attribute.tabIndicatorColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIndicatorFullWidth = global::Client.Droid.Resource.Attribute.tabIndicatorFullWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIndicatorGravity = global::Client.Droid.Resource.Attribute.tabIndicatorGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabIndicatorHeight = global::Client.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabInlineLabel = global::Client.Droid.Resource.Attribute.tabInlineLabel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabMaxWidth = global::Client.Droid.Resource.Attribute.tabMaxWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabMinWidth = global::Client.Droid.Resource.Attribute.tabMinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabMode = global::Client.Droid.Resource.Attribute.tabMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabPadding = global::Client.Droid.Resource.Attribute.tabPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabPaddingBottom = global::Client.Droid.Resource.Attribute.tabPaddingBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabPaddingEnd = global::Client.Droid.Resource.Attribute.tabPaddingEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabPaddingStart = global::Client.Droid.Resource.Attribute.tabPaddingStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabPaddingTop = global::Client.Droid.Resource.Attribute.tabPaddingTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabRippleColor = global::Client.Droid.Resource.Attribute.tabRippleColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabSelectedTextColor = global::Client.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabStyle = global::Client.Droid.Resource.Attribute.tabStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabTextAppearance = global::Client.Droid.Resource.Attribute.tabTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabTextColor = global::Client.Droid.Resource.Attribute.tabTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tabUnboundedRipple = global::Client.Droid.Resource.Attribute.tabUnboundedRipple;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAllCaps = global::Client.Droid.Resource.Attribute.textAllCaps;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceBody1 = global::Client.Droid.Resource.Attribute.textAppearanceBody1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceBody2 = global::Client.Droid.Resource.Attribute.textAppearanceBody2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceButton = global::Client.Droid.Resource.Attribute.textAppearanceButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceCaption = global::Client.Droid.Resource.Attribute.textAppearanceCaption;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceHeadline1 = global::Client.Droid.Resource.Attribute.textAppearanceHeadline1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceHeadline2 = global::Client.Droid.Resource.Attribute.textAppearanceHeadline2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceHeadline3 = global::Client.Droid.Resource.Attribute.textAppearanceHeadline3;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceHeadline4 = global::Client.Droid.Resource.Attribute.textAppearanceHeadline4;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceHeadline5 = global::Client.Droid.Resource.Attribute.textAppearanceHeadline5;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceHeadline6 = global::Client.Droid.Resource.Attribute.textAppearanceHeadline6;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceLargePopupMenu = global::Client.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceListItem = global::Client.Droid.Resource.Attribute.textAppearanceListItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceListItemSecondary = global::Client.Droid.Resource.Attribute.textAppearanceListItemSecondary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceListItemSmall = global::Client.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceOverline = global::Client.Droid.Resource.Attribute.textAppearanceOverline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearancePopupMenuHeader = global::Client.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Client.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceSearchResultTitle = global::Client.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceSmallPopupMenu = global::Client.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceSubtitle1 = global::Client.Droid.Resource.Attribute.textAppearanceSubtitle1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textAppearanceSubtitle2 = global::Client.Droid.Resource.Attribute.textAppearanceSubtitle2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textColorAlertDialogListItem = global::Client.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textColorSearchUrl = global::Client.Droid.Resource.Attribute.textColorSearchUrl;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textEndPadding = global::Client.Droid.Resource.Attribute.textEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textInputStyle = global::Client.Droid.Resource.Attribute.textInputStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.textStartPadding = global::Client.Droid.Resource.Attribute.textStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.theme = global::Client.Droid.Resource.Attribute.theme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.thickness = global::Client.Droid.Resource.Attribute.thickness;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.thumbTextPadding = global::Client.Droid.Resource.Attribute.thumbTextPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.thumbTint = global::Client.Droid.Resource.Attribute.thumbTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.thumbTintMode = global::Client.Droid.Resource.Attribute.thumbTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tickMark = global::Client.Droid.Resource.Attribute.tickMark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tickMarkTint = global::Client.Droid.Resource.Attribute.tickMarkTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tickMarkTintMode = global::Client.Droid.Resource.Attribute.tickMarkTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tint = global::Client.Droid.Resource.Attribute.tint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tintMode = global::Client.Droid.Resource.Attribute.tintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.title = global::Client.Droid.Resource.Attribute.title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleEnabled = global::Client.Droid.Resource.Attribute.titleEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleMargin = global::Client.Droid.Resource.Attribute.titleMargin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleMarginBottom = global::Client.Droid.Resource.Attribute.titleMarginBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleMarginEnd = global::Client.Droid.Resource.Attribute.titleMarginEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleMarginStart = global::Client.Droid.Resource.Attribute.titleMarginStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleMarginTop = global::Client.Droid.Resource.Attribute.titleMarginTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleMargins = global::Client.Droid.Resource.Attribute.titleMargins;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleTextAppearance = global::Client.Droid.Resource.Attribute.titleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleTextColor = global::Client.Droid.Resource.Attribute.titleTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.titleTextStyle = global::Client.Droid.Resource.Attribute.titleTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.toolbarId = global::Client.Droid.Resource.Attribute.toolbarId;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.toolbarNavigationButtonStyle = global::Client.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.toolbarStyle = global::Client.Droid.Resource.Attribute.toolbarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tooltipForegroundColor = global::Client.Droid.Resource.Attribute.tooltipForegroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tooltipFrameBackground = global::Client.Droid.Resource.Attribute.tooltipFrameBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.tooltipText = global::Client.Droid.Resource.Attribute.tooltipText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.track = global::Client.Droid.Resource.Attribute.track;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.trackTint = global::Client.Droid.Resource.Attribute.trackTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.trackTintMode = global::Client.Droid.Resource.Attribute.trackTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.ttcIndex = global::Client.Droid.Resource.Attribute.ttcIndex;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.useCompatPadding = global::Client.Droid.Resource.Attribute.useCompatPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.viewInflaterClass = global::Client.Droid.Resource.Attribute.viewInflaterClass;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.voiceIcon = global::Client.Droid.Resource.Attribute.voiceIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowActionBar = global::Client.Droid.Resource.Attribute.windowActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowActionBarOverlay = global::Client.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowActionModeOverlay = global::Client.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowFixedHeightMajor = global::Client.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowFixedHeightMinor = global::Client.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowFixedWidthMajor = global::Client.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowFixedWidthMinor = global::Client.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowMinWidthMajor = global::Client.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowMinWidthMinor = global::Client.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Attribute.windowNoTitle = global::Client.Droid.Resource.Attribute.windowNoTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::Client.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::Client.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Client.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::Client.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Client.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_background_cache_hint_selector_material_light = global::Client.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_btn_colored_borderless_text_material = global::Client.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_btn_colored_text_material = global::Client.Droid.Resource.Color.abc_btn_colored_text_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_color_highlight_material = global::Client.Droid.Resource.Color.abc_color_highlight_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_hint_foreground_material_dark = global::Client.Droid.Resource.Color.abc_hint_foreground_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_hint_foreground_material_light = global::Client.Droid.Resource.Color.abc_hint_foreground_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_input_method_navigation_guard = global::Client.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_primary_text_disable_only_material_dark = global::Client.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_primary_text_disable_only_material_light = global::Client.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_primary_text_material_dark = global::Client.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_primary_text_material_light = global::Client.Droid.Resource.Color.abc_primary_text_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_search_url_text = global::Client.Droid.Resource.Color.abc_search_url_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_search_url_text_normal = global::Client.Droid.Resource.Color.abc_search_url_text_normal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_search_url_text_pressed = global::Client.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_search_url_text_selected = global::Client.Droid.Resource.Color.abc_search_url_text_selected;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_secondary_text_material_dark = global::Client.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_secondary_text_material_light = global::Client.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_tint_btn_checkable = global::Client.Droid.Resource.Color.abc_tint_btn_checkable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_tint_default = global::Client.Droid.Resource.Color.abc_tint_default;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_tint_edittext = global::Client.Droid.Resource.Color.abc_tint_edittext;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_tint_seek_thumb = global::Client.Droid.Resource.Color.abc_tint_seek_thumb;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_tint_spinner = global::Client.Droid.Resource.Color.abc_tint_spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.abc_tint_switch_track = global::Client.Droid.Resource.Color.abc_tint_switch_track;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.accent_material_dark = global::Client.Droid.Resource.Color.accent_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.accent_material_light = global::Client.Droid.Resource.Color.accent_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.background_floating_material_dark = global::Client.Droid.Resource.Color.background_floating_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.background_floating_material_light = global::Client.Droid.Resource.Color.background_floating_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.background_material_dark = global::Client.Droid.Resource.Color.background_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.background_material_light = global::Client.Droid.Resource.Color.background_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.black = global::Client.Droid.Resource.Color.black;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.blue = global::Client.Droid.Resource.Color.blue;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.bright_foreground_disabled_material_dark = global::Client.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.bright_foreground_disabled_material_light = global::Client.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.bright_foreground_inverse_material_dark = global::Client.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.bright_foreground_inverse_material_light = global::Client.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.bright_foreground_material_dark = global::Client.Droid.Resource.Color.bright_foreground_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.bright_foreground_material_light = global::Client.Droid.Resource.Color.bright_foreground_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.browser_actions_bg_grey = global::Client.Droid.Resource.Color.browser_actions_bg_grey;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.browser_actions_divider_color = global::Client.Droid.Resource.Color.browser_actions_divider_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.browser_actions_text_color = global::Client.Droid.Resource.Color.browser_actions_text_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.browser_actions_title_color = global::Client.Droid.Resource.Color.browser_actions_title_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.button_material_dark = global::Client.Droid.Resource.Color.button_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.button_material_light = global::Client.Droid.Resource.Color.button_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.cardview_dark_background = global::Client.Droid.Resource.Color.cardview_dark_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.cardview_light_background = global::Client.Droid.Resource.Color.cardview_light_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.cardview_shadow_end_color = global::Client.Droid.Resource.Color.cardview_shadow_end_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.cardview_shadow_start_color = global::Client.Droid.Resource.Color.cardview_shadow_start_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_bottom_navigation_shadow_color = global::Client.Droid.Resource.Color.design_bottom_navigation_shadow_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_default_color_primary = global::Client.Droid.Resource.Color.design_default_color_primary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_default_color_primary_dark = global::Client.Droid.Resource.Color.design_default_color_primary_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_error = global::Client.Droid.Resource.Color.design_error;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_shadow_end_color = global::Client.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_shadow_mid_color = global::Client.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_shadow_start_color = global::Client.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_stroke_end_inner_color = global::Client.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_stroke_end_outer_color = global::Client.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_stroke_top_inner_color = global::Client.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_fab_stroke_top_outer_color = global::Client.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_snackbar_background_color = global::Client.Droid.Resource.Color.design_snackbar_background_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.design_tint_password_toggle = global::Client.Droid.Resource.Color.design_tint_password_toggle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.dim_foreground_disabled_material_dark = global::Client.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.dim_foreground_disabled_material_light = global::Client.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.dim_foreground_material_dark = global::Client.Droid.Resource.Color.dim_foreground_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.dim_foreground_material_light = global::Client.Droid.Resource.Color.dim_foreground_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.error_color_material_dark = global::Client.Droid.Resource.Color.error_color_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.error_color_material_light = global::Client.Droid.Resource.Color.error_color_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.foreground_material_dark = global::Client.Droid.Resource.Color.foreground_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.foreground_material_light = global::Client.Droid.Resource.Color.foreground_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.gray = global::Client.Droid.Resource.Color.gray;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.green = global::Client.Droid.Resource.Color.green;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.highlighted_text_material_dark = global::Client.Droid.Resource.Color.highlighted_text_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.highlighted_text_material_light = global::Client.Droid.Resource.Color.highlighted_text_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_blue_grey_800 = global::Client.Droid.Resource.Color.material_blue_grey_800;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_blue_grey_900 = global::Client.Droid.Resource.Color.material_blue_grey_900;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_blue_grey_950 = global::Client.Droid.Resource.Color.material_blue_grey_950;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_deep_teal_200 = global::Client.Droid.Resource.Color.material_deep_teal_200;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_deep_teal_500 = global::Client.Droid.Resource.Color.material_deep_teal_500;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_100 = global::Client.Droid.Resource.Color.material_grey_100;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_300 = global::Client.Droid.Resource.Color.material_grey_300;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_50 = global::Client.Droid.Resource.Color.material_grey_50;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_600 = global::Client.Droid.Resource.Color.material_grey_600;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_800 = global::Client.Droid.Resource.Color.material_grey_800;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_850 = global::Client.Droid.Resource.Color.material_grey_850;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.material_grey_900 = global::Client.Droid.Resource.Color.material_grey_900;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::Client.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_bottom_nav_item_tint = global::Client.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_bg_color_disabled = global::Client.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_bg_color_selector = global::Client.Droid.Resource.Color.mtrl_btn_bg_color_selector;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_ripple_color = global::Client.Droid.Resource.Color.mtrl_btn_ripple_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_stroke_color_selector = global::Client.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_text_btn_ripple_color = global::Client.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_text_color_disabled = global::Client.Droid.Resource.Color.mtrl_btn_text_color_disabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_text_color_selector = global::Client.Droid.Resource.Color.mtrl_btn_text_color_selector;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_btn_transparent_bg_color = global::Client.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_chip_background_color = global::Client.Droid.Resource.Color.mtrl_chip_background_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_chip_close_icon_tint = global::Client.Droid.Resource.Color.mtrl_chip_close_icon_tint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_chip_ripple_color = global::Client.Droid.Resource.Color.mtrl_chip_ripple_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_chip_text_color = global::Client.Droid.Resource.Color.mtrl_chip_text_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_fab_ripple_color = global::Client.Droid.Resource.Color.mtrl_fab_ripple_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_scrim_color = global::Client.Droid.Resource.Color.mtrl_scrim_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_tabs_colored_ripple_color = global::Client.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_tabs_icon_color_selector = global::Client.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::Client.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::Client.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_tabs_ripple_color = global::Client.Droid.Resource.Color.mtrl_tabs_ripple_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_text_btn_text_color_selector = global::Client.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_textinput_default_box_stroke_color = global::Client.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_textinput_disabled_color = global::Client.Droid.Resource.Color.mtrl_textinput_disabled_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::Client.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::Client.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.notification_action_color_filter = global::Client.Droid.Resource.Color.notification_action_color_filter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.notification_icon_bg_color = global::Client.Droid.Resource.Color.notification_icon_bg_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.notification_material_background_media_default_color = global::Client.Droid.Resource.Color.notification_material_background_media_default_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_dark_material_dark = global::Client.Droid.Resource.Color.primary_dark_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_dark_material_light = global::Client.Droid.Resource.Color.primary_dark_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_material_dark = global::Client.Droid.Resource.Color.primary_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_material_light = global::Client.Droid.Resource.Color.primary_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_text_default_material_dark = global::Client.Droid.Resource.Color.primary_text_default_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_text_default_material_light = global::Client.Droid.Resource.Color.primary_text_default_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_text_disabled_material_dark = global::Client.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.primary_text_disabled_material_light = global::Client.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.red = global::Client.Droid.Resource.Color.red;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.ripple_material_dark = global::Client.Droid.Resource.Color.ripple_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.ripple_material_light = global::Client.Droid.Resource.Color.ripple_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.secondary_text_default_material_dark = global::Client.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.secondary_text_default_material_light = global::Client.Droid.Resource.Color.secondary_text_default_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.secondary_text_disabled_material_dark = global::Client.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.secondary_text_disabled_material_light = global::Client.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.switch_thumb_disabled_material_dark = global::Client.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.switch_thumb_disabled_material_light = global::Client.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.switch_thumb_material_dark = global::Client.Droid.Resource.Color.switch_thumb_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.switch_thumb_material_light = global::Client.Droid.Resource.Color.switch_thumb_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.switch_thumb_normal_material_dark = global::Client.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.switch_thumb_normal_material_light = global::Client.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.theme_dark_segmented_radio_button_text = global::Client.Droid.Resource.Color.theme_dark_segmented_radio_button_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.theme_default_segmented_radio_button_text = global::Client.Droid.Resource.Color.theme_default_segmented_radio_button_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.tooltip_background_dark = global::Client.Droid.Resource.Color.tooltip_background_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Color.tooltip_background_light = global::Client.Droid.Resource.Color.tooltip_background_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_content_inset_material = global::Client.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::Client.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_default_height_material = global::Client.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Client.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Client.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_elevation_material = global::Client.Droid.Resource.Dimension.abc_action_bar_elevation_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Client.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Client.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Client.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_stacked_max_height = global::Client.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Client.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Client.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Client.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_button_min_height_material = global::Client.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_button_min_width_material = global::Client.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Client.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Client.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_alert_dialog_button_dimen = global::Client.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_button_inset_horizontal_material = global::Client.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_button_inset_vertical_material = global::Client.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_button_padding_horizontal_material = global::Client.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_button_padding_vertical_material = global::Client.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::Client.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_config_prefDialogWidth = global::Client.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_control_corner_material = global::Client.Droid.Resource.Dimension.abc_control_corner_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_control_inset_material = global::Client.Droid.Resource.Dimension.abc_control_inset_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_control_padding_material = global::Client.Droid.Resource.Dimension.abc_control_padding_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_corner_radius_material = global::Client.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_fixed_height_major = global::Client.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_fixed_height_minor = global::Client.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_fixed_width_major = global::Client.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_fixed_width_minor = global::Client.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::Client.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::Client.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_min_width_major = global::Client.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_min_width_minor = global::Client.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_padding_material = global::Client.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_padding_top_material = global::Client.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dialog_title_divider_material = global::Client.Droid.Resource.Dimension.abc_dialog_title_divider_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_disabled_alpha_material_dark = global::Client.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_disabled_alpha_material_light = global::Client.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dropdownitem_icon_width = global::Client.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Client.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Client.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Client.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Client.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::Client.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_floating_window_z = global::Client.Droid.Resource.Dimension.abc_floating_window_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Client.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_panel_menu_list_width = global::Client.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_progress_bar_height_material = global::Client.Droid.Resource.Dimension.abc_progress_bar_height_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_search_view_preferred_height = global::Client.Droid.Resource.Dimension.abc_search_view_preferred_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_search_view_preferred_width = global::Client.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_seekbar_track_background_height_material = global::Client.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Client.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_select_dialog_padding_start_material = global::Client.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_switch_padding = global::Client.Droid.Resource.Dimension.abc_switch_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_body_1_material = global::Client.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_body_2_material = global::Client.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_button_material = global::Client.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_caption_material = global::Client.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_display_1_material = global::Client.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_display_2_material = global::Client.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_display_3_material = global::Client.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_display_4_material = global::Client.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_headline_material = global::Client.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_large_material = global::Client.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_medium_material = global::Client.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_menu_header_material = global::Client.Droid.Resource.Dimension.abc_text_size_menu_header_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_menu_material = global::Client.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_small_material = global::Client.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_subhead_material = global::Client.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Client.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_title_material = global::Client.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.abc_text_size_title_material_toolbar = global::Client.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.browser_actions_context_menu_max_width = global::Client.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.browser_actions_context_menu_min_padding = global::Client.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.cardview_compat_inset_shadow = global::Client.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.cardview_default_elevation = global::Client.Droid.Resource.Dimension.cardview_default_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.cardview_default_radius = global::Client.Droid.Resource.Dimension.cardview_default_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Client.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Client.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Client.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Client.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_control_corner_material = global::Client.Droid.Resource.Dimension.compat_control_corner_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_notification_large_icon_max_height = global::Client.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.compat_notification_large_icon_max_width = global::Client.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_appbar_elevation = global::Client.Droid.Resource.Dimension.design_appbar_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Client.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::Client.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_active_text_size = global::Client.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_elevation = global::Client.Droid.Resource.Dimension.design_bottom_navigation_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_height = global::Client.Droid.Resource.Dimension.design_bottom_navigation_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_icon_size = global::Client.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_item_max_width = global::Client.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_item_min_width = global::Client.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_margin = global::Client.Droid.Resource.Dimension.design_bottom_navigation_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_shadow_height = global::Client.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_navigation_text_size = global::Client.Droid.Resource.Dimension.design_bottom_navigation_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Client.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Client.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_border_width = global::Client.Droid.Resource.Dimension.design_fab_border_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_elevation = global::Client.Droid.Resource.Dimension.design_fab_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_image_size = global::Client.Droid.Resource.Dimension.design_fab_image_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_size_mini = global::Client.Droid.Resource.Dimension.design_fab_size_mini;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_size_normal = global::Client.Droid.Resource.Dimension.design_fab_size_normal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_translation_z_hovered_focused = global::Client.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_fab_translation_z_pressed = global::Client.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_elevation = global::Client.Droid.Resource.Dimension.design_navigation_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_icon_padding = global::Client.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_icon_size = global::Client.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_item_horizontal_padding = global::Client.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_item_icon_padding = global::Client.Droid.Resource.Dimension.design_navigation_item_icon_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_max_width = global::Client.Droid.Resource.Dimension.design_navigation_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_padding_bottom = global::Client.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_navigation_separator_vertical_padding = global::Client.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_action_inline_max_width = global::Client.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_background_corner_radius = global::Client.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_elevation = global::Client.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Client.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_max_width = global::Client.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_min_width = global::Client.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_padding_horizontal = global::Client.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_padding_vertical = global::Client.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Client.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_snackbar_text_size = global::Client.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_tab_max_width = global::Client.Droid.Resource.Dimension.design_tab_max_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_tab_scrollable_min_width = global::Client.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_tab_text_size = global::Client.Droid.Resource.Dimension.design_tab_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_tab_text_size_2line = global::Client.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.design_textinput_caption_translate_y = global::Client.Droid.Resource.Dimension.design_textinput_caption_translate_y;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.disabled_alpha_material_dark = global::Client.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.disabled_alpha_material_light = global::Client.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.fastscroll_default_thickness = global::Client.Droid.Resource.Dimension.fastscroll_default_thickness;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.fastscroll_margin = global::Client.Droid.Resource.Dimension.fastscroll_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.fastscroll_minimum_range = global::Client.Droid.Resource.Dimension.fastscroll_minimum_range;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.highlight_alpha_material_colored = global::Client.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.highlight_alpha_material_dark = global::Client.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.highlight_alpha_material_light = global::Client.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.hint_alpha_material_dark = global::Client.Droid.Resource.Dimension.hint_alpha_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.hint_alpha_material_light = global::Client.Droid.Resource.Dimension.hint_alpha_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.hint_pressed_alpha_material_dark = global::Client.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.hint_pressed_alpha_material_light = global::Client.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Client.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Client.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Client.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mr_controller_volume_group_list_item_height = global::Client.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::Client.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mr_controller_volume_group_list_max_height = global::Client.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::Client.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mr_dialog_fixed_width_major = global::Client.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mr_dialog_fixed_width_minor = global::Client.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::Client.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::Client.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::Client.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::Client.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_bottomappbar_height = global::Client.Droid.Resource.Dimension.mtrl_bottomappbar_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_corner_radius = global::Client.Droid.Resource.Dimension.mtrl_btn_corner_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::Client.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_disabled_elevation = global::Client.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_disabled_z = global::Client.Droid.Resource.Dimension.mtrl_btn_disabled_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_elevation = global::Client.Droid.Resource.Dimension.mtrl_btn_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_focused_z = global::Client.Droid.Resource.Dimension.mtrl_btn_focused_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_hovered_z = global::Client.Droid.Resource.Dimension.mtrl_btn_hovered_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::Client.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_icon_padding = global::Client.Droid.Resource.Dimension.mtrl_btn_icon_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_inset = global::Client.Droid.Resource.Dimension.mtrl_btn_inset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_letter_spacing = global::Client.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_padding_bottom = global::Client.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_padding_left = global::Client.Droid.Resource.Dimension.mtrl_btn_padding_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_padding_right = global::Client.Droid.Resource.Dimension.mtrl_btn_padding_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_padding_top = global::Client.Droid.Resource.Dimension.mtrl_btn_padding_top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_pressed_z = global::Client.Droid.Resource.Dimension.mtrl_btn_pressed_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_stroke_size = global::Client.Droid.Resource.Dimension.mtrl_btn_stroke_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::Client.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::Client.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::Client.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_text_size = global::Client.Droid.Resource.Dimension.mtrl_btn_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_btn_z = global::Client.Droid.Resource.Dimension.mtrl_btn_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_card_elevation = global::Client.Droid.Resource.Dimension.mtrl_card_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_card_spacing = global::Client.Droid.Resource.Dimension.mtrl_card_spacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_chip_pressed_translation_z = global::Client.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_chip_text_size = global::Client.Droid.Resource.Dimension.mtrl_chip_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_fab_elevation = global::Client.Droid.Resource.Dimension.mtrl_fab_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::Client.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_fab_translation_z_pressed = global::Client.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_navigation_elevation = global::Client.Droid.Resource.Dimension.mtrl_navigation_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::Client.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_navigation_item_icon_padding = global::Client.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::Client.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_snackbar_margin = global::Client.Droid.Resource.Dimension.mtrl_snackbar_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_padding_end = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::Client.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::Client.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.mtrl_toolbar_default_height = global::Client.Droid.Resource.Dimension.mtrl_toolbar_default_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_action_icon_size = global::Client.Droid.Resource.Dimension.notification_action_icon_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_action_text_size = global::Client.Droid.Resource.Dimension.notification_action_text_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_big_circle_margin = global::Client.Droid.Resource.Dimension.notification_big_circle_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_content_margin_start = global::Client.Droid.Resource.Dimension.notification_content_margin_start;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_large_icon_height = global::Client.Droid.Resource.Dimension.notification_large_icon_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_large_icon_width = global::Client.Droid.Resource.Dimension.notification_large_icon_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_main_column_padding_top = global::Client.Droid.Resource.Dimension.notification_main_column_padding_top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_media_narrow_margin = global::Client.Droid.Resource.Dimension.notification_media_narrow_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_right_icon_size = global::Client.Droid.Resource.Dimension.notification_right_icon_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_right_side_padding_top = global::Client.Droid.Resource.Dimension.notification_right_side_padding_top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_small_icon_background_padding = global::Client.Droid.Resource.Dimension.notification_small_icon_background_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_small_icon_size_as_large = global::Client.Droid.Resource.Dimension.notification_small_icon_size_as_large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_subtext_size = global::Client.Droid.Resource.Dimension.notification_subtext_size;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_top_pad = global::Client.Droid.Resource.Dimension.notification_top_pad;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.notification_top_pad_large_text = global::Client.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.subtitle_corner_radius = global::Client.Droid.Resource.Dimension.subtitle_corner_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.subtitle_outline_width = global::Client.Droid.Resource.Dimension.subtitle_outline_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.subtitle_shadow_offset = global::Client.Droid.Resource.Dimension.subtitle_shadow_offset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.subtitle_shadow_radius = global::Client.Droid.Resource.Dimension.subtitle_shadow_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_corner_radius = global::Client.Droid.Resource.Dimension.tooltip_corner_radius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_horizontal_padding = global::Client.Droid.Resource.Dimension.tooltip_horizontal_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_margin = global::Client.Droid.Resource.Dimension.tooltip_margin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::Client.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_precise_anchor_threshold = global::Client.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_vertical_padding = global::Client.Droid.Resource.Dimension.tooltip_vertical_padding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_y_offset_non_touch = global::Client.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Dimension.tooltip_y_offset_touch = global::Client.Droid.Resource.Dimension.tooltip_y_offset_touch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_action_bar_item_background_material = global::Client.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_borderless_material = global::Client.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_check_material = global::Client.Droid.Resource.Drawable.abc_btn_check_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Client.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Client.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_colored_material = global::Client.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::Client.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_radio_material = global::Client.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Client.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Client.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Client.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Client.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_cab_background_internal_bg = global::Client.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_cab_background_top_material = global::Client.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_control_background_material = global::Client.Droid.Resource.Drawable.abc_control_background_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_dialog_material_background = global::Client.Droid.Resource.Drawable.abc_dialog_material_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_edit_text_material = global::Client.Droid.Resource.Drawable.abc_edit_text_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_ab_back_material = global::Client.Droid.Resource.Drawable.abc_ic_ab_back_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::Client.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_clear_material = global::Client.Droid.Resource.Drawable.abc_ic_clear_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_go_search_api_material = global::Client.Droid.Resource.Drawable.abc_ic_go_search_api_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Client.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_menu_overflow_material = global::Client.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Client.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_search_api_material = global::Client.Droid.Resource.Drawable.abc_ic_search_api_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_star_black_16dp = global::Client.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_star_black_36dp = global::Client.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_star_black_48dp = global::Client.Droid.Resource.Drawable.abc_ic_star_black_48dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::Client.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::Client.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_star_half_black_48dp = global::Client.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ic_voice_search_api_material = global::Client.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_item_background_holo_dark = global::Client.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_item_background_holo_light = global::Client.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_divider_material = global::Client.Droid.Resource.Drawable.abc_list_divider_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_focused_holo = global::Client.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_longpressed_holo = global::Client.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_pressed_holo_dark = global::Client.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_pressed_holo_light = global::Client.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Client.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Client.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Client.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Client.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_selector_holo_dark = global::Client.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_list_selector_holo_light = global::Client.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Client.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_popup_background_mtrl_mult = global::Client.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ratingbar_indicator_material = global::Client.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ratingbar_material = global::Client.Droid.Resource.Drawable.abc_ratingbar_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_ratingbar_small_material = global::Client.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Client.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Client.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_seekbar_thumb_material = global::Client.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_seekbar_tick_mark_material = global::Client.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_seekbar_track_material = global::Client.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Client.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_spinner_textfield_background_material = global::Client.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_switch_thumb_material = global::Client.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_tab_indicator_material = global::Client.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_cursor_material = global::Client.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::Client.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::Client.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::Client.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::Client.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::Client.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::Client.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Client.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_textfield_search_material = global::Client.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.abc_vector_test = global::Client.Droid.Resource.Drawable.abc_vector_test;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.avd_hide_password = global::Client.Droid.Resource.Drawable.avd_hide_password;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.avd_show_password = global::Client.Droid.Resource.Drawable.avd_show_password;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.design_bottom_navigation_item_background = global::Client.Droid.Resource.Drawable.design_bottom_navigation_item_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.design_fab_background = global::Client.Droid.Resource.Drawable.design_fab_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.design_ic_visibility = global::Client.Droid.Resource.Drawable.design_ic_visibility;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.design_ic_visibility_off = global::Client.Droid.Resource.Drawable.design_ic_visibility_off;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.design_password_eye = global::Client.Droid.Resource.Drawable.design_password_eye;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.design_snackbar_background = global::Client.Droid.Resource.Drawable.design_snackbar_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_audiotrack_dark = global::Client.Droid.Resource.Drawable.ic_audiotrack_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_audiotrack_light = global::Client.Droid.Resource.Drawable.ic_audiotrack_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_dialog_close_dark = global::Client.Droid.Resource.Drawable.ic_dialog_close_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_dialog_close_light = global::Client.Droid.Resource.Drawable.ic_dialog_close_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_00 = global::Client.Droid.Resource.Drawable.ic_group_collapse_00;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_01 = global::Client.Droid.Resource.Drawable.ic_group_collapse_01;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_02 = global::Client.Droid.Resource.Drawable.ic_group_collapse_02;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_03 = global::Client.Droid.Resource.Drawable.ic_group_collapse_03;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_04 = global::Client.Droid.Resource.Drawable.ic_group_collapse_04;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_05 = global::Client.Droid.Resource.Drawable.ic_group_collapse_05;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_06 = global::Client.Droid.Resource.Drawable.ic_group_collapse_06;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_07 = global::Client.Droid.Resource.Drawable.ic_group_collapse_07;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_08 = global::Client.Droid.Resource.Drawable.ic_group_collapse_08;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_09 = global::Client.Droid.Resource.Drawable.ic_group_collapse_09;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_10 = global::Client.Droid.Resource.Drawable.ic_group_collapse_10;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_11 = global::Client.Droid.Resource.Drawable.ic_group_collapse_11;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_12 = global::Client.Droid.Resource.Drawable.ic_group_collapse_12;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_13 = global::Client.Droid.Resource.Drawable.ic_group_collapse_13;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_14 = global::Client.Droid.Resource.Drawable.ic_group_collapse_14;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_collapse_15 = global::Client.Droid.Resource.Drawable.ic_group_collapse_15;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_00 = global::Client.Droid.Resource.Drawable.ic_group_expand_00;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_01 = global::Client.Droid.Resource.Drawable.ic_group_expand_01;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_02 = global::Client.Droid.Resource.Drawable.ic_group_expand_02;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_03 = global::Client.Droid.Resource.Drawable.ic_group_expand_03;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_04 = global::Client.Droid.Resource.Drawable.ic_group_expand_04;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_05 = global::Client.Droid.Resource.Drawable.ic_group_expand_05;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_06 = global::Client.Droid.Resource.Drawable.ic_group_expand_06;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_07 = global::Client.Droid.Resource.Drawable.ic_group_expand_07;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_08 = global::Client.Droid.Resource.Drawable.ic_group_expand_08;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_09 = global::Client.Droid.Resource.Drawable.ic_group_expand_09;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_10 = global::Client.Droid.Resource.Drawable.ic_group_expand_10;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_11 = global::Client.Droid.Resource.Drawable.ic_group_expand_11;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_12 = global::Client.Droid.Resource.Drawable.ic_group_expand_12;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_13 = global::Client.Droid.Resource.Drawable.ic_group_expand_13;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_14 = global::Client.Droid.Resource.Drawable.ic_group_expand_14;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_group_expand_15 = global::Client.Droid.Resource.Drawable.ic_group_expand_15;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_media_pause_dark = global::Client.Droid.Resource.Drawable.ic_media_pause_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_media_pause_light = global::Client.Droid.Resource.Drawable.ic_media_pause_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_media_play_dark = global::Client.Droid.Resource.Drawable.ic_media_play_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_media_play_light = global::Client.Droid.Resource.Drawable.ic_media_play_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_media_stop_dark = global::Client.Droid.Resource.Drawable.ic_media_stop_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_media_stop_light = global::Client.Droid.Resource.Drawable.ic_media_stop_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_00_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_00_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_01_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_01_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_02_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_02_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_03_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_03_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_04_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_04_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_05_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_05_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_06_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_06_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_07_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_07_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_08_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_08_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_09_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_09_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_10_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_10_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_11_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_11_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_12_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_12_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_13_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_13_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_14_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_14_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_15_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_15_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_16_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_16_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_17_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_17_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_18_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_18_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_19_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_19_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_20_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_20_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_21_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_21_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_22_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_22_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_23_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_23_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_24_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_24_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_25_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_25_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_26_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_26_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_27_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_27_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_28_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_28_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_29_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_29_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_30_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connected_30_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_00_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_00_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_01_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_01_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_02_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_02_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_03_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_03_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_04_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_04_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_05_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_05_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_06_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_06_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_07_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_07_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_08_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_08_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_09_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_09_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_10_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_10_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_11_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_11_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_12_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_12_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_13_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_13_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_14_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_14_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_15_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_15_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_16_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_16_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_17_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_17_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_18_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_18_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_19_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_19_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_20_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_20_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_21_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_21_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_22_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_22_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_23_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_23_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_24_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_24_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_25_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_25_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_26_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_26_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_27_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_27_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_28_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_28_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_29_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_29_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_30_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_connecting_30_light = global::Client.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_disabled_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_disabled_light = global::Client.Droid.Resource.Drawable.ic_mr_button_disabled_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_disconnected_dark = global::Client.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_disconnected_light = global::Client.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mr_button_grey = global::Client.Droid.Resource.Drawable.ic_mr_button_grey;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mtrl_chip_checked_black = global::Client.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mtrl_chip_checked_circle = global::Client.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_mtrl_chip_close_circle = global::Client.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_vol_type_speaker_dark = global::Client.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_vol_type_speaker_group_dark = global::Client.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_vol_type_speaker_group_light = global::Client.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_vol_type_speaker_light = global::Client.Droid.Resource.Drawable.ic_vol_type_speaker_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_vol_type_tv_dark = global::Client.Droid.Resource.Drawable.ic_vol_type_tv_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.ic_vol_type_tv_light = global::Client.Droid.Resource.Drawable.ic_vol_type_tv_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_button_connected_dark = global::Client.Droid.Resource.Drawable.mr_button_connected_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_button_connected_light = global::Client.Droid.Resource.Drawable.mr_button_connected_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_button_connecting_dark = global::Client.Droid.Resource.Drawable.mr_button_connecting_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_button_connecting_light = global::Client.Droid.Resource.Drawable.mr_button_connecting_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_button_dark = global::Client.Droid.Resource.Drawable.mr_button_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_button_light = global::Client.Droid.Resource.Drawable.mr_button_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_dialog_close_dark = global::Client.Droid.Resource.Drawable.mr_dialog_close_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_dialog_close_light = global::Client.Droid.Resource.Drawable.mr_dialog_close_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_dialog_material_background_dark = global::Client.Droid.Resource.Drawable.mr_dialog_material_background_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_dialog_material_background_light = global::Client.Droid.Resource.Drawable.mr_dialog_material_background_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_group_collapse = global::Client.Droid.Resource.Drawable.mr_group_collapse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_group_expand = global::Client.Droid.Resource.Drawable.mr_group_expand;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_media_pause_dark = global::Client.Droid.Resource.Drawable.mr_media_pause_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_media_pause_light = global::Client.Droid.Resource.Drawable.mr_media_pause_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_media_play_dark = global::Client.Droid.Resource.Drawable.mr_media_play_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_media_play_light = global::Client.Droid.Resource.Drawable.mr_media_play_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_media_stop_dark = global::Client.Droid.Resource.Drawable.mr_media_stop_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_media_stop_light = global::Client.Droid.Resource.Drawable.mr_media_stop_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_vol_type_audiotrack_dark = global::Client.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mr_vol_type_audiotrack_light = global::Client.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mtrl_snackbar_background = global::Client.Droid.Resource.Drawable.mtrl_snackbar_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.mtrl_tabs_default_indicator = global::Client.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.navigation_empty_icon = global::Client.Droid.Resource.Drawable.navigation_empty_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_action_background = global::Client.Droid.Resource.Drawable.notification_action_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_bg = global::Client.Droid.Resource.Drawable.notification_bg;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_bg_low = global::Client.Droid.Resource.Drawable.notification_bg_low;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_bg_low_normal = global::Client.Droid.Resource.Drawable.notification_bg_low_normal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_bg_low_pressed = global::Client.Droid.Resource.Drawable.notification_bg_low_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_bg_normal = global::Client.Droid.Resource.Drawable.notification_bg_normal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_bg_normal_pressed = global::Client.Droid.Resource.Drawable.notification_bg_normal_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_icon_background = global::Client.Droid.Resource.Drawable.notification_icon_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_template_icon_bg = global::Client.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_template_icon_low_bg = global::Client.Droid.Resource.Drawable.notification_template_icon_low_bg;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notification_tile_bg = global::Client.Droid.Resource.Drawable.notification_tile_bg;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Client.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_grey = global::Client.Droid.Resource.Drawable.segment_grey;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_grey_focus = global::Client.Droid.Resource.Drawable.segment_grey_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_grey_press = global::Client.Droid.Resource.Drawable.segment_grey_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_left_off = global::Client.Droid.Resource.Drawable.segment_left_off;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_left_off_pressed = global::Client.Droid.Resource.Drawable.segment_left_off_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_left_on = global::Client.Droid.Resource.Drawable.segment_left_on;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_middle_off = global::Client.Droid.Resource.Drawable.segment_middle_off;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_middle_off_pressed = global::Client.Droid.Resource.Drawable.segment_middle_off_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_middle_on = global::Client.Droid.Resource.Drawable.segment_middle_on;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_off = global::Client.Droid.Resource.Drawable.segment_off;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_off_pressed = global::Client.Droid.Resource.Drawable.segment_off_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_on = global::Client.Droid.Resource.Drawable.segment_on;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_left = global::Client.Droid.Resource.Drawable.segment_radio_grey_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_left_focus = global::Client.Droid.Resource.Drawable.segment_radio_grey_left_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_left_press = global::Client.Droid.Resource.Drawable.segment_radio_grey_left_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_middle = global::Client.Droid.Resource.Drawable.segment_radio_grey_middle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_middle_focus = global::Client.Droid.Resource.Drawable.segment_radio_grey_middle_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_middle_press = global::Client.Droid.Resource.Drawable.segment_radio_grey_middle_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_right = global::Client.Droid.Resource.Drawable.segment_radio_grey_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_right_focus = global::Client.Droid.Resource.Drawable.segment_radio_grey_right_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_grey_right_press = global::Client.Droid.Resource.Drawable.segment_radio_grey_right_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_left = global::Client.Droid.Resource.Drawable.segment_radio_white_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_left_focus = global::Client.Droid.Resource.Drawable.segment_radio_white_left_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_left_press = global::Client.Droid.Resource.Drawable.segment_radio_white_left_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_middle = global::Client.Droid.Resource.Drawable.segment_radio_white_middle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_middle_focus = global::Client.Droid.Resource.Drawable.segment_radio_white_middle_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_middle_press = global::Client.Droid.Resource.Drawable.segment_radio_white_middle_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_right = global::Client.Droid.Resource.Drawable.segment_radio_white_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_right_focus = global::Client.Droid.Resource.Drawable.segment_radio_white_right_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_radio_white_right_press = global::Client.Droid.Resource.Drawable.segment_radio_white_right_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_right_off = global::Client.Droid.Resource.Drawable.segment_right_off;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_right_off_pressed = global::Client.Droid.Resource.Drawable.segment_right_off_pressed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_right_on = global::Client.Droid.Resource.Drawable.segment_right_on;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_white = global::Client.Droid.Resource.Drawable.segment_white;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_white_focus = global::Client.Droid.Resource.Drawable.segment_white_focus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.segment_white_press = global::Client.Droid.Resource.Drawable.segment_white_press;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_dark_segment_button = global::Client.Droid.Resource.Drawable.theme_dark_segment_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_dark_segment_radio_left = global::Client.Droid.Resource.Drawable.theme_dark_segment_radio_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_dark_segment_radio_middle = global::Client.Droid.Resource.Drawable.theme_dark_segment_radio_middle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_dark_segment_radio_right = global::Client.Droid.Resource.Drawable.theme_dark_segment_radio_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_default_segment_button = global::Client.Droid.Resource.Drawable.theme_default_segment_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_default_segment_radio_left = global::Client.Droid.Resource.Drawable.theme_default_segment_radio_left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_default_segment_radio_middle = global::Client.Droid.Resource.Drawable.theme_default_segment_radio_middle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.theme_default_segment_radio_right = global::Client.Droid.Resource.Drawable.theme_default_segment_radio_right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.tooltip_frame_dark = global::Client.Droid.Resource.Drawable.tooltip_frame_dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Drawable.tooltip_frame_light = global::Client.Droid.Resource.Drawable.tooltip_frame_light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.ALT = global::Client.Droid.Resource.Id.ALT;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.CTRL = global::Client.Droid.Resource.Id.CTRL;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.FUNCTION = global::Client.Droid.Resource.Id.FUNCTION;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.META = global::Client.Droid.Resource.Id.META;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.SHIFT = global::Client.Droid.Resource.Id.SHIFT;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.SYM = global::Client.Droid.Resource.Id.SYM;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action0 = global::Client.Droid.Resource.Id.action0;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar = global::Client.Droid.Resource.Id.action_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar_activity_content = global::Client.Droid.Resource.Id.action_bar_activity_content;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar_container = global::Client.Droid.Resource.Id.action_bar_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar_root = global::Client.Droid.Resource.Id.action_bar_root;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar_spinner = global::Client.Droid.Resource.Id.action_bar_spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar_subtitle = global::Client.Droid.Resource.Id.action_bar_subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_bar_title = global::Client.Droid.Resource.Id.action_bar_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_container = global::Client.Droid.Resource.Id.action_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_context_bar = global::Client.Droid.Resource.Id.action_context_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_divider = global::Client.Droid.Resource.Id.action_divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_image = global::Client.Droid.Resource.Id.action_image;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_menu_divider = global::Client.Droid.Resource.Id.action_menu_divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_menu_presenter = global::Client.Droid.Resource.Id.action_menu_presenter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_mode_bar = global::Client.Droid.Resource.Id.action_mode_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_mode_bar_stub = global::Client.Droid.Resource.Id.action_mode_bar_stub;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_mode_close_button = global::Client.Droid.Resource.Id.action_mode_close_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.action_text = global::Client.Droid.Resource.Id.action_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.actions = global::Client.Droid.Resource.Id.actions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.activity_chooser_view_content = global::Client.Droid.Resource.Id.activity_chooser_view_content;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.add = global::Client.Droid.Resource.Id.add;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.alertTitle = global::Client.Droid.Resource.Id.alertTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.all = global::Client.Droid.Resource.Id.all;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.always = global::Client.Droid.Resource.Id.always;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.async = global::Client.Droid.Resource.Id.async;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.auto = global::Client.Droid.Resource.Id.auto;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.beginning = global::Client.Droid.Resource.Id.beginning;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.blocking = global::Client.Droid.Resource.Id.blocking;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.bottom = global::Client.Droid.Resource.Id.bottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.bottomtab_navarea = global::Client.Droid.Resource.Id.bottomtab_navarea;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.bottomtab_tabbar = global::Client.Droid.Resource.Id.bottomtab_tabbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.browser_actions_header_text = global::Client.Droid.Resource.Id.browser_actions_header_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.browser_actions_menu_item_icon = global::Client.Droid.Resource.Id.browser_actions_menu_item_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.browser_actions_menu_item_text = global::Client.Droid.Resource.Id.browser_actions_menu_item_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.browser_actions_menu_items = global::Client.Droid.Resource.Id.browser_actions_menu_items;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.browser_actions_menu_view = global::Client.Droid.Resource.Id.browser_actions_menu_view;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.buttonPanel = global::Client.Droid.Resource.Id.buttonPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.cancel_action = global::Client.Droid.Resource.Id.cancel_action;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.center = global::Client.Droid.Resource.Id.center;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.center_horizontal = global::Client.Droid.Resource.Id.center_horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.center_vertical = global::Client.Droid.Resource.Id.center_vertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.checkbox = global::Client.Droid.Resource.Id.checkbox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.chronometer = global::Client.Droid.Resource.Id.chronometer;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.clip_horizontal = global::Client.Droid.Resource.Id.clip_horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.clip_vertical = global::Client.Droid.Resource.Id.clip_vertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.collapseActionView = global::Client.Droid.Resource.Id.collapseActionView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.container = global::Client.Droid.Resource.Id.container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.content = global::Client.Droid.Resource.Id.content;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.contentPanel = global::Client.Droid.Resource.Id.contentPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.coordinator = global::Client.Droid.Resource.Id.coordinator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.custom = global::Client.Droid.Resource.Id.custom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.customPanel = global::Client.Droid.Resource.Id.customPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.decor_content_parent = global::Client.Droid.Resource.Id.decor_content_parent;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.default_activity_button = global::Client.Droid.Resource.Id.default_activity_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.design_bottom_sheet = global::Client.Droid.Resource.Id.design_bottom_sheet;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.design_menu_item_action_area = global::Client.Droid.Resource.Id.design_menu_item_action_area;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.design_menu_item_action_area_stub = global::Client.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.design_menu_item_text = global::Client.Droid.Resource.Id.design_menu_item_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.design_navigation_view = global::Client.Droid.Resource.Id.design_navigation_view;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.disableHome = global::Client.Droid.Resource.Id.disableHome;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.edit_query = global::Client.Droid.Resource.Id.edit_query;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.end = global::Client.Droid.Resource.Id.end;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.end_padder = global::Client.Droid.Resource.Id.end_padder;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.enterAlways = global::Client.Droid.Resource.Id.enterAlways;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.enterAlwaysCollapsed = global::Client.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.exitUntilCollapsed = global::Client.Droid.Resource.Id.exitUntilCollapsed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.expand_activities_button = global::Client.Droid.Resource.Id.expand_activities_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.expanded_menu = global::Client.Droid.Resource.Id.expanded_menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.fill = global::Client.Droid.Resource.Id.fill;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.fill_horizontal = global::Client.Droid.Resource.Id.fill_horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.fill_vertical = global::Client.Droid.Resource.Id.fill_vertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.filled = global::Client.Droid.Resource.Id.filled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.@fixed = global::Client.Droid.Resource.Id.@fixed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.flyoutcontent_appbar = global::Client.Droid.Resource.Id.flyoutcontent_appbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.flyoutcontent_recycler = global::Client.Droid.Resource.Id.flyoutcontent_recycler;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.forever = global::Client.Droid.Resource.Id.forever;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.ghost_view = global::Client.Droid.Resource.Id.ghost_view;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.group_divider = global::Client.Droid.Resource.Id.group_divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.home = global::Client.Droid.Resource.Id.home;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.homeAsUp = global::Client.Droid.Resource.Id.homeAsUp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.icon = global::Client.Droid.Resource.Id.icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.icon_group = global::Client.Droid.Resource.Id.icon_group;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.ifRoom = global::Client.Droid.Resource.Id.ifRoom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.image = global::Client.Droid.Resource.Id.image;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.info = global::Client.Droid.Resource.Id.info;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.italic = global::Client.Droid.Resource.Id.italic;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.item_touch_helper_previous_elevation = global::Client.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.labeled = global::Client.Droid.Resource.Id.labeled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.largeLabel = global::Client.Droid.Resource.Id.largeLabel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.left = global::Client.Droid.Resource.Id.left;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.leftBar = global::Client.Droid.Resource.Id.leftBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.line1 = global::Client.Droid.Resource.Id.line1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.line3 = global::Client.Droid.Resource.Id.line3;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.listMode = global::Client.Droid.Resource.Id.listMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.list_item = global::Client.Droid.Resource.Id.list_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.main_appbar = global::Client.Droid.Resource.Id.main_appbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.main_tablayout = global::Client.Droid.Resource.Id.main_tablayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.main_toolbar = global::Client.Droid.Resource.Id.main_toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.masked = global::Client.Droid.Resource.Id.masked;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.media_actions = global::Client.Droid.Resource.Id.media_actions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.message = global::Client.Droid.Resource.Id.message;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.middle = global::Client.Droid.Resource.Id.middle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mini = global::Client.Droid.Resource.Id.mini;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_art = global::Client.Droid.Resource.Id.mr_art;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_checkbox = global::Client.Droid.Resource.Id.mr_cast_checkbox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_close_button = global::Client.Droid.Resource.Id.mr_cast_close_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_group_icon = global::Client.Droid.Resource.Id.mr_cast_group_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_group_name = global::Client.Droid.Resource.Id.mr_cast_group_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_list = global::Client.Droid.Resource.Id.mr_cast_list;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_meta = global::Client.Droid.Resource.Id.mr_cast_meta;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_meta_art = global::Client.Droid.Resource.Id.mr_cast_meta_art;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_meta_subtitle = global::Client.Droid.Resource.Id.mr_cast_meta_subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_meta_title = global::Client.Droid.Resource.Id.mr_cast_meta_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_route_icon = global::Client.Droid.Resource.Id.mr_cast_route_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_route_name = global::Client.Droid.Resource.Id.mr_cast_route_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_stop_button = global::Client.Droid.Resource.Id.mr_cast_stop_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_volume_layout = global::Client.Droid.Resource.Id.mr_cast_volume_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_cast_volume_slider = global::Client.Droid.Resource.Id.mr_cast_volume_slider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_chooser_list = global::Client.Droid.Resource.Id.mr_chooser_list;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_chooser_route_desc = global::Client.Droid.Resource.Id.mr_chooser_route_desc;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_chooser_route_icon = global::Client.Droid.Resource.Id.mr_chooser_route_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_chooser_route_name = global::Client.Droid.Resource.Id.mr_chooser_route_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_chooser_title = global::Client.Droid.Resource.Id.mr_chooser_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_close = global::Client.Droid.Resource.Id.mr_close;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_control_divider = global::Client.Droid.Resource.Id.mr_control_divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_control_playback_ctrl = global::Client.Droid.Resource.Id.mr_control_playback_ctrl;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_control_subtitle = global::Client.Droid.Resource.Id.mr_control_subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_control_title = global::Client.Droid.Resource.Id.mr_control_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_control_title_container = global::Client.Droid.Resource.Id.mr_control_title_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_custom_control = global::Client.Droid.Resource.Id.mr_custom_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_default_control = global::Client.Droid.Resource.Id.mr_default_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_dialog_area = global::Client.Droid.Resource.Id.mr_dialog_area;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_dialog_header_name = global::Client.Droid.Resource.Id.mr_dialog_header_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_expandable_area = global::Client.Droid.Resource.Id.mr_expandable_area;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_group_expand_collapse = global::Client.Droid.Resource.Id.mr_group_expand_collapse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_group_volume_route_name = global::Client.Droid.Resource.Id.mr_group_volume_route_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_group_volume_slider = global::Client.Droid.Resource.Id.mr_group_volume_slider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_media_main_control = global::Client.Droid.Resource.Id.mr_media_main_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_name = global::Client.Droid.Resource.Id.mr_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_picker_close_button = global::Client.Droid.Resource.Id.mr_picker_close_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_picker_list = global::Client.Droid.Resource.Id.mr_picker_list;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_picker_route_icon = global::Client.Droid.Resource.Id.mr_picker_route_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_picker_route_name = global::Client.Droid.Resource.Id.mr_picker_route_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_playback_control = global::Client.Droid.Resource.Id.mr_playback_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_title_bar = global::Client.Droid.Resource.Id.mr_title_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_volume_control = global::Client.Droid.Resource.Id.mr_volume_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_volume_group_list = global::Client.Droid.Resource.Id.mr_volume_group_list;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_volume_item_icon = global::Client.Droid.Resource.Id.mr_volume_item_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mr_volume_slider = global::Client.Droid.Resource.Id.mr_volume_slider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mtrl_child_content_container = global::Client.Droid.Resource.Id.mtrl_child_content_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.mtrl_internal_children_alpha_tag = global::Client.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.multiply = global::Client.Droid.Resource.Id.multiply;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.navigation_header_container = global::Client.Droid.Resource.Id.navigation_header_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.never = global::Client.Droid.Resource.Id.never;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.none = global::Client.Droid.Resource.Id.none;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.normal = global::Client.Droid.Resource.Id.normal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.notification_background = global::Client.Droid.Resource.Id.notification_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.notification_main_column = global::Client.Droid.Resource.Id.notification_main_column;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.notification_main_column_container = global::Client.Droid.Resource.Id.notification_main_column_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.outline = global::Client.Droid.Resource.Id.outline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.parallax = global::Client.Droid.Resource.Id.parallax;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.parentPanel = global::Client.Droid.Resource.Id.parentPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.parent_matrix = global::Client.Droid.Resource.Id.parent_matrix;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.pin = global::Client.Droid.Resource.Id.pin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.progress_circular = global::Client.Droid.Resource.Id.progress_circular;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.progress_horizontal = global::Client.Droid.Resource.Id.progress_horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.radio = global::Client.Droid.Resource.Id.radio;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.right = global::Client.Droid.Resource.Id.right;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.rightBar = global::Client.Droid.Resource.Id.rightBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.right_icon = global::Client.Droid.Resource.Id.right_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.right_side = global::Client.Droid.Resource.Id.right_side;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.save_image_matrix = global::Client.Droid.Resource.Id.save_image_matrix;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.save_non_transition_alpha = global::Client.Droid.Resource.Id.save_non_transition_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.save_scale_type = global::Client.Droid.Resource.Id.save_scale_type;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.screen = global::Client.Droid.Resource.Id.screen;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.scroll = global::Client.Droid.Resource.Id.scroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.scrollIndicatorDown = global::Client.Droid.Resource.Id.scrollIndicatorDown;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.scrollIndicatorUp = global::Client.Droid.Resource.Id.scrollIndicatorUp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.scrollView = global::Client.Droid.Resource.Id.scrollView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.scrollable = global::Client.Droid.Resource.Id.scrollable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_badge = global::Client.Droid.Resource.Id.search_badge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_bar = global::Client.Droid.Resource.Id.search_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_button = global::Client.Droid.Resource.Id.search_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_close_btn = global::Client.Droid.Resource.Id.search_close_btn;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_edit_frame = global::Client.Droid.Resource.Id.search_edit_frame;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_go_btn = global::Client.Droid.Resource.Id.search_go_btn;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_mag_icon = global::Client.Droid.Resource.Id.search_mag_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_plate = global::Client.Droid.Resource.Id.search_plate;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_src_text = global::Client.Droid.Resource.Id.search_src_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.search_voice_btn = global::Client.Droid.Resource.Id.search_voice_btn;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.select_dialog_listview = global::Client.Droid.Resource.Id.select_dialog_listview;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.selected = global::Client.Droid.Resource.Id.selected;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.shellcontent_appbar = global::Client.Droid.Resource.Id.shellcontent_appbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.shellcontent_toolbar = global::Client.Droid.Resource.Id.shellcontent_toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.shortcut = global::Client.Droid.Resource.Id.shortcut;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.showCustom = global::Client.Droid.Resource.Id.showCustom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.showHome = global::Client.Droid.Resource.Id.showHome;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.showTitle = global::Client.Droid.Resource.Id.showTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.smallLabel = global::Client.Droid.Resource.Id.smallLabel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.snackbar_action = global::Client.Droid.Resource.Id.snackbar_action;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.snackbar_text = global::Client.Droid.Resource.Id.snackbar_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.snap = global::Client.Droid.Resource.Id.snap;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.snapMargins = global::Client.Droid.Resource.Id.snapMargins;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.spacer = global::Client.Droid.Resource.Id.spacer;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.split_action_bar = global::Client.Droid.Resource.Id.split_action_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.src_atop = global::Client.Droid.Resource.Id.src_atop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.src_in = global::Client.Droid.Resource.Id.src_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.src_over = global::Client.Droid.Resource.Id.src_over;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.start = global::Client.Droid.Resource.Id.start;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.status_bar_latest_event_content = global::Client.Droid.Resource.Id.status_bar_latest_event_content;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.stretch = global::Client.Droid.Resource.Id.stretch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.submenuarrow = global::Client.Droid.Resource.Id.submenuarrow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.submit_area = global::Client.Droid.Resource.Id.submit_area;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.swipetorefreshbar = global::Client.Droid.Resource.Id.swipetorefreshbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.tabMode = global::Client.Droid.Resource.Id.tabMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.tag_transition_group = global::Client.Droid.Resource.Id.tag_transition_group;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.tag_unhandled_key_event_manager = global::Client.Droid.Resource.Id.tag_unhandled_key_event_manager;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.tag_unhandled_key_listeners = global::Client.Droid.Resource.Id.tag_unhandled_key_listeners;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.text = global::Client.Droid.Resource.Id.text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.text2 = global::Client.Droid.Resource.Id.text2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.textSpacerNoButtons = global::Client.Droid.Resource.Id.textSpacerNoButtons;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.textSpacerNoTitle = global::Client.Droid.Resource.Id.textSpacerNoTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.textStart = global::Client.Droid.Resource.Id.textStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.text_input_password_toggle = global::Client.Droid.Resource.Id.text_input_password_toggle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.textinput_counter = global::Client.Droid.Resource.Id.textinput_counter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.textinput_error = global::Client.Droid.Resource.Id.textinput_error;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.textinput_helper_text = global::Client.Droid.Resource.Id.textinput_helper_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.time = global::Client.Droid.Resource.Id.time;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.title = global::Client.Droid.Resource.Id.title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.titleDividerNoCustom = global::Client.Droid.Resource.Id.titleDividerNoCustom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.title_template = global::Client.Droid.Resource.Id.title_template;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.top = global::Client.Droid.Resource.Id.top;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.topPanel = global::Client.Droid.Resource.Id.topPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.touch_outside = global::Client.Droid.Resource.Id.touch_outside;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.transition_current_scene = global::Client.Droid.Resource.Id.transition_current_scene;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.transition_layout_save = global::Client.Droid.Resource.Id.transition_layout_save;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.transition_position = global::Client.Droid.Resource.Id.transition_position;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.transition_scene_layoutid_cache = global::Client.Droid.Resource.Id.transition_scene_layoutid_cache;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.transition_transform = global::Client.Droid.Resource.Id.transition_transform;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.uniform = global::Client.Droid.Resource.Id.uniform;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.unlabeled = global::Client.Droid.Resource.Id.unlabeled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.up = global::Client.Droid.Resource.Id.up;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.useLogo = global::Client.Droid.Resource.Id.useLogo;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.view_offset_helper = global::Client.Droid.Resource.Id.view_offset_helper;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.visible = global::Client.Droid.Resource.Id.visible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.volume_item_container = global::Client.Droid.Resource.Id.volume_item_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.withText = global::Client.Droid.Resource.Id.withText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Id.wrap_content = global::Client.Droid.Resource.Id.wrap_content;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.abc_config_activityDefaultDur = global::Client.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.abc_config_activityShortDur = global::Client.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.app_bar_elevation_anim_duration = global::Client.Droid.Resource.Integer.app_bar_elevation_anim_duration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.bottom_sheet_slide_duration = global::Client.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.cancel_button_image_alpha = global::Client.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.config_tooltipAnimTime = global::Client.Droid.Resource.Integer.config_tooltipAnimTime;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.design_snackbar_text_max_lines = global::Client.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.design_tab_indicator_anim_duration_ms = global::Client.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.hide_password_duration = global::Client.Droid.Resource.Integer.hide_password_duration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::Client.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::Client.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::Client.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mr_update_routes_delay_ms = global::Client.Droid.Resource.Integer.mr_update_routes_delay_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mtrl_btn_anim_delay_ms = global::Client.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mtrl_btn_anim_duration_ms = global::Client.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mtrl_chip_anim_duration = global::Client.Droid.Resource.Integer.mtrl_chip_anim_duration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::Client.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.show_password_duration = global::Client.Droid.Resource.Integer.show_password_duration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Integer.status_bar_notification_info_maxnum = global::Client.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Interpolator.mr_fast_out_slow_in = global::Client.Droid.Resource.Interpolator.mr_fast_out_slow_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Interpolator.mr_linear_out_slow_in = global::Client.Droid.Resource.Interpolator.mr_linear_out_slow_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Interpolator.mtrl_fast_out_linear_in = global::Client.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Interpolator.mtrl_fast_out_slow_in = global::Client.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Interpolator.mtrl_linear = global::Client.Droid.Resource.Interpolator.mtrl_linear;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Interpolator.mtrl_linear_out_slow_in = global::Client.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_action_bar_title_item = global::Client.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_action_bar_up_container = global::Client.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_action_menu_item_layout = global::Client.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_action_menu_layout = global::Client.Droid.Resource.Layout.abc_action_menu_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_action_mode_bar = global::Client.Droid.Resource.Layout.abc_action_mode_bar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_action_mode_close_item_material = global::Client.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_activity_chooser_view = global::Client.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_activity_chooser_view_list_item = global::Client.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_alert_dialog_button_bar_material = global::Client.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_alert_dialog_material = global::Client.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_alert_dialog_title_material = global::Client.Droid.Resource.Layout.abc_alert_dialog_title_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_cascading_menu_item_layout = global::Client.Droid.Resource.Layout.abc_cascading_menu_item_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_dialog_title_material = global::Client.Droid.Resource.Layout.abc_dialog_title_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_expanded_menu_layout = global::Client.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_list_menu_item_checkbox = global::Client.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_list_menu_item_icon = global::Client.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_list_menu_item_layout = global::Client.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_list_menu_item_radio = global::Client.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_popup_menu_header_item_layout = global::Client.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_popup_menu_item_layout = global::Client.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_screen_content_include = global::Client.Droid.Resource.Layout.abc_screen_content_include;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_screen_simple = global::Client.Droid.Resource.Layout.abc_screen_simple;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Client.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_screen_toolbar = global::Client.Droid.Resource.Layout.abc_screen_toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Client.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_search_view = global::Client.Droid.Resource.Layout.abc_search_view;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_select_dialog_material = global::Client.Droid.Resource.Layout.abc_select_dialog_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.abc_tooltip = global::Client.Droid.Resource.Layout.abc_tooltip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.BottomTabLayout = global::Client.Droid.Resource.Layout.BottomTabLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.browser_actions_context_menu_page = global::Client.Droid.Resource.Layout.browser_actions_context_menu_page;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.browser_actions_context_menu_row = global::Client.Droid.Resource.Layout.browser_actions_context_menu_row;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_bottom_navigation_item = global::Client.Droid.Resource.Layout.design_bottom_navigation_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_bottom_sheet_dialog = global::Client.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_layout_snackbar = global::Client.Droid.Resource.Layout.design_layout_snackbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_layout_snackbar_include = global::Client.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_layout_tab_icon = global::Client.Droid.Resource.Layout.design_layout_tab_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_layout_tab_text = global::Client.Droid.Resource.Layout.design_layout_tab_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_menu_item_action_area = global::Client.Droid.Resource.Layout.design_menu_item_action_area;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_navigation_item = global::Client.Droid.Resource.Layout.design_navigation_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_navigation_item_header = global::Client.Droid.Resource.Layout.design_navigation_item_header;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_navigation_item_separator = global::Client.Droid.Resource.Layout.design_navigation_item_separator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_navigation_item_subheader = global::Client.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_navigation_menu = global::Client.Droid.Resource.Layout.design_navigation_menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_navigation_menu_item = global::Client.Droid.Resource.Layout.design_navigation_menu_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.design_text_input_password_icon = global::Client.Droid.Resource.Layout.design_text_input_password_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.FlyoutContent = global::Client.Droid.Resource.Layout.FlyoutContent;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_cast_dialog = global::Client.Droid.Resource.Layout.mr_cast_dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_cast_group_item = global::Client.Droid.Resource.Layout.mr_cast_group_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_cast_group_volume_item = global::Client.Droid.Resource.Layout.mr_cast_group_volume_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_cast_media_metadata = global::Client.Droid.Resource.Layout.mr_cast_media_metadata;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_cast_route_item = global::Client.Droid.Resource.Layout.mr_cast_route_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_chooser_dialog = global::Client.Droid.Resource.Layout.mr_chooser_dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_chooser_list_item = global::Client.Droid.Resource.Layout.mr_chooser_list_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_controller_material_dialog_b = global::Client.Droid.Resource.Layout.mr_controller_material_dialog_b;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_controller_volume_item = global::Client.Droid.Resource.Layout.mr_controller_volume_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_dialog_header_item = global::Client.Droid.Resource.Layout.mr_dialog_header_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_picker_dialog = global::Client.Droid.Resource.Layout.mr_picker_dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_picker_route_item = global::Client.Droid.Resource.Layout.mr_picker_route_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_playback_control = global::Client.Droid.Resource.Layout.mr_playback_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mr_volume_control = global::Client.Droid.Resource.Layout.mr_volume_control;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mtrl_layout_snackbar = global::Client.Droid.Resource.Layout.mtrl_layout_snackbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.mtrl_layout_snackbar_include = global::Client.Droid.Resource.Layout.mtrl_layout_snackbar_include;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_action = global::Client.Droid.Resource.Layout.notification_action;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_action_tombstone = global::Client.Droid.Resource.Layout.notification_action_tombstone;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_media_action = global::Client.Droid.Resource.Layout.notification_media_action;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_media_cancel_action = global::Client.Droid.Resource.Layout.notification_media_cancel_action;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_big_media = global::Client.Droid.Resource.Layout.notification_template_big_media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_big_media_custom = global::Client.Droid.Resource.Layout.notification_template_big_media_custom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_big_media_narrow = global::Client.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::Client.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_custom_big = global::Client.Droid.Resource.Layout.notification_template_custom_big;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_icon_group = global::Client.Droid.Resource.Layout.notification_template_icon_group;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_lines_media = global::Client.Droid.Resource.Layout.notification_template_lines_media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_media = global::Client.Droid.Resource.Layout.notification_template_media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_media_custom = global::Client.Droid.Resource.Layout.notification_template_media_custom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_part_chronometer = global::Client.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.notification_template_part_time = global::Client.Droid.Resource.Layout.notification_template_part_time;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.RootLayout = global::Client.Droid.Resource.Layout.RootLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.select_dialog_item_material = global::Client.Droid.Resource.Layout.select_dialog_item_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.select_dialog_multichoice_material = global::Client.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.select_dialog_singlechoice_material = global::Client.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.ShellContent = global::Client.Droid.Resource.Layout.ShellContent;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::Client.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_action_bar_home_description = global::Client.Droid.Resource.String.abc_action_bar_home_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_action_bar_up_description = global::Client.Droid.Resource.String.abc_action_bar_up_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_action_menu_overflow_description = global::Client.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_action_mode_done = global::Client.Droid.Resource.String.abc_action_mode_done;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_activity_chooser_view_see_all = global::Client.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_activitychooserview_choose_application = global::Client.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_capital_off = global::Client.Droid.Resource.String.abc_capital_off;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_capital_on = global::Client.Droid.Resource.String.abc_capital_on;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_body_1_material = global::Client.Droid.Resource.String.abc_font_family_body_1_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_body_2_material = global::Client.Droid.Resource.String.abc_font_family_body_2_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_button_material = global::Client.Droid.Resource.String.abc_font_family_button_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_caption_material = global::Client.Droid.Resource.String.abc_font_family_caption_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_display_1_material = global::Client.Droid.Resource.String.abc_font_family_display_1_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_display_2_material = global::Client.Droid.Resource.String.abc_font_family_display_2_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_display_3_material = global::Client.Droid.Resource.String.abc_font_family_display_3_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_display_4_material = global::Client.Droid.Resource.String.abc_font_family_display_4_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_headline_material = global::Client.Droid.Resource.String.abc_font_family_headline_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_menu_material = global::Client.Droid.Resource.String.abc_font_family_menu_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_subhead_material = global::Client.Droid.Resource.String.abc_font_family_subhead_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_font_family_title_material = global::Client.Droid.Resource.String.abc_font_family_title_material;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_alt_shortcut_label = global::Client.Droid.Resource.String.abc_menu_alt_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_ctrl_shortcut_label = global::Client.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_delete_shortcut_label = global::Client.Droid.Resource.String.abc_menu_delete_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_enter_shortcut_label = global::Client.Droid.Resource.String.abc_menu_enter_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_function_shortcut_label = global::Client.Droid.Resource.String.abc_menu_function_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_meta_shortcut_label = global::Client.Droid.Resource.String.abc_menu_meta_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_shift_shortcut_label = global::Client.Droid.Resource.String.abc_menu_shift_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_space_shortcut_label = global::Client.Droid.Resource.String.abc_menu_space_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_menu_sym_shortcut_label = global::Client.Droid.Resource.String.abc_menu_sym_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_prepend_shortcut_label = global::Client.Droid.Resource.String.abc_prepend_shortcut_label;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_search_hint = global::Client.Droid.Resource.String.abc_search_hint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_searchview_description_clear = global::Client.Droid.Resource.String.abc_searchview_description_clear;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_searchview_description_query = global::Client.Droid.Resource.String.abc_searchview_description_query;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_searchview_description_search = global::Client.Droid.Resource.String.abc_searchview_description_search;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_searchview_description_submit = global::Client.Droid.Resource.String.abc_searchview_description_submit;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_searchview_description_voice = global::Client.Droid.Resource.String.abc_searchview_description_voice;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_shareactionprovider_share_with = global::Client.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_shareactionprovider_share_with_application = global::Client.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.abc_toolbar_collapse_description = global::Client.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.appbar_scrolling_view_behavior = global::Client.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.bottom_sheet_behavior = global::Client.Droid.Resource.String.bottom_sheet_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.character_counter_content_description = global::Client.Droid.Resource.String.character_counter_content_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.character_counter_pattern = global::Client.Droid.Resource.String.character_counter_pattern;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.fab_transformation_scrim_behavior = global::Client.Droid.Resource.String.fab_transformation_scrim_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.fab_transformation_sheet_behavior = global::Client.Droid.Resource.String.fab_transformation_sheet_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::Client.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.library_name = global::Client.Droid.Resource.String.library_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_button_content_description = global::Client.Droid.Resource.String.mr_button_content_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_cast_button_connected = global::Client.Droid.Resource.String.mr_cast_button_connected;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_cast_button_connecting = global::Client.Droid.Resource.String.mr_cast_button_connecting;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_cast_button_disconnected = global::Client.Droid.Resource.String.mr_cast_button_disconnected;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_cast_dialog_title_view_placeholder = global::Client.Droid.Resource.String.mr_cast_dialog_title_view_placeholder;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_chooser_searching = global::Client.Droid.Resource.String.mr_chooser_searching;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_chooser_title = global::Client.Droid.Resource.String.mr_chooser_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_album_art = global::Client.Droid.Resource.String.mr_controller_album_art;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_casting_screen = global::Client.Droid.Resource.String.mr_controller_casting_screen;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_close_description = global::Client.Droid.Resource.String.mr_controller_close_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_collapse_group = global::Client.Droid.Resource.String.mr_controller_collapse_group;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_disconnect = global::Client.Droid.Resource.String.mr_controller_disconnect;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_expand_group = global::Client.Droid.Resource.String.mr_controller_expand_group;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_no_info_available = global::Client.Droid.Resource.String.mr_controller_no_info_available;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_no_media_selected = global::Client.Droid.Resource.String.mr_controller_no_media_selected;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_pause = global::Client.Droid.Resource.String.mr_controller_pause;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_play = global::Client.Droid.Resource.String.mr_controller_play;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_stop = global::Client.Droid.Resource.String.mr_controller_stop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_stop_casting = global::Client.Droid.Resource.String.mr_controller_stop_casting;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_controller_volume_slider = global::Client.Droid.Resource.String.mr_controller_volume_slider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_dialog_device_header = global::Client.Droid.Resource.String.mr_dialog_device_header;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_dialog_route_header = global::Client.Droid.Resource.String.mr_dialog_route_header;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_system_route_name = global::Client.Droid.Resource.String.mr_system_route_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mr_user_route_category_name = global::Client.Droid.Resource.String.mr_user_route_category_name;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.mtrl_chip_close_icon_content_description = global::Client.Droid.Resource.String.mtrl_chip_close_icon_content_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.password_toggle_content_description = global::Client.Droid.Resource.String.password_toggle_content_description;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.path_password_eye = global::Client.Droid.Resource.String.path_password_eye;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.path_password_eye_mask_strike_through = global::Client.Droid.Resource.String.path_password_eye_mask_strike_through;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.path_password_eye_mask_visible = global::Client.Droid.Resource.String.path_password_eye_mask_visible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.path_password_strike_through = global::Client.Droid.Resource.String.path_password_strike_through;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.search_menu_title = global::Client.Droid.Resource.String.search_menu_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.String.status_bar_notification_info_overflow = global::Client.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.AlertDialog_AppCompat = global::Client.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.AlertDialog_AppCompat_Light = global::Client.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Animation_AppCompat_Dialog = global::Client.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::Client.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Animation_AppCompat_Tooltip = global::Client.Droid.Resource.Style.Animation_AppCompat_Tooltip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::Client.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_AlertDialog_AppCompat = global::Client.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Client.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Client.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Animation_AppCompat_Tooltip = global::Client.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_CardView = global::Client.Droid.Resource.Style.Base_CardView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Client.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Client.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Client.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Client.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Client.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Client.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Client.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::Client.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Client.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Client.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::Client.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Client.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V21_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Client.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V22_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V23_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V26_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_V26_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V26_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::Client.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V28_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_V28_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V28_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Theme_AppCompat = global::Client.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Client.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Client.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Client.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Client.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::Client.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Button = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_EditText = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ListView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_SearchView = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Client.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_Design_TabLayout = global::Client.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_MaterialComponents_Chip = global::Client.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::Client.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::Client.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.CardView = global::Client.Droid.Resource.Style.CardView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.CardView_Dark = global::Client.Droid.Resource.Style.CardView_Dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.CardView_Light = global::Client.Droid.Resource.Style.CardView_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.DarkPopupMenu = global::Client.Droid.Resource.Style.DarkPopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.DarkPopupMenuTextAppearanceLarge = global::Client.Droid.Resource.Style.DarkPopupMenuTextAppearanceLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.DarkPopupMenuTextAppearanceSmall = global::Client.Droid.Resource.Style.DarkPopupMenuTextAppearanceSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.GridThemeDark = global::Client.Droid.Resource.Style.GridThemeDark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.GridThemeLight = global::Client.Droid.Resource.Style.GridThemeLight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.LightPopupMenu = global::Client.Droid.Resource.Style.LightPopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.LightPopupMenuTextAppearanceLarge = global::Client.Droid.Resource.Style.LightPopupMenuTextAppearanceLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.LightPopupMenuTextAppearanceSmall = global::Client.Droid.Resource.Style.LightPopupMenuTextAppearanceSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_AppCompat = global::Client.Droid.Resource.Style.Platform_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_AppCompat_Light = global::Client.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_MaterialComponents = global::Client.Droid.Resource.Style.Platform_MaterialComponents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_MaterialComponents_Light = global::Client.Droid.Resource.Style.Platform_MaterialComponents_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::Client.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Client.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Client.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Client.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_V21_AppCompat = global::Client.Droid.Resource.Style.Platform_V21_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_V21_AppCompat_Light = global::Client.Droid.Resource.Style.Platform_V21_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_V25_AppCompat = global::Client.Droid.Resource.Style.Platform_V25_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_V25_AppCompat_Light = global::Client.Droid.Resource.Style.Platform_V25_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Client.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Client.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Client.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Client.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Client.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat = global::Client.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Body1 = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Body2 = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Button = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Caption = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Display1 = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Display2 = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Display3 = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Display4 = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Headline = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Large = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Medium = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Menu = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Small = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Subhead = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Title = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Tooltip = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Client.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Client.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_Counter = global::Client.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Client.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_Error = global::Client.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_HelperText = global::Client.Droid.Resource.Style.TextAppearance_Design_HelperText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_Hint = global::Client.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Client.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Design_Tab = global::Client.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Button = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Caption = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Chip = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Overline = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MaterialComponents_Tab = global::Client.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::Client.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::Client.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_MediaRouter_Title = global::Client.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Client.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Client.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Client.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat = global::Client.Droid.Resource.Style.Theme_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_CompactMenu = global::Client.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Client.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Dialog = global::Client.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Client.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Client.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Client.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light = global::Client.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Client.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light_Dialog = global::Client.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Client.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Client.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Client.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Client.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_AppCompat_NoActionBar = global::Client.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_Design = global::Client.Droid.Resource.Style.Theme_Design;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_Design_BottomSheetDialog = global::Client.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_Design_Light = global::Client.Droid.Resource.Style.Theme_Design_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Client.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_Design_Light_NoActionBar = global::Client.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_Design_NoActionBar = global::Client.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents = global::Client.Droid.Resource.Style.Theme_MaterialComponents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::Client.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Bridge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_CompactMenu = global::Client.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_NoActionBar = global::Client.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::Client.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MediaRouter = global::Client.Droid.Resource.Style.Theme_MediaRouter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MediaRouter_Light = global::Client.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::Client.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Theme_MediaRouter_LightControlPanel = global::Client.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::Client.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Client.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::Client.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.ThemeOverlay_MediaRouter_Light = global::Client.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionBar = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionButton = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActionMode = global::Client.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Client.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Client.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Button = global::Client.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Button_Borderless = global::Client.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Client.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Client.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Button_Colored = global::Client.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Button_Small = global::Client.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ButtonBar = global::Client.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Client.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Client.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Client.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Client.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Client.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Client.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_EditText = global::Client.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ImageButton = global::Client.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_SearchView = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Client.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ListMenuView = global::Client.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Client.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ListView = global::Client.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Client.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ListView_Menu = global::Client.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_PopupMenu = global::Client.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Client.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_PopupWindow = global::Client.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ProgressBar = global::Client.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Client.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_RatingBar = global::Client.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Client.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Client.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_SearchView = global::Client.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Client.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_SeekBar = global::Client.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::Client.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Spinner = global::Client.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Client.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Client.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Client.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Client.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Toolbar = global::Client.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Client.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Client.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Client.Droid.Resource.Style.Widget_Compat_NotificationActionText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_AppBarLayout = global::Client.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_BottomNavigationView = global::Client.Droid.Resource.Style.Widget_Design_BottomNavigationView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_BottomSheet_Modal = global::Client.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_CollapsingToolbar = global::Client.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_FloatingActionButton = global::Client.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_NavigationView = global::Client.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Client.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_Snackbar = global::Client.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_TabLayout = global::Client.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Design_TextInputLayout = global::Client.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::Client.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::Client.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::Client.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::Client.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::Client.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_Icon = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_CardView = global::Client.Droid.Resource.Style.Widget_MaterialComponents_CardView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Chip_Action = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_ChipGroup = global::Client.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::Client.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_NavigationView = global::Client.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Snackbar = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TabLayout = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::Client.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MaterialComponents_Toolbar = global::Client.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::Client.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::Client.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::Client.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar = global::Client.Droid.Resource.Styleable.ActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_background = global::Client.Droid.Resource.Styleable.ActionBar_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_backgroundSplit = global::Client.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_backgroundStacked = global::Client.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_contentInsetEnd = global::Client.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::Client.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_contentInsetLeft = global::Client.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_contentInsetRight = global::Client.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_contentInsetStart = global::Client.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::Client.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_customNavigationLayout = global::Client.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_displayOptions = global::Client.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_divider = global::Client.Droid.Resource.Styleable.ActionBar_divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_elevation = global::Client.Droid.Resource.Styleable.ActionBar_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_height = global::Client.Droid.Resource.Styleable.ActionBar_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_hideOnContentScroll = global::Client.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Client.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_homeLayout = global::Client.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_icon = global::Client.Droid.Resource.Styleable.ActionBar_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Client.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_itemPadding = global::Client.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_logo = global::Client.Droid.Resource.Styleable.ActionBar_logo;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_navigationMode = global::Client.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_popupTheme = global::Client.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_progressBarPadding = global::Client.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_progressBarStyle = global::Client.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_subtitle = global::Client.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_subtitleTextStyle = global::Client.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_title = global::Client.Droid.Resource.Styleable.ActionBar_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBar_titleTextStyle = global::Client.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBarLayout = global::Client.Droid.Resource.Styleable.ActionBarLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Client.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMenuItemView = global::Client.Droid.Resource.Styleable.ActionMenuItemView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Client.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMenuView = global::Client.Droid.Resource.Styleable.ActionMenuView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode = global::Client.Droid.Resource.Styleable.ActionMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode_background = global::Client.Droid.Resource.Styleable.ActionMode_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode_backgroundSplit = global::Client.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode_closeItemLayout = global::Client.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode_height = global::Client.Droid.Resource.Styleable.ActionMode_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode_subtitleTextStyle = global::Client.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActionMode_titleTextStyle = global::Client.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActivityChooserView = global::Client.Droid.Resource.Styleable.ActivityChooserView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Client.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Client.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog = global::Client.Droid.Resource.Styleable.AlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_android_layout = global::Client.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_buttonIconDimen = global::Client.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Client.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_listItemLayout = global::Client.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_listLayout = global::Client.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Client.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_showTitle = global::Client.Droid.Resource.Styleable.AlertDialog_showTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Client.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableItem = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableTransition = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::Client.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout = global::Client.Droid.Resource.Styleable.AppBarLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_android_background = global::Client.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::Client.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::Client.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_elevation = global::Client.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_expanded = global::Client.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_liftOnScroll = global::Client.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayoutStates = global::Client.Droid.Resource.Styleable.AppBarLayoutStates;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Client.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Client.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayoutStates_state_liftable = global::Client.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayoutStates_state_lifted = global::Client.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_Layout = global::Client.Droid.Resource.Styleable.AppBarLayout_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Client.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Client.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatImageView = global::Client.Droid.Resource.Styleable.AppCompatImageView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatImageView_android_src = global::Client.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::Client.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatImageView_tint = global::Client.Droid.Resource.Styleable.AppCompatImageView_tint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatImageView_tintMode = global::Client.Droid.Resource.Styleable.AppCompatImageView_tintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatSeekBar = global::Client.Droid.Resource.Styleable.AppCompatSeekBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatSeekBar_android_thumb = global::Client.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatSeekBar_tickMark = global::Client.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::Client.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::Client.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper = global::Client.Droid.Resource.Styleable.AppCompatTextHelper;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Client.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView = global::Client.Droid.Resource.Styleable.AppCompatTextView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Client.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::Client.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::Client.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::Client.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::Client.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::Client.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::Client.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::Client.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::Client.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_lineHeight = global::Client.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::Client.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarSize = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Client.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Client.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Client.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorAccent = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorError = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorError;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorPrimary = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Client.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_controlBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::Client.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Client.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dialogTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Client.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dividerVertical = global::Client.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Client.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_editTextBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_editTextColor = global::Client.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_editTextStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Client.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Client.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Client.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Client.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Client.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Client.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Client.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Client.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Client.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Client.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Client.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Client.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Client.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_switchStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Client.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Client.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Client.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Client.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::Client.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::Client.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::Client.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowActionBar = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Client.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar = global::Client.Droid.Resource.Styleable.BottomAppBar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar_backgroundTint = global::Client.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::Client.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar_fabCradleMargin = global::Client.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::Client.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::Client.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomAppBar_hideOnScroll = global::Client.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView = global::Client.Droid.Resource.Styleable.BottomNavigationView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_elevation = global::Client.Droid.Resource.Styleable.BottomNavigationView_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemBackground = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemIconSize = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemIconTint = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_itemTextColor = global::Client.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::Client.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomNavigationView_menu = global::Client.Droid.Resource.Styleable.BottomNavigationView_menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomSheetBehavior_Layout = global::Client.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::Client.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Client.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Client.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Client.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ButtonBarLayout = global::Client.Droid.Resource.Styleable.ButtonBarLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ButtonBarLayout_allowStacking = global::Client.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView = global::Client.Droid.Resource.Styleable.CardView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_android_minHeight = global::Client.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_android_minWidth = global::Client.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_cardBackgroundColor = global::Client.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_cardCornerRadius = global::Client.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_cardElevation = global::Client.Droid.Resource.Styleable.CardView_cardElevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_cardMaxElevation = global::Client.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Client.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_cardUseCompatPadding = global::Client.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_contentPadding = global::Client.Droid.Resource.Styleable.CardView_contentPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_contentPaddingBottom = global::Client.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_contentPaddingLeft = global::Client.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_contentPaddingRight = global::Client.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CardView_contentPaddingTop = global::Client.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip = global::Client.Droid.Resource.Styleable.Chip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_android_checkable = global::Client.Droid.Resource.Styleable.Chip_android_checkable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_android_ellipsize = global::Client.Droid.Resource.Styleable.Chip_android_ellipsize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_android_maxWidth = global::Client.Droid.Resource.Styleable.Chip_android_maxWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_android_text = global::Client.Droid.Resource.Styleable.Chip_android_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_android_textAppearance = global::Client.Droid.Resource.Styleable.Chip_android_textAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_checkedIcon = global::Client.Droid.Resource.Styleable.Chip_checkedIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_checkedIconEnabled = global::Client.Droid.Resource.Styleable.Chip_checkedIconEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_checkedIconVisible = global::Client.Droid.Resource.Styleable.Chip_checkedIconVisible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipBackgroundColor = global::Client.Droid.Resource.Styleable.Chip_chipBackgroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipCornerRadius = global::Client.Droid.Resource.Styleable.Chip_chipCornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipEndPadding = global::Client.Droid.Resource.Styleable.Chip_chipEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipIcon = global::Client.Droid.Resource.Styleable.Chip_chipIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipIconEnabled = global::Client.Droid.Resource.Styleable.Chip_chipIconEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipIconSize = global::Client.Droid.Resource.Styleable.Chip_chipIconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipIconTint = global::Client.Droid.Resource.Styleable.Chip_chipIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipIconVisible = global::Client.Droid.Resource.Styleable.Chip_chipIconVisible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipMinHeight = global::Client.Droid.Resource.Styleable.Chip_chipMinHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipStartPadding = global::Client.Droid.Resource.Styleable.Chip_chipStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipStrokeColor = global::Client.Droid.Resource.Styleable.Chip_chipStrokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_chipStrokeWidth = global::Client.Droid.Resource.Styleable.Chip_chipStrokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIcon = global::Client.Droid.Resource.Styleable.Chip_closeIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIconEnabled = global::Client.Droid.Resource.Styleable.Chip_closeIconEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIconEndPadding = global::Client.Droid.Resource.Styleable.Chip_closeIconEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIconSize = global::Client.Droid.Resource.Styleable.Chip_closeIconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIconStartPadding = global::Client.Droid.Resource.Styleable.Chip_closeIconStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIconTint = global::Client.Droid.Resource.Styleable.Chip_closeIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_closeIconVisible = global::Client.Droid.Resource.Styleable.Chip_closeIconVisible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_hideMotionSpec = global::Client.Droid.Resource.Styleable.Chip_hideMotionSpec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_iconEndPadding = global::Client.Droid.Resource.Styleable.Chip_iconEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_iconStartPadding = global::Client.Droid.Resource.Styleable.Chip_iconStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_rippleColor = global::Client.Droid.Resource.Styleable.Chip_rippleColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_showMotionSpec = global::Client.Droid.Resource.Styleable.Chip_showMotionSpec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_textEndPadding = global::Client.Droid.Resource.Styleable.Chip_textEndPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Chip_textStartPadding = global::Client.Droid.Resource.Styleable.Chip_textStartPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup = global::Client.Droid.Resource.Styleable.ChipGroup;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup_checkedChip = global::Client.Droid.Resource.Styleable.ChipGroup_checkedChip;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup_chipSpacing = global::Client.Droid.Resource.Styleable.ChipGroup_chipSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::Client.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup_chipSpacingVertical = global::Client.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup_singleLine = global::Client.Droid.Resource.Styleable.ChipGroup_singleLine;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ChipGroup_singleSelection = global::Client.Droid.Resource.Styleable.ChipGroup_singleSelection;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_title = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Client.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ColorStateListItem = global::Client.Droid.Resource.Styleable.ColorStateListItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ColorStateListItem_alpha = global::Client.Droid.Resource.Styleable.ColorStateListItem_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::Client.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ColorStateListItem_android_color = global::Client.Droid.Resource.Styleable.ColorStateListItem_android_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CompoundButton = global::Client.Droid.Resource.Styleable.CompoundButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CompoundButton_android_button = global::Client.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CompoundButton_buttonTint = global::Client.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::Client.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout = global::Client.Droid.Resource.Styleable.CoordinatorLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_keylines = global::Client.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Client.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Client.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DesignTheme = global::Client.Droid.Resource.Styleable.DesignTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Client.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Client.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle = global::Client.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_barLength = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_color = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_spinBars = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.DrawerArrowToggle_thickness = global::Client.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton = global::Client.Droid.Resource.Styleable.FloatingActionButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_backgroundTint = global::Client.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Client.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_borderWidth = global::Client.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_elevation = global::Client.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_fabCustomSize = global::Client.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_fabSize = global::Client.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::Client.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::Client.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_maxImageSize = global::Client.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Client.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_rippleColor = global::Client.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_showMotionSpec = global::Client.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Client.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Client.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Client.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FlowLayout = global::Client.Droid.Resource.Styleable.FlowLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FlowLayout_itemSpacing = global::Client.Droid.Resource.Styleable.FlowLayout_itemSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FlowLayout_lineSpacing = global::Client.Droid.Resource.Styleable.FlowLayout_lineSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily = global::Client.Droid.Resource.Styleable.FontFamily;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Client.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Client.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Client.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Client.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Client.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Client.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont = global::Client.Droid.Resource.Styleable.FontFamilyFont;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_android_font = global::Client.Droid.Resource.Styleable.FontFamilyFont_android_font;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Client.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Client.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Client.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Client.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_font = global::Client.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Client.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Client.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Client.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.FontFamilyFont_ttcIndex = global::Client.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ForegroundLinearLayout = global::Client.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Client.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Client.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Client.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor = global::Client.Droid.Resource.Styleable.GradientColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_centerColor = global::Client.Droid.Resource.Styleable.GradientColor_android_centerColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_centerX = global::Client.Droid.Resource.Styleable.GradientColor_android_centerX;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_centerY = global::Client.Droid.Resource.Styleable.GradientColor_android_centerY;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_endColor = global::Client.Droid.Resource.Styleable.GradientColor_android_endColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_endX = global::Client.Droid.Resource.Styleable.GradientColor_android_endX;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_endY = global::Client.Droid.Resource.Styleable.GradientColor_android_endY;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_gradientRadius = global::Client.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_startColor = global::Client.Droid.Resource.Styleable.GradientColor_android_startColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_startX = global::Client.Droid.Resource.Styleable.GradientColor_android_startX;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_startY = global::Client.Droid.Resource.Styleable.GradientColor_android_startY;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_tileMode = global::Client.Droid.Resource.Styleable.GradientColor_android_tileMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColor_android_type = global::Client.Droid.Resource.Styleable.GradientColor_android_type;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColorItem = global::Client.Droid.Resource.Styleable.GradientColorItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColorItem_android_color = global::Client.Droid.Resource.Styleable.GradientColorItem_android_color;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.GradientColorItem_android_offset = global::Client.Droid.Resource.Styleable.GradientColorItem_android_offset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat = global::Client.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_divider = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_showDividers = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_Layout = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Client.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ListPopupWindow = global::Client.Droid.Resource.Styleable.ListPopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Client.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Client.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton = global::Client.Droid.Resource.Styleable.MaterialButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_android_insetBottom = global::Client.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_android_insetLeft = global::Client.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_android_insetRight = global::Client.Droid.Resource.Styleable.MaterialButton_android_insetRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_android_insetTop = global::Client.Droid.Resource.Styleable.MaterialButton_android_insetTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_backgroundTint = global::Client.Droid.Resource.Styleable.MaterialButton_backgroundTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_backgroundTintMode = global::Client.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_cornerRadius = global::Client.Droid.Resource.Styleable.MaterialButton_cornerRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_icon = global::Client.Droid.Resource.Styleable.MaterialButton_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_iconGravity = global::Client.Droid.Resource.Styleable.MaterialButton_iconGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_iconPadding = global::Client.Droid.Resource.Styleable.MaterialButton_iconPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_iconSize = global::Client.Droid.Resource.Styleable.MaterialButton_iconSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_iconTint = global::Client.Droid.Resource.Styleable.MaterialButton_iconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_iconTintMode = global::Client.Droid.Resource.Styleable.MaterialButton_iconTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_rippleColor = global::Client.Droid.Resource.Styleable.MaterialButton_rippleColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_strokeColor = global::Client.Droid.Resource.Styleable.MaterialButton_strokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialButton_strokeWidth = global::Client.Droid.Resource.Styleable.MaterialButton_strokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialCardView = global::Client.Droid.Resource.Styleable.MaterialCardView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialCardView_strokeColor = global::Client.Droid.Resource.Styleable.MaterialCardView_strokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialCardView_strokeWidth = global::Client.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::Client.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MediaRouteButton = global::Client.Droid.Resource.Styleable.MediaRouteButton;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MediaRouteButton_android_minHeight = global::Client.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MediaRouteButton_android_minWidth = global::Client.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::Client.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::Client.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup = global::Client.Droid.Resource.Styleable.MenuGroup;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Client.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup_android_enabled = global::Client.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup_android_id = global::Client.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup_android_menuCategory = global::Client.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup_android_orderInCategory = global::Client.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuGroup_android_visible = global::Client.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem = global::Client.Droid.Resource.Styleable.MenuItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_actionLayout = global::Client.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_actionProviderClass = global::Client.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_actionViewClass = global::Client.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_alphabeticModifiers = global::Client.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Client.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_checkable = global::Client.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_checked = global::Client.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_enabled = global::Client.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_icon = global::Client.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_id = global::Client.Droid.Resource.Styleable.MenuItem_android_id;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_menuCategory = global::Client.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_numericShortcut = global::Client.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_onClick = global::Client.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_orderInCategory = global::Client.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_title = global::Client.Droid.Resource.Styleable.MenuItem_android_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_titleCondensed = global::Client.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_android_visible = global::Client.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_contentDescription = global::Client.Droid.Resource.Styleable.MenuItem_contentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_iconTint = global::Client.Droid.Resource.Styleable.MenuItem_iconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_iconTintMode = global::Client.Droid.Resource.Styleable.MenuItem_iconTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_numericModifiers = global::Client.Droid.Resource.Styleable.MenuItem_numericModifiers;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_showAsAction = global::Client.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuItem_tooltipText = global::Client.Droid.Resource.Styleable.MenuItem_tooltipText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView = global::Client.Droid.Resource.Styleable.MenuView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_headerBackground = global::Client.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_horizontalDivider = global::Client.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_itemBackground = global::Client.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Client.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_itemTextAppearance = global::Client.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_verticalDivider = global::Client.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Client.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_preserveIconSpacing = global::Client.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.MenuView_subMenuArrow = global::Client.Droid.Resource.Styleable.MenuView_subMenuArrow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView = global::Client.Droid.Resource.Styleable.NavigationView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_android_background = global::Client.Droid.Resource.Styleable.NavigationView_android_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Client.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_android_maxWidth = global::Client.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_elevation = global::Client.Droid.Resource.Styleable.NavigationView_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_headerLayout = global::Client.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_itemBackground = global::Client.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_itemHorizontalPadding = global::Client.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_itemIconPadding = global::Client.Droid.Resource.Styleable.NavigationView_itemIconPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_itemIconTint = global::Client.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_itemTextAppearance = global::Client.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_itemTextColor = global::Client.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.NavigationView_menu = global::Client.Droid.Resource.Styleable.NavigationView_menu;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.PopupWindow = global::Client.Droid.Resource.Styleable.PopupWindow;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Client.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.PopupWindow_android_popupBackground = global::Client.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.PopupWindow_overlapAnchor = global::Client.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.PopupWindowBackgroundState = global::Client.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Client.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecycleListView = global::Client.Droid.Resource.Styleable.RecycleListView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Client.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Client.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView = global::Client.Droid.Resource.Styleable.RecyclerView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Client.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_android_orientation = global::Client.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Client.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Client.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Client.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Client.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Client.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_layoutManager = global::Client.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_reverseLayout = global::Client.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_spanCount = global::Client.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::Client.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ScrimInsetsFrameLayout = global::Client.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Client.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ScrollingViewBehavior_Layout = global::Client.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Client.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView = global::Client.Droid.Resource.Styleable.SearchView;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_android_focusable = global::Client.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_android_imeOptions = global::Client.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_android_inputType = global::Client.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_android_maxWidth = global::Client.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_closeIcon = global::Client.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_commitIcon = global::Client.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_defaultQueryHint = global::Client.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_goIcon = global::Client.Droid.Resource.Styleable.SearchView_goIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_iconifiedByDefault = global::Client.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_layout = global::Client.Droid.Resource.Styleable.SearchView_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_queryBackground = global::Client.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_queryHint = global::Client.Droid.Resource.Styleable.SearchView_queryHint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_searchHintIcon = global::Client.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_searchIcon = global::Client.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_submitBackground = global::Client.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_suggestionRowLayout = global::Client.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SearchView_voiceIcon = global::Client.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Snackbar = global::Client.Droid.Resource.Styleable.Snackbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Snackbar_snackbarButtonStyle = global::Client.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Snackbar_snackbarStyle = global::Client.Droid.Resource.Styleable.Snackbar_snackbarStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SnackbarLayout = global::Client.Droid.Resource.Styleable.SnackbarLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Client.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SnackbarLayout_elevation = global::Client.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Client.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Spinner = global::Client.Droid.Resource.Styleable.Spinner;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Spinner_android_dropDownWidth = global::Client.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Spinner_android_entries = global::Client.Droid.Resource.Styleable.Spinner_android_entries;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Spinner_android_popupBackground = global::Client.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Spinner_android_prompt = global::Client.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Spinner_popupTheme = global::Client.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable = global::Client.Droid.Resource.Styleable.StateListDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable_android_constantSize = global::Client.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable_android_dither = global::Client.Droid.Resource.Styleable.StateListDrawable_android_dither;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::Client.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::Client.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable_android_variablePadding = global::Client.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawable_android_visible = global::Client.Droid.Resource.Styleable.StateListDrawable_android_visible;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawableItem = global::Client.Droid.Resource.Styleable.StateListDrawableItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.StateListDrawableItem_android_drawable = global::Client.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat = global::Client.Droid.Resource.Styleable.SwitchCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_android_textOff = global::Client.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_android_textOn = global::Client.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_android_thumb = global::Client.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_showText = global::Client.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_splitTrack = global::Client.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_switchMinWidth = global::Client.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_switchPadding = global::Client.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Client.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Client.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_thumbTint = global::Client.Droid.Resource.Styleable.SwitchCompat_thumbTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_thumbTintMode = global::Client.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_track = global::Client.Droid.Resource.Styleable.SwitchCompat_track;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_trackTint = global::Client.Droid.Resource.Styleable.SwitchCompat_trackTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.SwitchCompat_trackTintMode = global::Client.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabItem = global::Client.Droid.Resource.Styleable.TabItem;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabItem_android_icon = global::Client.Droid.Resource.Styleable.TabItem_android_icon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabItem_android_layout = global::Client.Droid.Resource.Styleable.TabItem_android_layout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabItem_android_text = global::Client.Droid.Resource.Styleable.TabItem_android_text;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout = global::Client.Droid.Resource.Styleable.TabLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabBackground = global::Client.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabContentStart = global::Client.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabGravity = global::Client.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIconTint = global::Client.Droid.Resource.Styleable.TabLayout_tabIconTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIconTintMode = global::Client.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIndicator = global::Client.Droid.Resource.Styleable.TabLayout_tabIndicator;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::Client.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIndicatorColor = global::Client.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::Client.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIndicatorGravity = global::Client.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Client.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabInlineLabel = global::Client.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabMaxWidth = global::Client.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabMinWidth = global::Client.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabMode = global::Client.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabPadding = global::Client.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabPaddingBottom = global::Client.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabPaddingEnd = global::Client.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabPaddingStart = global::Client.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabPaddingTop = global::Client.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabRippleColor = global::Client.Droid.Resource.Styleable.TabLayout_tabRippleColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Client.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabTextAppearance = global::Client.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabTextColor = global::Client.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TabLayout_tabUnboundedRipple = global::Client.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance = global::Client.Droid.Resource.Styleable.TextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_fontFamily = global::Client.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_shadowColor = global::Client.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_shadowDx = global::Client.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_shadowDy = global::Client.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_shadowRadius = global::Client.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_textColor = global::Client.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::Client.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::Client.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_textSize = global::Client.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_textStyle = global::Client.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_android_typeface = global::Client.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_fontFamily = global::Client.Droid.Resource.Styleable.TextAppearance_fontFamily;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextAppearance_textAllCaps = global::Client.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout = global::Client.Droid.Resource.Styleable.TextInputLayout;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_android_hint = global::Client.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::Client.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::Client.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::Client.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::Client.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::Client.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::Client.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::Client.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::Client.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxStrokeColor = global::Client.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::Client.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_counterEnabled = global::Client.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_counterMaxLength = global::Client.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Client.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Client.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_errorEnabled = global::Client.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Client.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_helperText = global::Client.Droid.Resource.Styleable.TextInputLayout_helperText;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_helperTextEnabled = global::Client.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::Client.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Client.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_hintEnabled = global::Client.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Client.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Client.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Client.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Client.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Client.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Client.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ThemeEnforcement = global::Client.Droid.Resource.Styleable.ThemeEnforcement;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::Client.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::Client.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::Client.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar = global::Client.Droid.Resource.Styleable.Toolbar;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_android_gravity = global::Client.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_android_minHeight = global::Client.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_buttonGravity = global::Client.Droid.Resource.Styleable.Toolbar_buttonGravity;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_collapseContentDescription = global::Client.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_collapseIcon = global::Client.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_contentInsetEnd = global::Client.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::Client.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_contentInsetLeft = global::Client.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_contentInsetRight = global::Client.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_contentInsetStart = global::Client.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::Client.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_logo = global::Client.Droid.Resource.Styleable.Toolbar_logo;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_logoDescription = global::Client.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::Client.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::Client.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_navigationIcon = global::Client.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_popupTheme = global::Client.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_subtitle = global::Client.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Client.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_subtitleTextColor = global::Client.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_title = global::Client.Droid.Resource.Styleable.Toolbar_title;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleMargin = global::Client.Droid.Resource.Styleable.Toolbar_titleMargin;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleMarginBottom = global::Client.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleMarginEnd = global::Client.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleMarginStart = global::Client.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleMarginTop = global::Client.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleMargins = global::Client.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleTextAppearance = global::Client.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.Toolbar_titleTextColor = global::Client.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.View = global::Client.Droid.Resource.Styleable.View;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.View_android_focusable = global::Client.Droid.Resource.Styleable.View_android_focusable;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.View_android_theme = global::Client.Droid.Resource.Styleable.View_android_theme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.View_paddingEnd = global::Client.Droid.Resource.Styleable.View_paddingEnd;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.View_paddingStart = global::Client.Droid.Resource.Styleable.View_paddingStart;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.View_theme = global::Client.Droid.Resource.Styleable.View_theme;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewBackgroundHelper = global::Client.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewBackgroundHelper_android_background = global::Client.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Client.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Client.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewStubCompat = global::Client.Droid.Resource.Styleable.ViewStubCompat;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewStubCompat_android_id = global::Client.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Client.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::DevExpress.Mobile.DataGrid.Android.Resource.Styleable.ViewStubCompat_android_layout = global::Client.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Util.XamariN.AndroiD.Resource.Animation.abc_fade_in = global::Client.Droid.Resource.Animation.abc_fade_in;
 			global::Util.XamariN.AndroiD.Resource.Animation.abc_fade_out = global::Client.Droid.Resource.Animation.abc_fade_out;
 			global::Util.XamariN.AndroiD.Resource.Animation.abc_grow_fade_in_from_bottom = global::Client.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -16577,379 +13617,358 @@ namespace Client.Droid
 			public const int background_material_light = 2131034141;
 			
 			// aapt resource value: 0x7F05001E
-			public const int black = 2131034142;
+			public const int bright_foreground_disabled_material_dark = 2131034142;
 			
 			// aapt resource value: 0x7F05001F
-			public const int blue = 2131034143;
+			public const int bright_foreground_disabled_material_light = 2131034143;
 			
 			// aapt resource value: 0x7F050020
-			public const int bright_foreground_disabled_material_dark = 2131034144;
+			public const int bright_foreground_inverse_material_dark = 2131034144;
 			
 			// aapt resource value: 0x7F050021
-			public const int bright_foreground_disabled_material_light = 2131034145;
+			public const int bright_foreground_inverse_material_light = 2131034145;
 			
 			// aapt resource value: 0x7F050022
-			public const int bright_foreground_inverse_material_dark = 2131034146;
+			public const int bright_foreground_material_dark = 2131034146;
 			
 			// aapt resource value: 0x7F050023
-			public const int bright_foreground_inverse_material_light = 2131034147;
+			public const int bright_foreground_material_light = 2131034147;
 			
 			// aapt resource value: 0x7F050024
-			public const int bright_foreground_material_dark = 2131034148;
+			public const int browser_actions_bg_grey = 2131034148;
 			
 			// aapt resource value: 0x7F050025
-			public const int bright_foreground_material_light = 2131034149;
+			public const int browser_actions_divider_color = 2131034149;
 			
 			// aapt resource value: 0x7F050026
-			public const int browser_actions_bg_grey = 2131034150;
+			public const int browser_actions_text_color = 2131034150;
 			
 			// aapt resource value: 0x7F050027
-			public const int browser_actions_divider_color = 2131034151;
+			public const int browser_actions_title_color = 2131034151;
 			
 			// aapt resource value: 0x7F050028
-			public const int browser_actions_text_color = 2131034152;
+			public const int button_material_dark = 2131034152;
 			
 			// aapt resource value: 0x7F050029
-			public const int browser_actions_title_color = 2131034153;
+			public const int button_material_light = 2131034153;
 			
 			// aapt resource value: 0x7F05002A
-			public const int button_material_dark = 2131034154;
+			public const int calendar_active_month_bg = 2131034154;
 			
 			// aapt resource value: 0x7F05002B
-			public const int button_material_light = 2131034155;
+			public const int calendar_bg = 2131034155;
 			
 			// aapt resource value: 0x7F05002C
-			public const int calendar_active_month_bg = 2131034156;
+			public const int calendar_divider = 2131034156;
 			
 			// aapt resource value: 0x7F05002D
-			public const int calendar_bg = 2131034157;
+			public const int calendar_highlighted_day_bg = 2131034157;
 			
 			// aapt resource value: 0x7F05002E
-			public const int calendar_divider = 2131034158;
+			public const int calendar_inactive_month_bg = 2131034158;
 			
 			// aapt resource value: 0x7F05002F
-			public const int calendar_highlighted_day_bg = 2131034159;
+			public const int calendar_selected_day_bg = 2131034159;
 			
 			// aapt resource value: 0x7F050030
-			public const int calendar_inactive_month_bg = 2131034160;
+			public const int calendar_selected_range_bg = 2131034160;
 			
 			// aapt resource value: 0x7F050031
-			public const int calendar_selected_day_bg = 2131034161;
+			public const int calendar_text_active = 2131034161;
 			
 			// aapt resource value: 0x7F050032
-			public const int calendar_selected_range_bg = 2131034162;
+			public const int calendar_text_inactive = 2131034162;
 			
 			// aapt resource value: 0x7F050033
-			public const int calendar_text_active = 2131034163;
+			public const int calendar_text_selected = 2131034163;
 			
 			// aapt resource value: 0x7F050034
-			public const int calendar_text_inactive = 2131034164;
+			public const int calendar_text_selector = 2131034164;
 			
 			// aapt resource value: 0x7F050035
-			public const int calendar_text_selected = 2131034165;
+			public const int calendar_text_unselectable = 2131034165;
 			
 			// aapt resource value: 0x7F050036
-			public const int calendar_text_selector = 2131034166;
+			public const int cardview_dark_background = 2131034166;
 			
 			// aapt resource value: 0x7F050037
-			public const int calendar_text_unselectable = 2131034167;
+			public const int cardview_light_background = 2131034167;
 			
 			// aapt resource value: 0x7F050038
-			public const int cardview_dark_background = 2131034168;
+			public const int cardview_shadow_end_color = 2131034168;
 			
 			// aapt resource value: 0x7F050039
-			public const int cardview_light_background = 2131034169;
+			public const int cardview_shadow_start_color = 2131034169;
 			
 			// aapt resource value: 0x7F05003A
-			public const int cardview_shadow_end_color = 2131034170;
+			public const int colorAccent = 2131034170;
 			
 			// aapt resource value: 0x7F05003B
-			public const int cardview_shadow_start_color = 2131034171;
+			public const int colorPrimary = 2131034171;
 			
 			// aapt resource value: 0x7F05003C
-			public const int colorAccent = 2131034172;
+			public const int colorPrimaryDark = 2131034172;
 			
 			// aapt resource value: 0x7F05003D
-			public const int colorPrimary = 2131034173;
+			public const int design_bottom_navigation_shadow_color = 2131034173;
 			
 			// aapt resource value: 0x7F05003E
-			public const int colorPrimaryDark = 2131034174;
+			public const int design_default_color_primary = 2131034174;
 			
 			// aapt resource value: 0x7F05003F
-			public const int design_bottom_navigation_shadow_color = 2131034175;
+			public const int design_default_color_primary_dark = 2131034175;
 			
 			// aapt resource value: 0x7F050040
-			public const int design_default_color_primary = 2131034176;
+			public const int design_error = 2131034176;
 			
 			// aapt resource value: 0x7F050041
-			public const int design_default_color_primary_dark = 2131034177;
+			public const int design_fab_shadow_end_color = 2131034177;
 			
 			// aapt resource value: 0x7F050042
-			public const int design_error = 2131034178;
+			public const int design_fab_shadow_mid_color = 2131034178;
 			
 			// aapt resource value: 0x7F050043
-			public const int design_fab_shadow_end_color = 2131034179;
+			public const int design_fab_shadow_start_color = 2131034179;
 			
 			// aapt resource value: 0x7F050044
-			public const int design_fab_shadow_mid_color = 2131034180;
+			public const int design_fab_stroke_end_inner_color = 2131034180;
 			
 			// aapt resource value: 0x7F050045
-			public const int design_fab_shadow_start_color = 2131034181;
+			public const int design_fab_stroke_end_outer_color = 2131034181;
 			
 			// aapt resource value: 0x7F050046
-			public const int design_fab_stroke_end_inner_color = 2131034182;
+			public const int design_fab_stroke_top_inner_color = 2131034182;
 			
 			// aapt resource value: 0x7F050047
-			public const int design_fab_stroke_end_outer_color = 2131034183;
+			public const int design_fab_stroke_top_outer_color = 2131034183;
 			
 			// aapt resource value: 0x7F050048
-			public const int design_fab_stroke_top_inner_color = 2131034184;
+			public const int design_snackbar_background_color = 2131034184;
 			
 			// aapt resource value: 0x7F050049
-			public const int design_fab_stroke_top_outer_color = 2131034185;
+			public const int design_tint_password_toggle = 2131034185;
 			
 			// aapt resource value: 0x7F05004A
-			public const int design_snackbar_background_color = 2131034186;
+			public const int dim_foreground_disabled_material_dark = 2131034186;
 			
 			// aapt resource value: 0x7F05004B
-			public const int design_tint_password_toggle = 2131034187;
+			public const int dim_foreground_disabled_material_light = 2131034187;
 			
 			// aapt resource value: 0x7F05004C
-			public const int dim_foreground_disabled_material_dark = 2131034188;
+			public const int dim_foreground_material_dark = 2131034188;
 			
 			// aapt resource value: 0x7F05004D
-			public const int dim_foreground_disabled_material_light = 2131034189;
+			public const int dim_foreground_material_light = 2131034189;
 			
 			// aapt resource value: 0x7F05004E
-			public const int dim_foreground_material_dark = 2131034190;
+			public const int error_color_material_dark = 2131034190;
 			
 			// aapt resource value: 0x7F05004F
-			public const int dim_foreground_material_light = 2131034191;
+			public const int error_color_material_light = 2131034191;
 			
 			// aapt resource value: 0x7F050050
-			public const int error_color_material_dark = 2131034192;
+			public const int foreground_material_dark = 2131034192;
 			
 			// aapt resource value: 0x7F050051
-			public const int error_color_material_light = 2131034193;
+			public const int foreground_material_light = 2131034193;
 			
 			// aapt resource value: 0x7F050052
-			public const int foreground_material_dark = 2131034194;
+			public const int highlighted_text_material_dark = 2131034194;
 			
 			// aapt resource value: 0x7F050053
-			public const int foreground_material_light = 2131034195;
+			public const int highlighted_text_material_light = 2131034195;
 			
 			// aapt resource value: 0x7F050054
-			public const int gray = 2131034196;
+			public const int launcher_background = 2131034196;
 			
 			// aapt resource value: 0x7F050055
-			public const int green = 2131034197;
+			public const int material_blue_grey_800 = 2131034197;
 			
 			// aapt resource value: 0x7F050056
-			public const int highlighted_text_material_dark = 2131034198;
+			public const int material_blue_grey_900 = 2131034198;
 			
 			// aapt resource value: 0x7F050057
-			public const int highlighted_text_material_light = 2131034199;
+			public const int material_blue_grey_950 = 2131034199;
 			
 			// aapt resource value: 0x7F050058
-			public const int launcher_background = 2131034200;
+			public const int material_deep_teal_200 = 2131034200;
 			
 			// aapt resource value: 0x7F050059
-			public const int material_blue_grey_800 = 2131034201;
+			public const int material_deep_teal_500 = 2131034201;
 			
 			// aapt resource value: 0x7F05005A
-			public const int material_blue_grey_900 = 2131034202;
+			public const int material_grey_100 = 2131034202;
 			
 			// aapt resource value: 0x7F05005B
-			public const int material_blue_grey_950 = 2131034203;
+			public const int material_grey_300 = 2131034203;
 			
 			// aapt resource value: 0x7F05005C
-			public const int material_deep_teal_200 = 2131034204;
+			public const int material_grey_50 = 2131034204;
 			
 			// aapt resource value: 0x7F05005D
-			public const int material_deep_teal_500 = 2131034205;
+			public const int material_grey_600 = 2131034205;
 			
 			// aapt resource value: 0x7F05005E
-			public const int material_grey_100 = 2131034206;
+			public const int material_grey_800 = 2131034206;
 			
 			// aapt resource value: 0x7F05005F
-			public const int material_grey_300 = 2131034207;
+			public const int material_grey_850 = 2131034207;
 			
 			// aapt resource value: 0x7F050060
-			public const int material_grey_50 = 2131034208;
+			public const int material_grey_900 = 2131034208;
 			
 			// aapt resource value: 0x7F050061
-			public const int material_grey_600 = 2131034209;
+			public const int mtrl_bottom_nav_colored_item_tint = 2131034209;
 			
 			// aapt resource value: 0x7F050062
-			public const int material_grey_800 = 2131034210;
+			public const int mtrl_bottom_nav_item_tint = 2131034210;
 			
 			// aapt resource value: 0x7F050063
-			public const int material_grey_850 = 2131034211;
+			public const int mtrl_btn_bg_color_disabled = 2131034211;
 			
 			// aapt resource value: 0x7F050064
-			public const int material_grey_900 = 2131034212;
+			public const int mtrl_btn_bg_color_selector = 2131034212;
 			
 			// aapt resource value: 0x7F050065
-			public const int mtrl_bottom_nav_colored_item_tint = 2131034213;
+			public const int mtrl_btn_ripple_color = 2131034213;
 			
 			// aapt resource value: 0x7F050066
-			public const int mtrl_bottom_nav_item_tint = 2131034214;
+			public const int mtrl_btn_stroke_color_selector = 2131034214;
 			
 			// aapt resource value: 0x7F050067
-			public const int mtrl_btn_bg_color_disabled = 2131034215;
+			public const int mtrl_btn_text_btn_ripple_color = 2131034215;
 			
 			// aapt resource value: 0x7F050068
-			public const int mtrl_btn_bg_color_selector = 2131034216;
+			public const int mtrl_btn_text_color_disabled = 2131034216;
 			
 			// aapt resource value: 0x7F050069
-			public const int mtrl_btn_ripple_color = 2131034217;
+			public const int mtrl_btn_text_color_selector = 2131034217;
 			
 			// aapt resource value: 0x7F05006A
-			public const int mtrl_btn_stroke_color_selector = 2131034218;
+			public const int mtrl_btn_transparent_bg_color = 2131034218;
 			
 			// aapt resource value: 0x7F05006B
-			public const int mtrl_btn_text_btn_ripple_color = 2131034219;
+			public const int mtrl_chip_background_color = 2131034219;
 			
 			// aapt resource value: 0x7F05006C
-			public const int mtrl_btn_text_color_disabled = 2131034220;
+			public const int mtrl_chip_close_icon_tint = 2131034220;
 			
 			// aapt resource value: 0x7F05006D
-			public const int mtrl_btn_text_color_selector = 2131034221;
+			public const int mtrl_chip_ripple_color = 2131034221;
 			
 			// aapt resource value: 0x7F05006E
-			public const int mtrl_btn_transparent_bg_color = 2131034222;
+			public const int mtrl_chip_text_color = 2131034222;
 			
 			// aapt resource value: 0x7F05006F
-			public const int mtrl_chip_background_color = 2131034223;
+			public const int mtrl_fab_ripple_color = 2131034223;
 			
 			// aapt resource value: 0x7F050070
-			public const int mtrl_chip_close_icon_tint = 2131034224;
+			public const int mtrl_scrim_color = 2131034224;
 			
 			// aapt resource value: 0x7F050071
-			public const int mtrl_chip_ripple_color = 2131034225;
+			public const int mtrl_tabs_colored_ripple_color = 2131034225;
 			
 			// aapt resource value: 0x7F050072
-			public const int mtrl_chip_text_color = 2131034226;
+			public const int mtrl_tabs_icon_color_selector = 2131034226;
 			
 			// aapt resource value: 0x7F050073
-			public const int mtrl_fab_ripple_color = 2131034227;
+			public const int mtrl_tabs_icon_color_selector_colored = 2131034227;
 			
 			// aapt resource value: 0x7F050074
-			public const int mtrl_scrim_color = 2131034228;
+			public const int mtrl_tabs_legacy_text_color_selector = 2131034228;
 			
 			// aapt resource value: 0x7F050075
-			public const int mtrl_tabs_colored_ripple_color = 2131034229;
-			
-			// aapt resource value: 0x7F050076
-			public const int mtrl_tabs_icon_color_selector = 2131034230;
+			public const int mtrl_tabs_ripple_color = 2131034229;
 			
 			// aapt resource value: 0x7F050077
-			public const int mtrl_tabs_icon_color_selector_colored = 2131034231;
+			public const int mtrl_textinput_default_box_stroke_color = 2131034231;
 			
 			// aapt resource value: 0x7F050078
-			public const int mtrl_tabs_legacy_text_color_selector = 2131034232;
+			public const int mtrl_textinput_disabled_color = 2131034232;
 			
 			// aapt resource value: 0x7F050079
-			public const int mtrl_tabs_ripple_color = 2131034233;
-			
-			// aapt resource value: 0x7F05007B
-			public const int mtrl_textinput_default_box_stroke_color = 2131034235;
-			
-			// aapt resource value: 0x7F05007C
-			public const int mtrl_textinput_disabled_color = 2131034236;
-			
-			// aapt resource value: 0x7F05007D
-			public const int mtrl_textinput_filled_box_default_background_color = 2131034237;
-			
-			// aapt resource value: 0x7F05007E
-			public const int mtrl_textinput_hovered_box_stroke_color = 2131034238;
+			public const int mtrl_textinput_filled_box_default_background_color = 2131034233;
 			
 			// aapt resource value: 0x7F05007A
-			public const int mtrl_text_btn_text_color_selector = 2131034234;
+			public const int mtrl_textinput_hovered_box_stroke_color = 2131034234;
+			
+			// aapt resource value: 0x7F050076
+			public const int mtrl_text_btn_text_color_selector = 2131034230;
+			
+			// aapt resource value: 0x7F05007B
+			public const int notification_action_color_filter = 2131034235;
+			
+			// aapt resource value: 0x7F05007C
+			public const int notification_icon_bg_color = 2131034236;
+			
+			// aapt resource value: 0x7F05007D
+			public const int notification_material_background_media_default_color = 2131034237;
+			
+			// aapt resource value: 0x7F05007E
+			public const int primary_dark_material_dark = 2131034238;
 			
 			// aapt resource value: 0x7F05007F
-			public const int notification_action_color_filter = 2131034239;
+			public const int primary_dark_material_light = 2131034239;
 			
 			// aapt resource value: 0x7F050080
-			public const int notification_icon_bg_color = 2131034240;
+			public const int primary_material_dark = 2131034240;
 			
 			// aapt resource value: 0x7F050081
-			public const int notification_material_background_media_default_color = 2131034241;
+			public const int primary_material_light = 2131034241;
 			
 			// aapt resource value: 0x7F050082
-			public const int primary_dark_material_dark = 2131034242;
+			public const int primary_text_default_material_dark = 2131034242;
 			
 			// aapt resource value: 0x7F050083
-			public const int primary_dark_material_light = 2131034243;
+			public const int primary_text_default_material_light = 2131034243;
 			
 			// aapt resource value: 0x7F050084
-			public const int primary_material_dark = 2131034244;
+			public const int primary_text_disabled_material_dark = 2131034244;
 			
 			// aapt resource value: 0x7F050085
-			public const int primary_material_light = 2131034245;
+			public const int primary_text_disabled_material_light = 2131034245;
 			
 			// aapt resource value: 0x7F050086
-			public const int primary_text_default_material_dark = 2131034246;
+			public const int ripple_material_dark = 2131034246;
 			
 			// aapt resource value: 0x7F050087
-			public const int primary_text_default_material_light = 2131034247;
+			public const int ripple_material_light = 2131034247;
 			
 			// aapt resource value: 0x7F050088
-			public const int primary_text_disabled_material_dark = 2131034248;
+			public const int secondary_text_default_material_dark = 2131034248;
 			
 			// aapt resource value: 0x7F050089
-			public const int primary_text_disabled_material_light = 2131034249;
+			public const int secondary_text_default_material_light = 2131034249;
 			
 			// aapt resource value: 0x7F05008A
-			public const int red = 2131034250;
+			public const int secondary_text_disabled_material_dark = 2131034250;
 			
 			// aapt resource value: 0x7F05008B
-			public const int ripple_material_dark = 2131034251;
+			public const int secondary_text_disabled_material_light = 2131034251;
 			
 			// aapt resource value: 0x7F05008C
-			public const int ripple_material_light = 2131034252;
+			public const int switch_thumb_disabled_material_dark = 2131034252;
 			
 			// aapt resource value: 0x7F05008D
-			public const int secondary_text_default_material_dark = 2131034253;
+			public const int switch_thumb_disabled_material_light = 2131034253;
 			
 			// aapt resource value: 0x7F05008E
-			public const int secondary_text_default_material_light = 2131034254;
+			public const int switch_thumb_material_dark = 2131034254;
 			
 			// aapt resource value: 0x7F05008F
-			public const int secondary_text_disabled_material_dark = 2131034255;
+			public const int switch_thumb_material_light = 2131034255;
 			
 			// aapt resource value: 0x7F050090
-			public const int secondary_text_disabled_material_light = 2131034256;
+			public const int switch_thumb_normal_material_dark = 2131034256;
 			
 			// aapt resource value: 0x7F050091
-			public const int switch_thumb_disabled_material_dark = 2131034257;
+			public const int switch_thumb_normal_material_light = 2131034257;
 			
 			// aapt resource value: 0x7F050092
-			public const int switch_thumb_disabled_material_light = 2131034258;
+			public const int tooltip_background_dark = 2131034258;
 			
 			// aapt resource value: 0x7F050093
-			public const int switch_thumb_material_dark = 2131034259;
-			
-			// aapt resource value: 0x7F050094
-			public const int switch_thumb_material_light = 2131034260;
-			
-			// aapt resource value: 0x7F050095
-			public const int switch_thumb_normal_material_dark = 2131034261;
-			
-			// aapt resource value: 0x7F050096
-			public const int switch_thumb_normal_material_light = 2131034262;
-			
-			// aapt resource value: 0x7F050097
-			public const int theme_dark_segmented_radio_button_text = 2131034263;
-			
-			// aapt resource value: 0x7F050098
-			public const int theme_default_segmented_radio_button_text = 2131034264;
-			
-			// aapt resource value: 0x7F050099
-			public const int tooltip_background_dark = 2131034265;
-			
-			// aapt resource value: 0x7F05009A
-			public const int tooltip_background_light = 2131034266;
+			public const int tooltip_background_light = 2131034259;
 			
 			static Color()
 			{
@@ -18625,145 +15644,13 @@ namespace Client.Droid
 			public const int sample = 2131165506;
 			
 			// aapt resource value: 0x7F070143
-			public const int segment_grey = 2131165507;
+			public const int tooltip_frame_dark = 2131165507;
 			
 			// aapt resource value: 0x7F070144
-			public const int segment_grey_focus = 2131165508;
+			public const int tooltip_frame_light = 2131165508;
 			
 			// aapt resource value: 0x7F070145
-			public const int segment_grey_press = 2131165509;
-			
-			// aapt resource value: 0x7F070146
-			public const int segment_left_off = 2131165510;
-			
-			// aapt resource value: 0x7F070147
-			public const int segment_left_off_pressed = 2131165511;
-			
-			// aapt resource value: 0x7F070148
-			public const int segment_left_on = 2131165512;
-			
-			// aapt resource value: 0x7F070149
-			public const int segment_middle_off = 2131165513;
-			
-			// aapt resource value: 0x7F07014A
-			public const int segment_middle_off_pressed = 2131165514;
-			
-			// aapt resource value: 0x7F07014B
-			public const int segment_middle_on = 2131165515;
-			
-			// aapt resource value: 0x7F07014C
-			public const int segment_off = 2131165516;
-			
-			// aapt resource value: 0x7F07014D
-			public const int segment_off_pressed = 2131165517;
-			
-			// aapt resource value: 0x7F07014E
-			public const int segment_on = 2131165518;
-			
-			// aapt resource value: 0x7F07014F
-			public const int segment_radio_grey_left = 2131165519;
-			
-			// aapt resource value: 0x7F070150
-			public const int segment_radio_grey_left_focus = 2131165520;
-			
-			// aapt resource value: 0x7F070151
-			public const int segment_radio_grey_left_press = 2131165521;
-			
-			// aapt resource value: 0x7F070152
-			public const int segment_radio_grey_middle = 2131165522;
-			
-			// aapt resource value: 0x7F070153
-			public const int segment_radio_grey_middle_focus = 2131165523;
-			
-			// aapt resource value: 0x7F070154
-			public const int segment_radio_grey_middle_press = 2131165524;
-			
-			// aapt resource value: 0x7F070155
-			public const int segment_radio_grey_right = 2131165525;
-			
-			// aapt resource value: 0x7F070156
-			public const int segment_radio_grey_right_focus = 2131165526;
-			
-			// aapt resource value: 0x7F070157
-			public const int segment_radio_grey_right_press = 2131165527;
-			
-			// aapt resource value: 0x7F070158
-			public const int segment_radio_white_left = 2131165528;
-			
-			// aapt resource value: 0x7F070159
-			public const int segment_radio_white_left_focus = 2131165529;
-			
-			// aapt resource value: 0x7F07015A
-			public const int segment_radio_white_left_press = 2131165530;
-			
-			// aapt resource value: 0x7F07015B
-			public const int segment_radio_white_middle = 2131165531;
-			
-			// aapt resource value: 0x7F07015C
-			public const int segment_radio_white_middle_focus = 2131165532;
-			
-			// aapt resource value: 0x7F07015D
-			public const int segment_radio_white_middle_press = 2131165533;
-			
-			// aapt resource value: 0x7F07015E
-			public const int segment_radio_white_right = 2131165534;
-			
-			// aapt resource value: 0x7F07015F
-			public const int segment_radio_white_right_focus = 2131165535;
-			
-			// aapt resource value: 0x7F070160
-			public const int segment_radio_white_right_press = 2131165536;
-			
-			// aapt resource value: 0x7F070161
-			public const int segment_right_off = 2131165537;
-			
-			// aapt resource value: 0x7F070162
-			public const int segment_right_off_pressed = 2131165538;
-			
-			// aapt resource value: 0x7F070163
-			public const int segment_right_on = 2131165539;
-			
-			// aapt resource value: 0x7F070164
-			public const int segment_white = 2131165540;
-			
-			// aapt resource value: 0x7F070165
-			public const int segment_white_focus = 2131165541;
-			
-			// aapt resource value: 0x7F070166
-			public const int segment_white_press = 2131165542;
-			
-			// aapt resource value: 0x7F070167
-			public const int theme_dark_segment_button = 2131165543;
-			
-			// aapt resource value: 0x7F070168
-			public const int theme_dark_segment_radio_left = 2131165544;
-			
-			// aapt resource value: 0x7F070169
-			public const int theme_dark_segment_radio_middle = 2131165545;
-			
-			// aapt resource value: 0x7F07016A
-			public const int theme_dark_segment_radio_right = 2131165546;
-			
-			// aapt resource value: 0x7F07016B
-			public const int theme_default_segment_button = 2131165547;
-			
-			// aapt resource value: 0x7F07016C
-			public const int theme_default_segment_radio_left = 2131165548;
-			
-			// aapt resource value: 0x7F07016D
-			public const int theme_default_segment_radio_middle = 2131165549;
-			
-			// aapt resource value: 0x7F07016E
-			public const int theme_default_segment_radio_right = 2131165550;
-			
-			// aapt resource value: 0x7F07016F
-			public const int tooltip_frame_dark = 2131165551;
-			
-			// aapt resource value: 0x7F070170
-			public const int tooltip_frame_light = 2131165552;
-			
-			// aapt resource value: 0x7F070171
-			public const int xaml = 2131165553;
+			public const int xaml = 2131165509;
 			
 			static Drawable()
 			{
@@ -19067,514 +15954,505 @@ namespace Client.Droid
 			public const int left = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int leftBar = 2131230819;
+			public const int left_arrow = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int left_arrow = 2131230820;
+			public const int line1 = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int line1 = 2131230821;
+			public const int line3 = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int line3 = 2131230822;
+			public const int listMode = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int listMode = 2131230823;
+			public const int list_item = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int list_item = 2131230824;
+			public const int loadingImage = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int loadingImage = 2131230825;
+			public const int loadingProgressBar = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int loadingProgressBar = 2131230826;
+			public const int loadingProgressWheel = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int loadingProgressWheel = 2131230827;
+			public const int main_appbar = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int main_appbar = 2131230828;
+			public const int main_tablayout = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int main_tablayout = 2131230829;
+			public const int main_toolbar = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int main_toolbar = 2131230830;
+			public const int main_viewpager = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int main_viewpager = 2131230831;
+			public const int masked = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int masked = 2131230832;
+			public const int media_actions = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int media_actions = 2131230833;
-			
-			// aapt resource value: 0x7F080072
-			public const int message = 2131230834;
+			public const int message = 2131230833;
 			
 			// aapt resource value: 0x7F080003
 			public const int META = 2131230723;
 			
+			// aapt resource value: 0x7F080072
+			public const int middle = 2131230834;
+			
 			// aapt resource value: 0x7F080073
-			public const int middle = 2131230835;
+			public const int mini = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int mini = 2131230836;
+			public const int mr_art = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int mr_art = 2131230837;
+			public const int mr_cast_checkbox = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int mr_cast_checkbox = 2131230838;
+			public const int mr_cast_close_button = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int mr_cast_close_button = 2131230839;
+			public const int mr_cast_group_icon = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int mr_cast_group_icon = 2131230840;
+			public const int mr_cast_group_name = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int mr_cast_group_name = 2131230841;
+			public const int mr_cast_list = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int mr_cast_list = 2131230842;
+			public const int mr_cast_meta = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int mr_cast_meta = 2131230843;
+			public const int mr_cast_meta_art = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int mr_cast_meta_art = 2131230844;
+			public const int mr_cast_meta_subtitle = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int mr_cast_meta_subtitle = 2131230845;
+			public const int mr_cast_meta_title = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int mr_cast_meta_title = 2131230846;
+			public const int mr_cast_route_icon = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int mr_cast_route_icon = 2131230847;
+			public const int mr_cast_route_name = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int mr_cast_route_name = 2131230848;
+			public const int mr_cast_stop_button = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int mr_cast_stop_button = 2131230849;
+			public const int mr_cast_volume_layout = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int mr_cast_volume_layout = 2131230850;
+			public const int mr_cast_volume_slider = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int mr_cast_volume_slider = 2131230851;
+			public const int mr_chooser_list = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int mr_chooser_list = 2131230852;
+			public const int mr_chooser_route_desc = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int mr_chooser_route_desc = 2131230853;
+			public const int mr_chooser_route_icon = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int mr_chooser_route_icon = 2131230854;
+			public const int mr_chooser_route_name = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int mr_chooser_route_name = 2131230855;
+			public const int mr_chooser_title = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int mr_chooser_title = 2131230856;
+			public const int mr_close = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int mr_close = 2131230857;
+			public const int mr_control_divider = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int mr_control_divider = 2131230858;
+			public const int mr_control_playback_ctrl = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int mr_control_playback_ctrl = 2131230859;
+			public const int mr_control_subtitle = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int mr_control_subtitle = 2131230860;
+			public const int mr_control_title = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int mr_control_title = 2131230861;
+			public const int mr_control_title_container = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int mr_control_title_container = 2131230862;
+			public const int mr_custom_control = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int mr_custom_control = 2131230863;
+			public const int mr_default_control = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int mr_default_control = 2131230864;
+			public const int mr_dialog_area = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int mr_dialog_area = 2131230865;
+			public const int mr_dialog_header_name = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int mr_dialog_header_name = 2131230866;
+			public const int mr_expandable_area = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int mr_expandable_area = 2131230867;
+			public const int mr_group_expand_collapse = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int mr_group_expand_collapse = 2131230868;
+			public const int mr_group_volume_route_name = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int mr_group_volume_route_name = 2131230869;
+			public const int mr_group_volume_slider = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int mr_group_volume_slider = 2131230870;
+			public const int mr_media_main_control = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int mr_media_main_control = 2131230871;
+			public const int mr_name = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int mr_name = 2131230872;
+			public const int mr_picker_close_button = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int mr_picker_close_button = 2131230873;
+			public const int mr_picker_list = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int mr_picker_list = 2131230874;
+			public const int mr_picker_route_icon = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int mr_picker_route_icon = 2131230875;
+			public const int mr_picker_route_name = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int mr_picker_route_name = 2131230876;
+			public const int mr_playback_control = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int mr_playback_control = 2131230877;
+			public const int mr_title_bar = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int mr_title_bar = 2131230878;
+			public const int mr_volume_control = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int mr_volume_control = 2131230879;
+			public const int mr_volume_group_list = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int mr_volume_group_list = 2131230880;
+			public const int mr_volume_item_icon = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int mr_volume_item_icon = 2131230881;
+			public const int mr_volume_slider = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int mr_volume_slider = 2131230882;
+			public const int mtrl_child_content_container = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int mtrl_child_content_container = 2131230883;
+			public const int mtrl_internal_children_alpha_tag = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int mtrl_internal_children_alpha_tag = 2131230884;
+			public const int multiply = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int multiply = 2131230885;
+			public const int navigation_header_container = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int navigation_header_container = 2131230886;
+			public const int never = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int never = 2131230887;
+			public const int none = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int none = 2131230888;
+			public const int normal = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int normal = 2131230889;
+			public const int notification_background = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int notification_background = 2131230890;
+			public const int notification_main_column = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int notification_main_column = 2131230891;
+			public const int notification_main_column_container = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int notification_main_column_container = 2131230892;
+			public const int outline = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int outline = 2131230893;
+			public const int parallax = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int parallax = 2131230894;
+			public const int parentPanel = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int parentPanel = 2131230895;
+			public const int parent_matrix = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int parent_matrix = 2131230896;
+			public const int pin = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int pin = 2131230897;
+			public const int progress_circular = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int progress_circular = 2131230898;
+			public const int progress_horizontal = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int progress_horizontal = 2131230899;
+			public const int radio = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int radio = 2131230900;
+			public const int right = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int right = 2131230901;
+			public const int right_arrow = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int rightBar = 2131230902;
+			public const int right_icon = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int right_arrow = 2131230903;
+			public const int right_side = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int right_icon = 2131230904;
+			public const int save_image_matrix = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int right_side = 2131230905;
+			public const int save_non_transition_alpha = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int save_image_matrix = 2131230906;
+			public const int save_scale_type = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int save_non_transition_alpha = 2131230907;
+			public const int screen = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int save_scale_type = 2131230908;
-			
-			// aapt resource value: 0x7F0800BD
-			public const int screen = 2131230909;
-			
-			// aapt resource value: 0x7F0800BE
-			public const int scroll = 2131230910;
-			
-			// aapt resource value: 0x7F0800C2
-			public const int scrollable = 2131230914;
-			
-			// aapt resource value: 0x7F0800BF
-			public const int scrollIndicatorDown = 2131230911;
+			public const int scroll = 2131230908;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int scrollIndicatorUp = 2131230912;
+			public const int scrollable = 2131230912;
+			
+			// aapt resource value: 0x7F0800BD
+			public const int scrollIndicatorDown = 2131230909;
+			
+			// aapt resource value: 0x7F0800BE
+			public const int scrollIndicatorUp = 2131230910;
+			
+			// aapt resource value: 0x7F0800BF
+			public const int scrollView = 2131230911;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int scrollView = 2131230913;
+			public const int search_badge = 2131230913;
+			
+			// aapt resource value: 0x7F0800C2
+			public const int search_bar = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int search_badge = 2131230915;
+			public const int search_button = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int search_bar = 2131230916;
+			public const int search_close_btn = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int search_button = 2131230917;
+			public const int search_edit_frame = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int search_close_btn = 2131230918;
+			public const int search_go_btn = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int search_edit_frame = 2131230919;
+			public const int search_mag_icon = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int search_go_btn = 2131230920;
+			public const int search_plate = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int search_mag_icon = 2131230921;
+			public const int search_src_text = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int search_plate = 2131230922;
-			
-			// aapt resource value: 0x7F0800CB
-			public const int search_src_text = 2131230923;
+			public const int search_voice_btn = 2131230922;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int search_voice_btn = 2131230924;
+			public const int selected = 2131230924;
 			
-			// aapt resource value: 0x7F0800CE
-			public const int selected = 2131230926;
+			// aapt resource value: 0x7F0800CB
+			public const int select_dialog_listview = 2131230923;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int select_dialog_listview = 2131230925;
+			public const int shellcontent_appbar = 2131230925;
 			
-			// aapt resource value: 0x7F0800CF
-			public const int shellcontent_appbar = 2131230927;
-			
-			// aapt resource value: 0x7F0800D0
-			public const int shellcontent_toolbar = 2131230928;
+			// aapt resource value: 0x7F0800CE
+			public const int shellcontent_toolbar = 2131230926;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
+			// aapt resource value: 0x7F0800CF
+			public const int shortcut = 2131230927;
+			
+			// aapt resource value: 0x7F0800D0
+			public const int showCustom = 2131230928;
+			
 			// aapt resource value: 0x7F0800D1
-			public const int shortcut = 2131230929;
+			public const int showHome = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int showCustom = 2131230930;
+			public const int showTitle = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int showHome = 2131230931;
+			public const int sliding_tabs = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int showTitle = 2131230932;
+			public const int smallLabel = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int sliding_tabs = 2131230933;
+			public const int snackbar_action = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int smallLabel = 2131230934;
+			public const int snackbar_text = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int snackbar_action = 2131230935;
+			public const int snap = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int snackbar_text = 2131230936;
+			public const int snapMargins = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int snap = 2131230937;
+			public const int spacer = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int snapMargins = 2131230938;
+			public const int split_action_bar = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int spacer = 2131230939;
+			public const int src_atop = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int split_action_bar = 2131230940;
+			public const int src_in = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int src_atop = 2131230941;
+			public const int src_over = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int src_in = 2131230942;
+			public const int start = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int src_over = 2131230943;
+			public const int status_bar_latest_event_content = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int start = 2131230944;
+			public const int stretch = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int status_bar_latest_event_content = 2131230945;
+			public const int submenuarrow = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int stretch = 2131230946;
-			
-			// aapt resource value: 0x7F0800E3
-			public const int submenuarrow = 2131230947;
-			
-			// aapt resource value: 0x7F0800E4
-			public const int submit_area = 2131230948;
-			
-			// aapt resource value: 0x7F0800E5
-			public const int swipetorefreshbar = 2131230949;
+			public const int submit_area = 2131230946;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
 			
+			// aapt resource value: 0x7F0800E3
+			public const int tabMode = 2131230947;
+			
+			// aapt resource value: 0x7F0800E4
+			public const int tag_transition_group = 2131230948;
+			
+			// aapt resource value: 0x7F0800E5
+			public const int tag_unhandled_key_event_manager = 2131230949;
+			
 			// aapt resource value: 0x7F0800E6
-			public const int tabMode = 2131230950;
+			public const int tag_unhandled_key_listeners = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int tag_transition_group = 2131230951;
+			public const int text = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
-			public const int tag_unhandled_key_event_manager = 2131230952;
-			
-			// aapt resource value: 0x7F0800E9
-			public const int tag_unhandled_key_listeners = 2131230953;
-			
-			// aapt resource value: 0x7F0800EA
-			public const int text = 2131230954;
-			
-			// aapt resource value: 0x7F0800EB
-			public const int text2 = 2131230955;
-			
-			// aapt resource value: 0x7F0800F1
-			public const int textinput_counter = 2131230961;
-			
-			// aapt resource value: 0x7F0800F2
-			public const int textinput_error = 2131230962;
-			
-			// aapt resource value: 0x7F0800F3
-			public const int textinput_helper_text = 2131230963;
-			
-			// aapt resource value: 0x7F0800EC
-			public const int textSpacerNoButtons = 2131230956;
-			
-			// aapt resource value: 0x7F0800ED
-			public const int textSpacerNoTitle = 2131230957;
+			public const int text2 = 2131230952;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int textStart = 2131230958;
+			public const int textinput_counter = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int textViewStatus = 2131230959;
+			public const int textinput_error = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int text_input_password_toggle = 2131230960;
+			public const int textinput_helper_text = 2131230960;
+			
+			// aapt resource value: 0x7F0800E9
+			public const int textSpacerNoButtons = 2131230953;
+			
+			// aapt resource value: 0x7F0800EA
+			public const int textSpacerNoTitle = 2131230954;
+			
+			// aapt resource value: 0x7F0800EB
+			public const int textStart = 2131230955;
+			
+			// aapt resource value: 0x7F0800EC
+			public const int textViewStatus = 2131230956;
+			
+			// aapt resource value: 0x7F0800ED
+			public const int text_input_password_toggle = 2131230957;
+			
+			// aapt resource value: 0x7F0800F1
+			public const int time = 2131230961;
+			
+			// aapt resource value: 0x7F0800F2
+			public const int title = 2131230962;
+			
+			// aapt resource value: 0x7F0800F3
+			public const int titleDividerNoCustom = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int time = 2131230964;
+			public const int title_template = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int title = 2131230965;
+			public const int toolbar = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int titleDividerNoCustom = 2131230966;
+			public const int top = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int title_template = 2131230967;
+			public const int topPanel = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int toolbar = 2131230968;
+			public const int touch_outside = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int top = 2131230969;
+			public const int transition_current_scene = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int topPanel = 2131230970;
+			public const int transition_layout_save = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int touch_outside = 2131230971;
+			public const int transition_position = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int transition_current_scene = 2131230972;
+			public const int transition_scene_layoutid_cache = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int transition_layout_save = 2131230973;
+			public const int transition_transform = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int transition_position = 2131230974;
+			public const int uniform = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int transition_scene_layoutid_cache = 2131230975;
+			public const int unlabeled = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int transition_transform = 2131230976;
+			public const int up = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int uniform = 2131230977;
+			public const int useLogo = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int unlabeled = 2131230978;
+			public const int view_offset_helper = 2131230978;
 			
 			// aapt resource value: 0x7F080103
-			public const int up = 2131230979;
+			public const int visible = 2131230979;
 			
 			// aapt resource value: 0x7F080104
-			public const int useLogo = 2131230980;
+			public const int volume_item_container = 2131230980;
 			
 			// aapt resource value: 0x7F080105
-			public const int view_offset_helper = 2131230981;
+			public const int withText = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int visible = 2131230982;
-			
-			// aapt resource value: 0x7F080107
-			public const int volume_item_container = 2131230983;
-			
-			// aapt resource value: 0x7F080108
-			public const int withText = 2131230984;
-			
-			// aapt resource value: 0x7F080109
-			public const int wrap_content = 2131230985;
+			public const int wrap_content = 2131230982;
 			
 			static Id()
 			{
@@ -20918,983 +17796,959 @@ namespace Client.Droid
 			// aapt resource value: 0x7F0F00C9
 			public const int CardView_Light = 2131689673;
 			
-			// aapt resource value: 0x7F0F020E
-			public const int collectionViewStyle = 2131689998;
+			// aapt resource value: 0x7F0F0206
+			public const int collectionViewStyle = 2131689990;
 			
 			// aapt resource value: 0x7F0F00CA
-			public const int DarkPopupMenu = 2131689674;
+			public const int MainTheme = 2131689674;
 			
 			// aapt resource value: 0x7F0F00CB
-			public const int DarkPopupMenuTextAppearanceLarge = 2131689675;
-			
-			// aapt resource value: 0x7F0F00CC
-			public const int DarkPopupMenuTextAppearanceSmall = 2131689676;
-			
-			// aapt resource value: 0x7F0F00CD
-			public const int GridThemeDark = 2131689677;
-			
-			// aapt resource value: 0x7F0F00CE
-			public const int GridThemeLight = 2131689678;
-			
-			// aapt resource value: 0x7F0F00CF
-			public const int LightPopupMenu = 2131689679;
-			
-			// aapt resource value: 0x7F0F00D0
-			public const int LightPopupMenuTextAppearanceLarge = 2131689680;
-			
-			// aapt resource value: 0x7F0F00D1
-			public const int LightPopupMenuTextAppearanceSmall = 2131689681;
-			
-			// aapt resource value: 0x7F0F00D2
-			public const int MainTheme = 2131689682;
-			
-			// aapt resource value: 0x7F0F00D3
-			public const int MainTheme_Base = 2131689683;
-			
-			// aapt resource value: 0x7F0F020F
-			public const int mybutton_text = 2131689999;
-			
-			// aapt resource value: 0x7F0F00D4
-			public const int Platform_AppCompat = 2131689684;
-			
-			// aapt resource value: 0x7F0F00D5
-			public const int Platform_AppCompat_Light = 2131689685;
-			
-			// aapt resource value: 0x7F0F00D6
-			public const int Platform_MaterialComponents = 2131689686;
-			
-			// aapt resource value: 0x7F0F00D7
-			public const int Platform_MaterialComponents_Dialog = 2131689687;
-			
-			// aapt resource value: 0x7F0F00D8
-			public const int Platform_MaterialComponents_Light = 2131689688;
-			
-			// aapt resource value: 0x7F0F00D9
-			public const int Platform_MaterialComponents_Light_Dialog = 2131689689;
-			
-			// aapt resource value: 0x7F0F00DA
-			public const int Platform_ThemeOverlay_AppCompat = 2131689690;
-			
-			// aapt resource value: 0x7F0F00DB
-			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689691;
-			
-			// aapt resource value: 0x7F0F00DC
-			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689692;
-			
-			// aapt resource value: 0x7F0F00DD
-			public const int Platform_V21_AppCompat = 2131689693;
-			
-			// aapt resource value: 0x7F0F00DE
-			public const int Platform_V21_AppCompat_Light = 2131689694;
-			
-			// aapt resource value: 0x7F0F00DF
-			public const int Platform_V25_AppCompat = 2131689695;
-			
-			// aapt resource value: 0x7F0F00E0
-			public const int Platform_V25_AppCompat_Light = 2131689696;
-			
-			// aapt resource value: 0x7F0F00E1
-			public const int Platform_Widget_AppCompat_Spinner = 2131689697;
-			
-			// aapt resource value: 0x7F0F00E2
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689698;
-			
-			// aapt resource value: 0x7F0F00E3
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689699;
-			
-			// aapt resource value: 0x7F0F00E4
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689700;
-			
-			// aapt resource value: 0x7F0F00E5
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689701;
-			
-			// aapt resource value: 0x7F0F00E6
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689702;
-			
-			// aapt resource value: 0x7F0F00E7
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131689703;
-			
-			// aapt resource value: 0x7F0F00E8
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131689704;
-			
-			// aapt resource value: 0x7F0F00E9
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689705;
-			
-			// aapt resource value: 0x7F0F00EA
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131689706;
-			
-			// aapt resource value: 0x7F0F00F0
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689712;
-			
-			// aapt resource value: 0x7F0F00EB
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689707;
-			
-			// aapt resource value: 0x7F0F00EC
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689708;
-			
-			// aapt resource value: 0x7F0F00ED
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689709;
-			
-			// aapt resource value: 0x7F0F00EE
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689710;
-			
-			// aapt resource value: 0x7F0F00EF
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689711;
-			
-			// aapt resource value: 0x7F0F00F1
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689713;
-			
-			// aapt resource value: 0x7F0F00F2
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689714;
-			
-			// aapt resource value: 0x7F0F00F3
-			public const int TextAppearance_AppCompat = 2131689715;
-			
-			// aapt resource value: 0x7F0F00F4
-			public const int TextAppearance_AppCompat_Body1 = 2131689716;
-			
-			// aapt resource value: 0x7F0F00F5
-			public const int TextAppearance_AppCompat_Body2 = 2131689717;
-			
-			// aapt resource value: 0x7F0F00F6
-			public const int TextAppearance_AppCompat_Button = 2131689718;
-			
-			// aapt resource value: 0x7F0F00F7
-			public const int TextAppearance_AppCompat_Caption = 2131689719;
-			
-			// aapt resource value: 0x7F0F00F8
-			public const int TextAppearance_AppCompat_Display1 = 2131689720;
-			
-			// aapt resource value: 0x7F0F00F9
-			public const int TextAppearance_AppCompat_Display2 = 2131689721;
-			
-			// aapt resource value: 0x7F0F00FA
-			public const int TextAppearance_AppCompat_Display3 = 2131689722;
-			
-			// aapt resource value: 0x7F0F00FB
-			public const int TextAppearance_AppCompat_Display4 = 2131689723;
-			
-			// aapt resource value: 0x7F0F00FC
-			public const int TextAppearance_AppCompat_Headline = 2131689724;
-			
-			// aapt resource value: 0x7F0F00FD
-			public const int TextAppearance_AppCompat_Inverse = 2131689725;
-			
-			// aapt resource value: 0x7F0F00FE
-			public const int TextAppearance_AppCompat_Large = 2131689726;
-			
-			// aapt resource value: 0x7F0F00FF
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131689727;
-			
-			// aapt resource value: 0x7F0F0100
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689728;
-			
-			// aapt resource value: 0x7F0F0101
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689729;
-			
-			// aapt resource value: 0x7F0F0102
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689730;
-			
-			// aapt resource value: 0x7F0F0103
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689731;
-			
-			// aapt resource value: 0x7F0F0104
-			public const int TextAppearance_AppCompat_Medium = 2131689732;
-			
-			// aapt resource value: 0x7F0F0105
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689733;
-			
-			// aapt resource value: 0x7F0F0106
-			public const int TextAppearance_AppCompat_Menu = 2131689734;
-			
-			// aapt resource value: 0x7F0F0107
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689735;
-			
-			// aapt resource value: 0x7F0F0108
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689736;
-			
-			// aapt resource value: 0x7F0F0109
-			public const int TextAppearance_AppCompat_Small = 2131689737;
-			
-			// aapt resource value: 0x7F0F010A
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131689738;
-			
-			// aapt resource value: 0x7F0F010B
-			public const int TextAppearance_AppCompat_Subhead = 2131689739;
-			
-			// aapt resource value: 0x7F0F010C
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689740;
-			
-			// aapt resource value: 0x7F0F010D
-			public const int TextAppearance_AppCompat_Title = 2131689741;
-			
-			// aapt resource value: 0x7F0F010E
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131689742;
-			
-			// aapt resource value: 0x7F0F010F
-			public const int TextAppearance_AppCompat_Tooltip = 2131689743;
-			
-			// aapt resource value: 0x7F0F0110
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689744;
-			
-			// aapt resource value: 0x7F0F0111
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689745;
-			
-			// aapt resource value: 0x7F0F0112
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689746;
-			
-			// aapt resource value: 0x7F0F0113
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689747;
-			
-			// aapt resource value: 0x7F0F0114
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689748;
-			
-			// aapt resource value: 0x7F0F0115
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689749;
-			
-			// aapt resource value: 0x7F0F0116
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689750;
-			
-			// aapt resource value: 0x7F0F0117
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689751;
-			
-			// aapt resource value: 0x7F0F0118
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689752;
-			
-			// aapt resource value: 0x7F0F0119
-			public const int TextAppearance_AppCompat_Widget_Button = 2131689753;
-			
-			// aapt resource value: 0x7F0F011A
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689754;
-			
-			// aapt resource value: 0x7F0F011B
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689755;
-			
-			// aapt resource value: 0x7F0F011C
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689756;
-			
-			// aapt resource value: 0x7F0F011D
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689757;
-			
-			// aapt resource value: 0x7F0F011E
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689758;
-			
-			// aapt resource value: 0x7F0F011F
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689759;
-			
-			// aapt resource value: 0x7F0F0120
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689760;
-			
-			// aapt resource value: 0x7F0F0121
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131689761;
-			
-			// aapt resource value: 0x7F0F0122
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689762;
-			
-			// aapt resource value: 0x7F0F0123
-			public const int TextAppearance_Compat_Notification = 2131689763;
-			
-			// aapt resource value: 0x7F0F0124
-			public const int TextAppearance_Compat_Notification_Info = 2131689764;
-			
-			// aapt resource value: 0x7F0F0125
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131689765;
-			
-			// aapt resource value: 0x7F0F0126
-			public const int TextAppearance_Compat_Notification_Line2 = 2131689766;
-			
-			// aapt resource value: 0x7F0F0127
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689767;
-			
-			// aapt resource value: 0x7F0F0128
-			public const int TextAppearance_Compat_Notification_Media = 2131689768;
-			
-			// aapt resource value: 0x7F0F0129
-			public const int TextAppearance_Compat_Notification_Time = 2131689769;
-			
-			// aapt resource value: 0x7F0F012A
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131689770;
-			
-			// aapt resource value: 0x7F0F012B
-			public const int TextAppearance_Compat_Notification_Title = 2131689771;
-			
-			// aapt resource value: 0x7F0F012C
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131689772;
-			
-			// aapt resource value: 0x7F0F012D
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689773;
-			
-			// aapt resource value: 0x7F0F012E
-			public const int TextAppearance_Design_Counter = 2131689774;
-			
-			// aapt resource value: 0x7F0F012F
-			public const int TextAppearance_Design_Counter_Overflow = 2131689775;
-			
-			// aapt resource value: 0x7F0F0130
-			public const int TextAppearance_Design_Error = 2131689776;
-			
-			// aapt resource value: 0x7F0F0131
-			public const int TextAppearance_Design_HelperText = 2131689777;
-			
-			// aapt resource value: 0x7F0F0132
-			public const int TextAppearance_Design_Hint = 2131689778;
-			
-			// aapt resource value: 0x7F0F0133
-			public const int TextAppearance_Design_Snackbar_Message = 2131689779;
-			
-			// aapt resource value: 0x7F0F0134
-			public const int TextAppearance_Design_Tab = 2131689780;
-			
-			// aapt resource value: 0x7F0F0135
-			public const int TextAppearance_MaterialComponents_Body1 = 2131689781;
-			
-			// aapt resource value: 0x7F0F0136
-			public const int TextAppearance_MaterialComponents_Body2 = 2131689782;
-			
-			// aapt resource value: 0x7F0F0137
-			public const int TextAppearance_MaterialComponents_Button = 2131689783;
-			
-			// aapt resource value: 0x7F0F0138
-			public const int TextAppearance_MaterialComponents_Caption = 2131689784;
-			
-			// aapt resource value: 0x7F0F0139
-			public const int TextAppearance_MaterialComponents_Chip = 2131689785;
-			
-			// aapt resource value: 0x7F0F013A
-			public const int TextAppearance_MaterialComponents_Headline1 = 2131689786;
-			
-			// aapt resource value: 0x7F0F013B
-			public const int TextAppearance_MaterialComponents_Headline2 = 2131689787;
-			
-			// aapt resource value: 0x7F0F013C
-			public const int TextAppearance_MaterialComponents_Headline3 = 2131689788;
-			
-			// aapt resource value: 0x7F0F013D
-			public const int TextAppearance_MaterialComponents_Headline4 = 2131689789;
-			
-			// aapt resource value: 0x7F0F013E
-			public const int TextAppearance_MaterialComponents_Headline5 = 2131689790;
-			
-			// aapt resource value: 0x7F0F013F
-			public const int TextAppearance_MaterialComponents_Headline6 = 2131689791;
-			
-			// aapt resource value: 0x7F0F0140
-			public const int TextAppearance_MaterialComponents_Overline = 2131689792;
-			
-			// aapt resource value: 0x7F0F0141
-			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131689793;
-			
-			// aapt resource value: 0x7F0F0142
-			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131689794;
-			
-			// aapt resource value: 0x7F0F0143
-			public const int TextAppearance_MaterialComponents_Tab = 2131689795;
-			
-			// aapt resource value: 0x7F0F0144
-			public const int TextAppearance_MediaRouter_PrimaryText = 2131689796;
-			
-			// aapt resource value: 0x7F0F0145
-			public const int TextAppearance_MediaRouter_SecondaryText = 2131689797;
-			
-			// aapt resource value: 0x7F0F0146
-			public const int TextAppearance_MediaRouter_Title = 2131689798;
-			
-			// aapt resource value: 0x7F0F0147
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689799;
-			
-			// aapt resource value: 0x7F0F0148
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689800;
-			
-			// aapt resource value: 0x7F0F0149
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689801;
-			
-			// aapt resource value: 0x7F0F017E
-			public const int ThemeOverlay_AppCompat = 2131689854;
-			
-			// aapt resource value: 0x7F0F017F
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131689855;
-			
-			// aapt resource value: 0x7F0F0180
-			public const int ThemeOverlay_AppCompat_Dark = 2131689856;
-			
-			// aapt resource value: 0x7F0F0181
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689857;
-			
-			// aapt resource value: 0x7F0F0182
-			public const int ThemeOverlay_AppCompat_Dialog = 2131689858;
-			
-			// aapt resource value: 0x7F0F0183
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689859;
-			
-			// aapt resource value: 0x7F0F0184
-			public const int ThemeOverlay_AppCompat_Light = 2131689860;
-			
-			// aapt resource value: 0x7F0F0185
-			public const int ThemeOverlay_MaterialComponents = 2131689861;
-			
-			// aapt resource value: 0x7F0F0186
-			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131689862;
-			
-			// aapt resource value: 0x7F0F0187
-			public const int ThemeOverlay_MaterialComponents_Dark = 2131689863;
-			
-			// aapt resource value: 0x7F0F0188
-			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131689864;
-			
-			// aapt resource value: 0x7F0F0189
-			public const int ThemeOverlay_MaterialComponents_Dialog = 2131689865;
-			
-			// aapt resource value: 0x7F0F018A
-			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689866;
-			
-			// aapt resource value: 0x7F0F018B
-			public const int ThemeOverlay_MaterialComponents_Light = 2131689867;
-			
-			// aapt resource value: 0x7F0F018C
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131689868;
-			
-			// aapt resource value: 0x7F0F018D
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131689869;
-			
-			// aapt resource value: 0x7F0F018E
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689870;
-			
-			// aapt resource value: 0x7F0F018F
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131689871;
-			
-			// aapt resource value: 0x7F0F0190
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689872;
-			
-			// aapt resource value: 0x7F0F0191
-			public const int ThemeOverlay_MediaRouter_Dark = 2131689873;
-			
-			// aapt resource value: 0x7F0F0192
-			public const int ThemeOverlay_MediaRouter_Light = 2131689874;
-			
-			// aapt resource value: 0x7F0F014A
-			public const int Theme_AppCompat = 2131689802;
-			
-			// aapt resource value: 0x7F0F014B
-			public const int Theme_AppCompat_CompactMenu = 2131689803;
-			
-			// aapt resource value: 0x7F0F014C
-			public const int Theme_AppCompat_DayNight = 2131689804;
-			
-			// aapt resource value: 0x7F0F014D
-			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689805;
-			
-			// aapt resource value: 0x7F0F014E
-			public const int Theme_AppCompat_DayNight_Dialog = 2131689806;
-			
-			// aapt resource value: 0x7F0F0151
-			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689809;
-			
-			// aapt resource value: 0x7F0F014F
-			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689807;
-			
-			// aapt resource value: 0x7F0F0150
-			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689808;
-			
-			// aapt resource value: 0x7F0F0152
-			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689810;
-			
-			// aapt resource value: 0x7F0F0153
-			public const int Theme_AppCompat_Dialog = 2131689811;
-			
-			// aapt resource value: 0x7F0F0156
-			public const int Theme_AppCompat_DialogWhenLarge = 2131689814;
-			
-			// aapt resource value: 0x7F0F0154
-			public const int Theme_AppCompat_Dialog_Alert = 2131689812;
-			
-			// aapt resource value: 0x7F0F0155
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131689813;
-			
-			// aapt resource value: 0x7F0F0157
-			public const int Theme_AppCompat_Light = 2131689815;
-			
-			// aapt resource value: 0x7F0F0158
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131689816;
-			
-			// aapt resource value: 0x7F0F0159
-			public const int Theme_AppCompat_Light_Dialog = 2131689817;
-			
-			// aapt resource value: 0x7F0F015C
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689820;
-			
-			// aapt resource value: 0x7F0F015A
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689818;
-			
-			// aapt resource value: 0x7F0F015B
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689819;
-			
-			// aapt resource value: 0x7F0F015D
-			public const int Theme_AppCompat_Light_NoActionBar = 2131689821;
-			
-			// aapt resource value: 0x7F0F015E
-			public const int Theme_AppCompat_NoActionBar = 2131689822;
-			
-			// aapt resource value: 0x7F0F015F
-			public const int Theme_Design = 2131689823;
-			
-			// aapt resource value: 0x7F0F0160
-			public const int Theme_Design_BottomSheetDialog = 2131689824;
-			
-			// aapt resource value: 0x7F0F0161
-			public const int Theme_Design_Light = 2131689825;
-			
-			// aapt resource value: 0x7F0F0162
-			public const int Theme_Design_Light_BottomSheetDialog = 2131689826;
-			
-			// aapt resource value: 0x7F0F0163
-			public const int Theme_Design_Light_NoActionBar = 2131689827;
-			
-			// aapt resource value: 0x7F0F0164
-			public const int Theme_Design_NoActionBar = 2131689828;
-			
-			// aapt resource value: 0x7F0F0165
-			public const int Theme_MaterialComponents = 2131689829;
-			
-			// aapt resource value: 0x7F0F0166
-			public const int Theme_MaterialComponents_BottomSheetDialog = 2131689830;
-			
-			// aapt resource value: 0x7F0F0167
-			public const int Theme_MaterialComponents_Bridge = 2131689831;
-			
-			// aapt resource value: 0x7F0F0168
-			public const int Theme_MaterialComponents_CompactMenu = 2131689832;
-			
-			// aapt resource value: 0x7F0F0169
-			public const int Theme_MaterialComponents_Dialog = 2131689833;
-			
-			// aapt resource value: 0x7F0F016C
-			public const int Theme_MaterialComponents_DialogWhenLarge = 2131689836;
-			
-			// aapt resource value: 0x7F0F016A
-			public const int Theme_MaterialComponents_Dialog_Alert = 2131689834;
-			
-			// aapt resource value: 0x7F0F016B
-			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131689835;
-			
-			// aapt resource value: 0x7F0F016D
-			public const int Theme_MaterialComponents_Light = 2131689837;
-			
-			// aapt resource value: 0x7F0F016E
-			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131689838;
-			
-			// aapt resource value: 0x7F0F016F
-			public const int Theme_MaterialComponents_Light_Bridge = 2131689839;
-			
-			// aapt resource value: 0x7F0F0170
-			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131689840;
-			
-			// aapt resource value: 0x7F0F0171
-			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689841;
-			
-			// aapt resource value: 0x7F0F0172
-			public const int Theme_MaterialComponents_Light_Dialog = 2131689842;
-			
-			// aapt resource value: 0x7F0F0175
-			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131689845;
-			
-			// aapt resource value: 0x7F0F0173
-			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131689843;
-			
-			// aapt resource value: 0x7F0F0174
-			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131689844;
-			
-			// aapt resource value: 0x7F0F0176
-			public const int Theme_MaterialComponents_Light_NoActionBar = 2131689846;
-			
-			// aapt resource value: 0x7F0F0177
-			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131689847;
-			
-			// aapt resource value: 0x7F0F0178
-			public const int Theme_MaterialComponents_NoActionBar = 2131689848;
-			
-			// aapt resource value: 0x7F0F0179
-			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131689849;
-			
-			// aapt resource value: 0x7F0F017A
-			public const int Theme_MediaRouter = 2131689850;
-			
-			// aapt resource value: 0x7F0F017B
-			public const int Theme_MediaRouter_Light = 2131689851;
-			
-			// aapt resource value: 0x7F0F017D
-			public const int Theme_MediaRouter_LightControlPanel = 2131689853;
-			
-			// aapt resource value: 0x7F0F017C
-			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131689852;
-			
-			// aapt resource value: 0x7F0F0193
-			public const int Widget_AppCompat_ActionBar = 2131689875;
-			
-			// aapt resource value: 0x7F0F0194
-			public const int Widget_AppCompat_ActionBar_Solid = 2131689876;
-			
-			// aapt resource value: 0x7F0F0195
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131689877;
-			
-			// aapt resource value: 0x7F0F0196
-			public const int Widget_AppCompat_ActionBar_TabText = 2131689878;
-			
-			// aapt resource value: 0x7F0F0197
-			public const int Widget_AppCompat_ActionBar_TabView = 2131689879;
-			
-			// aapt resource value: 0x7F0F0198
-			public const int Widget_AppCompat_ActionButton = 2131689880;
-			
-			// aapt resource value: 0x7F0F0199
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689881;
-			
-			// aapt resource value: 0x7F0F019A
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131689882;
-			
-			// aapt resource value: 0x7F0F019B
-			public const int Widget_AppCompat_ActionMode = 2131689883;
-			
-			// aapt resource value: 0x7F0F019C
-			public const int Widget_AppCompat_ActivityChooserView = 2131689884;
-			
-			// aapt resource value: 0x7F0F019D
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131689885;
-			
-			// aapt resource value: 0x7F0F019E
-			public const int Widget_AppCompat_Button = 2131689886;
-			
-			// aapt resource value: 0x7F0F01A4
-			public const int Widget_AppCompat_ButtonBar = 2131689892;
-			
-			// aapt resource value: 0x7F0F01A5
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131689893;
-			
-			// aapt resource value: 0x7F0F019F
-			public const int Widget_AppCompat_Button_Borderless = 2131689887;
-			
-			// aapt resource value: 0x7F0F01A0
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131689888;
-			
-			// aapt resource value: 0x7F0F01A1
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131689889;
-			
-			// aapt resource value: 0x7F0F01A2
-			public const int Widget_AppCompat_Button_Colored = 2131689890;
-			
-			// aapt resource value: 0x7F0F01A3
-			public const int Widget_AppCompat_Button_Small = 2131689891;
-			
-			// aapt resource value: 0x7F0F01A6
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131689894;
-			
-			// aapt resource value: 0x7F0F01A7
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131689895;
-			
-			// aapt resource value: 0x7F0F01A8
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131689896;
-			
-			// aapt resource value: 0x7F0F01A9
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131689897;
-			
-			// aapt resource value: 0x7F0F01AA
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131689898;
-			
-			// aapt resource value: 0x7F0F01AB
-			public const int Widget_AppCompat_EditText = 2131689899;
-			
-			// aapt resource value: 0x7F0F01AC
-			public const int Widget_AppCompat_ImageButton = 2131689900;
-			
-			// aapt resource value: 0x7F0F01AD
-			public const int Widget_AppCompat_Light_ActionBar = 2131689901;
-			
-			// aapt resource value: 0x7F0F01AE
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131689902;
-			
-			// aapt resource value: 0x7F0F01AF
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131689903;
-			
-			// aapt resource value: 0x7F0F01B0
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131689904;
-			
-			// aapt resource value: 0x7F0F01B1
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131689905;
-			
-			// aapt resource value: 0x7F0F01B2
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131689906;
-			
-			// aapt resource value: 0x7F0F01B3
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131689907;
-			
-			// aapt resource value: 0x7F0F01B4
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131689908;
-			
-			// aapt resource value: 0x7F0F01B5
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131689909;
-			
-			// aapt resource value: 0x7F0F01B6
-			public const int Widget_AppCompat_Light_ActionButton = 2131689910;
-			
-			// aapt resource value: 0x7F0F01B7
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131689911;
-			
-			// aapt resource value: 0x7F0F01B8
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131689912;
-			
-			// aapt resource value: 0x7F0F01B9
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131689913;
-			
-			// aapt resource value: 0x7F0F01BA
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131689914;
-			
-			// aapt resource value: 0x7F0F01BB
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131689915;
-			
-			// aapt resource value: 0x7F0F01BC
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131689916;
-			
-			// aapt resource value: 0x7F0F01BD
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131689917;
-			
-			// aapt resource value: 0x7F0F01BE
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131689918;
-			
-			// aapt resource value: 0x7F0F01BF
-			public const int Widget_AppCompat_Light_PopupMenu = 2131689919;
-			
-			// aapt resource value: 0x7F0F01C0
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131689920;
-			
-			// aapt resource value: 0x7F0F01C1
-			public const int Widget_AppCompat_Light_SearchView = 2131689921;
-			
-			// aapt resource value: 0x7F0F01C2
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131689922;
-			
-			// aapt resource value: 0x7F0F01C3
-			public const int Widget_AppCompat_ListMenuView = 2131689923;
-			
-			// aapt resource value: 0x7F0F01C4
-			public const int Widget_AppCompat_ListPopupWindow = 2131689924;
-			
-			// aapt resource value: 0x7F0F01C5
-			public const int Widget_AppCompat_ListView = 2131689925;
-			
-			// aapt resource value: 0x7F0F01C6
-			public const int Widget_AppCompat_ListView_DropDown = 2131689926;
-			
-			// aapt resource value: 0x7F0F01C7
-			public const int Widget_AppCompat_ListView_Menu = 2131689927;
-			
-			// aapt resource value: 0x7F0F01C8
-			public const int Widget_AppCompat_PopupMenu = 2131689928;
-			
-			// aapt resource value: 0x7F0F01C9
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131689929;
-			
-			// aapt resource value: 0x7F0F01CA
-			public const int Widget_AppCompat_PopupWindow = 2131689930;
-			
-			// aapt resource value: 0x7F0F01CB
-			public const int Widget_AppCompat_ProgressBar = 2131689931;
-			
-			// aapt resource value: 0x7F0F01CC
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131689932;
-			
-			// aapt resource value: 0x7F0F01CD
-			public const int Widget_AppCompat_RatingBar = 2131689933;
-			
-			// aapt resource value: 0x7F0F01CE
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131689934;
-			
-			// aapt resource value: 0x7F0F01CF
-			public const int Widget_AppCompat_RatingBar_Small = 2131689935;
-			
-			// aapt resource value: 0x7F0F01D0
-			public const int Widget_AppCompat_SearchView = 2131689936;
-			
-			// aapt resource value: 0x7F0F01D1
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131689937;
-			
-			// aapt resource value: 0x7F0F01D2
-			public const int Widget_AppCompat_SeekBar = 2131689938;
-			
-			// aapt resource value: 0x7F0F01D3
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131689939;
-			
-			// aapt resource value: 0x7F0F01D4
-			public const int Widget_AppCompat_Spinner = 2131689940;
-			
-			// aapt resource value: 0x7F0F01D5
-			public const int Widget_AppCompat_Spinner_DropDown = 2131689941;
-			
-			// aapt resource value: 0x7F0F01D6
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131689942;
-			
-			// aapt resource value: 0x7F0F01D7
-			public const int Widget_AppCompat_Spinner_Underlined = 2131689943;
-			
-			// aapt resource value: 0x7F0F01D8
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131689944;
-			
-			// aapt resource value: 0x7F0F01D9
-			public const int Widget_AppCompat_Toolbar = 2131689945;
-			
-			// aapt resource value: 0x7F0F01DA
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131689946;
-			
-			// aapt resource value: 0x7F0F01DB
-			public const int Widget_Compat_NotificationActionContainer = 2131689947;
-			
-			// aapt resource value: 0x7F0F01DC
-			public const int Widget_Compat_NotificationActionText = 2131689948;
-			
-			// aapt resource value: 0x7F0F01DD
-			public const int Widget_Design_AppBarLayout = 2131689949;
-			
-			// aapt resource value: 0x7F0F01DE
-			public const int Widget_Design_BottomNavigationView = 2131689950;
-			
-			// aapt resource value: 0x7F0F01DF
-			public const int Widget_Design_BottomSheet_Modal = 2131689951;
-			
-			// aapt resource value: 0x7F0F01E0
-			public const int Widget_Design_CollapsingToolbar = 2131689952;
-			
-			// aapt resource value: 0x7F0F01E1
-			public const int Widget_Design_FloatingActionButton = 2131689953;
-			
-			// aapt resource value: 0x7F0F01E2
-			public const int Widget_Design_NavigationView = 2131689954;
-			
-			// aapt resource value: 0x7F0F01E3
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131689955;
-			
-			// aapt resource value: 0x7F0F01E4
-			public const int Widget_Design_Snackbar = 2131689956;
-			
-			// aapt resource value: 0x7F0F01E5
-			public const int Widget_Design_TabLayout = 2131689957;
-			
-			// aapt resource value: 0x7F0F01E6
-			public const int Widget_Design_TextInputLayout = 2131689958;
-			
-			// aapt resource value: 0x7F0F01E7
-			public const int Widget_MaterialComponents_BottomAppBar = 2131689959;
-			
-			// aapt resource value: 0x7F0F01E8
-			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131689960;
-			
-			// aapt resource value: 0x7F0F01E9
-			public const int Widget_MaterialComponents_BottomNavigationView = 2131689961;
-			
-			// aapt resource value: 0x7F0F01EA
-			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131689962;
-			
-			// aapt resource value: 0x7F0F01EB
-			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131689963;
-			
-			// aapt resource value: 0x7F0F01EC
-			public const int Widget_MaterialComponents_Button = 2131689964;
-			
-			// aapt resource value: 0x7F0F01ED
-			public const int Widget_MaterialComponents_Button_Icon = 2131689965;
-			
-			// aapt resource value: 0x7F0F01EE
-			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131689966;
-			
-			// aapt resource value: 0x7F0F01EF
-			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131689967;
-			
-			// aapt resource value: 0x7F0F01F0
-			public const int Widget_MaterialComponents_Button_TextButton = 2131689968;
-			
-			// aapt resource value: 0x7F0F01F1
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131689969;
-			
-			// aapt resource value: 0x7F0F01F2
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131689970;
-			
-			// aapt resource value: 0x7F0F01F3
-			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131689971;
-			
-			// aapt resource value: 0x7F0F01F4
-			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131689972;
-			
-			// aapt resource value: 0x7F0F01F5
-			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131689973;
-			
-			// aapt resource value: 0x7F0F01F6
-			public const int Widget_MaterialComponents_CardView = 2131689974;
-			
-			// aapt resource value: 0x7F0F01FB
-			public const int Widget_MaterialComponents_ChipGroup = 2131689979;
-			
-			// aapt resource value: 0x7F0F01F7
-			public const int Widget_MaterialComponents_Chip_Action = 2131689975;
-			
-			// aapt resource value: 0x7F0F01F8
-			public const int Widget_MaterialComponents_Chip_Choice = 2131689976;
-			
-			// aapt resource value: 0x7F0F01F9
-			public const int Widget_MaterialComponents_Chip_Entry = 2131689977;
-			
-			// aapt resource value: 0x7F0F01FA
-			public const int Widget_MaterialComponents_Chip_Filter = 2131689978;
-			
-			// aapt resource value: 0x7F0F01FC
-			public const int Widget_MaterialComponents_FloatingActionButton = 2131689980;
-			
-			// aapt resource value: 0x7F0F01FD
-			public const int Widget_MaterialComponents_NavigationView = 2131689981;
-			
-			// aapt resource value: 0x7F0F01FE
-			public const int Widget_MaterialComponents_Snackbar = 2131689982;
-			
-			// aapt resource value: 0x7F0F01FF
-			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131689983;
-			
-			// aapt resource value: 0x7F0F0200
-			public const int Widget_MaterialComponents_TabLayout = 2131689984;
-			
-			// aapt resource value: 0x7F0F0201
-			public const int Widget_MaterialComponents_TabLayout_Colored = 2131689985;
-			
-			// aapt resource value: 0x7F0F0202
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131689986;
-			
-			// aapt resource value: 0x7F0F0203
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689987;
-			
-			// aapt resource value: 0x7F0F0204
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131689988;
-			
-			// aapt resource value: 0x7F0F0205
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689989;
-			
-			// aapt resource value: 0x7F0F0206
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131689990;
+			public const int MainTheme_Base = 2131689675;
 			
 			// aapt resource value: 0x7F0F0207
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131689991;
+			public const int mybutton_text = 2131689991;
 			
-			// aapt resource value: 0x7F0F0208
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131689992;
+			// aapt resource value: 0x7F0F00CC
+			public const int Platform_AppCompat = 2131689676;
 			
-			// aapt resource value: 0x7F0F0209
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131689993;
+			// aapt resource value: 0x7F0F00CD
+			public const int Platform_AppCompat_Light = 2131689677;
 			
-			// aapt resource value: 0x7F0F020A
-			public const int Widget_MaterialComponents_Toolbar = 2131689994;
+			// aapt resource value: 0x7F0F00CE
+			public const int Platform_MaterialComponents = 2131689678;
 			
-			// aapt resource value: 0x7F0F020B
-			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131689995;
+			// aapt resource value: 0x7F0F00CF
+			public const int Platform_MaterialComponents_Dialog = 2131689679;
 			
-			// aapt resource value: 0x7F0F020C
-			public const int Widget_MediaRouter_MediaRouteButton = 2131689996;
+			// aapt resource value: 0x7F0F00D0
+			public const int Platform_MaterialComponents_Light = 2131689680;
 			
-			// aapt resource value: 0x7F0F020D
-			public const int Widget_Support_CoordinatorLayout = 2131689997;
+			// aapt resource value: 0x7F0F00D1
+			public const int Platform_MaterialComponents_Light_Dialog = 2131689681;
+			
+			// aapt resource value: 0x7F0F00D2
+			public const int Platform_ThemeOverlay_AppCompat = 2131689682;
+			
+			// aapt resource value: 0x7F0F00D3
+			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689683;
+			
+			// aapt resource value: 0x7F0F00D4
+			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689684;
+			
+			// aapt resource value: 0x7F0F00D5
+			public const int Platform_V21_AppCompat = 2131689685;
+			
+			// aapt resource value: 0x7F0F00D6
+			public const int Platform_V21_AppCompat_Light = 2131689686;
+			
+			// aapt resource value: 0x7F0F00D7
+			public const int Platform_V25_AppCompat = 2131689687;
+			
+			// aapt resource value: 0x7F0F00D8
+			public const int Platform_V25_AppCompat_Light = 2131689688;
+			
+			// aapt resource value: 0x7F0F00D9
+			public const int Platform_Widget_AppCompat_Spinner = 2131689689;
+			
+			// aapt resource value: 0x7F0F00DA
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689690;
+			
+			// aapt resource value: 0x7F0F00DB
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689691;
+			
+			// aapt resource value: 0x7F0F00DC
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689692;
+			
+			// aapt resource value: 0x7F0F00DD
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689693;
+			
+			// aapt resource value: 0x7F0F00DE
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689694;
+			
+			// aapt resource value: 0x7F0F00DF
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131689695;
+			
+			// aapt resource value: 0x7F0F00E0
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131689696;
+			
+			// aapt resource value: 0x7F0F00E1
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689697;
+			
+			// aapt resource value: 0x7F0F00E2
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131689698;
+			
+			// aapt resource value: 0x7F0F00E8
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689704;
+			
+			// aapt resource value: 0x7F0F00E3
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689699;
+			
+			// aapt resource value: 0x7F0F00E4
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689700;
+			
+			// aapt resource value: 0x7F0F00E5
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689701;
+			
+			// aapt resource value: 0x7F0F00E6
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689702;
+			
+			// aapt resource value: 0x7F0F00E7
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689703;
+			
+			// aapt resource value: 0x7F0F00E9
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689705;
+			
+			// aapt resource value: 0x7F0F00EA
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689706;
+			
+			// aapt resource value: 0x7F0F00EB
+			public const int TextAppearance_AppCompat = 2131689707;
+			
+			// aapt resource value: 0x7F0F00EC
+			public const int TextAppearance_AppCompat_Body1 = 2131689708;
+			
+			// aapt resource value: 0x7F0F00ED
+			public const int TextAppearance_AppCompat_Body2 = 2131689709;
+			
+			// aapt resource value: 0x7F0F00EE
+			public const int TextAppearance_AppCompat_Button = 2131689710;
+			
+			// aapt resource value: 0x7F0F00EF
+			public const int TextAppearance_AppCompat_Caption = 2131689711;
+			
+			// aapt resource value: 0x7F0F00F0
+			public const int TextAppearance_AppCompat_Display1 = 2131689712;
+			
+			// aapt resource value: 0x7F0F00F1
+			public const int TextAppearance_AppCompat_Display2 = 2131689713;
+			
+			// aapt resource value: 0x7F0F00F2
+			public const int TextAppearance_AppCompat_Display3 = 2131689714;
+			
+			// aapt resource value: 0x7F0F00F3
+			public const int TextAppearance_AppCompat_Display4 = 2131689715;
+			
+			// aapt resource value: 0x7F0F00F4
+			public const int TextAppearance_AppCompat_Headline = 2131689716;
+			
+			// aapt resource value: 0x7F0F00F5
+			public const int TextAppearance_AppCompat_Inverse = 2131689717;
+			
+			// aapt resource value: 0x7F0F00F6
+			public const int TextAppearance_AppCompat_Large = 2131689718;
+			
+			// aapt resource value: 0x7F0F00F7
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131689719;
+			
+			// aapt resource value: 0x7F0F00F8
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689720;
+			
+			// aapt resource value: 0x7F0F00F9
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689721;
+			
+			// aapt resource value: 0x7F0F00FA
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689722;
+			
+			// aapt resource value: 0x7F0F00FB
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689723;
+			
+			// aapt resource value: 0x7F0F00FC
+			public const int TextAppearance_AppCompat_Medium = 2131689724;
+			
+			// aapt resource value: 0x7F0F00FD
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689725;
+			
+			// aapt resource value: 0x7F0F00FE
+			public const int TextAppearance_AppCompat_Menu = 2131689726;
+			
+			// aapt resource value: 0x7F0F00FF
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689727;
+			
+			// aapt resource value: 0x7F0F0100
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689728;
+			
+			// aapt resource value: 0x7F0F0101
+			public const int TextAppearance_AppCompat_Small = 2131689729;
+			
+			// aapt resource value: 0x7F0F0102
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131689730;
+			
+			// aapt resource value: 0x7F0F0103
+			public const int TextAppearance_AppCompat_Subhead = 2131689731;
+			
+			// aapt resource value: 0x7F0F0104
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689732;
+			
+			// aapt resource value: 0x7F0F0105
+			public const int TextAppearance_AppCompat_Title = 2131689733;
+			
+			// aapt resource value: 0x7F0F0106
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131689734;
+			
+			// aapt resource value: 0x7F0F0107
+			public const int TextAppearance_AppCompat_Tooltip = 2131689735;
+			
+			// aapt resource value: 0x7F0F0108
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689736;
+			
+			// aapt resource value: 0x7F0F0109
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689737;
+			
+			// aapt resource value: 0x7F0F010A
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689738;
+			
+			// aapt resource value: 0x7F0F010B
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689739;
+			
+			// aapt resource value: 0x7F0F010C
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689740;
+			
+			// aapt resource value: 0x7F0F010D
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689741;
+			
+			// aapt resource value: 0x7F0F010E
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689742;
+			
+			// aapt resource value: 0x7F0F010F
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689743;
+			
+			// aapt resource value: 0x7F0F0110
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689744;
+			
+			// aapt resource value: 0x7F0F0111
+			public const int TextAppearance_AppCompat_Widget_Button = 2131689745;
+			
+			// aapt resource value: 0x7F0F0112
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689746;
+			
+			// aapt resource value: 0x7F0F0113
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689747;
+			
+			// aapt resource value: 0x7F0F0114
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689748;
+			
+			// aapt resource value: 0x7F0F0115
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689749;
+			
+			// aapt resource value: 0x7F0F0116
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689750;
+			
+			// aapt resource value: 0x7F0F0117
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689751;
+			
+			// aapt resource value: 0x7F0F0118
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689752;
+			
+			// aapt resource value: 0x7F0F0119
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131689753;
+			
+			// aapt resource value: 0x7F0F011A
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689754;
+			
+			// aapt resource value: 0x7F0F011B
+			public const int TextAppearance_Compat_Notification = 2131689755;
+			
+			// aapt resource value: 0x7F0F011C
+			public const int TextAppearance_Compat_Notification_Info = 2131689756;
+			
+			// aapt resource value: 0x7F0F011D
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131689757;
+			
+			// aapt resource value: 0x7F0F011E
+			public const int TextAppearance_Compat_Notification_Line2 = 2131689758;
+			
+			// aapt resource value: 0x7F0F011F
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689759;
+			
+			// aapt resource value: 0x7F0F0120
+			public const int TextAppearance_Compat_Notification_Media = 2131689760;
+			
+			// aapt resource value: 0x7F0F0121
+			public const int TextAppearance_Compat_Notification_Time = 2131689761;
+			
+			// aapt resource value: 0x7F0F0122
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131689762;
+			
+			// aapt resource value: 0x7F0F0123
+			public const int TextAppearance_Compat_Notification_Title = 2131689763;
+			
+			// aapt resource value: 0x7F0F0124
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131689764;
+			
+			// aapt resource value: 0x7F0F0125
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689765;
+			
+			// aapt resource value: 0x7F0F0126
+			public const int TextAppearance_Design_Counter = 2131689766;
+			
+			// aapt resource value: 0x7F0F0127
+			public const int TextAppearance_Design_Counter_Overflow = 2131689767;
+			
+			// aapt resource value: 0x7F0F0128
+			public const int TextAppearance_Design_Error = 2131689768;
+			
+			// aapt resource value: 0x7F0F0129
+			public const int TextAppearance_Design_HelperText = 2131689769;
+			
+			// aapt resource value: 0x7F0F012A
+			public const int TextAppearance_Design_Hint = 2131689770;
+			
+			// aapt resource value: 0x7F0F012B
+			public const int TextAppearance_Design_Snackbar_Message = 2131689771;
+			
+			// aapt resource value: 0x7F0F012C
+			public const int TextAppearance_Design_Tab = 2131689772;
+			
+			// aapt resource value: 0x7F0F012D
+			public const int TextAppearance_MaterialComponents_Body1 = 2131689773;
+			
+			// aapt resource value: 0x7F0F012E
+			public const int TextAppearance_MaterialComponents_Body2 = 2131689774;
+			
+			// aapt resource value: 0x7F0F012F
+			public const int TextAppearance_MaterialComponents_Button = 2131689775;
+			
+			// aapt resource value: 0x7F0F0130
+			public const int TextAppearance_MaterialComponents_Caption = 2131689776;
+			
+			// aapt resource value: 0x7F0F0131
+			public const int TextAppearance_MaterialComponents_Chip = 2131689777;
+			
+			// aapt resource value: 0x7F0F0132
+			public const int TextAppearance_MaterialComponents_Headline1 = 2131689778;
+			
+			// aapt resource value: 0x7F0F0133
+			public const int TextAppearance_MaterialComponents_Headline2 = 2131689779;
+			
+			// aapt resource value: 0x7F0F0134
+			public const int TextAppearance_MaterialComponents_Headline3 = 2131689780;
+			
+			// aapt resource value: 0x7F0F0135
+			public const int TextAppearance_MaterialComponents_Headline4 = 2131689781;
+			
+			// aapt resource value: 0x7F0F0136
+			public const int TextAppearance_MaterialComponents_Headline5 = 2131689782;
+			
+			// aapt resource value: 0x7F0F0137
+			public const int TextAppearance_MaterialComponents_Headline6 = 2131689783;
+			
+			// aapt resource value: 0x7F0F0138
+			public const int TextAppearance_MaterialComponents_Overline = 2131689784;
+			
+			// aapt resource value: 0x7F0F0139
+			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131689785;
+			
+			// aapt resource value: 0x7F0F013A
+			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131689786;
+			
+			// aapt resource value: 0x7F0F013B
+			public const int TextAppearance_MaterialComponents_Tab = 2131689787;
+			
+			// aapt resource value: 0x7F0F013C
+			public const int TextAppearance_MediaRouter_PrimaryText = 2131689788;
+			
+			// aapt resource value: 0x7F0F013D
+			public const int TextAppearance_MediaRouter_SecondaryText = 2131689789;
+			
+			// aapt resource value: 0x7F0F013E
+			public const int TextAppearance_MediaRouter_Title = 2131689790;
+			
+			// aapt resource value: 0x7F0F013F
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689791;
+			
+			// aapt resource value: 0x7F0F0140
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689792;
+			
+			// aapt resource value: 0x7F0F0141
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689793;
+			
+			// aapt resource value: 0x7F0F0176
+			public const int ThemeOverlay_AppCompat = 2131689846;
+			
+			// aapt resource value: 0x7F0F0177
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131689847;
+			
+			// aapt resource value: 0x7F0F0178
+			public const int ThemeOverlay_AppCompat_Dark = 2131689848;
+			
+			// aapt resource value: 0x7F0F0179
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689849;
+			
+			// aapt resource value: 0x7F0F017A
+			public const int ThemeOverlay_AppCompat_Dialog = 2131689850;
+			
+			// aapt resource value: 0x7F0F017B
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689851;
+			
+			// aapt resource value: 0x7F0F017C
+			public const int ThemeOverlay_AppCompat_Light = 2131689852;
+			
+			// aapt resource value: 0x7F0F017D
+			public const int ThemeOverlay_MaterialComponents = 2131689853;
+			
+			// aapt resource value: 0x7F0F017E
+			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131689854;
+			
+			// aapt resource value: 0x7F0F017F
+			public const int ThemeOverlay_MaterialComponents_Dark = 2131689855;
+			
+			// aapt resource value: 0x7F0F0180
+			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131689856;
+			
+			// aapt resource value: 0x7F0F0181
+			public const int ThemeOverlay_MaterialComponents_Dialog = 2131689857;
+			
+			// aapt resource value: 0x7F0F0182
+			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689858;
+			
+			// aapt resource value: 0x7F0F0183
+			public const int ThemeOverlay_MaterialComponents_Light = 2131689859;
+			
+			// aapt resource value: 0x7F0F0184
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131689860;
+			
+			// aapt resource value: 0x7F0F0185
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131689861;
+			
+			// aapt resource value: 0x7F0F0186
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689862;
+			
+			// aapt resource value: 0x7F0F0187
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131689863;
+			
+			// aapt resource value: 0x7F0F0188
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689864;
+			
+			// aapt resource value: 0x7F0F0189
+			public const int ThemeOverlay_MediaRouter_Dark = 2131689865;
+			
+			// aapt resource value: 0x7F0F018A
+			public const int ThemeOverlay_MediaRouter_Light = 2131689866;
+			
+			// aapt resource value: 0x7F0F0142
+			public const int Theme_AppCompat = 2131689794;
+			
+			// aapt resource value: 0x7F0F0143
+			public const int Theme_AppCompat_CompactMenu = 2131689795;
+			
+			// aapt resource value: 0x7F0F0144
+			public const int Theme_AppCompat_DayNight = 2131689796;
+			
+			// aapt resource value: 0x7F0F0145
+			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689797;
+			
+			// aapt resource value: 0x7F0F0146
+			public const int Theme_AppCompat_DayNight_Dialog = 2131689798;
+			
+			// aapt resource value: 0x7F0F0149
+			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689801;
+			
+			// aapt resource value: 0x7F0F0147
+			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689799;
+			
+			// aapt resource value: 0x7F0F0148
+			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689800;
+			
+			// aapt resource value: 0x7F0F014A
+			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689802;
+			
+			// aapt resource value: 0x7F0F014B
+			public const int Theme_AppCompat_Dialog = 2131689803;
+			
+			// aapt resource value: 0x7F0F014E
+			public const int Theme_AppCompat_DialogWhenLarge = 2131689806;
+			
+			// aapt resource value: 0x7F0F014C
+			public const int Theme_AppCompat_Dialog_Alert = 2131689804;
+			
+			// aapt resource value: 0x7F0F014D
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131689805;
+			
+			// aapt resource value: 0x7F0F014F
+			public const int Theme_AppCompat_Light = 2131689807;
+			
+			// aapt resource value: 0x7F0F0150
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131689808;
+			
+			// aapt resource value: 0x7F0F0151
+			public const int Theme_AppCompat_Light_Dialog = 2131689809;
+			
+			// aapt resource value: 0x7F0F0154
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689812;
+			
+			// aapt resource value: 0x7F0F0152
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689810;
+			
+			// aapt resource value: 0x7F0F0153
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689811;
+			
+			// aapt resource value: 0x7F0F0155
+			public const int Theme_AppCompat_Light_NoActionBar = 2131689813;
+			
+			// aapt resource value: 0x7F0F0156
+			public const int Theme_AppCompat_NoActionBar = 2131689814;
+			
+			// aapt resource value: 0x7F0F0157
+			public const int Theme_Design = 2131689815;
+			
+			// aapt resource value: 0x7F0F0158
+			public const int Theme_Design_BottomSheetDialog = 2131689816;
+			
+			// aapt resource value: 0x7F0F0159
+			public const int Theme_Design_Light = 2131689817;
+			
+			// aapt resource value: 0x7F0F015A
+			public const int Theme_Design_Light_BottomSheetDialog = 2131689818;
+			
+			// aapt resource value: 0x7F0F015B
+			public const int Theme_Design_Light_NoActionBar = 2131689819;
+			
+			// aapt resource value: 0x7F0F015C
+			public const int Theme_Design_NoActionBar = 2131689820;
+			
+			// aapt resource value: 0x7F0F015D
+			public const int Theme_MaterialComponents = 2131689821;
+			
+			// aapt resource value: 0x7F0F015E
+			public const int Theme_MaterialComponents_BottomSheetDialog = 2131689822;
+			
+			// aapt resource value: 0x7F0F015F
+			public const int Theme_MaterialComponents_Bridge = 2131689823;
+			
+			// aapt resource value: 0x7F0F0160
+			public const int Theme_MaterialComponents_CompactMenu = 2131689824;
+			
+			// aapt resource value: 0x7F0F0161
+			public const int Theme_MaterialComponents_Dialog = 2131689825;
+			
+			// aapt resource value: 0x7F0F0164
+			public const int Theme_MaterialComponents_DialogWhenLarge = 2131689828;
+			
+			// aapt resource value: 0x7F0F0162
+			public const int Theme_MaterialComponents_Dialog_Alert = 2131689826;
+			
+			// aapt resource value: 0x7F0F0163
+			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131689827;
+			
+			// aapt resource value: 0x7F0F0165
+			public const int Theme_MaterialComponents_Light = 2131689829;
+			
+			// aapt resource value: 0x7F0F0166
+			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131689830;
+			
+			// aapt resource value: 0x7F0F0167
+			public const int Theme_MaterialComponents_Light_Bridge = 2131689831;
+			
+			// aapt resource value: 0x7F0F0168
+			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131689832;
+			
+			// aapt resource value: 0x7F0F0169
+			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689833;
+			
+			// aapt resource value: 0x7F0F016A
+			public const int Theme_MaterialComponents_Light_Dialog = 2131689834;
+			
+			// aapt resource value: 0x7F0F016D
+			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131689837;
+			
+			// aapt resource value: 0x7F0F016B
+			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131689835;
+			
+			// aapt resource value: 0x7F0F016C
+			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131689836;
+			
+			// aapt resource value: 0x7F0F016E
+			public const int Theme_MaterialComponents_Light_NoActionBar = 2131689838;
+			
+			// aapt resource value: 0x7F0F016F
+			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131689839;
+			
+			// aapt resource value: 0x7F0F0170
+			public const int Theme_MaterialComponents_NoActionBar = 2131689840;
+			
+			// aapt resource value: 0x7F0F0171
+			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131689841;
+			
+			// aapt resource value: 0x7F0F0172
+			public const int Theme_MediaRouter = 2131689842;
+			
+			// aapt resource value: 0x7F0F0173
+			public const int Theme_MediaRouter_Light = 2131689843;
+			
+			// aapt resource value: 0x7F0F0175
+			public const int Theme_MediaRouter_LightControlPanel = 2131689845;
+			
+			// aapt resource value: 0x7F0F0174
+			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131689844;
+			
+			// aapt resource value: 0x7F0F018B
+			public const int Widget_AppCompat_ActionBar = 2131689867;
+			
+			// aapt resource value: 0x7F0F018C
+			public const int Widget_AppCompat_ActionBar_Solid = 2131689868;
+			
+			// aapt resource value: 0x7F0F018D
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131689869;
+			
+			// aapt resource value: 0x7F0F018E
+			public const int Widget_AppCompat_ActionBar_TabText = 2131689870;
+			
+			// aapt resource value: 0x7F0F018F
+			public const int Widget_AppCompat_ActionBar_TabView = 2131689871;
+			
+			// aapt resource value: 0x7F0F0190
+			public const int Widget_AppCompat_ActionButton = 2131689872;
+			
+			// aapt resource value: 0x7F0F0191
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689873;
+			
+			// aapt resource value: 0x7F0F0192
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131689874;
+			
+			// aapt resource value: 0x7F0F0193
+			public const int Widget_AppCompat_ActionMode = 2131689875;
+			
+			// aapt resource value: 0x7F0F0194
+			public const int Widget_AppCompat_ActivityChooserView = 2131689876;
+			
+			// aapt resource value: 0x7F0F0195
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131689877;
+			
+			// aapt resource value: 0x7F0F0196
+			public const int Widget_AppCompat_Button = 2131689878;
+			
+			// aapt resource value: 0x7F0F019C
+			public const int Widget_AppCompat_ButtonBar = 2131689884;
+			
+			// aapt resource value: 0x7F0F019D
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131689885;
+			
+			// aapt resource value: 0x7F0F0197
+			public const int Widget_AppCompat_Button_Borderless = 2131689879;
+			
+			// aapt resource value: 0x7F0F0198
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131689880;
+			
+			// aapt resource value: 0x7F0F0199
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131689881;
+			
+			// aapt resource value: 0x7F0F019A
+			public const int Widget_AppCompat_Button_Colored = 2131689882;
+			
+			// aapt resource value: 0x7F0F019B
+			public const int Widget_AppCompat_Button_Small = 2131689883;
+			
+			// aapt resource value: 0x7F0F019E
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131689886;
+			
+			// aapt resource value: 0x7F0F019F
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131689887;
+			
+			// aapt resource value: 0x7F0F01A0
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131689888;
+			
+			// aapt resource value: 0x7F0F01A1
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131689889;
+			
+			// aapt resource value: 0x7F0F01A2
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131689890;
+			
+			// aapt resource value: 0x7F0F01A3
+			public const int Widget_AppCompat_EditText = 2131689891;
+			
+			// aapt resource value: 0x7F0F01A4
+			public const int Widget_AppCompat_ImageButton = 2131689892;
+			
+			// aapt resource value: 0x7F0F01A5
+			public const int Widget_AppCompat_Light_ActionBar = 2131689893;
+			
+			// aapt resource value: 0x7F0F01A6
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131689894;
+			
+			// aapt resource value: 0x7F0F01A7
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131689895;
+			
+			// aapt resource value: 0x7F0F01A8
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131689896;
+			
+			// aapt resource value: 0x7F0F01A9
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131689897;
+			
+			// aapt resource value: 0x7F0F01AA
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131689898;
+			
+			// aapt resource value: 0x7F0F01AB
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131689899;
+			
+			// aapt resource value: 0x7F0F01AC
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131689900;
+			
+			// aapt resource value: 0x7F0F01AD
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131689901;
+			
+			// aapt resource value: 0x7F0F01AE
+			public const int Widget_AppCompat_Light_ActionButton = 2131689902;
+			
+			// aapt resource value: 0x7F0F01AF
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131689903;
+			
+			// aapt resource value: 0x7F0F01B0
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131689904;
+			
+			// aapt resource value: 0x7F0F01B1
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131689905;
+			
+			// aapt resource value: 0x7F0F01B2
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131689906;
+			
+			// aapt resource value: 0x7F0F01B3
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131689907;
+			
+			// aapt resource value: 0x7F0F01B4
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131689908;
+			
+			// aapt resource value: 0x7F0F01B5
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131689909;
+			
+			// aapt resource value: 0x7F0F01B6
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131689910;
+			
+			// aapt resource value: 0x7F0F01B7
+			public const int Widget_AppCompat_Light_PopupMenu = 2131689911;
+			
+			// aapt resource value: 0x7F0F01B8
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131689912;
+			
+			// aapt resource value: 0x7F0F01B9
+			public const int Widget_AppCompat_Light_SearchView = 2131689913;
+			
+			// aapt resource value: 0x7F0F01BA
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131689914;
+			
+			// aapt resource value: 0x7F0F01BB
+			public const int Widget_AppCompat_ListMenuView = 2131689915;
+			
+			// aapt resource value: 0x7F0F01BC
+			public const int Widget_AppCompat_ListPopupWindow = 2131689916;
+			
+			// aapt resource value: 0x7F0F01BD
+			public const int Widget_AppCompat_ListView = 2131689917;
+			
+			// aapt resource value: 0x7F0F01BE
+			public const int Widget_AppCompat_ListView_DropDown = 2131689918;
+			
+			// aapt resource value: 0x7F0F01BF
+			public const int Widget_AppCompat_ListView_Menu = 2131689919;
+			
+			// aapt resource value: 0x7F0F01C0
+			public const int Widget_AppCompat_PopupMenu = 2131689920;
+			
+			// aapt resource value: 0x7F0F01C1
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131689921;
+			
+			// aapt resource value: 0x7F0F01C2
+			public const int Widget_AppCompat_PopupWindow = 2131689922;
+			
+			// aapt resource value: 0x7F0F01C3
+			public const int Widget_AppCompat_ProgressBar = 2131689923;
+			
+			// aapt resource value: 0x7F0F01C4
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131689924;
+			
+			// aapt resource value: 0x7F0F01C5
+			public const int Widget_AppCompat_RatingBar = 2131689925;
+			
+			// aapt resource value: 0x7F0F01C6
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131689926;
+			
+			// aapt resource value: 0x7F0F01C7
+			public const int Widget_AppCompat_RatingBar_Small = 2131689927;
+			
+			// aapt resource value: 0x7F0F01C8
+			public const int Widget_AppCompat_SearchView = 2131689928;
+			
+			// aapt resource value: 0x7F0F01C9
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131689929;
+			
+			// aapt resource value: 0x7F0F01CA
+			public const int Widget_AppCompat_SeekBar = 2131689930;
+			
+			// aapt resource value: 0x7F0F01CB
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131689931;
+			
+			// aapt resource value: 0x7F0F01CC
+			public const int Widget_AppCompat_Spinner = 2131689932;
+			
+			// aapt resource value: 0x7F0F01CD
+			public const int Widget_AppCompat_Spinner_DropDown = 2131689933;
+			
+			// aapt resource value: 0x7F0F01CE
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131689934;
+			
+			// aapt resource value: 0x7F0F01CF
+			public const int Widget_AppCompat_Spinner_Underlined = 2131689935;
+			
+			// aapt resource value: 0x7F0F01D0
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131689936;
+			
+			// aapt resource value: 0x7F0F01D1
+			public const int Widget_AppCompat_Toolbar = 2131689937;
+			
+			// aapt resource value: 0x7F0F01D2
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131689938;
+			
+			// aapt resource value: 0x7F0F01D3
+			public const int Widget_Compat_NotificationActionContainer = 2131689939;
+			
+			// aapt resource value: 0x7F0F01D4
+			public const int Widget_Compat_NotificationActionText = 2131689940;
+			
+			// aapt resource value: 0x7F0F01D5
+			public const int Widget_Design_AppBarLayout = 2131689941;
+			
+			// aapt resource value: 0x7F0F01D6
+			public const int Widget_Design_BottomNavigationView = 2131689942;
+			
+			// aapt resource value: 0x7F0F01D7
+			public const int Widget_Design_BottomSheet_Modal = 2131689943;
+			
+			// aapt resource value: 0x7F0F01D8
+			public const int Widget_Design_CollapsingToolbar = 2131689944;
+			
+			// aapt resource value: 0x7F0F01D9
+			public const int Widget_Design_FloatingActionButton = 2131689945;
+			
+			// aapt resource value: 0x7F0F01DA
+			public const int Widget_Design_NavigationView = 2131689946;
+			
+			// aapt resource value: 0x7F0F01DB
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131689947;
+			
+			// aapt resource value: 0x7F0F01DC
+			public const int Widget_Design_Snackbar = 2131689948;
+			
+			// aapt resource value: 0x7F0F01DD
+			public const int Widget_Design_TabLayout = 2131689949;
+			
+			// aapt resource value: 0x7F0F01DE
+			public const int Widget_Design_TextInputLayout = 2131689950;
+			
+			// aapt resource value: 0x7F0F01DF
+			public const int Widget_MaterialComponents_BottomAppBar = 2131689951;
+			
+			// aapt resource value: 0x7F0F01E0
+			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131689952;
+			
+			// aapt resource value: 0x7F0F01E1
+			public const int Widget_MaterialComponents_BottomNavigationView = 2131689953;
+			
+			// aapt resource value: 0x7F0F01E2
+			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131689954;
+			
+			// aapt resource value: 0x7F0F01E3
+			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131689955;
+			
+			// aapt resource value: 0x7F0F01E4
+			public const int Widget_MaterialComponents_Button = 2131689956;
+			
+			// aapt resource value: 0x7F0F01E5
+			public const int Widget_MaterialComponents_Button_Icon = 2131689957;
+			
+			// aapt resource value: 0x7F0F01E6
+			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131689958;
+			
+			// aapt resource value: 0x7F0F01E7
+			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131689959;
+			
+			// aapt resource value: 0x7F0F01E8
+			public const int Widget_MaterialComponents_Button_TextButton = 2131689960;
+			
+			// aapt resource value: 0x7F0F01E9
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131689961;
+			
+			// aapt resource value: 0x7F0F01EA
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131689962;
+			
+			// aapt resource value: 0x7F0F01EB
+			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131689963;
+			
+			// aapt resource value: 0x7F0F01EC
+			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131689964;
+			
+			// aapt resource value: 0x7F0F01ED
+			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131689965;
+			
+			// aapt resource value: 0x7F0F01EE
+			public const int Widget_MaterialComponents_CardView = 2131689966;
+			
+			// aapt resource value: 0x7F0F01F3
+			public const int Widget_MaterialComponents_ChipGroup = 2131689971;
+			
+			// aapt resource value: 0x7F0F01EF
+			public const int Widget_MaterialComponents_Chip_Action = 2131689967;
+			
+			// aapt resource value: 0x7F0F01F0
+			public const int Widget_MaterialComponents_Chip_Choice = 2131689968;
+			
+			// aapt resource value: 0x7F0F01F1
+			public const int Widget_MaterialComponents_Chip_Entry = 2131689969;
+			
+			// aapt resource value: 0x7F0F01F2
+			public const int Widget_MaterialComponents_Chip_Filter = 2131689970;
+			
+			// aapt resource value: 0x7F0F01F4
+			public const int Widget_MaterialComponents_FloatingActionButton = 2131689972;
+			
+			// aapt resource value: 0x7F0F01F5
+			public const int Widget_MaterialComponents_NavigationView = 2131689973;
+			
+			// aapt resource value: 0x7F0F01F6
+			public const int Widget_MaterialComponents_Snackbar = 2131689974;
+			
+			// aapt resource value: 0x7F0F01F7
+			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131689975;
+			
+			// aapt resource value: 0x7F0F01F8
+			public const int Widget_MaterialComponents_TabLayout = 2131689976;
+			
+			// aapt resource value: 0x7F0F01F9
+			public const int Widget_MaterialComponents_TabLayout_Colored = 2131689977;
+			
+			// aapt resource value: 0x7F0F01FA
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131689978;
+			
+			// aapt resource value: 0x7F0F01FB
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689979;
+			
+			// aapt resource value: 0x7F0F01FC
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131689980;
+			
+			// aapt resource value: 0x7F0F01FD
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689981;
+			
+			// aapt resource value: 0x7F0F01FE
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131689982;
+			
+			// aapt resource value: 0x7F0F01FF
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131689983;
+			
+			// aapt resource value: 0x7F0F0200
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131689984;
+			
+			// aapt resource value: 0x7F0F0201
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131689985;
+			
+			// aapt resource value: 0x7F0F0202
+			public const int Widget_MaterialComponents_Toolbar = 2131689986;
+			
+			// aapt resource value: 0x7F0F0203
+			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131689987;
+			
+			// aapt resource value: 0x7F0F0204
+			public const int Widget_MediaRouter_MediaRouteButton = 2131689988;
+			
+			// aapt resource value: 0x7F0F0205
+			public const int Widget_Support_CoordinatorLayout = 2131689989;
 			
 			static Style()
 			{

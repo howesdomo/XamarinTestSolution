@@ -126,8 +126,6 @@ namespace Client
 
             this.btnAcrUserDialogsDemo.Clicked += btnAcrUserDialogsDemo_Clicked;
 
-            this.btnDevExpress.Clicked += btnDevExpress_Clicked;
-
             this.btnPageBaiduMenu.Clicked += btnPageBaiduMenu_Clicked;
 
             #endregion
@@ -412,12 +410,6 @@ namespace Client
         {
             await Navigation.PushAsync(new View.AcrUserDialogDemo.PageTestAcrUserDialog());
         }
-
-        async void btnDevExpress_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.DevExpressDemo.PageDevExpressDemoMenu());
-        }
-
 
         async void btnPageBaiduMenu_Clicked(object sender, EventArgs e)
         {

@@ -10,6 +10,10 @@ namespace Client
 {
     public partial class App : Application
     {
+        public static NavigationPage Navigation { get; set; }
+
+
+
         public static Util.XamariN.IScreen Screen { get; set; }
 
         public static Util.XamariN.IAudioPlayer AudioPlayer { get; set; }
@@ -91,7 +95,11 @@ namespace Client
 
             // *** 以下代码极为重要 ***
             // MainPage不采用 NavigationPage, 无法使用 Navigation.PushAsync(somePage) 方法跳转下一个界面
-            MainPage = new NavigationPage(new MainPage());
+
+            var nPage = new NavigationPage(new MainPage());
+            
+            App.Navigation = nPage;
+            MainPage = nPage;
         }
 
         protected override void OnStart()

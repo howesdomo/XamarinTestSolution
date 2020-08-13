@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -337,7 +337,6 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.442" />
-    <PackageReference Include="DevExpress.Mobile.Grid" Version="18.2.3" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.5.3" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.5.3" />
@@ -438,18 +437,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ColorListDemo\PageColorListDemo.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressDemoMenu.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressV2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\DevExpressDemo\PageDevExpressV3.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\DevExpressDemo\PageHelloDevExpress.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\DisplayAlertDemo\PageDisplayAlertDemoList.xaml">
@@ -778,18 +765,6 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="View\BuBuGao_Japanese\PageBuBuGao2.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="View\DevExpressDemo\PageDevExpressDemoMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="View\DevExpressDemo\PageDevExpressV2.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="View\DevExpressDemo\PageDevExpressV3.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="View\DevExpressDemo\PageHelloDevExpress.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="View\DisplayAlertDemo\PageDisplayAlertDemoList.xaml">

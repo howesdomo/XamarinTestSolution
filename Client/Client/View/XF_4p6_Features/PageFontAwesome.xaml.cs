@@ -20,9 +20,7 @@ namespace Client.View.XF_4p6_Features
     }
 
     public class PageFontAwesome_ViewModel : ViewModel.BaseViewModel
-    {
-        public Command<string> CMD_Filter { get; set; }
-
+    {       
         public PageFontAwesome_ViewModel()
         {
 
@@ -42,7 +40,6 @@ namespace Client.View.XF_4p6_Features
         }
 
         public List<Util_Font.FontAwesomeModel> _FiltedList;
-
         public List<Util_Font.FontAwesomeModel> FiltedList
         {
             get { return _FiltedList; }
@@ -52,8 +49,8 @@ namespace Client.View.XF_4p6_Features
             }
         }
 
-        public List<Util_Font.FontAwesomeModel> _AllList;
 
+        public List<Util_Font.FontAwesomeModel> _AllList;
         public List<Util_Font.FontAwesomeModel> AllList
         {
             get { return _AllList; }
@@ -62,6 +59,9 @@ namespace Client.View.XF_4p6_Features
                 SetProperty(ref _AllList, value);
             }
         }
+
+
+        public Command<string> CMD_Filter { get; set; }
 
         void filter(string args)
         {
@@ -79,6 +79,7 @@ namespace Client.View.XF_4p6_Features
                 FiltedList = this.AllList.ToList();
             }
         }
+
 
         private Util_Font.FontAwesomeModel _SelectedItem;
         public Util_Font.FontAwesomeModel SelectedItem
@@ -109,49 +110,9 @@ namespace Client.View.XF_4p6_Features
         }
 
 
-        public Command<DataTemplate> CMD_ViewOfList { get; private set; }
-
-        public Command<DataTemplate> CMD_ViewOfGrid { get; private set; }
-
-        private DataTemplate _ItemTemplate;
-
-        public DataTemplate ItemTemplate
-        {
-            get { return _ItemTemplate; }
-            set
-            {
-                _ItemTemplate = value;
-                this.OnPropertyChanged("ItemTemplate");
-            }
-        }
-
-
-        void viewOfList(DataTemplate dt)
-        {
-            this.ItemTemplate = dt;
-            this.ItemsLayout = ItemLayoutOfList;
-        }
-
-        void viewOfGrid(DataTemplate dt)
-        {
-            this.ItemTemplate = dt;
-            this.ItemsLayout = ItemLayoutOfGrid;
-        }
-
-
-        private static readonly IItemsLayout ItemLayoutOfGrid = new GridItemsLayout(ItemsLayoutOrientation.Vertical)
-        {
-            Span = 4,
-            VerticalItemSpacing = 20
-        };
-
-        private static readonly IItemsLayout ItemLayoutOfList = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
-        {
-            ItemSpacing = 5
-        };
+        #region 视图
 
         private IItemsLayout _ItemsLayout = ItemLayoutOfList;
-
         public IItemsLayout ItemsLayout
         {
             get { return _ItemsLayout; }
@@ -162,5 +123,52 @@ namespace Client.View.XF_4p6_Features
             }
         }
 
+        private DataTemplate _ItemTemplate;
+        public DataTemplate ItemTemplate
+        {
+            get { return _ItemTemplate; }
+            set
+            {
+                _ItemTemplate = value;
+                this.OnPropertyChanged("ItemTemplate");
+            }
+        }
+
+        #region 视图 - 详情
+
+        private static readonly IItemsLayout ItemLayoutOfList = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
+        {
+            ItemSpacing = 5
+        };
+
+        public Command<DataTemplate> CMD_ViewOfGrid { get; private set; }
+
+        void viewOfList(DataTemplate dt)
+        {
+            this.ItemsLayout = ItemLayoutOfList;
+            this.ItemTemplate = dt;
+        }
+
+        #endregion
+
+        #region 视图 - 图标
+
+        private static readonly IItemsLayout ItemLayoutOfGrid = new GridItemsLayout(ItemsLayoutOrientation.Vertical)
+        {
+            Span = 4,
+            VerticalItemSpacing = 20
+        };
+
+        public Command<DataTemplate> CMD_ViewOfList { get; private set; }
+
+        void viewOfGrid(DataTemplate dt)
+        {
+            this.ItemsLayout = ItemLayoutOfGrid;
+            this.ItemTemplate = dt;
+        }
+
+        #endregion
+
+        #endregion
     }
 }

@@ -3,15 +3,151 @@
     x:Class="Client.View.XF_4p6_Features.PageFontAwesome"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
     xmlns:view="clr-namespace:Client.View.XF_4p6_Features"
     Title="FontAwesome列表"
     mc:Ignorable="d">
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!--  Title  -->
+            <ui:MarqueeLabel
+                FontSize="20"
+                Text="FontAwesome列表"
+                TextColor="White" />
+
+            <StackLayout
+                Grid.Column="1"
+                Orientation="Horizontal">
+                <Image
+                    Margin="5,0,15,0"
+                    Source="{FontImage FontFamily=FontAwesome,
+                                       Glyph={x:Static utilFont:FontAwesomeIcons.List},
+                                       Color=White,
+                                       Size=20}">
+                    <Image.Behaviors>
+                        <behaviors:ViewTapLikeButtonBehavior />
+                    </Image.Behaviors>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding CMD_ViewOfList}"
+                            NumberOfTapsRequired="1">
+                            <TapGestureRecognizer.CommandParameter>
+                                <DataTemplate>
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        Spacing="0">
+                                        <Label
+                                            Margin="20,0,20,0"
+                                            Text="{Binding Name}"
+                                            TextColor="Black" />
+
+                                        <StackLayout
+                                            Margin="20,0,0,0"
+                                            Orientation="Horizontal"
+                                            Spacing="0">
+
+                                            <Label Text="{Binding Code_XML}" />
+                                            <Image
+                                                Margin="20,0,0,0"
+                                                WidthRequest="100">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="FontAwesome"
+                                                        Glyph="{Binding Code}"
+                                                        Size="26"
+                                                        Color="Black" />
+                                                </Image.Source>
+                                            </Image>
+
+                                            <Image
+                                                Margin="20,0,0,0"
+                                                WidthRequest="100">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="FontAwesome_Brands"
+                                                        Glyph="{Binding Code}"
+                                                        Size="26"
+                                                        Color="Black" />
+                                                </Image.Source>
+                                            </Image>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </TapGestureRecognizer.CommandParameter>
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    Margin="5,0,15,0"
+                    Source="{FontImage FontFamily=FontAwesome,
+                                       Glyph={x:Static utilFont:FontAwesomeIcons.GripVertical},
+                                       Color=White,
+                                       Size=20}">
+                    <Image.Behaviors>
+                        <behaviors:ViewTapLikeButtonBehavior />
+                    </Image.Behaviors>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding CMD_ViewOfGrid}"
+                            NumberOfTapsRequired="1">
+                            <TapGestureRecognizer.CommandParameter>
+                                <DataTemplate>
+                                    <StackLayout
+                                        Orientation="Horizontal"
+                                        Spacing="0">
+                                        <Image WidthRequest="40">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FontAwesome"
+                                                    Glyph="{Binding Code}"
+                                                    Size="26"
+                                                    Color="Black" />
+                                            </Image.Source>
+                                        </Image>
+
+                                        <Label Text="|" />
+
+                                        <Image WidthRequest="40">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FontAwesome_Brands"
+                                                    Glyph="{Binding Code}"
+                                                    Size="26"
+                                                    Color="Black" />
+                                            </Image.Source>
+                                        </Image>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </TapGestureRecognizer.CommandParameter>
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+        </Grid>
+    </NavigationPage.TitleView>
+
     <ContentPage.BindingContext>
         <view:PageFontAwesome_ViewModel />
     </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
             <ui:FilterBar
@@ -19,9 +155,12 @@
                 SearchCommand="{Binding CMD_Filter}" />
 
             <CollectionView
-                x:Name="lv"
+                Margin="10,0,10,0"
                 ItemSizingStrategy="MeasureFirstItem"
+                ItemTemplate="{Binding ItemTemplate}"
+                ItemsLayout="{Binding ItemsLayout}"
                 ItemsSource="{Binding FiltedList}"
+                SelectedItem="{Binding SelectedItem}"
                 SelectionMode="Single"
                 VerticalScrollBarVisibility="Always">
                 <CollectionView.EmptyView>
@@ -36,51 +175,6 @@
                             VerticalTextAlignment="Center" />
                     </StackLayout>
                 </CollectionView.EmptyView>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout
-                            Orientation="Vertical"
-                            Spacing="0">
-                            <Label
-                                Margin="20,0,20,0"
-                                BackgroundColor="SkyBlue"
-                                Text="{Binding Name}" />
-
-                            <StackLayout
-                                Margin="20,0,0,0"
-                                Orientation="Horizontal"
-                                Spacing="0">
-
-                                <Label Text="{Binding Code_XML}" />
-                                <Image
-                                    Margin="20,0,0,0"
-                                    BackgroundColor="Silver"
-                                    WidthRequest="100">
-                                    <Image.Source>
-                                        <FontImageSource
-                                            FontFamily="FontAwesome"
-                                            Glyph="{Binding Code}"
-                                            Size="26"
-                                            Color="Black" />
-                                    </Image.Source>
-                                </Image>
-
-                                <Image
-                                    Margin="20,0,0,0"
-                                    BackgroundColor="Silver"
-                                    WidthRequest="100">
-                                    <Image.Source>
-                                        <FontImageSource
-                                            FontFamily="FontAwesome_Brands"
-                                            Glyph="{Binding Code}"
-                                            Size="26"
-                                            Color="Black" />
-                                    </Image.Source>
-                                </Image>
-                            </StackLayout>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
             </CollectionView>
         </StackLayout>
     </ContentPage.Content>

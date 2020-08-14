@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -14,13 +15,21 @@ namespace Client.View.ColorListDemo
     {
         public PageColorListDemo()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
     }
 
     public class PageColorListDemo_ViewModel : ViewModel.BaseViewModel
     {
         public PageColorListDemo_ViewModel()
+        {
+            initData();
+            initCommand();
+
+            filter(string.Empty);
+        }
+
+        void initData()
         {
             List<ColorModel> temp = new List<ColorModel>();
 
@@ -166,21 +175,157 @@ namespace Client.View.ColorListDemo
             temp.Add(new ColorModel() { EnglishName = "Goldenrod", ChineseName = "金黄色", HexValue = "#DAA520", BackgroundColor = Color.Goldenrod });
             temp.Add(new ColorModel() { EnglishName = "ForestGreen", ChineseName = "葱绿色", HexValue = "#228B22", BackgroundColor = Color.ForestGreen });
 
-
-            MyList = temp;
+            AllList = temp;
         }
 
-        private List<ColorModel> _MyList;
-
-        public List<ColorModel> MyList
+        void initCommand()
         {
-            get { return _MyList; }
+            CMD_Filter = new Command<string>(filter);
+            CMD_ViewOfGrid = new Command<DataTemplate>(viewOfGrid);
+            CMD_ViewOfList = new Command<DataTemplate>(viewOfList);
+        }
+
+        private List<ColorModel> _AllList;
+        public List<ColorModel> AllList
+        {
+            get { return _AllList; }
             set
             {
-                _MyList = value;
+                _AllList = value;
                 this.OnPropertyChanged();
             }
         }
+
+        public Command<string> CMD_Filter { get; set; }
+        void filter(string args)
+        {
+            string inputValue = args;
+
+            if (inputValue.IsNullOrWhiteSpace() == false)
+            {
+                FiltedList = this.AllList.Where(i => new Regex(inputValue, RegexOptions.IgnoreCase).IsMatch(i.EnglishName) == true)
+                                         .OrderBy(i => i.HexValue)
+                                         .ToList();
+            }
+            else
+            {
+                FiltedList = this.AllList
+                                 .OrderBy(i => i.HexValue)
+                                 .ToList();
+            }
+        }
+
+        public List<ColorModel> _FiltedList;
+        public List<ColorModel> FiltedList
+        {
+            get { return _FiltedList; }
+            set
+            {
+                SetProperty(ref _FiltedList, value);
+            }
+        }
+
+        private ColorModel _SelectedItem;
+        public ColorModel SelectedItem
+        {
+            get { return _SelectedItem; }
+            set
+            {
+                _SelectedItem = value;
+                this.OnPropertyChanged();
+
+                if (value != null && this.ItemsLayout == ItemLayoutOfGrid)
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        Acr.UserDialogs.UserDialogs.Instance.Toast(value.EnglishName);
+                        try
+                        {
+                            await Xamarin.Essentials.Clipboard.SetTextAsync(value.EnglishName);
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.GetInfo());
+                            System.Diagnostics.Debugger.Break();
+                        }
+                    });
+                }
+            }
+        }
+
+        #region 视图
+
+        private IItemsLayout _ItemsLayout = ItemLayoutOfGrid;
+        public IItemsLayout ItemsLayout
+        {
+            get { return _ItemsLayout; }
+            set
+            {
+                _ItemsLayout = value;
+                this.OnPropertyChanged();
+            }
+        }
+
+        private DataTemplate _ItemTemplate = ItemTemplateOfGrid;
+        public DataTemplate ItemTemplate
+        {
+            get { return _ItemTemplate; }
+            set
+            {
+                _ItemTemplate = value;
+                this.OnPropertyChanged("ItemTemplate");
+            }
+        }
+
+        #region 视图 - 详情
+
+        private static readonly IItemsLayout ItemLayoutOfList = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
+        {
+            ItemSpacing = 0
+        };
+
+        public Command<DataTemplate> CMD_ViewOfGrid { get; private set; }
+
+        void viewOfList(DataTemplate dt)
+        {
+            this.ItemsLayout = ItemLayoutOfList;
+            this.ItemTemplate = dt;
+        }
+
+        #endregion
+
+        #region 视图 - 图标
+
+        private static readonly IItemsLayout ItemLayoutOfGrid = new GridItemsLayout(ItemsLayoutOrientation.Vertical)
+        {
+            Span = 6,
+            VerticalItemSpacing = 5
+        };
+
+        private static readonly DataTemplate ItemTemplateOfGrid = new DataTemplate(() =>
+        {
+            BoxView b = new BoxView();
+            b.Margin = new Thickness(5, 0, 5, 0);
+            
+            b.HeightRequest = 80;
+
+            Binding binding = new Binding("BackgroundColor");
+            b.SetBinding(BoxView.BackgroundColorProperty, binding);
+
+            return b;
+        });
+
+        public Command<DataTemplate> CMD_ViewOfList { get; private set; }
+
+        void viewOfGrid(DataTemplate dt)
+        {
+            this.ItemsLayout = ItemLayoutOfGrid;
+            this.ItemTemplate = dt;
+        }
+
+        #endregion
+
+        #endregion
     }
 
     public class ColorModel

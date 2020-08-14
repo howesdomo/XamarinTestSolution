@@ -3,46 +3,124 @@
     x:Class="Client.View.ColorListDemo.PageColorListDemo"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:local="clr-namespace:Client.View.ColorListDemo"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
     mc:Ignorable="d">
+
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!--  Title  -->
+            <ui:MarqueeLabel
+                FontSize="20"
+                Text="颜色列表"
+                TextColor="White" />
+
+            <StackLayout
+                Grid.Column="1"
+                Orientation="Horizontal">
+                <Image
+                    Margin="5,0,15,0"
+                    Source="{FontImage FontFamily=FontAwesome,
+                                       Glyph={x:Static utilFont:FontAwesomeIcons.List},
+                                       Color=White,
+                                       Size=20}">
+                    <Image.Behaviors>
+                        <behaviors:ViewTapLikeButtonBehavior />
+                    </Image.Behaviors>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding CMD_ViewOfList}"
+                            NumberOfTapsRequired="1">
+                            <TapGestureRecognizer.CommandParameter>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout>
+                                            <Label
+                                                HorizontalOptions="Center"
+                                                Text="{Binding EnglishName}" />
+                                            <Label
+                                                HorizontalOptions="Center"
+                                                Text="{Binding ChineseName}" />
+                                            <Label
+                                                HorizontalOptions="Center"
+                                                Text="{Binding HexValue}" />
+                                        </StackLayout>
+                                        <StackLayout
+                                            Grid.Column="1"
+                                            BackgroundColor="{Binding BackgroundColor}"
+                                            Orientation="Vertical" />
+                                    </Grid>
+                                </DataTemplate>
+                            </TapGestureRecognizer.CommandParameter>
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    Margin="5,0,15,0"
+                    Source="{FontImage FontFamily=FontAwesome,
+                                       Glyph={x:Static utilFont:FontAwesomeIcons.GripVertical},
+                                       Color=White,
+                                       Size=20}">
+                    <Image.Behaviors>
+                        <behaviors:ViewTapLikeButtonBehavior />
+                    </Image.Behaviors>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding CMD_ViewOfGrid}"
+                            NumberOfTapsRequired="1">
+                            <TapGestureRecognizer.CommandParameter>
+                                <DataTemplate>
+                                    <BoxView
+                                        BackgroundColor="{Binding BackgroundColor}"
+                                        HeightRequest="40"
+                                        WidthRequest="40" />
+                                </DataTemplate>
+                            </TapGestureRecognizer.CommandParameter>
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+        </Grid>
+    </NavigationPage.TitleView>
+
     <ContentPage.BindingContext>
         <local:PageColorListDemo_ViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <ListView
-                HasUnevenRows="True"
-                ItemsSource="{Binding MyList}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="150" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <StackLayout>
-                                    <Label
-                                        HorizontalOptions="Center"
-                                        Text="{Binding EnglishName}" />
-                                    <Label
-                                        HorizontalOptions="Center"
-                                        Text="{Binding ChineseName}" />
-                                    <Label
-                                        HorizontalOptions="Center"
-                                        Text="{Binding HexValue}" />
-                                </StackLayout>
-                                <StackLayout
-                                    Grid.Column="1"
-                                    BackgroundColor="{Binding BackgroundColor}"
-                                    Orientation="Vertical" />
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <ui:FilterBar
+                Placeholder="输入需要查询的颜色名称"
+                SearchCommand="{Binding CMD_Filter}" />
+
+            <CollectionView
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemTemplate="{Binding ItemTemplate}"
+                ItemsLayout="{Binding ItemsLayout}"
+                ItemsSource="{Binding FiltedList}"
+                SelectedItem="{Binding SelectedItem}"
+                SelectionMode="Single" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -16,15 +16,36 @@ namespace Client.View.XF_4p6_Features
         public PageFontAwesome()
         {
             InitializeComponent();
+            initXAMLResources();
+
+            this.BindingContextChanged += bindingContextChanged;
+        }
+
+        private void bindingContextChanged(object sender, EventArgs e)
+        {
+            initXAMLResources();
+        }
+
+        void initXAMLResources()
+        {
+            if (this.BindingContext != null)
+            {
+                (this.BindingContext as PageFontAwesome_ViewModel).initXAMLResources
+                (
+                    (IItemsLayout)this.Resources["ItemLayoutOfList"],
+                    (IItemsLayout)this.Resources["ItemLayoutOfGrid"],
+
+                    (DataTemplate)this.Resources["DataTemplateOfList"],
+                    (DataTemplate)this.Resources["DataTemplateOfGrid"]
+                );
+            }
         }
     }
 
     public class PageFontAwesome_ViewModel : ViewModel.BaseViewModel
-    {       
+    {
         public PageFontAwesome_ViewModel()
         {
-
-
             initCommand();
 
             AllList = Util_Font.FontAwesomeModel.GetAllList();
@@ -32,11 +53,36 @@ namespace Client.View.XF_4p6_Features
             FiltedList.AddRange(AllList);
         }
 
+        public void initXAMLResources(IItemsLayout a, IItemsLayout b, DataTemplate aa, DataTemplate bb)
+        {
+            if (this.ItemLayoutOfList == null)
+            {
+                this.ItemLayoutOfList = a;
+                this.ItemsLayout = this.ItemLayoutOfList;
+            }
+
+            if (this.ItemLayoutOfGrid == null)
+            {
+                this.ItemLayoutOfGrid = b;
+            }
+
+            if (this.DataTemplateOfList == null)
+            {
+                this.DataTemplateOfList = aa;
+                this.ItemTemplate = this.DataTemplateOfList;
+            }
+
+            if (this.DataTemplateOfGrid == null)
+            {
+                this.DataTemplateOfGrid = bb;
+            }
+        }
+
         void initCommand()
         {
             this.CMD_Filter = new Command<string>((args) => filter(args));
-            this.CMD_ViewOfList = new Command<DataTemplate>(viewOfList);
-            this.CMD_ViewOfGrid = new Command<DataTemplate>(viewOfGrid);
+            this.CMD_ViewOfList = new Command(viewOfList);
+            this.CMD_ViewOfGrid = new Command(viewOfGrid);
         }
 
         public List<Util_Font.FontAwesomeModel> _FiltedList;
@@ -92,7 +138,7 @@ namespace Client.View.XF_4p6_Features
 
                 if (value != null && this.ItemsLayout == ItemLayoutOfGrid)
                 {
-                    Device.BeginInvokeOnMainThread(async() =>
+                    Device.BeginInvokeOnMainThread(async () =>
                     {
                         Acr.UserDialogs.UserDialogs.Instance.Toast(value.Name);
                         try
@@ -112,7 +158,7 @@ namespace Client.View.XF_4p6_Features
 
         #region 视图
 
-        private IItemsLayout _ItemsLayout = ItemLayoutOfList;
+        private IItemsLayout _ItemsLayout;
         public IItemsLayout ItemsLayout
         {
             get { return _ItemsLayout; }
@@ -136,35 +182,32 @@ namespace Client.View.XF_4p6_Features
 
         #region 视图 - 详情
 
-        private static readonly IItemsLayout ItemLayoutOfList = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
-        {
-            ItemSpacing = 5
-        };
+        public IItemsLayout ItemLayoutOfList { get; private set; }
 
-        public Command<DataTemplate> CMD_ViewOfGrid { get; private set; }
+        public DataTemplate DataTemplateOfList { get; private set; }
 
-        void viewOfList(DataTemplate dt)
+        public Command CMD_ViewOfList { get; private set; }
+
+        void viewOfList()
         {
             this.ItemsLayout = ItemLayoutOfList;
-            this.ItemTemplate = dt;
+            this.ItemTemplate = DataTemplateOfList;
         }
 
         #endregion
 
         #region 视图 - 图标
 
-        private static readonly IItemsLayout ItemLayoutOfGrid = new GridItemsLayout(ItemsLayoutOrientation.Vertical)
-        {
-            Span = 4,
-            VerticalItemSpacing = 20
-        };
+        public IItemsLayout ItemLayoutOfGrid { get; private set; }
 
-        public Command<DataTemplate> CMD_ViewOfList { get; private set; }
+        public DataTemplate DataTemplateOfGrid { get; private set; }
 
-        void viewOfGrid(DataTemplate dt)
+        public Command CMD_ViewOfGrid { get; private set; }
+
+        void viewOfGrid()
         {
             this.ItemsLayout = ItemLayoutOfGrid;
-            this.ItemTemplate = dt;
+            this.ItemTemplate = DataTemplateOfGrid;
         }
 
         #endregion

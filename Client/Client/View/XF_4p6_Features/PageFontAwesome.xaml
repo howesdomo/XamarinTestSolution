@@ -46,51 +46,7 @@
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Command="{Binding CMD_ViewOfList}"
-                            NumberOfTapsRequired="1">
-                            <TapGestureRecognizer.CommandParameter>
-                                <DataTemplate>
-                                    <StackLayout
-                                        Orientation="Vertical"
-                                        Spacing="0">
-                                        <Label
-                                            Margin="20,0,20,0"
-                                            Text="{Binding Name}"
-                                            TextColor="Black" />
-
-                                        <StackLayout
-                                            Margin="20,0,0,0"
-                                            Orientation="Horizontal"
-                                            Spacing="0">
-
-                                            <Label Text="{Binding Code_XML}" />
-                                            <Image
-                                                Margin="20,0,0,0"
-                                                WidthRequest="100">
-                                                <Image.Source>
-                                                    <FontImageSource
-                                                        FontFamily="FontAwesome"
-                                                        Glyph="{Binding Code}"
-                                                        Size="26"
-                                                        Color="Black" />
-                                                </Image.Source>
-                                            </Image>
-
-                                            <Image
-                                                Margin="20,0,0,0"
-                                                WidthRequest="100">
-                                                <Image.Source>
-                                                    <FontImageSource
-                                                        FontFamily="FontAwesome_Brands"
-                                                        Glyph="{Binding Code}"
-                                                        Size="26"
-                                                        Color="Black" />
-                                                </Image.Source>
-                                            </Image>
-                                        </StackLayout>
-                                    </StackLayout>
-                                </DataTemplate>
-                            </TapGestureRecognizer.CommandParameter>
-                        </TapGestureRecognizer>
+                            NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
 
@@ -106,43 +62,100 @@
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Command="{Binding CMD_ViewOfGrid}"
-                            NumberOfTapsRequired="1">
-                            <TapGestureRecognizer.CommandParameter>
-                                <DataTemplate>
-                                    <StackLayout
-                                        Orientation="Horizontal"
-                                        Spacing="0">
-                                        <Image WidthRequest="40">
-                                            <Image.Source>
-                                                <FontImageSource
-                                                    FontFamily="FontAwesome"
-                                                    Glyph="{Binding Code}"
-                                                    Size="26"
-                                                    Color="Black" />
-                                            </Image.Source>
-                                        </Image>
-
-                                        <Label Text="|" />
-
-                                        <Image WidthRequest="40">
-                                            <Image.Source>
-                                                <FontImageSource
-                                                    FontFamily="FontAwesome_Brands"
-                                                    Glyph="{Binding Code}"
-                                                    Size="26"
-                                                    Color="Black" />
-                                            </Image.Source>
-                                        </Image>
-                                    </StackLayout>
-                                </DataTemplate>
-                            </TapGestureRecognizer.CommandParameter>
-                        </TapGestureRecognizer>
+                            NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
             </StackLayout>
 
         </Grid>
     </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <LinearItemsLayout
+                x:Key="ItemLayoutOfList"
+                ItemSpacing="5"
+                Orientation="Vertical" />
+
+            <GridItemsLayout
+                x:Key="ItemLayoutOfGrid"
+                Orientation="Vertical"
+                Span="4"
+                VerticalItemSpacing="20" />
+
+            <DataTemplate x:Key="DataTemplateOfList">
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="0">
+                    <Label
+                        Margin="20,0,20,0"
+                        Text="{Binding Name}"
+                        TextColor="Black" />
+
+                    <StackLayout
+                        Margin="20,0,0,0"
+                        Orientation="Horizontal"
+                        Spacing="0">
+
+                        <Label Text="{Binding Code_XML}" />
+                        <Image
+                            Margin="20,0,0,0"
+                            WidthRequest="100">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="FontAwesome"
+                                    Glyph="{Binding Code}"
+                                    Size="26"
+                                    Color="Black" />
+                            </Image.Source>
+                        </Image>
+
+                        <Image
+                            Margin="20,0,0,0"
+                            WidthRequest="100">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="FontAwesome_Brands"
+                                    Glyph="{Binding Code}"
+                                    Size="26"
+                                    Color="Black" />
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                </StackLayout>
+            </DataTemplate>
+
+            <DataTemplate x:Key="DataTemplateOfGrid">
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="0">
+                    <Image WidthRequest="40">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FontAwesome"
+                                Glyph="{Binding Code}"
+                                Size="26"
+                                Color="Black" />
+                        </Image.Source>
+                    </Image>
+
+                    <Label Text="|" />
+
+                    <Image WidthRequest="40">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FontAwesome_Brands"
+                                Glyph="{Binding Code}"
+                                Size="26"
+                                Color="Black" />
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ContentPage.BindingContext>
         <view:PageFontAwesome_ViewModel />

@@ -279,5 +279,112 @@ namespace Client.iOS
 
         }
 
+        /// <summary>
+        /// 警告
+        /// </summary>
+        private AVAudioPlayer mPlayer_SoundEffect_Warn;
+
+        public void PlayWarn()
+        {
+            if (mIsEffectsOn == false)
+            {
+                return;
+            }
+
+            if (mPlayer_SoundEffect_Warn == null)
+            {
+                NSUrl songURL = new NSUrl("raw/warn.mp3");
+                NSError err = null;
+                mPlayer_SoundEffect_Warn = new AVAudioPlayer(songURL, "mp3", out err);
+                // mPlayer_SoundEffect_Warn.Volume = 1f;
+                // mPlayer_SoundEffect_Warn.FinishedPlaying += delegate { mPlayer_SoundEffect_Warn = null; };
+                mPlayer_SoundEffect_Warn.NumberOfLoops = 0;
+            }
+
+            if (mPlayer_SoundEffect_Warn.Playing == true)
+            {
+                mPlayer_SoundEffect_Warn.Stop();
+            }
+
+            if (mPlayer_SoundEffect_Warn.CurrentTime > 0)
+            {
+                mPlayer_SoundEffect_Warn.CurrentTime = 0d;
+            }
+
+            mPlayer_SoundEffect_Warn.Volume = mEffectsVolume;
+            mPlayer_SoundEffect_Warn.Play();
+        }
+
+        /// <summary>
+        /// 拍照音效
+        /// </summary>
+        private AVAudioPlayer mPlayer_SoundEffect_TakePhoto;
+
+        public void PlayTakePhoto()
+        {
+            if (mIsEffectsOn == false)
+            {
+                return;
+            }
+
+            if (mPlayer_SoundEffect_TakePhoto == null)
+            {
+                NSUrl songURL = new NSUrl("raw/takephoto.mp3");
+                NSError err = null;
+                mPlayer_SoundEffect_TakePhoto = new AVAudioPlayer(songURL, "mp3", out err);
+                // mPlayer_SoundEffect_TakePhoto.Volume = 1f;
+                // mPlayer_SoundEffect_TakePhoto.FinishedPlaying += delegate { mPlayer_SoundEffect_TakePhoto = null; };
+                mPlayer_SoundEffect_TakePhoto.NumberOfLoops = 0;
+            }
+
+            if (mPlayer_SoundEffect_TakePhoto.Playing == true)
+            {
+                mPlayer_SoundEffect_TakePhoto.Stop();
+            }
+
+            if (mPlayer_SoundEffect_TakePhoto.CurrentTime > 0)
+            {
+                mPlayer_SoundEffect_TakePhoto.CurrentTime = 0d;
+            }
+
+            mPlayer_SoundEffect_TakePhoto.Volume = mEffectsVolume;
+            mPlayer_SoundEffect_TakePhoto.Play();
+        }
+
+        /// <summary>
+        /// 拍照音效
+        /// </summary>
+        private AVAudioPlayer mPlayer_SoundEffect_Screenshot;
+
+        public void PlayScreenshot()
+        {
+            if (mIsEffectsOn == false)
+            {
+                return;
+            }
+
+            if (mPlayer_SoundEffect_Screenshot == null)
+            {
+                NSUrl songURL = new NSUrl("raw/screenshot.mp3");
+                NSError err = null;
+                mPlayer_SoundEffect_Screenshot = new AVAudioPlayer(songURL, "mp3", out err);
+                // mPlayer_SoundEffect_Screenshot.Volume = 1f;
+                // mPlayer_SoundEffect_Screenshot.FinishedPlaying += delegate { mPlayer_SoundEffect_Screenshot = null; };
+                mPlayer_SoundEffect_Screenshot.NumberOfLoops = 0;
+            }
+
+            if (mPlayer_SoundEffect_Screenshot.Playing == true)
+            {
+                mPlayer_SoundEffect_Screenshot.Stop();
+            }
+
+            if (mPlayer_SoundEffect_Screenshot.CurrentTime > 0)
+            {
+                mPlayer_SoundEffect_Screenshot.CurrentTime = 0d;
+            }
+
+            mPlayer_SoundEffect_Screenshot.Volume = mEffectsVolume;
+            mPlayer_SoundEffect_Screenshot.Play();
+        }
     }
 }

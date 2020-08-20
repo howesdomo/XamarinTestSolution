@@ -29,7 +29,7 @@ namespace Client.View.XamarinComponentDemo
         }
 
         private void Txt1_Completed(object sender, EventArgs e)
-        {           
+        {
             string msg = $"COmplete";
             System.Diagnostics.Debug.WriteLine(msg);
 
@@ -54,6 +54,8 @@ namespace Client.View.XamarinComponentDemo
             };
 
             this.SearchResults = this.Results;
+
+            this.CMD_SetFilterBar_Text_To_7 = new Command(setFilterBar_Text_To_7);
         }
 
         public ICommand PerformSearch => new Command<string>((string query) =>
@@ -94,6 +96,24 @@ namespace Client.View.XamarinComponentDemo
                 searchResults = value;
                 OnPropertyChanged();
             }
+        }
+
+        private string _SearchText;
+        public string SearchText
+        {
+            get { return _SearchText; }
+            set
+            {
+                _SearchText = value;
+                this.OnPropertyChanged();
+            }
+        }
+
+        public Command CMD_SetFilterBar_Text_To_7 { get; private set; }
+
+        void setFilterBar_Text_To_7()
+        {
+            this.SearchText = "7";
         }
     }
 }

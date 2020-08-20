@@ -3,11 +3,58 @@
     x:Class="Client.View.XamarinComponentDemo.PageSearchBar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
     xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
     mc:Ignorable="d">
+
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="VerticalTextAlignment" Value="Center" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontSize" Value="20" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!--  Title  -->
+            <ui:MarqueeLabel
+                FontSize="20"
+                Text="SeachBar 与 FilterBar(自制控件) 比较"
+                TextColor="White" />
+
+            <StackLayout
+                Grid.Column="1"
+                Orientation="Horizontal">
+                <Image
+                    x:Name="btnShowHidden"
+                    Margin="5,0,15,0"
+                    Source="{FontImage FontFamily=FontAwesome,
+                                       Glyph={x:Static utilFont:FontAwesomeIcons.Plus},
+                                       Color=White,
+                                       Size=20}">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding CMD_SetFilterBar_Text_To_7}"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                    <Image.Behaviors>
+                        <behaviors:ViewTapLikeButtonBehavior />
+                    </Image.Behaviors>
+                </Image>
+            </StackLayout>
+
+        </Grid>
+
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Xamarin.Forms 原生 ( 缺点 : 输入框没有内容时不会触发 SearchCommand" />
@@ -20,7 +67,8 @@
             <Label Text="采用自制的控件 FilterBar 输入框没有内容时仍会触发 SearchCommand" />
             <ui:FilterBar
                 x:Name="fb1"
-                SearchCommand="{Binding PerformSearch}" />
+                SearchCommand="{Binding PerformSearch}"
+                Text="{Binding SearchText}" />
 
             <ListView
                 x:Name="searchResults"

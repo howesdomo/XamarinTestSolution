@@ -22,6 +22,7 @@ namespace Client
 
         public static Util.XamariN.IBluetooth Bluetooth { get; set; }
 
+        public static Util.XamariN.IShareUtils MyShareUtils { get; set; }
 
         public static Client.Common.ILBS LBS { get; set; }
 
@@ -31,7 +32,7 @@ namespace Client
 
         
 
-        public static Client.Common.IExcelUtils_Aspose ExcelUtils_Aspose { get; set; }
+        public static Util.Excel.IExcelUtils ExcelUtils_Aspose { get; set; }
 
 
         #region ∑¿÷πŒÛ¥•
@@ -68,6 +69,8 @@ namespace Client
         public static Util.XamariN.IAndroidScreenRecord AndroidScreenRecord { get; set; }
 
         #endregion
+        
+        public static Client.Common.IWechatOpenSDK MyWechatOpenSDK { get; set; }
 
         public App()
         {

@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Client.View.ScreenShotTools;
 using Xamarin.Forms.PlatformConfiguration;
+using Client.View.ShareUtilsDemo;
 
 namespace Client
 {
@@ -116,6 +117,8 @@ namespace Client
 
             this.btnSendEMail.Clicked += btnSendEMail_Clicked;
 
+            this.btnShareUtils.Clicked += btnShareUtils_Clicked;
+
             #endregion
 
             #region 第三方DLL库测试
@@ -187,6 +190,7 @@ namespace Client
 
             #endregion
         }
+
 
 
 
@@ -284,7 +288,8 @@ namespace Client
         {
             try
             {
-                App.ExcelUtils_Aspose.test();
+                // App.ExcelUtils_Aspose.test();
+                // TODO 完成 (进一步的话可以去完善) Aspose 的测试
             }
             catch (Exception ex)
             {
@@ -395,6 +400,11 @@ namespace Client
             {
                 await DisplayAlert(title: "捕获错误", message: ex.GetFullInfo(), cancel: "确定");
             }
+        }
+
+        async void btnShareUtils_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageShareUtils());
         }
 
         #endregion

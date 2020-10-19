@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.ShareUtilsDemo.PageShareUtils"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ShareUtils">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+
+                <Entry
+                    x:Name="txtShareMsg"
+                    Placeholder="输入分享的信息"
+                    Text="输入的分享信息" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    Text="---------- Xamarin.Essential ----------" />
+
+                <Button
+                    Clicked="Button_Essential_ShareText"
+                    Text="分享信息" />
+
+                <Button
+                    Clicked="Button_Essential_ShareImage"
+                    Text="分享图片" />
+
+                <Button
+                    Clicked="Button_Essential_ShareFile"
+                    Text="分享文件" />
+
+                <Label Text="Xamarin.Essential缺点&#x0a;1. 分享信息 中无标题栏信息&#x0a;2. 不能对列出的应用进行过滤&#x0a;3. 不能分享在内存的图片(图片必须要保存到文件)&#x0a;使用ShareUtils解决以上问题" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    Text="---------- ShareUtils.ShareMsg ----------" />
+
+                <Button
+                    Clicked="Button_ShareMsg"
+                    Text="分享信息" />
+
+                <Button
+                    Clicked="Button_ShareMsg2Tencent"
+                    Text="分享信息 -- 使用过滤参数, 指定分享给腾讯系" />
+
+                <Button
+                    Clicked="Button_ShareMsg2WeChat"
+                    Text="分享信息 -- 指定分享给WeChat" />
+
+                <Button
+                    Clicked="Button_ShareMsg2QQ"
+                    Text="分享信息 -- 指定分享给QQ" />
+
+                <Button
+                    Clicked="Button_ShareMsg2TIM"
+                    Text="分享信息 -- 指定分享给TIM" />
+
+                <Button
+                    Clicked="Button_ShareMsg2EStrongs"
+                    Text="分享信息 -- 指定分享给ES文件管理器" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    Text="---------- ShareUtils.ShareFile ----------" />
+
+                <Button
+                    Clicked="Button_ShareFile"
+                    Text="分享文件" />
+
+                <Button
+                    Clicked="Button_ShareTxtFile"
+                    Text="分享文件到腾讯系 -- TXT文件" />
+
+                <Button
+                    Clicked="Button_SharePngFile"
+                    Text="分享文件到腾讯系 -- PNG文件" />
+
+                <Button
+                    Clicked="Button_ShareMP4File"
+                    Text="分享文件到腾讯系 -- MP4文件" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    Text="---------- ShareImage ----------" />
+
+                <Button
+                    Clicked="Button_ShareImage_ByteArr"
+                    Text="分享内存的图片" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    Text="---------- 使用 WeChat Open SDK ----------" />
+
+                <Button
+                    Clicked="Button_OpenWXApp"
+                    Text="OpenSDK_OpenWXApp" />
+
+                <Button
+                    Clicked="Button_SendMsg0"
+                    Text="分享信息 好友 ( Session )" />
+
+                <Button
+                    Clicked="Button_SendMsg1"
+                    Text="分享信息 朋友圈 ( Timeline )" />
+
+
+                <Button
+                    Clicked="Button_SendImage1"
+                    Text="分享图片 好友 ( Session )" />
+
+                <Button
+                    Clicked="Button_SendImage1"
+                    Text="分享图片 朋友圈 ( Timeline )" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

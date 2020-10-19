@@ -3,32 +3,50 @@
     x:Class="Client.View.ScreenShotTools.PageScreenshot"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:vm="clr-namespace:Client.View.ScreenShotTools"
     mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <vm:PageScreenshot_ViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
                 <Button
-                    x:Name="btnScreenshot"
+                    Command="{Binding CMD_Screenshot}"
                     Text="屏幕截图(从录制中截取)" />
 
                 <Button
-                    x:Name="btnScreenshotFromActivity"
+                    Command="{Binding CMD_ScreenshotFromActivity}"
                     Text="屏幕截图(截取Activity)" />
 
                 <Button
-                    x:Name="btnScreenRecord_Start"
+                    Command="{Binding CMD_ThrowExceptionAndScreenshot}"
+                    Text="抛出异常并捕获异常信息截图" />
+
+                <Label Text="----------------------------" />
+
+                <Button
+                    Command="{Binding CMD_ScreenRecord_Start}"
                     Text="录制屏幕录像" />
 
                 <Button
-                    x:Name="btnScreenRecord_Stop"
+                    Command="{Binding CMD_ScreenRecord_Stop}"
                     Text="停止录制屏幕录像" />
 
                 <Button
-                    x:Name="btnThrowExceptionAndScreenshot"
-                    Text="抛出异常并捕获异常信息截图" />
+                    Command="{Binding CMD_ScreenRecord_Share}"
+                    Text="分享到腾讯系" />
 
+                <Label
+                    Text="遇到的坑分享mp4到iOS微信程序, 会出现播放视频时一直转圈圈(不能正常播放) 或者显示视频长度0秒(点击播放按钮无法进行播放), 解决方法是长按屏幕-保存视频-然后再ios的相册里面观看视频"
+                    TextColor="Orange" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

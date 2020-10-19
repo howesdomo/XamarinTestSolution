@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.Common.LBSMultiPicker"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:vm="clr-namespace:Client.Common"
+    Title="定位"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <vm:LBSMultiPicker_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <ui:WebViewAdv
+                    x:Name="webView"
+                    Grid.Row="0"
+                    Source="{Binding Url}" />
+
+                <Grid
+                    Grid.Row="1"
+                    Margin="5,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="30" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Text="时间" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding CurrentLBSModel.ReceiveTime, StringFormat='{0:yyyy-MM-dd HH:mm:ss}'}" />
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="类型" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        Text="{Binding CurrentLBSModel.GPSInfoType}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="经度" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding CurrentLBSModel.Longitude}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="纬度" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Text="{Binding CurrentLBSModel.Latitude}" />
+
+                    <Label
+                        Grid.Row="2"
+                        Text="地址" />
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        LineBreakMode="WordWrap"
+                        VerticalOptions="StartAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding CurrentLBSModel.Address}" />
+                                <Span Text="(" />
+                                <Span Text="{Binding CurrentLBSModel.LocationDescribe}" />
+                                <Span Text=")" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.ColumnSpan="4"
+                        Text="{Binding CurrentLBSModel.ExceptionInfo}"
+                        TextColor="Red" />
+                </Grid>
+
+                <StackLayout
+                    Grid.Row="2"
+                    Margin="0,0,0,5"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+                    <ui:Btn
+                        Grid.Row="3"
+                        BackgroundColor="SkyBlue"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand"
+                        Text="提交定位信息"
+                        TextColor="White">
+                        <ui:Btn.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding CMD_Confirm}"
+                                NumberOfTapsRequired="1" />
+                        </ui:Btn.GestureRecognizers>
+                    </ui:Btn>
+                </StackLayout>
+
+
+            </Grid>
+            <Grid
+                BackgroundColor="White"
+                IsVisible="{Binding IsLoading}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    FontSize="30"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="定位中"
+                    TextColor="Orange"
+                    VerticalOptions="CenterAndExpand" />
+
+                <ActivityIndicator
+                    IsRunning="{Binding IsLoading}"
+                    Color="Orange" />
+
+                <Label
+                    Grid.Row="1"
+                    Text="{Binding ErrorMsg}"
+                    TextColor="Red" />
+
+                <!--  若显示系统, 表示当前安卓系统未开启位置  -->
+                <!--<Button
+                    Grid.Row="2"
+                    Command="{Binding CMD_Open_GPSSetting_InOS}"
+                    Text="前往系统-位置信息" />-->
+
+                <!--  若显示程序, 表示当前程序用户未授权获取位置  -->
+                <Button
+                    Grid.Row="2"
+                    Command="{Binding CMD_AppGPSPermission_Request}"
+                    IsVisible="{Binding BtnAppGPSPermission_IsVisible}"
+                    Text="前往程序-位置信息" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

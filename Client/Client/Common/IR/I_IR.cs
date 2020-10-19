@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Client.Common
+﻿namespace Client.Common
 {
     public interface I_IR
     {

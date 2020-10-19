@@ -228,6 +228,11 @@
                             HorizontalOptions="Start"
                             Text="发送邮件"
                             WidthRequest="100" />
+                        <Button
+                            x:Name="btnShareUtils"
+                            HorizontalOptions="Start"
+                            Text="ShareUtils"
+                            WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>
             </Grid>

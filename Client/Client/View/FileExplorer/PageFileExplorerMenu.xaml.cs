@@ -150,7 +150,7 @@ namespace Client.View.FileExplorer
                 {
                     try
                     {
-                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Common.StaticInfo.AndroidExternalPath));
+                        await Navigation.PushAsync(new Util.XamariN.FileExplorer.MyFileExplorer(Common.StaticInfo.AndroidExternalPath));
                     }
                     catch (Exception ex)
                     {
@@ -166,8 +166,8 @@ namespace Client.View.FileExplorer
                 {
                     try
                     {
-                        var di = new System.IO.DirectoryInfo(Common.StaticInfo.AndroidExternalFilesPath);
-                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(di.Parent.FullName));
+                        var di = new System.IO.DirectoryInfo(Common.StaticInfo.AndroidExternalFilesPath);                        
+                        await Navigation.PushAsync(new Util.XamariN.FileExplorer.MyFileExplorer(di.Parent.FullName));
                     }
                     catch (Exception ex)
                     {
@@ -201,7 +201,7 @@ namespace Client.View.FileExplorer
                 {
                     try
                     {
-                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(dirPath));
+                        await Navigation.PushAsync(new Util.XamariN.FileExplorer.MyFileExplorer(dirPath));
                     }
                     catch (Exception ex)
                     {

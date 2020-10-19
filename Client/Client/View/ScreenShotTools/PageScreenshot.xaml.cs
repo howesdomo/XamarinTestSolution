@@ -1,6 +1,8 @@
 ﻿using Acr.UserDialogs;
+using Client.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,24 +18,44 @@ namespace Client.View.ScreenShotTools
         public PageScreenshot()
         {
             InitializeComponent();
-            initEvent();
         }
+    }
 
-        private void initEvent()
+    public class PageScreenshot_ViewModel : BaseViewModel
+    {
+        public Command CMD_Screenshot { get; private set; }
+
+        public Command CMD_ScreenshotFromActivity { get; private set; }
+
+        public Command CMD_ThrowExceptionAndScreenshot { get; private set; }
+
+        public Command CMD_ScreenRecord_Start { get; private set; }
+
+        public Command CMD_ScreenRecord_Stop { get; private set; }
+
+        public Command CMD_ScreenRecord_Share { get; private set; }
+
+        public PageScreenshot_ViewModel()
         {
-            this.btnScreenshot.Clicked += btnScreenshot_Clicked;
-            this.btnScreenshotFromActivity.Clicked += btnScreenshotFromActivity_Clicked;
-            this.btnScreenRecord_Start.Clicked += btnScreenRecord_Start_Clicked;
-            this.btnScreenRecord_Stop.Clicked += btnScreenRecord_Stop_Clicked;
-            this.btnThrowExceptionAndScreenshot.Clicked += btnThrowExceptionAndScreenshot_Clicked;
+            initCommand();
         }
 
-        private void btnScreenshot_Clicked(object sender, EventArgs e)
+        void initCommand()
+        {
+            this.CMD_Screenshot = new Command(screenshot);
+            this.CMD_ScreenshotFromActivity = new Command(screenshotFromActivity);
+            this.CMD_ThrowExceptionAndScreenshot = new Command(throwExceptionAndScreenshot);
+            this.CMD_ScreenRecord_Start = new Command(screenRecord_Start);
+            this.CMD_ScreenRecord_Stop = new Command(screenRecord_Stop);
+            this.CMD_ScreenRecord_Share = new Command(screenRecord_Share2Tencent);
+        }
+
+        void screenshot()
         {
             App.ThrottleAction.Throttle
             (
                 interval: App.ActionIntervalDefault,
-                action: async () =>
+                action: () =>
                 {
                     try
                     {
@@ -45,7 +67,12 @@ namespace Client.View.ScreenShotTools
                     {
                         string msg = $"{ex.GetFullInfo()}";
                         System.Diagnostics.Debug.WriteLine(msg);
-                        await DisplayAlert(title: "捕获错误", message: ex.GetFullInfo(), cancel: "确定");
+                        Acr.UserDialogs.UserDialogs.Instance.Alert(new Acr.UserDialogs.AlertConfig()
+                        {
+                            Title = "捕获异常",
+                            Message = ex.GetInfo(),
+                            OkText = "确认"
+                        });
                     }
 
                 },
@@ -53,12 +80,12 @@ namespace Client.View.ScreenShotTools
             );
         }
 
-        private void btnScreenshotFromActivity_Clicked(object sender, EventArgs e)
+        void screenshotFromActivity()
         {
             App.ThrottleAction.Throttle
             (
                 interval: App.ActionIntervalDefault,
-                action: async () =>
+                action: () =>
                 {
                     try
                     {
@@ -70,7 +97,12 @@ namespace Client.View.ScreenShotTools
                     {
                         string msg = $"{ex.GetFullInfo()}";
                         System.Diagnostics.Debug.WriteLine(msg);
-                        await DisplayAlert(title: "捕获错误", message: ex.GetFullInfo(), cancel: "确定");
+                        Acr.UserDialogs.UserDialogs.Instance.Alert(new Acr.UserDialogs.AlertConfig()
+                        {
+                            Title = "捕获异常",
+                            Message = ex.GetInfo(),
+                            OkText = "确认"
+                        });
                     }
 
                 },
@@ -78,71 +110,8 @@ namespace Client.View.ScreenShotTools
             );
         }
 
-        private async void btnScreenRecord_Start_Clicked(object sender, EventArgs e)
-        {
-            //Xamarin.Essentials.PermissionStatus permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.Microphone>();
 
-            //if (permission != Xamarin.Essentials.PermissionStatus.Granted)
-            //{
-            //    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.Microphone>();
-            //}
-
-            //if (permission != Xamarin.Essentials.PermissionStatus.Granted)
-            //{
-            //    return;
-            //}
-
-            // TODO 报错未知原因
-
-            App.ThrottleAction.Throttle
-            (
-                interval: App.ActionIntervalDefault,
-                action: async () =>
-                {
-                    try
-                    {
-                        App.AndroidScreenRecord.SetIsSilent(false);
-                        App.AndroidScreenRecord.SetDpi(5);
-
-                        DateTime now = DateTime.Now;
-                    // string dirName = "exceptionScreenshots";
-                    // string dirName = "testVideo";
-                    App.AndroidScreenRecord.StartRecord(now);
-                    }
-                    catch (Exception ex)
-                    {
-                        string msg = $"{ex.GetFullInfo()}";
-                        System.Diagnostics.Debug.WriteLine(msg);
-                        await DisplayAlert(title: "捕获错误", message: ex.GetFullInfo(), cancel: "确定");
-                    }
-                },
-                syncInvoke: null
-            );
-        }
-
-        private void btnScreenRecord_Stop_Clicked(object sender, EventArgs e)
-        {
-            App.ThrottleAction.Throttle
-            (
-                interval: App.ActionIntervalDefault,
-                action: async () =>
-                {
-                    try
-                    {
-                        App.AndroidScreenRecord.StopRecord();
-                    }
-                    catch (Exception ex)
-                    {
-                        string msg = $"{ex.GetFullInfo()}";
-                        System.Diagnostics.Debug.WriteLine(msg);
-                        await DisplayAlert(title: "捕获错误", message: ex.GetFullInfo(), cancel: "确定");
-                    }
-                },
-                syncInvoke: null
-            );
-        }
-
-        private async void btnThrowExceptionAndScreenshot_Clicked(object sender, EventArgs e)
+        async void throwExceptionAndScreenshot()
         {
             try
             {
@@ -174,5 +143,116 @@ namespace Client.View.ScreenShotTools
                 //k.EntryTime = now;
             }
         }
+
+        private static DateTime? s_ScreenRecordDateTime;
+
+        void screenRecord_Start()
+        {
+            //Xamarin.Essentials.PermissionStatus permission = await Xamarin.Essentials.Permissions.CheckStatusAsync<Xamarin.Essentials.Permissions.Microphone>();
+
+            //if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+            //{
+            //    permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.Microphone>();
+            //}
+
+            //if (permission != Xamarin.Essentials.PermissionStatus.Granted)
+            //{
+            //    return;
+            //}
+
+            // TODO 报错未知原因
+
+            s_ScreenRecordDateTime = DateTime.Now;
+
+            App.ThrottleAction.Throttle
+            (
+                interval: App.ActionIntervalDefault,
+                action: () =>
+                {
+                    try
+                    {
+                        App.AndroidScreenRecord.SetIsSilent(false);
+                        App.AndroidScreenRecord.SetDpi(5);
+                        
+                        // string dirName = "exceptionScreenshots";
+                        // string dirName = "testVideo";
+                        App.AndroidScreenRecord.StartRecord(new DateTime(s_ScreenRecordDateTime.Value.Ticks));
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = $"{ex.GetFullInfo()}";
+                        System.Diagnostics.Debug.WriteLine(msg);
+                        Acr.UserDialogs.UserDialogs.Instance.Alert(new Acr.UserDialogs.AlertConfig()
+                        {
+                            Title = "捕获异常",
+                            Message = ex.GetInfo(),
+                            OkText = "确认"
+                        });
+                    }
+                },
+                syncInvoke: null
+            );
+        }
+
+        void screenRecord_Stop()
+        {
+            App.ThrottleAction.Throttle
+            (
+                interval: App.ActionIntervalDefault,
+                action: () =>
+                {
+                    try
+                    {
+                        App.AndroidScreenRecord.StopRecord();
+                    }
+                    catch (Exception ex)
+                    {
+                        string msg = $"{ex.GetFullInfo()}";
+                        System.Diagnostics.Debug.WriteLine(msg);
+                        Acr.UserDialogs.UserDialogs.Instance.Alert(new Acr.UserDialogs.AlertConfig()
+                        {
+                            Title = "捕获异常",
+                            Message = ex.GetInfo(),
+                            OkText = "确认"
+                        });
+                    }
+                },
+                syncInvoke: null
+            );
+        }
+
+        void screenRecord_Share2Tencent()
+        {
+            if (s_ScreenRecordDateTime.HasValue == false)
+            {
+
+                Acr.UserDialogs.UserDialogs.Instance.Alert(new Acr.UserDialogs.AlertConfig()
+                {
+                    Title = "捕获异常",
+                    Message = "最近未进行录像",
+                    OkText = "确认",                    
+                });
+
+                return;
+            }
+
+            FileInfo fi = App.AndroidScreenRecord.Get_ScreenVideoFileInfo(s_ScreenRecordDateTime);
+            if (fi.Exists == false)
+            {
+                Acr.UserDialogs.UserDialogs.Instance.Alert(new Acr.UserDialogs.AlertConfig()
+                {
+                    Title = "捕获异常",
+                    Message = "录像文件不存在",
+                    OkText = "确认",
+                });
+
+                return;
+            }
+
+            App.MyShareUtils.ShareFile(fi.FullName, new List<string>() { "tencent" }, "腾讯系");
+        }
+
+
+
     }
 }

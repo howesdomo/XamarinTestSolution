@@ -17,6 +17,11 @@ using Android.Content;
 namespace Client.Droid
 {
     [Activity(Label = "XamarinTest", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [IntentFilter(
+        new[] { Android.Content.Intent.ActionView },
+        DataScheme = "XamarinTest",
+        Categories = new[] { Android.Content.Intent.CategoryDefault, Android.Content.Intent.CategoryBrowsable }
+    )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -49,6 +54,27 @@ namespace Client.Droid
             // 为了能进入 OnOptionsItemSelected 事件, 采用 Android.Support.V7.Widget.Toolbar 代替默认的 Toolbar
             Android.Support.V7.Widget.Toolbar toolbar = this.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
+
+            #region 读取 Intent.Data
+
+            if (this.Intent != null && this.Intent.Data != null)
+            {
+                Android.Net.Uri intentData = this.Intent.Data;
+
+                string id = string.Empty;
+                try
+                {
+                    // TODO 如何利用传递过来的参数
+                    id = intentData.GetQueryParameter("id"); // 获取 url 中的 id 参数
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.GetFullInfo());
+                    System.Diagnostics.Debugger.Break();
+                }
+            }
+
+            #endregion
         }
 
         private void init()
@@ -147,15 +173,22 @@ namespace Client.Droid
             // 初始化IR
             App.IR = MyIR.GetInstance(ApplicationContext);
 
+            // 弃用
             // 初始化动态权限
             // 1)实现封装好的接口
-            App.AndroidPermissionUtils = Util.XamariN.AndroiD.MyAndroidPermission.GetInstance(this);
+            // App.AndroidPermissionUtils = Util.XamariN.AndroiD.MyAndroidPermission.GetInstance(this);
             // 2)下面这个实现用于本项目快速测试, 不需要更新 Util.XamariN.AndroiD 的 DLL 到 nuget
-            MyAndroidPermission_InTestSolution myPermission = MyAndroidPermission_InTestSolution.GetInstance(this);
-            App.AndroidPermissionUtils_InTestSolution = myPermission;
+            // MyAndroidPermission_InTestSolution myPermission = MyAndroidPermission_InTestSolution.GetInstance(this);
+            // App.AndroidPermissionUtils_InTestSolution = myPermission;
 
             // 初始化Bluetooth
             App.Bluetooth = Util.XamariN.AndroiD.MyBluetooth.GetInstance(this);
+            
+            App.MyShareUtils = new Util.XamariN.AndroiD.MyShareUtils();
+            // 文件管理器 ShareUtils 赋值具体
+            Util.XamariN.FileExplorer.MyFileExplorer.ShareUtils = new Util.XamariN.AndroiD.MyShareUtils();
+
+            App.MyWechatOpenSDK = new MyWeChatOpenSDK(app_id: "wxd66c092941a6aabf");
 
             #region 安卓特有
 
@@ -216,7 +249,8 @@ namespace Client.Droid
             resolverContainer.Register<XLabs.Platform.Services.Media.IMediaPicker, XLabs.Platform.Services.Media.MediaPicker>();
             XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
 
-            // TODO Aspose.Cells
+            // Aspose.Cells
+            App.ExcelUtils_Aspose = new Util.Excel.ExcelUtils_Aspose_XamarinAndroid();
 
             #endregion
         }

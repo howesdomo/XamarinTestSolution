@@ -35,18 +35,24 @@ namespace Client.View.XamarinEssentials
                     return;
                 }
 
-                var l = await Geolocation.GetLastKnownLocationAsync();
-                if (l == null)
-                {
-                    l = await Geolocation.GetLocationAsync
-                    (
-                        new GeolocationRequest(accuracy: GeolocationAccuracy.Medium, timeout: TimeSpan.FromSeconds(3600))
-                    );
-                }
+                //// 由于 GPS 经常抽风, 所以不使用最近的GPS信息
+                //var l = await Geolocation.GetLastKnownLocationAsync();
+
+                //if (l == null && l.Timestamp >= new DateTimeOffset(DateTime.Now.AddMinutes(-1)))
+                //{
+                //    l = await Geolocation.GetLocationAsync
+                //    (
+                //        new GeolocationRequest(accuracy: GeolocationAccuracy.Medium, timeout: TimeSpan.FromSeconds(3600))
+                //    );
+                //}
+
+                var l = await Geolocation.GetLocationAsync
+                (
+                    new GeolocationRequest(accuracy: GeolocationAccuracy.Medium, timeout: TimeSpan.FromSeconds(3600))
+                );
 
                 if (l == null) { return; }
 
-                // lblGetLocation.Text = $"lng : {l.Longitude}, lat : {l.Latitude} ";
                 lblGetLocation.Text = Util.JsonUtils.SerializeObjectWithFormatted(l);
             }
             catch (Exception ex)

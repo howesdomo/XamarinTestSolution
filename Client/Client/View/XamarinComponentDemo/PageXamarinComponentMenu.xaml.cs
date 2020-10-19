@@ -47,6 +47,11 @@ namespace Client.View.XamarinComponentDemo
             {
                 await App.Current.MainPage.Navigation.PushAsync(new PageFilterBar());
             });
+
+            BtnWebViewAdv_Command = new Command(async () =>
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new PageWebViewAdv());
+            });
         }
 
         public Command BtnPageLabel_Command { get; set; }
@@ -58,6 +63,8 @@ namespace Client.View.XamarinComponentDemo
         public Command BtnPageSearchBar_Command { get; set; }
 
         public Command BtnPageFilter_Command { get; set; }
-        
+
+        public Command BtnWebViewAdv_Command { get; set; }
+
     }
 }

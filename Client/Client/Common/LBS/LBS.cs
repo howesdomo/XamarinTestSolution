@@ -18,6 +18,9 @@ namespace Client.Common
 
     }
 
+    /// <summary>
+    /// V 1.0.1 增加 DeepClone 方法
+    /// </summary>
     public class LBSModel : EventArgs
     {
         public LBSModel
@@ -131,6 +134,21 @@ namespace Client.Common
         /// </summary>
         public string LocationDescribe { get; private set; }
 
-
+        public LBSModel DeepClone()
+        {
+            return new LBSModel
+            (
+                GPSInfoType,
+                Latitude,
+                Longitude,
+                Radius,
+                Country,
+                Province,
+                City,
+                Street,
+                Address,
+                LocationDescribe
+            );
+        }
     }
 }

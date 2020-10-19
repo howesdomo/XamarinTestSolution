@@ -30,6 +30,9 @@
                 Command="{Binding BtnPageFilter_Command}"
                 Text="Filter Bar(自制控件)" />
 
+            <Button
+                Command="{Binding BtnWebViewAdv_Command}"
+                Text="WebViewAdv(优化版WebView[目前只有安卓])" />
 
         </StackLayout>
     </ContentPage.Content>

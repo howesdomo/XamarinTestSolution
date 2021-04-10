@@ -1,22 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:zxView="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             x:Class="Client.View.ZXingDemo.PageZXingCreateBarcode">
+<ContentPage
+    x:Class="Client.View.ZXingDemo.PageZXingCreateBarcode"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Util.XamariN.Behaviors;assembly=Util.XamariN"
+    xmlns:ui="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:utilFont="clr-namespace:Util_Font;assembly=Util.HowesDOMO"
+    xmlns:view="clr-namespace:Client.View.ZXingDemo"
+    xmlns:zxView="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+    Title="二维码生成器">
+    <ContentPage.BindingContext>
+        <view:PageZXingCreateBarcode_ViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView>
             <Grid x:Name="gMain">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <zxView:ZXingBarcodeImageView x:Name="barcodeImageView1" />
-                <Entry x:Name="txtContent" Text="Hello Xamarin" Grid.Row="1" />
-                <Button x:Name="btnCreate" Text="Create Barcode" Grid.Row="2" />
+                <zxView:ZXingBarcodeImageView
+                    x:Name="barcodeImageView1"
+                    BarcodeValue="{Binding BarcodeValue}" />
+                <Entry
+                    Grid.Row="1"
+                    Placeholder="请输入QRCode内容"
+                    Text="{Binding QRCodeContent}" />
             </Grid>
         </ScrollView>
     </ContentPage.Content>

@@ -331,3 +331,6 @@ ASALocalRun/
 /Client/Client.iOS/obj
 /Client/Client.iOS/bin
 /Client/Client.Android/buildAPK
+/Client/Client.Android/MainActivity.cs.bak
+/Client/Client.Android/MyApplication.cs.bak
+/Client/Client.Android/Properties/AndroidManifest.xml.bak

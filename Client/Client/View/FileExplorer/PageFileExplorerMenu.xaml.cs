@@ -14,116 +14,15 @@ namespace Client.View.FileExplorer
     {
         public PageFileExplorerMenu()
         {
-            InitializeComponent();
+            InitializeComponent();            
             initUIAdv();
         }
 
-        #region 弃用
-
-        //private void initUI()
-        //{
-        //    var a = getButton("Environment.SpecialFolder.MyDocuments");
-        //    a.Clicked += async (s, e) =>
-        //    {
-        //        try
-        //        {
-        //            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)));
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            string msg = "{0}".FormatWith(ex.GetFullInfo());
-        //            System.Diagnostics.Debug.WriteLine(msg);
-        //        }
-        //    };
-        //    sl.Children.Add(a);
-
-        //    // ***** Next
-        //    a = getButton("Environment.SpecialFolder.CommonDocuments");
-        //    a.Clicked += async (s, e) =>
-        //    {
-        //        try
-        //        {
-        //            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments)));
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            string msg = "{0}".FormatWith(ex.GetFullInfo());
-        //            System.Diagnostics.Debug.WriteLine(msg);
-        //        }
-        //    };
-        //    sl.Children.Add(a);
-
-        //    // ***** Next
-        //    a = getButton("Environment.SpecialFolder.Personal");
-        //    a.Clicked += async (s, e) =>
-        //    {
-        //        try
-        //        {
-        //            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.GetFolderPath(Environment.SpecialFolder.Personal)));
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            string msg = "{0}".FormatWith(ex.GetFullInfo());
-        //            System.Diagnostics.Debug.WriteLine(msg);
-        //        }
-        //    };
-        //    sl.Children.Add(a);
-        //}
-        //private void initUI()
-        //{
-        //    var a = getButton("Environment.SpecialFolder.MyDocuments");
-        //    a.Clicked += async (s, e) =>
-        //    {
-        //        try
-        //        {
-        //            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)));
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            string msg = "{0}".FormatWith(ex.GetFullInfo());
-        //            System.Diagnostics.Debug.WriteLine(msg);
-        //        }
-        //    };
-        //    sl.Children.Add(a);
-
-        //    // ***** Next
-        //    a = getButton("Environment.SpecialFolder.CommonDocuments");
-        //    a.Clicked += async (s, e) =>
-        //    {
-        //        try
-        //        {
-        //            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments)));
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            string msg = "{0}".FormatWith(ex.GetFullInfo());
-        //            System.Diagnostics.Debug.WriteLine(msg);
-        //        }
-        //    };
-        //    sl.Children.Add(a);
-
-        //    // ***** Next
-        //    a = getButton("Environment.SpecialFolder.Personal");
-        //    a.Clicked += async (s, e) =>
-        //    {
-        //        try
-        //        {
-        //            await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.GetFolderPath(Environment.SpecialFolder.Personal)));
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            string msg = "{0}".FormatWith(ex.GetFullInfo());
-        //            System.Diagnostics.Debug.WriteLine(msg);
-        //        }
-        //    };
-        //    sl.Children.Add(a);
-        //}
-
-        #endregion
-
         private void initUIAdv()
         {
+            this.Title = "MyFileExplorer(待测试)";
 
+            // iOS 特有
             if (Xamarin.Essentials.DeviceInfo.Platform == Xamarin.Essentials.DevicePlatform.iOS)
             {
                 var btn = getButton("CurrentDirectory");
@@ -131,7 +30,7 @@ namespace Client.View.FileExplorer
                 {
                     try
                     {
-                        await Navigation.PushAsync(new View.FileExplorer.PageFileExplorer(Environment.CurrentDirectory));
+                        await Navigation.PushModalAsync(new View.FileExplorer.PageFileExplorer(Environment.CurrentDirectory));
                     }
                     catch (Exception ex)
                     {
@@ -143,6 +42,7 @@ namespace Client.View.FileExplorer
                 sl.Children.Add(btn);
             }
 
+            // Android 特有
             if (Xamarin.Essentials.DeviceInfo.Platform == Xamarin.Essentials.DevicePlatform.Android)
             {
                 var btnExternalStoragePath = getButton("安卓系统外部存储根目录(ExternalStoragePath)");
@@ -150,7 +50,7 @@ namespace Client.View.FileExplorer
                 {
                     try
                     {
-                        await Navigation.PushAsync(new Util.XamariN.FileExplorer.MyFileExplorer(Common.StaticInfo.AndroidExternalPath));
+                        await Navigation.PushModalAsync(new Util.XamariN.FileExplorer.MyFileExplorer(Common.StaticInfo.AndroidExternalPath));
                     }
                     catch (Exception ex)
                     {
@@ -167,7 +67,7 @@ namespace Client.View.FileExplorer
                     try
                     {
                         var di = new System.IO.DirectoryInfo(Common.StaticInfo.AndroidExternalFilesPath);                        
-                        await Navigation.PushAsync(new Util.XamariN.FileExplorer.MyFileExplorer(di.Parent.FullName));
+                        await Navigation.PushModalAsync(new Util.XamariN.FileExplorer.MyFileExplorer(di.Parent.FullName));
                     }
                     catch (Exception ex)
                     {
@@ -179,6 +79,7 @@ namespace Client.View.FileExplorer
                 sl.Children.Add(btnAndroidExternalPath);                
             }
 
+            // 遍历 Environment.SpecialFolder
             foreach (Environment.SpecialFolder enumValue in Enum.GetValues(typeof(Environment.SpecialFolder)))
             {
                 string dirPath = string.Empty;
@@ -201,7 +102,7 @@ namespace Client.View.FileExplorer
                 {
                     try
                     {
-                        await Navigation.PushAsync(new Util.XamariN.FileExplorer.MyFileExplorer(dirPath));
+                        await Navigation.PushModalAsync(new Util.XamariN.FileExplorer.MyFileExplorer(dirPath));
                     }
                     catch (Exception ex)
                     {

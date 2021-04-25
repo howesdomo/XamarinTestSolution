@@ -73,6 +73,7 @@ namespace Client
             #region 实用工具
 
             this.btnBarcodeScanner.Clicked += btnBarcodeScanner_Clicked;
+            this.btnColorList.Clicked += btnColorList_Clicked;
             this.btnFakeSerailPort.Clicked += btnFakeSerailPort_Clicked;
             this.btnPingDemo.Clicked += btnPingDemo_Clicked;
             this.btnPingDemoMini.Clicked += btnPingDemoMini_Clicked;
@@ -82,6 +83,8 @@ namespace Client
             #endregion
 
             #region 待测试
+
+            this.btnUcBusyIndicator.Clicked += btnUcBusyIndicator_Clicked;
 
             this.btnXLabsDemo.Clicked += btnXLabsDemo_Clicked;
 
@@ -100,8 +103,6 @@ namespace Client
             this.btnRadioButtonDemo.Clicked += btnRadioButtonDemo_Clicked;
 
             this.btnMultiSelectDemo.Clicked += btnMultiSelectDemo_Clicked;
-
-            this.btnColorList.Clicked += btnColorList_Clicked;
 
             #endregion
 
@@ -191,9 +192,6 @@ namespace Client
             #endregion
         }
 
-
-
-
         #region HoweTools
 
         async void btnBuBuGao_Clicked(object sender, EventArgs e)
@@ -230,6 +228,11 @@ namespace Client
             await Navigation.PushAsync(new Common.ZXingBarcodeScanner("条码扫描(连续)", isScanContinuously: true));
         }
 
+        async void btnColorList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.ColorListDemo.PageColorListDemo());
+        }
+
         async void btnFakeSerailPort_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.FakeSerialPort.PageFakeSerialPort());
@@ -263,6 +266,12 @@ namespace Client
         #endregion
 
         #region 待测试
+
+
+        async void btnUcBusyIndicator_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.UcBusyIndicatorDemo.PageMenu());
+        }
 
         async void btnXLabsDemo_Clicked(object sender, EventArgs e)
         {
@@ -311,11 +320,6 @@ namespace Client
         async void btnMultiSelectDemo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new View.MultiSelectDemo.PageDemo_MultiSelect());
-        }
-
-        async void btnColorList_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new View.ColorListDemo.PageColorListDemo());
         }
 
         #endregion        

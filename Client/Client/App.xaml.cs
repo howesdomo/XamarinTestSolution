@@ -80,7 +80,8 @@ namespace Client
             Device.SetFlags(new string[]
             {
                 "Expander_Experimental",
-                "SwipeView_Experimental"
+                "SwipeView_Experimental",
+                "Shapes_Experimental"
             });
 
 #if DEBUG

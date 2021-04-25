@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.UcBusyIndicatorDemo.PageDemo2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:vm="clr-namespace:Client.View.UcBusyIndicatorDemo">
+    <ContentPage.BindingContext>
+        <vm:PageDemo2_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Button
+                Grid.Row="0"
+                Command="{Binding CMD_BtnLoad}"
+                Text="Load" />
+            <Entry
+                Grid.Row="1"
+                Placeholder="请输入单号"
+                Text="{Binding OrderNo}" />
+
+            <view:UcBusyIndicator
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                BusyContent="{Binding BusyContent}"
+                BusyContentDock="Left"
+                IsBusy="{Binding BtnLoad_IsBusy}"
+                IsResetBusyContentPerExecute="False" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

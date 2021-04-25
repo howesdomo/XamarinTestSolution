@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.UcBusyIndicatorDemo.PageDemo1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN">
+    <ContentPage.Content>
+        <StackLayout>
+            <view:UcBusyIndicator
+                BusyContentDock="Left"
+                IsBusy="True" />
+            <view:UcBusyIndicator
+                BusyContentDock="Top"
+                IsBusy="True" />
+            <view:UcBusyIndicator
+                BusyContentDock="Right"
+                IsBusy="True" />
+            <view:UcBusyIndicator
+                BusyContentDock="Bottom"
+                IsBusy="True" />
+
+            <view:UcBusyIndicator
+                BusyContentDock="Left"
+                DefalutBusyContent=""
+                IsBusy="True"
+                IsResetBusyContentPerExecute="False" />
+            <view:UcBusyIndicator
+                BusyContentDock="Right"
+                DefalutBusyContent=""
+                IsBusy="True"
+                IsResetBusyContentPerExecute="False" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

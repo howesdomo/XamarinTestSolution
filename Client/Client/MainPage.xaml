@@ -103,6 +103,11 @@
                             Text="条码扫描&#x0a;(连续)"
                             WidthRequest="100" />
                         <Button
+                            x:Name="btnColorList"
+                            HorizontalOptions="Start"
+                            Text="ColorList"
+                            WidthRequest="100" />
+                        <Button
                             x:Name="btnFakeSerailPort"
                             HorizontalOptions="Start"
                             Text="模拟串口助手"
@@ -140,6 +145,11 @@
                     Grid.Row="1"
                     Orientation="Horizontal">
                     <StackLayout Orientation="Horizontal">
+                        <Button
+                            x:Name="btnUcBusyIndicator"
+                            HorizontalOptions="Start"
+                            Text="UcBusyIndicator"
+                            WidthRequest="100" />
                         <Button
                             x:Name="btnXLabsDemo"
                             HorizontalOptions="Start"
@@ -184,11 +194,6 @@
                             x:Name="btnMultiSelectDemo"
                             HorizontalOptions="Start"
                             Text="MultiSelect(自制控件)"
-                            WidthRequest="100" />
-                        <Button
-                            x:Name="btnColorList"
-                            HorizontalOptions="Start"
-                            Text="ColorList"
                             WidthRequest="100" />
                     </StackLayout>
                 </ScrollView>

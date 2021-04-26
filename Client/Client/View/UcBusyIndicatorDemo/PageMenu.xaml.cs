@@ -32,6 +32,7 @@ namespace Client.UcBusyIndicatorDemo.ViewModels
         {
             this.CMD_Demo1 = new Command(Demo1);
             this.CMD_Demo2 = new Command(Demo2);
+            this.CMD_Demo3 = new Command(Demo3);
 
         }
 
@@ -52,6 +53,16 @@ namespace Client.UcBusyIndicatorDemo.ViewModels
                 await p.Navigation.PushAsync(new Client.View.UcBusyIndicatorDemo.PageDemo2());
             }
         }
+
+        public Command CMD_Demo3 { get; private set; }
+        async void Demo3(object objPage)
+        {
+            if (objPage is Page p)
+            {
+                await p.Navigation.PushAsync(new Client.View.UcBusyIndicatorDemo.PageDemo3());
+            }
+        }
+
 
     }
 }

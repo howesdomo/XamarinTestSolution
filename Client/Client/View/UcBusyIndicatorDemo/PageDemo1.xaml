@@ -3,7 +3,8 @@
     x:Class="Client.View.UcBusyIndicatorDemo.PageDemo1"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:view="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN">
+    xmlns:view="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    Title="BusyContentDock (信息停靠位置)">
     <ContentPage.Content>
         <StackLayout>
             <view:UcBusyIndicator
@@ -19,11 +20,13 @@
                 BusyContentDock="Bottom"
                 IsBusy="True" />
 
+            <Label Text="BusyContentDock - Left" />
             <view:UcBusyIndicator
                 BusyContentDock="Left"
                 DefalutBusyContent=""
                 IsBusy="True"
                 IsResetBusyContentPerExecute="False" />
+            <Label Text="BusyContentDock - Right" />
             <view:UcBusyIndicator
                 BusyContentDock="Right"
                 DefalutBusyContent=""

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Util.XamariN.Components;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,7 +22,6 @@ namespace Client.View.UcBusyIndicatorDemo
     {
         public PageDemo2_ViewModel()
         {
-
             initCommand();
         }
 
@@ -33,8 +32,19 @@ namespace Client.View.UcBusyIndicatorDemo
 
         public Command CMD_BtnLoad { get; private set; }
 
-        void BtnLoad()
+        void BtnLoad(object args)
         {
+            switch (args.ToString().ToUpper())
+            {
+                case "LEFT": this.Dock = UcBusyIndicator.Dock.Left; break;
+                case "TOP": this.Dock = UcBusyIndicator.Dock.Top; break;
+                case "BOTTOM": this.Dock = UcBusyIndicator.Dock.Bottom; break;
+                case "RIGHT":
+                default:
+                    this.Dock = UcBusyIndicator.Dock.Right; break;
+            }
+
+
             App.DebounceAction.Debounce
             (
                 interval: App.ActionIntervalDefault,
@@ -71,7 +81,7 @@ namespace Client.View.UcBusyIndicatorDemo
             );
         }
 
-        private string _OrderNo;
+        private string _OrderNo = "测试单据长度1234567890223456789032345678904234567890";
         public string OrderNo
         {
             get { return _OrderNo; }
@@ -103,6 +113,18 @@ namespace Client.View.UcBusyIndicatorDemo
                 this.OnPropertyChanged(nameof(BusyContent));
             }
         }
+
+        private UcBusyIndicator.Dock _Dock;
+        public UcBusyIndicator.Dock Dock
+        {
+            get { return _Dock; }
+            set
+            {
+                _Dock = value;
+                this.OnPropertyChanged(nameof(Dock));
+            }
+        }
+
 
 
 

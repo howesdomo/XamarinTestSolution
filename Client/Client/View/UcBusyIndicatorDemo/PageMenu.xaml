@@ -19,7 +19,12 @@
             <Button
                 Command="{Binding CMD_Demo2}"
                 CommandParameter="{Binding Source={Reference thisContentPage}}"
-                Text="基础用法2" />
+                Text="基础用法2 - 基本用法 ( 仅遮盖指定位置 )" />
+
+            <Button
+                Command="{Binding CMD_Demo3}"
+                CommandParameter="{Binding Source={Reference thisContentPage}}"
+                Text="基础用法3 - 指示器各个特性演示" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

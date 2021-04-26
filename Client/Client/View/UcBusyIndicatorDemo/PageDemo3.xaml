@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Client.View.UcBusyIndicatorDemo.PageDemo3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
+    xmlns:vm="clr-namespace:Client.View.UcBusyIndicatorDemo"
+    Title="指示器各个特性演示">
+
+    <ContentPage.BindingContext>
+        <vm:PageDemo3_ViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <Label Text="默认动画样式" />
+                <view:UcBusyIndicator
+                    DefalutBusyContent=""
+                    IsBusy="True"
+                    IsResetBusyContentPerExecute="False" />
+
+                <Label Text="BusyIndicatorPathData - 自定义指示器图案" />
+                <Label Text="以20,20为原点, 画出1个图案(矢量图), 会自动旋转11次" />
+                <Entry
+                    x:Name="txtUserDefinePathData"
+                    ReturnCommand="{Binding CMD_SubmitUserDefinePathData}"
+                    ReturnCommandParameter="{Binding Source={Reference txtUserDefinePathData}, Path=Text}"
+                    Text="M 0,19 L 10,19 L 10,21 Z" />
+                <view:UcBusyIndicator
+                    BusyIndicatorPathData="{Binding PathData}"
+                    DefalutBusyContent=""
+                    IsBusy="{Binding IsBusy}"
+                    IsResetBusyContentPerExecute="False" />
+
+                <Label Text="BusyIndicatorFill - 自定义填充颜色" />
+                <view:UcBusyIndicator
+                    BusyIndicatorFill="Lime"
+                    DefalutBusyContent=""
+                    IsBusy="{Binding IsBusy}"
+                    IsResetBusyContentPerExecute="False" />
+
+                <Label Text="BusyIndicatorStroke - 自定义边框颜色" />
+                <view:UcBusyIndicator
+                    BusyIndicatorStroke="Purple"
+                    DefalutBusyContent=""
+                    IsBusy="{Binding IsBusy}"
+                    IsResetBusyContentPerExecute="False" />
+
+                <Label Text="BusyIndicatorScale" />
+                <Label Text="自定义缩小" />
+                <view:UcBusyIndicator
+                    BusyIndicatorScale="0.5"
+                    DefalutBusyContent=""
+                    IsBusy="{Binding IsBusy}"
+                    IsResetBusyContentPerExecute="False" />
+                <Label Text="自定义放大" />
+                <Label Text="BusyIndicatorWidthHeight - 自定义指示器长宽" />
+                <view:UcBusyIndicator
+                    BusyIndicatorScale="2"
+                    BusyIndicatorWidthHeight="80"
+                    DefalutBusyContent=""
+                    HeightRequest="90"
+                    IsBusy="{Binding IsBusy}"
+                    IsResetBusyContentPerExecute="False" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

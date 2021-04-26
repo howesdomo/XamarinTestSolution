@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:view="clr-namespace:Util.XamariN.Components;assembly=Util.XamariN"
-    xmlns:vm="clr-namespace:Client.View.UcBusyIndicatorDemo">
+    xmlns:vm="clr-namespace:Client.View.UcBusyIndicatorDemo"
+    Title="仅遮盖指定位置">
     <ContentPage.BindingContext>
         <vm:PageDemo2_ViewModel />
     </ContentPage.BindingContext>
@@ -16,10 +17,25 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button
-                Grid.Row="0"
-                Command="{Binding CMD_BtnLoad}"
-                Text="Load" />
+            <StackLayout Orientation="Vertical">
+                <Button
+                    Command="{Binding CMD_BtnLoad}"
+                    CommandParameter="Left"
+                    Text="Left" />
+                <Button
+                    Command="{Binding CMD_BtnLoad}"
+                    CommandParameter="Top"
+                    Text="Top" />
+                <Button
+                    Command="{Binding CMD_BtnLoad}"
+                    CommandParameter="Right"
+                    Text="Right" />
+                <Button
+                    Command="{Binding CMD_BtnLoad}"
+                    CommandParameter="Bottom"
+                    Text="Bottom" />
+            </StackLayout>
+
             <Entry
                 Grid.Row="1"
                 Placeholder="请输入单号"
@@ -27,9 +43,9 @@
 
             <view:UcBusyIndicator
                 Grid.Row="0"
-                Grid.RowSpan="3"
+                Grid.RowSpan="2"
                 BusyContent="{Binding BusyContent}"
-                BusyContentDock="Left"
+                BusyContentDock="{Binding Dock}"
                 IsBusy="{Binding BtnLoad_IsBusy}"
                 IsResetBusyContentPerExecute="False" />
         </Grid>

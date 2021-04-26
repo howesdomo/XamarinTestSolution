@@ -334,3 +334,8 @@ ASALocalRun/
 /Client/Client.Android/MainActivity.cs.bak
 /Client/Client.Android/MyApplication.cs.bak
 /Client/Client.Android/Properties/AndroidManifest.xml.bak
+/.DS_Store
+/Client/.DS_Store
+/Client/Client.Android/.DS_Store
+/Client/Client.Android/bin
+/Client/Client.Android/obj
